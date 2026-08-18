@@ -14,9 +14,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Controls whether the request is processed synchronously or in the background. &lt;ul&gt;&lt;li&gt;`false` (default): Apollo processes the request during the API call and returns the updated lists. A synchronous request must finish within the API&apos;s 5-minute (300-second) request timeout, so a large `entity_ids` batch can time out.&lt;/li&gt;&lt;li&gt;`true`: Apollo processes the work in the background and immediately returns an `entity_progress_job` object — instead of the updated lists — that you can poll for progress. Use this for batches large enough to risk the 5-minute timeout.&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+        /// <summary>Controls whether the request is processed synchronously or in the background. &lt;ul&gt;&lt;li&gt;`false` (default): Apollo processes the request during the API call and returns the updated lists. A synchronous request must finish within the API&apos;s 5-minute (300-second) request timeout, so a large `entity_ids` batch can time out.&lt;/li&gt;&lt;li&gt;`true`: Apollo processes the work in the background and immediately returns an `entity_progress_job` object — instead of the updated lists — that you can poll for progress. Use this for batches large enough to risk the 5-minute timeout.&lt;/li&gt;&lt;/ul&gt;</summary>
         public bool? Async { get; set; }
-        /// <summary>&quot;The Apollo IDs of the contacts or accounts to remove from the lists. IDs that aren&apos;t valid are ignored.&lt;br&gt;&lt;br&gt;Example: `[\&quot;66e34b81740c50074e3d1bd4\&quot;]`&quot;</summary>
+        /// <summary>The Apollo IDs of the contacts or accounts to remove from the lists. IDs that aren&apos;t valid are ignored.&lt;br&gt;&lt;br&gt;Example: `[&quot;66e34b81740c50074e3d1bd4&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? EntityIds { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> EntityIds { get; set; }
 #endif
-        /// <summary>&quot;The names of the lists to remove the records from.&lt;br&gt;&lt;br&gt;Example: `[\&quot;Conference 2024 - Maui\&quot;]`&quot;</summary>
+        /// <summary>The names of the lists to remove the records from.&lt;br&gt;&lt;br&gt;Example: `[&quot;Conference 2024 - Maui&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? LabelNames { get; set; }

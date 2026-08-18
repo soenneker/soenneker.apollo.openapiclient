@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of records the list holds. &lt;ul&gt;&lt;li&gt;`contacts`: a list of contacts (people).&lt;/li&gt;&lt;li&gt;`accounts`: a list of accounts (companies).&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+    /// <summary>The type of records the list holds. &lt;ul&gt;&lt;li&gt;`contacts`: a list of contacts (people).&lt;/li&gt;&lt;li&gt;`accounts`: a list of accounts (companies).&lt;/li&gt;&lt;/ul&gt;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CreateAListRequestModality
     {

@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> AttachmentIds { get; set; }
 #endif
-        /// <summary>&quot;The body of the email as HTML. The content is sanitized by Apollo before it is saved. &lt;br&gt;&lt;br&gt;Example: `&lt;p&gt;Hi there, I wanted to reach out about...&lt;/p&gt;`&quot;</summary>
+        /// <summary>The body of the email as HTML. The content is sanitized by Apollo before it is saved. &lt;br&gt;&lt;br&gt;Example: `&lt;p&gt;Hi there, I wanted to reach out about...&lt;/p&gt;`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BodyHtml { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string BodyHtml { get; set; }
 #endif
-        /// <summary>&quot;The Apollo ID for the contact that will receive the email. &lt;br&gt;&lt;br&gt;This is required unless you provide `in_response_to_emailer_message_id`, in which case the contact is inferred from the parent message. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts\&quot; target=\&quot;_blank\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+        /// <summary>The Apollo ID for the contact that will receive the email. &lt;br&gt;&lt;br&gt;This is required unless you provide `in_response_to_emailer_message_id`, in which case the contact is inferred from the parent message. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string ContactId { get; set; }
 #endif
-        /// <summary>&quot;The Apollo ID of an email template to associate with the draft. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d725`&quot;</summary>
+        /// <summary>The Apollo ID of an email template to associate with the draft. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d725`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailerTemplateId { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string EmailerTemplateId { get; set; }
 #endif
-        /// <summary>&quot;Set to `true` to enable open and click tracking for the email. This is only applied if your team is permitted to track emails. &lt;br&gt;&lt;br&gt;Example: `true`&quot;</summary>
+        /// <summary>Set to `true` to enable open and click tracking for the email. This is only applied if your team is permitted to track emails. &lt;br&gt;&lt;br&gt;Example: `true`</summary>
         public bool? EnableTracking { get; set; }
-        /// <summary>&quot;The Apollo ID of an existing email message that this draft is replying to. When provided, Apollo infers the contact and builds the recipients from the parent message, so you do not need to provide `contact_id`. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`&quot;</summary>
+        /// <summary>The Apollo ID of an existing email message that this draft is replying to. When provided, Apollo infers the contact and builds the recipients from the parent message, so you do not need to provide `contact_id`. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InResponseToEmailerMessageId { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string InResponseToEmailerMessageId { get; set; }
 #endif
-        /// <summary>&quot;The Apollo ID of an outreach task to associate with the draft. If a drafted email already exists for this task, Apollo links to that draft instead of creating a new one. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d726`&quot;</summary>
+        /// <summary>The Apollo ID of an outreach task to associate with the draft. If a drafted email already exists for this task, Apollo links to that draft instead of creating a new one. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d726`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OutreachTaskId { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem> Recipients { get; set; }
 #endif
-        /// <summary>&quot;The subject line of the email. &lt;br&gt;&lt;br&gt;Example: `Quick question about your team&apos;s workflow`&quot;</summary>
+        /// <summary>The subject line of the email. &lt;br&gt;&lt;br&gt;Example: `Quick question about your team&apos;s workflow`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get; set; }

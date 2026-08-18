@@ -5,7 +5,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>Machine-readable error code. &lt;code&gt;request_id_expired&lt;/code&gt; means the request was valid but its result has aged out past the 30-day retention window. Do not retry; start a fresh enrichment request instead.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PollWebhookResult410ResponseErrorCode
+    public enum RequestIdExpiredErrorCode
     {
         [EnumMember(Value = "request_id_expired")]
         #pragma warning disable CS1591

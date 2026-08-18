@@ -31,7 +31,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse PivotGroupByTotalResponse { get; set; }
 #endif
-        /// <summary>&quot;Main aggregated data. Shape varies by query mode: a flat key/value object when &lt;code&gt;group_by&lt;/code&gt; is empty (metric name → value); a bucketed object &lt;code&gt;{ \&quot;dimension\&quot;: { \&quot;buckets\&quot;: [...] } }&lt;/code&gt; for grouped queries; a nested bucketed object for pivot queries where the outer key is the &lt;code&gt;pivot_group_by&lt;/code&gt; dimension and each outer bucket contains a nested &lt;code&gt;group_by&lt;/code&gt; dimension with its own &lt;code&gt;buckets&lt;/code&gt;.&quot;</summary>
+        /// <summary>Main aggregated data. Shape varies by query mode: a flat key/value object when &lt;code&gt;group_by&lt;/code&gt; is empty (metric name → value); a bucketed object &lt;code&gt;{ &quot;dimension&quot;: { &quot;buckets&quot;: [...] } }&lt;/code&gt; for grouped queries; a nested bucketed object for pivot queries where the outer key is the &lt;code&gt;pivot_group_by&lt;/code&gt; dimension and each outer bucket contains a nested &lt;code&gt;group_by&lt;/code&gt; dimension with its own &lt;code&gt;buckets&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse? TableResponse { get; set; }

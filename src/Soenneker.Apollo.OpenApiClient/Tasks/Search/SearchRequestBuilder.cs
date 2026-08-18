@@ -92,7 +92,7 @@ namespace Soenneker.Apollo.OpenApiClient.Tasks.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;Enter `task_types` for this parameter to return a count of tasks by task type. &lt;br&gt;&lt;br&gt;When used, the response includes a `\&quot;task_types\&quot;: []` array with a `\&quot;count\&quot;` value for each task type.&quot;</summary>
+            /// <summary>Enter `task_types` for this parameter to return a count of tasks by task type. &lt;br&gt;&lt;br&gt;When used, the response includes a `&quot;task_types&quot;: []` array with a `&quot;count&quot;` value for each task type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("open_factor_names%5B%5D")]
@@ -102,13 +102,13 @@ namespace Soenneker.Apollo.OpenApiClient.Tasks.Search
             [QueryParameter("open_factor_names%5B%5D")]
             public string[] OpenFactorNames { get; set; }
 #endif
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Sort the tasks by 1 of the following options:  &lt;ul&gt; &lt;li&gt; `task_due_at`: The most future-dated first. &lt;/li&gt; &lt;li&gt; `task_priority`: The highest priority first. &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Sort the tasks by 1 of the following options:  &lt;ul&gt; &lt;li&gt; `task_due_at`: The most future-dated first. &lt;/li&gt; &lt;li&gt; `task_priority`: The highest priority first. &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort_by_field")]

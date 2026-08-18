@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;The format used to return the body of each email. &lt;ul&gt; &lt;li&gt; `plain` (default): the body is returned as plain text, with the HTML tags removed. &lt;/li&gt; &lt;li&gt; `html`: the body is returned as the original HTML. &lt;/li&gt; &lt;/ul&gt;This value is case-sensitive. Any other value, including `HTML`, is treated as `plain`. &lt;br&gt;&lt;br&gt;Example: `html`&quot;</summary>
+    /// <summary>The format used to return the body of each email. &lt;ul&gt; &lt;li&gt; `plain` (default): the body is returned as plain text, with the HTML tags removed. &lt;/li&gt; &lt;li&gt; `html`: the body is returned as the original HTML. &lt;/li&gt; &lt;/ul&gt;This value is case-sensitive. Any other value, including `HTML`, is treated as `plain`. &lt;br&gt;&lt;br&gt;Example: `html`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum GetEmailContentRequestBodyFormat
     {

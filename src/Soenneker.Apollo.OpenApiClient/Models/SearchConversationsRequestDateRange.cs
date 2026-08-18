@@ -15,7 +15,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;End date (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. &lt;br&gt;&lt;br&gt; Example: &lt;code&gt;2024-03-31T23:59:59Z&lt;/code&gt;&quot;</summary>
+        /// <summary>End date (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. &lt;br&gt;&lt;br&gt; Example: &lt;code&gt;2024-03-31T23:59:59Z&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? End { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string End { get; set; }
 #endif
-        /// <summary>&quot;Start date (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. &lt;br&gt;&lt;br&gt; Example: &lt;code&gt;2024-01-01T00:00:00Z&lt;/code&gt;&quot;</summary>
+        /// <summary>Start date (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. &lt;br&gt;&lt;br&gt; Example: &lt;code&gt;2024-01-01T00:00:00Z&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Start { get; set; }

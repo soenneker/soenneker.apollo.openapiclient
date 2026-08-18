@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The Apollo IDs for the contacts that you want to be on the receiving end of the action. &lt;br&gt;&lt;br&gt;If you add multiple contact IDs, individual tasks will be created for each of the contacts using the same task type, due date, and other details. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts\&quot; target=\&quot;_blank\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+        /// <summary>The Apollo IDs for the contacts that you want to be on the receiving end of the action. &lt;br&gt;&lt;br&gt;If you add multiple contact IDs, individual tasks will be created for each of the contacts using the same task type, due date, and other details. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ContactIds { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> ContactIds { get; set; }
 #endif
-        /// <summary>&quot;The full date and time when the task will be due. &lt;br&gt;&lt;br&gt;Your entry should adhere to the &lt;a href=\&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6\&quot; target=\&quot;_blank\&quot;&gt;ISO 8601 date-time format&lt;/a&gt;. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a task due date that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifying in hours and minutes how much you want to offset GMT.&lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`; `2025-03-25T10:15:30+05:00`&quot;</summary>
+        /// <summary>The full date and time when the task will be due. &lt;br&gt;&lt;br&gt;Your entry should adhere to the &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6&quot; target=&quot;_blank&quot;&gt;ISO 8601 date-time format&lt;/a&gt;. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a task due date that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifying in hours and minutes how much you want to offset GMT.&lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`; `2025-03-25T10:15:30+05:00`</summary>
         public DateTimeOffset? DueAt { get; set; }
-        /// <summary>&quot;Add a description for the task. This should be a human-readable message. &lt;br&gt;&lt;br&gt;This parameter is not required, but it is recommended as it provides the task owner with more context on the action they need to take. &lt;br&gt;&lt;br&gt;Example: `This contact expressed interest in the Sequences feature specifically. Be prepared to discuss.`&quot;</summary>
+        /// <summary>Add a description for the task. This should be a human-readable message. &lt;br&gt;&lt;br&gt;This parameter is not required, but it is recommended as it provides the task owner with more context on the action they need to take. &lt;br&gt;&lt;br&gt;Example: `This contact expressed interest in the Sequences feature specifically. Be prepared to discuss.`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Note { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>&quot;Assign a priority to the task you are creating: &lt;ul&gt; &lt;li&gt; `high` &lt;/li&gt; &lt;li&gt; `medium` &lt;/li&gt; &lt;li&gt; `low` &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+        /// <summary>Assign a priority to the task you are creating: &lt;ul&gt; &lt;li&gt; `high` &lt;/li&gt; &lt;li&gt; `medium` &lt;/li&gt; &lt;li&gt; `low` &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Priority { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Priority { get; set; }
 #endif
-        /// <summary>&quot;The status of the task being created. For future-facing tasks, you should use the `scheduled` status. &lt;br&gt;&lt;br&gt;For tasks that are already completed, you can use `completed` or `skipped`. &lt;br&gt;&lt;br&gt;Example: `scheduled`&quot;</summary>
+        /// <summary>The status of the task being created. For future-facing tasks, you should use the `scheduled` status. &lt;br&gt;&lt;br&gt;For tasks that are already completed, you can use `completed` or `skipped`. &lt;br&gt;&lt;br&gt;Example: `scheduled`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Status { get; set; }
 #endif
-        /// <summary>&quot;Set the task to be 1 of the following task types. This enables the task owner to know the type of action they need to take. &lt;ul&gt; &lt;li&gt; `call`: Call the contacts. &lt;/li&gt; &lt;li&gt; `outreach_manual_email`: Email the contacts. &lt;/li&gt; &lt;li&gt; `linkedin_step_connect`: Send a LinkedIn invitation to connect with the contacts. &lt;/li&gt; &lt;li&gt; `linkedin_step_message`: Send a direct message to the contacts&apos; LinkedIn profiles. &lt;/li&gt; &lt;li&gt; `linkedin_step_view_profile`: View the contacts&apos; LinkedIn profiles. &lt;/li&gt; &lt;li&gt; `linkedin_step_interact_post`: Interact with the contacts&apos; recent LinkedIn posts. &lt;/li&gt; &lt;li&gt; `action_item`: Take generic action for the contacts. If you use this task type, Apollo recommends using the `note` parameter too. &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+        /// <summary>Set the task to be 1 of the following task types. This enables the task owner to know the type of action they need to take. &lt;ul&gt; &lt;li&gt; `call`: Call the contacts. &lt;/li&gt; &lt;li&gt; `outreach_manual_email`: Email the contacts. &lt;/li&gt; &lt;li&gt; `linkedin_step_connect`: Send a LinkedIn invitation to connect with the contacts. &lt;/li&gt; &lt;li&gt; `linkedin_step_message`: Send a direct message to the contacts&apos; LinkedIn profiles. &lt;/li&gt; &lt;li&gt; `linkedin_step_view_profile`: View the contacts&apos; LinkedIn profiles. &lt;/li&gt; &lt;li&gt; `linkedin_step_interact_post`: Interact with the contacts&apos; recent LinkedIn posts. &lt;/li&gt; &lt;li&gt; `action_item`: Take generic action for the contacts. If you use this task type, Apollo recommends using the `note` parameter too. &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>&quot;The ID for the task owner within your team&apos;s Apollo account. This is the user that will take action on the contacts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+        /// <summary>The ID for the task owner within your team&apos;s Apollo account. This is the user that will take action on the contacts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

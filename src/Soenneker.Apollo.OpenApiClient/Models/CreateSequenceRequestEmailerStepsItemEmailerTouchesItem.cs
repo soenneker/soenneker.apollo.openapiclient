@@ -32,7 +32,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Set to `true` to append the sending user&apos;s email signature to the email.</summary>
         public bool? IncludeSignature { get; set; }
-        /// <summary>&quot;The review status of the touch. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`approved`: The touch is approved and will be sent. Requires a template with a non-empty body.&lt;/li&gt;&lt;li&gt;`to_be_reviewed`: The touch requires review before it sends. (default)&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+        /// <summary>The review status of the touch. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`approved`: The touch is approved and will be sent. Requires a template with a non-empty body.&lt;/li&gt;&lt;li&gt;`to_be_reviewed`: The touch requires review before it sends. (default)&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Status { get; set; }
 #endif
-        /// <summary>&quot;How the email threads with earlier steps. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`new_thread`: Start a new email thread.&lt;/li&gt;&lt;li&gt;`reply_to_thread`: Reply to the thread started by a previous step. A `reply_to_thread` touch must come after a step that starts a new thread.&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+        /// <summary>How the email threads with earlier steps. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`new_thread`: Start a new email thread.&lt;/li&gt;&lt;li&gt;`reply_to_thread`: Reply to the thread started by a previous step. A `reply_to_thread` touch must come after a step that starts a new thread.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The maximum number of characters the field accepts. Only applies to `string` and `textarea` fields. &lt;br&gt;&lt;br&gt;Example: `240`&quot;</summary>
+        /// <summary>The maximum number of characters the field accepts. Only applies to `string` and `textarea` fields. &lt;br&gt;&lt;br&gt;Example: `240`</summary>
         public double? MaxLength { get; set; }
         /// <summary>The complete set of options for a `picklist` or `multipicklist` field. &lt;br&gt;&lt;br&gt;&lt;b&gt;Required for every update to a picklist field, including a change that only renames the field.&lt;/b&gt; If you omit it, the request fails with `Picklist fields must have at least one option`. &lt;br&gt;&lt;br&gt;This parameter replaces the field&apos;s options, so send every option you want to keep. Any option you leave out is removed from the field. &lt;br&gt;&lt;br&gt;To rename or remap an existing option, include that option&apos;s existing `id`. An option sent without its `id` is deleted and recreated, which orphans the values already stored on your records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Name of the custom field you want to create. Example: `Test Name`&quot;</summary>
+        /// <summary>Name of the custom field you want to create. Example: `Test Name`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateACustomFieldRequestMeta Meta { get; set; }
 #endif
-        /// <summary>&quot;The modality of the custom field you want to create.  Example: `contact`&quot;</summary>
+        /// <summary>The modality of the custom field you want to create.  Example: `contact`</summary>
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateACustomFieldRequestModality? Modality { get; set; }
-        /// <summary>&quot;What kind of custom field you want to create. Example: `textarea`&quot;</summary>
+        /// <summary>What kind of custom field you want to create. Example: `textarea`</summary>
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateACustomFieldRequestType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateACustomFieldRequest"/> and sets the default values.

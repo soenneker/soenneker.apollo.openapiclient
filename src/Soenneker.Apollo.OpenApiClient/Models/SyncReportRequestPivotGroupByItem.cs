@@ -16,7 +16,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum number of pivot column values to return.</summary>
         public int? Limit { get; set; }
-        /// <summary>&quot;The dimension name to pivot on. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;emailer_campaign_id&lt;/code&gt;&quot;</summary>
+        /// <summary>The dimension name to pivot on. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;emailer_campaign_id&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

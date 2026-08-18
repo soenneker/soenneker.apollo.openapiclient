@@ -16,9 +16,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set to `true` to mark an account list as a Book of Business (BoB) list. Only applies when `modality` is `accounts`. Defaults to `false`.</summary>
         public bool? BookOfBusiness { get; set; }
-        /// <summary>&quot;The type of records the list holds. &lt;ul&gt;&lt;li&gt;`contacts`: a list of contacts (people).&lt;/li&gt;&lt;li&gt;`accounts`: a list of accounts (companies).&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+        /// <summary>The type of records the list holds. &lt;ul&gt;&lt;li&gt;`contacts`: a list of contacts (people).&lt;/li&gt;&lt;li&gt;`accounts`: a list of accounts (companies).&lt;/li&gt;&lt;/ul&gt;</summary>
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequestModality? Modality { get; set; }
-        /// <summary>&quot;The name for the new list. Must be unique for the given `modality` within your team.&lt;br&gt;&lt;br&gt;Example: `Conference 2024 - Maui`&quot;</summary>
+        /// <summary>The name for the new list. Must be unique for the given `modality` within your team.&lt;br&gt;&lt;br&gt;Example: `Conference 2024 - Maui`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

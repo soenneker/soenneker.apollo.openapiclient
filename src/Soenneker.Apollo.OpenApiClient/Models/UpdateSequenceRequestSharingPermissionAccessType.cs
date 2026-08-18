@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;The level of access your team receives when `visibility` is `everyone`. Ignored when `visibility` is `restricted`. &lt;br&gt;&lt;br&gt;Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`can_view`: Team members can view the sequence.&lt;/li&gt;&lt;li&gt;`can_edit`: Team members can view and edit the sequence.&lt;/li&gt;&lt;li&gt;`full_access`: Team members can view, edit, and share the sequence.&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+    /// <summary>The level of access your team receives when `visibility` is `everyone`. Ignored when `visibility` is `restricted`. &lt;br&gt;&lt;br&gt;Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`can_view`: Team members can view the sequence.&lt;/li&gt;&lt;li&gt;`can_edit`: Team members can view and edit the sequence.&lt;/li&gt;&lt;li&gt;`full_access`: Team members can view, edit, and share the sequence.&lt;/li&gt;&lt;/ul&gt;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum UpdateSequenceRequestSharingPermissionAccessType
     {

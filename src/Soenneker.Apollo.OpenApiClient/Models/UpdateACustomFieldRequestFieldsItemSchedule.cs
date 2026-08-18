@@ -18,7 +18,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the schedule is active.</summary>
         public bool? Enabled { get; set; }
-        /// <summary>&quot;The date when the schedule stops running. &lt;br&gt;&lt;br&gt;Example: `2026-12-31`&quot;</summary>
+        /// <summary>The date when the schedule stops running. &lt;br&gt;&lt;br&gt;Example: `2026-12-31`</summary>
         public Date? EndDate { get; set; }
         /// <summary>The maximum number of times the schedule runs before it stops.</summary>
         public double? MaxExecutions { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig ScheduleConfig { get; set; }
 #endif
-        /// <summary>&quot;The timezone that Apollo evaluates the schedule in. &lt;br&gt;&lt;br&gt;Example: `America/Los_Angeles`&quot;</summary>
+        /// <summary>The timezone that Apollo evaluates the schedule in. &lt;br&gt;&lt;br&gt;Example: `America/Los_Angeles`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleTimezone { get; set; }

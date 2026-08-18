@@ -39,9 +39,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
-        public int? Amount { get; set; }
+        public long? Amount { get; set; }
         /// <summary>The amount_in_team_currency property</summary>
-        public int? AmountInTeamCurrency { get; set; }
+        public long? AmountInTeamCurrency { get; set; }
         /// <summary>The closed_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -375,8 +375,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemAccount>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemAccount.CreateFromDiscriminatorValue); } },
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "actual_close_date", n => { ActualCloseDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemActualCloseDate>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemActualCloseDate.CreateFromDiscriminatorValue); } },
-                { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_in_team_currency", n => { AmountInTeamCurrency = n.GetIntValue(); } },
+                { "amount", n => { Amount = n.GetLongValue(); } },
+                { "amount_in_team_currency", n => { AmountInTeamCurrency = n.GetLongValue(); } },
                 { "closed_date", n => { ClosedDate = n.GetStringValue(); } },
                 { "closed_lost_reason", n => { ClosedLostReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemClosedLostReason>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemClosedLostReason.CreateFromDiscriminatorValue); } },
                 { "closed_won_reason", n => { ClosedWonReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemClosedWonReason>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemClosedWonReason.CreateFromDiscriminatorValue); } },
@@ -430,8 +430,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemAccount>("account", Account);
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemActualCloseDate>("actual_close_date", ActualCloseDate);
-            writer.WriteIntValue("amount", Amount);
-            writer.WriteIntValue("amount_in_team_currency", AmountInTeamCurrency);
+            writer.WriteLongValue("amount", Amount);
+            writer.WriteLongValue("amount_in_team_currency", AmountInTeamCurrency);
             writer.WriteStringValue("closed_date", ClosedDate);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemClosedLostReason>("closed_lost_reason", ClosedLostReason);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItemClosedWonReason>("closed_won_reason", ClosedWonReason);

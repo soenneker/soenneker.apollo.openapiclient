@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
-        /// <summary>&quot;The date column name to use for this metric time range. Valid values depend on the metric. See the smart reference field values table for supported values by metric type. Unsupported values may cause the related date or user filter not to apply. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;activity_datetime&lt;/code&gt;&quot;</summary>
+        /// <summary>The date column name to use for this metric time range. Valid values depend on the metric. See the smart reference field values table for supported values by metric type. Unsupported values may cause the related date or user filter not to apply. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;activity_datetime&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SmartDatetimeReference { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string SmartDatetimeReference { get; set; }
 #endif
-        /// <summary>&quot;The user column name that filters per user. Many metrics use &lt;code&gt;user_id&lt;/code&gt;. See the smart reference field values table for supported values by metric family. Unsupported values may cause the related date or user filter not to apply. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;user_id&lt;/code&gt;&quot;</summary>
+        /// <summary>The user column name that filters per user. Many metrics use &lt;code&gt;user_id&lt;/code&gt;. See the smart reference field values table for supported values by metric family. Unsupported values may cause the related date or user filter not to apply. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;user_id&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SmartUserIdReference { get; set; }

@@ -26,7 +26,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public bool? HasCity { get; set; }
         /// <summary>Indicates whether Apollo has country location data for this person.</summary>
         public bool? HasCountry { get; set; }
-        /// <summary>&quot;Indicates whether Apollo has direct phone number data for this person. Returns `Yes` if available, or `Maybe: please request direct dial via people/bulk_match` if uncertain.&quot;</summary>
+        /// <summary>Indicates whether Apollo has direct phone number data for this person. Returns `Yes` if available, or `Maybe: please request direct dial via people/bulk_match` if uncertain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HasDirectPhone { get; set; }

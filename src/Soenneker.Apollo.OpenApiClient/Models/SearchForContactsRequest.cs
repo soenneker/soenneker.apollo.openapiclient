@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The Apollo IDs for the labels that you want to include in your search results. If you add multiple labels, Apollo will include all contacts connected to any of the labels, along with the other parameters, in the search results. Example: `[&apos;6095a710bd01d100a506d4ae&apos;]`&quot;</summary>
+        /// <summary>The Apollo IDs for the labels that you want to include in your search results. If you add multiple labels, Apollo will include all contacts connected to any of the labels, along with the other parameters, in the search results. Example: `[&apos;6095a710bd01d100a506d4ae&apos;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ContactLabelIds { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> ContactLabelIds { get; set; }
 #endif
-        /// <summary>&quot;The Apollo IDs for the contact stages that you want to include in your search results. If you add multiple contact stages, Apollo will include all contacts that match any of the stages, along with the other parameters, in the search results. Call the [List Contact Stages endpoint](https://docs.apollo.io/reference/list-contact-stages) to retrieve a list of all the contact stage IDs available in your Apollo account. Example: `6095a710bd01d100a506d4ae`&quot;</summary>
+        /// <summary>The Apollo IDs for the contact stages that you want to include in your search results. If you add multiple contact stages, Apollo will include all contacts that match any of the stages, along with the other parameters, in the search results. Call the [List Contact Stages endpoint](https://docs.apollo.io/reference/list-contact-stages) to retrieve a list of all the contact stage IDs available in your Apollo account. Example: `6095a710bd01d100a506d4ae`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ContactStageIds { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> ContactStageIds { get; set; }
 #endif
-        /// <summary>&quot;The page number of the Apollo data that you want to retrieve. Use this parameter in combination with the `per_page` parameter to make search results navigable and improve the performance of the endpoint. Example: `4`&quot;</summary>
+        /// <summary>The page number of the Apollo data that you want to retrieve. Use this parameter in combination with the `per_page` parameter to make search results navigable and improve the performance of the endpoint. Example: `4`</summary>
         public int? Page { get; set; }
-        /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. Use the `page` parameter to search the different pages of data. Example: `10`&quot;</summary>
+        /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. Use the `page` parameter to search the different pages of data. Example: `10`</summary>
         public int? PerPage { get; set; }
-        /// <summary>&quot;Add a keyword search string to narrow the contacts in your team&apos;s Apollo account. Keywords should be related to the same search concept and can include names, job titles, employers or company names, or email addresses. Examples: `matthew helm`; `CEO`; `Sumware Software`&quot;</summary>
+        /// <summary>Add a keyword search string to narrow the contacts in your team&apos;s Apollo account. Keywords should be related to the same search concept and can include names, job titles, employers or company names, or email addresses. Examples: `matthew helm`; `CEO`; `Sumware Software`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? QKeywords { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string QKeywords { get; set; }
 #endif
-        /// <summary>&quot;Set to `true` to sort the matching contacts in ascending order. This parameter must be used with `sort_by_field`. Otherwise, the sorting logic is not applied. Example: `true`&quot;</summary>
+        /// <summary>Set to `true` to sort the matching contacts in ascending order. This parameter must be used with `sort_by_field`. Otherwise, the sorting logic is not applied. Example: `true`</summary>
         public bool? SortAscending { get; set; }
-        /// <summary>&quot;Sort the matching contacts by 1 of the following options: - `contact_last_activity_date`: The most recent activity date recorded first.- `contact_email_last_opened_at`: The most recent email opened date first.- `contact_email_last_clicked_at`: The most recent email clicked first.- `contact_created_at`: The most recently created first.- `contact_updated_at`: The most recently updated first.&quot;</summary>
+        /// <summary>Sort the matching contacts by 1 of the following options: - `contact_last_activity_date`: The most recent activity date recorded first.- `contact_email_last_opened_at`: The most recent email opened date first.- `contact_email_last_clicked_at`: The most recent email clicked first.- `contact_created_at`: The most recently created first.- `contact_updated_at`: The most recently updated first.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SortByField { get; set; }

@@ -16,7 +16,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Machine-readable error code. &lt;code&gt;invalid_request_id&lt;/code&gt; means the &lt;code&gt;request_id&lt;/code&gt; was not a valid signed 64-bit integer.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult400ResponseErrorCode? ErrorCode { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.InvalidRequestIdErrorCode? ErrorCode { get; set; }
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error_code", n => { ErrorCode = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult400ResponseErrorCode>(); } },
+                { "error_code", n => { ErrorCode = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.InvalidRequestIdErrorCode>(); } },
             };
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult400ResponseErrorCode>("error_code", ErrorCode);
+            writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.InvalidRequestIdErrorCode>("error_code", ErrorCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

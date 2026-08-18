@@ -94,7 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;Find organizations based on the technologies they currently use. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=\&quot;https://api.apollo.io/v1/auth/supported_technologies_csv\&quot; target=\&quot;_blank\&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`&quot;</summary>
+            /// <summary>Find organizations based on the technologies they currently use. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=&quot;https://api.apollo.io/v1/auth/supported_technologies_csv&quot; target=&quot;_blank&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("currently_using_any_of_technology_uids%5B%5D")]
@@ -104,19 +104,19 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("currently_using_any_of_technology_uids%5B%5D")]
             public string[] CurrentlyUsingAnyOfTechnologyUids { get; set; }
 #endif
-            /// <summary>&quot;The maximium amount the company received with its most recent funding round. Use this parameter in combination with `latest_funding_amount_range[min]` to set a monetary range for the company&apos;s most recent funding round. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `5000000`; `15000000`&quot;</summary>
+            /// <summary>The maximium amount the company received with its most recent funding round. Use this parameter in combination with `latest_funding_amount_range[min]` to set a monetary range for the company&apos;s most recent funding round. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `5000000`; `15000000`</summary>
             [QueryParameter("latest_funding_amount_range%5Bmax%5D")]
             public int? LatestFundingAmountRangemax { get; set; }
-            /// <summary>&quot;The minimum amount the company received with its most recent funding round. Use this parameter in combination with `latest_funding_amount_range[max]` to set a monetary range for the company&apos;s most recent funding round. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `5000000`; `15000000`&quot;</summary>
+            /// <summary>The minimum amount the company received with its most recent funding round. Use this parameter in combination with `latest_funding_amount_range[max]` to set a monetary range for the company&apos;s most recent funding round. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `5000000`; `15000000`</summary>
             [QueryParameter("latest_funding_amount_range%5Bmin%5D")]
             public int? LatestFundingAmountRangemin { get; set; }
-            /// <summary>&quot;The latest date when the company received its most recent funding round. Use this parameter in combination with `latest_funding_date_range[min]` to set a date range for when the company received its most recent funding round. &lt;br&gt;&lt;br&gt;Example: `2025-09-25`&quot;</summary>
+            /// <summary>The latest date when the company received its most recent funding round. Use this parameter in combination with `latest_funding_date_range[min]` to set a date range for when the company received its most recent funding round. &lt;br&gt;&lt;br&gt;Example: `2025-09-25`</summary>
             [QueryParameter("latest_funding_date_range%5Bmax%5D")]
             public Date? LatestFundingDateRangemax { get; set; }
-            /// <summary>&quot;The earliest date when the company received its most recent funding round. Use this parameter in combination with `latest_funding_date_range[max]` to set a date range for when the company received its most recent funding round. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`&quot;</summary>
+            /// <summary>The earliest date when the company received its most recent funding round. Use this parameter in combination with `latest_funding_date_range[max]` to set a date range for when the company received its most recent funding round. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("latest_funding_date_range%5Bmin%5D")]
             public Date? LatestFundingDateRangemin { get; set; }
-            /// <summary>&quot;The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, identify the values for `organization_id` when you call this endpoint. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`&quot;</summary>
+            /// <summary>The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, identify the values for `organization_id` when you call this endpoint. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_ids%5B%5D")]
@@ -126,7 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_ids%5B%5D")]
             public string[] OrganizationIds { get; set; }
 #endif
-            /// <summary>&quot;The locations of the jobs being actively recruited by the company. &lt;br&gt;&lt;br&gt;Examples: `atlanta`; `japan`&quot;</summary>
+            /// <summary>The locations of the jobs being actively recruited by the company. &lt;br&gt;&lt;br&gt;Examples: `atlanta`; `japan`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_job_locations%5B%5D")]
@@ -136,13 +136,13 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_job_locations%5B%5D")]
             public string[] OrganizationJobLocations { get; set; }
 #endif
-            /// <summary>&quot;The latest date when jobs were posted by the company. Use this parameter in combination with `organization_job_posted_at_range[min]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-09-25`&quot;</summary>
+            /// <summary>The latest date when jobs were posted by the company. Use this parameter in combination with `organization_job_posted_at_range[min]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-09-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmax%5D")]
             public Date? OrganizationJobPostedAtRangemax { get; set; }
-            /// <summary>&quot;The earliest date when jobs were posted by the company. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`&quot;</summary>
+            /// <summary>The earliest date when jobs were posted by the company. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmin%5D")]
             public Date? OrganizationJobPostedAtRangemin { get; set; }
-            /// <summary>&quot;The location of the company headquarters. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, any Boston-based companies will not appearch in your search results, even if they match other parameters.. &lt;br&gt;&lt;br&gt;To exclude companies based on location, use the `organization_not_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`&quot;</summary>
+            /// <summary>The location of the company headquarters. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, any Boston-based companies will not appearch in your search results, even if they match other parameters.. &lt;br&gt;&lt;br&gt;To exclude companies based on location, use the `organization_not_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_locations%5B%5D")]
@@ -152,7 +152,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_locations%5B%5D")]
             public string[] OrganizationLocations { get; set; }
 #endif
-            /// <summary>&quot;Exclude companies from search results based on the location of the company headquarters. You can use cities, US states, and countries as locations to exclude. &lt;br&gt;&lt;br&gt;This parameter is useful for ensuring you do not prospect in an undesirable territory. For example, if you use `ireland` as a value, no Ireland-based companies will appear in your search results. &lt;br&gt;&lt;br&gt;Examples: `minnesota`; `ireland`; `seoul`&quot;</summary>
+            /// <summary>Exclude companies from search results based on the location of the company headquarters. You can use cities, US states, and countries as locations to exclude. &lt;br&gt;&lt;br&gt;This parameter is useful for ensuring you do not prospect in an undesirable territory. For example, if you use `ireland` as a value, no Ireland-based companies will appear in your search results. &lt;br&gt;&lt;br&gt;Examples: `minnesota`; `ireland`; `seoul`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_not_locations%5B%5D")]
@@ -162,7 +162,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_not_locations%5B%5D")]
             public string[] OrganizationNotLocations { get; set; }
 #endif
-            /// <summary>&quot;The number range of employees working for the company. This enables you to find companies based on headcount. You can add multiple ranges to expand your search results. &lt;br&gt;&lt;br&gt;Each range you add needs to be a string, with the upper and lower numbers of the range separated only by a comma. &lt;br&gt;&lt;br&gt;Examples: `1,10`; `250,500`; `10000,20000`&quot;</summary>
+            /// <summary>The number range of employees working for the company. This enables you to find companies based on headcount. You can add multiple ranges to expand your search results. &lt;br&gt;&lt;br&gt;Each range you add needs to be a string, with the upper and lower numbers of the range separated only by a comma. &lt;br&gt;&lt;br&gt;Examples: `1,10`; `250,500`; `10000,20000`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_num_employees_ranges%5B%5D")]
@@ -172,19 +172,19 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_num_employees_ranges%5B%5D")]
             public string[] OrganizationNumEmployeesRanges { get; set; }
 #endif
-            /// <summary>&quot;The maximum number of job postings active at the company. Use this parameter in combination with `organization_num_jobs_range[min]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`&quot;</summary>
+            /// <summary>The maximum number of job postings active at the company. Use this parameter in combination with `organization_num_jobs_range[min]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmax%5D")]
             public int? OrganizationNumJobsRangemax { get; set; }
-            /// <summary>&quot;The minimum number of job postings active at the company. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`&quot;</summary>
+            /// <summary>The minimum number of job postings active at the company. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmin%5D")]
             public int? OrganizationNumJobsRangemin { get; set; }
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;The domain name for the person&apos;s employer. This can be the current employer or a previous employer. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;This parameter accepts up to 1,000 domains in a single request. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `microsoft.com`&quot;</summary>
+            /// <summary>The domain name for the person&apos;s employer. This can be the current employer or a previous employer. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;This parameter accepts up to 1,000 domains in a single request. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_organization_domains_list%5B%5D")]
@@ -194,7 +194,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("q_organization_domains_list%5B%5D")]
             public string[] QOrganizationDomainsList { get; set; }
 #endif
-            /// <summary>&quot;The job titles that are listed in active job postings at the company. &lt;br&gt;&lt;br&gt;Examples: `sales manager`; `research analyst`&quot;</summary>
+            /// <summary>The job titles that are listed in active job postings at the company. &lt;br&gt;&lt;br&gt;Examples: `sales manager`; `research analyst`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_organization_job_titles%5B%5D")]
@@ -204,7 +204,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("q_organization_job_titles%5B%5D")]
             public string[] QOrganizationJobTitles { get; set; }
 #endif
-            /// <summary>&quot;Filter search results based on keywords associated with companies. For example, you can enter `mining` as a value to return only companies that have an association with the mining industry. &lt;br&gt;&lt;br&gt;Examples: `mining`; `sales strategy`; `consulting`&quot;</summary>
+            /// <summary>Filter search results based on keywords associated with companies. For example, you can enter `mining` as a value to return only companies that have an association with the mining industry. &lt;br&gt;&lt;br&gt;Examples: `mining`; `sales strategy`; `consulting`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_organization_keyword_tags%5B%5D")]
@@ -214,7 +214,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("q_organization_keyword_tags%5B%5D")]
             public string[] QOrganizationKeywordTags { get; set; }
 #endif
-            /// <summary>&quot;Filter search results to include a specific company name. &lt;br&gt;&lt;br&gt;If the value you enter for this parameter does not match with a company&apos;s name, the company will not appear in search results, even if it matches other parameters. Partial matches are accepted. For example, if you filter by the value `marketing`, a company called `NY Marketing Unlimited` would still be eligible as a search result, but `NY Market Analysis` would not be eligible. &lt;br&gt;&lt;br&gt;Example: `apollo` or `mining`&quot;</summary>
+            /// <summary>Filter search results to include a specific company name. &lt;br&gt;&lt;br&gt;If the value you enter for this parameter does not match with a company&apos;s name, the company will not appear in search results, even if it matches other parameters. Partial matches are accepted. For example, if you filter by the value `marketing`, a company called `NY Marketing Unlimited` would still be eligible as a search result, but `NY Market Analysis` would not be eligible. &lt;br&gt;&lt;br&gt;Example: `apollo` or `mining`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_organization_name")]
@@ -224,16 +224,16 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("q_organization_name")]
             public string QOrganizationName { get; set; }
 #endif
-            /// <summary>&quot;Search for organizations based on their revenue. &lt;br&gt;&lt;br&gt;Use this parameter to set the upper range of organization revenue. Use the `revenue_range[min]` parameter to set the lower range of revenue. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Example: `50000000`&quot;</summary>
+            /// <summary>Search for organizations based on their revenue. &lt;br&gt;&lt;br&gt;Use this parameter to set the upper range of organization revenue. Use the `revenue_range[min]` parameter to set the lower range of revenue. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Example: `50000000`</summary>
             [QueryParameter("revenue_range%5Bmax%5D")]
             public int? RevenueRangemax { get; set; }
-            /// <summary>&quot;Search for organizations based on their revenue. &lt;br&gt;&lt;br&gt;Use this parameter to set the lower range of organization revenue. Use the `revenue_range[max]` parameter to set the upper range of revenue. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Example: `300000`&quot;</summary>
+            /// <summary>Search for organizations based on their revenue. &lt;br&gt;&lt;br&gt;Use this parameter to set the lower range of organization revenue. Use the `revenue_range[max]` parameter to set the upper range of revenue. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Example: `300000`</summary>
             [QueryParameter("revenue_range%5Bmin%5D")]
             public int? RevenueRangemin { get; set; }
-            /// <summary>&quot;The maximum amount the company received during all of its funding rounds combined. Use this parameter in combination with `total_funding_range[min]` to set a monetary range for all of the company&apos;s funding rounds. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `50000000`; `350000000`&quot;</summary>
+            /// <summary>The maximum amount the company received during all of its funding rounds combined. Use this parameter in combination with `total_funding_range[min]` to set a monetary range for all of the company&apos;s funding rounds. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `50000000`; `350000000`</summary>
             [QueryParameter("total_funding_range%5Bmax%5D")]
             public int? TotalFundingRangemax { get; set; }
-            /// <summary>&quot;The minimum amount the company received during all of its funding rounds combined. Use this parameter in combination with `total_funding_range[max]` to set a monetary range for all of the company&apos;s funding rounds. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `50000000`; `350000000`&quot;</summary>
+            /// <summary>The minimum amount the company received during all of its funding rounds combined. Use this parameter in combination with `total_funding_range[max]` to set a monetary range for all of the company&apos;s funding rounds. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `50000000`; `350000000`</summary>
             [QueryParameter("total_funding_range%5Bmin%5D")]
             public int? TotalFundingRangemin { get; set; }
         }

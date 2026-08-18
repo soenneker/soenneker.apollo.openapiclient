@@ -13,7 +13,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     public partial class CreateDealRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;The ID for the account within your Apollo instance. This is the company that you are targeting as part of the deal being created. &lt;br&gt;&lt;br&gt;Each company in the Apollo database is assigned a unique ID. To find IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/organization-search\&quot; target=\&quot;_blank\&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`&quot;</summary>
+        /// <summary>The ID for the account within your Apollo instance. This is the company that you are targeting as part of the deal being created. &lt;br&gt;&lt;br&gt;Each company in the Apollo database is assigned a unique ID. To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot; target=&quot;_blank&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountId { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The monetary value of the deal being created. &lt;br&gt;&lt;br&gt;Do not enter commas or currency symbols for the value. The currency is automatically populated by the settings within your Apollo account. Commas are not accepted and result in the deal amount being left blank. &lt;br&gt;&lt;br&gt;Example: `55123478` (results in a deal value of `$55,123,478` if the default currency is USD)&quot;</summary>
+        /// <summary>The monetary value of the deal being created. &lt;br&gt;&lt;br&gt;Do not enter commas or currency symbols for the value. The currency is automatically populated by the settings within your Apollo account. Commas are not accepted and result in the deal amount being left blank. &lt;br&gt;&lt;br&gt;Example: `55123478` (results in a deal value of `$55,123,478` if the default currency is USD)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Amount { get; set; }
@@ -31,9 +31,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Amount { get; set; }
 #endif
-        /// <summary>&quot;The estimated close date for the deal. This can be a future or past date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-10-30`&quot;</summary>
+        /// <summary>The estimated close date for the deal. This can be a future or past date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-10-30`</summary>
         public Date? ClosedDate { get; set; }
-        /// <summary>&quot;Name the deal you are creating. This should be a human-readable name. &lt;br&gt;&lt;br&gt;Example: `Massive Q3 Deal`&quot;</summary>
+        /// <summary>Name the deal you are creating. This should be a human-readable name. &lt;br&gt;&lt;br&gt;Example: `Massive Q3 Deal`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The ID for the deal stage within your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Each deal stage is assigned a unique ID. To find deal stage IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/list-deal-stages\&quot; target=\&quot;_blank\&quot;&gt;List Deal Stages endpoint&lt;/a&gt; and identify the value for `id` for each stage. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4bd`&quot;</summary>
+        /// <summary>The ID for the deal stage within your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Each deal stage is assigned a unique ID. To find deal stage IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-deal-stages&quot; target=&quot;_blank&quot;&gt;List Deal Stages endpoint&lt;/a&gt; and identify the value for `id` for each stage. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4bd`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OpportunityStageId { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string OpportunityStageId { get; set; }
 #endif
-        /// <summary>&quot;The ID for the deal owner within your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+        /// <summary>The ID for the deal owner within your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OwnerId { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string OwnerId { get; set; }
 #endif
-        /// <summary>&quot;Add information to &lt;a href=\&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062486669-Create-a-Deal\&quot; target=\&quot;_blank\&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields\&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields\&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `\&quot;60c39ed82bd02f01154c470a\&quot;` (datetime)   then the value passed should be:  `{\&quot;60c39ed82bd02f01154c470a\&quot;: \&quot;2025-08-07\&quot;}`&quot;</summary>
+        /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062486669-Create-a-Deal&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateDealRequestTypedCustomFields? TypedCustomFields { get; set; }

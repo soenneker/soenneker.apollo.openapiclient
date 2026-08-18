@@ -31,7 +31,7 @@ namespace Soenneker.Apollo.OpenApiClient.Labels
             get => new global::Soenneker.Apollo.OpenApiClient.Labels.Remove_entity_ids_from_label_names.Remove_entity_ids_from_label_namesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.labels.item collection</summary>
-        /// <param name="position">&quot;The Apollo ID for the list you want to update.&lt;br&gt;&lt;br&gt;To find list IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-lists\&quot;&gt;Get a List of All Lists endpoint&lt;/a&gt; and identify the `id` value.&lt;br&gt;&lt;br&gt;Example: `6612a4b7c8d9e0f123456789`&quot;</param>
+        /// <param name="position">The Apollo ID for the list you want to update.&lt;br&gt;&lt;br&gt;To find list IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-lists&quot;&gt;Get a List of All Lists endpoint&lt;/a&gt; and identify the `id` value.&lt;br&gt;&lt;br&gt;Example: `6612a4b7c8d9e0f123456789`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Labels.Item.LabelsItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Labels.Item.LabelsItemRequestBuilder this[string position]
         {

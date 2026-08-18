@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The Apollo ID of the email message to check. This is the `id` returned when you create an email draft or send an email. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`&quot;</summary>
+        /// <summary>The Apollo ID of the email message to check. This is the `id` returned when you create an email draft or send an email. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;What kind of custom field you want to create. Example: `textarea`&quot;</summary>
+    /// <summary>What kind of custom field you want to create. Example: `textarea`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CreateACustomFieldRequestType
     {

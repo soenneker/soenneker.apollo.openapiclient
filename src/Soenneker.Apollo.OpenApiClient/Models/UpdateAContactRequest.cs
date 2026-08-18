@@ -12,7 +12,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     public partial class UpdateAContactRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;Update the account ID. Example: `63f53afe4ceeca00016bdd2f`&quot;</summary>
+        /// <summary>Update the account ID. Example: `63f53afe4ceeca00016bdd2f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Update the contact stage ID. Example: `6095a710bd01d100a506d4af`&quot;</summary>
+        /// <summary>Update the contact stage ID. Example: `6095a710bd01d100a506d4af`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactStageId { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string DirectPhone { get; set; }
 #endif
-        /// <summary>&quot;Update the contact email. Example: `example@email.com`&quot;</summary>
+        /// <summary>Update the contact email. Example: `example@email.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>&quot;Update the contact&apos;s first name. Example: `Tim`&quot;</summary>
+        /// <summary>Update the contact&apos;s first name. Example: `Tim`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FirstName { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> LabelNames { get; set; }
 #endif
-        /// <summary>&quot;Update the contact&apos;s last name. Example: `Zheng`&quot;</summary>
+        /// <summary>Update the contact&apos;s last name. Example: `Zheng`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastName { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string MobilePhone { get; set; }
 #endif
-        /// <summary>&quot;Update the employer (company) name. Example: `apollo`&quot;</summary>
+        /// <summary>Update the employer (company) name. Example: `apollo`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrganizationName { get; set; }
@@ -110,7 +110,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string OtherPhone { get; set; }
 #endif
-        /// <summary>&quot;Update location (city/state/country). Example: `Atlanta, United States`&quot;</summary>
+        /// <summary>Update location (city/state/country). Example: `Atlanta, United States`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PresentRawAddress { get; set; }
@@ -118,7 +118,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string PresentRawAddress { get; set; }
 #endif
-        /// <summary>&quot;Update the job title. Example: `senior research analyst`&quot;</summary>
+        /// <summary>Update the job title. Example: `senior research analyst`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -126,7 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>&quot;Add information to &lt;a href=\&quot;https://knowledge.apollo.io/hc/en-us/articles/4412498825869-Create-Custom-Contact-Fields\&quot; target=\&quot;_blank\&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields\&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields\&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `\&quot;60c39ed82bd02f01154c470a\&quot;` (datetime)   then the value passed should be:  `{\&quot;60c39ed82bd02f01154c470a\&quot;: \&quot;2025-08-07\&quot;}`&quot;</summary>
+        /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412498825869-Create-Custom-Contact-Fields&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContactRequestTypedCustomFields? TypedCustomFields { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContactRequestTypedCustomFields TypedCustomFields { get; set; }
 #endif
-        /// <summary>&quot;Update the employer website URL. Example: `https://www.apollo.io/`&quot;</summary>
+        /// <summary>Update the employer website URL. Example: `https://www.apollo.io/`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebsiteUrl { get; set; }

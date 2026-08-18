@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>&quot;End of the export time range (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. Must be later than &lt;code&gt;start_time&lt;/code&gt;.&lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-03-31T23:59:59Z&lt;/code&gt;&quot;</summary>
+        /// <summary>End of the export time range (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. Must be later than &lt;code&gt;start_time&lt;/code&gt;.&lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-03-31T23:59:59Z&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EndTime { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string EndTime { get; set; }
 #endif
-        /// <summary>&quot;Start of the export time range (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. Must be earlier than &lt;code&gt;end_time&lt;/code&gt;.&lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-01-01T00:00:00Z&lt;/code&gt;&quot;</summary>
+        /// <summary>Start of the export time range (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values. Must be earlier than &lt;code&gt;end_time&lt;/code&gt;.&lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-01-01T00:00:00Z&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartTime { get; set; }

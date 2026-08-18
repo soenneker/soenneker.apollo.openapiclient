@@ -96,7 +96,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Api_searchRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;The email statuses for the people you want to find. You can add multiple statuses to expand your search. &lt;br&gt;&lt;br&gt;The statuses you can search include:  &lt;ul&gt; &lt;li&gt; &lt;code&gt;verified&lt;/code&gt; &lt;/li&gt; &lt;li&gt; &lt;code&gt;unverified&lt;/code&gt; &lt;/li&gt; &lt;li&gt; &lt;code&gt;likely to engage&lt;/code&gt; &lt;/li&gt; &lt;li&gt; &lt;code&gt;unavailable&lt;/code&gt; &lt;/li&gt;  &lt;/ul&gt;&quot;</summary>
+            /// <summary>The email statuses for the people you want to find. You can add multiple statuses to expand your search. &lt;br&gt;&lt;br&gt;The statuses you can search include:  &lt;ul&gt; &lt;li&gt; &lt;code&gt;verified&lt;/code&gt; &lt;/li&gt; &lt;li&gt; &lt;code&gt;unverified&lt;/code&gt; &lt;/li&gt; &lt;li&gt; &lt;code&gt;likely to engage&lt;/code&gt; &lt;/li&gt; &lt;li&gt; &lt;code&gt;unavailable&lt;/code&gt; &lt;/li&gt;  &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_email_status%5B%5D")]
@@ -106,7 +106,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("contact_email_status%5B%5D")]
             public string[] ContactEmailStatus { get; set; }
 #endif
-            /// <summary>&quot;Exclude people from your search based on any of the technologies their current employer uses. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=\&quot;https://api.apollo.io/v1/auth/supported_technologies_csv\&quot; target=\&quot;_blank\&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`&quot;</summary>
+            /// <summary>Exclude people from your search based on any of the technologies their current employer uses. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=&quot;https://api.apollo.io/v1/auth/supported_technologies_csv&quot; target=&quot;_blank&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("currently_not_using_any_of_technology_uids%5B%5D")]
@@ -116,7 +116,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("currently_not_using_any_of_technology_uids%5B%5D")]
             public string[] CurrentlyNotUsingAnyOfTechnologyUids { get; set; }
 #endif
-            /// <summary>&quot;Find people based on all of the technologies their current employer uses. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=\&quot;https://api.apollo.io/v1/auth/supported_technologies_csv\&quot; target=\&quot;_blank\&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`&quot;</summary>
+            /// <summary>Find people based on all of the technologies their current employer uses. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=&quot;https://api.apollo.io/v1/auth/supported_technologies_csv&quot; target=&quot;_blank&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("currently_using_all_of_technology_uids%5B%5D")]
@@ -126,7 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("currently_using_all_of_technology_uids%5B%5D")]
             public string[] CurrentlyUsingAllOfTechnologyUids { get; set; }
 #endif
-            /// <summary>&quot;Find people based on any of the technologies their current employer uses. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=\&quot;https://api.apollo.io/v1/auth/supported_technologies_csv\&quot; target=\&quot;_blank\&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`&quot;</summary>
+            /// <summary>Find people based on any of the technologies their current employer uses. Apollo supports filtering by 1,500+ technologies. &lt;br&gt;&lt;br&gt;Apollo calculates technologies data from multiple sources. This data is updated regularly. Check out the full list of supported technologies by &lt;a href=&quot;https://api.apollo.io/v1/auth/supported_technologies_csv&quot; target=&quot;_blank&quot;&gt;downloading this CSV file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Use underscores (`_`) to replace spaces and periods for the technologies listed in the CSV file. &lt;br&gt;&lt;br&gt;Examples: `salesforce`; `google_analytics`; `wordpress_org`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("currently_using_any_of_technology_uids%5B%5D")]
@@ -139,7 +139,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             /// <summary>This parameter determines whether people with job titles similar to the titles you define in the `person_titles[]` parameter are returned in the response. &lt;br&gt;&lt;br&gt;Set this parameter to `false` when using `person_titles[]` to return only strict matches for job titles.</summary>
             [QueryParameter("include_similar_titles")]
             public bool? IncludeSimilarTitles { get; set; }
-            /// <summary>&quot;The Apollo IDs for the companies (employers) you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/organization-search\&quot; target=\&quot;_blank\&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`&quot;</summary>
+            /// <summary>The Apollo IDs for the companies (employers) you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot; target=&quot;_blank&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_ids%5B%5D")]
@@ -149,7 +149,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("organization_ids%5B%5D")]
             public string[] OrganizationIds { get; set; }
 #endif
-            /// <summary>&quot;The locations of the jobs being actively recruited by the person&apos;s employer. &lt;br&gt;&lt;br&gt;Examples: `atlanta`; `japan`&quot;</summary>
+            /// <summary>The locations of the jobs being actively recruited by the person&apos;s employer. &lt;br&gt;&lt;br&gt;Examples: `atlanta`; `japan`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_job_locations%5B%5D")]
@@ -159,13 +159,13 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("organization_job_locations%5B%5D")]
             public string[] OrganizationJobLocations { get; set; }
 #endif
-            /// <summary>&quot;The latest date when jobs were posted by the person&apos;s current employer. Use this parameter in combination with `organization_job_posted_at_range[min]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-09-25`&quot;</summary>
+            /// <summary>The latest date when jobs were posted by the person&apos;s current employer. Use this parameter in combination with `organization_job_posted_at_range[min]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-09-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmax%5D")]
             public Date? OrganizationJobPostedAtRangemax { get; set; }
-            /// <summary>&quot;The earliest date when jobs were posted by the person&apos;s current employer. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`&quot;</summary>
+            /// <summary>The earliest date when jobs were posted by the person&apos;s current employer. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmin%5D")]
             public Date? OrganizationJobPostedAtRangemin { get; set; }
-            /// <summary>&quot;The location of the company headquarters for a person&apos;s current employer. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, people that work for the Boston-based company will not appear in your results, even if they match other \parameters. &lt;br&gt;&lt;br&gt;To find people based on their personal location, use the `person_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`&quot;</summary>
+            /// <summary>The location of the company headquarters for a person&apos;s current employer. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, people that work for the Boston-based company will not appear in your results, even if they match other \parameters. &lt;br&gt;&lt;br&gt;To find people based on their personal location, use the `person_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_locations%5B%5D")]
@@ -175,7 +175,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("organization_locations%5B%5D")]
             public string[] OrganizationLocations { get; set; }
 #endif
-            /// <summary>&quot;The number range of employees working for the person&apos;s current company. This enables you to find people based on the headcount of their employer. You can add multiple ranges to expand your search results. &lt;br&gt;&lt;br&gt;Each range you add needs to be a string, with the upper and lower numbers of the range separated only by a comma. &lt;br&gt;&lt;br&gt;Examples: `1,10`; `250,500`; `10000,20000`&quot;</summary>
+            /// <summary>The number range of employees working for the person&apos;s current company. This enables you to find people based on the headcount of their employer. You can add multiple ranges to expand your search results. &lt;br&gt;&lt;br&gt;Each range you add needs to be a string, with the upper and lower numbers of the range separated only by a comma. &lt;br&gt;&lt;br&gt;Examples: `1,10`; `250,500`; `10000,20000`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_num_employees_ranges%5B%5D")]
@@ -185,19 +185,19 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("organization_num_employees_ranges%5B%5D")]
             public string[] OrganizationNumEmployeesRanges { get; set; }
 #endif
-            /// <summary>&quot;The maximum number of job postings active at the person&apos;s current empployer. Use this parameter in combination with `organization_num_jobs_range[min]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`&quot;</summary>
+            /// <summary>The maximum number of job postings active at the person&apos;s current empployer. Use this parameter in combination with `organization_num_jobs_range[min]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmax%5D")]
             public int? OrganizationNumJobsRangemax { get; set; }
-            /// <summary>&quot;The minimum number of job postings active at the person&apos;s current empployer. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`&quot;</summary>
+            /// <summary>The minimum number of job postings active at the person&apos;s current empployer. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmin%5D")]
             public int? OrganizationNumJobsRangemin { get; set; }
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;The location where people live. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;To find people based on the headquarters locations of their current employer, use the `organization_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `california`; `ireland`; `chicago`&quot;</summary>
+            /// <summary>The location where people live. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;To find people based on the headquarters locations of their current employer, use the `organization_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `california`; `ireland`; `chicago`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("person_locations%5B%5D")]
@@ -207,7 +207,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("person_locations%5B%5D")]
             public string[] PersonLocations { get; set; }
 #endif
-            /// <summary>&quot;The job seniority that people hold within their current employer. This enables you to find people that currently hold positions at certain reporting levels, such as Director level or senior IC level. &lt;br&gt;&lt;br&gt;For a person to be included in search results, they only need to match 1 of the seniorities you add. Adding more seniorities expands your search results. &lt;br&gt;&lt;br&gt; Searches only return results based on their current job title, so searching for Director-level employees only returns people that currently hold a Director-level title. If someone was previously a Director, but is currently a VP, they would not be included in your search results. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `person_titles[]` parameter to find people based on specific job functions and seniority levels. &lt;br&gt;&lt;br&gt;The following options can be used for this parameter: &lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;owner&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;founder&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;c_suite&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;partner&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;vp&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;head&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;director&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;manager&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;senior&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;entry&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;intern&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+            /// <summary>The job seniority that people hold within their current employer. This enables you to find people that currently hold positions at certain reporting levels, such as Director level or senior IC level. &lt;br&gt;&lt;br&gt;For a person to be included in search results, they only need to match 1 of the seniorities you add. Adding more seniorities expands your search results. &lt;br&gt;&lt;br&gt; Searches only return results based on their current job title, so searching for Director-level employees only returns people that currently hold a Director-level title. If someone was previously a Director, but is currently a VP, they would not be included in your search results. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `person_titles[]` parameter to find people based on specific job functions and seniority levels. &lt;br&gt;&lt;br&gt;The following options can be used for this parameter: &lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;owner&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;founder&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;c_suite&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;partner&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;vp&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;head&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;director&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;manager&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;senior&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;entry&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;intern&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("person_seniorities%5B%5D")]
@@ -217,7 +217,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("person_seniorities%5B%5D")]
             public string[] PersonSeniorities { get; set; }
 #endif
-            /// <summary>&quot;Job titles held by the people you want to find. For a person to be included in search results, they only need to match 1 of the job titles you add. Adding more job titles expands your search results. &lt;br&gt;&lt;br&gt;Results also include job titles with the same terms, even if they are not exact matches. For example, searching for `marketing manager` might return people with the job title `content marketing manager`. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `person_seniorities[]` parameter to find people based on specific job functions and seniority levels. &lt;br&gt;&lt;br&gt;Examples: `sales development representative`; `marketing manager`; `research analyst`&quot;</summary>
+            /// <summary>Job titles held by the people you want to find. For a person to be included in search results, they only need to match 1 of the job titles you add. Adding more job titles expands your search results. &lt;br&gt;&lt;br&gt;Results also include job titles with the same terms, even if they are not exact matches. For example, searching for `marketing manager` might return people with the job title `content marketing manager`. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `person_seniorities[]` parameter to find people based on specific job functions and seniority levels. &lt;br&gt;&lt;br&gt;Examples: `sales development representative`; `marketing manager`; `research analyst`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("person_titles%5B%5D")]
@@ -237,7 +237,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("q_keywords")]
             public string QKeywords { get; set; }
 #endif
-            /// <summary>&quot;The domain name for the person&apos;s employer. This can be the current employer or a previous employer. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;This parameter accepts up to 1,000 domains in a single request. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `microsoft.com`&quot;</summary>
+            /// <summary>The domain name for the person&apos;s employer. This can be the current employer or a previous employer. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;This parameter accepts up to 1,000 domains in a single request. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_organization_domains_list%5B%5D")]
@@ -247,7 +247,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("q_organization_domains_list%5B%5D")]
             public string[] QOrganizationDomainsList { get; set; }
 #endif
-            /// <summary>&quot;The job titles that are listed in active job postings at the person&apos;s current employer. &lt;br&gt;&lt;br&gt;Examples: `sales manager`; `research analyst`&quot;</summary>
+            /// <summary>The job titles that are listed in active job postings at the person&apos;s current employer. &lt;br&gt;&lt;br&gt;Examples: `sales manager`; `research analyst`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_organization_job_titles%5B%5D")]
@@ -257,10 +257,10 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("q_organization_job_titles%5B%5D")]
             public string[] QOrganizationJobTitles { get; set; }
 #endif
-            /// <summary>&quot;The maximum revenue the person&apos;s current employer generates. Use this parameter in combination with `revenue_range[min]` to set a revenue range. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `500000`; `1500000`&quot;</summary>
+            /// <summary>The maximum revenue the person&apos;s current employer generates. Use this parameter in combination with `revenue_range[min]` to set a revenue range. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `500000`; `1500000`</summary>
             [QueryParameter("revenue_range%5Bmax%5D")]
             public int? RevenueRangemax { get; set; }
-            /// <summary>&quot;The minimum revenue the person&apos;s current employer generates. Use this parameter in combination with `revenue_range[max]` to set a revenue range. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `500000`; `1500000`&quot;</summary>
+            /// <summary>The minimum revenue the person&apos;s current employer generates. Use this parameter in combination with `revenue_range[max]` to set a revenue range. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `500000`; `1500000`</summary>
             [QueryParameter("revenue_range%5Bmin%5D")]
             public int? RevenueRangemin { get; set; }
         }

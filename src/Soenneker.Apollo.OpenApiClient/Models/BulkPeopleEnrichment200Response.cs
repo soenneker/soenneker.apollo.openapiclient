@@ -51,7 +51,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment PhoneEnrichment { get; set; }
 #endif
         /// <summary>The request ID for the enrichment request. Save this ID to map this request with the corresponding webhook result. &lt;br&gt;&lt;br&gt;This is a signed 64-bit integer and is often negative, so store it in a type that accommodates the full signed range.</summary>
-        public int? RequestId { get; set; }
+        public long? RequestId { get; set; }
         /// <summary>`success` for any `200` response. Error responses return `failed` instead. &lt;br&gt;&lt;br&gt;This reflects the enrichment call itself, not whether any person was matched — a request that matches nobody still returns `success`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,7 +107,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "matches", n => { Matches = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "missing_records", n => { MissingRecords = n.GetIntValue(); } },
                 { "phone_enrichment", n => { PhoneEnrichment = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment.CreateFromDiscriminatorValue); } },
-                { "request_id", n => { RequestId = n.GetIntValue(); } },
+                { "request_id", n => { RequestId = n.GetLongValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "total_requested_enrichments", n => { TotalRequestedEnrichments = n.GetIntValue(); } },
                 { "unique_enriched_records", n => { UniqueEnrichedRecords = n.GetIntValue(); } },
@@ -127,7 +127,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem>("matches", Matches);
             writer.WriteIntValue("missing_records", MissingRecords);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment>("phone_enrichment", PhoneEnrichment);
-            writer.WriteIntValue("request_id", RequestId);
+            writer.WriteLongValue("request_id", RequestId);
             writer.WriteStringValue("status", Status);
             writer.WriteIntValue("total_requested_enrichments", TotalRequestedEnrichments);
             writer.WriteIntValue("unique_enriched_records", UniqueEnrichedRecords);

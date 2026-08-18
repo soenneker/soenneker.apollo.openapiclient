@@ -32,7 +32,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>&quot;The 1-based position of the step within the sequence. Example: `1`&quot;</summary>
+        /// <summary>The 1-based position of the step within the sequence. Example: `1`</summary>
         public int? Position { get; set; }
         /// <summary>The step type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +42,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>&quot;The unit used for the wait before this step runs. Example: `day`&quot;</summary>
+        /// <summary>The unit used for the wait before this step runs. Example: `day`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WaitMode { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string WaitMode { get; set; }
 #endif
-        /// <summary>&quot;How long to wait (in `wait_mode` units) before running this step. Example: `1`&quot;</summary>
+        /// <summary>How long to wait (in `wait_mode` units) before running this step. Example: `1`</summary>
         public int? WaitTime { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItem"/> and sets the default values.

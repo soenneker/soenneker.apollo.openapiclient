@@ -71,7 +71,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> SmartSubteamId { get; set; }
 #endif
-        /// <summary>&quot;Filter to specific team member IDs. Use &lt;code&gt;\&quot;current\&quot;&lt;/code&gt; for the authenticated user. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;[\&quot;current\&quot;]&lt;/code&gt;&quot;</summary>
+        /// <summary>Filter to specific team member IDs. Use &lt;code&gt;&quot;current&quot;&lt;/code&gt; for the authenticated user. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;[&quot;current&quot;]&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SmartUserId { get; set; }

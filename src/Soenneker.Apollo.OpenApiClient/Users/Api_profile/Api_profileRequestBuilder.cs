@@ -90,7 +90,7 @@ namespace Soenneker.Apollo.OpenApiClient.Users.Api_profile
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Api_profileRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Set to `true` to include credit usage and remaining credit details (lead, direct dial, export, AI, and power-up credits) in the response. Accepts boolean (`true`/`false`) or string (`\&quot;true\&quot;`/`\&quot;false\&quot;`) values. Defaults to `false`. &lt;br&gt;&lt;br&gt;Example: `true`&quot;</summary>
+            /// <summary>Set to `true` to include credit usage and remaining credit details (lead, direct dial, export, AI, and power-up credits) in the response. Accepts boolean (`true`/`false`) or string (`&quot;true&quot;`/`&quot;false&quot;`) values. Defaults to `false`. &lt;br&gt;&lt;br&gt;Example: `true`</summary>
             [QueryParameter("include_credit_usage")]
             public bool? IncludeCreditUsage { get; set; }
         }

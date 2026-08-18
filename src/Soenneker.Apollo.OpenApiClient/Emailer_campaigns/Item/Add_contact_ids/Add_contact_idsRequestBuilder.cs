@@ -95,10 +95,10 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             /// <summary>Set to `true` if you want to add contacts even if they are currently in the queue for processing.</summary>
             [QueryParameter("add_if_in_queue")]
             public bool? AddIfInQueue { get; set; }
-            /// <summary>&quot;DateTime when paused contacts should be automatically unpaused. Must be used with `status=paused`. Format: ISO 8601 datetime string.&quot;</summary>
+            /// <summary>DateTime when paused contacts should be automatically unpaused. Must be used with `status=paused`. Format: ISO 8601 datetime string.</summary>
             [QueryParameter("auto_unpause_at")]
             public DateTimeOffset? AutoUnpauseAt { get; set; }
-            /// <summary>&quot;The Apollo IDs for the contacts that you want to add to the sequence. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts\&quot; target=\&quot;_blank\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&lt;br&gt;&lt;br&gt;Note: Either `contact_ids[]` or `label_names[]` must be provided.&quot;</summary>
+            /// <summary>The Apollo IDs for the contacts that you want to add to the sequence. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&lt;br&gt;&lt;br&gt;Note: Either `contact_ids[]` or `label_names[]` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_ids%5B%5D")]
@@ -114,7 +114,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             /// <summary>Set to `true` if you want to skip contact verification during the addition process.</summary>
             [QueryParameter("contact_verification_skipped")]
             public bool? ContactVerificationSkipped { get; set; }
-            /// <summary>&quot;The same ID as the `sequence_id`. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`&quot;</summary>
+            /// <summary>The same ID as the `sequence_id`. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_campaign_id")]
@@ -124,7 +124,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             [QueryParameter("emailer_campaign_id")]
             public string EmailerCampaignId { get; set; }
 #endif
-            /// <summary>&quot;Alternative to `contact_ids[]`. Array of label names to identify contacts to add to the sequence. Contacts with these labels will be added to the sequence. &lt;br&gt;&lt;br&gt;Note: Either `contact_ids[]` or `label_names[]` must be provided.&quot;</summary>
+            /// <summary>Alternative to `contact_ids[]`. Array of label names to identify contacts to add to the sequence. Contacts with these labels will be added to the sequence. &lt;br&gt;&lt;br&gt;Note: Either `contact_ids[]` or `label_names[]` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("label_names%5B%5D")]
@@ -134,7 +134,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             [QueryParameter("label_names%5B%5D")]
             public string[] LabelNames { get; set; }
 #endif
-            /// <summary>&quot;The Apollo ID(s) for the email account(s) used to send to contacts you add to the sequence. Accepts either one id as a string, or multiple ids as an array of strings (multi-mailbox / rotation). To find email account IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-email-accounts\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Email Accounts endpoint&lt;/a&gt; and identify the `id` value for each email account. &lt;br&gt;&lt;br&gt;Examples: `6633baaece5fbd01c791d7ca` (string) or `[\&quot;6633baaece5fbd01c791d7ca\&quot;, \&quot;6633baaece5fbd01c791d7cb\&quot;]` (array).&quot;</summary>
+            /// <summary>The Apollo ID(s) for the email account(s) used to send to contacts you add to the sequence. Accepts either one id as a string, or multiple ids as an array of strings (multi-mailbox / rotation). To find email account IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-email-accounts&quot; target=&quot;_blank&quot;&gt;Get a List of Email Accounts endpoint&lt;/a&gt; and identify the `id` value for each email account. &lt;br&gt;&lt;br&gt;Examples: `6633baaece5fbd01c791d7ca` (string) or `[&quot;6633baaece5fbd01c791d7ca&quot;, &quot;6633baaece5fbd01c791d7cb&quot;]` (array).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("send_email_from_email_account_id")]
@@ -175,7 +175,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             /// <summary>Initial status for added contacts. When set to `paused` along with `auto_unpause_at`, enables scheduled addition of contacts.</summary>
             [QueryParameter("status")]
             public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequenceStatusParameter? Status { get; set; }
-            /// <summary>&quot;The ID for the user in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;This is the user taking the action to add contacts to a sequence. When the sequence is updated, the activity log shows the user that added the contacts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+            /// <summary>The ID for the user in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;This is the user taking the action to add contacts to a sequence. When the sequence is updated, the activity log shows the user that added the contacts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_id")]

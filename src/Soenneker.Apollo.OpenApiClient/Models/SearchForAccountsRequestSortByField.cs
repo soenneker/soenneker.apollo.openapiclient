@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;Sort the matching accounts by 1 of the following options:- `account_last_activity_date`: The most recent activity date recorded first.- `account_created_at`: The most recently created first.- `account_updated_at`: The most recently updated first.&quot;</summary>
+    /// <summary>Sort the matching accounts by 1 of the following options:- `account_last_activity_date`: The most recent activity date recorded first.- `account_created_at`: The most recently created first.- `account_updated_at`: The most recently updated first.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SearchForAccountsRequestSortByField
     {

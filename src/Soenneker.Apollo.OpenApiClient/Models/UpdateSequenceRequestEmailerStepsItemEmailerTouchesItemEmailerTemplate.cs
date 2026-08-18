@@ -15,7 +15,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTML body of the email. Example: `&lt;p&gt;Hi {{first_name}}&lt;/p&gt;`&quot;</summary>
+        /// <summary>The HTML body of the email. Example: `&lt;p&gt;Hi {{first_name}}&lt;/p&gt;`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BodyHtml { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string BodyHtml { get; set; }
 #endif
-        /// <summary>&quot;The subject line of the email. Example: `Quick question, {{first_name}}`&quot;</summary>
+        /// <summary>The subject line of the email. Example: `Quick question, {{first_name}}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get; set; }

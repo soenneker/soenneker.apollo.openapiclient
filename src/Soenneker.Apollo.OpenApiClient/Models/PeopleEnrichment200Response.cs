@@ -23,7 +23,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson Person { get; set; }
 #endif
         /// <summary>The request ID for the enrichment request. Save this ID to map this request with the corresponding webhook result.</summary>
-        public int? RequestId { get; set; }
+        public long? RequestId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200Response"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "person", n => { Person = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson.CreateFromDiscriminatorValue); } },
-                { "request_id", n => { RequestId = n.GetIntValue(); } },
+                { "request_id", n => { RequestId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson>("person", Person);
-            writer.WriteIntValue("request_id", RequestId);
+            writer.WriteLongValue("request_id", RequestId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

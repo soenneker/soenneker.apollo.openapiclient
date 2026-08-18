@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The Apollo ID for the contact whose sequence activity you want to retrieve. The contact must belong to your team, otherwise a `404` is returned. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+        /// <summary>The Apollo ID for the contact whose sequence activity you want to retrieve. The contact must belong to your team, otherwise a `404` is returned. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string ContactId { get; set; }
 #endif
-        /// <summary>&quot;The maximum number of events to return, from 1 to 50. Defaults to `50` when omitted. &lt;br&gt;&lt;br&gt;Values above 50 are reduced to 50, and values below 1 — including `0`, negative numbers, and values that aren&apos;t numbers — are raised to 1. &lt;br&gt;&lt;br&gt;This isn&apos;t a pagination parameter and there is no `page` parameter: the endpoint always returns the most recent events, so lowering `per_page` returns a shorter, more recent timeline rather than a different page of results. &lt;br&gt;&lt;br&gt;Example: `25`&quot;</summary>
+        /// <summary>The maximum number of events to return, from 1 to 50. Defaults to `50` when omitted. &lt;br&gt;&lt;br&gt;Values above 50 are reduced to 50, and values below 1 — including `0`, negative numbers, and values that aren&apos;t numbers — are raised to 1. &lt;br&gt;&lt;br&gt;This isn&apos;t a pagination parameter and there is no `page` parameter: the endpoint always returns the most recent events, so lowering `per_page` returns a shorter, more recent timeline rather than a different page of results. &lt;br&gt;&lt;br&gt;Example: `25`</summary>
         public int? PerPage { get; set; }
-        /// <summary>&quot;The Apollo ID for a single sequence. When provided, only events from that sequence are returned. When omitted, events from all of the contact&apos;s sequences are returned. &lt;br&gt;&lt;br&gt;If the ID doesn&apos;t match a sequence with activity for this contact, an empty `events` array is returned instead of an error. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-sequences\&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`&quot;</summary>
+        /// <summary>The Apollo ID for a single sequence. When provided, only events from that sequence are returned. When omitted, events from all of the contact&apos;s sequences are returned. &lt;br&gt;&lt;br&gt;If the ID doesn&apos;t match a sequence with activity for this contact, an empty `events` array is returned instead of an error. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SequenceId { get; set; }

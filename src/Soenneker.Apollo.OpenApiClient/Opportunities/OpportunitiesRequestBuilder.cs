@@ -25,7 +25,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities
             get => new global::Soenneker.Apollo.OpenApiClient.Opportunities.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.opportunities.item collection</summary>
-        /// <param name="position">&quot;The ID for the deal you want to view. &lt;br&gt;&lt;br&gt;Each deal in the Apollo database is assigned a unique ID. To find deal IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/list-all-deals\&quot; target=\&quot;_blank\&quot;&gt;List All Deals endpoint&lt;/a&gt; and identify the value for `id` for the desired deal. &lt;br&gt;&lt;br&gt;Example: `66e09ea8e3cfcf01b2208ec7`&quot;</param>
+        /// <param name="position">The ID for the deal you want to view. &lt;br&gt;&lt;br&gt;Each deal in the Apollo database is assigned a unique ID. To find deal IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-all-deals&quot; target=&quot;_blank&quot;&gt;List All Deals endpoint&lt;/a&gt; and identify the value for `id` for the desired deal. &lt;br&gt;&lt;br&gt;Example: `66e09ea8e3cfcf01b2208ec7`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Opportunities.Item.WithOpportunityItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Opportunities.Item.WithOpportunityItemRequestBuilder this[string position]
         {

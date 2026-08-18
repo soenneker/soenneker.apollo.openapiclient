@@ -91,7 +91,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Find calls that included specific contacts. You can add multiple contacts. &lt;br&gt;&lt;br&gt;In Apollo terminology, a contact is a person that your team has explicitly added to your database. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4` 6708415f59d9c70001b2f852&quot;</summary>
+            /// <summary>Find calls that included specific contacts. You can add multiple contacts. &lt;br&gt;&lt;br&gt;In Apollo terminology, a contact is a person that your team has explicitly added to your database. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4` 6708415f59d9c70001b2f852</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_label_ids%5B%5D")]
@@ -101,16 +101,16 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("contact_label_ids%5B%5D")]
             public string[] ContactLabelIds { get; set; }
 #endif
-            /// <summary>&quot;Set the upper bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `date_range[min]` parameter. This date should fall after the `date_range[min]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-06-12`&quot;</summary>
+            /// <summary>Set the upper bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `date_range[min]` parameter. This date should fall after the `date_range[min]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-06-12`</summary>
             [QueryParameter("date_range%5Bmax%5D")]
             public Date? DateRangemax { get; set; }
-            /// <summary>&quot;Set the lower bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `date_range[max]` parameter. This date should fall before the `date_range[max]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-04-01`&quot;</summary>
+            /// <summary>Set the lower bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `date_range[max]` parameter. This date should fall before the `date_range[max]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-04-01`</summary>
             [QueryParameter("date_range%5Bmin%5D")]
             public Date? DateRangemin { get; set; }
-            /// <summary>&quot;Set the upper bound for the call duration you want to search. The duration should be seconds, not minutes or hours. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `duration[min]` parameter. This number should be larger than `duration[min]`. &lt;br&gt;&lt;br&gt;Example: `180`&quot;</summary>
+            /// <summary>Set the upper bound for the call duration you want to search. The duration should be seconds, not minutes or hours. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `duration[min]` parameter. This number should be larger than `duration[min]`. &lt;br&gt;&lt;br&gt;Example: `180`</summary>
             [QueryParameter("duration%5Bmax%5D")]
             public int? Durationmax { get; set; }
-            /// <summary>&quot;Set the lower bound for the call duration you want to search. The duration should be seconds, not minutes or hours. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `duration[max]` parameter. This number should be smallerr than `duration[min]`. &lt;br&gt;&lt;br&gt;Example: `30`&quot;</summary>
+            /// <summary>Set the lower bound for the call duration you want to search. The duration should be seconds, not minutes or hours. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `duration[max]` parameter. This number should be smallerr than `duration[min]`. &lt;br&gt;&lt;br&gt;Example: `30`</summary>
             [QueryParameter("duration%5Bmin%5D")]
             public int? Durationmin { get; set; }
             /// <summary>Search for calls based on whether they were `incoming` (the prospect called your team) or `outgoing` (your team called the prospect).</summary>
@@ -123,7 +123,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("inbound")]
             public string Inbound { get; set; }
 #endif
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page")]
@@ -133,7 +133,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("page")]
             public string Page { get; set; }
 #endif
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the page parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the page parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("per_page")]
@@ -143,7 +143,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("per_page")]
             public string PerPage { get; set; }
 #endif
-            /// <summary>&quot;Filter calls based on their outcome. &lt;br&gt;&lt;br&gt;Call outcomes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Disposition&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call outcome ID in the URL. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4c5`&quot;</summary>
+            /// <summary>Filter calls based on their outcome. &lt;br&gt;&lt;br&gt;Call outcomes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Disposition&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call outcome ID in the URL. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4c5`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("phone_call_outcome_ids%5B%5D")]
@@ -153,7 +153,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("phone_call_outcome_ids%5B%5D")]
             public string[] PhoneCallOutcomeIds { get; set; }
 #endif
-            /// <summary>&quot;Filter calls based on their purpose. &lt;br&gt;&lt;br&gt;Call purposes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Purpose&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call purpose ID in the URL. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4cf`&quot;</summary>
+            /// <summary>Filter calls based on their purpose. &lt;br&gt;&lt;br&gt;Call purposes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Purpose&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call purpose ID in the URL. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4cf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("phone_call_purpose_ids%5B%5D")]
@@ -163,7 +163,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("phone_call_purpose_ids%5B%5D")]
             public string[] PhoneCallPurposeIds { get; set; }
 #endif
-            /// <summary>&quot;Add keywords to narrow the search of the calls in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Example: `marketing conference attendees`&quot;</summary>
+            /// <summary>Add keywords to narrow the search of the calls in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Example: `marketing conference attendees`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_keywords")]
@@ -173,7 +173,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("q_keywords")]
             public string QKeywords { get; set; }
 #endif
-            /// <summary>&quot;Find calls that included specific users in your team&apos;s Apollo account. You can add multiple users. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`&quot;</summary>
+            /// <summary>Find calls that included specific users in your team&apos;s Apollo account. You can add multiple users. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_ids%5B%5D")]

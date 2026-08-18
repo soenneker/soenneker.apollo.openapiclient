@@ -92,7 +92,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page")]
@@ -102,7 +102,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Search
             [QueryParameter("page")]
             public string Page { get; set; }
 #endif
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("per_page")]
@@ -112,7 +112,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Search
             [QueryParameter("per_page")]
             public string PerPage { get; set; }
 #endif
-            /// <summary>&quot;Add keywords to narrow the search of the sequences in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Keywords should directly match at least part of a sequence&apos;s name. For example, searching the keyword `marketing` might return the result `NY Marketing Sequence`, but not `NY Marketer Conference 2025 attendees`. &lt;br&gt;&lt;br&gt;This parameter only searches sequence names, not other sequence fields. &lt;br&gt;&lt;br&gt;Example: `marketing conference attendees`&quot;</summary>
+            /// <summary>Add keywords to narrow the search of the sequences in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Keywords should directly match at least part of a sequence&apos;s name. For example, searching the keyword `marketing` might return the result `NY Marketing Sequence`, but not `NY Marketer Conference 2025 attendees`. &lt;br&gt;&lt;br&gt;This parameter only searches sequence names, not other sequence fields. &lt;br&gt;&lt;br&gt;Example: `marketing conference attendees`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_name")]

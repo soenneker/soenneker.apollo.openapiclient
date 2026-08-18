@@ -42,7 +42,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>&quot;The priority of the task created for the step. Choose 1 of the following options: `high`, `medium`, `low`. Not applicable to `auto_email` steps.&quot;</summary>
+        /// <summary>The priority of the task created for the step. Choose 1 of the following options: `high`, `medium`, `low`. Not applicable to `auto_email` steps.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Priority { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Priority { get; set; }
 #endif
-        /// <summary>&quot;The type of step. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`auto_email`: An email that Apollo sends automatically.&lt;/li&gt;&lt;li&gt;`manual_email`: An email task that a user sends manually.&lt;/li&gt;&lt;li&gt;`call`: A phone call task.&lt;/li&gt;&lt;li&gt;`action_item`: A general to-do task.&lt;/li&gt;&lt;li&gt;`linkedin_step_connect`: A LinkedIn connection request task.&lt;/li&gt;&lt;li&gt;`linkedin_step_message`: A LinkedIn message task.&lt;/li&gt;&lt;li&gt;`linkedin_step_view_profile`: A LinkedIn profile view task.&lt;/li&gt;&lt;li&gt;`linkedin_step_interact_post`: A LinkedIn post interaction task.&lt;/li&gt;&lt;/ul&gt;Step types other than `auto_email` require a plan with access to basic task functions.&quot;</summary>
+        /// <summary>The type of step. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`auto_email`: An email that Apollo sends automatically.&lt;/li&gt;&lt;li&gt;`manual_email`: An email task that a user sends manually.&lt;/li&gt;&lt;li&gt;`call`: A phone call task.&lt;/li&gt;&lt;li&gt;`action_item`: A general to-do task.&lt;/li&gt;&lt;li&gt;`linkedin_step_connect`: A LinkedIn connection request task.&lt;/li&gt;&lt;li&gt;`linkedin_step_message`: A LinkedIn message task.&lt;/li&gt;&lt;li&gt;`linkedin_step_view_profile`: A LinkedIn profile view task.&lt;/li&gt;&lt;li&gt;`linkedin_step_interact_post`: A LinkedIn post interaction task.&lt;/li&gt;&lt;/ul&gt;Step types other than `auto_email` require a plan with access to basic task functions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>&quot;The unit for `wait_time`. Choose 1 of the following options: `minute`, `hour`, `day`.&quot;</summary>
+        /// <summary>The unit for `wait_time`. Choose 1 of the following options: `minute`, `hour`, `day`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WaitMode { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string WaitMode { get; set; }
 #endif
-        /// <summary>&quot;How long to wait after the previous step before this step runs. Required (along with `wait_mode`) unless the sequence uses `sequence_by_exact_daytime`. &lt;br&gt;&lt;br&gt;Example: `2`&quot;</summary>
+        /// <summary>How long to wait after the previous step before this step runs. Required (along with `wait_mode`) unless the sequence uses `sequence_by_exact_daytime`. &lt;br&gt;&lt;br&gt;Example: `2`</summary>
         public int? WaitTime { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem"/> and sets the default values.

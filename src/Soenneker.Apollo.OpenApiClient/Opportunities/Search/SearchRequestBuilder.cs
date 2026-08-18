@@ -92,13 +92,13 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Sort the tasks by 1 of the following options:    &lt;ul&gt; &lt;li&gt; `amount`: The largest deal values first. &lt;/li&gt; &lt;li&gt; `is_closed`: Deals that have been closed first. &lt;/li&gt; &lt;li&gt; `is_won`: Deals that have been won first. &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Sort the tasks by 1 of the following options:    &lt;ul&gt; &lt;li&gt; `amount`: The largest deal values first. &lt;/li&gt; &lt;li&gt; `is_closed`: Deals that have been closed first. &lt;/li&gt; &lt;li&gt; `is_won`: Deals that have been won first. &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort_by_field")]

@@ -96,7 +96,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EnrichRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The domain of the company that you want to enrich. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`&quot;</summary>
+            /// <summary>The domain of the company that you want to enrich. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("domain")]
@@ -106,7 +106,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
             [QueryParameter("domain")]
             public string Domain { get; set; }
 #endif
-            /// <summary>&quot;The URL for the company&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/company/apolloio`&quot;</summary>
+            /// <summary>The URL for the company&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/company/apolloio`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("linkedin_url")]
@@ -116,7 +116,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
             [QueryParameter("linkedin_url")]
             public string LinkedinUrl { get; set; }
 #endif
-            /// <summary>&quot;The name of the company that you want to enrich. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `apollo`&quot;</summary>
+            /// <summary>The name of the company that you want to enrich. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `apollo`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -126,7 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>&quot;The full website URL of the company that you want to enrich. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `http://www.apollo.io`&quot;</summary>
+            /// <summary>The full website URL of the company that you want to enrich. &lt;br&gt;&lt;br&gt;At least one of `domain`, `linkedin_url`, `name`, or `website` is required. &lt;br&gt;&lt;br&gt;Example: `http://www.apollo.io`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("website")]

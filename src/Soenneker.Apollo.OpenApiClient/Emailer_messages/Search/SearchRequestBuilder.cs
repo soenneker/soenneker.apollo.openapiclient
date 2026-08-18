@@ -103,7 +103,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("email_account_id_and_aliases")]
             public string EmailAccountIdAndAliases { get; set; }
 #endif
-            /// <summary>&quot;Search for emails that are included in specific sequences in your Apollo account. You can search multiple sequences. Any sequence not included in this parameter will be exclude from search results.&lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-sequences\&quot; target=\&quot;_blank\&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`&quot;</summary>
+            /// <summary>Search for emails that are included in specific sequences in your Apollo account. You can search multiple sequences. Any sequence not included in this parameter will be exclude from search results.&lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_campaign_ids%5B%5D")]
@@ -113,13 +113,13 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("emailer_campaign_ids%5B%5D")]
             public string[] EmailerCampaignIds { get; set; }
 #endif
-            /// <summary>&quot;Set the upper bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `emailer_message_date_range[min]` and `emailer_message_date_range_mode` parameters. This date should fall after the `emailer_message_date_range[min]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-10-30`&quot;</summary>
+            /// <summary>Set the upper bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `emailer_message_date_range[min]` and `emailer_message_date_range_mode` parameters. This date should fall after the `emailer_message_date_range[min]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-10-30`</summary>
             [QueryParameter("emailer_message_date_range%5Bmax%5D")]
             public Date? EmailerMessageDateRangemax { get; set; }
-            /// <summary>&quot;Set the lower bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `emailer_message_date_range[max]` and `emailer_message_date_range_mode` parameters. This date should fall before the `emailer_message_date_range[max]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-10-30`&quot;</summary>
+            /// <summary>Set the lower bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `emailer_message_date_range[max]` and `emailer_message_date_range_mode` parameters. This date should fall before the `emailer_message_date_range[max]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-10-30`</summary>
             [QueryParameter("emailer_message_date_range%5Bmin%5D")]
             public Date? EmailerMessageDateRangemin { get; set; }
-            /// <summary>&quot;Use this parameter in combination with the `emailer_message_date_range[max]` and `emailer_message_date_range[min]` parameters. Find emails based on 1 of the following options: &lt;ul&gt; &lt;li&gt; `due_at`: When emails are scheduled to be delivered. &lt;/li&gt; &lt;li&gt; `completed_at`: When emails were delivered. &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Use this parameter in combination with the `emailer_message_date_range[max]` and `emailer_message_date_range[min]` parameters. Find emails based on 1 of the following options: &lt;ul&gt; &lt;li&gt; `due_at`: When emails are scheduled to be delivered. &lt;/li&gt; &lt;li&gt; `completed_at`: When emails were delivered. &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_message_date_range_mode")]
@@ -129,7 +129,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("emailer_message_date_range_mode")]
             public string EmailerMessageDateRangeMode { get; set; }
 #endif
-            /// <summary>&quot;Find emails based on the response sentiment of the recipient. This can include the recipient expressing interest in meeting or having a follow-up question. You can add multiple values.&lt;br&gt;&lt;br&gt;Possible values include: &lt;ul&gt; &lt;li&gt; `willing_to_meet` &lt;/li&gt; &lt;li&gt; `follow_up_question` &lt;/li&gt; &lt;li&gt; `person_referral` &lt;/li&gt; &lt;li&gt; `out_of_office` &lt;/li&gt; &lt;li&gt; `already_left_company_or_not_right_person` &lt;/li&gt; &lt;li&gt; `not_interested` &lt;/li&gt; &lt;li&gt; `unsubscribe` &lt;/li&gt; &lt;li&gt; `none_of_the_above` &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Find emails based on the response sentiment of the recipient. This can include the recipient expressing interest in meeting or having a follow-up question. You can add multiple values.&lt;br&gt;&lt;br&gt;Possible values include: &lt;ul&gt; &lt;li&gt; `willing_to_meet` &lt;/li&gt; &lt;li&gt; `follow_up_question` &lt;/li&gt; &lt;li&gt; `person_referral` &lt;/li&gt; &lt;li&gt; `out_of_office` &lt;/li&gt; &lt;li&gt; `already_left_company_or_not_right_person` &lt;/li&gt; &lt;li&gt; `not_interested` &lt;/li&gt; &lt;li&gt; `unsubscribe` &lt;/li&gt; &lt;li&gt; `none_of_the_above` &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_message_reply_classes%5B%5D")]
@@ -139,7 +139,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("emailer_message_reply_classes%5B%5D")]
             public string[] EmailerMessageReplyClasses { get; set; }
 #endif
-            /// <summary>&quot;Find emails based on their current status, such as whether they were delivered or opened. You can add multiple statuses. &lt;br&gt;&lt;br&gt;Possible values include: &lt;ul&gt; &lt;li&gt; `delivered` &lt;/li&gt; &lt;li&gt; `scheduled` &lt;/li&gt; &lt;li&gt; `drafted` &lt;/li&gt; &lt;li&gt; `not_opened` &lt;/li&gt; &lt;li&gt; `opened` &lt;/li&gt; &lt;li&gt; `clicked` &lt;/li&gt; &lt;li&gt; `unsubscribed` &lt;/li&gt; &lt;li&gt; `demoed` &lt;/li&gt; &lt;li&gt; `bounced` &lt;/li&gt; &lt;li&gt; `spam_blocked` &lt;/li&gt; &lt;li&gt; `failed_other` &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Find emails based on their current status, such as whether they were delivered or opened. You can add multiple statuses. &lt;br&gt;&lt;br&gt;Possible values include: &lt;ul&gt; &lt;li&gt; `delivered` &lt;/li&gt; &lt;li&gt; `scheduled` &lt;/li&gt; &lt;li&gt; `drafted` &lt;/li&gt; &lt;li&gt; `not_opened` &lt;/li&gt; &lt;li&gt; `opened` &lt;/li&gt; &lt;li&gt; `clicked` &lt;/li&gt; &lt;li&gt; `unsubscribed` &lt;/li&gt; &lt;li&gt; `demoed` &lt;/li&gt; &lt;li&gt; `bounced` &lt;/li&gt; &lt;li&gt; `spam_blocked` &lt;/li&gt; &lt;li&gt; `failed_other` &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_message_stats%5B%5D")]
@@ -149,7 +149,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("emailer_message_stats%5B%5D")]
             public string[] EmailerMessageStats { get; set; }
 #endif
-            /// <summary>&quot;Exclude emails from specific sequences in your Apollo account. You can exclude multiple sequences. Any sequence not excluded using this parameter will be included in search results.&lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-sequences\&quot; target=\&quot;_blank\&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`&quot;</summary>
+            /// <summary>Exclude emails from specific sequences in your Apollo account. You can exclude multiple sequences. Any sequence not excluded using this parameter will be included in search results.&lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not_emailer_campaign_ids%5B%5D")]
@@ -159,7 +159,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("not_emailer_campaign_ids%5B%5D")]
             public string[] NotEmailerCampaignIds { get; set; }
 #endif
-            /// <summary>&quot;Find emails based on the reason they were not sent. You can add multiple values.&lt;br&gt;&lt;br&gt;Possible values include: &lt;ul&gt; &lt;li&gt; `contact_stage_safeguard` &lt;/li&gt; &lt;li&gt; `same_account_reply` &lt;/li&gt; &lt;li&gt; `account_stage_safeguard` &lt;/li&gt; &lt;li&gt; `email_unverified` &lt;/li&gt; &lt;li&gt; `snippets_missing` &lt;/li&gt; &lt;li&gt; `personalized_opener_missing` &lt;/li&gt; &lt;li&gt; `thread_reply_original_email_missing` &lt;/li&gt; &lt;li&gt; `no_active_email_account` &lt;/li&gt; &lt;li&gt; `email_format_invalid` &lt;/li&gt; &lt;li&gt; `ownership_permission` &lt;/li&gt; &lt;li&gt; `email_service_provider_delivery_failure` &lt;/li&gt; &lt;li&gt; `sendgrid_dropped_email` &lt;/li&gt; &lt;li&gt; `mailgun_dropped_email` &lt;/li&gt; &lt;li&gt; `gdpr_compliance` &lt;/li&gt; &lt;li&gt; `not_valid_hard_bounce_detected` &lt;li&gt; `other_safeguard` &lt;/li&gt; &lt;li&gt; `new_job_change_detected` &lt;/li&gt; &lt;li&gt; `email_on_global_bounce_list` &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Find emails based on the reason they were not sent. You can add multiple values.&lt;br&gt;&lt;br&gt;Possible values include: &lt;ul&gt; &lt;li&gt; `contact_stage_safeguard` &lt;/li&gt; &lt;li&gt; `same_account_reply` &lt;/li&gt; &lt;li&gt; `account_stage_safeguard` &lt;/li&gt; &lt;li&gt; `email_unverified` &lt;/li&gt; &lt;li&gt; `snippets_missing` &lt;/li&gt; &lt;li&gt; `personalized_opener_missing` &lt;/li&gt; &lt;li&gt; `thread_reply_original_email_missing` &lt;/li&gt; &lt;li&gt; `no_active_email_account` &lt;/li&gt; &lt;li&gt; `email_format_invalid` &lt;/li&gt; &lt;li&gt; `ownership_permission` &lt;/li&gt; &lt;li&gt; `email_service_provider_delivery_failure` &lt;/li&gt; &lt;li&gt; `sendgrid_dropped_email` &lt;/li&gt; &lt;li&gt; `mailgun_dropped_email` &lt;/li&gt; &lt;li&gt; `gdpr_compliance` &lt;/li&gt; &lt;li&gt; `not_valid_hard_bounce_detected` &lt;li&gt; `other_safeguard` &lt;/li&gt; &lt;li&gt; `new_job_change_detected` &lt;/li&gt; &lt;li&gt; `email_on_global_bounce_list` &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not_sent_reason_cds%5B%5D")]
@@ -169,13 +169,13 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("not_sent_reason_cds%5B%5D")]
             public string[] NotSentReasonCds { get; set; }
 #endif
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Add keywords to narrow the search of the emails in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Keywords should directly match at least part of an email&apos;s content. For example, searching the keyword `James` might return emails that were sent by `James Smith`. &lt;br&gt;&lt;br&gt;Example: `Jane`&quot;</summary>
+            /// <summary>Add keywords to narrow the search of the emails in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Keywords should directly match at least part of an email&apos;s content. For example, searching the keyword `James` might return emails that were sent by `James Smith`. &lt;br&gt;&lt;br&gt;Example: `Jane`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q_keywords")]
@@ -185,7 +185,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             [QueryParameter("q_keywords")]
             public string QKeywords { get; set; }
 #endif
-            /// <summary>&quot;Find emails sent by specific users in your team&apos;s Apollo account. You can add multiple users. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+            /// <summary>Find emails sent by specific users in your team&apos;s Apollo account. You can add multiple users. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_ids%5B%5D")]

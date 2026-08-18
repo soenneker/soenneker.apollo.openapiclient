@@ -31,7 +31,7 @@ namespace Soenneker.Apollo.OpenApiClient.Tasks
             get => new global::Soenneker.Apollo.OpenApiClient.Tasks.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.tasks.item collection</summary>
-        /// <param name="position">&quot;The Apollo ID for the task. &lt;br&gt;&lt;br&gt;To find task IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-tasks\&quot;&gt;Search for Tasks endpoint&lt;/a&gt; and identify the `id` value for the task. &lt;br&gt;&lt;br&gt;Example: `67a1b2c3d4e5f60001234567`&quot;</param>
+        /// <param name="position">The Apollo ID for the task. &lt;br&gt;&lt;br&gt;To find task IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-tasks&quot;&gt;Search for Tasks endpoint&lt;/a&gt; and identify the `id` value for the task. &lt;br&gt;&lt;br&gt;Example: `67a1b2c3d4e5f60001234567`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Tasks.Item.TasksItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Tasks.Item.TasksItemRequestBuilder this[string position]
         {

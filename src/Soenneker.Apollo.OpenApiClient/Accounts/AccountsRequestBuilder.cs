@@ -43,7 +43,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts
             get => new global::Soenneker.Apollo.OpenApiClient.Accounts.Update_owners.Update_ownersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.accounts.item collection</summary>
-        /// <param name="position">&quot;The Apollo ID for the account that you want to update. &lt;br&gt;&lt;br&gt;To find account IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-accounts\&quot; target=\&quot;_blank\&quot;&gt;Search for Accounts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`&quot;</param>
+        /// <param name="position">The Apollo ID for the account that you want to update. &lt;br&gt;&lt;br&gt;To find account IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-accounts&quot; target=&quot;_blank&quot;&gt;Search for Accounts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountItemRequestBuilder this[string position]
         {

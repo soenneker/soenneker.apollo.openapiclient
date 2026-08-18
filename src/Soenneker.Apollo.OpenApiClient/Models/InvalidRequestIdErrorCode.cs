@@ -5,7 +5,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>Machine-readable error code. &lt;code&gt;invalid_request_id&lt;/code&gt; means the &lt;code&gt;request_id&lt;/code&gt; was not a valid signed 64-bit integer.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PollWebhookResult400ResponseErrorCode
+    public enum InvalidRequestIdErrorCode
     {
         [EnumMember(Value = "invalid_request_id")]
         #pragma warning disable CS1591

@@ -94,7 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_stages
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Update_stagesRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;The Apollo IDs for the contacts that you want to update. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts\&quot; target=\&quot;_blank\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+            /// <summary>The Apollo IDs for the contacts that you want to update. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_ids%5B%5D")]
@@ -104,7 +104,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_stages
             [QueryParameter("contact_ids%5B%5D")]
             public string[] ContactIds { get; set; }
 #endif
-            /// <summary>&quot;The Apollo ID for the contact stage to which you want to assign the contacts. Call the &lt;a href=\&quot;https://docs.apollo.io/reference/list-contact-stages\&quot; target=\&quot;_blank\&quot;&gt;List Contact Stages endpoint&lt;/a&gt; to retrieve a list of all the contact stage IDs available in your Apollo account. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4af`&quot;</summary>
+            /// <summary>The Apollo ID for the contact stage to which you want to assign the contacts. Call the &lt;a href=&quot;https://docs.apollo.io/reference/list-contact-stages&quot; target=&quot;_blank&quot;&gt;List Contact Stages endpoint&lt;/a&gt; to retrieve a list of all the contact stage IDs available in your Apollo account. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4af`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_stage_id")]

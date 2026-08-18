@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The domain of the company that you want to enrich. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`&quot;</summary>
+        /// <summary>The domain of the company that you want to enrich. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Domain { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Domain { get; set; }
 #endif
-        /// <summary>&quot;The URL for the company&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/company/apolloio`&quot;</summary>
+        /// <summary>The URL for the company&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/company/apolloio`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LinkedinUrl { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LinkedinUrl { get; set; }
 #endif
-        /// <summary>&quot;The name of the company that you want to enrich. &lt;br&gt;&lt;br&gt;Example: `apollo`&quot;</summary>
+        /// <summary>The name of the company that you want to enrich. &lt;br&gt;&lt;br&gt;Example: `apollo`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The full website URL of the company that you want to enrich. &lt;br&gt;&lt;br&gt;Example: `http://www.apollo.io`&quot;</summary>
+        /// <summary>The full website URL of the company that you want to enrich. &lt;br&gt;&lt;br&gt;Example: `http://www.apollo.io`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Website { get; set; }

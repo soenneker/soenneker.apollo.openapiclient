@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An optional note to record when skipping the task. &lt;br&gt;&lt;br&gt;Example: `No longer a good fit, moving to a different sequence.`&quot;</summary>
+        /// <summary>An optional note to record when skipping the task. &lt;br&gt;&lt;br&gt;Example: `No longer a good fit, moving to a different sequence.`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Note { get; set; }

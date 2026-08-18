@@ -91,7 +91,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Phone_callsItemRequestBuilderPutQueryParameters 
         {
-            /// <summary>&quot;Associate the call with an account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-accounts#/\&quot; target=\&quot;_blank\&quot;&gt;Search for Accounts endpoint&lt;/a&gt; to retrieve IDs for all of the accounts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`&quot;</summary>
+            /// <summary>Associate the call with an account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-accounts#/&quot; target=&quot;_blank&quot;&gt;Search for Accounts endpoint&lt;/a&gt; to retrieve IDs for all of the accounts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("account_id")]
@@ -101,7 +101,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("account_id")]
             public string AccountId { get; set; }
 #endif
-            /// <summary>&quot;Designate the contact that was called. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts#/\&quot; target=\&quot;_blank\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; to retrieve IDs for all of the contacts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+            /// <summary>Designate the contact that was called. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts#/&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; to retrieve IDs for all of the contacts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_id")]
@@ -111,13 +111,13 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("contact_id")]
             public string ContactId { get; set; }
 #endif
-            /// <summary>&quot;The duration of the call in seconds. Do not enter minutes. &lt;br&gt;&lt;br&gt;Examples: `120`; `205`&quot;</summary>
+            /// <summary>The duration of the call in seconds. Do not enter minutes. &lt;br&gt;&lt;br&gt;Examples: `120`; `205`</summary>
             [QueryParameter("duration")]
             public int? Duration { get; set; }
-            /// <summary>&quot;The time when the call ended. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a end time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifiying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-05-15T08:10:30Z`; `2025-05-25T10:15:30+05:00Z`&quot;</summary>
+            /// <summary>The time when the call ended. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a end time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifiying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-05-15T08:10:30Z`; `2025-05-25T10:15:30+05:00Z`</summary>
             [QueryParameter("end_time")]
             public DateTimeOffset? EndTime { get; set; }
-            /// <summary>&quot;The phone number that dialed you. &lt;br&gt;&lt;br&gt;Example: `5555550164`&quot;</summary>
+            /// <summary>The phone number that dialed you. &lt;br&gt;&lt;br&gt;Example: `5555550164`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("from_number")]
@@ -130,7 +130,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             /// <summary>Set to `true` if you want to create an individual record for the phone call in Apollo.</summary>
             [QueryParameter("logged")]
             public bool? Logged { get; set; }
-            /// <summary>&quot;Add a note to the call record. &lt;br&gt;&lt;br&gt;Example: `This lead is interested in learning more about our new product line.`&quot;</summary>
+            /// <summary>Add a note to the call record. &lt;br&gt;&lt;br&gt;Example: `This lead is interested in learning more about our new product line.`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("note")]
@@ -140,7 +140,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("note")]
             public string Note { get; set; }
 #endif
-            /// <summary>&quot;Assign a call outcome to the record. &lt;br&gt;&lt;br&gt;Call outcomes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Disposition&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call outcome ID in the URL. &lt;br&gt;&lt;br&gt;Examples: `6095a710bd01d100a506d4c5`&quot;</summary>
+            /// <summary>Assign a call outcome to the record. &lt;br&gt;&lt;br&gt;Call outcomes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Disposition&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call outcome ID in the URL. &lt;br&gt;&lt;br&gt;Examples: `6095a710bd01d100a506d4c5`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("phone_call_outcome_id")]
@@ -150,7 +150,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("phone_call_outcome_id")]
             public string PhoneCallOutcomeId { get; set; }
 #endif
-            /// <summary>&quot;Assign a call purpose to the record. &lt;br&gt;&lt;br&gt;Call purposes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Purpose&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call purpose ID in the URL. &lt;br&gt;&lt;br&gt;Examples: `6095a710bd01d100a506d4cd`&quot;</summary>
+            /// <summary>Assign a call purpose to the record. &lt;br&gt;&lt;br&gt;Call purposes are unique to your team&apos;s Apollo account. When you use the &lt;b&gt;Purpose&lt;/b&gt; search filter for calls in the Apollo product, you can find the corresponding call purpose ID in the URL. &lt;br&gt;&lt;br&gt;Examples: `6095a710bd01d100a506d4cd`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("phone_call_purpose_id")]
@@ -160,10 +160,10 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("phone_call_purpose_id")]
             public string PhoneCallPurposeId { get; set; }
 #endif
-            /// <summary>&quot;The time when the call started. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a start time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifiying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`; `2025-03-25T10:15:30+05:00Z`&quot;</summary>
+            /// <summary>The time when the call started. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a start time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifiying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`; `2025-03-25T10:15:30+05:00Z`</summary>
             [QueryParameter("start_time")]
             public DateTimeOffset? StartTime { get; set; }
-            /// <summary>&quot;The status of the phone call. Possible values include: &lt;ul&gt; &lt;li&gt;`queued`&lt;/li&gt; &lt;li&gt;`ringing`&lt;/li&gt; &lt;li&gt;`in-progress`&lt;/li&gt; &lt;li&gt;`completed`&lt;/li&gt; &lt;li&gt;`no_answer`&lt;/li&gt; &lt;li&gt;`failed`&lt;/li&gt; &lt;li&gt;`busy`&lt;/li&gt;&lt;/ul&gt;&quot;</summary>
+            /// <summary>The status of the phone call. Possible values include: &lt;ul&gt; &lt;li&gt;`queued`&lt;/li&gt; &lt;li&gt;`ringing`&lt;/li&gt; &lt;li&gt;`in-progress`&lt;/li&gt; &lt;li&gt;`completed`&lt;/li&gt; &lt;li&gt;`no_answer`&lt;/li&gt; &lt;li&gt;`failed`&lt;/li&gt; &lt;li&gt;`busy`&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("status")]
@@ -173,7 +173,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("status")]
             public string Status { get; set; }
 #endif
-            /// <summary>&quot;The phone number that you dialed. &lt;br&gt;&lt;br&gt;Example: `5555550164`&quot;</summary>
+            /// <summary>The phone number that you dialed. &lt;br&gt;&lt;br&gt;Example: `5555550164`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("to_number")]
@@ -183,7 +183,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
             [QueryParameter("to_number")]
             public string ToNumber { get; set; }
 #endif
-            /// <summary>&quot;Designate the caller in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`&quot;</summary>
+            /// <summary>Designate the caller in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_id%5B%5D")]

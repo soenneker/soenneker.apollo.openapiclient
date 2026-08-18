@@ -12,7 +12,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     public partial class CreateAnAccountRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;The Apollo ID for the account stage to which you want to assign the account. Call the &lt;a href=\&quot;https://docs.apollo.io/reference/list-account-stages\&quot; target=\&quot;_blank\&quot;&gt;List Account Stages endpoint&lt;/a&gt; to retrieve a list of all the account stage IDs available in your Apollo account. &lt;br&gt;&lt;br&gt;If you do not specify the account stage, Apollo automatically assigns the account to a stage as determined by your team&apos;s Apollo account. To change the order of account stages, launch the Apollo product and go to &lt;b&gt;Settings&lt;/b&gt; &gt; &lt;b&gt;Objects&lt;/b&gt; &gt; &lt;a href=\&quot;https://app.apollo.io/#/settings/accounts/stages\&quot; target=\&quot;_blank\&quot;&gt;&lt;b&gt;Accounts&lt;/b&gt;&lt;/a&gt;. Then, access the &lt;b&gt;Triggers&lt;/b&gt; tab and change the stage for when an account is created.&lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4b9`&quot;</summary>
+        /// <summary>The Apollo ID for the account stage to which you want to assign the account. Call the &lt;a href=&quot;https://docs.apollo.io/reference/list-account-stages&quot; target=&quot;_blank&quot;&gt;List Account Stages endpoint&lt;/a&gt; to retrieve a list of all the account stage IDs available in your Apollo account. &lt;br&gt;&lt;br&gt;If you do not specify the account stage, Apollo automatically assigns the account to a stage as determined by your team&apos;s Apollo account. To change the order of account stages, launch the Apollo product and go to &lt;b&gt;Settings&lt;/b&gt; &gt; &lt;b&gt;Objects&lt;/b&gt; &gt; &lt;a href=&quot;https://app.apollo.io/#/settings/accounts/stages&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Accounts&lt;/b&gt;&lt;/a&gt;. Then, access the &lt;b&gt;Triggers&lt;/b&gt; tab and change the stage for when an account is created.&lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4b9`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountStageId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The domain name for the account. &lt;br&gt;&lt;br&gt;Do not include `www.` or similar. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`&quot;</summary>
+        /// <summary>The domain name for the account. &lt;br&gt;&lt;br&gt;Do not include `www.` or similar. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Domain { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Domain { get; set; }
 #endif
-        /// <summary>&quot;Name the account that you are creating. This should be a human-readable name. &lt;br&gt;&lt;br&gt;Example: `The Irish Copywriters`&quot;</summary>
+        /// <summary>Name the account that you are creating. This should be a human-readable name. &lt;br&gt;&lt;br&gt;Example: `The Irish Copywriters`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The ID for the account owner within your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+        /// <summary>The ID for the account owner within your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OwnerId { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string OwnerId { get; set; }
 #endif
-        /// <summary>&quot;The primary phone number for the account. &lt;br&gt;&lt;br&gt;This can be the phone number for the corporate headquarters, a branch location, or a direct dial to the primary point of contact for the account. &lt;br&gt;&lt;br&gt;Apollo sanitizes phone numbers, so you can enter them in any format. The sanitized number can be viewed in the endpoint response. &lt;br&gt;&lt;br&gt;Examples: `555-555-0133`; `+44 7700 900852`&quot;</summary>
+        /// <summary>The primary phone number for the account. &lt;br&gt;&lt;br&gt;This can be the phone number for the corporate headquarters, a branch location, or a direct dial to the primary point of contact for the account. &lt;br&gt;&lt;br&gt;Apollo sanitizes phone numbers, so you can enter them in any format. The sanitized number can be viewed in the endpoint response. &lt;br&gt;&lt;br&gt;Examples: `555-555-0133`; `+44 7700 900852`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Phone { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
-        /// <summary>&quot;The corporate location for the account. This can include a city, US state, and country. &lt;br&gt;&lt;br&gt;Apollo matches the location you provide to the most applicable pre-defined location. &lt;br&gt;&lt;br&gt;Examples: `Belfield, Dublin 4, Ireland`; `Dallas, United States`&quot;</summary>
+        /// <summary>The corporate location for the account. This can include a city, US state, and country. &lt;br&gt;&lt;br&gt;Apollo matches the location you provide to the most applicable pre-defined location. &lt;br&gt;&lt;br&gt;Examples: `Belfield, Dublin 4, Ireland`; `Dallas, United States`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RawAddress { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string RawAddress { get; set; }
 #endif
-        /// <summary>&quot;Add information to &lt;a href=\&quot;https://knowledge.apollo.io/hc/en-us/articles/4412498754445-Create-Custom-Account-Fields\&quot; target=\&quot;_blank\&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields\&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields\&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `\&quot;60c39ed82bd02f01154c470a\&quot;` (datetime)   then the value passed should be:  `{\&quot;60c39ed82bd02f01154c470a\&quot;: \&quot;2025-08-07\&quot;}`&quot;</summary>
+        /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412498754445-Create-Custom-Account-Fields&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnAccountRequestTypedCustomFields? TypedCustomFields { get; set; }

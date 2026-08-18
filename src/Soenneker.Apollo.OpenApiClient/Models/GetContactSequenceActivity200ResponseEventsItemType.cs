@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;What happened. &lt;ul&gt; &lt;li&gt; `enrolled`: the contact was added to the sequence. &lt;/li&gt; &lt;li&gt; `paused`: the contact&apos;s enrollment was paused. &lt;/li&gt; &lt;li&gt; `resumed`: the contact&apos;s enrollment was resumed after being paused. &lt;/li&gt; &lt;li&gt; `failed`: the contact&apos;s enrollment failed. &lt;/li&gt; &lt;li&gt; `completed`: the contact finished the sequence. &lt;/li&gt; &lt;li&gt; `removed`: the contact was removed from the sequence. &lt;/li&gt; &lt;li&gt; `replied`: the contact replied to an email from the sequence. &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+    /// <summary>What happened. &lt;ul&gt; &lt;li&gt; `enrolled`: the contact was added to the sequence. &lt;/li&gt; &lt;li&gt; `paused`: the contact&apos;s enrollment was paused. &lt;/li&gt; &lt;li&gt; `resumed`: the contact&apos;s enrollment was resumed after being paused. &lt;/li&gt; &lt;li&gt; `failed`: the contact&apos;s enrollment failed. &lt;/li&gt; &lt;li&gt; `completed`: the contact finished the sequence. &lt;/li&gt; &lt;li&gt; `removed`: the contact was removed from the sequence. &lt;/li&gt; &lt;li&gt; `replied`: the contact replied to an email from the sequence. &lt;/li&gt; &lt;/ul&gt;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum GetContactSequenceActivity200ResponseEventsItemType
     {

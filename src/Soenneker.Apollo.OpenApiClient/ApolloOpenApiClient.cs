@@ -29,6 +29,7 @@ using Soenneker.Apollo.OpenApiClient.Phone_calls;
 using Soenneker.Apollo.OpenApiClient.Reports;
 using Soenneker.Apollo.OpenApiClient.Sequences;
 using Soenneker.Apollo.OpenApiClient.Tasks;
+using Soenneker.Apollo.OpenApiClient.Typed_custom_fields;
 using Soenneker.Apollo.OpenApiClient.Usage_stats;
 using Soenneker.Apollo.OpenApiClient.Users;
 using Soenneker.Apollo.OpenApiClient.Webhook_result;
@@ -158,6 +159,11 @@ namespace Soenneker.Apollo.OpenApiClient
         public global::Soenneker.Apollo.OpenApiClient.Tasks.TasksRequestBuilder Tasks
         {
             get => new global::Soenneker.Apollo.OpenApiClient.Tasks.TasksRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The typed_custom_fields property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Typed_custom_fields.Typed_custom_fieldsRequestBuilder Typed_custom_fields
+        {
+            get => new global::Soenneker.Apollo.OpenApiClient.Typed_custom_fields.Typed_custom_fieldsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The usage_stats property</summary>
         public global::Soenneker.Apollo.OpenApiClient.Usage_stats.Usage_statsRequestBuilder Usage_stats

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Main aggregated data. Shape varies by query mode: a flat key/value object when &lt;code&gt;group_by&lt;/code&gt; is empty (metric name → value); a bucketed object &lt;code&gt;{ \&quot;dimension\&quot;: { \&quot;buckets\&quot;: [...] } }&lt;/code&gt; for grouped queries; a nested bucketed object for pivot queries where the outer key is the &lt;code&gt;pivot_group_by&lt;/code&gt; dimension and each outer bucket contains a nested &lt;code&gt;group_by&lt;/code&gt; dimension with its own &lt;code&gt;buckets&lt;/code&gt;.&quot;
+    /// Main aggregated data. Shape varies by query mode: a flat key/value object when &lt;code&gt;group_by&lt;/code&gt; is empty (metric name → value); a bucketed object &lt;code&gt;{ &quot;dimension&quot;: { &quot;buckets&quot;: [...] } }&lt;/code&gt; for grouped queries; a nested bucketed object for pivot queries where the outer key is the &lt;code&gt;pivot_group_by&lt;/code&gt; dimension and each outer bucket contains a nested &lt;code&gt;group_by&lt;/code&gt; dimension with its own &lt;code&gt;buckets&lt;/code&gt;.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SyncReport200ResponseResponseTableResponse : IAdditionalDataHolder, IParsable

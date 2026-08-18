@@ -94,7 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Update_owners
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Update_ownersRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;The Apollo IDs for the account that you want to assign to an owner. &lt;br&gt;&lt;br&gt;To find account IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-accounts\&quot; target=\&quot;_blank\&quot;&gt;Search for Accounts endpoint&lt;/a&gt; and identify the `id` value for the account. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`&quot;</summary>
+            /// <summary>The Apollo IDs for the account that you want to assign to an owner. &lt;br&gt;&lt;br&gt;To find account IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-accounts&quot; target=&quot;_blank&quot;&gt;Search for Accounts endpoint&lt;/a&gt; and identify the `id` value for the account. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("account_ids%5B%5D")]
@@ -104,7 +104,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Update_owners
             [QueryParameter("account_ids%5B%5D")]
             public string[] AccountIds { get; set; }
 #endif
-            /// <summary>&quot;The ID for the account owner within your team&apos;s Apollo account. This user will be assigned ownership of the accounts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot; target=\&quot;_blank\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+            /// <summary>The ID for the account owner within your team&apos;s Apollo account. This user will be assigned ownership of the accounts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("owner_id")]

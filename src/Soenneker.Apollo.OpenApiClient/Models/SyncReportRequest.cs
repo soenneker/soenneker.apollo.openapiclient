@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The time window for the query. Provide one object with a &lt;code&gt;modality&lt;/code&gt; preset. For a custom date range, set &lt;code&gt;modality&lt;/code&gt; to &lt;code&gt;custom_range&lt;/code&gt; and add a &lt;code&gt;smart_datetime_range&lt;/code&gt; key in &lt;code&gt;filters&lt;/code&gt; with &lt;code&gt;{\&quot;min\&quot;: \&quot;YYYY-MM-DD\&quot;, \&quot;max\&quot;: \&quot;YYYY-MM-DD\&quot;}&lt;/code&gt;.&quot;</summary>
+        /// <summary>The time window for the query. Provide one object with a &lt;code&gt;modality&lt;/code&gt; preset. For a custom date range, set &lt;code&gt;modality&lt;/code&gt; to &lt;code&gt;custom_range&lt;/code&gt; and add a &lt;code&gt;smart_datetime_range&lt;/code&gt; key in &lt;code&gt;filters&lt;/code&gt; with &lt;code&gt;{&quot;min&quot;: &quot;YYYY-MM-DD&quot;, &quot;max&quot;: &quot;YYYY-MM-DD&quot;}&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem>? DateRanges { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Minimum denominator threshold for ratio metrics. Rows where the denominator falls below this value are excluded from ratio calculations.</summary>
         public int? MinRatioDenominator { get; set; }
-        /// <summary>&quot;The dimension to pivot on (column dimension). Used together with &lt;code&gt;group_by&lt;/code&gt; to produce a two-dimensional cross-tab table: &lt;code&gt;group_by&lt;/code&gt; defines the row dimension and &lt;code&gt;pivot_group_by&lt;/code&gt; defines the column dimension. Pass an empty array &lt;code&gt;[]&lt;/code&gt; for non-pivot queries. &lt;br&gt;&lt;br&gt;Only one entry is supported.&quot;</summary>
+        /// <summary>The dimension to pivot on (column dimension). Used together with &lt;code&gt;group_by&lt;/code&gt; to produce a two-dimensional cross-tab table: &lt;code&gt;group_by&lt;/code&gt; defines the row dimension and &lt;code&gt;pivot_group_by&lt;/code&gt; defines the column dimension. Pass an empty array &lt;code&gt;[]&lt;/code&gt; for non-pivot queries. &lt;br&gt;&lt;br&gt;Only one entry is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem>? PivotGroupBy { get; set; }

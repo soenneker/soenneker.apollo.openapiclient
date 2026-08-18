@@ -64,7 +64,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Set to `true` to send emails to contacts even if their email address is on Apollo&apos;s global bounce list.</summary>
         public bool? IgnoreApolloGlobalEmailBounceList { get; set; }
-        /// <summary>&quot;Add the names of lists (labels) to apply to the sequence. Labels that do not exist yet are created. &lt;br&gt;&lt;br&gt;Example: `[\&quot;Outbound\&quot;, \&quot;Q3\&quot;]`&quot;</summary>
+        /// <summary>Add the names of lists (labels) to apply to the sequence. Labels that do not exist yet are created. &lt;br&gt;&lt;br&gt;Example: `[&quot;Outbound&quot;, &quot;Q3&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? LabelNames { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public bool? MarkPausedIfOoo { get; set; }
         /// <summary>The maximum number of emails the sequence sends per day. Must not be negative.</summary>
         public int? MaxEmailsPerDay { get; set; }
-        /// <summary>&quot;A human-readable name for the sequence. &lt;br&gt;&lt;br&gt;Example: `Q3 Outbound Outreach`&quot;</summary>
+        /// <summary>A human-readable name for the sequence. &lt;br&gt;&lt;br&gt;Example: `Q3 Outbound Outreach`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

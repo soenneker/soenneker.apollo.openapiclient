@@ -91,7 +91,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;Filter your search to include only certain categories or sub-categories of news. Use the &lt;b&gt;News&lt;/b&gt; search filter for companies within Apollo to uncover all possible categories and sub-categories. &lt;br&gt;&lt;br&gt;Examples: `hires`; `investment`; `contract`&quot;</summary>
+            /// <summary>Filter your search to include only certain categories or sub-categories of news. Use the &lt;b&gt;News&lt;/b&gt; search filter for companies within Apollo to uncover all possible categories and sub-categories. &lt;br&gt;&lt;br&gt;Examples: `hires`; `investment`; `contract`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("categories%5B%5D")]
@@ -101,7 +101,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
             [QueryParameter("categories%5B%5D")]
             public string[] Categories { get; set; }
 #endif
-            /// <summary>&quot;The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/organization-search\&quot; target=\&quot;_blank\&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`&quot;</summary>
+            /// <summary>The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot; target=&quot;_blank&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_ids%5B%5D")]
@@ -111,16 +111,16 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
             [QueryParameter("organization_ids%5B%5D")]
             public string[] OrganizationIds { get; set; }
 #endif
-            /// <summary>&quot;The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`&quot;</summary>
+            /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`&quot;</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Set the upper bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `published_at[min]` parameter. This date should fall after the `published_at[min]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-05-15`&quot;</summary>
+            /// <summary>Set the upper bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `published_at[min]` parameter. This date should fall after the `published_at[min]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-05-15`</summary>
             [QueryParameter("published_at%5Bmax%5D")]
             public Date? PublishedAtmax { get; set; }
-            /// <summary>&quot;Set the lower bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `published_at[max]` parameter. This date should fall before the `published_at[max]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-02-15`&quot;</summary>
+            /// <summary>Set the lower bound of the date range you want to search. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `published_at[max]` parameter. This date should fall before the `published_at[max]` date. &lt;br&gt;&lt;br&gt;The date should be formatted as `YYYY-MM-DD`. &lt;br&gt;&lt;br&gt;Example: `2025-02-15`</summary>
             [QueryParameter("published_at%5Bmin%5D")]
             public Date? PublishedAtmin { get; set; }
         }

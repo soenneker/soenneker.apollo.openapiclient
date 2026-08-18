@@ -16,7 +16,7 @@ namespace Soenneker.Apollo.OpenApiClient.Webhook_result
     public partial class Webhook_resultRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.webhook_result.item collection</summary>
-        /// <param name="position">&quot;The &lt;code&gt;request_id&lt;/code&gt; returned when the original enrichment request was submitted. This value is a signed 64-bit integer and can be positive or negative. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;1039995589705121900&lt;/code&gt;&quot;</param>
+        /// <param name="position">The &lt;code&gt;request_id&lt;/code&gt; returned when the original enrichment request was submitted. This value is a signed 64-bit integer and can be positive or negative. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;1039995589705121900&lt;/code&gt;</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Webhook_result.Item.WithRequestItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Webhook_result.Item.WithRequestItemRequestBuilder this[int position]
         {

@@ -94,7 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Remove_or_stop_contact_idsRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;The Apollo IDs for the contacts in the sequences. These are the contacts whose sequence status you want to update. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-contacts\&quot; target=\&quot;_blank\&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+            /// <summary>The Apollo IDs for the contacts in the sequences. These are the contacts whose sequence status you want to update. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_ids%5B%5D")]
@@ -104,7 +104,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
             [QueryParameter("contact_ids%5B%5D")]
             public string[] ContactIds { get; set; }
 #endif
-            /// <summary>&quot;The Apollo IDs for the sequences that you want to update. If you add multiple sequences, you will update the status of the contacts across the chosen sequences. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-sequences\&quot; target=\&quot;_blank\&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`&quot;</summary>
+            /// <summary>The Apollo IDs for the sequences that you want to update. If you add multiple sequences, you will update the status of the contacts across the chosen sequences. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_campaign_ids%5B%5D")]
@@ -114,7 +114,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
             [QueryParameter("emailer_campaign_ids%5B%5D")]
             public string[] EmailerCampaignIds { get; set; }
 #endif
-            /// <summary>&quot;Choose 1 of the following options to update the sequence status of the contacts:   &lt;ul&gt; &lt;li&gt; `mark_as_finished`: Mark the contacts as having finished the sequence. &lt;/li&gt; &lt;li&gt; `remove`: Remove the contacts from the sequence. &lt;/li&gt; &lt;li&gt; `stop`: Indicate that the contacts progress in the sequence has halted.  &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+            /// <summary>Choose 1 of the following options to update the sequence status of the contacts:   &lt;ul&gt; &lt;li&gt; `mark_as_finished`: Mark the contacts as having finished the sequence. &lt;/li&gt; &lt;li&gt; `remove`: Remove the contacts from the sequence. &lt;/li&gt; &lt;li&gt; `stop`: Indicate that the contacts progress in the sequence has halted.  &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("mode")]

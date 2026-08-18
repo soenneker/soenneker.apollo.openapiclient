@@ -15,7 +15,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;End date (inclusive). Format: &lt;code&gt;YYYY-MM-DD&lt;/code&gt;. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-03-31&lt;/code&gt;&quot;</summary>
+        /// <summary>End date (inclusive). Format: &lt;code&gt;YYYY-MM-DD&lt;/code&gt;. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-03-31&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Max { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Max { get; set; }
 #endif
-        /// <summary>&quot;Start date (inclusive). Format: &lt;code&gt;YYYY-MM-DD&lt;/code&gt;. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-01-01&lt;/code&gt;&quot;</summary>
+        /// <summary>Start date (inclusive). Format: &lt;code&gt;YYYY-MM-DD&lt;/code&gt;. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;2024-01-01&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Min { get; set; }

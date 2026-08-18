@@ -14,9 +14,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;When `true`, enrichment for this field re-runs automatically whenever the data it depends on changes. &lt;br&gt;&lt;br&gt;Example: `true`&quot;</summary>
+        /// <summary>When `true`, enrichment for this field re-runs automatically whenever the data it depends on changes. &lt;br&gt;&lt;br&gt;Example: `true`</summary>
         public bool? AutorunDownstreamEnrichment { get; set; }
-        /// <summary>&quot;The ID of the field group, or folder, that you want to move this field into. &lt;br&gt;&lt;br&gt;Example: `694095a80f1b6000110fc558`&quot;</summary>
+        /// <summary>The ID of the field group, or folder, that you want to move this field into. &lt;br&gt;&lt;br&gt;Example: `694095a80f1b6000110fc558`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FieldGroupId { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string FieldGroupId { get; set; }
 #endif
-        /// <summary>&quot;The ID of the field you want to update, in `modality.field_id` format. &lt;br&gt;&lt;br&gt;To find field IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-fields\&quot;&gt;Get a List of Fields&lt;/a&gt; endpoint with `source: custom` and use the `id` value of the field you want to change. &lt;br&gt;&lt;br&gt;Only custom fields can be updated. System fields and child fields of a JSON field cannot be updated. &lt;br&gt;&lt;br&gt;Example: `contact.694095a80f1b6000110fc556`&quot;</summary>
+        /// <summary>The ID of the field you want to update, in `modality.field_id` format. &lt;br&gt;&lt;br&gt;To find field IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-fields&quot;&gt;Get a List of Fields&lt;/a&gt; endpoint with `source: custom` and use the `id` value of the field you want to change. &lt;br&gt;&lt;br&gt;Only custom fields can be updated. System fields and child fields of a JSON field cannot be updated. &lt;br&gt;&lt;br&gt;Example: `contact.694095a80f1b6000110fc556`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>&quot;A new name for the field, as it appears in Apollo. &lt;br&gt;&lt;br&gt;Names that start with `powerup_` are reserved by Apollo and cause the request to fail. &lt;br&gt;&lt;br&gt;Example: `Renewal owner`&quot;</summary>
+        /// <summary>A new name for the field, as it appears in Apollo. &lt;br&gt;&lt;br&gt;Names that start with `powerup_` are reserved by Apollo and cause the request to fail. &lt;br&gt;&lt;br&gt;Example: `Renewal owner`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }

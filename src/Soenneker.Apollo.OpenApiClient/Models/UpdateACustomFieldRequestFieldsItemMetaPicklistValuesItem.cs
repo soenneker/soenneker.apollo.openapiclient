@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The ID of an existing option, from the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-fields\&quot;&gt;Get a List of Fields&lt;/a&gt; endpoint. Include it to keep the option and rename it, so that values already stored on your records are preserved. Omit it to add a new option. &lt;br&gt;&lt;br&gt;Example: `694095a80f1b6000110fc561`&quot;</summary>
+        /// <summary>The ID of an existing option, from the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-fields&quot;&gt;Get a List of Fields&lt;/a&gt; endpoint. Include it to keep the option and rename it, so that values already stored on your records are preserved. Omit it to add a new option. &lt;br&gt;&lt;br&gt;Example: `694095a80f1b6000110fc561`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string MappedCrmId { get; set; }
 #endif
-        /// <summary>&quot;The option as it appears in Apollo. &lt;br&gt;&lt;br&gt;Example: `Tier 1`&quot;</summary>
+        /// <summary>The option as it appears in Apollo. &lt;br&gt;&lt;br&gt;Example: `Tier 1`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

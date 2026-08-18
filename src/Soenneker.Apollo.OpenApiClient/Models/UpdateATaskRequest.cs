@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string CallScript { get; set; }
 #endif
-        /// <summary>&quot;The Apollo ID for the contact you want on the receiving end of the action. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</summary>
+        /// <summary>The Apollo ID for the contact you want on the receiving end of the action. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string ContactId { get; set; }
 #endif
-        /// <summary>&quot;The ID of the user considered the creator of this task. Only applies to tasks with a `scheduled` status. &lt;br&gt;&lt;br&gt;If this task currently has a `scheduled` status and you omit this parameter, Apollo resets it to the user associated with your API key. &lt;br&gt;&lt;br&gt;Example: `60affe7d6e270a00f5db6fe4`&quot;</summary>
+        /// <summary>The ID of the user considered the creator of this task. Only applies to tasks with a `scheduled` status. &lt;br&gt;&lt;br&gt;If this task currently has a `scheduled` status and you omit this parameter, Apollo resets it to the user associated with your API key. &lt;br&gt;&lt;br&gt;Example: `60affe7d6e270a00f5db6fe4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatorId { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string CreatorId { get; set; }
 #endif
-        /// <summary>&quot;Only applies to tasks with a `scheduled` status. The full date and time when the task is due, in &lt;a href=\&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6\&quot; target=\&quot;_blank\&quot;&gt;ISO 8601&lt;/a&gt; format. &lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`&quot;</summary>
+        /// <summary>Only applies to tasks with a `scheduled` status. The full date and time when the task is due, in &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6&quot; target=&quot;_blank&quot;&gt;ISO 8601&lt;/a&gt; format. &lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`</summary>
         public DateTimeOffset? DueAt { get; set; }
-        /// <summary>&quot;A description for the task. This should be a human-readable message. &lt;br&gt;&lt;br&gt;Example: `This contact expressed interest in the Sequences feature specifically. Be prepared to discuss.`&quot;</summary>
+        /// <summary>A description for the task. This should be a human-readable message. &lt;br&gt;&lt;br&gt;Example: `This contact expressed interest in the Sequences feature specifically. Be prepared to discuss.`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Note { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>&quot;Assign a priority to the task: `high`, `medium`, or `low`. &lt;br&gt;&lt;br&gt;If this task currently has a `scheduled` status and you omit this parameter, Apollo resets its priority to `medium`.&quot;</summary>
+        /// <summary>Assign a priority to the task: `high`, `medium`, or `low`. &lt;br&gt;&lt;br&gt;If this task currently has a `scheduled` status and you omit this parameter, Apollo resets its priority to `medium`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Priority { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequest_relevant_fields> RelevantFields { get; set; }
 #endif
-        /// <summary>&quot;Only applies to tasks with a `scheduled` status. To mark a task done, use the &lt;a href=\&quot;https://docs.apollo.io/reference/complete-a-task\&quot;&gt;Complete a Task&lt;/a&gt; or &lt;a href=\&quot;https://docs.apollo.io/reference/skip-a-task\&quot;&gt;Skip a Task&lt;/a&gt; endpoints instead of setting this directly. &lt;br&gt;&lt;br&gt;Example: `scheduled`&quot;</summary>
+        /// <summary>Only applies to tasks with a `scheduled` status. To mark a task done, use the &lt;a href=&quot;https://docs.apollo.io/reference/complete-a-task&quot;&gt;Complete a Task&lt;/a&gt; or &lt;a href=&quot;https://docs.apollo.io/reference/skip-a-task&quot;&gt;Skip a Task&lt;/a&gt; endpoints instead of setting this directly. &lt;br&gt;&lt;br&gt;Example: `scheduled`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Status { get; set; }
 #endif
-        /// <summary>&quot;Only applies to tasks with a `scheduled` status. A title for the task. &lt;br&gt;&lt;br&gt;Example: `Follow up on demo request`&quot;</summary>
+        /// <summary>Only applies to tasks with a `scheduled` status. A title for the task. &lt;br&gt;&lt;br&gt;Example: `Follow up on demo request`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>&quot;Only applies to tasks with a `scheduled` status. Set the task to 1 of the following task types: &lt;ul&gt; &lt;li&gt; `call`: Call the contact. &lt;/li&gt; &lt;li&gt; `outreach_manual_email`: Email the contact. &lt;/li&gt; &lt;li&gt; `linkedin_step_connect`: Send a LinkedIn invitation to connect with the contact. &lt;/li&gt; &lt;li&gt; `linkedin_step_message`: Send a direct message to the contact&apos;s LinkedIn profile. &lt;/li&gt; &lt;li&gt; `linkedin_step_view_profile`: View the contact&apos;s LinkedIn profile. &lt;/li&gt; &lt;li&gt; `linkedin_step_interact_post`: Interact with the contact&apos;s recent LinkedIn posts. &lt;/li&gt; &lt;li&gt; `action_item`: Take generic action for the contact. &lt;/li&gt; &lt;/ul&gt;&quot;</summary>
+        /// <summary>Only applies to tasks with a `scheduled` status. Set the task to 1 of the following task types: &lt;ul&gt; &lt;li&gt; `call`: Call the contact. &lt;/li&gt; &lt;li&gt; `outreach_manual_email`: Email the contact. &lt;/li&gt; &lt;li&gt; `linkedin_step_connect`: Send a LinkedIn invitation to connect with the contact. &lt;/li&gt; &lt;li&gt; `linkedin_step_message`: Send a direct message to the contact&apos;s LinkedIn profile. &lt;/li&gt; &lt;li&gt; `linkedin_step_view_profile`: View the contact&apos;s LinkedIn profile. &lt;/li&gt; &lt;li&gt; `linkedin_step_interact_post`: Interact with the contact&apos;s recent LinkedIn posts. &lt;/li&gt; &lt;li&gt; `action_item`: Take generic action for the contact. &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>&quot;The ID for the task owner within your team&apos;s Apollo account. Only applies to tasks with a `scheduled` status. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`&quot;</summary>
+        /// <summary>The ID for the task owner within your team&apos;s Apollo account. Only applies to tasks with a `scheduled` status. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

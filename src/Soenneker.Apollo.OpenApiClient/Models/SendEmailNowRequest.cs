@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Optional. The surface within Apollo that the send is initiated from. Used for internal attribution and analytics. &lt;br&gt;&lt;br&gt;Example: `emails`&quot;</summary>
+        /// <summary>Optional. The surface within Apollo that the send is initiated from. Used for internal attribution and analytics. &lt;br&gt;&lt;br&gt;Example: `emails`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Surface { get; set; }

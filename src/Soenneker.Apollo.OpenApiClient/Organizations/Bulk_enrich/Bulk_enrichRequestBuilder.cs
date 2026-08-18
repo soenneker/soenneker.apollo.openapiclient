@@ -103,7 +103,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Bulk_enrich
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Bulk_enrichRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;The domain of each company that you want to enrich. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;Use this parameter to match companies by domain only. To match by LinkedIn URL, name, or website in addition to domain, use the `details` array in the request body instead. &lt;br&gt;&lt;br&gt;This parameter is required unless you provide a `details` payload in the request body. &lt;br&gt;&lt;br&gt;Example: `apollo.io` and `microsoft.com`&quot;</summary>
+            /// <summary>The domain of each company that you want to enrich. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;Use this parameter to match companies by domain only. To match by LinkedIn URL, name, or website in addition to domain, use the `details` array in the request body instead. &lt;br&gt;&lt;br&gt;This parameter is required unless you provide a `details` payload in the request body. &lt;br&gt;&lt;br&gt;Example: `apollo.io` and `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("domains%5B%5D")]

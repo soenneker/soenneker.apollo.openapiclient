@@ -37,7 +37,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages
             get => new global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.emailer_messages.item collection</summary>
-        /// <param name="position">&quot;The Apollo ID of the email message to send. This is the `id` returned when you create an email draft. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`&quot;</param>
+        /// <param name="position">The Apollo ID of the email message to send. This is the `id` returned when you create an email draft. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Emailer_messagesItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Emailer_messagesItemRequestBuilder this[string position]
         {

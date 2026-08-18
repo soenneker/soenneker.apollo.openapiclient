@@ -34,7 +34,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>The creation type for the sequence. A `draft` sequence is automatically promoted to `new` (or `ai_assistant`) when steps are added.</summary>
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestCreationType? CreationType { get; set; }
-        /// <summary>&quot;Attach a sending schedule to the sequence. Must reference a non-empty schedule that belongs to your team. Example: `6095a710bd01d100a506d4af`&quot;</summary>
+        /// <summary>Attach a sending schedule to the sequence. Must reference a non-empty schedule that belongs to your team. Example: `6095a710bd01d100a506d4af`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailerScheduleId { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Maximum number of emails that can be sent per day for this sequence.</summary>
         public int? MaxEmailsPerDay { get; set; }
-        /// <summary>&quot;Update the name of the sequence. Example: `New outbound sequence`&quot;</summary>
+        /// <summary>Update the name of the sequence. Example: `New outbound sequence`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermission SharingPermission { get; set; }
 #endif
-        /// <summary>&quot;Reassign the sequence to a different owner. Pass the Apollo user ID of the intended owner; the response returns it as `user_id` and its alias `object_owner_id`. &lt;br&gt;&lt;br&gt;Use this to correct ownership on sequences created with an API key, which aren&apos;t owned by the teammate who created the key (see &lt;a href=\&quot;https://docs.apollo.io/reference/authentication\&quot;&gt;Authentication&lt;/a&gt;). &lt;a href=\&quot;https://docs.apollo.io/reference/create-sequence\&quot;&gt;Create a Sequence&lt;/a&gt; ignores `user_id`, so reassignment happens here. &lt;br&gt;&lt;br&gt;Use the &lt;a href=\&quot;https://docs.apollo.io/reference/get-a-list-of-users\&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for the users in your workspace. Example: `66302798d03b9601c7934ebf`&quot;</summary>
+        /// <summary>Reassign the sequence to a different owner. Pass the Apollo user ID of the intended owner; the response returns it as `user_id` and its alias `object_owner_id`. &lt;br&gt;&lt;br&gt;Use this to correct ownership on sequences created with an API key, which aren&apos;t owned by the teammate who created the key (see &lt;a href=&quot;https://docs.apollo.io/reference/authentication&quot;&gt;Authentication&lt;/a&gt;). &lt;a href=&quot;https://docs.apollo.io/reference/create-sequence&quot;&gt;Create a Sequence&lt;/a&gt; ignores `user_id`, so reassignment happens here. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for the users in your workspace. Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

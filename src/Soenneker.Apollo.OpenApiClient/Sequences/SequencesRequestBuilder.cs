@@ -19,7 +19,7 @@ namespace Soenneker.Apollo.OpenApiClient.Sequences
     public partial class SequencesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.sequences.item collection</summary>
-        /// <param name="position">&quot;The Apollo ID for the sequence that you want to update. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=\&quot;https://docs.apollo.io/reference/search-for-sequences\&quot; target=\&quot;_blank\&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`&quot;</param>
+        /// <param name="position">The Apollo ID for the sequence that you want to update. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Sequences.Item.SequencesItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Sequences.Item.SequencesItemRequestBuilder this[string position]
         {

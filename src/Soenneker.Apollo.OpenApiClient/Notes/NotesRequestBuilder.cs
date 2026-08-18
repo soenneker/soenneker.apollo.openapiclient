@@ -92,7 +92,7 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NotesRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The ID of the account whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f5678`&quot;</summary>
+            /// <summary>The ID of the account whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f5678`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("account_id")]
@@ -102,7 +102,7 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
             [QueryParameter("account_id")]
             public string AccountId { get; set; }
 #endif
-            /// <summary>&quot;The ID of the calendar event whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f3456`&quot;</summary>
+            /// <summary>The ID of the calendar event whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f3456`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("calendar_event_id")]
@@ -112,7 +112,7 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
             [QueryParameter("calendar_event_id")]
             public string CalendarEventId { get; set; }
 #endif
-            /// <summary>&quot;The ID of the contact whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f1234`&quot;</summary>
+            /// <summary>The ID of the contact whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f1234`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_id")]
@@ -132,7 +132,7 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
             [QueryParameter("contact_ids")]
             public string[] ContactIds { get; set; }
 #endif
-            /// <summary>&quot;The ID of the conversation whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f7890`&quot;</summary>
+            /// <summary>The ID of the conversation whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f7890`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("conversation_id")]
@@ -155,7 +155,7 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
             /// <summary>The maximum number of notes to return per request. Defaults to `25`. Maximum value is `100`.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>&quot;The ID of the opportunity whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f9012`&quot;</summary>
+            /// <summary>The ID of the opportunity whose notes you want to retrieve. &lt;br&gt;&lt;br&gt;Example: `60a5c0b8e4b0c7001c4f9012`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opportunity_id")]
@@ -174,7 +174,7 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
             /// <summary>The direction to sort results. Defaults to `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotesSortDirectionParameter? SortDirection { get; set; }
-            /// <summary>&quot;Filter notes created on or after this date. Must be a valid date string. &lt;br&gt;&lt;br&gt;Example: `2024-01-01`&quot;</summary>
+            /// <summary>Filter notes created on or after this date. Must be a valid date string. &lt;br&gt;&lt;br&gt;Example: `2024-01-01`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("start_date")]

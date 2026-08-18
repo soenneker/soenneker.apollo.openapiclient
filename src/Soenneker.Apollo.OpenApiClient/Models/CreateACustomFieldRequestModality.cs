@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>&quot;The modality of the custom field you want to create.  Example: `contact`&quot;</summary>
+    /// <summary>The modality of the custom field you want to create.  Example: `contact`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CreateACustomFieldRequestModality
     {
