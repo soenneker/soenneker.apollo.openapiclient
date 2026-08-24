@@ -34,7 +34,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/emailer_campaigns/remove_or_stop_contact_ids` or `Master API key`**OAuth scopes:** `emailer_campaigns_remove_or_stop_contact_ids`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the Update Contact Status in a Sequence endpoint to either mark contacts as having `finished` a sequence, or to remove them from a sequence entirely.
+        /// ## Endpoint essentials**API key access:** `api/v1/emailer_campaigns/remove_or_stop_contact_ids` or `Master API key`**OAuth scopes:** `emailer_campaigns_remove_or_stop_contact_ids`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the update contact status in a sequence endpoint to either mark contacts as having `finished` a sequence, or to remove them from a sequence entirely.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/emailer_campaigns/remove_or_stop_contact_ids` or `Master API key`**OAuth scopes:** `emailer_campaigns_remove_or_stop_contact_ids`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the Update Contact Status in a Sequence endpoint to either mark contacts as having `finished` a sequence, or to remove them from a sequence entirely.
+        /// ## Endpoint essentials**API key access:** `api/v1/emailer_campaigns/remove_or_stop_contact_ids` or `Master API key`**OAuth scopes:** `emailer_campaigns_remove_or_stop_contact_ids`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the update contact status in a sequence endpoint to either mark contacts as having `finished` a sequence, or to remove them from a sequence entirely.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,12 +89,12 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
             return new global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contact_ids.Remove_or_stop_contact_idsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/emailer_campaigns/remove_or_stop_contact_ids` or `Master API key`**OAuth scopes:** `emailer_campaigns_remove_or_stop_contact_ids`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the Update Contact Status in a Sequence endpoint to either mark contacts as having `finished` a sequence, or to remove them from a sequence entirely.
+        /// ## Endpoint essentials**API key access:** `api/v1/emailer_campaigns/remove_or_stop_contact_ids` or `Master API key`**OAuth scopes:** `emailer_campaigns_remove_or_stop_contact_ids`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the update contact status in a sequence endpoint to either mark contacts as having `finished` a sequence, or to remove them from a sequence entirely.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Remove_or_stop_contact_idsRequestBuilderPostQueryParameters 
         {
-            /// <summary>The Apollo IDs for the contacts in the sequences. These are the contacts whose sequence status you want to update. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
+            /// <summary>The Apollo IDs for the contacts in the sequences. These are the contacts whose sequence status you want to update. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;search for contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_ids%5B%5D")]
@@ -104,7 +104,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
             [QueryParameter("contact_ids%5B%5D")]
             public string[] ContactIds { get; set; }
 #endif
-            /// <summary>The Apollo IDs for the sequences that you want to update. If you add multiple sequences, you will update the status of the contacts across the chosen sequences. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
+            /// <summary>The Apollo IDs for the sequences that you want to update. If you add multiple sequences, you will update the status of the contacts across the chosen sequences. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;search for sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("emailer_campaign_ids%5B%5D")]

@@ -59,7 +59,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>The num_steps property</summary>
         public int? NumSteps { get; set; }
-        /// <summary>Who can see and act on the sequence. This replaced the legacy `permissions` field, which is no longer returned. New sequences start with `restricted` visibility. &lt;br&gt;&lt;br&gt;See the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot;&gt;Search for Sequences endpoint&lt;/a&gt; for the full shape of this object.</summary>
+        /// <summary>Who can see and act on the sequence. This replaced the legacy `permissions` field, which is no longer returned. New sequences start with `restricted` visibility. &lt;br&gt;&lt;br&gt;See the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot;&gt;search for sequences endpoint&lt;/a&gt; for the full shape of this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence200ResponseEmailerCampaignSharingPermission? SharingPermission { get; set; }

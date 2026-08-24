@@ -24,7 +24,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             get => new global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.phone_calls.item collection</summary>
-        /// <param name="position">The Apollo ID for the call record that you want to update. &lt;br&gt;&lt;br&gt;To find call record IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-calls#/&quot; target=&quot;_blank&quot;&gt;Search for Calls endpoint&lt;/a&gt; and identify the `id` value for the call record. &lt;br&gt;&lt;br&gt;Example: `6859b0dd828b270021e69648`</param>
+        /// <param name="position">The Apollo ID for the call record that you want to update. &lt;br&gt;&lt;br&gt;To find call record IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-calls#/&quot; target=&quot;_blank&quot;&gt;search for calls endpoint&lt;/a&gt; and identify the `id` value for the call record. &lt;br&gt;&lt;br&gt;Example: `6859b0dd828b270021e69648`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder this[string position]
         {
@@ -52,7 +52,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the Create Call Records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
+        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the create call records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -77,7 +77,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the Create Call Records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
+        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the create call records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,12 +105,12 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             return new global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the Create Call Records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
+        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the create call records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Phone_callsRequestBuilderPostQueryParameters 
         {
-            /// <summary>Associate the call with an account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-accounts#/&quot; target=&quot;_blank&quot;&gt;Search for Accounts endpoint&lt;/a&gt; to retrieve IDs for all of the accounts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`</summary>
+            /// <summary>Associate the call with an account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-accounts#/&quot; target=&quot;_blank&quot;&gt;search for accounts endpoint&lt;/a&gt; to retrieve IDs for all of the accounts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e9abf95ac32901b20d1a0d`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("account_id")]
@@ -120,7 +120,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             [QueryParameter("account_id")]
             public string AccountId { get; set; }
 #endif
-            /// <summary>Designate the contact that was called. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts#/&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; to retrieve IDs for all of the contacts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
+            /// <summary>Designate the contact that was called. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts#/&quot; target=&quot;_blank&quot;&gt;search for contacts endpoint&lt;/a&gt; to retrieve IDs for all of the contacts within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_id")]
@@ -202,7 +202,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             [QueryParameter("to_number")]
             public string ToNumber { get; set; }
 #endif
-            /// <summary>Designate the caller in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`</summary>
+            /// <summary>Designate the caller in your team&apos;s Apollo account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;get a list of users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_id%5B%5D")]

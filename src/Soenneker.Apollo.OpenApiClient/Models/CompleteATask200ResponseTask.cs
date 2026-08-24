@@ -12,7 +12,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     public partial class CompleteATask200ResponseTask : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The account associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;View an Account&lt;/a&gt; endpoint&apos;s response, plus `linkedin_uid` and `account_queues`.</summary>
+        /// <summary>The account associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;view an account&lt;/a&gt; endpoint&apos;s response, plus `linkedin_uid` and `account_queues`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskAccount? Account { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskCompletedByUserId CompletedByUserId { get; set; }
 #endif
-        /// <summary>The contact associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-a-contact&quot;&gt;View a Contact&lt;/a&gt; endpoint&apos;s response.</summary>
+        /// <summary>The contact associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-a-contact&quot;&gt;view a contact&lt;/a&gt; endpoint&apos;s response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact? Contact { get; set; }

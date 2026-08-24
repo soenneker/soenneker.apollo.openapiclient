@@ -33,7 +33,7 @@ namespace Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the View API Usage Stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
+        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the View API Usage Stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
+        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

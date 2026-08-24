@@ -24,7 +24,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string FieldGroupId { get; set; }
 #endif
-        /// <summary>The ID of the field you want to update, in `modality.field_id` format. &lt;br&gt;&lt;br&gt;To find field IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-fields&quot;&gt;Get a List of Fields&lt;/a&gt; endpoint with `source: custom` and use the `id` value of the field you want to change. &lt;br&gt;&lt;br&gt;Only custom fields can be updated. System fields and child fields of a JSON field cannot be updated. &lt;br&gt;&lt;br&gt;Example: `contact.694095a80f1b6000110fc556`</summary>
+        /// <summary>The ID of the field you want to update, in `modality.field_id` format. &lt;br&gt;&lt;br&gt;To find field IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-fields&quot;&gt;get a list of fields&lt;/a&gt; endpoint with `source: custom` and use the `id` value of the field you want to change. &lt;br&gt;&lt;br&gt;Only custom fields can be updated. System fields and child fields of a JSON field cannot be updated. &lt;br&gt;&lt;br&gt;Example: `contact.694095a80f1b6000110fc556`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMeta Meta { get; set; }
 #endif
-        /// <summary>&lt;b&gt;Read-only. This parameter cannot be updated.&lt;/b&gt; A field&apos;s modality is set when the field is created and is fixed for the life of the field. If you include `modality` in your request, Apollo ignores the value you send and keeps the field&apos;s existing modality, so the call succeeds but the modality does not change. &lt;br&gt;&lt;br&gt;To capture the same data against a different modality, use the &lt;a href=&quot;https://docs.apollo.io/reference/create-a-custom-field&quot;&gt;Create a Custom Field&lt;/a&gt; endpoint to create a new field instead.</summary>
+        /// <summary>&lt;b&gt;Read-only. This parameter cannot be updated.&lt;/b&gt; A field&apos;s modality is set when the field is created and is fixed for the life of the field. If you include `modality` in your request, Apollo ignores the value you send and keeps the field&apos;s existing modality, so the call succeeds but the modality does not change. &lt;br&gt;&lt;br&gt;To capture the same data against a different modality, use the &lt;a href=&quot;https://docs.apollo.io/reference/create-a-custom-field&quot;&gt;create a custom field&lt;/a&gt; endpoint to create a new field instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Modality { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemSchedule Schedule { get; set; }
 #endif
-        /// <summary>&lt;b&gt;Read-only. This parameter cannot be updated.&lt;/b&gt; A field&apos;s data type is set when the field is created. You can send `type` only if it matches the field&apos;s current type; sending a different type fails with `Cannot change field type after creation`. &lt;br&gt;&lt;br&gt;To store the data as a different type, use the &lt;a href=&quot;https://docs.apollo.io/reference/create-a-custom-field&quot;&gt;Create a Custom Field&lt;/a&gt; endpoint to create a new field instead.</summary>
+        /// <summary>&lt;b&gt;Read-only. This parameter cannot be updated.&lt;/b&gt; A field&apos;s data type is set when the field is created. You can send `type` only if it matches the field&apos;s current type; sending a different type fails with `Cannot change field type after creation`. &lt;br&gt;&lt;br&gt;To store the data as a different type, use the &lt;a href=&quot;https://docs.apollo.io/reference/create-a-custom-field&quot;&gt;create a custom field&lt;/a&gt; endpoint to create a new field instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

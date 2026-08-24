@@ -72,7 +72,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequest_relevant_fields> RelevantFields { get; set; }
 #endif
-        /// <summary>Only applies to tasks with a `scheduled` status. To mark a task done, use the &lt;a href=&quot;https://docs.apollo.io/reference/complete-a-task&quot;&gt;Complete a Task&lt;/a&gt; or &lt;a href=&quot;https://docs.apollo.io/reference/skip-a-task&quot;&gt;Skip a Task&lt;/a&gt; endpoints instead of setting this directly. &lt;br&gt;&lt;br&gt;Example: `scheduled`</summary>
+        /// <summary>Only applies to tasks with a `scheduled` status. To mark a task done, use the &lt;a href=&quot;https://docs.apollo.io/reference/complete-a-task&quot;&gt;complete a task&lt;/a&gt; or &lt;a href=&quot;https://docs.apollo.io/reference/skip-a-task&quot;&gt;skip a task&lt;/a&gt; endpoints instead of setting this directly. &lt;br&gt;&lt;br&gt;Example: `scheduled`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

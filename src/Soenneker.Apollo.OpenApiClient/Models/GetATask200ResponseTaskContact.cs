@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>
-    /// The contact associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-a-contact&quot;&gt;View a Contact&lt;/a&gt; endpoint&apos;s response.
+    /// The contact associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-a-contact&quot;&gt;view a contact&lt;/a&gt; endpoint&apos;s response.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetATask200ResponseTaskContact : IAdditionalDataHolder, IParsable

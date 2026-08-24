@@ -90,7 +90,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>**Deprecated.** This parameter is still accepted, but it no longer controls who can access the sequence and it is no longer returned in any sequence response. &lt;br&gt;&lt;br&gt;New sequences are created with restricted visibility, so only the owner can access the sequence until it is shared. To share it, call the &lt;a href=&quot;https://docs.apollo.io/reference/update-sequence&quot;&gt;Update a Sequence endpoint&lt;/a&gt; with the `sharing_permission` object.</summary>
+        /// <summary>**Deprecated.** This parameter is still accepted, but it no longer controls who can access the sequence and it is no longer returned in any sequence response. &lt;br&gt;&lt;br&gt;New sequences are created with restricted visibility, so only the owner can access the sequence until it is shared. To share it, call the &lt;a href=&quot;https://docs.apollo.io/reference/update-sequence&quot;&gt;update a sequence endpoint&lt;/a&gt; with the `sharing_permission` object.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -111,7 +111,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string SequenceRulesetId { get; set; }
 #endif
-        /// <summary>Ignored by this endpoint. The new sequence is always owned by the user your request acts as, returned as `object_owner_id` (alias `user_id`) — see &lt;a href=&quot;https://docs.apollo.io/reference/authentication&quot;&gt;Authentication&lt;/a&gt; for which user that is. &lt;br&gt;&lt;br&gt;To assign a different owner, create the sequence and then call the &lt;a href=&quot;https://docs.apollo.io/reference/update-sequence&quot;&gt;Update a Sequence endpoint&lt;/a&gt; with the `user_id` you want.</summary>
+        /// <summary>Ignored by this endpoint. The new sequence is always owned by the user your request acts as, returned as `object_owner_id` (alias `user_id`) — see &lt;a href=&quot;https://docs.apollo.io/reference/authentication&quot;&gt;Authentication&lt;/a&gt; for which user that is. &lt;br&gt;&lt;br&gt;To assign a different owner, create the sequence and then call the &lt;a href=&quot;https://docs.apollo.io/reference/update-sequence&quot;&gt;update a sequence endpoint&lt;/a&gt; with the `user_id` you want.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

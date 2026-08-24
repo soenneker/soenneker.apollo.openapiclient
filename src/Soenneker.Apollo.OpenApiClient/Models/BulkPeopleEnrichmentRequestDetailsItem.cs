@@ -46,7 +46,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string HashedEmail { get; set; }
 #endif
-        /// <summary>The Apollo ID for the person. Each person in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/people-api-search&quot; target=&quot;_blank&quot;&gt;People API Search endpoint&lt;/a&gt; and identify the values for `person_id`. &lt;br&gt;&lt;br&gt;Example: `587cf802f65125cad923a266`</summary>
+        /// <summary>The Apollo ID for the person. Each person in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/people-api-search&quot; target=&quot;_blank&quot;&gt;people API search endpoint&lt;/a&gt; and identify the values for `person_id`. &lt;br&gt;&lt;br&gt;Example: `587cf802f65125cad923a266`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

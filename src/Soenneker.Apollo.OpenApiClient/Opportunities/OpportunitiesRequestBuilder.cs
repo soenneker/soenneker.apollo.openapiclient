@@ -25,7 +25,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities
             get => new global::Soenneker.Apollo.OpenApiClient.Opportunities.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.opportunities.item collection</summary>
-        /// <param name="position">The ID for the deal you want to view. &lt;br&gt;&lt;br&gt;Each deal in the Apollo database is assigned a unique ID. To find deal IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-all-deals&quot; target=&quot;_blank&quot;&gt;List All Deals endpoint&lt;/a&gt; and identify the value for `id` for the desired deal. &lt;br&gt;&lt;br&gt;Example: `66e09ea8e3cfcf01b2208ec7`</param>
+        /// <param name="position">The ID for the deal you want to view. &lt;br&gt;&lt;br&gt;Each deal in the Apollo database is assigned a unique ID. To find deal IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-all-deals&quot; target=&quot;_blank&quot;&gt;list all deals endpoint&lt;/a&gt; and identify the value for `id` for the desired deal. &lt;br&gt;&lt;br&gt;Example: `66e09ea8e3cfcf01b2208ec7`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Opportunities.Item.WithOpportunityItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Opportunities.Item.WithOpportunityItemRequestBuilder this[string position]
         {
@@ -53,7 +53,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/create` or `Master API key`**OAuth scopes:** `opportunity_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the Create Deal endpoint to create new deals for an Apollo account.&lt;br&gt;&lt;br&gt;To update existing deals in your Apollo account, use the &lt;a href=&quot;https://docs.apollo.io/reference/update-deal&quot;&gt;Update Deal endpoint&lt;/a&gt; instead.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/create` or `Master API key`**OAuth scopes:** `opportunity_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the create deal endpoint to create new deals for an Apollo account.&lt;br&gt;&lt;br&gt;To update existing deals in your Apollo account, use the &lt;a href=&quot;https://docs.apollo.io/reference/update-deal&quot;&gt;update deal endpoint&lt;/a&gt; instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateDeal200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -82,7 +82,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.CreateDeal200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.CreateDeal200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/create` or `Master API key`**OAuth scopes:** `opportunity_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the Create Deal endpoint to create new deals for an Apollo account.&lt;br&gt;&lt;br&gt;To update existing deals in your Apollo account, use the &lt;a href=&quot;https://docs.apollo.io/reference/update-deal&quot;&gt;Update Deal endpoint&lt;/a&gt; instead.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/create` or `Master API key`**OAuth scopes:** `opportunity_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the create deal endpoint to create new deals for an Apollo account.&lt;br&gt;&lt;br&gt;To update existing deals in your Apollo account, use the &lt;a href=&quot;https://docs.apollo.io/reference/update-deal&quot;&gt;update deal endpoint&lt;/a&gt; instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

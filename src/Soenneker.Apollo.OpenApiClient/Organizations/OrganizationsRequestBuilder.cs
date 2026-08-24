@@ -28,7 +28,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations
             get => new global::Soenneker.Apollo.OpenApiClient.Organizations.Enrich.EnrichRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.organizations.item collection</summary>
-        /// <param name="position">The Apollo ID for the organization that you want to research. &lt;br&gt;&lt;br&gt;To find organization IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search#/&quot; target=&quot;_blank&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the `organizaton_id` value for the organization. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</param>
+        /// <param name="position">The Apollo ID for the organization that you want to research. &lt;br&gt;&lt;br&gt;To find organization IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search#/&quot; target=&quot;_blank&quot;&gt;organization search endpoint&lt;/a&gt; and identify the `organizaton_id` value for the organization. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Organizations.Item.ItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Organizations.Item.ItemRequestBuilder this[string position]
         {

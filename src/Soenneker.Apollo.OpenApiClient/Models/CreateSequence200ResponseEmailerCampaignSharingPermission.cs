@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>
-    /// Who can see and act on the sequence. This replaced the legacy `permissions` field, which is no longer returned. New sequences start with `restricted` visibility. &lt;br&gt;&lt;br&gt;See the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot;&gt;Search for Sequences endpoint&lt;/a&gt; for the full shape of this object.
+    /// Who can see and act on the sequence. This replaced the legacy `permissions` field, which is no longer returned. New sequences start with `restricted` visibility. &lt;br&gt;&lt;br&gt;See the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot;&gt;search for sequences endpoint&lt;/a&gt; for the full shape of this object.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateSequence200ResponseEmailerCampaignSharingPermission : IAdditionalDataHolder, IParsable

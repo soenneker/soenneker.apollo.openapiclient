@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string BodyHtml { get; set; }
 #endif
-        /// <summary>The Apollo ID for the contact that will receive the email. &lt;br&gt;&lt;br&gt;This is required unless you provide `in_response_to_emailer_message_id`, in which case the contact is inferred from the parent message. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
+        /// <summary>The Apollo ID for the contact that will receive the email. &lt;br&gt;&lt;br&gt;This is required unless you provide `in_response_to_emailer_message_id`, in which case the contact is inferred from the parent message. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;search for contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }

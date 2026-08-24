@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>
-    /// The account associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;View an Account&lt;/a&gt; endpoint&apos;s response, plus `linkedin_uid` and `account_queues`.
+    /// The account associated with this task, when the task has one. Includes the same fields as the &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;view an account&lt;/a&gt; endpoint&apos;s response, plus `linkedin_uid` and `account_queues`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetATask200ResponseTaskAccount : IAdditionalDataHolder, IParsable

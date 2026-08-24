@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The Apollo ID for the contact that you want to be on the receiving end of the action. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;Search for Contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
+        /// <summary>The Apollo ID for the contact that you want to be on the receiving end of the action. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;search for contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContactId { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>The ID for the task owner within your team&apos;s Apollo account. This is the user that will take action on the contacts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
+        /// <summary>The ID for the task owner within your team&apos;s Apollo account. This is the user that will take action on the contacts. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;get a list of users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

@@ -20,7 +20,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> AccountLabelIds { get; set; }
 #endif
-        /// <summary>The Apollo IDs for the account stages that you want to include in your search results. If you add multiple account stages, Apollo will include all accounts that match any of the stages, along with the other parameters, in the search results. Call the [List Account Stages endpoint](https://docs.apollo.io/reference/list-account-stages) to retrieve a list of all the account stage IDs available in your Apollo account. Example: `61b8e913e0f4d2012e3af74e`</summary>
+        /// <summary>The Apollo IDs for the account stages that you want to include in your search results. If you add multiple account stages, Apollo will include all accounts that match any of the stages, along with the other parameters, in the search results. Call the [list account stages endpoint](https://docs.apollo.io/reference/list-account-stages) to retrieve a list of all the account stage IDs available in your Apollo account. Example: `61b8e913e0f4d2012e3af74e`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AccountStageIds { get; set; }

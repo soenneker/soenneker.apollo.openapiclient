@@ -28,7 +28,7 @@ namespace Soenneker.Apollo.OpenApiClient.People
             get => new global::Soenneker.Apollo.OpenApiClient.People.Match.MatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.people.item collection</summary>
-        /// <param name="position">The Apollo ID for the person that you want to research. &lt;br&gt;&lt;br&gt;To find person IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/people-api-search&quot; target=&quot;_blank&quot;&gt;People Search endpoint&lt;/a&gt; and identify the `id` value for the person. &lt;br&gt;&lt;br&gt;Example: `65f0a1b2c3d4e5f600012345`</param>
+        /// <param name="position">The Apollo ID for the person that you want to research. &lt;br&gt;&lt;br&gt;To find person IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/people-api-search&quot; target=&quot;_blank&quot;&gt;people search endpoint&lt;/a&gt; and identify the `id` value for the person. &lt;br&gt;&lt;br&gt;Example: `65f0a1b2c3d4e5f600012345`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.People.Item.PeopleItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.People.Item.PeopleItemRequestBuilder this[string position]
         {

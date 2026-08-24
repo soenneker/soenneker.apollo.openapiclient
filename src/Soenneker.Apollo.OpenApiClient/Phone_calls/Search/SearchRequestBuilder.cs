@@ -33,7 +33,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the Search for Calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
+        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the search for calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the Search for Calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
+        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the search for calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,12 +86,12 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             return new global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the Search for Calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
+        /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the search for calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>Find calls that included specific contacts. You can add multiple contacts. &lt;br&gt;&lt;br&gt;In Apollo terminology, a contact is a person that your team has explicitly added to your database. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4` 6708415f59d9c70001b2f852</summary>
+            /// <summary>Find calls that included specific contacts. You can add multiple contacts. &lt;br&gt;&lt;br&gt;In Apollo terminology, a contact is a person that your team has explicitly added to your database. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;get a list of users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4` 6708415f59d9c70001b2f852</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("contact_label_ids%5B%5D")]
@@ -173,7 +173,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
             [QueryParameter("q_keywords")]
             public string QKeywords { get; set; }
 #endif
-            /// <summary>Find calls that included specific users in your team&apos;s Apollo account. You can add multiple users. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`</summary>
+            /// <summary>Find calls that included specific users in your team&apos;s Apollo account. You can add multiple users. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;get a list of users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `67e33d527de088000daa60c4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_ids%5B%5D")]

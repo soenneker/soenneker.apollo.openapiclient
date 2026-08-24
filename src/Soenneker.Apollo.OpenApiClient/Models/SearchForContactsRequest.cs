@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<string> ContactLabelIds { get; set; }
 #endif
-        /// <summary>The Apollo IDs for the contact stages that you want to include in your search results. If you add multiple contact stages, Apollo will include all contacts that match any of the stages, along with the other parameters, in the search results. Call the [List Contact Stages endpoint](https://docs.apollo.io/reference/list-contact-stages) to retrieve a list of all the contact stage IDs available in your Apollo account. Example: `6095a710bd01d100a506d4ae`</summary>
+        /// <summary>The Apollo IDs for the contact stages that you want to include in your search results. If you add multiple contact stages, Apollo will include all contacts that match any of the stages, along with the other parameters, in the search results. Call the [list contact stages endpoint](https://docs.apollo.io/reference/list-contact-stages) to retrieve a list of all the contact stage IDs available in your Apollo account. Example: `6095a710bd01d100a506d4ae`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ContactStageIds { get; set; }

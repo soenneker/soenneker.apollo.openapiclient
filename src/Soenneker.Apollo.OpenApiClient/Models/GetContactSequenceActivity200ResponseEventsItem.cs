@@ -14,7 +14,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The Apollo ID of the email that the contact replied to. Only returned for `replied` events. Pass this to the &lt;a href=&quot;https://docs.apollo.io/reference/get-email-content&quot;&gt;Get Email Content endpoint&lt;/a&gt; to read the original email.</summary>
+        /// <summary>The Apollo ID of the email that the contact replied to. Only returned for `replied` events. Pass this to the &lt;a href=&quot;https://docs.apollo.io/reference/get-email-content&quot;&gt;get email content endpoint&lt;/a&gt; to read the original email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailerMessageId { get; set; }

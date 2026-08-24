@@ -34,7 +34,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns
             get => new global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.emailer_campaigns.item collection</summary>
-        /// <param name="position">The Apollo ID for the sequence to which you want to add contacts. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;Search for Sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</param>
+        /// <param name="position">The Apollo ID for the sequence to which you want to add contacts. &lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;search for sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.WithSequenceItemRequestBuilder"/></returns>
         public global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.WithSequenceItemRequestBuilder this[string position]
         {

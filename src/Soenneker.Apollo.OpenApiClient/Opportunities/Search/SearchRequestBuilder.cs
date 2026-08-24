@@ -34,7 +34,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the List All Deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the List All Deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
             return new global::Soenneker.Apollo.OpenApiClient.Opportunities.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the List All Deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 

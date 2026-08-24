@@ -33,7 +33,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/news_articles/search` or `Master API key`**OAuth scopes:** `organizations_news_articles`**Credit usage:** `1 credit per page`This endpoint consumes 1 Apollo credit per page, with up to 25 results per page. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412665755661-Search-Filters-Overview#news&quot; target=&quot;_blank&quot;&gt;News&lt;/a&gt; includes articles related to companies in Apollo.&lt;br&gt;&lt;br&gt;Use the News Articles Search endpoint to find news articles related to specific companies. Several filters are available to help narrow your search.
+        /// ## Endpoint essentials**API key access:** `api/v1/news_articles/search` or `Master API key`**OAuth scopes:** `organizations_news_articles`**Credit usage:** `1 credit per page`This endpoint consumes 1 Apollo credit per page, with up to 25 results per page. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412665755661-Search-Filters-Overview#news&quot; target=&quot;_blank&quot;&gt;News&lt;/a&gt; includes articles related to companies in Apollo.&lt;br&gt;&lt;br&gt;Use the news articles search endpoint to find news articles related to specific companies. Several filters are available to help narrow your search.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.News_articles.Search.SearchPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.News_articles.Search.SearchPostResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.News_articles.Search.SearchPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/news_articles/search` or `Master API key`**OAuth scopes:** `organizations_news_articles`**Credit usage:** `1 credit per page`This endpoint consumes 1 Apollo credit per page, with up to 25 results per page. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412665755661-Search-Filters-Overview#news&quot; target=&quot;_blank&quot;&gt;News&lt;/a&gt; includes articles related to companies in Apollo.&lt;br&gt;&lt;br&gt;Use the News Articles Search endpoint to find news articles related to specific companies. Several filters are available to help narrow your search.
+        /// ## Endpoint essentials**API key access:** `api/v1/news_articles/search` or `Master API key`**OAuth scopes:** `organizations_news_articles`**Credit usage:** `1 credit per page`This endpoint consumes 1 Apollo credit per page, with up to 25 results per page. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412665755661-Search-Filters-Overview#news&quot; target=&quot;_blank&quot;&gt;News&lt;/a&gt; includes articles related to companies in Apollo.&lt;br&gt;&lt;br&gt;Use the news articles search endpoint to find news articles related to specific companies. Several filters are available to help narrow your search.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,7 +86,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
             return new global::Soenneker.Apollo.OpenApiClient.News_articles.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/news_articles/search` or `Master API key`**OAuth scopes:** `organizations_news_articles`**Credit usage:** `1 credit per page`This endpoint consumes 1 Apollo credit per page, with up to 25 results per page. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412665755661-Search-Filters-Overview#news&quot; target=&quot;_blank&quot;&gt;News&lt;/a&gt; includes articles related to companies in Apollo.&lt;br&gt;&lt;br&gt;Use the News Articles Search endpoint to find news articles related to specific companies. Several filters are available to help narrow your search.
+        /// ## Endpoint essentials**API key access:** `api/v1/news_articles/search` or `Master API key`**OAuth scopes:** `organizations_news_articles`**Credit usage:** `1 credit per page`This endpoint consumes 1 Apollo credit per page, with up to 25 results per page. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412665755661-Search-Filters-Overview#news&quot; target=&quot;_blank&quot;&gt;News&lt;/a&gt; includes articles related to companies in Apollo.&lt;br&gt;&lt;br&gt;Use the news articles search endpoint to find news articles related to specific companies. Several filters are available to help narrow your search.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderPostQueryParameters 
@@ -101,7 +101,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
             [QueryParameter("categories%5B%5D")]
             public string[] Categories { get; set; }
 #endif
-            /// <summary>The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot; target=&quot;_blank&quot;&gt;Organization Search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
+            /// <summary>The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot; target=&quot;_blank&quot;&gt;organization search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_ids%5B%5D")]

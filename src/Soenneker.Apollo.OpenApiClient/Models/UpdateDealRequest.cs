@@ -33,7 +33,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The ID for the deal stage within your team&apos;s Apollo account. Enter a different ID to update the deal stage. &lt;br&gt;&lt;br&gt;Each deal stage is assigned a unique ID. To find deal stage IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-deal-stages&quot; target=&quot;_blank&quot;&gt;List Deal Stages endpoint&lt;/a&gt; and identify the value for `id` for each stage. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4bd`</summary>
+        /// <summary>The ID for the deal stage within your team&apos;s Apollo account. Enter a different ID to update the deal stage. &lt;br&gt;&lt;br&gt;Each deal stage is assigned a unique ID. To find deal stage IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-deal-stages&quot; target=&quot;_blank&quot;&gt;list deal stages endpoint&lt;/a&gt; and identify the value for `id` for each stage. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4bd`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OpportunityStageId { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string OpportunityStageId { get; set; }
 #endif
-        /// <summary>The ID for the deal owner within your team&apos;s Apollo account. Enter a different ID to update the owner of the deal. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;Get a List of Users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
+        /// <summary>The ID for the deal owner within your team&apos;s Apollo account. Enter a different ID to update the owner of the deal. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;get a list of users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OwnerId { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string OwnerId { get; set; }
 #endif
-        /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062486669-Create-a-Deal&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;Get a List of All Custom Fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
+        /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062486669-Create-a-Deal&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;get a list of all custom fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;get a list of all custom fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Apollo.OpenApiClient.Models.UpdateDealRequestTypedCustomFields? TypedCustomFields { get; set; }
