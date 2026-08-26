@@ -2170,13 +2170,13 @@
           "Enrichment"
         ],
         "summary": "Organization enrichment",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/organizations/enrich\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060organizations_enrich\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601 credit per organization\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the organization enrichment endpoint to enrich data for one company. To enrich data for up to ten companies with a single API call, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-organization-enrichment\u0022\u003Ebulk organization enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EYou can match the company to enrich by domain, LinkedIn URL, name, and/or website. At least one of these is required, and providing more than one improves match accuracy.\u003Cbr\u003E\u003Cbr\u003EEnriched data potentially includes industry information, revenue, employee counts, funding round details, corporate phone numbers, locations, language counts, retail-location counts, and organization hierarchy data. The \u003Ccode\u003Eowned_by_organization\u003C/code\u003E field identifies the immediate parent, \u003Ccode\u003Eowned_by_chain\u003C/code\u003E lists parent organization IDs from the immediate parent to the ultimate parent, and \u003Ccode\u003Eultimate_parent_organization\u003C/code\u003E identifies the topmost parent. The \u003Ccode\u003Esuborganizations\u003C/code\u003E array includes each direct subsidiary\u0027s industries, estimated employee count, and country when available.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/organizations/enrich\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060organizations_enrich\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601 credit per organization\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the organization enrichment endpoint to enrich data for one company. To enrich data for up to ten companies with a single API call, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-organization-enrichment\u0022\u003Ebulk organization enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EIdentify a company using its domain, LinkedIn URL, or website. You can include its name to improve match accuracy, but name alone is not supported.\u003Cbr\u003E\u003Cbr\u003EEnriched data potentially includes industry information, revenue, employee counts, funding round details, corporate phone numbers, locations, language counts, retail-location counts, and organization hierarchy data. The \u003Ccode\u003Eowned_by_organization\u003C/code\u003E field identifies the immediate parent, \u003Ccode\u003Eowned_by_chain\u003C/code\u003E lists parent organization IDs from the immediate parent to the ultimate parent, and \u003Ccode\u003Eultimate_parent_organization\u003C/code\u003E identifies the topmost parent. The \u003Ccode\u003Esuborganizations\u003C/code\u003E array includes each direct subsidiary\u0027s industries, estimated employee count, and country when available.",
         "operationId": "OrganizationEnrichment",
         "parameters": [
           {
             "name": "domain",
             "in": "query",
-            "description": "The domain of the company that you want to enrich. Do not include \u0060www.\u0060, the \u0060@\u0060 symbol, or similar. \u003Cbr\u003E\u003Cbr\u003EAt least one of \u0060domain\u0060, \u0060linkedin_url\u0060, \u0060name\u0060, or \u0060website\u0060 is required. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060apollo.io\u0060 or \u0060microsoft.com\u0060",
+            "description": "The domain of the company that you want to enrich. Do not include \u0060www.\u0060, the \u0060@\u0060 symbol, or similar. Use \u0060domain\u0060, \u0060linkedin_url\u0060, or \u0060website\u0060 to identify the company. You can also provide \u0060name\u0060 to improve match accuracy. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060apollo.io\u0060 or \u0060microsoft.com\u0060",
             "schema": {
               "type": "string"
             }
@@ -2184,7 +2184,7 @@
           {
             "name": "linkedin_url",
             "in": "query",
-            "description": "The URL for the company\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EAt least one of \u0060domain\u0060, \u0060linkedin_url\u0060, \u0060name\u0060, or \u0060website\u0060 is required. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/company/apolloio\u0060",
+            "description": "The URL for the company\u0027s LinkedIn profile. Use \u0060domain\u0060, \u0060linkedin_url\u0060, or \u0060website\u0060 to identify the company. You can also provide \u0060name\u0060 to improve match accuracy. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/company/apolloio\u0060",
             "schema": {
               "type": "string"
             }
@@ -2192,7 +2192,7 @@
           {
             "name": "name",
             "in": "query",
-            "description": "The name of the company that you want to enrich. \u003Cbr\u003E\u003Cbr\u003EAt least one of \u0060domain\u0060, \u0060linkedin_url\u0060, \u0060name\u0060, or \u0060website\u0060 is required. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060apollo\u0060",
+            "description": "The name of the company that you want to enrich. Provide this with \u0060domain\u0060, \u0060linkedin_url\u0060, or \u0060website\u0060 to improve match accuracy. A company name alone is not supported. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060apollo\u0060",
             "schema": {
               "type": "string"
             }
@@ -2200,7 +2200,7 @@
           {
             "name": "website",
             "in": "query",
-            "description": "The full website URL of the company that you want to enrich. \u003Cbr\u003E\u003Cbr\u003EAt least one of \u0060domain\u0060, \u0060linkedin_url\u0060, \u0060name\u0060, or \u0060website\u0060 is required. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.apollo.io\u0060",
+            "description": "The full website URL of the company that you want to enrich. Use \u0060domain\u0060, \u0060linkedin_url\u0060, or \u0060website\u0060 to identify the company. You can also provide \u0060name\u0060 to improve match accuracy. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.apollo.io\u0060",
             "schema": {
               "type": "string"
             }
