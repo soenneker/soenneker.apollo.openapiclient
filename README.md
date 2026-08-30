@@ -1,6 +1,7 @@
 [![](https://img.shields.io/nuget/v/soenneker.apollo.openapiclient.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.apollo.openapiclient/)
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.apollo.openapiclient/publish-package.yml?style=for-the-badge)](https://github.com/soenneker/soenneker.apollo.openapiclient/actions/workflows/publish-package.yml)
 [![](https://img.shields.io/nuget/dt/soenneker.apollo.openapiclient.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.apollo.openapiclient/)
+[![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.apollo.openapiclient/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.apollo.openapiclient/actions/workflows/codeql.yml)
 
 # Soenneker.Apollo.OpenApiClient
 
