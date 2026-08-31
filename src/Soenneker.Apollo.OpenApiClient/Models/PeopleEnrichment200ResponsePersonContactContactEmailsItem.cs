@@ -25,10 +25,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email_from_customer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailFromCustomer? EmailFromCustomer { get; set; }
+        public UntypedNode? EmailFromCustomer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailFromCustomer EmailFromCustomer { get; set; }
+        public UntypedNode EmailFromCustomer { get; set; }
 #endif
         /// <summary>The email_md5 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailSource? EmailSource { get; set; }
+        public UntypedNode? EmailSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailSource EmailSource { get; set; }
+        public UntypedNode EmailSource { get; set; }
 #endif
         /// <summary>The email_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,10 +96,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "email_from_customer", n => { EmailFromCustomer = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailFromCustomer>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailFromCustomer.CreateFromDiscriminatorValue); } },
+                { "email_from_customer", n => { EmailFromCustomer = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "email_md5", n => { EmailMd5 = n.GetStringValue(); } },
                 { "email_sha256", n => { EmailSha256 = n.GetStringValue(); } },
-                { "email_source", n => { EmailSource = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailSource>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailSource.CreateFromDiscriminatorValue); } },
+                { "email_source", n => { EmailSource = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "email_status", n => { EmailStatus = n.GetStringValue(); } },
                 { "extrapolated_email_confidence", n => { ExtrapolatedEmailConfidence = n.GetDoubleValue(); } },
                 { "free_domain", n => { FreeDomain = n.GetBoolValue(); } },
@@ -114,10 +114,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailFromCustomer>("email_from_customer", EmailFromCustomer);
+            writer.WriteObjectValue<UntypedNode>("email_from_customer", EmailFromCustomer);
             writer.WriteStringValue("email_md5", EmailMd5);
             writer.WriteStringValue("email_sha256", EmailSha256);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactContactEmailsItemEmailSource>("email_source", EmailSource);
+            writer.WriteObjectValue<UntypedNode>("email_source", EmailSource);
             writer.WriteStringValue("email_status", EmailStatus);
             writer.WriteDoubleValue("extrapolated_email_confidence", ExtrapolatedEmailConfidence);
             writer.WriteBoolValue("free_domain", FreeDomain);

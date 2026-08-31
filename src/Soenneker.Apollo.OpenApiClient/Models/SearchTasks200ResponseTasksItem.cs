@@ -15,36 +15,36 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAccountId? AccountId { get; set; }
+        public UntypedNode? AccountId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAccountId AccountId { get; set; }
+        public UntypedNode AccountId { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The answered property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAnswered? Answered { get; set; }
+        public UntypedNode? Answered { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAnswered Answered { get; set; }
+        public UntypedNode Answered { get; set; }
 #endif
         /// <summary>The completed_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCompletedAt? CompletedAt { get; set; }
+        public UntypedNode? CompletedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCompletedAt CompletedAt { get; set; }
+        public UntypedNode CompletedAt { get; set; }
 #endif
         /// <summary>The contact_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemContactId? ContactId { get; set; }
+        public UntypedNode? ContactId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemContactId ContactId { get; set; }
+        public UntypedNode ContactId { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The created_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCreatedFrom? CreatedFrom { get; set; }
+        public UntypedNode? CreatedFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCreatedFrom CreatedFrom { get; set; }
+        public UntypedNode CreatedFrom { get; set; }
 #endif
         /// <summary>The creator_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,18 +81,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The emailer_campaign_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemEmailerCampaignId? EmailerCampaignId { get; set; }
+        public UntypedNode? EmailerCampaignId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemEmailerCampaignId EmailerCampaignId { get; set; }
+        public UntypedNode EmailerCampaignId { get; set; }
 #endif
         /// <summary>The hubspot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemHubspotId? HubspotId { get; set; }
+        public UntypedNode? HubspotId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemHubspotId HubspotId { get; set; }
+        public UntypedNode HubspotId { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,18 +105,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The needs_playbook_autoprospecting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNeedsPlaybookAutoprospecting? NeedsPlaybookAutoprospecting { get; set; }
+        public UntypedNode? NeedsPlaybookAutoprospecting { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNeedsPlaybookAutoprospecting NeedsPlaybookAutoprospecting { get; set; }
+        public UntypedNode NeedsPlaybookAutoprospecting { get; set; }
 #endif
         /// <summary>The note property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNote? Note { get; set; }
+        public UntypedNode? Note { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNote Note { get; set; }
+        public UntypedNode Note { get; set; }
 #endif
         /// <summary>The opportunity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,10 +137,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The organization_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOrganizationId? OrganizationId { get; set; }
+        public UntypedNode? OrganizationId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOrganizationId OrganizationId { get; set; }
+        public UntypedNode OrganizationId { get; set; }
 #endif
         /// <summary>The persona_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,18 +153,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The person_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPersonId? PersonId { get; set; }
+        public UntypedNode? PersonId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPersonId PersonId { get; set; }
+        public UntypedNode PersonId { get; set; }
 #endif
         /// <summary>The playbook_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPlaybookId? PlaybookId { get; set; }
+        public UntypedNode? PlaybookId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPlaybookId PlaybookId { get; set; }
+        public UntypedNode PlaybookId { get; set; }
 #endif
         /// <summary>The playbook_step_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -185,34 +185,34 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The rule_config_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemRuleConfigId? RuleConfigId { get; set; }
+        public UntypedNode? RuleConfigId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemRuleConfigId RuleConfigId { get; set; }
+        public UntypedNode RuleConfigId { get; set; }
 #endif
         /// <summary>The salesforce_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceId? SalesforceId { get; set; }
+        public UntypedNode? SalesforceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceId SalesforceId { get; set; }
+        public UntypedNode SalesforceId { get; set; }
 #endif
         /// <summary>The salesforce_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceType? SalesforceType { get; set; }
+        public UntypedNode? SalesforceType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceType SalesforceType { get; set; }
+        public UntypedNode SalesforceType { get; set; }
 #endif
         /// <summary>The skipped_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSkippedAt? SkippedAt { get; set; }
+        public UntypedNode? SkippedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSkippedAt SkippedAt { get; set; }
+        public UntypedNode SkippedAt { get; set; }
 #endif
         /// <summary>The starred_by_user_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -233,10 +233,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The subject property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSubject? Subject { get; set; }
+        public UntypedNode? Subject { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSubject Subject { get; set; }
+        public UntypedNode Subject { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -287,34 +287,34 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_id", n => { AccountId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAccountId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAccountId.CreateFromDiscriminatorValue); } },
-                { "answered", n => { Answered = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAnswered>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAnswered.CreateFromDiscriminatorValue); } },
-                { "completed_at", n => { CompletedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCompletedAt>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCompletedAt.CreateFromDiscriminatorValue); } },
-                { "contact_id", n => { ContactId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemContactId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemContactId.CreateFromDiscriminatorValue); } },
+                { "account_id", n => { AccountId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "answered", n => { Answered = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "completed_at", n => { CompletedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "contact_id", n => { ContactId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "created_from", n => { CreatedFrom = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCreatedFrom>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCreatedFrom.CreateFromDiscriminatorValue); } },
+                { "created_from", n => { CreatedFrom = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
                 { "due_at", n => { DueAt = n.GetStringValue(); } },
-                { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemEmailerCampaignId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemEmailerCampaignId.CreateFromDiscriminatorValue); } },
-                { "hubspot_id", n => { HubspotId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemHubspotId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemHubspotId.CreateFromDiscriminatorValue); } },
+                { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "hubspot_id", n => { HubspotId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "needs_playbook_autoprospecting", n => { NeedsPlaybookAutoprospecting = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNeedsPlaybookAutoprospecting>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNeedsPlaybookAutoprospecting.CreateFromDiscriminatorValue); } },
-                { "note", n => { Note = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNote>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNote.CreateFromDiscriminatorValue); } },
+                { "needs_playbook_autoprospecting", n => { NeedsPlaybookAutoprospecting = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "note", n => { Note = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "opportunity", n => { Opportunity = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunity>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunity.CreateFromDiscriminatorValue); } },
                 { "opportunity_id", n => { OpportunityId = n.GetStringValue(); } },
-                { "organization_id", n => { OrganizationId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOrganizationId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOrganizationId.CreateFromDiscriminatorValue); } },
-                { "person_id", n => { PersonId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPersonId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPersonId.CreateFromDiscriminatorValue); } },
+                { "organization_id", n => { OrganizationId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_id", n => { PersonId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "persona_ids", n => { PersonaIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_persona_ids>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_persona_ids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "playbook_id", n => { PlaybookId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPlaybookId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPlaybookId.CreateFromDiscriminatorValue); } },
+                { "playbook_id", n => { PlaybookId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "playbook_step_ids", n => { PlaybookStepIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_playbook_step_ids>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_playbook_step_ids.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "priority", n => { Priority = n.GetStringValue(); } },
-                { "rule_config_id", n => { RuleConfigId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemRuleConfigId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemRuleConfigId.CreateFromDiscriminatorValue); } },
-                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceId.CreateFromDiscriminatorValue); } },
-                { "salesforce_type", n => { SalesforceType = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceType>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceType.CreateFromDiscriminatorValue); } },
-                { "skipped_at", n => { SkippedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSkippedAt>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSkippedAt.CreateFromDiscriminatorValue); } },
+                { "rule_config_id", n => { RuleConfigId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "salesforce_type", n => { SalesforceType = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "skipped_at", n => { SkippedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "starred_by_user_ids", n => { StarredByUserIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_starred_by_user_ids>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_starred_by_user_ids.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "subject", n => { Subject = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSubject>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSubject.CreateFromDiscriminatorValue); } },
+                { "subject", n => { Subject = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -327,34 +327,34 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAccountId>("account_id", AccountId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAnswered>("answered", Answered);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCompletedAt>("completed_at", CompletedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemContactId>("contact_id", ContactId);
+            writer.WriteObjectValue<UntypedNode>("account_id", AccountId);
+            writer.WriteObjectValue<UntypedNode>("answered", Answered);
+            writer.WriteObjectValue<UntypedNode>("completed_at", CompletedAt);
+            writer.WriteObjectValue<UntypedNode>("contact_id", ContactId);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemCreatedFrom>("created_from", CreatedFrom);
+            writer.WriteObjectValue<UntypedNode>("created_from", CreatedFrom);
             writer.WriteStringValue("creator_id", CreatorId);
             writer.WriteStringValue("due_at", DueAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemEmailerCampaignId>("emailer_campaign_id", EmailerCampaignId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemHubspotId>("hubspot_id", HubspotId);
+            writer.WriteObjectValue<UntypedNode>("emailer_campaign_id", EmailerCampaignId);
+            writer.WriteObjectValue<UntypedNode>("hubspot_id", HubspotId);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNeedsPlaybookAutoprospecting>("needs_playbook_autoprospecting", NeedsPlaybookAutoprospecting);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemNote>("note", Note);
+            writer.WriteObjectValue<UntypedNode>("needs_playbook_autoprospecting", NeedsPlaybookAutoprospecting);
+            writer.WriteObjectValue<UntypedNode>("note", Note);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunity>("opportunity", Opportunity);
             writer.WriteStringValue("opportunity_id", OpportunityId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOrganizationId>("organization_id", OrganizationId);
+            writer.WriteObjectValue<UntypedNode>("organization_id", OrganizationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_persona_ids>("persona_ids", PersonaIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPersonId>("person_id", PersonId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemPlaybookId>("playbook_id", PlaybookId);
+            writer.WriteObjectValue<UntypedNode>("person_id", PersonId);
+            writer.WriteObjectValue<UntypedNode>("playbook_id", PlaybookId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_playbook_step_ids>("playbook_step_ids", PlaybookStepIds);
             writer.WriteStringValue("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemRuleConfigId>("rule_config_id", RuleConfigId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceId>("salesforce_id", SalesforceId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSalesforceType>("salesforce_type", SalesforceType);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSkippedAt>("skipped_at", SkippedAt);
+            writer.WriteObjectValue<UntypedNode>("rule_config_id", RuleConfigId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_id", SalesforceId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_type", SalesforceType);
+            writer.WriteObjectValue<UntypedNode>("skipped_at", SkippedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem_starred_by_user_ids>("starred_by_user_ids", StarredByUserIds);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemSubject>("subject", Subject);
+            writer.WriteObjectValue<UntypedNode>("subject", Subject);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_id", UserId);

@@ -105,10 +105,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The folder_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemFolderId? FolderId { get; set; }
+        public UntypedNode? FolderId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemFolderId FolderId { get; set; }
+        public UntypedNode FolderId { get; set; }
 #endif
         /// <summary>The hard_bounce_rate property</summary>
         public int? HardBounceRate { get; set; }
@@ -133,10 +133,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The last_used_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemLastUsedAt? LastUsedAt { get; set; }
+        public UntypedNode? LastUsedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemLastUsedAt LastUsedAt { get; set; }
+        public UntypedNode LastUsedAt { get; set; }
 #endif
         /// <summary>The loaded_stats property</summary>
         public bool? LoadedStats { get; set; }
@@ -151,10 +151,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The max_emails_per_day property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemMaxEmailsPerDay? MaxEmailsPerDay { get; set; }
+        public UntypedNode? MaxEmailsPerDay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemMaxEmailsPerDay MaxEmailsPerDay { get; set; }
+        public UntypedNode MaxEmailsPerDay { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,10 +175,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The prioritized_by_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemPrioritizedByUser? PrioritizedByUser { get; set; }
+        public UntypedNode? PrioritizedByUser { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemPrioritizedByUser PrioritizedByUser { get; set; }
+        public UntypedNode PrioritizedByUser { get; set; }
 #endif
         /// <summary>The remind_ab_test_results property</summary>
         public bool? RemindAbTestResults { get; set; }
@@ -189,18 +189,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The same_account_reply_policy_cd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSameAccountReplyPolicyCd? SameAccountReplyPolicyCd { get; set; }
+        public UntypedNode? SameAccountReplyPolicyCd { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSameAccountReplyPolicyCd SameAccountReplyPolicyCd { get; set; }
+        public UntypedNode SameAccountReplyPolicyCd { get; set; }
 #endif
         /// <summary>The sequence_by_exact_daytime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSequenceByExactDaytime? SequenceByExactDaytime { get; set; }
+        public UntypedNode? SequenceByExactDaytime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSequenceByExactDaytime SequenceByExactDaytime { get; set; }
+        public UntypedNode SequenceByExactDaytime { get; set; }
 #endif
         /// <summary>The sequence_ruleset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -334,29 +334,29 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "emailer_schedule_id", n => { EmailerScheduleId = n.GetStringValue(); } },
                 { "excluded_account_stage_ids", n => { ExcludedAccountStageIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "excluded_contact_stage_ids", n => { ExcludedContactStageIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "folder_id", n => { FolderId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemFolderId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemFolderId.CreateFromDiscriminatorValue); } },
+                { "folder_id", n => { FolderId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "hard_bounce_rate", n => { HardBounceRate = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_performing_poorly", n => { IsPerformingPoorly = n.GetBoolValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "last_used_at", n => { LastUsedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemLastUsedAt>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemLastUsedAt.CreateFromDiscriminatorValue); } },
+                { "last_used_at", n => { LastUsedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "loaded_stats", n => { LoadedStats = n.GetBoolValue(); } },
                 { "mark_finished_if_click", n => { MarkFinishedIfClick = n.GetBoolValue(); } },
                 { "mark_finished_if_interested", n => { MarkFinishedIfInterested = n.GetBoolValue(); } },
                 { "mark_finished_if_reply", n => { MarkFinishedIfReply = n.GetBoolValue(); } },
                 { "mark_paused_if_ooo", n => { MarkPausedIfOoo = n.GetBoolValue(); } },
-                { "max_emails_per_day", n => { MaxEmailsPerDay = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemMaxEmailsPerDay>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemMaxEmailsPerDay.CreateFromDiscriminatorValue); } },
+                { "max_emails_per_day", n => { MaxEmailsPerDay = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "num_contacts_email_status_extrapolated", n => { NumContactsEmailStatusExtrapolated = n.GetIntValue(); } },
                 { "num_steps", n => { NumSteps = n.GetIntValue(); } },
                 { "open_rate", n => { OpenRate = n.GetIntValue(); } },
                 { "opt_out_rate", n => { OptOutRate = n.GetIntValue(); } },
-                { "prioritized_by_user", n => { PrioritizedByUser = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemPrioritizedByUser>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemPrioritizedByUser.CreateFromDiscriminatorValue); } },
+                { "prioritized_by_user", n => { PrioritizedByUser = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "remind_ab_test_results", n => { RemindAbTestResults = n.GetBoolValue(); } },
                 { "reply_rate", n => { ReplyRate = n.GetIntValue(); } },
                 { "same_account_reply_delay_days", n => { SameAccountReplyDelayDays = n.GetIntValue(); } },
-                { "same_account_reply_policy_cd", n => { SameAccountReplyPolicyCd = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSameAccountReplyPolicyCd>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSameAccountReplyPolicyCd.CreateFromDiscriminatorValue); } },
-                { "sequence_by_exact_daytime", n => { SequenceByExactDaytime = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSequenceByExactDaytime>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSequenceByExactDaytime.CreateFromDiscriminatorValue); } },
+                { "same_account_reply_policy_cd", n => { SameAccountReplyPolicyCd = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sequence_by_exact_daytime", n => { SequenceByExactDaytime = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sequence_ruleset_id", n => { SequenceRulesetId = n.GetStringValue(); } },
                 { "sharing_permission", n => { SharingPermission = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSharingPermission>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSharingPermission.CreateFromDiscriminatorValue); } },
                 { "spam_block_rate", n => { SpamBlockRate = n.GetIntValue(); } },
@@ -399,29 +399,29 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("email_open_trigger_task_threshold", EmailOpenTriggerTaskThreshold);
             writer.WriteCollectionOfPrimitiveValues<string>("excluded_account_stage_ids", ExcludedAccountStageIds);
             writer.WriteCollectionOfPrimitiveValues<string>("excluded_contact_stage_ids", ExcludedContactStageIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemFolderId>("folder_id", FolderId);
+            writer.WriteObjectValue<UntypedNode>("folder_id", FolderId);
             writer.WriteIntValue("hard_bounce_rate", HardBounceRate);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_performing_poorly", IsPerformingPoorly);
             writer.WriteCollectionOfPrimitiveValues<string>("label_ids", LabelIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemLastUsedAt>("last_used_at", LastUsedAt);
+            writer.WriteObjectValue<UntypedNode>("last_used_at", LastUsedAt);
             writer.WriteBoolValue("loaded_stats", LoadedStats);
             writer.WriteBoolValue("mark_finished_if_click", MarkFinishedIfClick);
             writer.WriteBoolValue("mark_finished_if_interested", MarkFinishedIfInterested);
             writer.WriteBoolValue("mark_finished_if_reply", MarkFinishedIfReply);
             writer.WriteBoolValue("mark_paused_if_ooo", MarkPausedIfOoo);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemMaxEmailsPerDay>("max_emails_per_day", MaxEmailsPerDay);
+            writer.WriteObjectValue<UntypedNode>("max_emails_per_day", MaxEmailsPerDay);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("num_contacts_email_status_extrapolated", NumContactsEmailStatusExtrapolated);
             writer.WriteIntValue("num_steps", NumSteps);
             writer.WriteIntValue("open_rate", OpenRate);
             writer.WriteIntValue("opt_out_rate", OptOutRate);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemPrioritizedByUser>("prioritized_by_user", PrioritizedByUser);
+            writer.WriteObjectValue<UntypedNode>("prioritized_by_user", PrioritizedByUser);
             writer.WriteBoolValue("remind_ab_test_results", RemindAbTestResults);
             writer.WriteIntValue("reply_rate", ReplyRate);
             writer.WriteIntValue("same_account_reply_delay_days", SameAccountReplyDelayDays);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSameAccountReplyPolicyCd>("same_account_reply_policy_cd", SameAccountReplyPolicyCd);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSequenceByExactDaytime>("sequence_by_exact_daytime", SequenceByExactDaytime);
+            writer.WriteObjectValue<UntypedNode>("same_account_reply_policy_cd", SameAccountReplyPolicyCd);
+            writer.WriteObjectValue<UntypedNode>("sequence_by_exact_daytime", SequenceByExactDaytime);
             writer.WriteStringValue("sequence_ruleset_id", SequenceRulesetId);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItemSharingPermission>("sharing_permission", SharingPermission);
             writer.WriteIntValue("spam_block_rate", SpamBlockRate);

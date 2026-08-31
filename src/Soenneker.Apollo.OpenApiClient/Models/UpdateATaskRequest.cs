@@ -59,10 +59,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Numeric-coded alternative to `priority`. Only applies to tasks that are not `scheduled` (already `completed` or `skipped`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequestPriorityCd? PriorityCd { get; set; }
+        public UntypedNode? PriorityCd { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequestPriorityCd PriorityCd { get; set; }
+        public UntypedNode PriorityCd { get; set; }
 #endif
         /// <summary>Only applies to tasks with a `scheduled` status. Names of team-defined relevant fields to surface for this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,7 +136,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "due_at", n => { DueAt = n.GetDateTimeOffsetValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetStringValue(); } },
-                { "priority_cd", n => { PriorityCd = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequestPriorityCd>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequestPriorityCd.CreateFromDiscriminatorValue); } },
+                { "priority_cd", n => { PriorityCd = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "relevant_fields", n => { RelevantFields = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequest_relevant_fields>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequest_relevant_fields.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -157,7 +157,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("due_at", DueAt);
             writer.WriteStringValue("note", Note);
             writer.WriteStringValue("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequestPriorityCd>("priority_cd", PriorityCd);
+            writer.WriteObjectValue<UntypedNode>("priority_cd", PriorityCd);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATaskRequest_relevant_fields>("relevant_fields", RelevantFields);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("title", Title);

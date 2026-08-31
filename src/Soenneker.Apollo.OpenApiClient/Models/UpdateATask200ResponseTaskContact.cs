@@ -34,10 +34,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The contact_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContactContactStageId? ContactStageId { get; set; }
+        public UntypedNode? ContactStageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContactContactStageId ContactStageId { get; set; }
+        public UntypedNode ContactStageId { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,7 +178,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "contact_emails", n => { ContactEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContact_contact_emails>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContact_contact_emails.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "contact_stage_id", n => { ContactStageId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContactContactStageId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContactContactStageId.CreateFromDiscriminatorValue); } },
+                { "contact_stage_id", n => { ContactStageId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
@@ -204,7 +204,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContact_contact_emails>("contact_emails", ContactEmails);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskContactContactStageId>("contact_stage_id", ContactStageId);
+            writer.WriteObjectValue<UntypedNode>("contact_stage_id", ContactStageId);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("first_name", FirstName);

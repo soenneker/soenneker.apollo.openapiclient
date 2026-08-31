@@ -31,10 +31,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountAccountStageId? AccountStageId { get; set; }
+        public UntypedNode? AccountStageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountAccountStageId AccountStageId { get; set; }
+        public UntypedNode AccountStageId { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -49,26 +49,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The creator_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCreatorId? CreatorId { get; set; }
+        public UntypedNode? CreatorId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCreatorId CreatorId { get; set; }
+        public UntypedNode CreatorId { get; set; }
 #endif
         /// <summary>The crm_owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmOwnerId? CrmOwnerId { get; set; }
+        public UntypedNode? CrmOwnerId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmOwnerId CrmOwnerId { get; set; }
+        public UntypedNode CrmOwnerId { get; set; }
 #endif
         /// <summary>The crm_record_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmRecordUrl? CrmRecordUrl { get; set; }
+        public UntypedNode? CrmRecordUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmRecordUrl CrmRecordUrl { get; set; }
+        public UntypedNode CrmRecordUrl { get; set; }
 #endif
         /// <summary>The custom_field_errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,10 +99,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The hubspot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountHubspotId? HubspotId { get; set; }
+        public UntypedNode? HubspotId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountHubspotId HubspotId { get; set; }
+        public UntypedNode HubspotId { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,10 +115,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The intent_signal_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountIntentSignalAccount? IntentSignalAccount { get; set; }
+        public UntypedNode? IntentSignalAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountIntentSignalAccount IntentSignalAccount { get; set; }
+        public UntypedNode IntentSignalAccount { get; set; }
 #endif
         /// <summary>The label_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,10 +131,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The linkedin_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountLinkedinUrl? LinkedinUrl { get; set; }
+        public UntypedNode? LinkedinUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountLinkedinUrl LinkedinUrl { get; set; }
+        public UntypedNode LinkedinUrl { get; set; }
 #endif
         /// <summary>The modality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -179,10 +179,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The parent_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountParentAccountId? ParentAccountId { get; set; }
+        public UntypedNode? ParentAccountId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountParentAccountId ParentAccountId { get; set; }
+        public UntypedNode ParentAccountId { get; set; }
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -203,10 +203,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The salesforce_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountSalesforceId? SalesforceId { get; set; }
+        public UntypedNode? SalesforceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountSalesforceId SalesforceId { get; set; }
+        public UntypedNode SalesforceId { get; set; }
 #endif
         /// <summary>The sanitized_phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -279,29 +279,29 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             {
                 { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccount_account_playbook_statuses>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccount_account_playbook_statuses.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "account_rule_config_statuses", n => { AccountRuleConfigStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccount_account_rule_config_statuses>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccount_account_rule_config_statuses.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "account_stage_id", n => { AccountStageId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountAccountStageId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountAccountStageId.CreateFromDiscriminatorValue); } },
+                { "account_stage_id", n => { AccountStageId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "creator_id", n => { CreatorId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCreatorId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCreatorId.CreateFromDiscriminatorValue); } },
-                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmOwnerId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmOwnerId.CreateFromDiscriminatorValue); } },
-                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmRecordUrl>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmRecordUrl.CreateFromDiscriminatorValue); } },
+                { "creator_id", n => { CreatorId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "custom_field_errors", n => { CustomFieldErrors = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCustomFieldErrors>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCustomFieldErrors.CreateFromDiscriminatorValue); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "existence_level", n => { ExistenceLevel = n.GetStringValue(); } },
                 { "has_intent_signal_account", n => { HasIntentSignalAccount = n.GetBoolValue(); } },
-                { "hubspot_id", n => { HubspotId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountHubspotId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountHubspotId.CreateFromDiscriminatorValue); } },
+                { "hubspot_id", n => { HubspotId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "intent_signal_account", n => { IntentSignalAccount = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountIntentSignalAccount>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountIntentSignalAccount.CreateFromDiscriminatorValue); } },
+                { "intent_signal_account", n => { IntentSignalAccount = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "linkedin_url", n => { LinkedinUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountLinkedinUrl>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountLinkedinUrl.CreateFromDiscriminatorValue); } },
+                { "linkedin_url", n => { LinkedinUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "modality", n => { Modality = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "original_source", n => { OriginalSource = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetStringValue(); } },
-                { "parent_account_id", n => { ParentAccountId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountParentAccountId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountParentAccountId.CreateFromDiscriminatorValue); } },
+                { "parent_account_id", n => { ParentAccountId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "phone_status", n => { PhoneStatus = n.GetStringValue(); } },
-                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountSalesforceId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountSalesforceId.CreateFromDiscriminatorValue); } },
+                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sanitized_phone", n => { SanitizedPhone = n.GetStringValue(); } },
                 { "show_intent", n => { ShowIntent = n.GetBoolValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
@@ -319,29 +319,29 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccount_account_playbook_statuses>("account_playbook_statuses", AccountPlaybookStatuses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccount_account_rule_config_statuses>("account_rule_config_statuses", AccountRuleConfigStatuses);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountAccountStageId>("account_stage_id", AccountStageId);
+            writer.WriteObjectValue<UntypedNode>("account_stage_id", AccountStageId);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCreatorId>("creator_id", CreatorId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmOwnerId>("crm_owner_id", CrmOwnerId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCrmRecordUrl>("crm_record_url", CrmRecordUrl);
+            writer.WriteObjectValue<UntypedNode>("creator_id", CreatorId);
+            writer.WriteObjectValue<UntypedNode>("crm_owner_id", CrmOwnerId);
+            writer.WriteObjectValue<UntypedNode>("crm_record_url", CrmRecordUrl);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountCustomFieldErrors>("custom_field_errors", CustomFieldErrors);
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("existence_level", ExistenceLevel);
             writer.WriteBoolValue("has_intent_signal_account", HasIntentSignalAccount);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountHubspotId>("hubspot_id", HubspotId);
+            writer.WriteObjectValue<UntypedNode>("hubspot_id", HubspotId);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountIntentSignalAccount>("intent_signal_account", IntentSignalAccount);
+            writer.WriteObjectValue<UntypedNode>("intent_signal_account", IntentSignalAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("label_ids", LabelIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountLinkedinUrl>("linkedin_url", LinkedinUrl);
+            writer.WriteObjectValue<UntypedNode>("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("modality", Modality);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteStringValue("original_source", OriginalSource);
             writer.WriteStringValue("owner_id", OwnerId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountParentAccountId>("parent_account_id", ParentAccountId);
+            writer.WriteObjectValue<UntypedNode>("parent_account_id", ParentAccountId);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("phone_status", PhoneStatus);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200ResponseOrganizationAccountSalesforceId>("salesforce_id", SalesforceId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_id", SalesforceId);
             writer.WriteStringValue("sanitized_phone", SanitizedPhone);
             writer.WriteBoolValue("show_intent", ShowIntent);
             writer.WriteStringValue("source", Source);

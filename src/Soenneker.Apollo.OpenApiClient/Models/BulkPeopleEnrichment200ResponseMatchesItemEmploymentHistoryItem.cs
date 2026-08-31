@@ -25,52 +25,52 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemCreatedAt? CreatedAt { get; set; }
+        public UntypedNode? CreatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemCreatedAt CreatedAt { get; set; }
+        public UntypedNode CreatedAt { get; set; }
 #endif
         /// <summary>The current property</summary>
         public bool? Current { get; set; }
         /// <summary>The degree property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDegree? Degree { get; set; }
+        public UntypedNode? Degree { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDegree Degree { get; set; }
+        public UntypedNode Degree { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDescription? Description { get; set; }
+        public UntypedNode? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDescription Description { get; set; }
+        public UntypedNode Description { get; set; }
 #endif
         /// <summary>The emails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEmails? Emails { get; set; }
+        public UntypedNode? Emails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEmails Emails { get; set; }
+        public UntypedNode Emails { get; set; }
 #endif
         /// <summary>The end_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEndDate? EndDate { get; set; }
+        public UntypedNode? EndDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEndDate EndDate { get; set; }
+        public UntypedNode EndDate { get; set; }
 #endif
         /// <summary>The grade_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemGradeLevel? GradeLevel { get; set; }
+        public UntypedNode? GradeLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemGradeLevel GradeLevel { get; set; }
+        public UntypedNode GradeLevel { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,18 +91,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The kind property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemKind? Kind { get; set; }
+        public UntypedNode? Kind { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemKind Kind { get; set; }
+        public UntypedNode Kind { get; set; }
 #endif
         /// <summary>The major property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemMajor? Major { get; set; }
+        public UntypedNode? Major { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemMajor Major { get; set; }
+        public UntypedNode Major { get; set; }
 #endif
         /// <summary>The organization_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,10 +123,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The raw_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemRawAddress? RawAddress { get; set; }
+        public UntypedNode? RawAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemRawAddress RawAddress { get; set; }
+        public UntypedNode RawAddress { get; set; }
 #endif
         /// <summary>The start_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -147,10 +147,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemUpdatedAt? UpdatedAt { get; set; }
+        public UntypedNode? UpdatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemUpdatedAt UpdatedAt { get; set; }
+        public UntypedNode UpdatedAt { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItem"/> and sets the default values.
@@ -179,23 +179,23 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemId = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemCreatedAt>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemCreatedAt.CreateFromDiscriminatorValue); } },
+                { "created_at", n => { CreatedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "current", n => { Current = n.GetBoolValue(); } },
-                { "degree", n => { Degree = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDegree>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDegree.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDescription>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDescription.CreateFromDiscriminatorValue); } },
-                { "emails", n => { Emails = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEmails>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEmails.CreateFromDiscriminatorValue); } },
-                { "end_date", n => { EndDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEndDate>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEndDate.CreateFromDiscriminatorValue); } },
-                { "grade_level", n => { GradeLevel = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemGradeLevel>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemGradeLevel.CreateFromDiscriminatorValue); } },
+                { "degree", n => { Degree = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "emails", n => { Emails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "end_date", n => { EndDate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "grade_level", n => { GradeLevel = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "kind", n => { Kind = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemKind>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemKind.CreateFromDiscriminatorValue); } },
-                { "major", n => { Major = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemMajor>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemMajor.CreateFromDiscriminatorValue); } },
+                { "kind", n => { Kind = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "major", n => { Major = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "organization_name", n => { OrganizationName = n.GetStringValue(); } },
-                { "raw_address", n => { RawAddress = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemRawAddress>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemRawAddress.CreateFromDiscriminatorValue); } },
+                { "raw_address", n => { RawAddress = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "updated_at", n => { UpdatedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemUpdatedAt>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemUpdatedAt.CreateFromDiscriminatorValue); } },
+                { "updated_at", n => { UpdatedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -206,23 +206,23 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemCreatedAt>("created_at", CreatedAt);
+            writer.WriteObjectValue<UntypedNode>("created_at", CreatedAt);
             writer.WriteBoolValue("current", Current);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDegree>("degree", Degree);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemDescription>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEmails>("emails", Emails);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemEndDate>("end_date", EndDate);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemGradeLevel>("grade_level", GradeLevel);
+            writer.WriteObjectValue<UntypedNode>("degree", Degree);
+            writer.WriteObjectValue<UntypedNode>("description", Description);
+            writer.WriteObjectValue<UntypedNode>("emails", Emails);
+            writer.WriteObjectValue<UntypedNode>("end_date", EndDate);
+            writer.WriteObjectValue<UntypedNode>("grade_level", GradeLevel);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("key", Key);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemKind>("kind", Kind);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemMajor>("major", Major);
+            writer.WriteObjectValue<UntypedNode>("kind", Kind);
+            writer.WriteObjectValue<UntypedNode>("major", Major);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteStringValue("organization_name", OrganizationName);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemRawAddress>("raw_address", RawAddress);
+            writer.WriteObjectValue<UntypedNode>("raw_address", RawAddress);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemEmploymentHistoryItemUpdatedAt>("updated_at", UpdatedAt);
+            writer.WriteObjectValue<UntypedNode>("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

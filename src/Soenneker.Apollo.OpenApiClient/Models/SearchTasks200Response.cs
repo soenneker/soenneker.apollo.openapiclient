@@ -33,10 +33,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseNumFetchResult? NumFetchResult { get; set; }
+        public UntypedNode? NumFetchResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseNumFetchResult NumFetchResult { get; set; }
+        public UntypedNode NumFetchResult { get; set; }
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             {
                 { "breadcrumbs", n => { Breadcrumbs = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200Response_breadcrumbs>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200Response_breadcrumbs.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "faceting", n => { Faceting = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting.CreateFromDiscriminatorValue); } },
-                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseNumFetchResult>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseNumFetchResult.CreateFromDiscriminatorValue); } },
+                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination.CreateFromDiscriminatorValue); } },
                 { "pipeline_total", n => { PipelineTotal = n.GetIntValue(); } },
                 { "tasks", n => { Tasks = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200Response_breadcrumbs>("breadcrumbs", Breadcrumbs);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting>("faceting", Faceting);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseNumFetchResult>("num_fetch_result", NumFetchResult);
+            writer.WriteObjectValue<UntypedNode>("num_fetch_result", NumFetchResult);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination>("pagination", Pagination);
             writer.WriteIntValue("pipeline_total", PipelineTotal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem>("tasks", Tasks);

@@ -194,7 +194,7 @@ namespace Soenneker.Apollo.OpenApiClient.People.Match
             /// <summary>Set to true to enable phone waterfall enrichment</summary>
             [QueryParameter("run_waterfall_phone")]
             public bool? RunWaterfallPhone { get; set; }
-            /// <summary>If you set the `reveal_phone_number` parameter to `true`, this parameter becomes mandatory. Otherwise, do not use this parameter. &lt;br&gt;&lt;br&gt;Enter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. &lt;br&gt;&lt;br&gt;If phone numbers are not revealed delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. &lt;br&gt;&lt;br&gt;Example: `https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610`; `https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610`</summary>
+            /// <summary>If you set the `reveal_phone_number` parameter to `true`, this parameter becomes mandatory. Otherwise, do not use this parameter. &lt;br&gt;&lt;br&gt;Enter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. &lt;br&gt;&lt;br&gt;If phone numbers are not delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. &lt;br&gt;&lt;br&gt;Example: `https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610`; `https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("webhook_url")]

@@ -65,34 +65,34 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The creator_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCreatorId? CreatorId { get; set; }
+        public UntypedNode? CreatorId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCreatorId CreatorId { get; set; }
+        public UntypedNode CreatorId { get; set; }
 #endif
         /// <summary>The crm_owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmOwnerId? CrmOwnerId { get; set; }
+        public UntypedNode? CrmOwnerId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmOwnerId CrmOwnerId { get; set; }
+        public UntypedNode CrmOwnerId { get; set; }
 #endif
         /// <summary>The crm_record_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmRecordUrl? CrmRecordUrl { get; set; }
+        public UntypedNode? CrmRecordUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmRecordUrl CrmRecordUrl { get; set; }
+        public UntypedNode CrmRecordUrl { get; set; }
 #endif
         /// <summary>The custom_field_errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCustomFieldErrors? CustomFieldErrors { get; set; }
+        public UntypedNode? CustomFieldErrors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCustomFieldErrors CustomFieldErrors { get; set; }
+        public UntypedNode CustomFieldErrors { get; set; }
 #endif
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,10 +113,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The hubspot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountHubspotId? HubspotId { get; set; }
+        public UntypedNode? HubspotId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountHubspotId HubspotId { get; set; }
+        public UntypedNode HubspotId { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,18 +137,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The last_activity_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLastActivityDate? LastActivityDate { get; set; }
+        public UntypedNode? LastActivityDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLastActivityDate LastActivityDate { get; set; }
+        public UntypedNode LastActivityDate { get; set; }
 #endif
         /// <summary>The linkedin_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLinkedinUrl? LinkedinUrl { get; set; }
+        public UntypedNode? LinkedinUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLinkedinUrl LinkedinUrl { get; set; }
+        public UntypedNode LinkedinUrl { get; set; }
 #endif
         /// <summary>The modality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,18 +187,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountOwnerId? OwnerId { get; set; }
+        public UntypedNode? OwnerId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountOwnerId OwnerId { get; set; }
+        public UntypedNode OwnerId { get; set; }
 #endif
         /// <summary>The parent_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountParentAccountId? ParentAccountId { get; set; }
+        public UntypedNode? ParentAccountId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountParentAccountId ParentAccountId { get; set; }
+        public UntypedNode ParentAccountId { get; set; }
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -219,10 +219,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The salesforce_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountSalesforceId? SalesforceId { get; set; }
+        public UntypedNode? SalesforceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountSalesforceId SalesforceId { get; set; }
+        public UntypedNode SalesforceId { get; set; }
 #endif
         /// <summary>The sanitized_phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -296,27 +296,27 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "contact_campaign_status_tally", n => { ContactCampaignStatusTally = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountContactCampaignStatusTally>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountContactCampaignStatusTally.CreateFromDiscriminatorValue); } },
                 { "contact_emailer_campaign_ids", n => { ContactEmailerCampaignIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccount_contact_emailer_campaign_ids>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccount_contact_emailer_campaign_ids.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "creator_id", n => { CreatorId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCreatorId>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCreatorId.CreateFromDiscriminatorValue); } },
-                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmOwnerId>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmOwnerId.CreateFromDiscriminatorValue); } },
-                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmRecordUrl>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmRecordUrl.CreateFromDiscriminatorValue); } },
-                { "custom_field_errors", n => { CustomFieldErrors = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCustomFieldErrors>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCustomFieldErrors.CreateFromDiscriminatorValue); } },
+                { "creator_id", n => { CreatorId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "custom_field_errors", n => { CustomFieldErrors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "existence_level", n => { ExistenceLevel = n.GetStringValue(); } },
-                { "hubspot_id", n => { HubspotId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountHubspotId>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountHubspotId.CreateFromDiscriminatorValue); } },
+                { "hubspot_id", n => { HubspotId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "last_activity_date", n => { LastActivityDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLastActivityDate>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLastActivityDate.CreateFromDiscriminatorValue); } },
-                { "linkedin_url", n => { LinkedinUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLinkedinUrl>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLinkedinUrl.CreateFromDiscriminatorValue); } },
+                { "last_activity_date", n => { LastActivityDate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "linkedin_url", n => { LinkedinUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "modality", n => { Modality = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "num_contacts", n => { NumContacts = n.GetIntValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "original_source", n => { OriginalSource = n.GetStringValue(); } },
-                { "owner_id", n => { OwnerId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountOwnerId>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountOwnerId.CreateFromDiscriminatorValue); } },
-                { "parent_account_id", n => { ParentAccountId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountParentAccountId>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountParentAccountId.CreateFromDiscriminatorValue); } },
+                { "owner_id", n => { OwnerId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "parent_account_id", n => { ParentAccountId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "phone_status", n => { PhoneStatus = n.GetStringValue(); } },
-                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountSalesforceId>(global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountSalesforceId.CreateFromDiscriminatorValue); } },
+                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sanitized_phone", n => { SanitizedPhone = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "source_display_name", n => { SourceDisplayName = n.GetStringValue(); } },
@@ -337,27 +337,27 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountContactCampaignStatusTally>("contact_campaign_status_tally", ContactCampaignStatusTally);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccount_contact_emailer_campaign_ids>("contact_emailer_campaign_ids", ContactEmailerCampaignIds);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCreatorId>("creator_id", CreatorId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmOwnerId>("crm_owner_id", CrmOwnerId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCrmRecordUrl>("crm_record_url", CrmRecordUrl);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountCustomFieldErrors>("custom_field_errors", CustomFieldErrors);
+            writer.WriteObjectValue<UntypedNode>("creator_id", CreatorId);
+            writer.WriteObjectValue<UntypedNode>("crm_owner_id", CrmOwnerId);
+            writer.WriteObjectValue<UntypedNode>("crm_record_url", CrmRecordUrl);
+            writer.WriteObjectValue<UntypedNode>("custom_field_errors", CustomFieldErrors);
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("existence_level", ExistenceLevel);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountHubspotId>("hubspot_id", HubspotId);
+            writer.WriteObjectValue<UntypedNode>("hubspot_id", HubspotId);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("label_ids", LabelIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLastActivityDate>("last_activity_date", LastActivityDate);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountLinkedinUrl>("linkedin_url", LinkedinUrl);
+            writer.WriteObjectValue<UntypedNode>("last_activity_date", LastActivityDate);
+            writer.WriteObjectValue<UntypedNode>("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("modality", Modality);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("num_contacts", NumContacts);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteStringValue("original_source", OriginalSource);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountOwnerId>("owner_id", OwnerId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountParentAccountId>("parent_account_id", ParentAccountId);
+            writer.WriteObjectValue<UntypedNode>("owner_id", OwnerId);
+            writer.WriteObjectValue<UntypedNode>("parent_account_id", ParentAccountId);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("phone_status", PhoneStatus);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200ResponseOpportunityAccountSalesforceId>("salesforce_id", SalesforceId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_id", SalesforceId);
             writer.WriteStringValue("sanitized_phone", SanitizedPhone);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("source_display_name", SourceDisplayName);

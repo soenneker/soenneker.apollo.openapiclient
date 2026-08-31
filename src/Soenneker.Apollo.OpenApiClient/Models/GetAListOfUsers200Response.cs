@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseNumFetchResult? NumFetchResult { get; set; }
+        public UntypedNode? NumFetchResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseNumFetchResult NumFetchResult { get; set; }
+        public UntypedNode NumFetchResult { get; set; }
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseNumFetchResult>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseNumFetchResult.CreateFromDiscriminatorValue); } },
+                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponsePagination>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponsePagination.CreateFromDiscriminatorValue); } },
                 { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseNumFetchResult>("num_fetch_result", NumFetchResult);
+            writer.WriteObjectValue<UntypedNode>("num_fetch_result", NumFetchResult);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponsePagination>("pagination", Pagination);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItem>("users", Users);
             writer.WriteAdditionalData(AdditionalData);

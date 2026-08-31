@@ -19,26 +19,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The angellist_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemAngellistUrl? AngellistUrl { get; set; }
+        public UntypedNode? AngellistUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemAngellistUrl AngellistUrl { get; set; }
+        public UntypedNode AngellistUrl { get; set; }
 #endif
         /// <summary>The blog_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemBlogUrl? BlogUrl { get; set; }
+        public UntypedNode? BlogUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemBlogUrl BlogUrl { get; set; }
+        public UntypedNode BlogUrl { get; set; }
 #endif
         /// <summary>The crunchbase_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemCrunchbaseUrl? CrunchbaseUrl { get; set; }
+        public UntypedNode? CrunchbaseUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemCrunchbaseUrl CrunchbaseUrl { get; set; }
+        public UntypedNode CrunchbaseUrl { get; set; }
 #endif
         /// <summary>The facebook_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,10 +63,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The intent_signal_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemIntentSignalAccount? IntentSignalAccount { get; set; }
+        public UntypedNode? IntentSignalAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemIntentSignalAccount IntentSignalAccount { get; set; }
+        public UntypedNode IntentSignalAccount { get; set; }
 #endif
         /// <summary>The languages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,10 +111,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The owned_by_organization_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId? OwnedByOrganizationId { get; set; }
+        public UntypedNode? OwnedByOrganizationId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId OwnedByOrganizationId { get; set; }
+        public UntypedNode OwnedByOrganizationId { get; set; }
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,18 +143,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The publicly_traded_exchange property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedExchange? PubliclyTradedExchange { get; set; }
+        public UntypedNode? PubliclyTradedExchange { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedExchange PubliclyTradedExchange { get; set; }
+        public UntypedNode PubliclyTradedExchange { get; set; }
 #endif
         /// <summary>The publicly_traded_symbol property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol? PubliclyTradedSymbol { get; set; }
+        public UntypedNode? PubliclyTradedSymbol { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol PubliclyTradedSymbol { get; set; }
+        public UntypedNode PubliclyTradedSymbol { get; set; }
 #endif
         /// <summary>The sanitized_phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -212,25 +212,25 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alexa_ranking", n => { AlexaRanking = n.GetIntValue(); } },
-                { "angellist_url", n => { AngellistUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemAngellistUrl>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemAngellistUrl.CreateFromDiscriminatorValue); } },
-                { "blog_url", n => { BlogUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemBlogUrl>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemBlogUrl.CreateFromDiscriminatorValue); } },
-                { "crunchbase_url", n => { CrunchbaseUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemCrunchbaseUrl>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemCrunchbaseUrl.CreateFromDiscriminatorValue); } },
+                { "angellist_url", n => { AngellistUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "blog_url", n => { BlogUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crunchbase_url", n => { CrunchbaseUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "facebook_url", n => { FacebookUrl = n.GetStringValue(); } },
                 { "founded_year", n => { FoundedYear = n.GetIntValue(); } },
                 { "has_intent_signal_account", n => { HasIntentSignalAccount = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "intent_signal_account", n => { IntentSignalAccount = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemIntentSignalAccount>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemIntentSignalAccount.CreateFromDiscriminatorValue); } },
+                { "intent_signal_account", n => { IntentSignalAccount = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "languages", n => { Languages = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "linkedin_uid", n => { LinkedinUid = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owned_by_organization_id", n => { OwnedByOrganizationId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId.CreateFromDiscriminatorValue); } },
+                { "owned_by_organization_id", n => { OwnedByOrganizationId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "primary_domain", n => { PrimaryDomain = n.GetStringValue(); } },
                 { "primary_phone", n => { PrimaryPhone = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPrimaryPhone>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPrimaryPhone.CreateFromDiscriminatorValue); } },
-                { "publicly_traded_exchange", n => { PubliclyTradedExchange = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedExchange>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedExchange.CreateFromDiscriminatorValue); } },
-                { "publicly_traded_symbol", n => { PubliclyTradedSymbol = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol.CreateFromDiscriminatorValue); } },
+                { "publicly_traded_exchange", n => { PubliclyTradedExchange = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "publicly_traded_symbol", n => { PubliclyTradedSymbol = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sanitized_phone", n => { SanitizedPhone = n.GetStringValue(); } },
                 { "show_intent", n => { ShowIntent = n.GetBoolValue(); } },
                 { "twitter_url", n => { TwitterUrl = n.GetStringValue(); } },
@@ -245,25 +245,25 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("alexa_ranking", AlexaRanking);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemAngellistUrl>("angellist_url", AngellistUrl);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemBlogUrl>("blog_url", BlogUrl);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemCrunchbaseUrl>("crunchbase_url", CrunchbaseUrl);
+            writer.WriteObjectValue<UntypedNode>("angellist_url", AngellistUrl);
+            writer.WriteObjectValue<UntypedNode>("blog_url", BlogUrl);
+            writer.WriteObjectValue<UntypedNode>("crunchbase_url", CrunchbaseUrl);
             writer.WriteStringValue("facebook_url", FacebookUrl);
             writer.WriteIntValue("founded_year", FoundedYear);
             writer.WriteBoolValue("has_intent_signal_account", HasIntentSignalAccount);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemIntentSignalAccount>("intent_signal_account", IntentSignalAccount);
+            writer.WriteObjectValue<UntypedNode>("intent_signal_account", IntentSignalAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("languages", Languages);
             writer.WriteStringValue("linkedin_uid", LinkedinUid);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("logo_url", LogoUrl);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId>("owned_by_organization_id", OwnedByOrganizationId);
+            writer.WriteObjectValue<UntypedNode>("owned_by_organization_id", OwnedByOrganizationId);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("primary_domain", PrimaryDomain);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPrimaryPhone>("primary_phone", PrimaryPhone);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedExchange>("publicly_traded_exchange", PubliclyTradedExchange);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol>("publicly_traded_symbol", PubliclyTradedSymbol);
+            writer.WriteObjectValue<UntypedNode>("publicly_traded_exchange", PubliclyTradedExchange);
+            writer.WriteObjectValue<UntypedNode>("publicly_traded_symbol", PubliclyTradedSymbol);
             writer.WriteStringValue("sanitized_phone", SanitizedPhone);
             writer.WriteBoolValue("show_intent", ShowIntent);
             writer.WriteStringValue("twitter_url", TwitterUrl);

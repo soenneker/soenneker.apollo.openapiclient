@@ -17,18 +17,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The crm_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmId? CrmId { get; set; }
+        public UntypedNode? CrmId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmId CrmId { get; set; }
+        public UntypedNode CrmId { get; set; }
 #endif
         /// <summary>The crm_role_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmRoleId? CrmRoleId { get; set; }
+        public UntypedNode? CrmRoleId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmRoleId CrmRoleId { get; set; }
+        public UntypedNode CrmRoleId { get; set; }
 #endif
         /// <summary>The is_primary property</summary>
         public bool? IsPrimary { get; set; }
@@ -66,8 +66,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "crm_id", n => { CrmId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmId.CreateFromDiscriminatorValue); } },
-                { "crm_role_id", n => { CrmRoleId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmRoleId>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmRoleId.CreateFromDiscriminatorValue); } },
+                { "crm_id", n => { CrmId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_role_id", n => { CrmRoleId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "is_primary", n => { IsPrimary = n.GetBoolValue(); } },
                 { "opportunity_contact_role_type_id", n => { OpportunityContactRoleTypeId = n.GetStringValue(); } },
             };
@@ -79,8 +79,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmId>("crm_id", CrmId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItemCrmRoleId>("crm_role_id", CrmRoleId);
+            writer.WriteObjectValue<UntypedNode>("crm_id", CrmId);
+            writer.WriteObjectValue<UntypedNode>("crm_role_id", CrmRoleId);
             writer.WriteBoolValue("is_primary", IsPrimary);
             writer.WriteStringValue("opportunity_contact_role_type_id", OpportunityContactRoleTypeId);
             writer.WriteAdditionalData(AdditionalData);

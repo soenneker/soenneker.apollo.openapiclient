@@ -17,26 +17,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The dialer_flags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDialerFlags? DialerFlags { get; set; }
+        public UntypedNode? DialerFlags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDialerFlags DialerFlags { get; set; }
+        public UntypedNode DialerFlags { get; set; }
 #endif
         /// <summary>The dnc_other_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncOtherInfo? DncOtherInfo { get; set; }
+        public UntypedNode? DncOtherInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncOtherInfo DncOtherInfo { get; set; }
+        public UntypedNode DncOtherInfo { get; set; }
 #endif
         /// <summary>The dnc_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncStatus? DncStatus { get; set; }
+        public UntypedNode? DncStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncStatus DncStatus { get; set; }
+        public UntypedNode DncStatus { get; set; }
 #endif
         /// <summary>The position property</summary>
         public int? Position { get; set; }
@@ -67,10 +67,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemType? Type { get; set; }
+        public UntypedNode? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemType Type { get; set; }
+        public UntypedNode Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItem"/> and sets the default values.
@@ -98,14 +98,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dialer_flags", n => { DialerFlags = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDialerFlags>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDialerFlags.CreateFromDiscriminatorValue); } },
-                { "dnc_other_info", n => { DncOtherInfo = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncOtherInfo>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncOtherInfo.CreateFromDiscriminatorValue); } },
-                { "dnc_status", n => { DncStatus = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncStatus>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncStatus.CreateFromDiscriminatorValue); } },
+                { "dialer_flags", n => { DialerFlags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "dnc_other_info", n => { DncOtherInfo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "dnc_status", n => { DncStatus = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "position", n => { Position = n.GetIntValue(); } },
                 { "raw_number", n => { RawNumber = n.GetStringValue(); } },
                 { "sanitized_number", n => { SanitizedNumber = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemType>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -115,14 +115,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDialerFlags>("dialer_flags", DialerFlags);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncOtherInfo>("dnc_other_info", DncOtherInfo);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemDncStatus>("dnc_status", DncStatus);
+            writer.WriteObjectValue<UntypedNode>("dialer_flags", DialerFlags);
+            writer.WriteObjectValue<UntypedNode>("dnc_other_info", DncOtherInfo);
+            writer.WriteObjectValue<UntypedNode>("dnc_status", DncStatus);
             writer.WriteIntValue("position", Position);
             writer.WriteStringValue("raw_number", RawNumber);
             writer.WriteStringValue("sanitized_number", SanitizedNumber);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContactPhoneNumbersItemType>("type", Type);
+            writer.WriteObjectValue<UntypedNode>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

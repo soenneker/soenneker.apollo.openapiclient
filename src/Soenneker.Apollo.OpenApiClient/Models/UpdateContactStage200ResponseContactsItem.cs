@@ -23,10 +23,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_phone_note property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemAccountPhoneNote? AccountPhoneNote { get; set; }
+        public UntypedNode? AccountPhoneNote { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemAccountPhoneNote AccountPhoneNote { get; set; }
+        public UntypedNode AccountPhoneNote { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -89,50 +89,50 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The crm_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmId? CrmId { get; set; }
+        public UntypedNode? CrmId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmId CrmId { get; set; }
+        public UntypedNode CrmId { get; set; }
 #endif
         /// <summary>The crm_owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmOwnerId? CrmOwnerId { get; set; }
+        public UntypedNode? CrmOwnerId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmOwnerId CrmOwnerId { get; set; }
+        public UntypedNode CrmOwnerId { get; set; }
 #endif
         /// <summary>The crm_record_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmRecordUrl? CrmRecordUrl { get; set; }
+        public UntypedNode? CrmRecordUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmRecordUrl CrmRecordUrl { get; set; }
+        public UntypedNode CrmRecordUrl { get; set; }
 #endif
         /// <summary>The custom_field_errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCustomFieldErrors? CustomFieldErrors { get; set; }
+        public UntypedNode? CustomFieldErrors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCustomFieldErrors CustomFieldErrors { get; set; }
+        public UntypedNode CustomFieldErrors { get; set; }
 #endif
         /// <summary>The direct_dial_enrichment_failed_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialEnrichmentFailedAt? DirectDialEnrichmentFailedAt { get; set; }
+        public UntypedNode? DirectDialEnrichmentFailedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialEnrichmentFailedAt DirectDialEnrichmentFailedAt { get; set; }
+        public UntypedNode DirectDialEnrichmentFailedAt { get; set; }
 #endif
         /// <summary>The direct_dial_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialStatus? DirectDialStatus { get; set; }
+        public UntypedNode? DirectDialStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialStatus DirectDialStatus { get; set; }
+        public UntypedNode DirectDialStatus { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,18 +157,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email_needs_tickling property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailNeedsTickling? EmailNeedsTickling { get; set; }
+        public UntypedNode? EmailNeedsTickling { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailNeedsTickling EmailNeedsTickling { get; set; }
+        public UntypedNode EmailNeedsTickling { get; set; }
 #endif
         /// <summary>The email_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailSource? EmailSource { get; set; }
+        public UntypedNode? EmailSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailSource EmailSource { get; set; }
+        public UntypedNode EmailSource { get; set; }
 #endif
         /// <summary>The email_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,10 +181,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email_status_unavailable_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailStatusUnavailableReason? EmailStatusUnavailableReason { get; set; }
+        public UntypedNode? EmailStatusUnavailableReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailStatusUnavailableReason EmailStatusUnavailableReason { get; set; }
+        public UntypedNode EmailStatusUnavailableReason { get; set; }
 #endif
         /// <summary>The email_true_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -197,10 +197,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email_unsubscribed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailUnsubscribed? EmailUnsubscribed { get; set; }
+        public UntypedNode? EmailUnsubscribed { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailUnsubscribed EmailUnsubscribed { get; set; }
+        public UntypedNode EmailUnsubscribed { get; set; }
 #endif
         /// <summary>The existence_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -229,26 +229,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The headline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHeadline? Headline { get; set; }
+        public UntypedNode? Headline { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHeadline Headline { get; set; }
+        public UntypedNode Headline { get; set; }
 #endif
         /// <summary>The hubspot_company_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotCompanyId? HubspotCompanyId { get; set; }
+        public UntypedNode? HubspotCompanyId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotCompanyId HubspotCompanyId { get; set; }
+        public UntypedNode HubspotCompanyId { get; set; }
 #endif
         /// <summary>The hubspot_vid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotVid? HubspotVid { get; set; }
+        public UntypedNode? HubspotVid { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotVid HubspotVid { get; set; }
+        public UntypedNode HubspotVid { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -271,10 +271,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The last_activity_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLastActivityDate? LastActivityDate { get; set; }
+        public UntypedNode? LastActivityDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLastActivityDate LastActivityDate { get; set; }
+        public UntypedNode LastActivityDate { get; set; }
 #endif
         /// <summary>The last_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -287,26 +287,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The linkedin_uid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUid? LinkedinUid { get; set; }
+        public UntypedNode? LinkedinUid { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUid LinkedinUid { get; set; }
+        public UntypedNode LinkedinUid { get; set; }
 #endif
         /// <summary>The linkedin_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUrl? LinkedinUrl { get; set; }
+        public UntypedNode? LinkedinUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUrl LinkedinUrl { get; set; }
+        public UntypedNode LinkedinUrl { get; set; }
 #endif
         /// <summary>The merged_crm_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemMergedCrmIds? MergedCrmIds { get; set; }
+        public UntypedNode? MergedCrmIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemMergedCrmIds MergedCrmIds { get; set; }
+        public UntypedNode MergedCrmIds { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -351,10 +351,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The person_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPersonId? PersonId { get; set; }
+        public UntypedNode? PersonId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPersonId PersonId { get; set; }
+        public UntypedNode PersonId { get; set; }
 #endif
         /// <summary>The phone_numbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -367,60 +367,60 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The photo_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPhotoUrl? PhotoUrl { get; set; }
+        public UntypedNode? PhotoUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPhotoUrl PhotoUrl { get; set; }
+        public UntypedNode PhotoUrl { get; set; }
 #endif
         /// <summary>The present_raw_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPresentRawAddress? PresentRawAddress { get; set; }
+        public UntypedNode? PresentRawAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPresentRawAddress PresentRawAddress { get; set; }
+        public UntypedNode PresentRawAddress { get; set; }
 #endif
         /// <summary>The queued_for_crm_push property</summary>
         public bool? QueuedForCrmPush { get; set; }
         /// <summary>The salesforce_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceAccountId? SalesforceAccountId { get; set; }
+        public UntypedNode? SalesforceAccountId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceAccountId SalesforceAccountId { get; set; }
+        public UntypedNode SalesforceAccountId { get; set; }
 #endif
         /// <summary>The salesforce_contact_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceContactId? SalesforceContactId { get; set; }
+        public UntypedNode? SalesforceContactId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceContactId SalesforceContactId { get; set; }
+        public UntypedNode SalesforceContactId { get; set; }
 #endif
         /// <summary>The salesforce_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceId? SalesforceId { get; set; }
+        public UntypedNode? SalesforceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceId SalesforceId { get; set; }
+        public UntypedNode SalesforceId { get; set; }
 #endif
         /// <summary>The salesforce_lead_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceLeadId? SalesforceLeadId { get; set; }
+        public UntypedNode? SalesforceLeadId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceLeadId SalesforceLeadId { get; set; }
+        public UntypedNode SalesforceLeadId { get; set; }
 #endif
         /// <summary>The sanitized_phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSanitizedPhone? SanitizedPhone { get; set; }
+        public UntypedNode? SanitizedPhone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSanitizedPhone SanitizedPhone { get; set; }
+        public UntypedNode SanitizedPhone { get; set; }
 #endif
         /// <summary>The show_intent property</summary>
         public bool? ShowIntent { get; set; }
@@ -443,10 +443,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The suggested_from_rule_engine_config_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSuggestedFromRuleEngineConfigId? SuggestedFromRuleEngineConfigId { get; set; }
+        public UntypedNode? SuggestedFromRuleEngineConfigId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSuggestedFromRuleEngineConfigId SuggestedFromRuleEngineConfigId { get; set; }
+        public UntypedNode SuggestedFromRuleEngineConfigId { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -459,10 +459,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The twitter_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTwitterUrl? TwitterUrl { get; set; }
+        public UntypedNode? TwitterUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTwitterUrl TwitterUrl { get; set; }
+        public UntypedNode TwitterUrl { get; set; }
 #endif
         /// <summary>The typed_custom_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -517,7 +517,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "account_phone_note", n => { AccountPhoneNote = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemAccountPhoneNote>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemAccountPhoneNote.CreateFromDiscriminatorValue); } },
+                { "account_phone_note", n => { AccountPhoneNote = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "contact_campaign_statuses", n => { ContactCampaignStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_campaign_statuses>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_campaign_statuses.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "contact_emails", n => { ContactEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_emails>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_emails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "contact_roles", n => { ContactRoles = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_roles>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_roles.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -525,21 +525,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "contact_stage_id", n => { ContactStageId = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
-                { "crm_id", n => { CrmId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmId.CreateFromDiscriminatorValue); } },
-                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmOwnerId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmOwnerId.CreateFromDiscriminatorValue); } },
-                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmRecordUrl>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmRecordUrl.CreateFromDiscriminatorValue); } },
-                { "custom_field_errors", n => { CustomFieldErrors = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCustomFieldErrors>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCustomFieldErrors.CreateFromDiscriminatorValue); } },
-                { "direct_dial_enrichment_failed_at", n => { DirectDialEnrichmentFailedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialEnrichmentFailedAt>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialEnrichmentFailedAt.CreateFromDiscriminatorValue); } },
-                { "direct_dial_status", n => { DirectDialStatus = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialStatus>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialStatus.CreateFromDiscriminatorValue); } },
+                { "crm_id", n => { CrmId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "custom_field_errors", n => { CustomFieldErrors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "direct_dial_enrichment_failed_at", n => { DirectDialEnrichmentFailedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "direct_dial_status", n => { DirectDialStatus = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "email_domain_catchall", n => { EmailDomainCatchall = n.GetBoolValue(); } },
                 { "email_from_customer", n => { EmailFromCustomer = n.GetBoolValue(); } },
-                { "email_needs_tickling", n => { EmailNeedsTickling = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailNeedsTickling>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailNeedsTickling.CreateFromDiscriminatorValue); } },
-                { "email_source", n => { EmailSource = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailSource>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailSource.CreateFromDiscriminatorValue); } },
+                { "email_needs_tickling", n => { EmailNeedsTickling = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "email_source", n => { EmailSource = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "email_status", n => { EmailStatus = n.GetStringValue(); } },
-                { "email_status_unavailable_reason", n => { EmailStatusUnavailableReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailStatusUnavailableReason>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailStatusUnavailableReason.CreateFromDiscriminatorValue); } },
+                { "email_status_unavailable_reason", n => { EmailStatusUnavailableReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "email_true_status", n => { EmailTrueStatus = n.GetStringValue(); } },
-                { "email_unsubscribed", n => { EmailUnsubscribed = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailUnsubscribed>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailUnsubscribed.CreateFromDiscriminatorValue); } },
+                { "email_unsubscribed", n => { EmailUnsubscribed = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "emailer_campaign_ids", n => { EmailerCampaignIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_emailer_campaign_ids>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_emailer_campaign_ids.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "existence_level", n => { ExistenceLevel = n.GetStringValue(); } },
                 { "extrapolated_email_confidence", n => { ExtrapolatedEmailConfidence = n.GetDoubleValue(); } },
@@ -547,38 +547,38 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "free_domain", n => { FreeDomain = n.GetBoolValue(); } },
                 { "has_email_arcgate_request", n => { HasEmailArcgateRequest = n.GetBoolValue(); } },
                 { "has_pending_email_arcgate_request", n => { HasPendingEmailArcgateRequest = n.GetBoolValue(); } },
-                { "headline", n => { Headline = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHeadline>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHeadline.CreateFromDiscriminatorValue); } },
-                { "hubspot_company_id", n => { HubspotCompanyId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotCompanyId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotCompanyId.CreateFromDiscriminatorValue); } },
-                { "hubspot_vid", n => { HubspotVid = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotVid>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotVid.CreateFromDiscriminatorValue); } },
+                { "headline", n => { Headline = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "hubspot_company_id", n => { HubspotCompanyId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "hubspot_vid", n => { HubspotVid = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_likely_to_engage", n => { IsLikelyToEngage = n.GetBoolValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_label_ids>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_label_ids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "last_activity_date", n => { LastActivityDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLastActivityDate>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLastActivityDate.CreateFromDiscriminatorValue); } },
+                { "last_activity_date", n => { LastActivityDate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
-                { "linkedin_uid", n => { LinkedinUid = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUid>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUid.CreateFromDiscriminatorValue); } },
-                { "linkedin_url", n => { LinkedinUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUrl>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUrl.CreateFromDiscriminatorValue); } },
-                { "merged_crm_ids", n => { MergedCrmIds = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemMergedCrmIds>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemMergedCrmIds.CreateFromDiscriminatorValue); } },
+                { "linkedin_uid", n => { LinkedinUid = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "linkedin_url", n => { LinkedinUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "merged_crm_ids", n => { MergedCrmIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "organization_name", n => { OrganizationName = n.GetStringValue(); } },
                 { "original_source", n => { OriginalSource = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetStringValue(); } },
-                { "person_id", n => { PersonId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPersonId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPersonId.CreateFromDiscriminatorValue); } },
+                { "person_id", n => { PersonId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "phone_numbers", n => { PhoneNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_phone_numbers>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_phone_numbers.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "photo_url", n => { PhotoUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPhotoUrl>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPhotoUrl.CreateFromDiscriminatorValue); } },
-                { "present_raw_address", n => { PresentRawAddress = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPresentRawAddress>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPresentRawAddress.CreateFromDiscriminatorValue); } },
+                { "photo_url", n => { PhotoUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "present_raw_address", n => { PresentRawAddress = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "queued_for_crm_push", n => { QueuedForCrmPush = n.GetBoolValue(); } },
-                { "salesforce_account_id", n => { SalesforceAccountId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceAccountId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceAccountId.CreateFromDiscriminatorValue); } },
-                { "salesforce_contact_id", n => { SalesforceContactId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceContactId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceContactId.CreateFromDiscriminatorValue); } },
-                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceId.CreateFromDiscriminatorValue); } },
-                { "salesforce_lead_id", n => { SalesforceLeadId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceLeadId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceLeadId.CreateFromDiscriminatorValue); } },
-                { "sanitized_phone", n => { SanitizedPhone = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSanitizedPhone>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSanitizedPhone.CreateFromDiscriminatorValue); } },
+                { "salesforce_account_id", n => { SalesforceAccountId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "salesforce_contact_id", n => { SalesforceContactId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "salesforce_lead_id", n => { SalesforceLeadId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sanitized_phone", n => { SanitizedPhone = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "show_intent", n => { ShowIntent = n.GetBoolValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "source_display_name", n => { SourceDisplayName = n.GetStringValue(); } },
-                { "suggested_from_rule_engine_config_id", n => { SuggestedFromRuleEngineConfigId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSuggestedFromRuleEngineConfigId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSuggestedFromRuleEngineConfigId.CreateFromDiscriminatorValue); } },
+                { "suggested_from_rule_engine_config_id", n => { SuggestedFromRuleEngineConfigId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "twitter_url", n => { TwitterUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTwitterUrl>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTwitterUrl.CreateFromDiscriminatorValue); } },
+                { "twitter_url", n => { TwitterUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "typed_custom_fields", n => { TypedCustomFields = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTypedCustomFields>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTypedCustomFields.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
                 { "updated_email_true_status", n => { UpdatedEmailTrueStatus = n.GetBoolValue(); } },
@@ -592,7 +592,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemAccountPhoneNote>("account_phone_note", AccountPhoneNote);
+            writer.WriteObjectValue<UntypedNode>("account_phone_note", AccountPhoneNote);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_campaign_statuses>("contact_campaign_statuses", ContactCampaignStatuses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_emails>("contact_emails", ContactEmails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_contact_roles>("contact_roles", ContactRoles);
@@ -600,60 +600,60 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("contact_stage_id", ContactStageId);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("creator_id", CreatorId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmId>("crm_id", CrmId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmOwnerId>("crm_owner_id", CrmOwnerId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCrmRecordUrl>("crm_record_url", CrmRecordUrl);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemCustomFieldErrors>("custom_field_errors", CustomFieldErrors);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialEnrichmentFailedAt>("direct_dial_enrichment_failed_at", DirectDialEnrichmentFailedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemDirectDialStatus>("direct_dial_status", DirectDialStatus);
+            writer.WriteObjectValue<UntypedNode>("crm_id", CrmId);
+            writer.WriteObjectValue<UntypedNode>("crm_owner_id", CrmOwnerId);
+            writer.WriteObjectValue<UntypedNode>("crm_record_url", CrmRecordUrl);
+            writer.WriteObjectValue<UntypedNode>("custom_field_errors", CustomFieldErrors);
+            writer.WriteObjectValue<UntypedNode>("direct_dial_enrichment_failed_at", DirectDialEnrichmentFailedAt);
+            writer.WriteObjectValue<UntypedNode>("direct_dial_status", DirectDialStatus);
             writer.WriteStringValue("email", Email);
             writer.WriteBoolValue("email_domain_catchall", EmailDomainCatchall);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_emailer_campaign_ids>("emailer_campaign_ids", EmailerCampaignIds);
             writer.WriteBoolValue("email_from_customer", EmailFromCustomer);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailNeedsTickling>("email_needs_tickling", EmailNeedsTickling);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailSource>("email_source", EmailSource);
+            writer.WriteObjectValue<UntypedNode>("email_needs_tickling", EmailNeedsTickling);
+            writer.WriteObjectValue<UntypedNode>("email_source", EmailSource);
             writer.WriteStringValue("email_status", EmailStatus);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailStatusUnavailableReason>("email_status_unavailable_reason", EmailStatusUnavailableReason);
+            writer.WriteObjectValue<UntypedNode>("email_status_unavailable_reason", EmailStatusUnavailableReason);
             writer.WriteStringValue("email_true_status", EmailTrueStatus);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemEmailUnsubscribed>("email_unsubscribed", EmailUnsubscribed);
+            writer.WriteObjectValue<UntypedNode>("email_unsubscribed", EmailUnsubscribed);
             writer.WriteStringValue("existence_level", ExistenceLevel);
             writer.WriteDoubleValue("extrapolated_email_confidence", ExtrapolatedEmailConfidence);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteBoolValue("free_domain", FreeDomain);
             writer.WriteBoolValue("has_email_arcgate_request", HasEmailArcgateRequest);
             writer.WriteBoolValue("has_pending_email_arcgate_request", HasPendingEmailArcgateRequest);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHeadline>("headline", Headline);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotCompanyId>("hubspot_company_id", HubspotCompanyId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemHubspotVid>("hubspot_vid", HubspotVid);
+            writer.WriteObjectValue<UntypedNode>("headline", Headline);
+            writer.WriteObjectValue<UntypedNode>("hubspot_company_id", HubspotCompanyId);
+            writer.WriteObjectValue<UntypedNode>("hubspot_vid", HubspotVid);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_likely_to_engage", IsLikelyToEngage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_label_ids>("label_ids", LabelIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLastActivityDate>("last_activity_date", LastActivityDate);
+            writer.WriteObjectValue<UntypedNode>("last_activity_date", LastActivityDate);
             writer.WriteStringValue("last_name", LastName);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUid>("linkedin_uid", LinkedinUid);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemLinkedinUrl>("linkedin_url", LinkedinUrl);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemMergedCrmIds>("merged_crm_ids", MergedCrmIds);
+            writer.WriteObjectValue<UntypedNode>("linkedin_uid", LinkedinUid);
+            writer.WriteObjectValue<UntypedNode>("linkedin_url", LinkedinUrl);
+            writer.WriteObjectValue<UntypedNode>("merged_crm_ids", MergedCrmIds);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteStringValue("organization_name", OrganizationName);
             writer.WriteStringValue("original_source", OriginalSource);
             writer.WriteStringValue("owner_id", OwnerId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPersonId>("person_id", PersonId);
+            writer.WriteObjectValue<UntypedNode>("person_id", PersonId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItem_phone_numbers>("phone_numbers", PhoneNumbers);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPhotoUrl>("photo_url", PhotoUrl);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemPresentRawAddress>("present_raw_address", PresentRawAddress);
+            writer.WriteObjectValue<UntypedNode>("photo_url", PhotoUrl);
+            writer.WriteObjectValue<UntypedNode>("present_raw_address", PresentRawAddress);
             writer.WriteBoolValue("queued_for_crm_push", QueuedForCrmPush);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceAccountId>("salesforce_account_id", SalesforceAccountId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceContactId>("salesforce_contact_id", SalesforceContactId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceId>("salesforce_id", SalesforceId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSalesforceLeadId>("salesforce_lead_id", SalesforceLeadId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSanitizedPhone>("sanitized_phone", SanitizedPhone);
+            writer.WriteObjectValue<UntypedNode>("salesforce_account_id", SalesforceAccountId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_contact_id", SalesforceContactId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_id", SalesforceId);
+            writer.WriteObjectValue<UntypedNode>("salesforce_lead_id", SalesforceLeadId);
+            writer.WriteObjectValue<UntypedNode>("sanitized_phone", SanitizedPhone);
             writer.WriteBoolValue("show_intent", ShowIntent);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("source_display_name", SourceDisplayName);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemSuggestedFromRuleEngineConfigId>("suggested_from_rule_engine_config_id", SuggestedFromRuleEngineConfigId);
+            writer.WriteObjectValue<UntypedNode>("suggested_from_rule_engine_config_id", SuggestedFromRuleEngineConfigId);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTwitterUrl>("twitter_url", TwitterUrl);
+            writer.WriteObjectValue<UntypedNode>("twitter_url", TwitterUrl);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStage200ResponseContactsItemTypedCustomFields>("typed_custom_fields", TypedCustomFields);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteBoolValue("updated_email_true_status", UpdatedEmailTrueStatus);

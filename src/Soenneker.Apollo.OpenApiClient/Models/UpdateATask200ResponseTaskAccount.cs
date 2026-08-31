@@ -24,10 +24,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccountAccountStageId? AccountStageId { get; set; }
+        public UntypedNode? AccountStageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccountAccountStageId AccountStageId { get; set; }
+        public UntypedNode AccountStageId { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -171,7 +171,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_queues", n => { AccountQueues = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccount_account_queues>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccount_account_queues.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "account_stage_id", n => { AccountStageId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccountAccountStageId>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccountAccountStageId.CreateFromDiscriminatorValue); } },
+                { "account_stage_id", n => { AccountStageId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "estimated_num_employees", n => { EstimatedNumEmployees = n.GetIntValue(); } },
@@ -197,7 +197,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccount_account_queues>("account_queues", AccountQueues);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateATask200ResponseTaskAccountAccountStageId>("account_stage_id", AccountStageId);
+            writer.WriteObjectValue<UntypedNode>("account_stage_id", AccountStageId);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("domain", Domain);
             writer.WriteIntValue("estimated_num_employees", EstimatedNumEmployees);

@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The additional_mapped_crm_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemAdditionalMappedCrmField? AdditionalMappedCrmField { get; set; }
+        public UntypedNode? AdditionalMappedCrmField { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemAdditionalMappedCrmField AdditionalMappedCrmField { get; set; }
+        public UntypedNode AdditionalMappedCrmField { get; set; }
 #endif
         /// <summary>The finder_view_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,18 +43,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The is_readonly_mapped_crm_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemIsReadonlyMappedCrmField? IsReadonlyMappedCrmField { get; set; }
+        public UntypedNode? IsReadonlyMappedCrmField { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemIsReadonlyMappedCrmField IsReadonlyMappedCrmField { get; set; }
+        public UntypedNode IsReadonlyMappedCrmField { get; set; }
 #endif
         /// <summary>The mapped_crm_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemMappedCrmField? MappedCrmField { get; set; }
+        public UntypedNode? MappedCrmField { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemMappedCrmField MappedCrmField { get; set; }
+        public UntypedNode MappedCrmField { get; set; }
 #endif
         /// <summary>The mirrored property</summary>
         public bool? Mirrored { get; set; }
@@ -93,26 +93,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The picklist_value_set_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemPicklistValueSetId? PicklistValueSetId { get; set; }
+        public UntypedNode? PicklistValueSetId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemPicklistValueSetId PicklistValueSetId { get; set; }
+        public UntypedNode PicklistValueSetId { get; set; }
 #endif
         /// <summary>The system_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemSystemName? SystemName { get; set; }
+        public UntypedNode? SystemName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemSystemName SystemName { get; set; }
+        public UntypedNode SystemName { get; set; }
 #endif
         /// <summary>The text_field_max_length property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemTextFieldMaxLength? TextFieldMaxLength { get; set; }
+        public UntypedNode? TextFieldMaxLength { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemTextFieldMaxLength TextFieldMaxLength { get; set; }
+        public UntypedNode TextFieldMaxLength { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -149,20 +149,20 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_mapped_crm_field", n => { AdditionalMappedCrmField = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemAdditionalMappedCrmField>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemAdditionalMappedCrmField.CreateFromDiscriminatorValue); } },
+                { "additional_mapped_crm_field", n => { AdditionalMappedCrmField = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "finder_view_ids", n => { FinderViewIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem_finder_view_ids>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem_finder_view_ids.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_local", n => { IsLocal = n.GetBoolValue(); } },
-                { "is_readonly_mapped_crm_field", n => { IsReadonlyMappedCrmField = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemIsReadonlyMappedCrmField>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemIsReadonlyMappedCrmField.CreateFromDiscriminatorValue); } },
-                { "mapped_crm_field", n => { MappedCrmField = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemMappedCrmField>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemMappedCrmField.CreateFromDiscriminatorValue); } },
+                { "is_readonly_mapped_crm_field", n => { IsReadonlyMappedCrmField = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "mapped_crm_field", n => { MappedCrmField = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "mirrored", n => { Mirrored = n.GetBoolValue(); } },
                 { "modality", n => { Modality = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "picklist_options", n => { PicklistOptions = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem_picklist_options>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem_picklist_options.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "picklist_options_last_synced_at", n => { PicklistOptionsLastSyncedAt = n.GetStringValue(); } },
-                { "picklist_value_set_id", n => { PicklistValueSetId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemPicklistValueSetId>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemPicklistValueSetId.CreateFromDiscriminatorValue); } },
-                { "system_name", n => { SystemName = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemSystemName>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemSystemName.CreateFromDiscriminatorValue); } },
-                { "text_field_max_length", n => { TextFieldMaxLength = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemTextFieldMaxLength>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemTextFieldMaxLength.CreateFromDiscriminatorValue); } },
+                { "picklist_value_set_id", n => { PicklistValueSetId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "system_name", n => { SystemName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "text_field_max_length", n => { TextFieldMaxLength = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -173,20 +173,20 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemAdditionalMappedCrmField>("additional_mapped_crm_field", AdditionalMappedCrmField);
+            writer.WriteObjectValue<UntypedNode>("additional_mapped_crm_field", AdditionalMappedCrmField);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem_finder_view_ids>("finder_view_ids", FinderViewIds);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_local", IsLocal);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemIsReadonlyMappedCrmField>("is_readonly_mapped_crm_field", IsReadonlyMappedCrmField);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemMappedCrmField>("mapped_crm_field", MappedCrmField);
+            writer.WriteObjectValue<UntypedNode>("is_readonly_mapped_crm_field", IsReadonlyMappedCrmField);
+            writer.WriteObjectValue<UntypedNode>("mapped_crm_field", MappedCrmField);
             writer.WriteBoolValue("mirrored", Mirrored);
             writer.WriteStringValue("modality", Modality);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem_picklist_options>("picklist_options", PicklistOptions);
             writer.WriteStringValue("picklist_options_last_synced_at", PicklistOptionsLastSyncedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemPicklistValueSetId>("picklist_value_set_id", PicklistValueSetId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemSystemName>("system_name", SystemName);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItemTextFieldMaxLength>("text_field_max_length", TextFieldMaxLength);
+            writer.WriteObjectValue<UntypedNode>("picklist_value_set_id", PicklistValueSetId);
+            writer.WriteObjectValue<UntypedNode>("system_name", SystemName);
+            writer.WriteObjectValue<UntypedNode>("text_field_max_length", TextFieldMaxLength);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

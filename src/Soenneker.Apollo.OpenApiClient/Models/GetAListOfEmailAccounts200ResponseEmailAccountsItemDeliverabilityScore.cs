@@ -35,10 +35,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The concurrency_locks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScoreConcurrencyLocks? ConcurrencyLocks { get; set; }
+        public UntypedNode? ConcurrencyLocks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScoreConcurrencyLocks ConcurrencyLocks { get; set; }
+        public UntypedNode ConcurrencyLocks { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,7 +217,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "avg_spam_block_rate", n => { AvgSpamBlockRate = n.GetIntValue(); } },
                 { "avg_unsubscribe_rate", n => { AvgUnsubscribeRate = n.GetIntValue(); } },
                 { "click_rate_score", n => { ClickRateScore = n.GetIntValue(); } },
-                { "concurrency_locks", n => { ConcurrencyLocks = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScoreConcurrencyLocks>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScoreConcurrencyLocks.CreateFromDiscriminatorValue); } },
+                { "concurrency_locks", n => { ConcurrencyLocks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "daily_email_sent_score", n => { DailyEmailSentScore = n.GetIntValue(); } },
                 { "date_from", n => { DateFrom = n.GetStringValue(); } },
@@ -264,7 +264,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("avg_spam_block_rate", AvgSpamBlockRate);
             writer.WriteIntValue("avg_unsubscribe_rate", AvgUnsubscribeRate);
             writer.WriteIntValue("click_rate_score", ClickRateScore);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScoreConcurrencyLocks>("concurrency_locks", ConcurrencyLocks);
+            writer.WriteObjectValue<UntypedNode>("concurrency_locks", ConcurrencyLocks);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteIntValue("daily_email_sent_score", DailyEmailSentScore);
             writer.WriteStringValue("date_from", DateFrom);

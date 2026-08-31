@@ -116,7 +116,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
             [QueryParameter("linkedin_url")]
             public string LinkedinUrl { get; set; }
 #endif
-            /// <summary>The name of the company that you want to enrich. Provide this with `domain`, `linkedin_url`, or `website` to improve match accuracy. A company name alone is not supported. &lt;br&gt;&lt;br&gt;Example: `apollo`</summary>
+            /// <summary>The name of the company that you want to enrich. Provide this with `domain`, `linkedin_url`, or `website` to improve match accuracy. &lt;br&gt;&lt;br&gt;Example: `apollo`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]

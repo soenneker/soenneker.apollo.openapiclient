@@ -25,18 +25,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The ai_variables_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAiVariablesStatus? AiVariablesStatus { get; set; }
+        public UntypedNode? AiVariablesStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAiVariablesStatus AiVariablesStatus { get; set; }
+        public UntypedNode AiVariablesStatus { get; set; }
 #endif
         /// <summary>The async_sending property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAsyncSending? AsyncSending { get; set; }
+        public UntypedNode? AsyncSending { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAsyncSending AsyncSending { get; set; }
+        public UntypedNode AsyncSending { get; set; }
 #endif
         /// <summary>The attachment_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,10 +75,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The bounce property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageBounce? Bounce { get; set; }
+        public UntypedNode? Bounce { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageBounce Bounce { get; set; }
+        public UntypedNode Bounce { get; set; }
 #endif
         /// <summary>The cc_emails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,10 +93,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The completed_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCompletedAt? CompletedAt { get; set; }
+        public UntypedNode? CompletedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCompletedAt CompletedAt { get; set; }
+        public UntypedNode CompletedAt { get; set; }
 #endif
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,10 +117,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The conversation_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageConversationId? ConversationId { get; set; }
+        public UntypedNode? ConversationId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageConversationId ConversationId { get; set; }
+        public UntypedNode ConversationId { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,42 +133,42 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The crm_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCrmId? CrmId { get; set; }
+        public UntypedNode? CrmId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCrmId CrmId { get; set; }
+        public UntypedNode CrmId { get; set; }
 #endif
         /// <summary>The demoed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDemoed? Demoed { get; set; }
+        public UntypedNode? Demoed { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDemoed Demoed { get; set; }
+        public UntypedNode Demoed { get; set; }
 #endif
         /// <summary>The due_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAt? DueAt { get; set; }
+        public UntypedNode? DueAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAt DueAt { get; set; }
+        public UntypedNode DueAt { get; set; }
 #endif
         /// <summary>The due_at_manually_changed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtManuallyChanged? DueAtManuallyChanged { get; set; }
+        public UntypedNode? DueAtManuallyChanged { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtManuallyChanged DueAtManuallyChanged { get; set; }
+        public UntypedNode DueAtManuallyChanged { get; set; }
 #endif
         /// <summary>The due_at_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtSource? DueAtSource { get; set; }
+        public UntypedNode? DueAtSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtSource DueAtSource { get; set; }
+        public UntypedNode DueAtSource { get; set; }
 #endif
         /// <summary>The email_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,44 +181,44 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The emailer_campaign_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerCampaignId? EmailerCampaignId { get; set; }
+        public UntypedNode? EmailerCampaignId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerCampaignId EmailerCampaignId { get; set; }
+        public UntypedNode EmailerCampaignId { get; set; }
 #endif
         /// <summary>The emailer_step_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerStepId? EmailerStepId { get; set; }
+        public UntypedNode? EmailerStepId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerStepId EmailerStepId { get; set; }
+        public UntypedNode EmailerStepId { get; set; }
 #endif
         /// <summary>The emailer_touch_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerTouchId? EmailerTouchId { get; set; }
+        public UntypedNode? EmailerTouchId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerTouchId EmailerTouchId { get; set; }
+        public UntypedNode EmailerTouchId { get; set; }
 #endif
         /// <summary>The enable_tracking property</summary>
         public bool? EnableTracking { get; set; }
         /// <summary>The failed_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailedAt? FailedAt { get; set; }
+        public UntypedNode? FailedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailedAt FailedAt { get; set; }
+        public UntypedNode FailedAt { get; set; }
 #endif
         /// <summary>The failure_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailureReason? FailureReason { get; set; }
+        public UntypedNode? FailureReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailureReason FailureReason { get; set; }
+        public UntypedNode FailureReason { get; set; }
 #endif
         /// <summary>The from_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -231,10 +231,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The from_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFromName? FromName { get; set; }
+        public UntypedNode? FromName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFromName FromName { get; set; }
+        public UntypedNode FromName { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -247,44 +247,44 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The needs_dynamic_assemble property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNeedsDynamicAssemble? NeedsDynamicAssemble { get; set; }
+        public UntypedNode? NeedsDynamicAssemble { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNeedsDynamicAssemble NeedsDynamicAssemble { get; set; }
+        public UntypedNode NeedsDynamicAssemble { get; set; }
 #endif
         /// <summary>The not_sent_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNotSentReason? NotSentReason { get; set; }
+        public UntypedNode? NotSentReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNotSentReason NotSentReason { get; set; }
+        public UntypedNode NotSentReason { get; set; }
 #endif
         /// <summary>The open_tracking_enabled property</summary>
         public bool? OpenTrackingEnabled { get; set; }
         /// <summary>The personalized_opener property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessagePersonalizedOpener? PersonalizedOpener { get; set; }
+        public UntypedNode? PersonalizedOpener { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessagePersonalizedOpener PersonalizedOpener { get; set; }
+        public UntypedNode PersonalizedOpener { get; set; }
 #endif
         /// <summary>The provider_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderMessageId? ProviderMessageId { get; set; }
+        public UntypedNode? ProviderMessageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderMessageId ProviderMessageId { get; set; }
+        public UntypedNode ProviderMessageId { get; set; }
 #endif
         /// <summary>The provider_thread_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderThreadId? ProviderThreadId { get; set; }
+        public UntypedNode? ProviderThreadId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderThreadId ProviderThreadId { get; set; }
+        public UntypedNode ProviderThreadId { get; set; }
 #endif
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -297,42 +297,42 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The replied property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplied? Replied { get; set; }
+        public UntypedNode? Replied { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplied Replied { get; set; }
+        public UntypedNode Replied { get; set; }
 #endif
         /// <summary>The reply_class property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplyClass? ReplyClass { get; set; }
+        public UntypedNode? ReplyClass { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplyClass ReplyClass { get; set; }
+        public UntypedNode ReplyClass { get; set; }
 #endif
         /// <summary>The schedule_delayed_limit_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedLimitReason? ScheduleDelayedLimitReason { get; set; }
+        public UntypedNode? ScheduleDelayedLimitReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedLimitReason ScheduleDelayedLimitReason { get; set; }
+        public UntypedNode ScheduleDelayedLimitReason { get; set; }
 #endif
         /// <summary>The schedule_delayed_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReason? ScheduleDelayedReason { get; set; }
+        public UntypedNode? ScheduleDelayedReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReason ScheduleDelayedReason { get; set; }
+        public UntypedNode ScheduleDelayedReason { get; set; }
 #endif
         /// <summary>The schedule_delayed_reason_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReasonDetails? ScheduleDelayedReasonDetails { get; set; }
+        public UntypedNode? ScheduleDelayedReasonDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReasonDetails ScheduleDelayedReasonDetails { get; set; }
+        public UntypedNode ScheduleDelayedReasonDetails { get; set; }
 #endif
         /// <summary>The send_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -353,18 +353,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The sensitive_info_redacted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSensitiveInfoRedacted? SensitiveInfoRedacted { get; set; }
+        public UntypedNode? SensitiveInfoRedacted { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSensitiveInfoRedacted SensitiveInfoRedacted { get; set; }
+        public UntypedNode SensitiveInfoRedacted { get; set; }
 #endif
         /// <summary>The spam_blocked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSpamBlocked? SpamBlocked { get; set; }
+        public UntypedNode? SpamBlocked { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSpamBlocked SpamBlocked { get; set; }
+        public UntypedNode SpamBlocked { get; set; }
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -385,10 +385,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The time_zone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTimeZone? TimeZone { get; set; }
+        public UntypedNode? TimeZone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTimeZone TimeZone { get; set; }
+        public UntypedNode TimeZone { get; set; }
 #endif
         /// <summary>The to_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -409,10 +409,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The tracking_disabled_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTrackingDisabledReason? TrackingDisabledReason { get; set; }
+        public UntypedNode? TrackingDisabledReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTrackingDisabledReason TrackingDisabledReason { get; set; }
+        public UntypedNode TrackingDisabledReason { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -456,58 +456,58 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "ai_variables_status", n => { AiVariablesStatus = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAiVariablesStatus>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAiVariablesStatus.CreateFromDiscriminatorValue); } },
-                { "async_sending", n => { AsyncSending = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAsyncSending>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAsyncSending.CreateFromDiscriminatorValue); } },
+                { "ai_variables_status", n => { AiVariablesStatus = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "async_sending", n => { AsyncSending = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "attachment_ids", n => { AttachmentIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_attachment_ids>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_attachment_ids.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bcc_emails", n => { BccEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_bcc_emails>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_bcc_emails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "body_html", n => { BodyHtml = n.GetStringValue(); } },
                 { "body_html_loaded", n => { BodyHtmlLoaded = n.GetBoolValue(); } },
                 { "body_text", n => { BodyText = n.GetStringValue(); } },
-                { "bounce", n => { Bounce = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageBounce>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageBounce.CreateFromDiscriminatorValue); } },
+                { "bounce", n => { Bounce = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "cc_emails", n => { CcEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_cc_emails>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_cc_emails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "click_tracking_enabled", n => { ClickTrackingEnabled = n.GetBoolValue(); } },
-                { "completed_at", n => { CompletedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCompletedAt>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCompletedAt.CreateFromDiscriminatorValue); } },
+                { "completed_at", n => { CompletedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "contact", n => { Contact = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageContact>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageContact.CreateFromDiscriminatorValue); } },
                 { "contact_id", n => { ContactId = n.GetStringValue(); } },
-                { "conversation_id", n => { ConversationId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageConversationId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageConversationId.CreateFromDiscriminatorValue); } },
+                { "conversation_id", n => { ConversationId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "crm_id", n => { CrmId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCrmId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCrmId.CreateFromDiscriminatorValue); } },
-                { "demoed", n => { Demoed = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDemoed>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDemoed.CreateFromDiscriminatorValue); } },
-                { "due_at", n => { DueAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAt>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAt.CreateFromDiscriminatorValue); } },
-                { "due_at_manually_changed", n => { DueAtManuallyChanged = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtManuallyChanged>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtManuallyChanged.CreateFromDiscriminatorValue); } },
-                { "due_at_source", n => { DueAtSource = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtSource>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtSource.CreateFromDiscriminatorValue); } },
+                { "crm_id", n => { CrmId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "demoed", n => { Demoed = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "due_at", n => { DueAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "due_at_manually_changed", n => { DueAtManuallyChanged = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "due_at_source", n => { DueAtSource = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "email_account_id", n => { EmailAccountId = n.GetStringValue(); } },
-                { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerCampaignId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerCampaignId.CreateFromDiscriminatorValue); } },
-                { "emailer_step_id", n => { EmailerStepId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerStepId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerStepId.CreateFromDiscriminatorValue); } },
-                { "emailer_touch_id", n => { EmailerTouchId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerTouchId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerTouchId.CreateFromDiscriminatorValue); } },
+                { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "emailer_step_id", n => { EmailerStepId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "emailer_touch_id", n => { EmailerTouchId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "enable_tracking", n => { EnableTracking = n.GetBoolValue(); } },
-                { "failed_at", n => { FailedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailedAt>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailedAt.CreateFromDiscriminatorValue); } },
-                { "failure_reason", n => { FailureReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailureReason>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailureReason.CreateFromDiscriminatorValue); } },
+                { "failed_at", n => { FailedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "failure_reason", n => { FailureReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "from_email", n => { FromEmail = n.GetStringValue(); } },
-                { "from_name", n => { FromName = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFromName>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFromName.CreateFromDiscriminatorValue); } },
+                { "from_name", n => { FromName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "needs_dynamic_assemble", n => { NeedsDynamicAssemble = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNeedsDynamicAssemble>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNeedsDynamicAssemble.CreateFromDiscriminatorValue); } },
-                { "not_sent_reason", n => { NotSentReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNotSentReason>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNotSentReason.CreateFromDiscriminatorValue); } },
+                { "needs_dynamic_assemble", n => { NeedsDynamicAssemble = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "not_sent_reason", n => { NotSentReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "open_tracking_enabled", n => { OpenTrackingEnabled = n.GetBoolValue(); } },
-                { "personalized_opener", n => { PersonalizedOpener = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessagePersonalizedOpener>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessagePersonalizedOpener.CreateFromDiscriminatorValue); } },
-                { "provider_message_id", n => { ProviderMessageId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderMessageId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderMessageId.CreateFromDiscriminatorValue); } },
-                { "provider_thread_id", n => { ProviderThreadId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderThreadId>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderThreadId.CreateFromDiscriminatorValue); } },
+                { "personalized_opener", n => { PersonalizedOpener = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "provider_message_id", n => { ProviderMessageId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "provider_thread_id", n => { ProviderThreadId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageRecipientsItem>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageRecipientsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "replied", n => { Replied = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplied>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplied.CreateFromDiscriminatorValue); } },
-                { "reply_class", n => { ReplyClass = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplyClass>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplyClass.CreateFromDiscriminatorValue); } },
-                { "schedule_delayed_limit_reason", n => { ScheduleDelayedLimitReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedLimitReason>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedLimitReason.CreateFromDiscriminatorValue); } },
-                { "schedule_delayed_reason", n => { ScheduleDelayedReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReason>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReason.CreateFromDiscriminatorValue); } },
-                { "schedule_delayed_reason_details", n => { ScheduleDelayedReasonDetails = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReasonDetails>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReasonDetails.CreateFromDiscriminatorValue); } },
+                { "replied", n => { Replied = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "reply_class", n => { ReplyClass = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "schedule_delayed_limit_reason", n => { ScheduleDelayedLimitReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "schedule_delayed_reason", n => { ScheduleDelayedReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "schedule_delayed_reason_details", n => { ScheduleDelayedReasonDetails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "send_from", n => { SendFrom = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSendFrom>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSendFrom.CreateFromDiscriminatorValue); } },
                 { "send_from_info", n => { SendFromInfo = n.GetStringValue(); } },
-                { "sensitive_info_redacted", n => { SensitiveInfoRedacted = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSensitiveInfoRedacted>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSensitiveInfoRedacted.CreateFromDiscriminatorValue); } },
-                { "spam_blocked", n => { SpamBlocked = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSpamBlocked>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSpamBlocked.CreateFromDiscriminatorValue); } },
+                { "sensitive_info_redacted", n => { SensitiveInfoRedacted = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "spam_blocked", n => { SpamBlocked = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
-                { "time_zone", n => { TimeZone = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTimeZone>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTimeZone.CreateFromDiscriminatorValue); } },
+                { "time_zone", n => { TimeZone = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "to_email", n => { ToEmail = n.GetStringValue(); } },
                 { "to_name", n => { ToName = n.GetStringValue(); } },
-                { "tracking_disabled_reason", n => { TrackingDisabledReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTrackingDisabledReason>(global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTrackingDisabledReason.CreateFromDiscriminatorValue); } },
+                { "tracking_disabled_reason", n => { TrackingDisabledReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
@@ -520,58 +520,58 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAiVariablesStatus>("ai_variables_status", AiVariablesStatus);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageAsyncSending>("async_sending", AsyncSending);
+            writer.WriteObjectValue<UntypedNode>("ai_variables_status", AiVariablesStatus);
+            writer.WriteObjectValue<UntypedNode>("async_sending", AsyncSending);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_attachment_ids>("attachment_ids", AttachmentIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_bcc_emails>("bcc_emails", BccEmails);
             writer.WriteStringValue("body_html", BodyHtml);
             writer.WriteBoolValue("body_html_loaded", BodyHtmlLoaded);
             writer.WriteStringValue("body_text", BodyText);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageBounce>("bounce", Bounce);
+            writer.WriteObjectValue<UntypedNode>("bounce", Bounce);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessage_cc_emails>("cc_emails", CcEmails);
             writer.WriteBoolValue("click_tracking_enabled", ClickTrackingEnabled);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCompletedAt>("completed_at", CompletedAt);
+            writer.WriteObjectValue<UntypedNode>("completed_at", CompletedAt);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageContact>("contact", Contact);
             writer.WriteStringValue("contact_id", ContactId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageConversationId>("conversation_id", ConversationId);
+            writer.WriteObjectValue<UntypedNode>("conversation_id", ConversationId);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageCrmId>("crm_id", CrmId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDemoed>("demoed", Demoed);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAt>("due_at", DueAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtManuallyChanged>("due_at_manually_changed", DueAtManuallyChanged);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageDueAtSource>("due_at_source", DueAtSource);
+            writer.WriteObjectValue<UntypedNode>("crm_id", CrmId);
+            writer.WriteObjectValue<UntypedNode>("demoed", Demoed);
+            writer.WriteObjectValue<UntypedNode>("due_at", DueAt);
+            writer.WriteObjectValue<UntypedNode>("due_at_manually_changed", DueAtManuallyChanged);
+            writer.WriteObjectValue<UntypedNode>("due_at_source", DueAtSource);
             writer.WriteStringValue("email_account_id", EmailAccountId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerCampaignId>("emailer_campaign_id", EmailerCampaignId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerStepId>("emailer_step_id", EmailerStepId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageEmailerTouchId>("emailer_touch_id", EmailerTouchId);
+            writer.WriteObjectValue<UntypedNode>("emailer_campaign_id", EmailerCampaignId);
+            writer.WriteObjectValue<UntypedNode>("emailer_step_id", EmailerStepId);
+            writer.WriteObjectValue<UntypedNode>("emailer_touch_id", EmailerTouchId);
             writer.WriteBoolValue("enable_tracking", EnableTracking);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailedAt>("failed_at", FailedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFailureReason>("failure_reason", FailureReason);
+            writer.WriteObjectValue<UntypedNode>("failed_at", FailedAt);
+            writer.WriteObjectValue<UntypedNode>("failure_reason", FailureReason);
             writer.WriteStringValue("from_email", FromEmail);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageFromName>("from_name", FromName);
+            writer.WriteObjectValue<UntypedNode>("from_name", FromName);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNeedsDynamicAssemble>("needs_dynamic_assemble", NeedsDynamicAssemble);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageNotSentReason>("not_sent_reason", NotSentReason);
+            writer.WriteObjectValue<UntypedNode>("needs_dynamic_assemble", NeedsDynamicAssemble);
+            writer.WriteObjectValue<UntypedNode>("not_sent_reason", NotSentReason);
             writer.WriteBoolValue("open_tracking_enabled", OpenTrackingEnabled);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessagePersonalizedOpener>("personalized_opener", PersonalizedOpener);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderMessageId>("provider_message_id", ProviderMessageId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageProviderThreadId>("provider_thread_id", ProviderThreadId);
+            writer.WriteObjectValue<UntypedNode>("personalized_opener", PersonalizedOpener);
+            writer.WriteObjectValue<UntypedNode>("provider_message_id", ProviderMessageId);
+            writer.WriteObjectValue<UntypedNode>("provider_thread_id", ProviderThreadId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageRecipientsItem>("recipients", Recipients);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplied>("replied", Replied);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageReplyClass>("reply_class", ReplyClass);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedLimitReason>("schedule_delayed_limit_reason", ScheduleDelayedLimitReason);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReason>("schedule_delayed_reason", ScheduleDelayedReason);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageScheduleDelayedReasonDetails>("schedule_delayed_reason_details", ScheduleDelayedReasonDetails);
+            writer.WriteObjectValue<UntypedNode>("replied", Replied);
+            writer.WriteObjectValue<UntypedNode>("reply_class", ReplyClass);
+            writer.WriteObjectValue<UntypedNode>("schedule_delayed_limit_reason", ScheduleDelayedLimitReason);
+            writer.WriteObjectValue<UntypedNode>("schedule_delayed_reason", ScheduleDelayedReason);
+            writer.WriteObjectValue<UntypedNode>("schedule_delayed_reason_details", ScheduleDelayedReasonDetails);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSendFrom>("send_from", SendFrom);
             writer.WriteStringValue("send_from_info", SendFromInfo);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSensitiveInfoRedacted>("sensitive_info_redacted", SensitiveInfoRedacted);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageSpamBlocked>("spam_blocked", SpamBlocked);
+            writer.WriteObjectValue<UntypedNode>("sensitive_info_redacted", SensitiveInfoRedacted);
+            writer.WriteObjectValue<UntypedNode>("spam_blocked", SpamBlocked);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("subject", Subject);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTimeZone>("time_zone", TimeZone);
+            writer.WriteObjectValue<UntypedNode>("time_zone", TimeZone);
             writer.WriteStringValue("to_email", ToEmail);
             writer.WriteStringValue("to_name", ToName);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200ResponseEmailerMessageTrackingDisabledReason>("tracking_disabled_reason", TrackingDisabledReason);
+            writer.WriteObjectValue<UntypedNode>("tracking_disabled_reason", TrackingDisabledReason);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

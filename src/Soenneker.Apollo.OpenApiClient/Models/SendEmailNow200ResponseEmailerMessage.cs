@@ -71,10 +71,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The completed_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageCompletedAt? CompletedAt { get; set; }
+        public UntypedNode? CompletedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageCompletedAt CompletedAt { get; set; }
+        public UntypedNode CompletedAt { get; set; }
 #endif
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,10 +129,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The emailer_campaign_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageEmailerCampaignId? EmailerCampaignId { get; set; }
+        public UntypedNode? EmailerCampaignId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageEmailerCampaignId EmailerCampaignId { get; set; }
+        public UntypedNode EmailerCampaignId { get; set; }
 #endif
         /// <summary>The enable_tracking property</summary>
         public bool? EnableTracking { get; set; }
@@ -147,10 +147,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The from_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageFromName? FromName { get; set; }
+        public UntypedNode? FromName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageFromName FromName { get; set; }
+        public UntypedNode FromName { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -268,7 +268,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "body_text", n => { BodyText = n.GetStringValue(); } },
                 { "cc_emails", n => { CcEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessage_cc_emails>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessage_cc_emails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "click_tracking_enabled", n => { ClickTrackingEnabled = n.GetBoolValue(); } },
-                { "completed_at", n => { CompletedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageCompletedAt>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageCompletedAt.CreateFromDiscriminatorValue); } },
+                { "completed_at", n => { CompletedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "contact", n => { Contact = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageContact>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageContact.CreateFromDiscriminatorValue); } },
                 { "contact_id", n => { ContactId = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
@@ -276,10 +276,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "due_at_manually_changed", n => { DueAtManuallyChanged = n.GetBoolValue(); } },
                 { "due_at_source", n => { DueAtSource = n.GetStringValue(); } },
                 { "email_account_id", n => { EmailAccountId = n.GetStringValue(); } },
-                { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageEmailerCampaignId>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageEmailerCampaignId.CreateFromDiscriminatorValue); } },
+                { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "enable_tracking", n => { EnableTracking = n.GetBoolValue(); } },
                 { "from_email", n => { FromEmail = n.GetStringValue(); } },
-                { "from_name", n => { FromName = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageFromName>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageFromName.CreateFromDiscriminatorValue); } },
+                { "from_name", n => { FromName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "open_tracking_enabled", n => { OpenTrackingEnabled = n.GetBoolValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItem>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -309,7 +309,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("body_text", BodyText);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessage_cc_emails>("cc_emails", CcEmails);
             writer.WriteBoolValue("click_tracking_enabled", ClickTrackingEnabled);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageCompletedAt>("completed_at", CompletedAt);
+            writer.WriteObjectValue<UntypedNode>("completed_at", CompletedAt);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageContact>("contact", Contact);
             writer.WriteStringValue("contact_id", ContactId);
             writer.WriteStringValue("created_at", CreatedAt);
@@ -317,10 +317,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("due_at_manually_changed", DueAtManuallyChanged);
             writer.WriteStringValue("due_at_source", DueAtSource);
             writer.WriteStringValue("email_account_id", EmailAccountId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageEmailerCampaignId>("emailer_campaign_id", EmailerCampaignId);
+            writer.WriteObjectValue<UntypedNode>("emailer_campaign_id", EmailerCampaignId);
             writer.WriteBoolValue("enable_tracking", EnableTracking);
             writer.WriteStringValue("from_email", FromEmail);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageFromName>("from_name", FromName);
+            writer.WriteObjectValue<UntypedNode>("from_name", FromName);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("open_tracking_enabled", OpenTrackingEnabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItem>("recipients", Recipients);

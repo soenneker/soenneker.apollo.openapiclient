@@ -133,7 +133,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             /// <summary>The duration of the call in seconds. Do not enter minutes. &lt;br&gt;&lt;br&gt;Examples: `120`; `205`</summary>
             [QueryParameter("duration")]
             public int? Duration { get; set; }
-            /// <summary>The time when the call ended. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a end time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifiying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-05-15T08:10:30Z`; `2025-05-25T10:15:30+05:00Z`</summary>
+            /// <summary>The time when the call ended. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add an end time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-05-15T08:10:30Z`; `2025-05-25T10:15:30+05:00Z`</summary>
             [QueryParameter("end_time")]
             public DateTimeOffset? EndTime { get; set; }
             /// <summary>The phone number that dialed you. &lt;br&gt;&lt;br&gt;Example: `5555550164`</summary>
@@ -179,7 +179,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
             [QueryParameter("phone_call_purpose_id")]
             public string PhoneCallPurposeId { get; set; }
 #endif
-            /// <summary>The time when the call started. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a start time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifiying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`; `2025-03-25T10:15:30+05:00Z`</summary>
+            /// <summary>The time when the call started. &lt;br&gt;&lt;br&gt;Your entry should adhere to the ISO 8601 date-time format. Apollo uses Greenwich Mean Time (GMT) by default. If you do not account for time zone differences, you could add a start time that falls on a different day than you intended. &lt;br&gt;&lt;br&gt;The value you enter can either adhere to GMT, or you can adjust the time manually by specifying in hours and minutes how much you want to offset GMT. &lt;br&gt;&lt;br&gt;Example: `2025-02-15T08:10:30Z`; `2025-03-25T10:15:30+05:00Z`</summary>
             [QueryParameter("start_time")]
             public DateTimeOffset? StartTime { get; set; }
             /// <summary>The status of the phone call. Possible values include: &lt;ul&gt; &lt;li&gt;`queued`&lt;/li&gt; &lt;li&gt;`ringing`&lt;/li&gt; &lt;li&gt;`in-progress`&lt;/li&gt; &lt;li&gt;`completed`&lt;/li&gt; &lt;li&gt;`no_answer`&lt;/li&gt; &lt;li&gt;`failed`&lt;/li&gt; &lt;li&gt;`busy`&lt;/li&gt;&lt;/ul&gt;</summary>

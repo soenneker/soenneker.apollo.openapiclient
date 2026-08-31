@@ -165,7 +165,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             /// <summary>The earliest date when jobs were posted by the person&apos;s current employer. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmin%5D")]
             public Date? OrganizationJobPostedAtRangemin { get; set; }
-            /// <summary>The location of the company headquarters for a person&apos;s current employer. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, people that work for the Boston-based company will not appear in your results, even if they match other \parameters. &lt;br&gt;&lt;br&gt;To find people based on their personal location, use the `person_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`</summary>
+            /// <summary>The location of the company headquarters for a person&apos;s current employer. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, people that work for the Boston-based company will not appear in your results, even if they match other parameters. &lt;br&gt;&lt;br&gt;To find people based on their personal location, use the `person_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_locations%5B%5D")]
@@ -185,10 +185,10 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("organization_num_employees_ranges%5B%5D")]
             public string[] OrganizationNumEmployeesRanges { get; set; }
 #endif
-            /// <summary>The maximum number of job postings active at the person&apos;s current empployer. Use this parameter in combination with `organization_num_jobs_range[min]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
+            /// <summary>The maximum number of job postings active at the person&apos;s current employer. Use this parameter in combination with `organization_num_jobs_range[min]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmax%5D")]
             public int? OrganizationNumJobsRangemax { get; set; }
-            /// <summary>The minimum number of job postings active at the person&apos;s current empployer. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
+            /// <summary>The minimum number of job postings active at the person&apos;s current employer. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmin%5D")]
             public int? OrganizationNumJobsRangemin { get; set; }
             /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>

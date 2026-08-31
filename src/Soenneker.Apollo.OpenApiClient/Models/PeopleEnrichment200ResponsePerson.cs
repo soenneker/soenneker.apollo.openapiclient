@@ -83,10 +83,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The facebook_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonFacebookUrl? FacebookUrl { get; set; }
+        public UntypedNode? FacebookUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonFacebookUrl FacebookUrl { get; set; }
+        public UntypedNode FacebookUrl { get; set; }
 #endif
         /// <summary>The first_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,10 +107,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The github_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonGithubUrl? GithubUrl { get; set; }
+        public UntypedNode? GithubUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonGithubUrl GithubUrl { get; set; }
+        public UntypedNode GithubUrl { get; set; }
 #endif
         /// <summary>The headline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,10 +217,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The twitter_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonTwitterUrl? TwitterUrl { get; set; }
+        public UntypedNode? TwitterUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonTwitterUrl TwitterUrl { get; set; }
+        public UntypedNode TwitterUrl { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson"/> and sets the default values.
@@ -259,10 +259,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "email_status", n => { EmailStatus = n.GetStringValue(); } },
                 { "employment_history", n => { EmploymentHistory = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonEmploymentHistoryItem>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonEmploymentHistoryItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "extrapolated_email_confidence", n => { ExtrapolatedEmailConfidence = n.GetDoubleValue(); } },
-                { "facebook_url", n => { FacebookUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonFacebookUrl>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonFacebookUrl.CreateFromDiscriminatorValue); } },
+                { "facebook_url", n => { FacebookUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "functions", n => { Functions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "github_url", n => { GithubUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonGithubUrl>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonGithubUrl.CreateFromDiscriminatorValue); } },
+                { "github_url", n => { GithubUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "headline", n => { Headline = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_likely_to_engage", n => { IsLikelyToEngage = n.GetBoolValue(); } },
@@ -278,7 +278,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "state", n => { State = n.GetStringValue(); } },
                 { "subdepartments", n => { Subdepartments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "twitter_url", n => { TwitterUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonTwitterUrl>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonTwitterUrl.CreateFromDiscriminatorValue); } },
+                { "twitter_url", n => { TwitterUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -297,10 +297,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("email_status", EmailStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonEmploymentHistoryItem>("employment_history", EmploymentHistory);
             writer.WriteDoubleValue("extrapolated_email_confidence", ExtrapolatedEmailConfidence);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonFacebookUrl>("facebook_url", FacebookUrl);
+            writer.WriteObjectValue<UntypedNode>("facebook_url", FacebookUrl);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteCollectionOfPrimitiveValues<string>("functions", Functions);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonGithubUrl>("github_url", GithubUrl);
+            writer.WriteObjectValue<UntypedNode>("github_url", GithubUrl);
             writer.WriteStringValue("headline", Headline);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_likely_to_engage", IsLikelyToEngage);
@@ -316,7 +316,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("state", State);
             writer.WriteCollectionOfPrimitiveValues<string>("subdepartments", Subdepartments);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonTwitterUrl>("twitter_url", TwitterUrl);
+            writer.WriteObjectValue<UntypedNode>("twitter_url", TwitterUrl);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

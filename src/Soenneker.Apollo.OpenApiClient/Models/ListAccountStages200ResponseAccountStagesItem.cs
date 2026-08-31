@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The category property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemCategory? Category { get; set; }
+        public UntypedNode? Category { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemCategory Category { get; set; }
+        public UntypedNode Category { get; set; }
 #endif
         /// <summary>The default_exclude_for_leadgen property</summary>
         public bool? DefaultExcludeForLeadgen { get; set; }
@@ -45,10 +45,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The is_meeting_set property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemIsMeetingSet? IsMeetingSet { get; set; }
+        public UntypedNode? IsMeetingSet { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemIsMeetingSet IsMeetingSet { get; set; }
+        public UntypedNode IsMeetingSet { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,12 +93,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemCategory>(global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemCategory.CreateFromDiscriminatorValue); } },
+                { "category", n => { Category = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "default_exclude_for_leadgen", n => { DefaultExcludeForLeadgen = n.GetBoolValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "display_order", n => { DisplayOrder = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_meeting_set", n => { IsMeetingSet = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemIsMeetingSet>(global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemIsMeetingSet.CreateFromDiscriminatorValue); } },
+                { "is_meeting_set", n => { IsMeetingSet = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
             };
@@ -110,12 +110,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemCategory>("category", Category);
+            writer.WriteObjectValue<UntypedNode>("category", Category);
             writer.WriteBoolValue("default_exclude_for_leadgen", DefaultExcludeForLeadgen);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteIntValue("display_order", DisplayOrder);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItemIsMeetingSet>("is_meeting_set", IsMeetingSet);
+            writer.WriteObjectValue<UntypedNode>("is_meeting_set", IsMeetingSet);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteAdditionalData(AdditionalData);
