@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Description>A .NET client for Apollo's API, generated from the official OpenAPI specification and updated daily</Description>
+        <Description>A Kiota-generated .NET client for the Apollo API.</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Apollo.OpenApiClient</AssemblyName>
