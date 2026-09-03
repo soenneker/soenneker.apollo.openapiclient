@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_searchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", pathParameters)
+        public Api_searchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_searchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", rawUrl)
+        public Api_searchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", rawUrl)
         {
         }
         /// <summary>
@@ -256,6 +256,16 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
 #else
             [QueryParameter("q_organization_job_titles%5B%5D")]
             public string[] QOrganizationJobTitles { get; set; }
+#endif
+            /// <summary>The name of the person you want to find. Use this parameter to search by name only, independent of any other filters. Search results include people whose name contains all the words you enter. &lt;br&gt;&lt;br&gt;Examples: `Jon Snow`; `Maria`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("q_person_name")]
+            public string? QPersonName { get; set; }
+#nullable restore
+#else
+            [QueryParameter("q_person_name")]
+            public string QPersonName { get; set; }
 #endif
             /// <summary>The maximum revenue the person&apos;s current employer generates. Use this parameter in combination with `revenue_range[min]` to set a revenue range. &lt;br&gt;&lt;br&gt;Do not enter currency symbols, commas, or decimal points in the figure. &lt;br&gt;&lt;br&gt;Examples: `500000`; `1500000`</summary>
             [QueryParameter("revenue_range%5Bmax%5D")]

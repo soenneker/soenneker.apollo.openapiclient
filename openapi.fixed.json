@@ -3446,6 +3446,15 @@
             }
           },
           {
+            "name": "q_person_name",
+            "in": "query",
+            "description": "The name of the person you want to find. Use this parameter to search by name only, independent of any other filters. Search results include people whose name contains all the words you enter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060Jon Snow\u0060; \u0060Maria\u0060",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
             "name": "person_locations[]",
             "in": "query",
             "description": "The location where people live. You can search across cities, US states, and countries. \u003Cbr\u003E\u003Cbr\u003ETo find people based on the headquarters locations of their current employer, use the \u0060organization_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060california\u0060; \u0060ireland\u0060; \u0060chicago\u0060",
