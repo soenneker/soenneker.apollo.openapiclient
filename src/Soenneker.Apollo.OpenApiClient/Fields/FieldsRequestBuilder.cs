@@ -196,8 +196,10 @@ namespace Soenneker.Apollo.OpenApiClient.Fields
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FieldsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("source")]
             public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfFieldsSourceParameter? Source { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

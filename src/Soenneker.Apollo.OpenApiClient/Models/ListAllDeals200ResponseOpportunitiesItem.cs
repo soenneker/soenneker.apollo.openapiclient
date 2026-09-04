@@ -346,8 +346,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public ListAllDeals200ResponseOpportunitiesItem()
         {
             AdditionalData = new Dictionary<string, object>();
-            Amount = 0;
-            AmountInTeamCurrency = 0;
+            Amount = 0L;
+            AmountInTeamCurrency = 0L;
             DealProbability = 0;
             ExchangeRateValue = 0;
             ForecastedRevenue = 0;

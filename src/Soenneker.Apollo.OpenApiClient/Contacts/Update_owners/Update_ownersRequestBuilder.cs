@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_owners
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Update_ownersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_owners?contact_ids[]={contact_ids%5B%5D}&owner_id={owner_id}", pathParameters)
+        public Update_ownersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_owners?owner_id={owner_id}{&contact_ids%5B%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_owners
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Update_ownersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_owners?contact_ids[]={contact_ids%5B%5D}&owner_id={owner_id}", rawUrl)
+        public Update_ownersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_owners?owner_id={owner_id}{&contact_ids%5B%5D*}", rawUrl)
         {
         }
         /// <summary>

@@ -21,7 +21,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/news_articles/search?organization_ids[]={organization_ids%5B%5D}{&categories%5B%5D*,page*,per_page*,published_at%5Bmax%5D*,published_at%5Bmin%5D*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/news_articles/search{?categories%5B%5D*,page*,per_page*,published_at%5Bmax%5D*,published_at%5Bmin%5D*,organization_ids%5B%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/news_articles/search?organization_ids[]={organization_ids%5B%5D}{&categories%5B%5D*,page*,per_page*,published_at%5Bmax%5D*,published_at%5Bmin%5D*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/news_articles/search{?categories%5B%5D*,page*,per_page*,published_at%5Bmax%5D*,published_at%5Bmin%5D*,organization_ids%5B%5D*}", rawUrl)
         {
         }
         /// <summary>

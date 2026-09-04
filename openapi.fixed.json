@@ -416,9 +416,9 @@
                           "website_url": "http://www.apollo.io",
                           "blog_url": null,
                           "angellist_url": null,
-                          "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                          "twitter_url": "https://twitter.com/meetapollo/",
-                          "facebook_url": "https://www.facebook.com/MeetApollo",
+                          "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                          "twitter_url": "https://x.com/useapolloio",
+                          "facebook_url": "https://www.facebook.com/example-company",
                           "primary_phone": {},
                           "languages": [],
                           "alexa_ranking": 3514,
@@ -1047,9 +1047,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -1106,9 +1106,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -1460,9 +1460,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -1519,9 +1519,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -1926,9 +1926,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -1985,9 +1985,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -2184,7 +2184,7 @@
           {
             "name": "linkedin_url",
             "in": "query",
-            "description": "The URL for the company\u0027s LinkedIn profile. Use \u0060domain\u0060, \u0060linkedin_url\u0060, or \u0060website\u0060 to identify the company. You can also provide \u0060name\u0060 to improve match accuracy. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/company/apolloio\u0060",
+            "description": "The URL for the company\u0027s LinkedIn profile. Use \u0060domain\u0060, \u0060linkedin_url\u0060, or \u0060website\u0060 to identify the company. You can also provide \u0060name\u0060 to improve match accuracy. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://www.linkedin.com/company/apolloio\u0060",
             "schema": {
               "type": "string"
             }
@@ -2223,9 +2223,9 @@
                         "website_url": "http://www.apollo.io",
                         "blog_url": null,
                         "angellist_url": null,
-                        "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                        "twitter_url": "https://twitter.com/meetapollo/",
-                        "facebook_url": "https://www.facebook.com/MeetApollo",
+                        "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                        "twitter_url": "https://x.com/useapolloio",
+                        "facebook_url": "https://www.facebook.com/example-company",
                         "primary_phone": {},
                         "languages": [],
                         "num_languages": 0,
@@ -2716,7 +2716,7 @@
                     "details": [
                       {
                         "domain": "apollo.io",
-                        "linkedin_url": "http://www.linkedin.com/company/apolloio",
+                        "linkedin_url": "https://www.linkedin.com/company/apolloio",
                         "name": "apollo",
                         "website": "http://www.apollo.io"
                       },
@@ -2760,9 +2760,9 @@
                           "website_url": "http://www.apollo.io",
                           "blog_url": null,
                           "angellist_url": null,
-                          "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                          "twitter_url": "https://twitter.com/meetapollo/",
-                          "facebook_url": "https://www.facebook.com/MeetApollo",
+                          "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                          "twitter_url": "https://x.com/useapolloio",
+                          "facebook_url": "https://www.facebook.com/example-company",
                           "primary_phone": {},
                           "languages": [],
                           "num_languages": 0,
@@ -4913,7 +4913,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "200 response",
             "content": {
               "application/json": {
                 "schema": {
@@ -4928,9 +4928,9 @@
                         "id": "6518c6184f20350001a0b9c0",
                         "name": "Apollo.io",
                         "website_url": "http://www.apollo.io",
-                        "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                        "twitter_url": "https://twitter.com/MeetApollo/",
-                        "facebook_url": "https://facebook.com/MeetApollo/",
+                        "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                        "twitter_url": "https://x.com/useapolloio",
+                        "facebook_url": "https://www.facebook.com/example-company",
                         "alexa_ranking": 3514,
                         "linkedin_uid": "18511550",
                         "founded_year": 2015,
@@ -7155,9 +7155,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -7214,9 +7214,9 @@
                             "website_url": "http://www.apollo.io",
                             "blog_url": null,
                             "angellist_url": null,
-                            "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                            "twitter_url": "https://twitter.com/meetapollo/",
-                            "facebook_url": "https://www.facebook.com/MeetApollo",
+                            "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                            "twitter_url": "https://x.com/useapolloio",
+                            "facebook_url": "https://www.facebook.com/example-company",
                             "primary_phone": {},
                             "languages": [],
                             "alexa_ranking": 3514,
@@ -14765,9 +14765,9 @@
                         "id": "5e66b6381e05b4008c8331b8",
                         "name": "Apollo.io",
                         "website_url": "http://www.apollo.io",
-                        "linkedin_url": "http://www.linkedin.com/company/apolloio",
-                        "twitter_url": "https://twitter.com/MeetApollo/",
-                        "facebook_url": "https://facebook.com/MeetApollo/",
+                        "linkedin_url": "https://www.linkedin.com/company/apolloio",
+                        "twitter_url": "https://x.com/useapolloio",
+                        "facebook_url": "https://www.facebook.com/example-company",
                         "alexa_ranking": 3514,
                         "linkedin_uid": "18511550",
                         "founded_year": 2015,
@@ -19035,7 +19035,7 @@
         "operationId": "ViewCreditUsageStats",
         "responses": {
           "200": {
-            "description": "",
+            "description": "200 response",
             "content": {
               "application/json": {
                 "schema": {
@@ -19099,7 +19099,7 @@
         "operationId": "PostApiusage",
         "responses": {
           "200": {
-            "description": "",
+            "description": "200 response",
             "content": {
               "application/json": {
                 "schema": {
@@ -19288,7 +19288,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "200 response",
             "content": {
               "application/json": {
                 "schema": {
@@ -20405,7 +20405,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "200 response",
             "content": {
               "application/json": {
                 "schema": {
@@ -28151,15 +28151,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/OrganizationEnrichment200ResponseOrganizationPrimaryPhone"
@@ -28420,7 +28420,7 @@
           },
           "linkedin_url": {
             "type": "string",
-            "description": "The URL for the company\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/company/apolloio\u0060"
+            "description": "The URL for the company\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://www.linkedin.com/company/apolloio\u0060"
           },
           "name": {
             "type": "string",
@@ -28451,15 +28451,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/BulkOrganizationEnrichment200ResponseOrganizationsItemPrimaryPhone"
@@ -36348,15 +36348,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/PeopleEnrichment200ResponsePersonOrganizationPrimaryPhone"
@@ -36624,15 +36624,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/BulkPeopleEnrichment200ResponseMatchesItemOrganizationPrimaryPhone"
@@ -36762,15 +36762,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/BulkPeopleEnrichment200ResponseMatchesItemAccountPrimaryPhone"
@@ -38223,15 +38223,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/SearchForContacts200ResponseContactsItemAccountPrimaryPhone"
@@ -38383,15 +38383,15 @@
           "angellist_url": {},
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/company/apolloio"
+            "example": "https://www.linkedin.com/company/apolloio"
           },
           "twitter_url": {
             "type": "string",
-            "example": "https://twitter.com/meetapollo/"
+            "example": "https://x.com/useapolloio"
           },
           "facebook_url": {
             "type": "string",
-            "example": "https://www.facebook.com/MeetApollo"
+            "example": "https://www.facebook.com/example-company"
           },
           "primary_phone": {
             "$ref": "#/components/schemas/SearchForContacts200ResponseContactsItemOrganizationPrimaryPhone"

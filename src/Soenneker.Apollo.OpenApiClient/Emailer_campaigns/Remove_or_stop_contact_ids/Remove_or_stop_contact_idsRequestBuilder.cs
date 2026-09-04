@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Remove_or_stop_contact_idsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/emailer_campaigns/remove_or_stop_contact_ids?contact_ids[]={contact_ids%5B%5D}&emailer_campaign_ids[]={emailer_campaign_ids%5B%5D}&mode={mode}", pathParameters)
+        public Remove_or_stop_contact_idsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/emailer_campaigns/remove_or_stop_contact_ids?mode={mode}{&contact_ids%5B%5D*,emailer_campaign_ids%5B%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Remove_or_stop_contact_idsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/emailer_campaigns/remove_or_stop_contact_ids?contact_ids[]={contact_ids%5B%5D}&emailer_campaign_ids[]={emailer_campaign_ids%5B%5D}&mode={mode}", rawUrl)
+        public Remove_or_stop_contact_idsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/emailer_campaigns/remove_or_stop_contact_ids?mode={mode}{&contact_ids%5B%5D*,emailer_campaign_ids%5B%5D*}", rawUrl)
         {
         }
         /// <summary>

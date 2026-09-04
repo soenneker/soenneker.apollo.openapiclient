@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_stages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Update_stagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_stages?contact_ids[]={contact_ids%5B%5D}&contact_stage_id={contact_stage_id}", pathParameters)
+        public Update_stagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_stages?contact_stage_id={contact_stage_id}{&contact_ids%5B%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_stages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Update_stagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_stages?contact_ids[]={contact_ids%5B%5D}&contact_stage_id={contact_stage_id}", rawUrl)
+        public Update_stagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts/update_stages?contact_stage_id={contact_stage_id}{&contact_ids%5B%5D*}", rawUrl)
         {
         }
         /// <summary>

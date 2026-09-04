@@ -96,12 +96,16 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("email_account_id_and_aliases")]
             public string? EmailAccountIdAndAliases { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("email_account_id_and_aliases")]
             public string EmailAccountIdAndAliases { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Search for emails that are included in specific sequences in your Apollo account. You can search multiple sequences. Any sequence not included in this parameter will be exclude from search results.&lt;br&gt;&lt;br&gt;To find sequence IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-sequences&quot; target=&quot;_blank&quot;&gt;search for sequences endpoint&lt;/a&gt; and identify the `id` value for the sequence. &lt;br&gt;&lt;br&gt;Example: `66e9e215ece19801b219997f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

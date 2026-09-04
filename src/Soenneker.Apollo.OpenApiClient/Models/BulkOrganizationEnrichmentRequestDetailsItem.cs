@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Domain { get; set; }
 #endif
-        /// <summary>The URL for the company&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/company/apolloio`</summary>
+        /// <summary>The URL for the company&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;Example: `https://www.linkedin.com/company/apolloio`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LinkedinUrl { get; set; }
