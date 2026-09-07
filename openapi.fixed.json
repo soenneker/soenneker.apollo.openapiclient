@@ -23,13 +23,13 @@
           "Enrichment"
         ],
         "summary": "People enrichment",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/people/match\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060people_match\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601\u20139 credits per person\u0060 without waterfall enrichment\n\nCredits are charged only if credit-consuming data is found: 1 credit for demographics or email, plus 8 credits if a mobile phone is returned. If no credit-consuming data is found, the request consumes 0 credits. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nIf waterfall enrichment is used for phone or email, credit usage depends on the returned data and the vendors included in your [waterfall enrichment configuration](https://knowledge.apollo.io/hc/en-us/articles/34071121664781-Use-Waterfall-Enrichment); some vendors consume credits per lookup even when no data is found.\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the people enrichment endpoint to enrich data for one person. To enrich data for up to ten people with a single API call, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EApollo relies on the information you pass via the endpoint\u0027s parameters to identify the correct person to enrich. If you provide more information about a person, Apollo is more likely to find a match within its database. If you only provide general information, such as a name without a domain or email address, you might receive a \u0060200\u0060 response, but the response indicates that no records have been enriched.\u003Cbr\u003E\u003Cbr\u003EBy default, this endpoint doesn\u0027t return personal emails or phone numbers. Use the \u0060reveal_personal_emails\u0060 and \u0060reveal_phone_number\u0060 parameters to retrieve emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you use \u0060reveal_phone_number\u0060, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed phone enrichment results. Apollo returns the main enrichment response synchronously, then sends the requested phone numbers to the webhook asynchronously. [See webhook details](#webhook-details).\u003Cbr\u003E\u003Cbr\u003EYou can also use the \u0060run_waterfall_email\u0060 and \u0060run_waterfall_phone\u0060 parameters to run waterfall enrichment via this endpoint. [Waterfall enrichment](https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview) gives you broader data coverage by checking connected third-party data sources for contact emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you call this endpoint and include at least one waterfall parameter, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed waterfall enrichment results. Apollo returns an immediate synchronous response with demographic and firmographic data, along with a waterfall enrichment request status. Apollo then delivers enriched emails or phone numbers asynchronously to the configured webhook.\n\n### Webhook Details\n\n- When using Apollo enrichment for phone number reveal, the webhook response follows: [Native webhook response details](doc:retrieve-mobile-phone-numbers-for-contacts#webhook-response-details).\n\n- When using waterfall enrichment, the webhook response follows: [Waterfall webhook response details](doc:enrich-phone-and-email-using-data-waterfall#response-details).\n\n- You can poll webhook results with the [poll webhook result](doc:poll-webhook-result) endpoint by passing the \u003Ccode\u003Erequest_id\u003C/code\u003E from the people enrichment response.\n\n### Webhook Requirements\n\n- **HTTPS Required:** Your endpoint must be publicly accessible over HTTPS.\n\n- **Rate Limiting:** Ensure your webhook endpoint can handle the volume of webhook traffic sent by Apollo.\n\n- **Idempotency:** Apollo may retry webhook calls; your endpoint should be idempotent to handle duplicate payloads safely.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/people/match\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060people_match\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601\u20139 credits per person\u0060 without waterfall enrichment\n\nCredits are charged only if credit-consuming data is found: 1 credit for demographics or email, plus 8 credits if a mobile phone is returned. If no credit-consuming data is found, the request consumes 0 credits. Demographic credit usage depends on \u0060match_confidence\u0060. Apollo doesn\u0027t charge a demographic credit when \u0060match_confidence\u0060 is \u0060none\u0060. Email and mobile phone credit usage isn\u0027t determined by \u0060match_confidence\u0060. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nIf waterfall enrichment is used for phone or email, credit usage depends on the returned data and the vendors included in your [waterfall enrichment configuration](https://knowledge.apollo.io/hc/en-us/articles/34071121664781-Use-Waterfall-Enrichment); some vendors consume credits per lookup even when no data is found.\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the people enrichment endpoint to enrich data for one person. To enrich data for up to ten people with a single API call, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EApollo relies on the information you pass via the endpoint\u0027s parameters to identify the correct person to enrich. If you provide more information about a person, Apollo is more likely to find a match within its database. If you only provide general information, such as a name without a domain or email address, you might receive a \u0060200\u0060 response, but the response indicates that no records have been enriched. Check \u0060match_confidence\u0060 in the response to understand how confidently Apollo matched the submitted information:\n\n- \u0060high\u0060: Apollo matched the information to a person record.\n- \u0060medium\u0060: Apollo identified a likely person using additional contact data.\n- \u0060low\u0060: Apollo couldn\u0027t match a complete person record, but returned person data assembled from available contact data.\n- \u0060none\u0060: Apollo couldn\u0027t identify a matching person.\u003Cbr\u003E\u003Cbr\u003EBy default, this endpoint doesn\u0027t return personal emails or phone numbers. Use the \u0060reveal_personal_emails\u0060 and \u0060reveal_phone_number\u0060 parameters to retrieve emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you use \u0060reveal_phone_number\u0060, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed phone enrichment results. Apollo returns the main enrichment response synchronously, then sends the requested phone numbers to the webhook asynchronously. [See webhook details](#webhook-details).\u003Cbr\u003E\u003Cbr\u003EYou can also use the \u0060run_waterfall_email\u0060 and \u0060run_waterfall_phone\u0060 parameters to run waterfall enrichment via this endpoint. [Waterfall enrichment](https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview) gives you broader data coverage by checking connected third-party data sources for contact emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you call this endpoint and include at least one waterfall parameter, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed waterfall enrichment results. Apollo returns an immediate synchronous response with demographic and firmographic data, along with a waterfall enrichment request status. Apollo then delivers enriched emails or phone numbers asynchronously to the configured webhook.\n\n### Webhook Details\n\n- When using Apollo enrichment for phone number reveal, the webhook response follows: [Native webhook response details](doc:retrieve-mobile-phone-numbers-for-contacts#webhook-response).\n\n- When using waterfall enrichment, the webhook response follows: [Waterfall webhook response details](doc:enrich-phone-and-email-using-data-waterfall#asynchronous-webhook-response-1).\n\n- You can poll webhook results with the [poll webhook result](doc:poll-webhook-result) endpoint by passing the \u003Ccode\u003Erequest_id\u003C/code\u003E from the people enrichment response.\n\n### Webhook Requirements\n\n- **HTTPS Required:** Your endpoint must be publicly accessible over HTTPS.\n\n- **Rate Limiting:** Ensure your webhook endpoint can handle the volume of webhook traffic sent by Apollo.\n\n- **Idempotency:** Apollo may retry webhook calls; your endpoint should be idempotent to handle duplicate payloads safely.",
         "operationId": "PeopleEnrichment",
         "parameters": [
           {
             "name": "first_name",
             "in": "query",
-            "description": "The first name of the person. This is typically used in combination with the \u0060last_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060tim\u0060",
+            "description": "The first name of the person. This is typically used in combination with the \u0060last_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jordan\u0060",
             "schema": {
               "type": "string"
             }
@@ -37,7 +37,7 @@
           {
             "name": "last_name",
             "in": "query",
-            "description": "The last name of the person. This is typically used in combination with the \u0060first_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060zheng\u0060",
+            "description": "The last name of the person. This is typically used in combination with the \u0060first_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060blake\u0060",
             "schema": {
               "type": "string"
             }
@@ -45,7 +45,7 @@
           {
             "name": "name",
             "in": "query",
-            "description": "The full name of the person. This will typically be a first name and last name separated by a space.  If you use this parameter, you do not need to use the \u0060first_name\u0060 and \u0060last_name\u0060 parameters. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060tim zheng\u0060",
+            "description": "The full name of the person. This will typically be a first name and last name separated by a space.  If you use this parameter, you do not need to use the \u0060first_name\u0060 and \u0060last_name\u0060 parameters. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jordan blake\u0060",
             "schema": {
               "type": "string"
             }
@@ -53,7 +53,7 @@
           {
             "name": "email",
             "in": "query",
-            "description": "The email address of the person. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060example@email.com\u0060",
+            "description": "The email address of the person. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jordan@ymail.org\u0060",
             "schema": {
               "type": "string"
             }
@@ -69,7 +69,7 @@
           {
             "name": "organization_name",
             "in": "query",
-            "description": "The name of the person\u0027s employer. This can be the current employer or a previous employer. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060apollo\u0060",
+            "description": "The name of the person\u0027s employer. This can be the current employer or a previous employer. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060northstar analytics\u0060",
             "schema": {
               "type": "string"
             }
@@ -93,7 +93,7 @@
           {
             "name": "linkedin_url",
             "in": "query",
-            "description": "The URL for the person\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/in/tim-zheng-677ba010\u0060",
+            "description": "The URL for the person\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://www.linkedin.com/in/jordan-blake-4a7c21\u0060",
             "schema": {
               "type": "string"
             }
@@ -155,24 +155,25 @@
                   "Result": {
                     "value": {
                       "person": {
-                        "id": "64a7ff0cc4dfae00013df1a5",
-                        "first_name": "Tim",
-                        "last_name": "Zheng",
-                        "name": "Tim Zheng",
-                        "linkedin_url": "http://www.linkedin.com/in/tim-zheng-677ba010",
+                        "id": "672c91d4a7be42000184f2c9",
+                        "first_name": "Jordan",
+                        "last_name": "Blake",
+                        "name": "Jordan Blake",
+                        "linkedin_url": "http://www.linkedin.com/in/jordan-blake-4a7c21",
                         "title": "Founder \u0026 CEO",
                         "email_status": "verified",
-                        "photo_url": "https://static.licdn.com/aero-v1/sc/h/uzfsocwl05iywf1hd7ba3915x",
+                        "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQH9vR4tY2wP7k/profile-displayphoto-shrink_200_200",
                         "twitter_url": null,
                         "github_url": null,
                         "facebook_url": null,
                         "extrapolated_email_confidence": null,
-                        "headline": "Founder \u0026 CEO at Apollo",
-                        "email": "tim@apollo.io",
-                        "organization_id": "5e66b6381e05b4008c8331b8",
+                        "headline": "Founder \u0026 CEO at Northstar Analytics",
+                        "email": "jordan.blake@northstaranalytics.io",
+                        "organization_id": "61f2d5a8c40b7200019e4f31",
+                        "match_confidence": "high",
                         "employment_history": [
                           {
-                            "_id": "66d7af8c200cad0001404c1f",
+                            "_id": "672c93a1b8df4e0001f732a1",
                             "created_at": null,
                             "current": true,
                             "degree": null,
@@ -182,17 +183,17 @@
                             "grade_level": null,
                             "kind": null,
                             "major": null,
-                            "organization_id": "5e66b6381e05b4008c8331b8",
-                            "organization_name": "Apollo",
+                            "organization_id": "61f2d5a8c40b7200019e4f31",
+                            "organization_name": "Northstar Analytics",
                             "raw_address": null,
                             "start_date": "2016-01-01",
                             "title": "Founder \u0026 CEO",
                             "updated_at": null,
-                            "id": "66d7af8c200cad0001404c1f",
-                            "key": "66d7af8c200cad0001404c1f"
+                            "id": "672c93a1b8df4e0001f732a1",
+                            "key": "672c93a1b8df4e0001f732a1"
                           },
                           {
-                            "_id": "66d7af8c200cad0001404c20",
+                            "_id": "672c93a1b8df4e0001f732a2",
                             "created_at": null,
                             "current": false,
                             "degree": null,
@@ -203,16 +204,16 @@
                             "kind": null,
                             "major": null,
                             "organization_id": null,
-                            "organization_name": "Braingenie",
+                            "organization_name": "BrightForge Labs",
                             "raw_address": null,
                             "start_date": "2011-01-01",
                             "title": "Founder \u0026 CEO",
                             "updated_at": null,
-                            "id": "66d7af8c200cad0001404c20",
-                            "key": "66d7af8c200cad0001404c20"
+                            "id": "672c93a1b8df4e0001f732a2",
+                            "key": "672c93a1b8df4e0001f732a2"
                           },
                           {
-                            "_id": "66d7af8c200cad0001404c21",
+                            "_id": "672c93a1b8df4e0001f732a3",
                             "created_at": null,
                             "current": false,
                             "degree": null,
@@ -222,17 +223,17 @@
                             "grade_level": null,
                             "kind": null,
                             "major": null,
-                            "organization_id": "54a22f23746869331840e813",
-                            "organization_name": "Citadel Investment Group",
+                            "organization_id": "61f2d7b8c40b7200019e4f42",
+                            "organization_name": "Redwood Capital Group",
                             "raw_address": null,
                             "start_date": "2011-01-01",
                             "title": "Investment \u0026 Trading Associate",
                             "updated_at": null,
-                            "id": "66d7af8c200cad0001404c21",
-                            "key": "66d7af8c200cad0001404c21"
+                            "id": "672c93a1b8df4e0001f732a3",
+                            "key": "672c93a1b8df4e0001f732a3"
                           },
                           {
-                            "_id": "66d7af8c200cad0001404c22",
+                            "_id": "672c93a1b8df4e0001f732a4",
                             "created_at": null,
                             "current": false,
                             "degree": null,
@@ -242,17 +243,17 @@
                             "grade_level": null,
                             "kind": null,
                             "major": null,
-                            "organization_id": "54a1216169702d7fe6dfca02",
-                            "organization_name": "The Boston Consulting Group",
+                            "organization_id": "61f2d7b8c40b7200019e4f43",
+                            "organization_name": "Meridian Strategy Partners",
                             "raw_address": null,
                             "start_date": "2010-08-01",
                             "title": "Summer Associate",
                             "updated_at": null,
-                            "id": "66d7af8c200cad0001404c22",
-                            "key": "66d7af8c200cad0001404c22"
+                            "id": "672c93a1b8df4e0001f732a4",
+                            "key": "672c93a1b8df4e0001f732a4"
                           },
                           {
-                            "_id": "66d7af8c200cad0001404c23",
+                            "_id": "672c93a1b8df4e0001f732a5",
                             "created_at": null,
                             "current": false,
                             "degree": null,
@@ -262,17 +263,17 @@
                             "grade_level": null,
                             "kind": null,
                             "major": null,
-                            "organization_id": "5da2e6a3f978a8000177e831",
-                            "organization_name": "Goldman Sachs",
+                            "organization_id": "61f2d7b8c40b7200019e4f44",
+                            "organization_name": "Sterling Financial Partners",
                             "raw_address": null,
                             "start_date": "2010-06-01",
                             "title": "Summer Analyst",
                             "updated_at": null,
-                            "id": "66d7af8c200cad0001404c23",
-                            "key": "66d7af8c200cad0001404c23"
+                            "id": "672c93a1b8df4e0001f732a5",
+                            "key": "672c93a1b8df4e0001f732a5"
                           },
                           {
-                            "_id": "66d7af8c200cad0001404c24",
+                            "_id": "672c93a1b8df4e0001f732a6",
                             "created_at": null,
                             "current": false,
                             "degree": null,
@@ -282,38 +283,38 @@
                             "grade_level": null,
                             "kind": null,
                             "major": null,
-                            "organization_id": "54a1a06274686945fa1ffc02",
-                            "organization_name": "Jane Street",
+                            "organization_id": "61f2d7b8c40b7200019e4f45",
+                            "organization_name": "Harborline Trading",
                             "raw_address": null,
                             "start_date": "2009-12-01",
                             "title": "Trading Intern",
                             "updated_at": null,
-                            "id": "66d7af8c200cad0001404c24",
-                            "key": "66d7af8c200cad0001404c24"
+                            "id": "672c93a1b8df4e0001f732a6",
+                            "key": "672c93a1b8df4e0001f732a6"
                           }
                         ],
                         "state": "California",
                         "city": "San Francisco",
                         "country": "United States",
-                        "contact_id": "664fa05cf8299f0001f90876",
+                        "contact_id": "672c95e2d2f1140001aa4c18",
                         "contact": {
                           "contact_roles": [],
-                          "id": "664fa05cf8299f0001f90876",
-                          "first_name": "Roy",
-                          "last_name": "Chung",
-                          "name": "Roy Chung",
-                          "linkedin_url": "http://www.linkedin.com/in/tim-zheng-677ba010",
-                          "title": "Reaching Peak Potential \uD83D\uDCAA\u26F0\uFE0F\uD83D\uDCC8\uD83E\uDDEA\uFE0F | President",
-                          "contact_stage_id": "6095a710bd01d100a506d4ae",
+                          "id": "672c95e2d2f1140001aa4c18",
+                          "first_name": "Casey",
+                          "last_name": "Morgan",
+                          "name": "Casey Morgan",
+                          "linkedin_url": "http://www.linkedin.com/in/jordan-blake-4a7c21",
+                          "title": "President",
+                          "contact_stage_id": "61f2da03c40b7200019e4f50",
                           "owner_id": null,
-                          "creator_id": "66302798d03b9601c7934ec2",
-                          "person_id": "64a7ff0cc4dfae00013df1a5",
+                          "creator_id": "672c9613d2f1140001aa4c22",
+                          "person_id": "672c91d4a7be42000184f2c9",
                           "email_needs_tickling": null,
-                          "organization_name": "Apollo.io",
+                          "organization_name": "Northstar Analytics",
                           "source": "crm",
                           "original_source": "crm",
-                          "organization_id": "5e66b6381e05b4008c8331b8",
-                          "headline": "Reaching Peak Potential \uD83D\uDCAA\u26F0\uFE0F\uD83D\uDCC8\uD83E\uDDEA\uFE0F | President at FRC",
+                          "organization_id": "61f2d5a8c40b7200019e4f31",
+                          "headline": "President at Northstar Analytics",
                           "photo_url": null,
                           "present_raw_address": "New York, New York, United States",
                           "linkedin_uid": null,
@@ -329,12 +330,12 @@
                           "direct_dial_enrichment_failed_at": null,
                           "email_status": "verified",
                           "email_source": null,
-                          "account_id": "6658955877a2f20001c648ac",
+                          "account_id": "672c964bd2f1140001aa4c2f",
                           "last_activity_date": null,
                           "hubspot_vid": null,
                           "hubspot_company_id": null,
                           "crm_id": null,
-                          "sanitized_phone": "\u002B11235550158",
+                          "sanitized_phone": "\u002B14155550158",
                           "merged_crm_ids": null,
                           "updated_at": "2024-06-02T08:53:51.266Z",
                           "queued_for_crm_push": null,
@@ -344,7 +345,7 @@
                           "has_pending_email_arcgate_request": false,
                           "has_email_arcgate_request": false,
                           "existence_level": "invisible",
-                          "email": "roy@apollo.io",
+                          "email": "casey.morgan@northstaranalytics.io",
                           "email_from_customer": true,
                           "typed_custom_fields": {},
                           "custom_field_errors": null,
@@ -356,9 +357,9 @@
                           "source_display_name": "Imported from CRM",
                           "contact_emails": [
                             {
-                              "email": "roy@apollo.iorrr",
-                              "email_md5": "879440a4afe6515e2de11dd7c531b770",
-                              "email_sha256": "d445592892011f8539d5e92394929dfda7936867c21000b21788be8a46aa73d9",
+                              "email": "casey.morgan@northstaranalytics.io",
+                              "email_md5": "9f3b7c2d481a5e6f0d4c8b1a2e7f9c30",
+                              "email_sha256": "a6c79e4f2b310d9581f67ac3e4d89b20174f5c6a9d3e2b810f7c4a56e93d128b",
                               "email_status": "verified",
                               "email_source": null,
                               "extrapolated_email_confidence": null,
@@ -370,8 +371,8 @@
                           "time_zone": "America/Los_Angeles",
                           "phone_numbers": [
                             {
-                              "raw_number": "(123) 555-0158",
-                              "sanitized_number": "\u002B11235550158",
+                              "raw_number": "(415) 555-0158",
+                              "sanitized_number": "\u002B14155550158",
                               "type": null,
                               "position": 0,
                               "status": "valid_number",
@@ -380,8 +381,8 @@
                               "dialer_flags": null
                             },
                             {
-                              "raw_number": "(123) 555-0126",
-                              "sanitized_number": "\u002B11235550126",
+                              "raw_number": "(415) 555-0126",
+                              "sanitized_number": "\u002B14155550126",
                               "type": null,
                               "position": 1,
                               "status": "valid_number",
@@ -411,9 +412,9 @@
                         },
                         "revealed_for_current_team": true,
                         "organization": {
-                          "id": "5e66b6381e05b4008c8331b8",
-                          "name": "Apollo.io",
-                          "website_url": "http://www.apollo.io",
+                          "id": "61f2d5a8c40b7200019e4f31",
+                          "name": "Northstar Analytics",
+                          "website_url": "https://www.northstaranalytics.io",
                           "blog_url": null,
                           "angellist_url": null,
                           "linkedin_url": "https://www.linkedin.com/company/apolloio",
@@ -421,15 +422,15 @@
                           "facebook_url": "https://www.facebook.com/example-company",
                           "primary_phone": {},
                           "languages": [],
-                          "alexa_ranking": 3514,
-                          "phone": null,
-                          "linkedin_uid": "18511550",
-                          "founded_year": 2015,
+                          "alexa_ranking": 8247,
+                          "phone": "\u002B1 415-555-0198",
+                          "linkedin_uid": "48271635",
+                          "founded_year": 2018,
                           "publicly_traded_symbol": null,
                           "publicly_traded_exchange": null,
-                          "logo_url": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/79049be00ff8e398b5935de8/picture",
+                          "logo_url": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/84acb173f920c1e65a47d920/picture",
                           "crunchbase_url": null,
-                          "primary_domain": "apollo.io",
+                          "primary_domain": "northstaranalytics.io",
                           "industry": "information technology \u0026 services",
                           "keywords": [
                             "sales engagement",
@@ -449,77 +450,77 @@
                             "prospecting",
                             "b2b data"
                           ],
-                          "estimated_num_employees": 1600,
+                          "estimated_num_employees": 850,
                           "industries": [
                             "information technology \u0026 services"
                           ],
                           "secondary_industries": [],
                           "snippets_loaded": true,
-                          "industry_tag_id": "5567cd4773696439b10b0000",
+                          "industry_tag_id": "61f2dbc2c40b7200019e4f61",
                           "industry_tag_hash": {
-                            "information technology \u0026 services": "5567cd4773696439b10b0000"
+                            "information technology \u0026 services": "61f2dbc2c40b7200019e4f61"
                           },
                           "retail_location_count": 0,
-                          "raw_address": "415 Mission St, Floor 37, San Francisco, California 94105, US",
-                          "street_address": "415 Mission St",
+                          "raw_address": "220 Market St, Floor 12, San Francisco, California 94105, US",
+                          "street_address": "220 Market St",
                           "city": "San Francisco",
                           "state": "California",
                           "postal_code": "94105-2301",
                           "country": "United States",
                           "owned_by_organization_id": null,
-                          "seo_description": "Search, engage, and convert over 240 million contacts at over 30 million companies with Apollo\u0027s sales intelligence and engagement platform.",
-                          "short_description": "Apollo.io combines a buyer database of over 270M contacts and powerful sales engagement and automation tools in one, easy to use platform. Trusted by over 160,000 companies including Autodesk, Rippling, Deel, Jasper.ai, Divvy, and Heap, Apollo has more than one million users globally. By helping sales professionals find their ideal buyers and intelligently automate outreach, Apollo helps go-to-market teams sell anything.\n\nCelebrating a $100M Series D Funding Round \uD83E\uDD84",
+                          "seo_description": "Northstar Analytics provides sales intelligence and engagement software for modern revenue teams.",
+                          "short_description": "Northstar Analytics combines business data, sales engagement, and automation tools in one platform. Revenue teams use Northstar Analytics to identify prospective buyers, personalize outreach, and manage sales workflows at scale.\n\nThe company serves customers across software, financial services, and professional services.",
                           "suborganizations": [],
                           "num_suborganizations": 0,
-                          "annual_revenue_printed": "100M",
-                          "annual_revenue": 100000000,
-                          "total_funding": 251200000,
-                          "total_funding_printed": "251.2M",
+                          "annual_revenue_printed": "85M",
+                          "annual_revenue": 85000000,
+                          "total_funding": 142000000,
+                          "total_funding_printed": "142M",
                           "latest_funding_round_date": "2023-08-01T00:00:00.000\u002B00:00",
                           "latest_funding_stage": "Series D",
                           "funding_events": [
                             {
-                              "id": "6574c1ff9b797d0001fdab1b",
+                              "id": "672c978cd2f1140001aa4c51",
                               "date": "2023-08-01T00:00:00.000\u002B00:00",
                               "news_url": null,
                               "type": "Series D",
-                              "investors": "Bain Capital Ventures, Sequoia Capital, Tribe Capital, Nexus Venture Partners",
+                              "investors": "Crestline Ventures, Summit Ridge Capital, Harbor Peak Ventures, Northgate Ventures",
                               "amount": "100M",
                               "currency": "$"
                             },
                             {
-                              "id": "624f4dfec786590001768016",
+                              "id": "672c978cd2f1140001aa4c52",
                               "date": "2022-03-01T00:00:00.000\u002B00:00",
                               "news_url": null,
                               "type": "Series C",
-                              "investors": "Sequoia Capital, Tribe Capital, Nexus Venture Partners, NewView Capital",
+                              "investors": "Summit Ridge Capital, Harbor Peak Ventures, Northgate Ventures, Stonebridge Capital",
                               "amount": "110M",
                               "currency": "$"
                             },
                             {
-                              "id": "61b13677623110000186a478",
+                              "id": "672c978cd2f1140001aa4c53",
                               "date": "2021-10-01T00:00:00.000\u002B00:00",
                               "news_url": null,
                               "type": "Series B",
-                              "investors": "Tribe Capital, NewView Capital, Nexus Venture Partners",
+                              "investors": "Harbor Peak Ventures, Stonebridge Capital, Northgate Ventures",
                               "amount": "32M",
                               "currency": "$"
                             },
                             {
-                              "id": "5ffe93caa54d75077c59acef",
+                              "id": "672c978cd2f1140001aa4c54",
                               "date": "2018-06-26T00:00:00.000\u002B00:00",
-                              "news_url": "https://techcrunch.com/2018/06/26/yc-grad-zenprospect-rebrands-as-apollo-lands-7-m-series-a/",
+                              "news_url": "https://techcrunch.com/2019/05/14/northstar-analytics-raises-series-a/",
                               "type": "Series A",
-                              "investors": "Nexus Venture Partners, Social Capital, Y Combinator",
+                              "investors": "Northgate Ventures, Horizon Growth Partners, LaunchWorks Accelerator",
                               "amount": "7M",
                               "currency": "$"
                             },
                             {
-                              "id": "6574c1ff9b797d0001fdab20",
+                              "id": "672c978cd2f1140001aa4c55",
                               "date": "2016-10-01T00:00:00.000\u002B00:00",
                               "news_url": null,
                               "type": "Other",
-                              "investors": "Y Combinator, SV Angel, Social Capital, Nexus Venture Partners",
+                              "investors": "LaunchWorks Accelerator, Cedar Angel Partners, Horizon Growth Partners, Northgate Ventures",
                               "amount": "2.2M",
                               "currency": "$"
                             }
@@ -721,7 +722,7 @@
                             }
                           ],
                           "org_chart_root_people_ids": [
-                            "652fc57e2802bf00010c52f8"
+                            "672c9709d2f1140001aa4c41"
                           ],
                           "org_chart_sector": "OrgChart::SectorHierarchy::Rules::IT",
                           "org_chart_removed": false,
@@ -745,7 +746,7 @@
                         "status": "accepted",
                         "message": "Waterfall enrichment request accepted. Results will be sent to the provided webhook URL."
                       },
-                      "request_id": 1039995589705121900
+                      "request_id": 718432950164203900
                     }
                   }
                 }
@@ -794,7 +795,7 @@
           "Enrichment"
         ],
         "summary": "Bulk people enrichment",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/people/bulk_match\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060people_bulk_match\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601\u20139 credits per person\u0060 without waterfall enrichment\n\nCredits are charged only if credit-consuming data is found: 1 credit for demographics or email, plus 8 credits if a mobile phone is returned. If no credit-consuming data is found, the request consumes 0 credits. You can enrich up to 10 people per request. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nIf waterfall enrichment is used for phone or email, credit usage depends on the returned data and the vendors included in your [waterfall enrichment configuration](https://knowledge.apollo.io/hc/en-us/articles/34071121664781-Use-Waterfall-Enrichment); some vendors consume credits per lookup even when no data is found.\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the bulk people enrichment endpoint to enrich data for up to ten people with a single API call. To enrich data for a single person, use the \u003Ca href=\u0022https://docs.apollo.io/reference/people-enrichment\u0022\u003Epeople enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EApollo relies on the information you pass via the endpoint\u0027s parameters to identify the correct people to enrich. When you provide more information, Apollo is more likely to find matches within its database. If you only provide general information, such as a name without a domain or email address, you may receive a \u0060200\u0060 response, but the response indicates that no records have been enriched. The details for each person should be passed as an object in the \u0060details[]\u0060 array.\u003Cbr\u003E\u003Cbr\u003EBy default, this endpoint doesn\u0027t return personal emails or phone numbers. Use the \u0060reveal_personal_emails\u0060 parameter to retrieve personal emails and \u0060reveal_phone_number\u0060 to retrieve phone numbers. If you set either of these parameters to \u0060true\u0060, Apollo attempts to provide emails or phone numbers for all matches.\u003Cbr\u003E\u003Cbr\u003EWhen you use \u0060reveal_phone_number\u0060, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed phone enrichment results. Apollo returns the main enrichment response synchronously, then sends the requested phone numbers to the webhook asynchronously. [See webhook details](#webhook-details).\u003Cbr\u003E\u003Cbr\u003EYou can also use the \u0060run_waterfall_email\u0060 and \u0060run_waterfall_phone\u0060 parameters to run waterfall enrichment via this endpoint. [Waterfall enrichment](https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview) gives you broader data coverage by checking connected third-party data sources for contact emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you call this endpoint and include at least one waterfall parameter, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed waterfall enrichment results. Apollo returns an immediate synchronous response with demographic and firmographic data, along with a waterfall enrichment request status. Apollo then delivers enriched emails or phone numbers asynchronously to the configured webhook.\u003Cbr\u003E\u003Cbr\u003E\n\n### Reading the Response\n\nThe response shape depends on whether you requested waterfall enrichment, so check for the fields you need rather than assuming a fixed payload.\n\n**Standard requests** (no waterfall parameters) return \u0060total_requested_enrichments\u0060, \u0060unique_enriched_records\u0060, \u0060missing_records\u0060, and \u0060credits_consumed\u0060 alongside \u0060matches\u0060.\n\n**Waterfall requests** (\u0060run_waterfall_email\u0060 or \u0060run_waterfall_phone\u0060 set to \u0060true\u0060) return a \u0060waterfall\u0060 object instead. On these, \u0060unique_enriched_records\u0060, \u0060missing_records\u0060, and \u0060credits_consumed\u0060 are **absent entirely** \u2014 not zero \u2014 because enrichment is still running and final credit usage isn\u0027t known. Only \u0060total_requested_enrichments\u0060 appears in both shapes. When \u0060run_waterfall_email\u0060 is \u0060true\u0060, each \u0060matches\u0060 entry also omits \u0060email\u0060 and \u0060email_status\u0060, since the address arrives later via your webhook.\n\nAlso worth knowing:\n\n* \u0060unique_enriched_records\u0060 counts distinct people that **consumed credits**, not people that matched. It can be lower than the length of \u0060matches\u0060, or \u00600\u0060 while \u0060matches\u0060 is non-empty.\n\n* \u0060credits_consumed\u0060 can be fractional depending on your plan\u0027s credit pricing. Parse it as a decimal.\n\n* \u0060request_id\u0060 is a signed 64-bit integer and is frequently negative. Store it in a type that handles the full signed range, and pass it unchanged to [poll webhook result](https://docs.apollo.io/reference/poll-webhook-result).\n\n* \u0060status\u0060 is \u0060success\u0060 for any \u0060200\u0060 response, including one that matched nobody. Use \u0060missing_records\u0060 and \u0060matches\u0060 to judge what was actually enriched.\n\n### Webhook Details\n\n* When using native phone enrichment, the webhook response follows: [Native webhook response details](doc:retrieve-mobile-phone-numbers-for-contacts#webhook-response-details).\n\n* When using waterfall enrichment, the webhook response follows: [Waterfall webhook response details](doc:enrich-phone-and-email-using-data-waterfall#response-details).\n\n* You can poll webhook results with the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result\u003C/a\u003E endpoint by passing the \u003Ccode\u003Erequest_id\u003C/code\u003E from the bulk people enrichment response.\n\n### Webhook Requirements\n\n* **HTTPS Required:** Your endpoint must be publicly accessible over HTTPS.\n\n* **Rate Limiting:** Ensure your webhook endpoint can handle the volume of webhook traffic sent by Apollo.\n\n* **Idempotency:** Apollo may retry webhook calls. Your endpoint should be idempotent to handle duplicate payloads safely.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/people/bulk_match\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060people_bulk_match\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601\u20139 credits per person\u0060 without waterfall enrichment\n\nCredits are charged only if credit-consuming data is found: 1 credit for demographics or email, plus 8 credits if a mobile phone is returned. If no credit-consuming data is found, the request consumes 0 credits. Apollo doesn\u0027t charge a demographic credit when it can\u0027t match a person. With waterfall enrichment, this is indicated by \u0060match_confidence: none\u0060; for standard requests, unmatched people are returned as \u0060null\u0060. You can enrich up to 10 people per request. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nIf waterfall enrichment is used for phone or email, credit usage depends on the returned data and the vendors included in your [waterfall enrichment configuration](https://knowledge.apollo.io/hc/en-us/articles/34071121664781-Use-Waterfall-Enrichment); some vendors consume credits per lookup even when no data is found.\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the bulk people enrichment endpoint to enrich data for up to ten people with a single API call. To enrich data for a single person, use the \u003Ca href=\u0022https://docs.apollo.io/reference/people-enrichment\u0022\u003Epeople enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EApollo relies on the information you pass via the endpoint\u0027s parameters to identify the correct people to enrich. The details for each person should be passed as an object in the \u0060details[]\u0060 array. When you provide more information, Apollo is more likely to find matches within its database. If you only provide general information, such as a name without a domain or email address, you may receive a \u0060200\u0060 response, but the response indicates that no records have been enriched. Check \u0060match_confidence\u0060 in the response to understand how confidently Apollo matched the submitted information.\u003Cbr\u003E\u003Cbr\u003EBy default, this endpoint doesn\u0027t return personal emails or phone numbers. Use the \u0060reveal_personal_emails\u0060 parameter to retrieve personal emails and \u0060reveal_phone_number\u0060 to retrieve phone numbers. If you set either of these parameters to \u0060true\u0060, Apollo attempts to provide emails or phone numbers for all matches.\u003Cbr\u003E\u003Cbr\u003EWhen you use \u0060reveal_phone_number\u0060, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed phone enrichment results. Apollo returns the main enrichment response synchronously, then sends the requested phone numbers to the webhook asynchronously. [See webhook details](#webhook-details).\u003Cbr\u003E\u003Cbr\u003EYou can also use the \u0060run_waterfall_email\u0060 and \u0060run_waterfall_phone\u0060 parameters to run waterfall enrichment via this endpoint. [Waterfall enrichment](https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview) gives you broader data coverage by checking connected third-party data sources for contact emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you call this endpoint and include at least one waterfall parameter, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed waterfall enrichment results. Apollo returns an immediate synchronous response with demographic and firmographic data, along with a waterfall enrichment request status. Apollo then delivers enriched emails or phone numbers asynchronously to the configured webhook.\u003Cbr\u003E\u003Cbr\u003E\n\n### Reading the response\n\nThe response differs depending on whether you use waterfall enrichment.\n\nFor a standard request, the response includes \u0060matches\u0060 along with:\n\n* \u0060total_requested_enrichments\u0060\n* \u0060unique_enriched_records\u0060\n* \u0060missing_records\u0060\n* \u0060credits_consumed\u0060\n\nEach person in \u0060matches\u0060 also includes \u0060match_confidence\u0060, which indicates how confidently Apollo matched the submitted information to a person. Possible values are \u0060high\u0060 and \u0060none\u0060. For standard requests, successfully matched people return \u0060match_confidence: high\u0060, while unmatched entries are returned as \u0060null\u0060. When you use waterfall enrichment, an unmatched result can return \u0060match_confidence: none\u0060.\n\nIf you set \u0060run_waterfall_email\u0060 or \u0060run_waterfall_phone\u0060 to \u0060true\u0060, the response includes a \u0060waterfall\u0060 object instead. Because waterfall enrichment continues asynchronously, \u0060unique_enriched_records\u0060, \u0060missing_records\u0060, and \u0060credits_consumed\u0060 aren\u0027t included in the initial response. \u0060total_requested_enrichments\u0060 is included in both response types.\n\nWhen \u0060run_waterfall_email\u0060 is \u0060true\u0060, the entries in \u0060matches\u0060 also don\u0027t include \u0060email\u0060 or \u0060email_status\u0060. Apollo sends the enriched email data later to your webhook.\n\nKeep the following response fields in mind:\n\n* \u0060unique_enriched_records\u0060 counts the number of distinct people whose enrichment consumed credits. It doesn\u0027t represent the number of people returned in \u0060matches\u0060, so it can be lower than the number of matches or \u00600\u0060 when \u0060matches\u0060 contains results.\n\n* \u0060credits_consumed\u0060 can contain a decimal value depending on your plan\u0027s credit pricing.\n\n* \u0060request_id\u0060 is a signed 64-bit integer and may be negative. Pass the value unchanged when you use the [poll webhook result](ref:poll-webhook-result) endpoint.\n\n* \u0060status\u0060 returns \u0060success\u0060 for a successful \u0060200\u0060 response, even when Apollo doesn\u0027t match every requested person. Use \u0060missing_records\u0060 and \u0060matches\u0060 to review the enrichment results.\n\n### Webhook details\n\n* When using native phone enrichment, the webhook response follows: [Native webhook response details](doc:retrieve-mobile-phone-numbers-for-contacts#webhook-response).\n\n* When using waterfall enrichment, the webhook response follows: [Waterfall webhook response details](doc:enrich-phone-and-email-using-data-waterfall#asynchronous-webhook-response-1).\n\n* You can poll webhook results with the [poll webhook result](ref:poll-webhook-result) endpoint by passing the \u003Ccode\u003Erequest_id\u003C/code\u003E from the bulk people enrichment response.\n\n### Webhook requirements\n\n* **HTTPS Required:** Your endpoint must be publicly accessible over HTTPS.\n\n* **Rate Limiting:** Ensure your webhook endpoint can handle the volume of webhook traffic sent by Apollo.\n\n* **Idempotency:** Apollo may retry webhook calls. Your endpoint should be idempotent to handle duplicate payloads safely.",
         "operationId": "BulkPeopleEnrichment",
         "parameters": [
           {
@@ -916,6 +917,7 @@
                           "headline": "VP of Sales Operations at Apollo",
                           "email": "marcus.ellery@apollo.io",
                           "organization_id": "5e66b6381e05b4008c8331b8",
+                          "match_confidence": "high",
                           "employment_history": [
                             {
                               "_id": "66d8c632580636000195735f",
@@ -27802,23 +27804,23 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "64a7ff0cc4dfae00013df1a5"
+            "example": "672c91d4a7be42000184f2c9"
           },
           "first_name": {
             "type": "string",
-            "example": "Tim"
+            "example": "Jordan"
           },
           "last_name": {
             "type": "string",
-            "example": "Zheng"
+            "example": "Blake"
           },
           "name": {
             "type": "string",
-            "example": "Tim Zheng"
+            "example": "Jordan Blake"
           },
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/in/tim-zheng-677ba010"
+            "example": "http://www.linkedin.com/in/jordan-blake-4a7c21"
           },
           "title": {
             "type": "string",
@@ -27830,7 +27832,7 @@
           },
           "photo_url": {
             "type": "string",
-            "example": "https://static.licdn.com/aero-v1/sc/h/uzfsocwl05iywf1hd7ba3915x"
+            "example": "https://media.licdn.com/dms/image/v2/D5603AQH9vR4tY2wP7k/profile-displayphoto-shrink_200_200"
           },
           "twitter_url": {},
           "github_url": {},
@@ -27843,15 +27845,18 @@
           },
           "headline": {
             "type": "string",
-            "example": "Founder \u0026 CEO at Apollo"
+            "example": "Founder \u0026 CEO at Northstar Analytics"
           },
           "email": {
             "type": "string",
-            "example": "tim@apollo.io"
+            "example": "jordan.blake@northstaranalytics.io"
           },
           "organization_id": {
             "type": "string",
-            "example": "5e66b6381e05b4008c8331b8"
+            "example": "61f2d5a8c40b7200019e4f31"
+          },
+          "match_confidence": {
+            "$ref": "#/components/schemas/PeopleEnrichment200ResponsePersonMatchConfidence"
           },
           "employment_history": {
             "type": "array",
@@ -27873,7 +27878,7 @@
           },
           "contact_id": {
             "type": "string",
-            "example": "664fa05cf8299f0001f90876"
+            "example": "672c95e2d2f1140001aa4c18"
           },
           "contact": {
             "$ref": "#/components/schemas/PeopleEnrichment200ResponsePersonContact"
@@ -27928,19 +27933,19 @@
         "properties": {
           "first_name": {
             "type": "string",
-            "description": "The first name of the person. This is typically used in combination with the \u0060last_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060tim\u0060"
+            "description": "The first name of the person. This is typically used in combination with the \u0060last_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jordan\u0060"
           },
           "last_name": {
             "type": "string",
-            "description": "The last name of the person. This is typically used in combination with the \u0060first_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060zheng\u0060"
+            "description": "The last name of the person. This is typically used in combination with the \u0060first_name\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060blake\u0060"
           },
           "name": {
             "type": "string",
-            "description": "The full name of the person. This will typically be a first name and last name separated by a space.  If you use this parameter, you do not need to use the \u0060first_name\u0060 and \u0060last_name\u0060 parameters. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060tim zheng\u0060"
+            "description": "The full name of the person. This will typically be a first name and last name separated by a space.  If you use this parameter, you do not need to use the \u0060first_name\u0060 and \u0060last_name\u0060 parameters. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jordan blake\u0060"
           },
           "email": {
             "type": "string",
-            "description": "The email address of the person. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060example@email.com\u0060"
+            "description": "The email address of the person. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jordan@ymail.com\u0060"
           },
           "hashed_email": {
             "type": "string",
@@ -27948,7 +27953,7 @@
           },
           "organization_name": {
             "type": "string",
-            "description": "The name of the person\u0027s employer. This can be the current employer or a previous employer. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060apollo\u0060"
+            "description": "The name of the person\u0027s employer. This can be the current employer or a previous employer. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060northstar analytics\u0060"
           },
           "domain": {
             "type": "string",
@@ -27960,7 +27965,7 @@
           },
           "linkedin_url": {
             "type": "string",
-            "description": "The URL for the person\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/in/marcus-ellery-4c2b81de\u0060"
+            "description": "The URL for the person\u0027s LinkedIn profile. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060http://www.linkedin.com/in/jordan-blake-4c2b81de\u0060"
           }
         }
       },
@@ -28061,6 +28066,9 @@
           "organization_id": {
             "type": "string",
             "example": "5e66b6381e05b4008c8331b8"
+          },
+          "match_confidence": {
+            "$ref": "#/components/schemas/BulkPeopleEnrichment200ResponseMatchesItemMatchConfidence"
           },
           "employment_history": {
             "type": "array",
@@ -36078,7 +36086,7 @@
         "properties": {
           "_id": {
             "type": "string",
-            "example": "66d7af8c200cad0001404c1f"
+            "example": "672c93a1b8df4e0001f732a1"
           },
           "created_at": {},
           "current": {
@@ -36095,11 +36103,11 @@
           "major": {},
           "organization_id": {
             "type": "string",
-            "example": "5e66b6381e05b4008c8331b8"
+            "example": "61f2d5a8c40b7200019e4f31"
           },
           "organization_name": {
             "type": "string",
-            "example": "Apollo"
+            "example": "Northstar Analytics"
           },
           "raw_address": {},
           "start_date": {
@@ -36113,11 +36121,11 @@
           "updated_at": {},
           "id": {
             "type": "string",
-            "example": "66d7af8c200cad0001404c1f"
+            "example": "672c93a1b8df4e0001f732a1"
           },
           "key": {
             "type": "string",
-            "example": "66d7af8c200cad0001404c1f"
+            "example": "672c93a1b8df4e0001f732a1"
           }
         }
       },
@@ -36133,45 +36141,45 @@
           },
           "id": {
             "type": "string",
-            "example": "664fa05cf8299f0001f90876"
+            "example": "672c95e2d2f1140001aa4c18"
           },
           "first_name": {
             "type": "string",
-            "example": "Roy"
+            "example": "Casey"
           },
           "last_name": {
             "type": "string",
-            "example": "Chung"
+            "example": "Morgan"
           },
           "name": {
             "type": "string",
-            "example": "Roy Chung"
+            "example": "Casey Morgan"
           },
           "linkedin_url": {
             "type": "string",
-            "example": "http://www.linkedin.com/in/tim-zheng-677ba010"
+            "example": "http://www.linkedin.com/in/jordan-blake-4a7c21"
           },
           "title": {
             "type": "string",
-            "example": "Reaching Peak Potential \uD83D\uDCAA\u26F0\uFE0F\uD83D\uDCC8\uD83E\uDDEA\uFE0F | President"
+            "example": "President"
           },
           "contact_stage_id": {
             "type": "string",
-            "example": "6095a710bd01d100a506d4ae"
+            "example": "61f2da03c40b7200019e4f50"
           },
           "owner_id": {},
           "creator_id": {
             "type": "string",
-            "example": "66302798d03b9601c7934ec2"
+            "example": "672c9613d2f1140001aa4c22"
           },
           "person_id": {
             "type": "string",
-            "example": "64a7ff0cc4dfae00013df1a5"
+            "example": "672c91d4a7be42000184f2c9"
           },
           "email_needs_tickling": {},
           "organization_name": {
             "type": "string",
-            "example": "Apollo.io"
+            "example": "Northstar Analytics"
           },
           "source": {
             "type": "string",
@@ -36183,11 +36191,11 @@
           },
           "organization_id": {
             "type": "string",
-            "example": "5e66b6381e05b4008c8331b8"
+            "example": "61f2d5a8c40b7200019e4f31"
           },
           "headline": {
             "type": "string",
-            "example": "Reaching Peak Potential \uD83D\uDCAA\u26F0\uFE0F\uD83D\uDCC8\uD83E\uDDEA\uFE0F | President at FRC"
+            "example": "President at Northstar Analytics"
           },
           "photo_url": {},
           "present_raw_address": {
@@ -36226,7 +36234,7 @@
           "email_source": {},
           "account_id": {
             "type": "string",
-            "example": "6658955877a2f20001c648ac"
+            "example": "672c964bd2f1140001aa4c2f"
           },
           "last_activity_date": {},
           "hubspot_vid": {},
@@ -36234,7 +36242,7 @@
           "crm_id": {},
           "sanitized_phone": {
             "type": "string",
-            "example": "\u002B11235550158"
+            "example": "\u002B14155550158"
           },
           "merged_crm_ids": {},
           "updated_at": {
@@ -36267,7 +36275,7 @@
           },
           "email": {
             "type": "string",
-            "example": "roy@apollo.io"
+            "example": "casey.morgan@northstaranalytics.io"
           },
           "email_from_customer": {
             "type": "boolean",
@@ -36334,15 +36342,15 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "5e66b6381e05b4008c8331b8"
+            "example": "61f2d5a8c40b7200019e4f31"
           },
           "name": {
             "type": "string",
-            "example": "Apollo.io"
+            "example": "Northstar Analytics"
           },
           "website_url": {
             "type": "string",
-            "example": "http://www.apollo.io"
+            "example": "https://www.northstaranalytics.io"
           },
           "blog_url": {},
           "angellist_url": {},
@@ -36387,12 +36395,12 @@
           "publicly_traded_exchange": {},
           "logo_url": {
             "type": "string",
-            "example": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/79049be00ff8e398b5935de8/picture"
+            "example": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/84acb173f920c1e65a47d920/picture"
           },
           "crunchbase_url": {},
           "primary_domain": {
             "type": "string",
-            "example": "apollo.io"
+            "example": "northstaranalytics.io"
           },
           "industry": {
             "type": "string",
@@ -36408,7 +36416,7 @@
           "estimated_num_employees": {
             "type": "integer",
             "default": 0,
-            "example": 1600
+            "example": 850
           },
           "industries": {
             "type": "array",
@@ -36431,7 +36439,7 @@
           },
           "industry_tag_id": {
             "type": "string",
-            "example": "5567cd4773696439b10b0000"
+            "example": "61f2dbc2c40b7200019e4f61"
           },
           "industry_tag_hash": {
             "$ref": "#/components/schemas/PeopleEnrichment200ResponsePersonOrganizationIndustryTagHash"
@@ -36443,7 +36451,7 @@
           },
           "raw_address": {
             "type": "string",
-            "example": "415 Mission St, Floor 37, San Francisco, California 94105, US"
+            "example": "220 Market St, Floor 12, San Francisco, California 94105, US"
           },
           "street_address": {
             "type": "string",
@@ -36468,11 +36476,11 @@
           "owned_by_organization_id": {},
           "seo_description": {
             "type": "string",
-            "example": "Search, engage, and convert over 240 million contacts at over 30 million companies with Apollo\u0027s sales intelligence and engagement platform."
+            "example": "Northstar Analytics provides sales intelligence and engagement software for modern revenue teams."
           },
           "short_description": {
             "type": "string",
-            "example": "Apollo.io combines a buyer database of over 270M contacts and powerful sales engagement and automation tools in one, easy to use platform. Trusted by over 160,000 companies including Autodesk, Rippling, Deel, Jasper.ai, Divvy, and Heap, Apollo has more than one million users globally. By helping sales professionals find their ideal buyers and intelligently automate outreach, Apollo helps go-to-market teams sell anything.\n\nCelebrating a $100M Series D Funding Round \uD83E\uDD84"
+            "example": "Northstar Analytics combines business data, sales engagement, and automation tools in one platform. Revenue teams use Northstar Analytics to identify prospective buyers, personalize outreach, and manage sales workflows at scale.\n\nThe company serves customers across software, financial services, and professional services."
           },
           "suborganizations": {
             "type": "array",
@@ -36488,21 +36496,21 @@
           },
           "annual_revenue_printed": {
             "type": "string",
-            "example": "100M"
+            "example": "85M"
           },
           "annual_revenue": {
             "type": "integer",
             "default": 0,
-            "example": 100000000
+            "example": 85000000
           },
           "total_funding": {
             "type": "integer",
             "default": 0,
-            "example": 251200000
+            "example": 142000000
           },
           "total_funding_printed": {
             "type": "string",
-            "example": "251.2M"
+            "example": "142M"
           },
           "latest_funding_round_date": {
             "type": "string",
@@ -36535,7 +36543,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "example": "652fc57e2802bf00010c52f8"
+              "example": "672c9709d2f1140001aa4c41"
             }
           },
           "org_chart_sector": {
@@ -41398,15 +41406,15 @@
         "properties": {
           "email": {
             "type": "string",
-            "example": "roy@apollo.iorrr"
+            "example": "casey.morgan@northstaranalytics.io"
           },
           "email_md5": {
             "type": "string",
-            "example": "879440a4afe6515e2de11dd7c531b770"
+            "example": "9f3b7c2d481a5e6f0d4c8b1a2e7f9c30"
           },
           "email_sha256": {
             "type": "string",
-            "example": "d445592892011f8539d5e92394929dfda7936867c21000b21788be8a46aa73d9"
+            "example": "a6c79e4f2b310d9581f67ac3e4d89b20174f5c6a9d3e2b810f7c4a56e93d128b"
           },
           "email_status": {
             "type": "string",
@@ -41437,11 +41445,11 @@
         "properties": {
           "raw_number": {
             "type": "string",
-            "example": "(123) 555-0158"
+            "example": "(415) 555-0158"
           },
           "sanitized_number": {
             "type": "string",
-            "example": "\u002B11235550158"
+            "example": "\u002B14155550158"
           },
           "type": {},
           "position": {
@@ -41466,7 +41474,7 @@
         "properties": {
           "information technology \u0026 services": {
             "type": "string",
-            "example": "5567cd4773696439b10b0000"
+            "example": "61f2dbc2c40b7200019e4f61"
           }
         }
       },
@@ -41475,7 +41483,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "6574c1ff9b797d0001fdab1b"
+            "example": "672c978cd2f1140001aa4c51"
           },
           "date": {
             "type": "string",
@@ -41488,11 +41496,11 @@
           },
           "investors": {
             "type": "string",
-            "example": "Bain Capital Ventures, Sequoia Capital, Tribe Capital, Nexus Venture Partners"
+            "example": "Crestline Ventures, Summit Ridge Capital, Harbor Peak Ventures, Northgate Ventures"
           },
           "amount": {
             "type": "string",
-            "example": "100M"
+            "example": "85M"
           },
           "currency": {
             "type": "string",
@@ -43910,6 +43918,39 @@
           ]
         }
       },
+      "PeopleEnrichment200ResponsePersonMatchConfidence": {
+        "enum": [
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "high",
+        "x-ms-enum": {
+          "name": "PeopleEnrichment200ResponsePersonMatchConfidence",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "high",
+              "name": "High"
+            },
+            {
+              "value": "medium",
+              "name": "Medium"
+            },
+            {
+              "value": "low",
+              "name": "Low"
+            },
+            {
+              "value": "none",
+              "name": "None"
+            }
+          ]
+        }
+      },
       "BulkPeopleEnrichment200ResponsePhoneEnrichmentStatus": {
         "enum": [
           "pending",
@@ -43930,6 +43971,29 @@
             {
               "value": "skipped",
               "name": "Skipped"
+            }
+          ]
+        }
+      },
+      "BulkPeopleEnrichment200ResponseMatchesItemMatchConfidence": {
+        "enum": [
+          "high",
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "high",
+        "x-ms-enum": {
+          "name": "BulkPeopleEnrichment200ResponseMatchesItemMatchConfidence",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "high",
+              "name": "High"
+            },
+            {
+              "value": "none",
+              "name": "None"
             }
           ]
         }

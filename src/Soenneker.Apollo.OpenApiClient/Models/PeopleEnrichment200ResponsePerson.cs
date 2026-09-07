@@ -146,6 +146,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LinkedinUrl { get; set; }
 #endif
+        /// <summary>The match_confidence property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonMatchConfidence? MatchConfidence { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -268,6 +270,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "is_likely_to_engage", n => { IsLikelyToEngage = n.GetBoolValue(); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
+                { "match_confidence", n => { MatchConfidence = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonMatchConfidence>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganization>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganization.CreateFromDiscriminatorValue); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
@@ -306,6 +309,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("is_likely_to_engage", IsLikelyToEngage);
             writer.WriteStringValue("last_name", LastName);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
+            writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonMatchConfidence>("match_confidence", MatchConfidence);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganization>("organization", Organization);
             writer.WriteStringValue("organization_id", OrganizationId);

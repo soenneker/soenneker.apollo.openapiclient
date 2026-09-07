@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Domain { get; set; }
 #endif
-        /// <summary>The email address of the person. &lt;br&gt;&lt;br&gt;Example: `example@email.com`</summary>
+        /// <summary>The email address of the person. &lt;br&gt;&lt;br&gt;Example: `jordan@ymail.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>The first name of the person. This is typically used in combination with the `last_name` parameter. &lt;br&gt;&lt;br&gt;Example: `tim`</summary>
+        /// <summary>The first name of the person. This is typically used in combination with the `last_name` parameter. &lt;br&gt;&lt;br&gt;Example: `jordan`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FirstName { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The last name of the person. This is typically used in combination with the `first_name` parameter. &lt;br&gt;&lt;br&gt;Example: `zheng`</summary>
+        /// <summary>The last name of the person. This is typically used in combination with the `first_name` parameter. &lt;br&gt;&lt;br&gt;Example: `blake`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastName { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>The URL for the person&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/in/marcus-ellery-4c2b81de`</summary>
+        /// <summary>The URL for the person&apos;s LinkedIn profile. &lt;br&gt;&lt;br&gt;Example: `http://www.linkedin.com/in/jordan-blake-4c2b81de`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LinkedinUrl { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LinkedinUrl { get; set; }
 #endif
-        /// <summary>The full name of the person. This will typically be a first name and last name separated by a space.  If you use this parameter, you do not need to use the `first_name` and `last_name` parameters. &lt;br&gt;&lt;br&gt;Example: `tim zheng`</summary>
+        /// <summary>The full name of the person. This will typically be a first name and last name separated by a space.  If you use this parameter, you do not need to use the `first_name` and `last_name` parameters. &lt;br&gt;&lt;br&gt;Example: `jordan blake`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The name of the person&apos;s employer. This can be the current employer or a previous employer. &lt;br&gt;&lt;br&gt;Example: `apollo`</summary>
+        /// <summary>The name of the person&apos;s employer. This can be the current employer or a previous employer. &lt;br&gt;&lt;br&gt;Example: `northstar analytics`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrganizationName { get; set; }
