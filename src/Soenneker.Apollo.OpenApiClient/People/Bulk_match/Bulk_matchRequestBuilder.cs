@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.People.Bulk_match
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Bulk_matchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/people/bulk_match{?reveal_personal_emails*,reveal_phone_number*,run_waterfall_email*,run_waterfall_phone*,webhook_url*}", pathParameters)
+        public Bulk_matchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/people/bulk_match{?poll_only*,reveal_personal_emails*,reveal_phone_number*,run_waterfall_email*,run_waterfall_phone*,webhook_url*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.People.Bulk_match
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Bulk_matchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/people/bulk_match{?reveal_personal_emails*,reveal_phone_number*,run_waterfall_email*,run_waterfall_phone*,webhook_url*}", rawUrl)
+        public Bulk_matchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/people/bulk_match{?poll_only*,reveal_personal_emails*,reveal_phone_number*,run_waterfall_email*,run_waterfall_phone*,webhook_url*}", rawUrl)
         {
         }
         /// <summary>
@@ -97,6 +97,9 @@ namespace Soenneker.Apollo.OpenApiClient.People.Bulk_match
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Bulk_matchRequestBuilderPostQueryParameters 
         {
+            /// <summary>Set to `true` to receive phone or waterfall enrichment results by polling instead of a webhook. When `poll_only` is `true`, omit `webhook_url` — Apollo returns a `request_id` you can pass to the &lt;a href=&quot;https://docs.apollo.io/reference/poll-webhook-result&quot;&gt;poll webhook result&lt;/a&gt; endpoint to retrieve the result. &lt;br&gt;&lt;br&gt;Passing `poll_only=true` together with `webhook_url` returns a `400` error (`WEBHOOK_URL_WITH_POLL_ONLY`). The default value is `false`.</summary>
+            [QueryParameter("poll_only")]
+            public bool? PollOnly { get; set; }
             /// <summary>Set to `true` if you want to enrich all matched people with personal emails. This potentially consumes credits as part of your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot; target=&quot;_blank&quot;&gt;Apollo pricing plan&lt;/a&gt;. The default value is `false`. &lt;br&gt;&lt;br&gt;If a person resides in a &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409141087757&quot; target=&quot;_blank&quot;&gt;GDPR&lt;/a&gt;-compliant region, Apollo will not reveal their personal email.</summary>
             [QueryParameter("reveal_personal_emails")]
             public bool? RevealPersonalEmails { get; set; }
@@ -109,7 +112,7 @@ namespace Soenneker.Apollo.OpenApiClient.People.Bulk_match
             /// <summary>Set to true to enable phone waterfall enrichment</summary>
             [QueryParameter("run_waterfall_phone")]
             public bool? RunWaterfallPhone { get; set; }
-            /// <summary>If you set the `reveal_phone_number` parameter to `true`, this parameter becomes mandatory. Otherwise, do not use this parameter. &lt;br&gt;&lt;br&gt;Enter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. &lt;br&gt;&lt;br&gt;If phone numbers are not revealed delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. &lt;br&gt;&lt;br&gt;Example: `https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610`; `https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610`</summary>
+            /// <summary>If you set the `reveal_phone_number` parameter to `true`, this parameter becomes mandatory. Otherwise, do not use this parameter. &lt;br&gt;&lt;br&gt;Enter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. &lt;br&gt;&lt;br&gt;If phone numbers are not revealed delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. &lt;br&gt;&lt;br&gt;Example: `https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610`; `https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610`&lt;br&gt;&lt;br&gt;Do not use this parameter together with `poll_only=true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("webhook_url")]

@@ -23,7 +23,7 @@
           "Enrichment"
         ],
         "summary": "People enrichment",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/people/match\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060people_match\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601\u20139 credits per person\u0060 without waterfall enrichment\n\nCredits are charged only if credit-consuming data is found: 1 credit for demographics or email, plus 8 credits if a mobile phone is returned. If no credit-consuming data is found, the request consumes 0 credits. Demographic credit usage depends on \u0060match_confidence\u0060. Apollo doesn\u0027t charge a demographic credit when \u0060match_confidence\u0060 is \u0060none\u0060. Email and mobile phone credit usage isn\u0027t determined by \u0060match_confidence\u0060. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nIf waterfall enrichment is used for phone or email, credit usage depends on the returned data and the vendors included in your [waterfall enrichment configuration](https://knowledge.apollo.io/hc/en-us/articles/34071121664781-Use-Waterfall-Enrichment); some vendors consume credits per lookup even when no data is found.\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the people enrichment endpoint to enrich data for one person. To enrich data for up to ten people with a single API call, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EApollo relies on the information you pass via the endpoint\u0027s parameters to identify the correct person to enrich. If you provide more information about a person, Apollo is more likely to find a match within its database. If you only provide general information, such as a name without a domain or email address, you might receive a \u0060200\u0060 response, but the response indicates that no records have been enriched. Check \u0060match_confidence\u0060 in the response to understand how confidently Apollo matched the submitted information:\n\n- \u0060high\u0060: Apollo matched the information to a person record.\n- \u0060medium\u0060: Apollo identified a likely person using additional contact data.\n- \u0060low\u0060: Apollo couldn\u0027t match a complete person record, but returned person data assembled from available contact data.\n- \u0060none\u0060: Apollo couldn\u0027t identify a matching person.\u003Cbr\u003E\u003Cbr\u003EBy default, this endpoint doesn\u0027t return personal emails or phone numbers. Use the \u0060reveal_personal_emails\u0060 and \u0060reveal_phone_number\u0060 parameters to retrieve emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you use \u0060reveal_phone_number\u0060, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed phone enrichment results. Apollo returns the main enrichment response synchronously, then sends the requested phone numbers to the webhook asynchronously. [See webhook details](#webhook-details).\u003Cbr\u003E\u003Cbr\u003EYou can also use the \u0060run_waterfall_email\u0060 and \u0060run_waterfall_phone\u0060 parameters to run waterfall enrichment via this endpoint. [Waterfall enrichment](https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview) gives you broader data coverage by checking connected third-party data sources for contact emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you call this endpoint and include at least one waterfall parameter, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed waterfall enrichment results. Apollo returns an immediate synchronous response with demographic and firmographic data, along with a waterfall enrichment request status. Apollo then delivers enriched emails or phone numbers asynchronously to the configured webhook.\n\n### Webhook Details\n\n- When using Apollo enrichment for phone number reveal, the webhook response follows: [Native webhook response details](doc:retrieve-mobile-phone-numbers-for-contacts#webhook-response).\n\n- When using waterfall enrichment, the webhook response follows: [Waterfall webhook response details](doc:enrich-phone-and-email-using-data-waterfall#asynchronous-webhook-response-1).\n\n- You can poll webhook results with the [poll webhook result](doc:poll-webhook-result) endpoint by passing the \u003Ccode\u003Erequest_id\u003C/code\u003E from the people enrichment response.\n\n### Webhook Requirements\n\n- **HTTPS Required:** Your endpoint must be publicly accessible over HTTPS.\n\n- **Rate Limiting:** Ensure your webhook endpoint can handle the volume of webhook traffic sent by Apollo.\n\n- **Idempotency:** Apollo may retry webhook calls; your endpoint should be idempotent to handle duplicate payloads safely.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/people/match\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060people_match\u0060\n\n**Free account access:** Requires an Apollo account registered with a work email address. Paid accounts aren\u0027t affected.\n\n**Credit usage:** \u00601\u20139 credits per person\u0060 without waterfall enrichment\n\nCredits are charged only if credit-consuming data is found: 1 credit for demographics or email, plus 8 credits if a mobile phone is returned. If no credit-consuming data is found, the request consumes 0 credits. Demographic credit usage depends on \u0060match_confidence\u0060. Apollo doesn\u0027t charge a demographic credit when \u0060match_confidence\u0060 is \u0060none\u0060. Email and mobile phone credit usage isn\u0027t determined by \u0060match_confidence\u0060. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nIf waterfall enrichment is used for phone or email, credit usage depends on the returned data and the vendors included in your [waterfall enrichment configuration](https://knowledge.apollo.io/hc/en-us/articles/34071121664781-Use-Waterfall-Enrichment); some vendors consume credits per lookup even when no data is found.\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/33699917233293-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003EEnrichment\u003C/a\u003E is when you refresh existing records so your prospecting data is up-to-date.\u003Cbr\u003E\u003Cbr\u003EUse the people enrichment endpoint to enrich data for one person. To enrich data for up to ten people with a single API call, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E instead.\u003Cbr\u003E\u003Cbr\u003EApollo relies on the information you pass via the endpoint\u0027s parameters to identify the correct person to enrich. If you provide more information about a person, Apollo is more likely to find a match within its database. If you only provide general information, such as a name without a domain or email address, you might receive a \u0060200\u0060 response, but the response indicates that no records have been enriched. Check \u0060match_confidence\u0060 in the response to understand how confidently Apollo matched the submitted information:\n\n- \u0060high\u0060: Apollo matched the information to a person record.\n- \u0060medium\u0060: Apollo identified a likely person using additional contact data.\n- \u0060low\u0060: Apollo couldn\u0027t match a complete person record, but returned person data assembled from available contact data.\n- \u0060none\u0060: Apollo couldn\u0027t identify a matching person.\u003Cbr\u003E\u003Cbr\u003EBy default, this endpoint doesn\u0027t return personal emails or phone numbers. Use the \u0060reveal_personal_emails\u0060 and \u0060reveal_phone_number\u0060 parameters to retrieve emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you use \u0060reveal_phone_number\u0060, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed phone enrichment results. Apollo returns the main enrichment response synchronously, then sends the requested phone numbers to the webhook asynchronously. [See webhook details](#webhook-details).\u003Cbr\u003E\u003Cbr\u003EYou can also use the \u0060run_waterfall_email\u0060 and \u0060run_waterfall_phone\u0060 parameters to run waterfall enrichment via this endpoint. [Waterfall enrichment](https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview) gives you broader data coverage by checking connected third-party data sources for contact emails and phone numbers.\u003Cbr\u003E\u003Cbr\u003EWhen you call this endpoint and include at least one waterfall parameter, a valid \u0060webhook_url\u0060 is required so Apollo can deliver the completed waterfall enrichment results. Apollo returns an immediate synchronous response with demographic and firmographic data, along with a waterfall enrichment request status. Apollo then delivers enriched emails or phone numbers asynchronously to the configured webhook.\n\n### Webhook Details\n\n- When using Apollo enrichment for phone number reveal, the webhook response follows: [Native webhook response details](doc:retrieve-mobile-phone-numbers-for-contacts#webhook-response).\n\n- When using waterfall enrichment, the webhook response follows: [Waterfall webhook response details](doc:enrich-phone-and-email-using-data-waterfall#asynchronous-webhook-response-1).\n\n- You can poll webhook results with the [poll webhook result](ref:poll-webhook-result) endpoint by passing the \u003Ccode\u003Erequest_id\u003C/code\u003E from the people enrichment response.\n\n### Webhook Requirements\n\n- **HTTPS Required:** Your endpoint must be publicly accessible over HTTPS.\n\n- **Rate Limiting:** Ensure your webhook endpoint can handle the volume of webhook traffic sent by Apollo.\n\n- **Idempotency:** Apollo may retry webhook calls; your endpoint should be idempotent to handle duplicate payloads safely.",
         "operationId": "PeopleEnrichment",
         "parameters": [
           {
@@ -137,9 +137,18 @@
           {
             "name": "webhook_url",
             "in": "query",
-            "description": "If you set the \u0060reveal_phone_number\u0060 parameter to \u0060true\u0060, this parameter becomes mandatory. Otherwise, do not use this parameter. \u003Cbr\u003E\u003Cbr\u003EEnter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. \u003Cbr\u003E\u003Cbr\u003EIf phone numbers are not delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060; \u0060https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060",
+            "description": "If you set the \u0060reveal_phone_number\u0060 parameter to \u0060true\u0060, this parameter becomes mandatory. Otherwise, do not use this parameter. \u003Cbr\u003E\u003Cbr\u003EEnter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. \u003Cbr\u003E\u003Cbr\u003EIf phone numbers are not delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060; \u0060https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060\u003Cbr\u003E\u003Cbr\u003EDo not use this parameter together with \u0060poll_only=true\u0060.",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "poll_only",
+            "in": "query",
+            "description": "Set to \u0060true\u0060 to receive phone or waterfall enrichment results by polling instead of a webhook. When \u0060poll_only\u0060 is \u0060true\u0060, omit \u0060webhook_url\u0060 \u2014 Apollo returns a \u0060request_id\u0060 you can pass to the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result\u003C/a\u003E endpoint to retrieve the result. \u003Cbr\u003E\u003Cbr\u003EPassing \u0060poll_only=true\u0060 together with \u0060webhook_url\u0060 returns a \u0060400\u0060 error (\u0060WEBHOOK_URL_WITH_POLL_ONLY\u0060). The default value is \u0060false\u0060.",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           }
         ],
@@ -753,6 +762,35 @@
               }
             }
           },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeopleEnrichment400Response"
+                },
+                "examples": {
+                  "poll_only with webhook_url": {
+                    "value": {
+                      "error": "Do not pass \u0027webhook_url\u0027 with poll_only=true",
+                      "error_details": {
+                        "code": "SEARCH.VALIDATION.WEBHOOK_URL_WITH_POLL_ONLY",
+                        "message": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only).",
+                        "suggestions": [
+                          {
+                            "label": "Retry with poll_only=true and no webhook_url, then poll the webhook_result endpoint",
+                            "url": "https://docs.apollo.io/reference/people-enrichment",
+                            "parameter": "poll_only"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "401": {
             "description": "401",
             "content": {
@@ -837,9 +875,18 @@
           {
             "name": "webhook_url",
             "in": "query",
-            "description": "If you set the \u0060reveal_phone_number\u0060 parameter to \u0060true\u0060, this parameter becomes mandatory. Otherwise, do not use this parameter. \u003Cbr\u003E\u003Cbr\u003EEnter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. \u003Cbr\u003E\u003Cbr\u003EIf phone numbers are not revealed delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060; \u0060https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060",
+            "description": "If you set the \u0060reveal_phone_number\u0060 parameter to \u0060true\u0060, this parameter becomes mandatory. Otherwise, do not use this parameter. \u003Cbr\u003E\u003Cbr\u003EEnter the webhook URL that specifies where Apollo should send a JSON response that includes the phone number you requested. Apollo suggests testing this flow to ensure you receive the separate response with the phone number. \u003Cbr\u003E\u003Cbr\u003EIf phone numbers are not revealed delivered to the webhook URL, try applying UTF-8 encoding to the webhook URL. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060https://webhook.site/11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060; \u0060https%3A%2F%2Fwebhook.site%2F11f2643a-b1b4-c6be-8e6a-6c7da2c12610\u0060\u003Cbr\u003E\u003Cbr\u003EDo not use this parameter together with \u0060poll_only=true\u0060.",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "poll_only",
+            "in": "query",
+            "description": "Set to \u0060true\u0060 to receive phone or waterfall enrichment results by polling instead of a webhook. When \u0060poll_only\u0060 is \u0060true\u0060, omit \u0060webhook_url\u0060 \u2014 Apollo returns a \u0060request_id\u0060 you can pass to the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result\u003C/a\u003E endpoint to retrieve the result. \u003Cbr\u003E\u003Cbr\u003EPassing \u0060poll_only=true\u0060 together with \u0060webhook_url\u0060 returns a \u0060400\u0060 error (\u0060WEBHOOK_URL_WITH_POLL_ONLY\u0060). The default value is \u0060false\u0060.",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           }
         ],
@@ -2111,6 +2158,11 @@
                       "status": "failed",
                       "error_code": "RECORD_LIMIT_EXCEEDED",
                       "error_message": "cannot enrich more than 10 in a single request"
+                    }
+                  },
+                  "poll_only with webhook_url": {
+                    "value": {
+                      "error": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only)."
                     }
                   }
                 }
@@ -22493,6 +22545,18 @@
           }
         }
       },
+      "PeopleEnrichment400Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Do not pass \u0027webhook_url\u0027 with poll_only=true"
+          },
+          "error_details": {
+            "$ref": "#/components/schemas/PeopleEnrichment400ResponseErrorDetails"
+          }
+        }
+      },
       "PeopleEnrichment429Response": {
         "type": "object",
         "properties": {
@@ -22592,6 +22656,9 @@
           },
           {
             "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponseMoreThan10People"
+          },
+          {
+            "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponsePollOnlyWithWebhookUrl"
           }
         ],
         "properties": {
@@ -22606,6 +22673,10 @@
           "error_message": {
             "type": "string",
             "example": "invalid request, missing details"
+          },
+          "error": {
+            "type": "string",
+            "example": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only)."
           }
         }
       },
@@ -27328,6 +27399,16 @@
           }
         }
       },
+      "BulkPeopleEnrichment400ResponsePollOnlyWithWebhookUrl": {
+        "title": "poll_only with webhook_url",
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only)."
+          }
+        }
+      },
       "BulkPeopleEnrichment422ResponseOneOf1": {
         "type": "object",
         "properties": {
@@ -27925,6 +28006,27 @@
           "seniority": {
             "type": "string",
             "example": "founder"
+          }
+        }
+      },
+      "PeopleEnrichment400ResponseErrorDetails": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "example": "SEARCH.VALIDATION.WEBHOOK_URL_WITH_POLL_ONLY"
+          },
+          "message": {
+            "type": "string"
+          },
+          "suggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PeopleEnrichment400ResponseErrorDetailsSuggestionsItem"
+            }
+          },
+          "context": {
+            "$ref": "#/components/schemas/PeopleEnrichment400ResponseErrorDetailsContext"
           }
         }
       },
@@ -36561,6 +36663,12 @@
             "example": true
           }
         }
+      },
+      "PeopleEnrichment400ResponseErrorDetailsSuggestionsItem": {
+        "type": "object"
+      },
+      "PeopleEnrichment400ResponseErrorDetailsContext": {
+        "type": "object"
       },
       "BulkPeopleEnrichment200ResponseWaterfallUnprocessedAttributesItem": {
         "type": "object"
