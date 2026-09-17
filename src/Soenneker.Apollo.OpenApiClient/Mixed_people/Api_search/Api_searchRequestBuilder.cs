@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_searchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", pathParameters)
+        public Api_searchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_searchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", rawUrl)
+        public Api_searchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", rawUrl)
         {
         }
         /// <summary>
@@ -139,6 +139,35 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             /// <summary>This parameter determines whether people with job titles similar to the titles you define in the `person_titles[]` parameter are returned in the response. &lt;br&gt;&lt;br&gt;Set this parameter to `false` when using `person_titles[]` to return only strict matches for job titles.</summary>
             [QueryParameter("include_similar_titles")]
             public bool? IncludeSimilarTitles { get; set; }
+            /// <summary>The Apollo IDs of the companies you want to use as lookalike seeds. Results are narrowed to people who work at companies similar to the ones you pass, and people at the seed companies themselves are excluded. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot;&gt;organization search&lt;/a&gt; endpoint and use the `id` value of each entry in the `organizations` array it returns. &lt;br&gt;&lt;br&gt;Note the singular `organization` in the parameter name. &lt;br&gt;&lt;br&gt;You can pass a maximum of five seed companies. Sending more returns a validation error. &lt;br&gt;&lt;br&gt;If Apollo holds no lookalike data for a seed company, this filter returns no results rather than falling back to an unfiltered search, so an empty response can mean the seed is unusable rather than that no people match. If that happens, try a different or better-known seed company. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("lookalike_organization_ids%5B%5D")]
+            public string[]? LookalikeOrganizationIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("lookalike_organization_ids%5B%5D")]
+            public string[] LookalikeOrganizationIds { get; set; }
+#endif
+            /// <summary>Exclude people whose current employer matches any of these company domains. This is the counterpart to `q_organization_domains_list[]`. &lt;br&gt;&lt;br&gt;Matching covers every domain Apollo holds for a company, not just the one you send, so excluding a single domain also excludes that company&apos;s other known domains. &lt;br&gt;&lt;br&gt;Values are reduced to a domain before matching, so a bare domain, a full URL, or an email address at that domain all work. &lt;br&gt;&lt;br&gt;Use this parameter to keep companies you already work with, or have already contacted, out of your results without retrieving and enriching them first. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `salesforce.com`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_organization_websites_list%5B%5D")]
+            public string[]? NotOrganizationWebsitesList { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_organization_websites_list%5B%5D")]
+            public string[] NotOrganizationWebsitesList { get; set; }
+#endif
+            /// <summary>The trailing window, in months, used to measure the headcount growth of the person&apos;s current employer. &lt;br&gt;&lt;br&gt;Only `6`, `12`, and `24` are accepted. Any other value is ignored. &lt;br&gt;&lt;br&gt;This parameter has no effect on its own. To filter by headcount growth, send it together with `organization_headcount_growth_range[min]`, `organization_headcount_growth_range[max]`, or both. If you send a window without a range, or a range without a window, the headcount growth filter is skipped and your results come back unfiltered. &lt;br&gt;&lt;br&gt;Example: `6`</summary>
+            [QueryParameter("organization_headcount_growth_past_n_months")]
+            public int? OrganizationHeadcountGrowthPastNMonths { get; set; }
+            /// <summary>The maximum headcount growth at the person&apos;s current employer, as a percentage, over the window set by `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Enter the percentage as a whole number, without a percent sign or decimal point: use `100` for 100% growth. &lt;br&gt;&lt;br&gt;Use `organization_headcount_growth_range[min]` to set the lower bound of the range. You must also send `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Examples: `100`; `250`</summary>
+            [QueryParameter("organization_headcount_growth_range%5Bmax%5D")]
+            public int? OrganizationHeadcountGrowthRangemax { get; set; }
+            /// <summary>The minimum headcount growth at the person&apos;s current employer, as a percentage, over the window set by `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Enter the percentage as a whole number, without a percent sign or decimal point: use `10` for 10% growth. This is a lower bound, so sending a minimum on its own returns every match at or above that figure. Negative values are accepted, but `-20` alone still includes flat and growing employers, because everything above -20% also matches. To isolate employers that shrank, pair a negative minimum with a negative maximum, such as a minimum of `-20` and a maximum of `-1`. &lt;br&gt;&lt;br&gt;Use `organization_headcount_growth_range[max]` to set the upper bound of the range. You must also send `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Examples: `10`; `50`</summary>
+            [QueryParameter("organization_headcount_growth_range%5Bmin%5D")]
+            public int? OrganizationHeadcountGrowthRangemin { get; set; }
             /// <summary>The Apollo IDs for the companies (employers) you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-search&quot; target=&quot;_blank&quot;&gt;organization search endpoint&lt;/a&gt; and identify the values for `organization_id`.  &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

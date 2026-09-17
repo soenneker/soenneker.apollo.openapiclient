@@ -15,13 +15,22 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The error_code property</summary>
+        /// <summary>Legacy error field. Removed on 2027-02-16, after which `error_details` is the only error payload.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ErrorCode { get; set; }
 #nullable restore
 #else
         public string ErrorCode { get; set; }
+#endif
+        /// <summary>Machine-readable detail for an error that uses the new format, returned alongside the endpoint&apos;s existing error fields. The legacy error fields at the root level (`error`, `error_code`, `message`, etc) are removed on 2027-02-16, after which `error_details` is the only error payload. Some errors already return `error_details` on its own.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Apollo.OpenApiClient.Models.ErrorDetails? ErrorDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Apollo.OpenApiClient.Models.ErrorDetails ErrorDetails { get; set; }
 #endif
         /// <summary>The error message returned by the failed enrichment operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,6 +76,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error_code", n => { ErrorCode = n.GetStringValue(); } },
+                { "error_details", n => { ErrorDetails = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ErrorDetails>(global::Soenneker.Apollo.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue); } },
                 { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
@@ -79,6 +89,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error_code", ErrorCode);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ErrorDetails>("error_details", ErrorDetails);
             writer.WriteStringValue("error_message", ErrorMessage);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);

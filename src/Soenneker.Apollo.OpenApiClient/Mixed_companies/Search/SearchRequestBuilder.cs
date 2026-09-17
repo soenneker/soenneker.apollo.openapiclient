@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", rawUrl)
         {
         }
         /// <summary>
@@ -116,6 +116,35 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             /// <summary>The earliest date when the company received its most recent funding round. Use this parameter in combination with `latest_funding_date_range[max]` to set a date range for when the company received its most recent funding round. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("latest_funding_date_range%5Bmin%5D")]
             public Date? LatestFundingDateRangemin { get; set; }
+            /// <summary>The Apollo IDs of the companies you want to use as lookalike seeds. Results are narrowed and ranked by similarity to the companies you pass, and the seed companies themselves are excluded from results. &lt;br&gt;&lt;br&gt;To find IDs, use the `id` value of each entry in the `organizations` array this endpoint returns. &lt;br&gt;&lt;br&gt;Note the singular `organization` in the parameter name. &lt;br&gt;&lt;br&gt;You can pass a maximum of five seed companies. Sending more returns a validation error. &lt;br&gt;&lt;br&gt;If Apollo holds no lookalike data for a seed company, this filter returns no results rather than falling back to an unfiltered search, so an empty response can mean the seed is unusable rather than that no companies match. If that happens, try a different or better-known seed company. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("lookalike_organization_ids%5B%5D")]
+            public string[]? LookalikeOrganizationIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("lookalike_organization_ids%5B%5D")]
+            public string[] LookalikeOrganizationIds { get; set; }
+#endif
+            /// <summary>Exclude companies that match any of these domains. This is the counterpart to `q_organization_domains_list[]`. &lt;br&gt;&lt;br&gt;Matching covers every domain Apollo holds for a company, not just the one you send, so excluding a single domain also excludes that company&apos;s other known domains. &lt;br&gt;&lt;br&gt;Values are reduced to a domain before matching, so a bare domain, a full URL, or an email address at that domain all work. &lt;br&gt;&lt;br&gt;Use this parameter to keep companies you already work with, or have already contacted, out of your results without retrieving and enriching them first. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `salesforce.com`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_organization_websites_list%5B%5D")]
+            public string[]? NotOrganizationWebsitesList { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_organization_websites_list%5B%5D")]
+            public string[] NotOrganizationWebsitesList { get; set; }
+#endif
+            /// <summary>The trailing window, in months, used to measure company headcount growth. &lt;br&gt;&lt;br&gt;Only `6`, `12`, and `24` are accepted. Any other value is ignored. &lt;br&gt;&lt;br&gt;This parameter has no effect on its own. To filter by headcount growth, send it together with `organization_headcount_growth_range[min]`, `organization_headcount_growth_range[max]`, or both. If you send a window without a range, or a range without a window, the headcount growth filter is skipped and your results come back unfiltered. &lt;br&gt;&lt;br&gt;Example: `6`</summary>
+            [QueryParameter("organization_headcount_growth_past_n_months")]
+            public int? OrganizationHeadcountGrowthPastNMonths { get; set; }
+            /// <summary>The maximum company headcount growth, as a percentage, over the window set by `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Enter the percentage as a whole number, without a percent sign or decimal point: use `100` for 100% growth. &lt;br&gt;&lt;br&gt;Use `organization_headcount_growth_range[min]` to set the lower bound of the range. You must also send `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Examples: `100`; `250`</summary>
+            [QueryParameter("organization_headcount_growth_range%5Bmax%5D")]
+            public int? OrganizationHeadcountGrowthRangemax { get; set; }
+            /// <summary>The minimum company headcount growth, as a percentage, over the window set by `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Enter the percentage as a whole number, without a percent sign or decimal point: use `10` for 10% growth. This is a lower bound, so sending a minimum on its own returns every match at or above that figure. Negative values are accepted, but `-20` alone still includes flat and growing companies, because everything above -20% also matches. To isolate companies that shrank, pair a negative minimum with a negative maximum, such as a minimum of `-20` and a maximum of `-1`. &lt;br&gt;&lt;br&gt;Use `organization_headcount_growth_range[max]` to set the upper bound of the range. You must also send `organization_headcount_growth_past_n_months`. &lt;br&gt;&lt;br&gt;Examples: `10`; `50`</summary>
+            [QueryParameter("organization_headcount_growth_range%5Bmin%5D")]
+            public int? OrganizationHeadcountGrowthRangemin { get; set; }
             /// <summary>The Apollo IDs for the companies you want to include in your search results. Each company in the Apollo database is assigned a unique ID. &lt;br&gt;&lt;br&gt;To find IDs, identify the values for `organization_id` when you call this endpoint. &lt;br&gt;&lt;br&gt;Example: `5e66b6381e05b4008c8331b8`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

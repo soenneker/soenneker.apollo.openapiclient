@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The contact_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ContactId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromContactId? ContactId { get; set; }
 #nullable restore
 #else
-        public UntypedNode ContactId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromContactId ContactId { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,18 +33,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The raw_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RawName { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRawName? RawName { get; set; }
 #nullable restore
 #else
-        public UntypedNode RawName { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRawName RawName { get; set; }
 #endif
         /// <summary>The recipient_type_cd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RecipientTypeCd { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRecipientTypeCd? RecipientTypeCd { get; set; }
 #nullable restore
 #else
-        public UntypedNode RecipientTypeCd { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRecipientTypeCd RecipientTypeCd { get; set; }
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "contact_id", n => { ContactId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "contact_id", n => { ContactId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromContactId>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromContactId.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "raw_name", n => { RawName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "recipient_type_cd", n => { RecipientTypeCd = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "raw_name", n => { RawName = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRawName>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRawName.CreateFromDiscriminatorValue); } },
+                { "recipient_type_cd", n => { RecipientTypeCd = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRecipientTypeCd>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRecipientTypeCd.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -93,10 +93,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("contact_id", ContactId);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromContactId>("contact_id", ContactId);
             writer.WriteStringValue("email", Email);
-            writer.WriteObjectValue<UntypedNode>("raw_name", RawName);
-            writer.WriteObjectValue<UntypedNode>("recipient_type_cd", RecipientTypeCd);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRawName>("raw_name", RawName);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageSendFromRecipientTypeCd>("recipient_type_cd", RecipientTypeCd);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

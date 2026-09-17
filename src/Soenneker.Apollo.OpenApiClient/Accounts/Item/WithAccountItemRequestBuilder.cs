@@ -69,6 +69,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.UpdateAnAccount200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +86,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Item
             {
                 { "401", global::Soenneker.Apollo.OpenApiClient.Accounts.Item.UpdateAnAccount200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount403Response.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount429Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

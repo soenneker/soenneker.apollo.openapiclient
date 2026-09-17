@@ -61,29 +61,29 @@ namespace Soenneker.Apollo.OpenApiClient.Labels
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/labels/index` or `Master API key`**OAuth scopes:** `tags_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the get a list of all lists endpoint to retrieve information about every &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409728608525-Create-and-Use-a-List&quot; target=&quot;_blank&quot;&gt;list&lt;/a&gt; that has been created in your Apollo account. This endpoint can be used to check the available lists before you use the &lt;a href=&quot;https://docs.apollo.io/reference/create-a-contact&quot;&gt;create a contact endpoint&lt;/a&gt;. &lt;br&gt;&lt;br&gt;This endpoint doesn&apos;t require any parameters.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItem&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Labels.GetAListOfAllLists200Response401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Labels.GetAListOfAllLists200ResponseSchema401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Labels.GetAListOfAllLists200Response401Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Labels.GetAListOfAllLists200ResponseSchema401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists429Response.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItem>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItem>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

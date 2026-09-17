@@ -84,6 +84,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Contacts.CreateAContact200Response401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateAContact422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateAContact429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,6 +100,7 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Apollo.OpenApiClient.Contacts.CreateAContact200Response401Error.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Apollo.OpenApiClient.Models.CreateAContact422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.CreateAContact429Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.CreateAContact200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.CreateAContact200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

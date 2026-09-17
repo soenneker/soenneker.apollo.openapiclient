@@ -31,10 +31,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The actual_close_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ActualCloseDate { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityActualCloseDate? ActualCloseDate { get; set; }
 #nullable restore
 #else
-        public UntypedNode ActualCloseDate { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityActualCloseDate ActualCloseDate { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -53,18 +53,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The closed_lost_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ClosedLostReason { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedLostReason? ClosedLostReason { get; set; }
 #nullable restore
 #else
-        public UntypedNode ClosedLostReason { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedLostReason ClosedLostReason { get; set; }
 #endif
         /// <summary>The closed_won_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ClosedWonReason { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedWonReason? ClosedWonReason { get; set; }
 #nullable restore
 #else
-        public UntypedNode ClosedWonReason { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedWonReason ClosedWonReason { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,26 +85,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The crm_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CrmId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmId? CrmId { get; set; }
 #nullable restore
 #else
-        public UntypedNode CrmId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmId CrmId { get; set; }
 #endif
         /// <summary>The crm_owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CrmOwnerId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmOwnerId? CrmOwnerId { get; set; }
 #nullable restore
 #else
-        public UntypedNode CrmOwnerId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmOwnerId CrmOwnerId { get; set; }
 #endif
         /// <summary>The crm_record_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CrmRecordUrl { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmRecordUrl? CrmRecordUrl { get; set; }
 #nullable restore
 #else
-        public UntypedNode CrmRecordUrl { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmRecordUrl CrmRecordUrl { get; set; }
 #endif
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,28 +117,28 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The current_solutions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CurrentSolutions { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrentSolutions? CurrentSolutions { get; set; }
 #nullable restore
 #else
-        public UntypedNode CurrentSolutions { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrentSolutions CurrentSolutions { get; set; }
 #endif
         /// <summary>The deal_probability property</summary>
         public int? DealProbability { get; set; }
         /// <summary>The deal_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DealSource { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDealSource? DealSource { get; set; }
 #nullable restore
 #else
-        public UntypedNode DealSource { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDealSource DealSource { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Description { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDescription? Description { get; set; }
 #nullable restore
 #else
-        public UntypedNode Description { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDescription Description { get; set; }
 #endif
         /// <summary>The exchange_rate_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,10 +181,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The is_won property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? IsWon { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityIsWon? IsWon { get; set; }
 #nullable restore
 #else
-        public UntypedNode IsWon { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityIsWon IsWon { get; set; }
 #endif
         /// <summary>The last_activity_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -197,18 +197,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The manually_updated_forecast property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ManuallyUpdatedForecast { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedForecast? ManuallyUpdatedForecast { get; set; }
 #nullable restore
 #else
-        public UntypedNode ManuallyUpdatedForecast { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedForecast ManuallyUpdatedForecast { get; set; }
 #endif
         /// <summary>The manually_updated_probability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ManuallyUpdatedProbability { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedProbability? ManuallyUpdatedProbability { get; set; }
 #nullable restore
 #else
-        public UntypedNode ManuallyUpdatedProbability { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedProbability ManuallyUpdatedProbability { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -229,10 +229,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The next_step_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NextStepDate { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityNextStepDate? NextStepDate { get; set; }
 #nullable restore
 #else
-        public UntypedNode NextStepDate { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityNextStepDate NextStepDate { get; set; }
 #endif
         /// <summary>The next_step_last_updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -285,26 +285,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The probability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Probability { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityProbability? Probability { get; set; }
 #nullable restore
 #else
-        public UntypedNode Probability { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityProbability Probability { get; set; }
 #endif
         /// <summary>The salesforce_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SalesforceId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceId? SalesforceId { get; set; }
 #nullable restore
 #else
-        public UntypedNode SalesforceId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceId SalesforceId { get; set; }
 #endif
         /// <summary>The salesforce_owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SalesforceOwnerId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceOwnerId? SalesforceOwnerId { get; set; }
 #nullable restore
 #else
-        public UntypedNode SalesforceOwnerId { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceOwnerId SalesforceOwnerId { get; set; }
 #endif
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -317,10 +317,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The stage_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? StageName { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityStageName? StageName { get; set; }
 #nullable restore
 #else
-        public UntypedNode StageName { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityStageName StageName { get; set; }
 #endif
         /// <summary>The stage_updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -379,22 +379,22 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             {
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityAccount>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityAccount.CreateFromDiscriminatorValue); } },
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "actual_close_date", n => { ActualCloseDate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "actual_close_date", n => { ActualCloseDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityActualCloseDate>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityActualCloseDate.CreateFromDiscriminatorValue); } },
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "amount_in_team_currency", n => { AmountInTeamCurrency = n.GetIntValue(); } },
                 { "closed_date", n => { ClosedDate = n.GetStringValue(); } },
-                { "closed_lost_reason", n => { ClosedLostReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "closed_won_reason", n => { ClosedWonReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "closed_lost_reason", n => { ClosedLostReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedLostReason>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedLostReason.CreateFromDiscriminatorValue); } },
+                { "closed_won_reason", n => { ClosedWonReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedWonReason>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedWonReason.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "created_by_id", n => { CreatedById = n.GetStringValue(); } },
-                { "crm_id", n => { CrmId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_id", n => { CrmId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmId>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmId.CreateFromDiscriminatorValue); } },
+                { "crm_owner_id", n => { CrmOwnerId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmOwnerId>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmOwnerId.CreateFromDiscriminatorValue); } },
+                { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmRecordUrl>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmRecordUrl.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrency>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrency.CreateFromDiscriminatorValue); } },
-                { "current_solutions", n => { CurrentSolutions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "current_solutions", n => { CurrentSolutions = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrentSolutions>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrentSolutions.CreateFromDiscriminatorValue); } },
                 { "deal_probability", n => { DealProbability = n.GetIntValue(); } },
-                { "deal_source", n => { DealSource = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "deal_source", n => { DealSource = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDealSource>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDealSource.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDescription>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDescription.CreateFromDiscriminatorValue); } },
                 { "exchange_rate_code", n => { ExchangeRateCode = n.GetStringValue(); } },
                 { "exchange_rate_value", n => { ExchangeRateValue = n.GetIntValue(); } },
                 { "existence_level", n => { ExistenceLevel = n.GetStringValue(); } },
@@ -402,24 +402,24 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "forecasted_revenue", n => { ForecastedRevenue = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_closed", n => { IsClosed = n.GetBoolValue(); } },
-                { "is_won", n => { IsWon = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "is_won", n => { IsWon = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityIsWon>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityIsWon.CreateFromDiscriminatorValue); } },
                 { "last_activity_date", n => { LastActivityDate = n.GetStringValue(); } },
-                { "manually_updated_forecast", n => { ManuallyUpdatedForecast = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "manually_updated_probability", n => { ManuallyUpdatedProbability = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "manually_updated_forecast", n => { ManuallyUpdatedForecast = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedForecast>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedForecast.CreateFromDiscriminatorValue); } },
+                { "manually_updated_probability", n => { ManuallyUpdatedProbability = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedProbability>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedProbability.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "next_step", n => { NextStep = n.GetStringValue(); } },
-                { "next_step_date", n => { NextStepDate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "next_step_date", n => { NextStepDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityNextStepDate>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityNextStepDate.CreateFromDiscriminatorValue); } },
                 { "next_step_last_updated_at", n => { NextStepLastUpdatedAt = n.GetStringValue(); } },
                 { "opportunity_contact_roles", n => { OpportunityContactRoles = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityOpportunityContactRolesItem>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityOpportunityContactRolesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "opportunity_pipeline_id", n => { OpportunityPipelineId = n.GetStringValue(); } },
                 { "opportunity_rule_config_statuses", n => { OpportunityRuleConfigStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunity_opportunity_rule_config_statuses>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunity_opportunity_rule_config_statuses.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "opportunity_stage_id", n => { OpportunityStageId = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetStringValue(); } },
-                { "probability", n => { Probability = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "salesforce_owner_id", n => { SalesforceOwnerId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "probability", n => { Probability = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityProbability>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityProbability.CreateFromDiscriminatorValue); } },
+                { "salesforce_id", n => { SalesforceId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceId>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceId.CreateFromDiscriminatorValue); } },
+                { "salesforce_owner_id", n => { SalesforceOwnerId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceOwnerId>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceOwnerId.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetStringValue(); } },
-                { "stage_name", n => { StageName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "stage_name", n => { StageName = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityStageName>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityStageName.CreateFromDiscriminatorValue); } },
                 { "stage_updated_at", n => { StageUpdatedAt = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "typed_custom_fields", n => { TypedCustomFields = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityTypedCustomFields>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityTypedCustomFields.CreateFromDiscriminatorValue); } },
@@ -434,22 +434,22 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityAccount>("account", Account);
             writer.WriteStringValue("account_id", AccountId);
-            writer.WriteObjectValue<UntypedNode>("actual_close_date", ActualCloseDate);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityActualCloseDate>("actual_close_date", ActualCloseDate);
             writer.WriteIntValue("amount", Amount);
             writer.WriteIntValue("amount_in_team_currency", AmountInTeamCurrency);
             writer.WriteStringValue("closed_date", ClosedDate);
-            writer.WriteObjectValue<UntypedNode>("closed_lost_reason", ClosedLostReason);
-            writer.WriteObjectValue<UntypedNode>("closed_won_reason", ClosedWonReason);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedLostReason>("closed_lost_reason", ClosedLostReason);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityClosedWonReason>("closed_won_reason", ClosedWonReason);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("created_by_id", CreatedById);
-            writer.WriteObjectValue<UntypedNode>("crm_id", CrmId);
-            writer.WriteObjectValue<UntypedNode>("crm_owner_id", CrmOwnerId);
-            writer.WriteObjectValue<UntypedNode>("crm_record_url", CrmRecordUrl);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmId>("crm_id", CrmId);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmOwnerId>("crm_owner_id", CrmOwnerId);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCrmRecordUrl>("crm_record_url", CrmRecordUrl);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrency>("currency", Currency);
-            writer.WriteObjectValue<UntypedNode>("current_solutions", CurrentSolutions);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityCurrentSolutions>("current_solutions", CurrentSolutions);
             writer.WriteIntValue("deal_probability", DealProbability);
-            writer.WriteObjectValue<UntypedNode>("deal_source", DealSource);
-            writer.WriteObjectValue<UntypedNode>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDealSource>("deal_source", DealSource);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityDescription>("description", Description);
             writer.WriteStringValue("exchange_rate_code", ExchangeRateCode);
             writer.WriteIntValue("exchange_rate_value", ExchangeRateValue);
             writer.WriteStringValue("existence_level", ExistenceLevel);
@@ -457,24 +457,24 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("forecasted_revenue", ForecastedRevenue);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_closed", IsClosed);
-            writer.WriteObjectValue<UntypedNode>("is_won", IsWon);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityIsWon>("is_won", IsWon);
             writer.WriteStringValue("last_activity_date", LastActivityDate);
-            writer.WriteObjectValue<UntypedNode>("manually_updated_forecast", ManuallyUpdatedForecast);
-            writer.WriteObjectValue<UntypedNode>("manually_updated_probability", ManuallyUpdatedProbability);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedForecast>("manually_updated_forecast", ManuallyUpdatedForecast);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityManuallyUpdatedProbability>("manually_updated_probability", ManuallyUpdatedProbability);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("next_step", NextStep);
-            writer.WriteObjectValue<UntypedNode>("next_step_date", NextStepDate);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityNextStepDate>("next_step_date", NextStepDate);
             writer.WriteStringValue("next_step_last_updated_at", NextStepLastUpdatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityOpportunityContactRolesItem>("opportunity_contact_roles", OpportunityContactRoles);
             writer.WriteStringValue("opportunity_pipeline_id", OpportunityPipelineId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunity_opportunity_rule_config_statuses>("opportunity_rule_config_statuses", OpportunityRuleConfigStatuses);
             writer.WriteStringValue("opportunity_stage_id", OpportunityStageId);
             writer.WriteStringValue("owner_id", OwnerId);
-            writer.WriteObjectValue<UntypedNode>("probability", Probability);
-            writer.WriteObjectValue<UntypedNode>("salesforce_id", SalesforceId);
-            writer.WriteObjectValue<UntypedNode>("salesforce_owner_id", SalesforceOwnerId);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityProbability>("probability", Probability);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceId>("salesforce_id", SalesforceId);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunitySalesforceOwnerId>("salesforce_owner_id", SalesforceOwnerId);
             writer.WriteStringValue("source", Source);
-            writer.WriteObjectValue<UntypedNode>("stage_name", StageName);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityStageName>("stage_name", StageName);
             writer.WriteStringValue("stage_updated_at", StageUpdatedAt);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskOpportunityTypedCustomFields>("typed_custom_fields", TypedCustomFields);
