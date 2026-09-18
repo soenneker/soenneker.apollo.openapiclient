@@ -30,14 +30,6 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItemContactEmailsItem> ContactEmails { get; set; }
 #endif
-        /// <summary>Array of contact role type IDs</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? ContactRoleTypeIds { get; set; }
-#nullable restore
-#else
-        public List<string> ContactRoleTypeIds { get; set; }
-#endif
         /// <summary>Contact stage ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -257,7 +249,6 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "contact_emails", n => { ContactEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItemContactEmailsItem>(global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItemContactEmailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "contact_role_type_ids", n => { ContactRoleTypeIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "contact_stage_id", n => { ContactStageId = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "facebook_url", n => { FacebookUrl = n.GetStringValue(); } },
@@ -293,7 +284,6 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItemContactEmailsItem>("contact_emails", ContactEmails);
-            writer.WriteCollectionOfPrimitiveValues<string>("contact_role_type_ids", ContactRoleTypeIds);
             writer.WriteStringValue("contact_stage_id", ContactStageId);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("facebook_url", FacebookUrl);

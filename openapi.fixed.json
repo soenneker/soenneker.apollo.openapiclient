@@ -32252,13 +32252,6 @@
               "$ref": "#/components/schemas/BulkCreateContactsRequestContactsItemPhoneNumbersItem"
             },
             "description": "Array of phone number objects"
-          },
-          "contact_role_type_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Array of contact role type IDs"
           }
         }
       },
