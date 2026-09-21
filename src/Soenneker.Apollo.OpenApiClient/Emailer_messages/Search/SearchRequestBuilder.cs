@@ -36,29 +36,29 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/emailer_messages/search` or `Master API key`**OAuth scopes:** `emailer_messages_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the search for outreach emails endpoint to find emails that your team has created and sent as part of Apollo sequences.&lt;br&gt;&lt;br&gt;To protect Apollo&apos;s performance for all users, this endpoint has a display limit of 50,000 records (100 records per page, up to 500 pages). Add more filters to narrow your search results as much as possible. This limitation does not restrict your access to Apollo&apos;s database; you just need to access the data in batches.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchGetResponse"/></returns>
+        /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.Search401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.EmailerMessagesSearch200ResponseSchema401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.EmailerMessagesSearch422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.EmailerMessagesSearch429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string?> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.Search401Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.EmailerMessagesSearch200ResponseSchema401Error.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.EmailerMessagesSearch422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.EmailerMessagesSearch429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchGetResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Search.SearchGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/emailer_messages/search` or `Master API key`**OAuth scopes:** `emailer_messages_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the search for outreach emails endpoint to find emails that your team has created and sent as part of Apollo sequences.&lt;br&gt;&lt;br&gt;To protect Apollo&apos;s performance for all users, this endpoint has a display limit of 50,000 records (100 records per page, up to 500 pages). Add more filters to narrow your search results as much as possible. This limitation does not restrict your access to Apollo&apos;s database; you just need to access the data in batches.

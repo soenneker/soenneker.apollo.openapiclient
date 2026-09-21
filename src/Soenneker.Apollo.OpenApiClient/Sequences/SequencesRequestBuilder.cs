@@ -56,7 +56,6 @@ namespace Soenneker.Apollo.OpenApiClient.Sequences
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Sequences.CreateSequence200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence422Response">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Sequences.CreateSequence200Response429Error">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence200Response?> PostAsync(global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -73,7 +72,6 @@ namespace Soenneker.Apollo.OpenApiClient.Sequences
                 { "401", global::Soenneker.Apollo.OpenApiClient.Sequences.CreateSequence200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence422Response.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Apollo.OpenApiClient.Sequences.CreateSequence200Response429Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

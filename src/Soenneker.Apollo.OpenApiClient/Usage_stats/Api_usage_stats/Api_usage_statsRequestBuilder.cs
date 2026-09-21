@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Apollo.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,27 +36,27 @@ namespace Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse"/></returns>
+        /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_stats401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_stats403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.PostApiusage200ResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage403Response">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_stats401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_stats403Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.PostApiusage200ResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage403Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.

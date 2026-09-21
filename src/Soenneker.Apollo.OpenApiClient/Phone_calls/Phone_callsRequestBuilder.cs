@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Apollo.OpenApiClient.Models;
 using Soenneker.Apollo.OpenApiClient.Phone_calls.Item;
 using Soenneker.Apollo.OpenApiClient.Phone_calls.Search;
 using System.Collections.Generic;
@@ -54,27 +55,25 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the create call records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_calls401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_calls403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.PhonecallsCreate200Response401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsRequestBuilder.Phone_callsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response?> PostAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsRequestBuilder.Phone_callsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsRequestBuilder.Phone_callsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response> PostAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsRequestBuilder.Phone_callsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_calls401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_calls403Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Phone_calls.PhonecallsCreate200Response401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Phone_calls.Phone_callsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_write`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the create call records endpoint to log calls in Apollo that were made using outside systems such as Orum or Nooks. This endpoint can only be used create call records, not to dial prospects.

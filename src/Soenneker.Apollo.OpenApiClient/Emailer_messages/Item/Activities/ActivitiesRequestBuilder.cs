@@ -35,29 +35,25 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `Not supported`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the check email stats endpoint to review the complete details for an email sent as part of an Apollo sequence. This includes the contents of the emails, stats related to the email such as opens and clicks, and details about the contact that received the email.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.ActivitiesGetResponse"/></returns>
+        /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.Activities401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.Activities403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.Activities422Error">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.GetEmailstats200ResponseSchema401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.ActivitiesGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.ActivitiesGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.Activities401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.Activities403Error.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.Activities422Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.GetEmailstats200ResponseSchema401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.ActivitiesGetResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities.ActivitiesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `Not supported`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the check email stats endpoint to review the complete details for an email sent as part of an Apollo sequence. This includes the contents of the emails, stats related to the email such as opens and clicks, and details about the contact that received the email.

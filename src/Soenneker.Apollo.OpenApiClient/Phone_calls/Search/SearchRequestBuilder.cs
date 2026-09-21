@@ -35,27 +35,25 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Search
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the search for calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse"/></returns>
+        /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.Search401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.Search403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.GetPhoneCallssearch200ResponseSchema401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string?> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<string> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.Search401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.Search403Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.GetPhoneCallssearch200ResponseSchema401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Phone_calls.Search.SearchGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_search`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the search for calls endpoint to find calls that your team has made or  received using &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409140527757-Dialer-Overview&quot; target=&quot;_blank&quot;&gt;the dialer&lt;/a&gt; on Apollo.

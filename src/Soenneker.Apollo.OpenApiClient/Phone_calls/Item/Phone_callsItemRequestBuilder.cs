@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Apollo.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,27 +36,25 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_update`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the update call records endpoint to update your team&apos;s call records in Apollo.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsPutResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_calls401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_calls403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.PutPhoneCallsupdate200Response401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsPutResponse?> PutAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder.Phone_callsItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response?> PutAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder.Phone_callsItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsPutResponse> PutAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder.Phone_callsItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response> PutAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder.Phone_callsItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPutRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_calls401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_calls403Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.PutPhoneCallsupdate200Response401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsPutResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_update`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the update call records endpoint to update your team&apos;s call records in Apollo.

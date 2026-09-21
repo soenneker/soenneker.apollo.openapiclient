@@ -36,29 +36,27 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Item
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/accounts/show` or `Master API key`**OAuth scopes:** `account_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).An &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/5995865049229-View-and-Edit-Accounts&quot; target=&quot;_blank&quot;&gt;account&lt;/a&gt; is a company saved in Apollo.&lt;br&gt;&lt;br&gt;Use the view an account endpoint to retrieve details for an existing account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccount401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccount403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccount422Error">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Item.GetAccountsId200Response401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId422Response">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccount401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccount403Error.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccount422Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Accounts.Item.GetAccountsId200Response401Error.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId422Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountGetResponse>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Accounts.Item.WithAccountGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/accounts/update` or `Master API key`**OAuth scopes:** `account_update`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing). An &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/5995865049229-View-and-Edit-Accounts&quot; target=&quot;_blank&quot;&gt;account&lt;/a&gt; is a company saved in Apollo.&lt;br&gt;&lt;br&gt;Use the update an account endpoint to update existing accounts in your team&apos;s Apollo account.&lt;br&gt;&lt;br&gt;To create a new account, use the &lt;a href=&quot;https://docs.apollo.io/reference/create-an-account&quot;&gt;create an account endpoint&lt;/a&gt; instead. To update the account stage for multiple accounts, use the &lt;a href=&quot;https://docs.apollo.io/reference/bulk-update-accounts&quot;&gt;bulk update accounts endpoint&lt;/a&gt;.
