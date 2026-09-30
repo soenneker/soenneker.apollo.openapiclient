@@ -8,6 +8,7 @@ using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
 using Soenneker.Apollo.OpenApiClient.Account_stages;
 using Soenneker.Apollo.OpenApiClient.Accounts;
+using Soenneker.Apollo.OpenApiClient.Agents;
 using Soenneker.Apollo.OpenApiClient.Contact_stages;
 using Soenneker.Apollo.OpenApiClient.Contacts;
 using Soenneker.Apollo.OpenApiClient.Conversations;
@@ -54,6 +55,11 @@ namespace Soenneker.Apollo.OpenApiClient
         public global::Soenneker.Apollo.OpenApiClient.Accounts.AccountsRequestBuilder Accounts
         {
             get => new global::Soenneker.Apollo.OpenApiClient.Accounts.AccountsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agents property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Agents.AgentsRequestBuilder Agents
+        {
+            get => new global::Soenneker.Apollo.OpenApiClient.Agents.AgentsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The contact_stages property</summary>
         public global::Soenneker.Apollo.OpenApiClient.Contact_stages.Contact_stagesRequestBuilder Contact_stages
