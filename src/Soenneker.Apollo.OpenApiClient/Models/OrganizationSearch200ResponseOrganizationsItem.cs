@@ -100,6 +100,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LogoUrl { get; set; }
 #endif
+        /// <summary>The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? NaicsCodes { get; set; }
+#nullable restore
+#else
+        public List<string> NaicsCodes { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,6 +174,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>The show_intent property</summary>
         public bool? ShowIntent { get; set; }
+        /// <summary>The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? SicCodes { get; set; }
+#nullable restore
+#else
+        public List<string> SicCodes { get; set; }
+#endif
         /// <summary>The twitter_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -224,6 +240,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "linkedin_uid", n => { LinkedinUid = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
+                { "naics_codes", n => { NaicsCodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owned_by_organization_id", n => { OwnedByOrganizationId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
@@ -233,6 +250,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "publicly_traded_symbol", n => { PubliclyTradedSymbol = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol.CreateFromDiscriminatorValue); } },
                 { "sanitized_phone", n => { SanitizedPhone = n.GetStringValue(); } },
                 { "show_intent", n => { ShowIntent = n.GetBoolValue(); } },
+                { "sic_codes", n => { SicCodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "twitter_url", n => { TwitterUrl = n.GetStringValue(); } },
                 { "website_url", n => { WebsiteUrl = n.GetStringValue(); } },
             };
@@ -257,6 +275,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("linkedin_uid", LinkedinUid);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("logo_url", LogoUrl);
+            writer.WriteCollectionOfPrimitiveValues<string>("naics_codes", NaicsCodes);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemOwnedByOrganizationId>("owned_by_organization_id", OwnedByOrganizationId);
             writer.WriteStringValue("phone", Phone);
@@ -266,6 +285,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200ResponseOrganizationsItemPubliclyTradedSymbol>("publicly_traded_symbol", PubliclyTradedSymbol);
             writer.WriteStringValue("sanitized_phone", SanitizedPhone);
             writer.WriteBoolValue("show_intent", ShowIntent);
+            writer.WriteCollectionOfPrimitiveValues<string>("sic_codes", SicCodes);
             writer.WriteStringValue("twitter_url", TwitterUrl);
             writer.WriteStringValue("website_url", WebsiteUrl);
             writer.WriteAdditionalData(AdditionalData);

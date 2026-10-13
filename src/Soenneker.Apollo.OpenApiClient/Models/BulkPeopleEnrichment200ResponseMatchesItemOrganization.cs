@@ -148,6 +148,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LogoUrl { get; set; }
 #endif
+        /// <summary>The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? NaicsCodes { get; set; }
+#nullable restore
+#else
+        public List<string> NaicsCodes { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,6 +229,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganization_secondary_industries> SecondaryIndustries { get; set; }
+#endif
+        /// <summary>The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? SicCodes { get; set; }
+#nullable restore
+#else
+        public List<string> SicCodes { get; set; }
 #endif
         /// <summary>The snippets_loaded property</summary>
         public bool? SnippetsLoaded { get; set; }
@@ -305,6 +321,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "linkedin_uid", n => { LinkedinUid = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
+                { "naics_codes", n => { NaicsCodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganizationPhone>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganizationPhone.CreateFromDiscriminatorValue); } },
                 { "postal_code", n => { PostalCode = n.GetStringValue(); } },
@@ -315,6 +332,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "raw_address", n => { RawAddress = n.GetStringValue(); } },
                 { "retail_location_count", n => { RetailLocationCount = n.GetIntValue(); } },
                 { "secondary_industries", n => { SecondaryIndustries = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganization_secondary_industries>(global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganization_secondary_industries.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sic_codes", n => { SicCodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "snippets_loaded", n => { SnippetsLoaded = n.GetBoolValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "street_address", n => { StreetAddress = n.GetStringValue(); } },
@@ -348,6 +366,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("linkedin_uid", LinkedinUid);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("logo_url", LogoUrl);
+            writer.WriteCollectionOfPrimitiveValues<string>("naics_codes", NaicsCodes);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganizationPhone>("phone", Phone);
             writer.WriteStringValue("postal_code", PostalCode);
@@ -358,6 +377,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("raw_address", RawAddress);
             writer.WriteIntValue("retail_location_count", RetailLocationCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItemOrganization_secondary_industries>("secondary_industries", SecondaryIndustries);
+            writer.WriteCollectionOfPrimitiveValues<string>("sic_codes", SicCodes);
             writer.WriteBoolValue("snippets_loaded", SnippetsLoaded);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("street_address", StreetAddress);

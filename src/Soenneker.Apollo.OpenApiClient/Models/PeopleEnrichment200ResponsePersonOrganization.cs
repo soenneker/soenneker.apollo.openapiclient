@@ -190,6 +190,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string LogoUrl { get; set; }
 #endif
+        /// <summary>The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? NaicsCodes { get; set; }
+#nullable restore
+#else
+        public List<string> NaicsCodes { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -309,6 +317,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #nullable restore
 #else
         public string ShortDescription { get; set; }
+#endif
+        /// <summary>The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? SicCodes { get; set; }
+#nullable restore
+#else
+        public List<string> SicCodes { get; set; }
 #endif
         /// <summary>The snippets_loaded property</summary>
         public bool? SnippetsLoaded { get; set; }
@@ -430,6 +446,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "linkedin_uid", n => { LinkedinUid = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
+                { "naics_codes", n => { NaicsCodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "num_suborganizations", n => { NumSuborganizations = n.GetIntValue(); } },
                 { "org_chart_removed", n => { OrgChartRemoved = n.GetBoolValue(); } },
@@ -448,6 +465,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "secondary_industries", n => { SecondaryIndustries = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganization_secondary_industries>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganization_secondary_industries.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "seo_description", n => { SeoDescription = n.GetStringValue(); } },
                 { "short_description", n => { ShortDescription = n.GetStringValue(); } },
+                { "sic_codes", n => { SicCodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "snippets_loaded", n => { SnippetsLoaded = n.GetBoolValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "street_address", n => { StreetAddress = n.GetStringValue(); } },
@@ -491,6 +509,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("linkedin_uid", LinkedinUid);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("logo_url", LogoUrl);
+            writer.WriteCollectionOfPrimitiveValues<string>("naics_codes", NaicsCodes);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("num_suborganizations", NumSuborganizations);
             writer.WriteBoolValue("org_chart_removed", OrgChartRemoved);
@@ -509,6 +528,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganization_secondary_industries>("secondary_industries", SecondaryIndustries);
             writer.WriteStringValue("seo_description", SeoDescription);
             writer.WriteStringValue("short_description", ShortDescription);
+            writer.WriteCollectionOfPrimitiveValues<string>("sic_codes", SicCodes);
             writer.WriteBoolValue("snippets_loaded", SnippetsLoaded);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("street_address", StreetAddress);

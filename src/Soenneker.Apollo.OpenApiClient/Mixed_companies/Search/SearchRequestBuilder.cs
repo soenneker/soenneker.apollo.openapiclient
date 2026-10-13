@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,lookalike_organization_ids%5B%5D*,not_organization_naics_codes%5B%5D*,not_organization_sic_codes%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_industries%5B%5D*,organization_industry_tag_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_naics_codes%5B%5D*,organization_not_industry_tag_ids%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,organization_sic_codes%5B%5D*,page*,per_page*,q_not_organization_keyword_tags%5B%5D*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_companies/search{?currently_using_any_of_technology_uids%5B%5D*,latest_funding_amount_range%5Bmax%5D*,latest_funding_amount_range%5Bmin%5D*,latest_funding_date_range%5Bmax%5D*,latest_funding_date_range%5Bmin%5D*,lookalike_organization_ids%5B%5D*,not_organization_naics_codes%5B%5D*,not_organization_sic_codes%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_industries%5B%5D*,organization_industry_tag_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_naics_codes%5B%5D*,organization_not_industry_tag_ids%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,organization_sic_codes%5B%5D*,page*,per_page*,q_not_organization_keyword_tags%5B%5D*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_organization_keyword_tags%5B%5D*,q_organization_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*,total_funding_range%5Bmax%5D*,total_funding_range%5Bmin%5D*}", rawUrl)
         {
         }
         /// <summary>
@@ -126,6 +126,26 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("lookalike_organization_ids%5B%5D")]
             public string[] LookalikeOrganizationIds { get; set; }
 #endif
+            /// <summary>Exclude companies that match any of these NAICS codes. This is the counterpart to `organization_naics_codes[]`, and uses the same prefix and range matching. &lt;br&gt;&lt;br&gt;Examples: `92`; `31-33`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_organization_naics_codes%5B%5D")]
+            public string[]? NotOrganizationNaicsCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_organization_naics_codes%5B%5D")]
+            public string[] NotOrganizationNaicsCodes { get; set; }
+#endif
+            /// <summary>Exclude companies that match any of these SIC codes. This is the counterpart to `organization_sic_codes[]`, and uses the same prefix matching. &lt;br&gt;&lt;br&gt;Examples: `91`; `7372`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_organization_sic_codes%5B%5D")]
+            public string[]? NotOrganizationSicCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_organization_sic_codes%5B%5D")]
+            public string[] NotOrganizationSicCodes { get; set; }
+#endif
             /// <summary>Exclude companies that match any of these domains. This is the counterpart to `q_organization_domains_list[]`. &lt;br&gt;&lt;br&gt;Matching covers every domain Apollo holds for a company, not just the one you send, so excluding a single domain also excludes that company&apos;s other known domains. &lt;br&gt;&lt;br&gt;Values are reduced to a domain before matching, so a bare domain, a full URL, or an email address at that domain all work. &lt;br&gt;&lt;br&gt;Use this parameter to keep companies you already work with, or have already contacted, out of your results without retrieving and enriching them first. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `salesforce.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -155,6 +175,26 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_ids%5B%5D")]
             public string[] OrganizationIds { get; set; }
 #endif
+            /// <summary>The industry names for the companies you want to find. For a company to be included in search results, it only needs to match one of the industries you add. &lt;br&gt;&lt;br&gt;Values must exactly match an Apollo industry name, including capitalization and punctuation. Apollo industry names are lowercase. Use the values that Apollo returns in the `industries` field of the &lt;a href=&quot;https://docs.apollo.io/reference/organization-enrichment&quot;&gt;organization enrichment endpoint&lt;/a&gt;. Partial matches aren&apos;t supported. &lt;br&gt;&lt;br&gt;To search by Apollo industry ID instead, use the `organization_industry_tag_ids[]` parameter. &lt;br&gt;&lt;br&gt;Examples: `information technology &amp; services`; `hospital &amp; health care`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_industries%5B%5D")]
+            public string[]? OrganizationIndustries { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_industries%5B%5D")]
+            public string[] OrganizationIndustries { get; set; }
+#endif
+            /// <summary>The Apollo IDs for the industries of the companies you want to find. For a company to be included in search results, it only needs to match one of the industries you add. &lt;br&gt;&lt;br&gt;Each industry in the Apollo database has a unique ID. To find industry IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-enrichment&quot;&gt;organization enrichment endpoint&lt;/a&gt; for a company in the industry you want. The `industry_tag_id` field contains the ID of the company&apos;s primary industry, and the `industry_tag_hash` field maps each of the company&apos;s industry names to its ID. &lt;br&gt;&lt;br&gt;To search by industry name instead of ID, use the `organization_industries[]` parameter. &lt;br&gt;&lt;br&gt;Example: `5567cd4773696439b10b0000`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_industry_tag_ids%5B%5D")]
+            public string[]? OrganizationIndustryTagIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_industry_tag_ids%5B%5D")]
+            public string[] OrganizationIndustryTagIds { get; set; }
+#endif
             /// <summary>The locations of the jobs being actively recruited by the company. &lt;br&gt;&lt;br&gt;Examples: `atlanta`; `japan`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -171,7 +211,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             /// <summary>The earliest date when jobs were posted by the company. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmin%5D")]
             public Date? OrganizationJobPostedAtRangemin { get; set; }
-            /// <summary>The location of the company headquarters. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, any Boston-based companies will not appearch in your search results, even if they match other parameters.. &lt;br&gt;&lt;br&gt;To exclude companies based on location, use the `organization_not_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`</summary>
+            /// <summary>The location of the company headquarters. You can search across cities, US states, countries, and postal codes (ZIP codes). Postal codes are supported for the United States, Germany, and the United Kingdom. To filter by a US ZIP code or a UK postcode, pass it on its own, such as `10017`. For a German postal code, add the country, such as `10115, germany`, because a five-digit code on its own can match a US ZIP code instead. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, any Boston-based companies won&apos;t appearch in your search results, even if they match other parameters.. &lt;br&gt;&lt;br&gt;To exclude companies based on location, use the `organization_not_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`; `10017`; `10115, germany`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_locations%5B%5D")]
@@ -181,7 +221,27 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             [QueryParameter("organization_locations%5B%5D")]
             public string[] OrganizationLocations { get; set; }
 #endif
-            /// <summary>Exclude companies from search results based on the location of the company headquarters. You can use cities, US states, and countries as locations to exclude. &lt;br&gt;&lt;br&gt;This parameter is useful for ensuring you do not prospect in an undesirable territory. For example, if you use `ireland` as a value, no Ireland-based companies will appear in your search results. &lt;br&gt;&lt;br&gt;Examples: `minnesota`; `ireland`; `seoul`</summary>
+            /// <summary>The North American Industry Classification System (NAICS) codes for the companies you want to find. For a company to be included in search results, it only needs to match one of the codes you add. &lt;br&gt;&lt;br&gt;Codes match by prefix, so a shorter code matches every code that starts with it. For example, `5415` matches `541511` and `541512`. You can also enter a range of codes separated by a hyphen. For example, `31-33` matches all codes that start with `31`, `32`, or `33`. &lt;br&gt;&lt;br&gt;Examples: `541511`; `5415`; `31-33`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_naics_codes%5B%5D")]
+            public string[]? OrganizationNaicsCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_naics_codes%5B%5D")]
+            public string[] OrganizationNaicsCodes { get; set; }
+#endif
+            /// <summary>Exclude companies that belong to any of these industries, identified by Apollo industry ID. This is the counterpart to `organization_industry_tag_ids[]`. &lt;br&gt;&lt;br&gt;To find industry IDs, refer to the `organization_industry_tag_ids[]` parameter. &lt;br&gt;&lt;br&gt;Example: `5567cd4773696439b10b0000`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_not_industry_tag_ids%5B%5D")]
+            public string[]? OrganizationNotIndustryTagIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_not_industry_tag_ids%5B%5D")]
+            public string[] OrganizationNotIndustryTagIds { get; set; }
+#endif
+            /// <summary>Exclude companies from search results based on the location of the company headquarters. You can use cities, US states, countries, and postal codes (ZIP codes) as locations to exclude. Postal codes are supported for the United States, Germany, and the United Kingdom. For a German postal code, add the country, such as `10115, germany`, because a five-digit code on its own can match a US ZIP code instead. &lt;br&gt;&lt;br&gt;This parameter is useful for ensuring you do not prospect in an undesirable territory. For example, if you use `ireland` as a value, no Ireland-based companies appear in your search results. &lt;br&gt;&lt;br&gt;Examples: `minnesota`; `ireland`; `seoul`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_not_locations%5B%5D")]
@@ -207,12 +267,32 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             /// <summary>The minimum number of job postings active at the company. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmin%5D")]
             public int? OrganizationNumJobsRangemin { get; set; }
+            /// <summary>The Standard Industrial Classification (SIC) codes for the companies you want to find. For a company to be included in search results, it only needs to match one of the codes you add. &lt;br&gt;&lt;br&gt;Codes match by prefix, so a shorter code matches every code that starts with it. For example, `73` matches `7371` and `7372`. Ranges aren&apos;t supported for SIC codes. &lt;br&gt;&lt;br&gt;Examples: `7372`; `73`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_sic_codes%5B%5D")]
+            public string[]? OrganizationSicCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_sic_codes%5B%5D")]
+            public string[] OrganizationSicCodes { get; set; }
+#endif
             /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
             /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
+            /// <summary>Exclude companies associated with any of these keywords. This is the counterpart to `q_organization_keyword_tags[]`. &lt;br&gt;&lt;br&gt;Each value is matched as an exact phrase against a company&apos;s keywords, name, and short description. Matching isn&apos;t case-sensitive. A company that matches any of the values you add is excluded. For example, `staffing` excludes companies that have `staffing` as a keyword or in their name or description. &lt;br&gt;&lt;br&gt;You can add up to 150 keywords. &lt;br&gt;&lt;br&gt;Examples: `staffing`; `recruiting`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("q_not_organization_keyword_tags%5B%5D")]
+            public string[]? QNotOrganizationKeywordTags { get; set; }
+#nullable restore
+#else
+            [QueryParameter("q_not_organization_keyword_tags%5B%5D")]
+            public string[] QNotOrganizationKeywordTags { get; set; }
+#endif
             /// <summary>The domain name for the person&apos;s employer. This can be the current employer or a previous employer. Do not include `www.`, the `@` symbol, or similar. &lt;br&gt;&lt;br&gt;This parameter accepts up to 1,000 domains in a single request. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

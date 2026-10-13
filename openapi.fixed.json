@@ -3797,6 +3797,28 @@
             }
           },
           {
+            "name": "person_not_titles[]",
+            "in": "query",
+            "description": "Exclude people whose current job title matches any of these job titles. This is the counterpart to \u0060person_titles[]\u0060. \u003Cbr\u003E\u003Cbr\u003ELike \u0060person_titles[]\u0060, matching isn\u0027t limited to exact job titles. For example, excluding \u0060intern\u0060 also excludes people with the job title \u0060sales intern\u0060. \u003Cbr\u003E\u003Cbr\u003EThe combined number of unique job titles in \u0060person_titles[]\u0060 and \u0060person_not_titles[]\u0060 must be less than 100. Requests that exceed this limit return a \u0060422\u0060 error. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060intern\u0060; \u0060assistant\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "person_not_past_titles[]",
+            "in": "query",
+            "description": "Exclude people who held any of these job titles in a previous role. Only past roles are checked; a person\u0027s current job title isn\u0027t affected by this filter. To exclude current job titles, use \u0060person_not_titles[]\u0060. \u003Cbr\u003E\u003Cbr\u003EYou can add fewer than 100 unique job titles. Requests that exceed this limit return a \u0060422\u0060 error. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060intern\u0060; \u0060recruiter\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
             "name": "q_keywords",
             "in": "query",
             "description": "A string of words over which we want to filter the results.",
@@ -3817,7 +3839,18 @@
           {
             "name": "person_locations[]",
             "in": "query",
-            "description": "The location where people live. You can search across cities, US states, and countries. \u003Cbr\u003E\u003Cbr\u003ETo find people based on the headquarters locations of their current employer, use the \u0060organization_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060california\u0060; \u0060ireland\u0060; \u0060chicago\u0060",
+            "description": "The location where people live. You can search across cities, US states, countries, and postal codes (ZIP codes). Postal codes are supported for the United States, Germany, and the United Kingdom. To filter by a US ZIP code or a UK postcode, pass it on its own, such as \u006094105\u0060. For a German postal code, add the country, such as \u006010115, germany\u0060, because a five-digit code on its own can match a US ZIP code instead. \u003Cbr\u003E\u003Cbr\u003ETo find people based on the headquarters locations of their current employer, use the \u0060organization_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060california\u0060; \u0060ireland\u0060; \u0060chicago\u0060; \u006094105\u0060; \u006010115, germany\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "person_not_locations[]",
+            "in": "query",
+            "description": "Exclude people from your search results based on where they live. You can use cities, US states, countries, and postal codes (ZIP codes) as locations to exclude. Postal codes are supported for the United States, Germany, and the United Kingdom. For a German postal code, add the country, such as \u006010115, germany\u0060, because a five-digit code on its own can match a US ZIP code instead. \u003Cbr\u003E\u003Cbr\u003EThis is the counterpart to \u0060person_locations[]\u0060. To exclude people based on the headquarters location of their current employer, use the \u0060organization_not_locations[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060texas\u0060; \u0060ireland\u0060; \u006094105\u0060",
             "schema": {
               "type": "array",
               "items": {
@@ -3840,7 +3873,95 @@
           {
             "name": "organization_locations[]",
             "in": "query",
-            "description": "The location of the company headquarters for a person\u0027s current employer. You can search across cities, US states, and countries. \u003Cbr\u003E\u003Cbr\u003EIf a company has several office locations, results are still based on the headquarters location. For example, if you search \u0060chicago\u0060 but a company\u0027s HQ location is in \u0060boston\u0060, people that work for the Boston-based company will not appear in your results, even if they match other parameters. \u003Cbr\u003E\u003Cbr\u003ETo find people based on their personal location, use the \u0060person_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060texas\u0060; \u0060tokyo\u0060; \u0060spain\u0060",
+            "description": "The location of the company headquarters for a person\u0027s current employer. You can search across cities, US states, countries, and postal codes (ZIP codes). Postal codes are supported for the United States, Germany, and the United Kingdom. To filter by a US ZIP code or a UK postcode, pass it on its own, such as \u006010017\u0060. For a German postal code, add the country, such as \u006010115, germany\u0060, because a five-digit code on its own can match a US ZIP code instead. \u003Cbr\u003E\u003Cbr\u003EIf a company has several office locations, results are still based on the headquarters location. For example, if you search \u0060chicago\u0060 but a company\u0027s HQ location is in \u0060boston\u0060, people that work for the Boston-based company won\u0027t appear in your results, even if they match other parameters. \u003Cbr\u003E\u003Cbr\u003ETo find people based on their personal location, use the \u0060person_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060texas\u0060; \u0060tokyo\u0060; \u0060spain\u0060; \u006010017\u0060; \u006010115, germany\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_not_locations[]",
+            "in": "query",
+            "description": "Exclude people from your search results based on the headquarters location of their current employer. You can use cities, US states, countries, and postal codes (ZIP codes) as locations to exclude. Postal codes are supported for the United States, Germany, and the United Kingdom. For a German postal code, add the country, such as \u006010115, germany\u0060, because a five-digit code on its own can match a US ZIP code instead. \u003Cbr\u003E\u003Cbr\u003EThis is the counterpart to \u0060organization_locations[]\u0060. To exclude people based on where they live, use the \u0060person_not_locations[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060minnesota\u0060; \u0060ireland\u0060; \u006010017\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_industry_tag_ids[]",
+            "in": "query",
+            "description": "The Apollo IDs for the industries of the person\u0027s current employer. For a person to be included in search results, their employer only needs to match one of the industries you add. \u003Cbr\u003E\u003Cbr\u003EEach industry in the Apollo database has a unique ID. To find industry IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/organization-enrichment\u0022\u003Eorganization enrichment endpoint\u003C/a\u003E for a company in the industry you want. The \u0060industry_tag_id\u0060 field contains the ID of the company\u0027s primary industry, and the \u0060industry_tag_hash\u0060 field maps each of the company\u0027s industry names to its ID. \u003Cbr\u003E\u003Cbr\u003ETo search by industry name instead of ID, use the \u0060organization_industries[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u00605567cd4773696439b10b0000\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_not_industry_tag_ids[]",
+            "in": "query",
+            "description": "Exclude people whose current employer belongs to any of these industries, identified by Apollo industry ID. This is the counterpart to \u0060organization_industry_tag_ids[]\u0060. \u003Cbr\u003E\u003Cbr\u003ETo find industry IDs, refer to the \u0060organization_industry_tag_ids[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u00605567cd4773696439b10b0000\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_industries[]",
+            "in": "query",
+            "description": "The industry names for the person\u0027s current employer. For a person to be included in search results, their employer only needs to match one of the industries you add. \u003Cbr\u003E\u003Cbr\u003EValues must exactly match an Apollo industry name, including capitalization and punctuation. Apollo industry names are lowercase. Use the values that Apollo returns in the \u0060industries\u0060 field of the \u003Ca href=\u0022https://docs.apollo.io/reference/organization-enrichment\u0022\u003Eorganization enrichment endpoint\u003C/a\u003E. Partial matches aren\u0027t supported. \u003Cbr\u003E\u003Cbr\u003ETo search by Apollo industry ID instead, use the \u0060organization_industry_tag_ids[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060information technology \u0026 services\u0060; \u0060hospital \u0026 health care\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_naics_codes[]",
+            "in": "query",
+            "description": "The North American Industry Classification System (NAICS) codes for the person\u0027s current employer. For a person to be included in search results, their employer only needs to match one of the codes you add. \u003Cbr\u003E\u003Cbr\u003ECodes match by prefix, so a shorter code matches every code that starts with it. For example, \u00605415\u0060 matches \u0060541511\u0060 and \u0060541512\u0060. You can also enter a range of codes separated by a hyphen. For example, \u006031-33\u0060 matches all codes that start with \u006031\u0060, \u006032\u0060, or \u006033\u0060. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060541511\u0060; \u00605415\u0060; \u006031-33\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "not_organization_naics_codes[]",
+            "in": "query",
+            "description": "Exclude people whose current employer matches any of these NAICS codes. This is the counterpart to \u0060organization_naics_codes[]\u0060, and uses the same prefix and range matching. \u003Cbr\u003E\u003Cbr\u003EExamples: \u006092\u0060; \u006031-33\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_sic_codes[]",
+            "in": "query",
+            "description": "The Standard Industrial Classification (SIC) codes for the person\u0027s current employer. For a person to be included in search results, their employer only needs to match one of the codes you add. \u003Cbr\u003E\u003Cbr\u003ECodes match by prefix, so a shorter code matches every code that starts with it. For example, \u006073\u0060 matches \u00607371\u0060 and \u00607372\u0060. Ranges aren\u0027t supported for SIC codes. \u003Cbr\u003E\u003Cbr\u003EExamples: \u00607372\u0060; \u006073\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "not_organization_sic_codes[]",
+            "in": "query",
+            "description": "Exclude people whose current employer matches any of these SIC codes. This is the counterpart to \u0060organization_sic_codes[]\u0060, and uses the same prefix matching. \u003Cbr\u003E\u003Cbr\u003EExamples: \u006091\u0060; \u00607372\u0060",
             "schema": {
               "type": "array",
               "items": {
@@ -4467,7 +4588,7 @@
           {
             "name": "organization_locations[]",
             "in": "query",
-            "description": "The location of the company headquarters. You can search across cities, US states, and countries. \u003Cbr\u003E\u003Cbr\u003EIf a company has several office locations, results are still based on the headquarters location. For example, if you search \u0060chicago\u0060 but a company\u0027s HQ location is in \u0060boston\u0060, any Boston-based companies will not appearch in your search results, even if they match other parameters.. \u003Cbr\u003E\u003Cbr\u003ETo exclude companies based on location, use the \u0060organization_not_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060texas\u0060; \u0060tokyo\u0060; \u0060spain\u0060",
+            "description": "The location of the company headquarters. You can search across cities, US states, countries, and postal codes (ZIP codes). Postal codes are supported for the United States, Germany, and the United Kingdom. To filter by a US ZIP code or a UK postcode, pass it on its own, such as \u006010017\u0060. For a German postal code, add the country, such as \u006010115, germany\u0060, because a five-digit code on its own can match a US ZIP code instead. \u003Cbr\u003E\u003Cbr\u003EIf a company has several office locations, results are still based on the headquarters location. For example, if you search \u0060chicago\u0060 but a company\u0027s HQ location is in \u0060boston\u0060, any Boston-based companies won\u0027t appearch in your search results, even if they match other parameters.. \u003Cbr\u003E\u003Cbr\u003ETo exclude companies based on location, use the \u0060organization_not_locations\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060texas\u0060; \u0060tokyo\u0060; \u0060spain\u0060; \u006010017\u0060; \u006010115, germany\u0060",
             "schema": {
               "type": "array",
               "items": {
@@ -4478,7 +4599,84 @@
           {
             "name": "organization_not_locations[]",
             "in": "query",
-            "description": "Exclude companies from search results based on the location of the company headquarters. You can use cities, US states, and countries as locations to exclude. \u003Cbr\u003E\u003Cbr\u003EThis parameter is useful for ensuring you do not prospect in an undesirable territory. For example, if you use \u0060ireland\u0060 as a value, no Ireland-based companies will appear in your search results. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060minnesota\u0060; \u0060ireland\u0060; \u0060seoul\u0060",
+            "description": "Exclude companies from search results based on the location of the company headquarters. You can use cities, US states, countries, and postal codes (ZIP codes) as locations to exclude. Postal codes are supported for the United States, Germany, and the United Kingdom. For a German postal code, add the country, such as \u006010115, germany\u0060, because a five-digit code on its own can match a US ZIP code instead. \u003Cbr\u003E\u003Cbr\u003EThis parameter is useful for ensuring you do not prospect in an undesirable territory. For example, if you use \u0060ireland\u0060 as a value, no Ireland-based companies appear in your search results. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060minnesota\u0060; \u0060ireland\u0060; \u0060seoul\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_industry_tag_ids[]",
+            "in": "query",
+            "description": "The Apollo IDs for the industries of the companies you want to find. For a company to be included in search results, it only needs to match one of the industries you add. \u003Cbr\u003E\u003Cbr\u003EEach industry in the Apollo database has a unique ID. To find industry IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/organization-enrichment\u0022\u003Eorganization enrichment endpoint\u003C/a\u003E for a company in the industry you want. The \u0060industry_tag_id\u0060 field contains the ID of the company\u0027s primary industry, and the \u0060industry_tag_hash\u0060 field maps each of the company\u0027s industry names to its ID. \u003Cbr\u003E\u003Cbr\u003ETo search by industry name instead of ID, use the \u0060organization_industries[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u00605567cd4773696439b10b0000\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_not_industry_tag_ids[]",
+            "in": "query",
+            "description": "Exclude companies that belong to any of these industries, identified by Apollo industry ID. This is the counterpart to \u0060organization_industry_tag_ids[]\u0060. \u003Cbr\u003E\u003Cbr\u003ETo find industry IDs, refer to the \u0060organization_industry_tag_ids[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExample: \u00605567cd4773696439b10b0000\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_industries[]",
+            "in": "query",
+            "description": "The industry names for the companies you want to find. For a company to be included in search results, it only needs to match one of the industries you add. \u003Cbr\u003E\u003Cbr\u003EValues must exactly match an Apollo industry name, including capitalization and punctuation. Apollo industry names are lowercase. Use the values that Apollo returns in the \u0060industries\u0060 field of the \u003Ca href=\u0022https://docs.apollo.io/reference/organization-enrichment\u0022\u003Eorganization enrichment endpoint\u003C/a\u003E. Partial matches aren\u0027t supported. \u003Cbr\u003E\u003Cbr\u003ETo search by Apollo industry ID instead, use the \u0060organization_industry_tag_ids[]\u0060 parameter. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060information technology \u0026 services\u0060; \u0060hospital \u0026 health care\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_naics_codes[]",
+            "in": "query",
+            "description": "The North American Industry Classification System (NAICS) codes for the companies you want to find. For a company to be included in search results, it only needs to match one of the codes you add. \u003Cbr\u003E\u003Cbr\u003ECodes match by prefix, so a shorter code matches every code that starts with it. For example, \u00605415\u0060 matches \u0060541511\u0060 and \u0060541512\u0060. You can also enter a range of codes separated by a hyphen. For example, \u006031-33\u0060 matches all codes that start with \u006031\u0060, \u006032\u0060, or \u006033\u0060. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060541511\u0060; \u00605415\u0060; \u006031-33\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "not_organization_naics_codes[]",
+            "in": "query",
+            "description": "Exclude companies that match any of these NAICS codes. This is the counterpart to \u0060organization_naics_codes[]\u0060, and uses the same prefix and range matching. \u003Cbr\u003E\u003Cbr\u003EExamples: \u006092\u0060; \u006031-33\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "organization_sic_codes[]",
+            "in": "query",
+            "description": "The Standard Industrial Classification (SIC) codes for the companies you want to find. For a company to be included in search results, it only needs to match one of the codes you add. \u003Cbr\u003E\u003Cbr\u003ECodes match by prefix, so a shorter code matches every code that starts with it. For example, \u006073\u0060 matches \u00607371\u0060 and \u00607372\u0060. Ranges aren\u0027t supported for SIC codes. \u003Cbr\u003E\u003Cbr\u003EExamples: \u00607372\u0060; \u006073\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "not_organization_sic_codes[]",
+            "in": "query",
+            "description": "Exclude companies that match any of these SIC codes. This is the counterpart to \u0060organization_sic_codes[]\u0060, and uses the same prefix matching. \u003Cbr\u003E\u003Cbr\u003EExamples: \u006091\u0060; \u00607372\u0060",
             "schema": {
               "type": "array",
               "items": {
@@ -4517,6 +4715,17 @@
             "name": "q_organization_keyword_tags[]",
             "in": "query",
             "description": "Filter search results based on keywords associated with companies. For example, you can enter \u0060mining\u0060 as a value to return only companies that have an association with the mining industry. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060mining\u0060; \u0060sales strategy\u0060; \u0060consulting\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "q_not_organization_keyword_tags[]",
+            "in": "query",
+            "description": "Exclude companies associated with any of these keywords. This is the counterpart to \u0060q_organization_keyword_tags[]\u0060. \u003Cbr\u003E\u003Cbr\u003EEach value is matched as an exact phrase against a company\u0027s keywords, name, and short description. Matching isn\u0027t case-sensitive. A company that matches any of the values you add is excluded. For example, \u0060staffing\u0060 excludes companies that have \u0060staffing\u0060 as a keyword or in their name or description. \u003Cbr\u003E\u003Cbr\u003EYou can add up to 150 keywords. \u003Cbr\u003E\u003Cbr\u003EExamples: \u0060staffing\u0060; \u0060recruiting\u0060",
             "schema": {
               "type": "array",
               "items": {
@@ -29828,6 +30037,22 @@
           "industry_tag_hash": {
             "$ref": "#/components/schemas/OrganizationEnrichment200ResponseOrganizationIndustryTagHash"
           },
+          "naics_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "541511"
+            },
+            "description": "The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company."
+          },
+          "sic_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "7372"
+            },
+            "description": "The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company."
+          },
           "retail_location_count": {
             "type": "integer",
             "default": 0,
@@ -30146,6 +30371,22 @@
           "industry_tag_hash": {
             "$ref": "#/components/schemas/BulkOrganizationEnrichment200ResponseOrganizationsItemIndustryTagHash"
           },
+          "naics_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "541511"
+            },
+            "description": "The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company."
+          },
+          "sic_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "7372"
+            },
+            "description": "The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company."
+          },
           "retail_location_count": {
             "type": "integer",
             "default": 0,
@@ -30440,6 +30681,22 @@
           "primary_domain": {
             "type": "string",
             "example": "nikkei.com"
+          },
+          "naics_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "541511"
+            },
+            "description": "The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company."
+          },
+          "sic_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "7372"
+            },
+            "description": "The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company."
           },
           "sanitized_phone": {
             "type": "string",
@@ -40467,6 +40724,22 @@
           "industry_tag_hash": {
             "$ref": "#/components/schemas/PeopleEnrichment200ResponsePersonOrganizationIndustryTagHash"
           },
+          "naics_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "541511"
+            },
+            "description": "The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company."
+          },
+          "sic_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "7372"
+            },
+            "description": "The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company."
+          },
           "retail_location_count": {
             "type": "integer",
             "default": 0,
@@ -40791,6 +41064,22 @@
           },
           "industry_tag_hash": {
             "$ref": "#/components/schemas/BulkPeopleEnrichment200ResponseMatchesItemOrganizationIndustryTagHash"
+          },
+          "naics_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "541511"
+            },
+            "description": "The North American Industry Classification System (NAICS) codes for the company. This field is only included when Apollo has NAICS codes for the company."
+          },
+          "sic_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "7372"
+            },
+            "description": "The Standard Industrial Classification (SIC) codes for the company. This field is only included when Apollo has SIC codes for the company."
           },
           "retail_location_count": {
             "type": "integer",

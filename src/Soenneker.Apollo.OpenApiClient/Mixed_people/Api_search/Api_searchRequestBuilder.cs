@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_searchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", pathParameters)
+        public Api_searchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,lookalike_organization_ids%5B%5D*,not_organization_naics_codes%5B%5D*,not_organization_sic_codes%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_industries%5B%5D*,organization_industry_tag_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_naics_codes%5B%5D*,organization_not_industry_tag_ids%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,organization_sic_codes%5B%5D*,page*,per_page*,person_locations%5B%5D*,person_not_locations%5B%5D*,person_not_past_titles%5B%5D*,person_not_titles%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_searchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,lookalike_organization_ids%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,page*,per_page*,person_locations%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", rawUrl)
+        public Api_searchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/mixed_people/api_search{?contact_email_status%5B%5D*,currently_not_using_any_of_technology_uids%5B%5D*,currently_using_all_of_technology_uids%5B%5D*,currently_using_any_of_technology_uids%5B%5D*,include_similar_titles*,lookalike_organization_ids%5B%5D*,not_organization_naics_codes%5B%5D*,not_organization_sic_codes%5B%5D*,not_organization_websites_list%5B%5D*,organization_headcount_growth_past_n_months*,organization_headcount_growth_range%5Bmax%5D*,organization_headcount_growth_range%5Bmin%5D*,organization_ids%5B%5D*,organization_industries%5B%5D*,organization_industry_tag_ids%5B%5D*,organization_job_locations%5B%5D*,organization_job_posted_at_range%5Bmax%5D*,organization_job_posted_at_range%5Bmin%5D*,organization_locations%5B%5D*,organization_naics_codes%5B%5D*,organization_not_industry_tag_ids%5B%5D*,organization_not_locations%5B%5D*,organization_num_employees_ranges%5B%5D*,organization_num_jobs_range%5Bmax%5D*,organization_num_jobs_range%5Bmin%5D*,organization_sic_codes%5B%5D*,page*,per_page*,person_locations%5B%5D*,person_not_locations%5B%5D*,person_not_past_titles%5B%5D*,person_not_titles%5B%5D*,person_seniorities%5B%5D*,person_titles%5B%5D*,q_keywords*,q_organization_domains_list%5B%5D*,q_organization_job_titles%5B%5D*,q_person_name*,revenue_range%5Bmax%5D*,revenue_range%5Bmin%5D*}", rawUrl)
         {
         }
         /// <summary>
@@ -149,6 +149,26 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("lookalike_organization_ids%5B%5D")]
             public string[] LookalikeOrganizationIds { get; set; }
 #endif
+            /// <summary>Exclude people whose current employer matches any of these NAICS codes. This is the counterpart to `organization_naics_codes[]`, and uses the same prefix and range matching. &lt;br&gt;&lt;br&gt;Examples: `92`; `31-33`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_organization_naics_codes%5B%5D")]
+            public string[]? NotOrganizationNaicsCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_organization_naics_codes%5B%5D")]
+            public string[] NotOrganizationNaicsCodes { get; set; }
+#endif
+            /// <summary>Exclude people whose current employer matches any of these SIC codes. This is the counterpart to `organization_sic_codes[]`, and uses the same prefix matching. &lt;br&gt;&lt;br&gt;Examples: `91`; `7372`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_organization_sic_codes%5B%5D")]
+            public string[]? NotOrganizationSicCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_organization_sic_codes%5B%5D")]
+            public string[] NotOrganizationSicCodes { get; set; }
+#endif
             /// <summary>Exclude people whose current employer matches any of these company domains. This is the counterpart to `q_organization_domains_list[]`. &lt;br&gt;&lt;br&gt;Matching covers every domain Apollo holds for a company, not just the one you send, so excluding a single domain also excludes that company&apos;s other known domains. &lt;br&gt;&lt;br&gt;Values are reduced to a domain before matching, so a bare domain, a full URL, or an email address at that domain all work. &lt;br&gt;&lt;br&gt;Use this parameter to keep companies you already work with, or have already contacted, out of your results without retrieving and enriching them first. &lt;br&gt;&lt;br&gt;Examples: `apollo.io`; `salesforce.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -178,6 +198,26 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             [QueryParameter("organization_ids%5B%5D")]
             public string[] OrganizationIds { get; set; }
 #endif
+            /// <summary>The industry names for the person&apos;s current employer. For a person to be included in search results, their employer only needs to match one of the industries you add. &lt;br&gt;&lt;br&gt;Values must exactly match an Apollo industry name, including capitalization and punctuation. Apollo industry names are lowercase. Use the values that Apollo returns in the `industries` field of the &lt;a href=&quot;https://docs.apollo.io/reference/organization-enrichment&quot;&gt;organization enrichment endpoint&lt;/a&gt;. Partial matches aren&apos;t supported. &lt;br&gt;&lt;br&gt;To search by Apollo industry ID instead, use the `organization_industry_tag_ids[]` parameter. &lt;br&gt;&lt;br&gt;Examples: `information technology &amp; services`; `hospital &amp; health care`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_industries%5B%5D")]
+            public string[]? OrganizationIndustries { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_industries%5B%5D")]
+            public string[] OrganizationIndustries { get; set; }
+#endif
+            /// <summary>The Apollo IDs for the industries of the person&apos;s current employer. For a person to be included in search results, their employer only needs to match one of the industries you add. &lt;br&gt;&lt;br&gt;Each industry in the Apollo database has a unique ID. To find industry IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/organization-enrichment&quot;&gt;organization enrichment endpoint&lt;/a&gt; for a company in the industry you want. The `industry_tag_id` field contains the ID of the company&apos;s primary industry, and the `industry_tag_hash` field maps each of the company&apos;s industry names to its ID. &lt;br&gt;&lt;br&gt;To search by industry name instead of ID, use the `organization_industries[]` parameter. &lt;br&gt;&lt;br&gt;Example: `5567cd4773696439b10b0000`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_industry_tag_ids%5B%5D")]
+            public string[]? OrganizationIndustryTagIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_industry_tag_ids%5B%5D")]
+            public string[] OrganizationIndustryTagIds { get; set; }
+#endif
             /// <summary>The locations of the jobs being actively recruited by the person&apos;s employer. &lt;br&gt;&lt;br&gt;Examples: `atlanta`; `japan`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -194,7 +234,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             /// <summary>The earliest date when jobs were posted by the person&apos;s current employer. Use this parameter in combination with `organization_job_posted_at_range[max]` to set a date range for when jobs posted. &lt;br&gt;&lt;br&gt;Example: `2025-07-25`</summary>
             [QueryParameter("organization_job_posted_at_range%5Bmin%5D")]
             public Date? OrganizationJobPostedAtRangemin { get; set; }
-            /// <summary>The location of the company headquarters for a person&apos;s current employer. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, people that work for the Boston-based company will not appear in your results, even if they match other parameters. &lt;br&gt;&lt;br&gt;To find people based on their personal location, use the `person_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`</summary>
+            /// <summary>The location of the company headquarters for a person&apos;s current employer. You can search across cities, US states, countries, and postal codes (ZIP codes). Postal codes are supported for the United States, Germany, and the United Kingdom. To filter by a US ZIP code or a UK postcode, pass it on its own, such as `10017`. For a German postal code, add the country, such as `10115, germany`, because a five-digit code on its own can match a US ZIP code instead. &lt;br&gt;&lt;br&gt;If a company has several office locations, results are still based on the headquarters location. For example, if you search `chicago` but a company&apos;s HQ location is in `boston`, people that work for the Boston-based company won&apos;t appear in your results, even if they match other parameters. &lt;br&gt;&lt;br&gt;To find people based on their personal location, use the `person_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `tokyo`; `spain`; `10017`; `10115, germany`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_locations%5B%5D")]
@@ -203,6 +243,36 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
 #else
             [QueryParameter("organization_locations%5B%5D")]
             public string[] OrganizationLocations { get; set; }
+#endif
+            /// <summary>The North American Industry Classification System (NAICS) codes for the person&apos;s current employer. For a person to be included in search results, their employer only needs to match one of the codes you add. &lt;br&gt;&lt;br&gt;Codes match by prefix, so a shorter code matches every code that starts with it. For example, `5415` matches `541511` and `541512`. You can also enter a range of codes separated by a hyphen. For example, `31-33` matches all codes that start with `31`, `32`, or `33`. &lt;br&gt;&lt;br&gt;Examples: `541511`; `5415`; `31-33`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_naics_codes%5B%5D")]
+            public string[]? OrganizationNaicsCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_naics_codes%5B%5D")]
+            public string[] OrganizationNaicsCodes { get; set; }
+#endif
+            /// <summary>Exclude people whose current employer belongs to any of these industries, identified by Apollo industry ID. This is the counterpart to `organization_industry_tag_ids[]`. &lt;br&gt;&lt;br&gt;To find industry IDs, refer to the `organization_industry_tag_ids[]` parameter. &lt;br&gt;&lt;br&gt;Example: `5567cd4773696439b10b0000`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_not_industry_tag_ids%5B%5D")]
+            public string[]? OrganizationNotIndustryTagIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_not_industry_tag_ids%5B%5D")]
+            public string[] OrganizationNotIndustryTagIds { get; set; }
+#endif
+            /// <summary>Exclude people from your search results based on the headquarters location of their current employer. You can use cities, US states, countries, and postal codes (ZIP codes) as locations to exclude. Postal codes are supported for the United States, Germany, and the United Kingdom. For a German postal code, add the country, such as `10115, germany`, because a five-digit code on its own can match a US ZIP code instead. &lt;br&gt;&lt;br&gt;This is the counterpart to `organization_locations[]`. To exclude people based on where they live, use the `person_not_locations[]` parameter. &lt;br&gt;&lt;br&gt;Examples: `minnesota`; `ireland`; `10017`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_not_locations%5B%5D")]
+            public string[]? OrganizationNotLocations { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_not_locations%5B%5D")]
+            public string[] OrganizationNotLocations { get; set; }
 #endif
             /// <summary>The number range of employees working for the person&apos;s current company. This enables you to find people based on the headcount of their employer. You can add multiple ranges to expand your search results. &lt;br&gt;&lt;br&gt;Each range you add needs to be a string, with the upper and lower numbers of the range separated only by a comma. &lt;br&gt;&lt;br&gt;Examples: `1,10`; `250,500`; `10000,20000`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -220,13 +290,23 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
             /// <summary>The minimum number of job postings active at the person&apos;s current employer. Use this parameter in combination with `organization_num_jobs_range[max]` to set a job postings range. &lt;br&gt;&lt;br&gt;Examples: `50`; `500`</summary>
             [QueryParameter("organization_num_jobs_range%5Bmin%5D")]
             public int? OrganizationNumJobsRangemin { get; set; }
+            /// <summary>The Standard Industrial Classification (SIC) codes for the person&apos;s current employer. For a person to be included in search results, their employer only needs to match one of the codes you add. &lt;br&gt;&lt;br&gt;Codes match by prefix, so a shorter code matches every code that starts with it. For example, `73` matches `7371` and `7372`. Ranges aren&apos;t supported for SIC codes. &lt;br&gt;&lt;br&gt;Examples: `7372`; `73`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_sic_codes%5B%5D")]
+            public string[]? OrganizationSicCodes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_sic_codes%5B%5D")]
+            public string[] OrganizationSicCodes { get; set; }
+#endif
             /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
             /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The location where people live. You can search across cities, US states, and countries. &lt;br&gt;&lt;br&gt;To find people based on the headquarters locations of their current employer, use the `organization_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `california`; `ireland`; `chicago`</summary>
+            /// <summary>The location where people live. You can search across cities, US states, countries, and postal codes (ZIP codes). Postal codes are supported for the United States, Germany, and the United Kingdom. To filter by a US ZIP code or a UK postcode, pass it on its own, such as `94105`. For a German postal code, add the country, such as `10115, germany`, because a five-digit code on its own can match a US ZIP code instead. &lt;br&gt;&lt;br&gt;To find people based on the headquarters locations of their current employer, use the `organization_locations` parameter. &lt;br&gt;&lt;br&gt;Examples: `california`; `ireland`; `chicago`; `94105`; `10115, germany`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("person_locations%5B%5D")]
@@ -235,6 +315,36 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_people.Api_search
 #else
             [QueryParameter("person_locations%5B%5D")]
             public string[] PersonLocations { get; set; }
+#endif
+            /// <summary>Exclude people from your search results based on where they live. You can use cities, US states, countries, and postal codes (ZIP codes) as locations to exclude. Postal codes are supported for the United States, Germany, and the United Kingdom. For a German postal code, add the country, such as `10115, germany`, because a five-digit code on its own can match a US ZIP code instead. &lt;br&gt;&lt;br&gt;This is the counterpart to `person_locations[]`. To exclude people based on the headquarters location of their current employer, use the `organization_not_locations[]` parameter. &lt;br&gt;&lt;br&gt;Examples: `texas`; `ireland`; `94105`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("person_not_locations%5B%5D")]
+            public string[]? PersonNotLocations { get; set; }
+#nullable restore
+#else
+            [QueryParameter("person_not_locations%5B%5D")]
+            public string[] PersonNotLocations { get; set; }
+#endif
+            /// <summary>Exclude people who held any of these job titles in a previous role. Only past roles are checked; a person&apos;s current job title isn&apos;t affected by this filter. To exclude current job titles, use `person_not_titles[]`. &lt;br&gt;&lt;br&gt;You can add fewer than 100 unique job titles. Requests that exceed this limit return a `422` error. &lt;br&gt;&lt;br&gt;Examples: `intern`; `recruiter`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("person_not_past_titles%5B%5D")]
+            public string[]? PersonNotPastTitles { get; set; }
+#nullable restore
+#else
+            [QueryParameter("person_not_past_titles%5B%5D")]
+            public string[] PersonNotPastTitles { get; set; }
+#endif
+            /// <summary>Exclude people whose current job title matches any of these job titles. This is the counterpart to `person_titles[]`. &lt;br&gt;&lt;br&gt;Like `person_titles[]`, matching isn&apos;t limited to exact job titles. For example, excluding `intern` also excludes people with the job title `sales intern`. &lt;br&gt;&lt;br&gt;The combined number of unique job titles in `person_titles[]` and `person_not_titles[]` must be less than 100. Requests that exceed this limit return a `422` error. &lt;br&gt;&lt;br&gt;Examples: `intern`; `assistant`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("person_not_titles%5B%5D")]
+            public string[]? PersonNotTitles { get; set; }
+#nullable restore
+#else
+            [QueryParameter("person_not_titles%5B%5D")]
+            public string[] PersonNotTitles { get; set; }
 #endif
             /// <summary>The job seniority that people hold within their current employer. This enables you to find people that currently hold positions at certain reporting levels, such as Director level or senior IC level. &lt;br&gt;&lt;br&gt;For a person to be included in search results, they only need to match 1 of the seniorities you add. Adding more seniorities expands your search results. &lt;br&gt;&lt;br&gt; Searches only return results based on their current job title, so searching for Director-level employees only returns people that currently hold a Director-level title. If someone was previously a Director, but is currently a VP, they would not be included in your search results. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `person_titles[]` parameter to find people based on specific job functions and seniority levels. &lt;br&gt;&lt;br&gt;The following options can be used for this parameter: &lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;owner&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;founder&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;c_suite&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;partner&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;vp&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;head&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;director&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;manager&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;senior&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;entry&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;intern&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
