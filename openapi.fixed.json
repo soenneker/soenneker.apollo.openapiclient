@@ -8551,7 +8551,7 @@
           "Contacts"
         ],
         "summary": "Bulk update contacts",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/contacts/bulk_update\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060contacts_bulk_update\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/5995459280525-View-and-Edit-Contacts\u0022 target=\u0022_blank\u0022\u003EContacts\u003C/a\u003E are people saved in Apollo.\u003Cbr\u003E\u003Cbr\u003EUse the bulk update contacts endpoint to update multiple contacts in your team\u0027s Apollo account simultaneously.\u003Cbr\u003E\u003Cbr\u003EThis endpoint allows you to update common fields across multiple contacts efficiently, such as contact stages, owners, custom fields, and other contact attributes.\u003Cbr\u003E\u003Cbr\u003EYou can update up to 1000 contacts per request; requests with more than 1000 contacts are rejected with a \u003Ccode\u003E422\u003C/code\u003E error. Requests of 100 or fewer contacts are processed synchronously and return the updated contacts immediately. Requests of 101 to 1000 contacts are processed asynchronously. You can also force asynchronous processing at any batch size by setting the \u003Ccode\u003Easync\u003C/code\u003E parameter to \u003Ccode\u003Etrue\u003C/code\u003E.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/contacts/bulk_update\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060contacts_bulk_update\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/5995459280525-View-and-Edit-Contacts\u0022 target=\u0022_blank\u0022\u003EContacts\u003C/a\u003E are people saved in Apollo.\u003Cbr\u003E\u003Cbr\u003EUse the bulk update contacts endpoint to update multiple contacts in your team\u0027s Apollo account simultaneously.\u003Cbr\u003E\u003Cbr\u003EUse this endpoint to update contact details, owners, and custom field values. To change stages, use \u003Ca href=\u0022https://docs.apollo.io/reference/update-contact-stage\u0022\u003Eupdate contact stage for multiple contacts\u003C/a\u003E.\u003Cbr\u003E\u003Cbr\u003EYou can update up to 1000 contacts per request; requests with more than 1000 contacts are rejected with a \u003Ccode\u003E422\u003C/code\u003E error. Requests of 100 or fewer contacts are processed synchronously and return the updated contacts immediately. Requests of 101 to 1000 contacts are processed asynchronously. You can also force asynchronous processing at any batch size by setting the \u003Ccode\u003Easync\u003C/code\u003E parameter to \u003Ccode\u003Etrue\u003C/code\u003E.",
         "operationId": "BulkUpdateContacts",
         "requestBody": {
           "content": {
@@ -15153,7 +15153,7 @@
                     "value": {
                       "typed_custom_fields": [
                         {
-                          "id": "32d42c92-5be4-4ec4-96c7-f689b43ec8a8",
+                          "id": "507f1f77bcf86cd799439011",
                           "name": "Test Name",
                           "modality": "contact",
                           "text_field_max_length": 120
@@ -38282,7 +38282,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "32d42c92-5be4-4ec4-96c7-f689b43ec8a8"
+            "example": "507f1f77bcf86cd799439011"
           },
           "name": {
             "type": "string",
