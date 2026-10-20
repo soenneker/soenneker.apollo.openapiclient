@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_usage_statsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/usage_stats/api_usage_stats", pathParameters)
+        public Api_usage_statsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/usage_stats/api_usage_stats{?endpoints%5B%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,46 +30,50 @@ namespace Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Api_usage_statsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/usage_stats/api_usage_stats", rawUrl)
+        public Api_usage_statsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/usage_stats/api_usage_stats{?endpoints%5B%5D*}", rawUrl)
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
+        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.&lt;br&gt;&lt;br&gt;By default, the response covers a fixed list of endpoints, not every endpoint you can call. To check other endpoints, use the `endpoints[]` parameter.### Check specific endpointsPass each endpoint in the `endpoints[]` parameter as the path shown in the **API key access** row of its page, without a leading slash. For example, the path for &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;view an account&lt;/a&gt; is `api/v1/accounts/show`. You can also send the paths as a JSON array in the request body, such as `{&quot;endpoints&quot;: [&quot;api/v1/accounts/show&quot;]}`.The response then includes only the endpoints you request. Each endpoint&apos;s key in the response is a string in the form `[&quot;api/v1/accounts&quot;, &quot;show&quot;]`.You can request up to 74 endpoints at a time. Each one must be an endpoint you can add to an &lt;a href=&quot;https://docs.apollo.io/docs/create-api-key&quot;&gt;API key&lt;/a&gt;. Otherwise, Apollo returns a `422` response with one of these `error_details.code` values:| Code | Cause || --- | --- || `USAGE.VALIDATION.UNKNOWN_ENDPOINT` | A path isn&apos;t an endpoint you can add to an API key, or it starts with `/`. `error_details.context.endpoints.value` lists the rejected paths. || `USAGE.VALIDATION.TOO_MANY_ENDPOINTS` | The request includes more than 74 endpoints. |
         /// </summary>
-        /// <returns>A <see cref="string"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.PostApiusage200ResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.PostApiusage200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage422Response">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<string?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200Response?> PostAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsRequestBuilder.Api_usage_statsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<string> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200Response> PostAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsRequestBuilder.Api_usage_statsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.PostApiusage200ResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.PostApiusage200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage403Response.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage422Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.
+        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.&lt;br&gt;&lt;br&gt;By default, the response covers a fixed list of endpoints, not every endpoint you can call. To check other endpoints, use the `endpoints[]` parameter.### Check specific endpointsPass each endpoint in the `endpoints[]` parameter as the path shown in the **API key access** row of its page, without a leading slash. For example, the path for &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;view an account&lt;/a&gt; is `api/v1/accounts/show`. You can also send the paths as a JSON array in the request body, such as `{&quot;endpoints&quot;: [&quot;api/v1/accounts/show&quot;]}`.The response then includes only the endpoints you request. Each endpoint&apos;s key in the response is a string in the form `[&quot;api/v1/accounts&quot;, &quot;show&quot;]`.You can request up to 74 endpoints at a time. Each one must be an endpoint you can add to an &lt;a href=&quot;https://docs.apollo.io/docs/create-api-key&quot;&gt;API key&lt;/a&gt;. Otherwise, Apollo returns a `422` response with one of these `error_details.code` values:| Code | Cause || --- | --- || `USAGE.VALIDATION.UNKNOWN_ENDPOINT` | A path isn&apos;t an endpoint you can add to an API key, or it starts with `/`. `error_details.context.endpoints.value` lists the rejected paths. || `USAGE.VALIDATION.TOO_MANY_ENDPOINTS` | The request includes more than 74 endpoints. |
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsRequestBuilder.Api_usage_statsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsRequestBuilder.Api_usage_statsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
@@ -85,6 +89,23 @@ namespace Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats
         public global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Apollo.OpenApiClient.Usage_stats.Api_usage_stats.Api_usage_statsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// ## Endpoint essentials**API key access:** `api/v1/usage_stats/api_usage_stats` or `Master API key`**OAuth scopes:** `api_usage_stats_read`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the view API usage stats endpoint to view your team&apos;s usage of Apollo API and your rate limit for API endpoints.&lt;br&gt;&lt;br&gt;Each endpoint has a rate limit per minute, hour, and day. Your &lt;a href=&quot;https://docs.apollo.io/docs/api-pricing&quot;&gt;Apollo plan&lt;/a&gt; does impact the rate limits for API endpoints.&lt;br&gt;&lt;br&gt;By default, the response covers a fixed list of endpoints, not every endpoint you can call. To check other endpoints, use the `endpoints[]` parameter.### Check specific endpointsPass each endpoint in the `endpoints[]` parameter as the path shown in the **API key access** row of its page, without a leading slash. For example, the path for &lt;a href=&quot;https://docs.apollo.io/reference/view-an-account&quot;&gt;view an account&lt;/a&gt; is `api/v1/accounts/show`. You can also send the paths as a JSON array in the request body, such as `{&quot;endpoints&quot;: [&quot;api/v1/accounts/show&quot;]}`.The response then includes only the endpoints you request. Each endpoint&apos;s key in the response is a string in the form `[&quot;api/v1/accounts&quot;, &quot;show&quot;]`.You can request up to 74 endpoints at a time. Each one must be an endpoint you can add to an &lt;a href=&quot;https://docs.apollo.io/docs/create-api-key&quot;&gt;API key&lt;/a&gt;. Otherwise, Apollo returns a `422` response with one of these `error_details.code` values:| Code | Cause || --- | --- || `USAGE.VALIDATION.UNKNOWN_ENDPOINT` | A path isn&apos;t an endpoint you can add to an API key, or it starts with `/`. `error_details.context.endpoints.value` lists the rejected paths. || `USAGE.VALIDATION.TOO_MANY_ENDPOINTS` | The request includes more than 74 endpoints. |
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Api_usage_statsRequestBuilderPostQueryParameters 
+        {
+            /// <summary>The endpoints to report usage and rate limits for. Pass each endpoint as the path shown in the **API key access** row of its page, without a leading slash. If you omit this parameter, the response covers a fixed list of endpoints.&lt;br&gt;&lt;br&gt;You can request up to 74 endpoints at a time. Each one must be an endpoint you can add to an API key.&lt;br&gt;&lt;br&gt;Examples: `api/v1/accounts/show`; `api/v1/people/match`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("endpoints%5B%5D")]
+            public string[]? Endpoints { get; set; }
+#nullable restore
+#else
+            [QueryParameter("endpoints%5B%5D")]
+            public string[] Endpoints { get; set; }
+#endif
         }
     }
 }

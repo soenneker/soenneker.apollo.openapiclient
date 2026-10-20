@@ -19863,20 +19863,72 @@
           "Miscellaneous"
         ],
         "summary": "View API usage stats and rate limits",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/usage_stats/api_usage_stats\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060api_usage_stats_read\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nUse the view API usage stats endpoint to view your team\u0027s usage of Apollo API and your rate limit for API endpoints.\u003Cbr\u003E\u003Cbr\u003EEach endpoint has a rate limit per minute, hour, and day. Your \u003Ca href=\u0022https://docs.apollo.io/docs/api-pricing\u0022\u003EApollo plan\u003C/a\u003E does impact the rate limits for API endpoints.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/usage_stats/api_usage_stats\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060api_usage_stats_read\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nUse the view API usage stats endpoint to view your team\u0027s usage of Apollo API and your rate limit for API endpoints.\u003Cbr\u003E\u003Cbr\u003EEach endpoint has a rate limit per minute, hour, and day. Your \u003Ca href=\u0022https://docs.apollo.io/docs/api-pricing\u0022\u003EApollo plan\u003C/a\u003E does impact the rate limits for API endpoints.\u003Cbr\u003E\u003Cbr\u003EBy default, the response covers a fixed list of endpoints, not every endpoint you can call. To check other endpoints, use the \u0060endpoints[]\u0060 parameter.\n\n### Check specific endpoints\n\nPass each endpoint in the \u0060endpoints[]\u0060 parameter as the path shown in the **API key access** row of its page, without a leading slash. For example, the path for \u003Ca href=\u0022https://docs.apollo.io/reference/view-an-account\u0022\u003Eview an account\u003C/a\u003E is \u0060api/v1/accounts/show\u0060. You can also send the paths as a JSON array in the request body, such as \u0060{\u0022endpoints\u0022: [\u0022api/v1/accounts/show\u0022]}\u0060.\n\nThe response then includes only the endpoints you request. Each endpoint\u0027s key in the response is a string in the form \u0060[\u0022api/v1/accounts\u0022, \u0022show\u0022]\u0060.\n\nYou can request up to 74 endpoints at a time. Each one must be an endpoint you can add to an \u003Ca href=\u0022https://docs.apollo.io/docs/create-api-key\u0022\u003EAPI key\u003C/a\u003E. Otherwise, Apollo returns a \u0060422\u0060 response with one of these \u0060error_details.code\u0060 values:\n\n| Code | Cause |\n| --- | --- |\n| \u0060USAGE.VALIDATION.UNKNOWN_ENDPOINT\u0060 | A path isn\u0027t an endpoint you can add to an API key, or it starts with \u0060/\u0060. \u0060error_details.context.endpoints.value\u0060 lists the rejected paths. |\n| \u0060USAGE.VALIDATION.TOO_MANY_ENDPOINTS\u0060 | The request includes more than 74 endpoints. |",
         "operationId": "PostApiusage",
+        "parameters": [
+          {
+            "name": "endpoints[]",
+            "in": "query",
+            "description": "The endpoints to report usage and rate limits for. Pass each endpoint as the path shown in the **API key access** row of its page, without a leading slash. If you omit this parameter, the response covers a fixed list of endpoints.\u003Cbr\u003E\u003Cbr\u003EYou can request up to 74 endpoints at a time. Each one must be an endpoint you can add to an API key.\u003Cbr\u003E\u003Cbr\u003EExamples: \u0060api/v1/accounts/show\u0060; \u0060api/v1/people/match\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiusage200ResponseSchema"
+                  "$ref": "#/components/schemas/PostApiusage200Response"
                 },
                 "examples": {
                   "OK": {
                     "summary": "OK",
-                    "value": "{\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 500,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 5,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 10,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022intelligent_fuzzy_search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022update\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022bulk_match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/contact_stages\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/accounts\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/account_stages\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022bulk_match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 597\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022show_with_context\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 597\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022enrich\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022bulk_enrich\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022job_postings\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022employee_metrics\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_companies\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_people\\\u0022, \\\u0022add_to_my_prospects\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 5999\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_people\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 10,\n      \u0022left_over\u0022: 5990\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 10,\n      \u0022left_over\u0022: 590\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 199\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_people\\\u0022, \\\u0022organization_top_people\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 2000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 2000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 400,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 400\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022update\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 300,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 300\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 10,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 10\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022external\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 300,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 300\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 10,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 10\n    }\n  },\n  \u0022[\\\u0022api/v1/conversations\\\u0022, \\\u0022ask_anything_v2_chat\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 1000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 1000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/conversations\\\u0022, \\\u0022export\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 480,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 480\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 1,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 1\n    }\n  },\n  \u0022[\\\u0022api/v1/voice_settings\\\u0022, \\\u0022get_available_phone_numbers\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 10,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 10\n    }\n  },\n  \u0022[\\\u0022api/v1/tasks\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/tasks\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 597\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/tasks\\\u0022, \\\u0022bulk_complete\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/reports\\\u0022, \\\u0022sync_report\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 5,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 5\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/mfa_config\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 5,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 5\n    }\n  },\n  \u0022[\\\u0022api/v1/phone_calls\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/phone_calls\\\u0022, \\\u0022update\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/paging_events\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 599\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 199\n    }\n  },\n  \u0022[\\\u0022api/v1/crm\\\u0022, \\\u0022object_fields_mapping\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 2,\n      \u0022left_over\u0022: 5998\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 2,\n      \u0022left_over\u0022: 5998\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022add_contact_ids\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022remove_or_stop_contact_ids\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_messages\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_messages\\\u0022, \\\u0022activities\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/users\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 4,\n      \u0022left_over\u0022: 5996\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/email_accounts\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/labels\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/typed_custom_fields\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  }\n0"
+                    "value": "{\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 500,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 5,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 10,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022intelligent_fuzzy_search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022update\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/contacts\\\u0022, \\\u0022bulk_match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/contact_stages\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/accounts\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/account_stages\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022bulk_match\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/people\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 597\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022show_with_context\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 597\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022enrich\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022bulk_enrich\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022job_postings\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/organizations\\\u0022, \\\u0022employee_metrics\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_companies\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_people\\\u0022, \\\u0022add_to_my_prospects\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 5999\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 100,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 100\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_people\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 10,\n      \u0022left_over\u0022: 5990\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 10,\n      \u0022left_over\u0022: 590\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 199\n    }\n  },\n  \u0022[\\\u0022api/v1/mixed_people\\\u0022, \\\u0022organization_top_people\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 2000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 2000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 400,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 400\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022update\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022show\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 300,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 300\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 10,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 10\n    }\n  },\n  \u0022[\\\u0022api/v1/conversation_shares\\\u0022, \\\u0022external\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 300,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 300\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 10,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 10\n    }\n  },\n  \u0022[\\\u0022api/v1/conversations\\\u0022, \\\u0022ask_anything_v2_chat\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 1000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 1000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    }\n  },\n  \u0022[\\\u0022api/v1/conversations\\\u0022, \\\u0022export\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 480,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 480\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 1,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 1\n    }\n  },\n  \u0022[\\\u0022api/v1/voice_settings\\\u0022, \\\u0022get_available_phone_numbers\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 10,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 10\n    }\n  },\n  \u0022[\\\u0022api/v1/tasks\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/tasks\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 597\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/reports\\\u0022, \\\u0022sync_report\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 5,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 5\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/mfa_config\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 50,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 50\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 20,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 20\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 5,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 5\n    }\n  },\n  \u0022[\\\u0022api/v1/phone_calls\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/phone_calls\\\u0022, \\\u0022update\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/paging_events\\\u0022, \\\u0022create\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 3,\n      \u0022left_over\u0022: 5997\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 599\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 1,\n      \u0022left_over\u0022: 199\n    }\n  },\n  \u0022[\\\u0022api/v1/crm\\\u0022, \\\u0022object_fields_mapping\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 2,\n      \u0022left_over\u0022: 5998\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022add_contact_ids\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_campaigns\\\u0022, \\\u0022remove_or_stop_contact_ids\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_messages\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/emailer_messages\\\u0022, \\\u0022activities\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/users\\\u0022, \\\u0022search\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 4,\n      \u0022left_over\u0022: 5996\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/email_accounts\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/labels\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  },\n  \u0022[\\\u0022api/v1/typed_custom_fields\\\u0022, \\\u0022index\\\u0022]\u0022: {\n    \u0022day\u0022: {\n      \u0022limit\u0022: 6000,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 6000\n    },\n    \u0022hour\u0022: {\n      \u0022limit\u0022: 600,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 600\n    },\n    \u0022minute\u0022: {\n      \u0022limit\u0022: 200,\n      \u0022consumed\u0022: 0,\n      \u0022left_over\u0022: 200\n    }\n  }\n}"
+                  },
+                  "Requested endpoints only": {
+                    "summary": "Requested endpoints only",
+                    "value": {
+                      "[\u0022api/v1/accounts\u0022, \u0022show\u0022]": {
+                        "day": {
+                          "limit": 6000,
+                          "consumed": 3,
+                          "left_over": 5997
+                        },
+                        "hour": {
+                          "limit": 600,
+                          "consumed": 3,
+                          "left_over": 597
+                        },
+                        "minute": {
+                          "limit": 200,
+                          "consumed": 3,
+                          "left_over": 197
+                        }
+                      },
+                      "[\u0022api/v1/people\u0022, \u0022match\u0022]": {
+                        "day": {
+                          "limit": 6000,
+                          "consumed": 0,
+                          "left_over": 6000
+                        },
+                        "hour": {
+                          "limit": 600,
+                          "consumed": 0,
+                          "left_over": 600
+                        },
+                        "minute": {
+                          "limit": 200,
+                          "consumed": 0,
+                          "left_over": 200
+                        }
+                      }
+                    }
                   }
                 },
                 "x-schema-inferred-from-examples": true
@@ -19916,6 +19968,96 @@
                   }
                 },
                 "x-schema-inferred-from-examples": true
+              }
+            }
+          },
+          "422": {
+            "description": "Validation error. A path in \u0060endpoints[]\u0060 isn\u0027t an endpoint you can add to an API key, or the request includes more than 74 endpoints.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiusage422Response"
+                },
+                "examples": {
+                  "Unknown endpoint": {
+                    "summary": "Unknown endpoint",
+                    "value": {
+                      "error_details": {
+                        "code": "USAGE.VALIDATION.UNKNOWN_ENDPOINT",
+                        "message": "Some of the requested endpoints are not API endpoints available to your team.",
+                        "suggestions": [
+                          {
+                            "label": "Retry with endpoint paths such as api/v1/accounts/show",
+                            "parameter": "endpoints"
+                          }
+                        ],
+                        "context": {
+                          "endpoints": {
+                            "value": "/api/v1/accounts/show",
+                            "description": "The requested endpoints that are not API endpoints available to your team"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Too many endpoints": {
+                    "summary": "Too many endpoints",
+                    "value": {
+                      "error_details": {
+                        "code": "USAGE.VALIDATION.TOO_MANY_ENDPOINTS",
+                        "message": "Too many endpoints were requested at once.",
+                        "suggestions": [
+                          {
+                            "label": "Retry with fewer endpoints, or without endpoints to get every endpoint",
+                            "parameter": "endpoints"
+                          }
+                        ],
+                        "context": {
+                          "max_endpoints": {
+                            "value": 74,
+                            "description": "The maximum number of endpoints one request can ask for"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "API rate limit exceeded. Reduce request frequency and follow your workspace rate limits.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiusage429Response"
+                },
+                "examples": {
+                  "Too many requests": {
+                    "value": {
+                      "message": "The maximum number of api calls allowed for api/v1/usage_stats/api_usage_stats is 600 times per hour. Please upgrade your plan from https://app.apollo.io/#/settings/plans/upgrade.",
+                      "error_details": {
+                        "code": "USAGE.RATE_LIMIT.API_RATE_LIMIT_EXCEEDED",
+                        "message": "You have made more API requests than your plan allows in this time window.",
+                        "suggestions": [
+                          {
+                            "label": "Wait until the rate limit resets, then retry the API request."
+                          },
+                          {
+                            "label": "Check the Apollo Docs to understand API rate limits and how to use response headers to prevent rate-limit errors.",
+                            "url": "https://docs.apollo.io/reference/rate-limits"
+                          }
+                        ],
+                        "context": {
+                          "window": {
+                            "value": "hour",
+                            "description": "The rate limit window that was exhausted, such as \u0022minute\u0022 or \u0022hour\u0022"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -23286,6 +23428,23 @@
         },
         "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own."
       },
+      "ErrorDetailsContextAdditionalPropertiesValue": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
       "ErrorDetailsSuggestionsItem": {
         "type": "object",
         "properties": {
@@ -23340,7 +23499,7 @@
         "type": "object",
         "properties": {
           "value": {
-            "type": "string"
+            "$ref": "#/components/schemas/ErrorDetailsContextAdditionalPropertiesValue"
           },
           "description": {
             "type": "string"
@@ -26330,7 +26489,26 @@
         }
       },
       "PostApiusage200Response": {
-        "type": "string"
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiusage200ResponseBranch1"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "[\u0022api/v1/accounts\u0022, \u0022show\u0022]": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1AccountsShow"
+          },
+          "[\u0022api/v1/people\u0022, \u0022match\u0022]": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatch"
+          }
+        }
       },
       "PostApiusage403Response": {
         "type": "object",
@@ -26897,6 +27075,17 @@
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
+      },
+      "PostApiusage200ResponseBranch1": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        }
       },
       "RunAnAssistantTask401Response": {
         "type": "object",
@@ -29153,8 +29342,29 @@
           }
         }
       },
-      "PostApiusage200ResponseSchema": {
-        "type": "string"
+      "PostApiusage422Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "PostApiusage429Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "message": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "example": "The maximum number of api calls allowed for api/v1/usage_stats/api_usage_stats is 600 times per hour. Please upgrade your plan from https://app.apollo.io/#/settings/plans/upgrade.",
+            "deprecated": true
+          }
+        }
       },
       "PhonecallsCreate403ResponseSchema": {
         "type": "string"
@@ -29511,6 +29721,17 @@
             "$ref": "#/components/schemas/AddContactsToSequence200ResponseEmailerTouchesItemUniqueScheduledOneOf2"
           }
         ]
+      },
+      "PostApiusage200ResponseAnyOf2": {
+        "type": "object",
+        "properties": {
+          "[\u0022api/v1/accounts\u0022, \u0022show\u0022]": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1AccountsShow"
+          },
+          "[\u0022api/v1/people\u0022, \u0022match\u0022]": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatch"
+          }
+        }
       },
       "ErrorDetailsContextProperty": {
         "type": "object",
@@ -40272,6 +40493,34 @@
           }
         }
       },
+      "PostApiusage200ResponseAnyOf2ApiV1AccountsShow": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1AccountsShowDay"
+          },
+          "hour": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1AccountsShowHour"
+          },
+          "minute": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1AccountsShowMinute"
+          }
+        }
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1PeopleMatch": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay"
+          },
+          "hour": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour"
+          },
+          "minute": {
+            "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute"
+          }
+        }
+      },
       "PeopleEnrichment200ResponsePersonTwitterUrl": {
         "type": "object"
       },
@@ -49104,6 +49353,108 @@
           }
         },
         "description": "Account this opportunity belongs to."
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1AccountsShowDay": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "consumed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "left_over": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1AccountsShowHour": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "consumed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "left_over": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1AccountsShowMinute": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "consumed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "left_over": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "consumed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "left_over": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "consumed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "left_over": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "consumed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "left_over": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
       },
       "PeopleEnrichment200ResponsePersonEmploymentHistoryItemCreatedAt": {
         "type": "object"
