@@ -26,7 +26,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Apollo.OpenApiClient.Models.RunAnAssistantTask200ResponseMessagesItem> Messages { get; set; }
 #endif
-        /// <summary>Polling hint returned after creation or continuation.</summary>
+        /// <summary>Polling hint returned after creation or continuation, and when polling a running task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NextAction { get; set; }
@@ -42,7 +42,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>Latest assistant text in the returned batch when awaiting input. Can be null with an incremental cursor; poll without a cursor to read the conversation.</summary>
+        /// <summary>Milliseconds to wait before polling again. Returned after creation or continuation, and when polling a running task.</summary>
+        public int? PollAfterMs { get; set; }
+        /// <summary>Latest assistant text when awaiting input.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Question { get; set; }
@@ -90,6 +92,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.RunAnAssistantTask200ResponseMessagesItem>(global::Soenneker.Apollo.OpenApiClient.Models.RunAnAssistantTask200ResponseMessagesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "next_action", n => { NextAction = n.GetStringValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
+                { "poll_after_ms", n => { PollAfterMs = n.GetIntValue(); } },
                 { "question", n => { Question = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.RunAnAssistantTask200ResponseStatus>(); } },
                 { "task_id", n => { TaskId = n.GetStringValue(); } },
@@ -107,6 +110,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.RunAnAssistantTask200ResponseMessagesItem>("messages", Messages);
             writer.WriteStringValue("next_action", NextAction);
             writer.WriteStringValue("note", Note);
+            writer.WriteIntValue("poll_after_ms", PollAfterMs);
             writer.WriteStringValue("question", Question);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.RunAnAssistantTask200ResponseStatus>("status", Status);
             writer.WriteStringValue("task_id", TaskId);

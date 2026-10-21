@@ -17,13 +17,259 @@
     }
   ],
   "paths": {
+    "/agents/poll_task": {
+      "post": {
+        "tags": [
+          "AI Assistant"
+        ],
+        "summary": "Poll an Assistant task",
+        "description": "\u003Ctable\u003E\n  \u003Cthead\u003E\n    \u003Ctr style=\u0022background-color :#FEFFD9; color:#000000\u0022\u003E\n      \u003Cth colspan=\u00222\u0022 align=\u0022left\u0022\u003EEndpoint essentials\u003C/th\u003E\n    \u003C/tr\u003E\n  \u003C/thead\u003E\n  \u003Ctbody\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EAPI key access\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003Eapi/v1/agents/poll_task\u003C/code\u003E or \u003Ccode\u003EMaster API key\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EOAuth scopes\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003Eagent_task\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003ECredit usage\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003E0 credits\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EDetails\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003EPolling only reads the task, so it never consumes credits. Credits are consumed only by the actions the Assistant performs while it works on the task. See \u003Ca href=\u0022https://docs.apollo.io/docs/api-pricing\u0022\u003EAPI pricing and credits\u003C/a\u003E.\u003C/td\u003E\n    \u003C/tr\u003E\n  \u003C/tbody\u003E\n\u003C/table\u003E\n\nAn \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/39359204112397-AI-Assistant-Overview\u0022 target=\u0022_blank\u0022\u003EApollo AI Assistant\u003C/a\u003E task is a conversation in which you give instructions, receive results, and answer follow-up questions.\u003Cbr\u003E\u003Cbr\u003EUse the poll an Assistant task endpoint to check the progress of a task you created with the \u003Ca href=\u0022https://docs.apollo.io/reference/run-an-assistant-task\u0022\u003Erun an Assistant task\u003C/a\u003E endpoint. It returns immediately with the task\u0027s \u0060status\u0060, its messages, and a \u0060cursor\u0060. It only reads the task: it never waits for the task to finish, and it never starts or continues a task. Any \u0060instruction\u0060 you send to this endpoint is ignored.\u003Cbr\u003E\u003Cbr\u003E## Poll for results\n\nSend the \u0060task_id\u0060. Omit \u0060cursor\u0060 on your first poll; on later polls, pass the \u0060cursor\u0060 from your previous response:\n\n\u0060\u0060\u0060json\n{\n  \u0022task_id\u0022: \u0022507f1f77bcf86cd799439011\u0022,\n  \u0022cursor\u0022: 0\n}\n\u0060\u0060\u0060\n\nThe response returns only the messages with a sequence number strictly greater than \u0060cursor\u0060, plus a new \u0060cursor\u0060. Pass that new \u0060cursor\u0060 on your next poll. An empty \u0060messages\u0060 array means nothing new has been added yet; it does not mean the task has finished, so check \u0060status\u0060. Omit \u0060cursor\u0060 to receive the full conversation.\u003Cbr\u003E\u003Cbr\u003EWhile the task is \u0060running\u0060, the response includes \u0060poll_after_ms\u0060 (\u006010000\u0060, or 10 seconds). Wait that long before you poll again.\n\n| Status | What to do |\n| --- | --- |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Erunning\u003C/code\u003E | Wait \u0060poll_after_ms\u0060, then poll again with the new \u0060cursor\u0060. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Eawaiting_input\u003C/code\u003E | Read \u0060question\u0060, then answer by calling the \u003Ca href=\u0022https://docs.apollo.io/reference/run-an-assistant-task\u0022\u003Erun an Assistant task\u003C/a\u003E endpoint with the same \u0060task_id\u0060 and your answer as \u0060instruction\u0060. The response also includes \u0060error_type: \u0022elicitation_required\u0022\u0060; this is a request for input, not an HTTP error. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Ecomplete\u003C/code\u003E | Read the result. To send a follow-up, call the run an Assistant task endpoint with the same \u0060task_id\u0060 and a new \u0060instruction\u0060. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Efailed\u003C/code\u003E | Stop polling and inspect any returned messages. |\n\n\u0060question\u0060 is the latest Assistant message in the returned batch, so it appears in the poll where that message first arrives. If a later poll returns no new messages, \u0060question\u0060 is \u0060null\u0060; omit \u0060cursor\u0060 to read the full conversation again.\u003Cbr\u003E\u003Cbr\u003ESet a polling deadline in your client and handle a task that remains \u0060running\u0060. This endpoint does not promise a fixed completion time.\n\n## Authentication and access\n\nUse an API key with access to \u0060api/v1/agents/poll_task\u0060, or an OAuth access token with the \u0060agent_task\u0060 scope. Poll with the same acting user that created the task. A task created by another user returns \u0060403\u0060. See \u003Ca href=\u0022https://docs.apollo.io/reference/authentication#which-user-do-your-requests-act-as\u0022\u003Ewhich user API requests act as\u003C/a\u003E.",
+        "operationId": "PollAnAssistantTask",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PollAnAssistantTaskRequest"
+              },
+              "examples": {
+                "poll_incrementally": {
+                  "value": {
+                    "task_id": "507f1f77bcf86cd799439011",
+                    "cursor": 0
+                  }
+                },
+                "poll_full_conversation": {
+                  "value": {
+                    "task_id": "507f1f77bcf86cd799439011"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Current task state. A returned task is not necessarily complete.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PollAnAssistantTask200Response"
+                },
+                "examples": {
+                  "running": {
+                    "value": {
+                      "task_id": "507f1f77bcf86cd799439011",
+                      "status": "running",
+                      "messages": [
+                        {
+                          "seq_num": 1,
+                          "role": "assistant",
+                          "text": "Searching for companies that match your ideal customer profile."
+                        }
+                      ],
+                      "cursor": 1,
+                      "latest_seq_num": 1,
+                      "next_action": "Wait poll_after_ms, then call apollo_agent_poll_task with this task_id and cursor=1.",
+                      "poll_after_ms": 10000
+                    }
+                  },
+                  "no_new_messages": {
+                    "value": {
+                      "task_id": "507f1f77bcf86cd799439011",
+                      "status": "running",
+                      "messages": [],
+                      "cursor": 1,
+                      "latest_seq_num": 1,
+                      "next_action": "Wait poll_after_ms, then call apollo_agent_poll_task with this task_id and cursor=1.",
+                      "poll_after_ms": 10000
+                    }
+                  },
+                  "awaiting_input": {
+                    "value": {
+                      "task_id": "507f1f77bcf86cd799439011",
+                      "status": "awaiting_input",
+                      "messages": [
+                        {
+                          "seq_num": 2,
+                          "role": "assistant",
+                          "text": "Which region should I focus on?"
+                        }
+                      ],
+                      "cursor": 2,
+                      "latest_seq_num": 2,
+                      "error_type": "elicitation_required",
+                      "question": "Which region should I focus on?"
+                    }
+                  },
+                  "complete": {
+                    "value": {
+                      "task_id": "507f1f77bcf86cd799439011",
+                      "status": "complete",
+                      "messages": [
+                        {
+                          "seq_num": 4,
+                          "role": "assistant",
+                          "text": "Here is the summary you requested."
+                        }
+                      ],
+                      "cursor": 4,
+                      "latest_seq_num": 4
+                    }
+                  },
+                  "failed": {
+                    "value": {
+                      "task_id": "507f1f77bcf86cd799439011",
+                      "status": "failed",
+                      "messages": [],
+                      "cursor": 4,
+                      "latest_seq_num": 4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid credentials.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PollAnAssistantTask401Response"
+                },
+                "examples": {
+                  "error": {
+                    "value": {
+                      "error": "Invalid access credentials."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Insufficient endpoint access, or the task belongs to another acting user.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PollAnAssistantTask403Response"
+                },
+                "examples": {
+                  "error": {
+                    "value": {
+                      "success": false,
+                      "error": "Task is not accessible",
+                      "error_code": 403,
+                      "error_details": {
+                        "code": "ASSISTANT.AUTHORIZATION.AGENT_TASK_NOT_ACCESSIBLE",
+                        "message": "You do not have access to this agent task."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Missing \u0060task_id\u0060, invalid \u0060cursor\u0060, or task not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PollAnAssistantTask422Response"
+                },
+                "examples": {
+                  "task_id_missing": {
+                    "value": {
+                      "success": false,
+                      "error": "task_id is required",
+                      "error_code": 422,
+                      "error_details": {
+                        "code": "ASSISTANT.VALIDATION.AGENT_TASK_ID_REQUIRED",
+                        "message": "task_id is required.",
+                        "suggestions": [
+                          {
+                            "label": "Pass the task_id returned by the apollo_agent_* call that created the task",
+                            "parameter": "task_id"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "cursor_invalid": {
+                    "value": {
+                      "success": false,
+                      "error": "cursor must be a non-negative integer",
+                      "error_code": 422,
+                      "error_details": {
+                        "code": "ASSISTANT.VALIDATION.AGENT_TASK_CURSOR_INVALID",
+                        "message": "cursor must be a non-negative integer.",
+                        "suggestions": [
+                          {
+                            "label": "Pass the cursor from the previous response, or omit it to read the whole task",
+                            "parameter": "cursor"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "task_not_found": {
+                    "value": {
+                      "success": false,
+                      "error": "Task not found: 507f1f77bcf86cd799439011",
+                      "error_code": 422,
+                      "error_details": {
+                        "code": "ASSISTANT.VALIDATION.AGENT_TASK_NOT_FOUND",
+                        "message": "No agent task matches this task_id."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "API rate limit exceeded. Reduce request frequency and follow your workspace rate limits.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PollAnAssistantTask429Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The poll request could not be processed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PollAnAssistantTask500Response"
+                },
+                "examples": {
+                  "error": {
+                    "value": {
+                      "success": false,
+                      "error": "Internal error",
+                      "error_code": 500,
+                      "error_details": {
+                        "code": "ASSISTANT.INTERNAL.AGENT_TASK_INTERNAL_ERROR",
+                        "message": "The agent task request failed. Retry shortly."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/agents/task": {
       "post": {
         "tags": [
           "AI Assistant"
         ],
         "summary": "Run an Assistant task",
-        "description": "\u003Ctable\u003E\n  \u003Cthead\u003E\n    \u003Ctr style=\u0022background-color :#FEFFD9; color:#000000\u0022\u003E\n      \u003Cth colspan=\u00222\u0022 align=\u0022left\u0022\u003EEndpoint essentials\u003C/th\u003E\n    \u003C/tr\u003E\n  \u003C/thead\u003E\n  \u003Ctbody\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EAPI key access\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003Eapi/v1/agents/task\u003C/code\u003E or \u003Ccode\u003EMaster API key\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EOAuth scopes\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003Eagent_task\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003ECredit usage\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003EVariable, based on the actions the Assistant performs. Polling consumes \u003Ccode\u003E0 credits\u003C/code\u003E.\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EDetails\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003ESubmitting a message does not itself charge credits. Actions such as enrichment can consume credits according to your plan, the action, and the data returned. There is no fixed per-task price. See \u003Ca href=\u0022https://docs.apollo.io/docs/api-pricing\u0022\u003EAPI pricing and credits\u003C/a\u003E.\u003C/td\u003E\n    \u003C/tr\u003E\n  \u003C/tbody\u003E\n\u003C/table\u003E\n\nAn \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/39359204112397-AI-Assistant-Overview\u0022 target=\u0022_blank\u0022\u003EApollo AI Assistant\u003C/a\u003E task is a conversation in which you give instructions, receive results, and answer follow-up questions. It is separate from a CRM task created with the \u003Ca href=\u0022https://docs.apollo.io/reference/create-a-task\u0022\u003Ecreate a task\u003C/a\u003E endpoint.\u003Cbr\u003E\u003Cbr\u003EUse \u0060POST /api/v1/agents/task\u0060 to create, poll, and continue an Assistant task. All three operations return HTTP \u0060200\u0060 on success. A successful submission means the instruction was accepted, not that the Assistant has completed it.\n\n## Create a task\n\nSend an \u0060instruction\u0060 without a \u0060task_id\u0060:\n\n\u0060\u0060\u0060json\n{\n  \u0022instruction\u0022: \u0022Find companies matching my ideal customer profile.\u0022\n}\n\u0060\u0060\u0060\n\nSave the returned \u0060task_id\u0060. The response also includes \u0060status: \u0022running\u0022\u0060 and a \u0060next_action\u0060 polling hint. Although the hint names \u0060apollo_agent_task\u0060, API clients poll this same HTTP endpoint.\n\n## Poll for results\n\nWait about 10 seconds between polls. Send the \u0060task_id\u0060 and omit \u0060instruction\u0060:\n\n\u0060\u0060\u0060json\n{\n  \u0022task_id\u0022: \u0022507f1f77bcf86cd799439011\u0022\n}\n\u0060\u0060\u0060\n\nThe response includes \u0060status\u0060, \u0060messages\u0060, and \u0060latest_seq_num\u0060. Messages contain \u0060seq_num\u0060, \u0060role\u0060, and flattened \u0060text\u0060. Hidden messages and non-text content are excluded.\n\n| Status | What to do |\n| --- | --- |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Erunning\u003C/code\u003E | Continue polling. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Eawaiting_input\u003C/code\u003E | Read \u0060question\u0060 and the conversation, then submit your answer with the same \u0060task_id\u0060. The response also includes \u0060error_type: \u0022elicitation_required\u0022\u0060; this is a request for input, not an HTTP error. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Ecomplete\u003C/code\u003E | Read the result. You can submit another instruction with the same \u0060task_id\u0060. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Efailed\u003C/code\u003E | Stop polling and inspect any returned messages. |\n\nFor incremental polling, pass \u0060since_seq_num\u0060 to receive only messages with a strictly greater sequence number:\n\n\u0060\u0060\u0060json\n{\n  \u0022task_id\u0022: \u0022507f1f77bcf86cd799439011\u0022,\n  \u0022since_seq_num\u0022: 0\n}\n\u0060\u0060\u0060\n\nThe first poll should omit the cursor. Full polling is the simplest option. If you use a cursor, omit it when reading the final result or answering a question: \u0060question\u0060 is derived from the returned message batch and can be \u0060null\u0060 when that batch contains no assistant message. An empty \u0060messages\u0060 array does not mean the task has finished; check \u0060status\u0060.\n\nSet a polling deadline in your client and handle a task that remains \u0060running\u0060. This endpoint does not promise a fixed completion time or accept a webhook URL. Repeating a create request without a \u0060task_id\u0060 creates another task.\n\n## Continue a task\n\nWhen the status is \u0060awaiting_input\u0060 or \u0060complete\u0060, send another instruction with the existing ID:\n\n\u0060\u0060\u0060json\n{\n  \u0022task_id\u0022: \u0022507f1f77bcf86cd799439011\u0022,\n  \u0022instruction\u0022: \u0022Yes, continue.\u0022\n}\n\u0060\u0060\u0060\n\nThe response retains the same \u0060task_id\u0060. If you submit an instruction while the task is \u0060running\u0060, it is ignored: the endpoint returns the current polling result and a \u0060note\u0060 explaining that you should wait. It does not queue that instruction for later.\n\n## Authentication and access\n\nUse an API key with access to \u0060api/v1/agents/task\u0060, or an OAuth access token with the \u0060agent_task\u0060 scope. Use the same acting user for the task\u0027s lifetime. See \u003Ca href=\u0022https://docs.apollo.io/reference/authentication#which-user-do-your-requests-act-as\u0022\u003Ewhich user API requests act as\u003C/a\u003E.\u003Cbr\u003E\u003Cbr\u003EThe Assistant can perform actions using that user\u0027s permissions. Restricting the API key to specific endpoints does not restrict which actions the Assistant can perform.",
+        "description": "\u003Ctable\u003E\n  \u003Cthead\u003E\n    \u003Ctr style=\u0022background-color :#FEFFD9; color:#000000\u0022\u003E\n      \u003Cth colspan=\u00222\u0022 align=\u0022left\u0022\u003EEndpoint essentials\u003C/th\u003E\n    \u003C/tr\u003E\n  \u003C/thead\u003E\n  \u003Ctbody\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EAPI key access\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003Eapi/v1/agents/task\u003C/code\u003E or \u003Ccode\u003EMaster API key\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EOAuth scopes\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003E\u003Ccode\u003Eagent_task\u003C/code\u003E\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003ECredit usage\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003EVariable, based on the actions the Assistant performs. Polling consumes \u003Ccode\u003E0 credits\u003C/code\u003E.\u003C/td\u003E\n    \u003C/tr\u003E\n    \u003Ctr\u003E\n      \u003Ctd\u003E\u003Cstrong\u003EDetails\u003C/strong\u003E\u003C/td\u003E\n      \u003Ctd\u003ESubmitting a message does not itself charge credits. Actions such as enrichment can consume credits according to your plan, the action, and the data returned. There is no fixed per-task price. See \u003Ca href=\u0022https://docs.apollo.io/docs/api-pricing\u0022\u003EAPI pricing and credits\u003C/a\u003E.\u003C/td\u003E\n    \u003C/tr\u003E\n  \u003C/tbody\u003E\n\u003C/table\u003E\n\nAn \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/39359204112397-AI-Assistant-Overview\u0022 target=\u0022_blank\u0022\u003EApollo AI Assistant\u003C/a\u003E task is a conversation in which you give instructions, receive results, and answer follow-up questions. It is separate from a CRM task created with the \u003Ca href=\u0022https://docs.apollo.io/reference/create-a-task\u0022\u003Ecreate a task\u003C/a\u003E endpoint.\u003Cbr\u003E\u003Cbr\u003EUse \u0060POST /api/v1/agents/task\u0060 to create, poll, and continue an Assistant task. All three operations return HTTP \u0060200\u0060 on success. A successful submission means the instruction was accepted, not that the Assistant has completed it.\n\n## Create a task\n\nSend an \u0060instruction\u0060 without a \u0060task_id\u0060:\n\n\u0060\u0060\u0060json\n{\n  \u0022instruction\u0022: \u0022Find companies matching my ideal customer profile.\u0022\n}\n\u0060\u0060\u0060\n\nSave the returned \u0060task_id\u0060. The response also includes \u0060status: \u0022running\u0022\u0060, a \u0060next_action\u0060 polling hint, and \u0060poll_after_ms\u0060, the number of milliseconds to wait before you poll (\u006010000\u0060, or 10 seconds). The hint names the \u0060apollo_agent_poll_task\u0060 MCP tool; API clients poll with the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-an-assistant-task\u0022\u003Epoll an Assistant task\u003C/a\u003E endpoint instead, or with this endpoint as described below.\n\n## Poll for results\n\nWe recommend polling with the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-an-assistant-task\u0022\u003Epoll an Assistant task\u003C/a\u003E endpoint. You can also poll with this endpoint. Wait \u0060poll_after_ms\u0060 (10 seconds) between polls. Send the \u0060task_id\u0060 and omit \u0060instruction\u0060:\n\n\u0060\u0060\u0060json\n{\n  \u0022task_id\u0022: \u0022507f1f77bcf86cd799439011\u0022\n}\n\u0060\u0060\u0060\n\nThe response includes \u0060status\u0060, \u0060messages\u0060, and \u0060latest_seq_num\u0060. While the task is \u0060running\u0060, the response also includes \u0060next_action\u0060 and \u0060poll_after_ms\u0060. Messages contain \u0060seq_num\u0060, \u0060role\u0060, and flattened \u0060text\u0060. Hidden messages and non-text content are excluded.\n\n| Status | What to do |\n| --- | --- |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Erunning\u003C/code\u003E | Continue polling. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Eawaiting_input\u003C/code\u003E | Read \u0060question\u0060 and the conversation, then submit your answer with the same \u0060task_id\u0060. The response also includes \u0060error_type: \u0022elicitation_required\u0022\u0060; this is a request for input, not an HTTP error. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Ecomplete\u003C/code\u003E | Read the result. You can submit another instruction with the same \u0060task_id\u0060. |\n| \u003Ccode style=\u0022white-space: nowrap\u0022\u003Efailed\u003C/code\u003E | Stop polling and inspect any returned messages. |\n\nAn empty \u0060messages\u0060 array does not mean the task has finished; check \u0060status\u0060.\n\nSet a polling deadline in your client and handle a task that remains \u0060running\u0060. This endpoint does not promise a fixed completion time or accept a webhook URL. Repeating a create request without a \u0060task_id\u0060 creates another task.\n\n## Continue a task\n\nWhen the status is \u0060awaiting_input\u0060 or \u0060complete\u0060, send another instruction with the existing ID:\n\n\u0060\u0060\u0060json\n{\n  \u0022task_id\u0022: \u0022507f1f77bcf86cd799439011\u0022,\n  \u0022instruction\u0022: \u0022Yes, continue.\u0022\n}\n\u0060\u0060\u0060\n\nThe response retains the same \u0060task_id\u0060. If you submit an instruction while the task is \u0060running\u0060, it is ignored: the endpoint returns the current polling result and a \u0060note\u0060 explaining that you should wait. It does not queue that instruction for later.\n\n## Authentication and access\n\nUse an API key with access to \u0060api/v1/agents/task\u0060, or an OAuth access token with the \u0060agent_task\u0060 scope. Use the same acting user for the task\u0027s lifetime. See \u003Ca href=\u0022https://docs.apollo.io/reference/authentication#which-user-do-your-requests-act-as\u0022\u003Ewhich user API requests act as\u003C/a\u003E.\u003Cbr\u003E\u003Cbr\u003EThe Assistant can perform actions using that user\u0027s permissions. Restricting the API key to specific endpoints does not restrict which actions the Assistant can perform.",
         "operationId": "RunAnAssistantTask",
         "requestBody": {
           "content": {
@@ -40,12 +286,6 @@
                 "poll": {
                   "value": {
                     "task_id": "507f1f77bcf86cd799439011"
-                  }
-                },
-                "poll_incrementally": {
-                  "value": {
-                    "task_id": "507f1f77bcf86cd799439011",
-                    "since_seq_num": 0
                   }
                 },
                 "continue": {
@@ -72,7 +312,8 @@
                     "value": {
                       "task_id": "507f1f77bcf86cd799439011",
                       "status": "running",
-                      "next_action": "Poll apollo_agent_task with this task_id in ~10 seconds."
+                      "next_action": "Wait poll_after_ms, then call apollo_agent_poll_task with this task_id and cursor=0.",
+                      "poll_after_ms": 10000
                     }
                   },
                   "running": {
@@ -86,7 +327,9 @@
                           "text": "Find companies matching my ideal customer profile."
                         }
                       ],
-                      "latest_seq_num": 0
+                      "latest_seq_num": 0,
+                      "next_action": "Wait poll_after_ms, then call apollo_agent_poll_task with this task_id and cursor=0.",
+                      "poll_after_ms": 10000
                     }
                   },
                   "awaiting_input": {
@@ -144,7 +387,9 @@
                         }
                       ],
                       "latest_seq_num": 0,
-                      "note": "Task is still running; the instruction was ignored. Poll with only task_id (no instruction) until the task is complete, failed, or awaiting_input, then send a follow-up instruction."
+                      "next_action": "Wait poll_after_ms, then call apollo_agent_poll_task with this task_id and cursor=0.",
+                      "poll_after_ms": 10000,
+                      "note": "Task is still running; the instruction was ignored. Poll with apollo_agent_poll_task until the task is complete, failed, or awaiting_input, then send a follow-up instruction."
                     }
                   }
                 }
@@ -23506,6 +23751,79 @@
           }
         }
       },
+      "PollAnAssistantTaskRequest": {
+        "required": [
+          "task_id"
+        ],
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "The ID of the task to poll, as returned by the run an Assistant task endpoint. \u003Cbr\u003E\u003Cbr\u003EExample: \u003Ccode\u003E507f1f77bcf86cd799439011\u003C/code\u003E"
+          },
+          "cursor": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Exclusive message cursor. Only messages with a sequence number greater than this value are returned. Pass the \u0060cursor\u0060 from your previous response. Omit to receive the full conversation. Must be a non-negative integer. This is not a page number. \u003Cbr\u003E\u003Cbr\u003EExample: \u003Ccode\u003E2\u003C/code\u003E"
+          }
+        }
+      },
+      "PollAnAssistantTask200Response": {
+        "required": [
+          "task_id",
+          "status",
+          "messages"
+        ],
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "Task identifier."
+          },
+          "status": {
+            "$ref": "#/components/schemas/PollAnAssistantTask200ResponseStatus"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PollAnAssistantTask200ResponseMessagesItem"
+            },
+            "description": "Visible text messages after \u0060cursor\u0060, in sequence order. Hidden messages and non-text content are excluded."
+          },
+          "cursor": {
+            "type": [
+              "null",
+              "integer"
+            ],
+            "description": "Latest stored message sequence number. Pass it as \u0060cursor\u0060 on your next poll."
+          },
+          "latest_seq_num": {
+            "type": [
+              "null",
+              "integer"
+            ],
+            "description": "Same value as \u0060cursor\u0060. Returned for compatibility with the run an Assistant task endpoint; use \u0060cursor\u0060."
+          },
+          "next_action": {
+            "type": "string",
+            "description": "Polling hint, returned while the task is running."
+          },
+          "poll_after_ms": {
+            "type": "integer",
+            "description": "Milliseconds to wait before polling again, returned while the task is running."
+          },
+          "error_type": {
+            "$ref": "#/components/schemas/ElicitationRequiredErrorType"
+          },
+          "question": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Latest Assistant text in the returned batch when awaiting input. Can be null when the batch contains no Assistant message."
+          }
+        }
+      },
       "RunAnAssistantTaskRequest": {
         "type": "object",
         "anyOf": [
@@ -23532,10 +23850,6 @@
           "task_id": {
             "type": "string",
             "description": "ID returned by creation. Omit to create a new task; supply it to poll or continue the same conversation."
-          },
-          "since_seq_num": {
-            "type": "integer",
-            "description": "Optional exclusive message cursor for polling. Only messages with a greater sequence number are returned. Omit for the first poll and when reading the full result or question. This is not a page number and is not used to continue a task."
           }
         }
       },
@@ -23555,7 +23869,11 @@
           },
           "next_action": {
             "type": "string",
-            "description": "Polling hint returned after creation or continuation."
+            "description": "Polling hint returned after creation or continuation, and when polling a running task."
+          },
+          "poll_after_ms": {
+            "type": "integer",
+            "description": "Milliseconds to wait before polling again. Returned after creation or continuation, and when polling a running task."
           },
           "messages": {
             "type": "array",
@@ -23579,7 +23897,7 @@
               "null",
               "string"
             ],
-            "description": "Latest assistant text in the returned batch when awaiting input. Can be null with an incremental cursor; poll without a cursor to read the conversation."
+            "description": "Latest assistant text when awaiting input."
           },
           "note": {
             "type": "string",
@@ -27087,6 +27405,131 @@
           }
         }
       },
+      "PollAnAssistantTask401Response": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "PollAnAssistantTask403Response": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "PollAnAssistantTask422Response": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "PollAnAssistantTask429Response": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "PollAnAssistantTask500Response": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
       "RunAnAssistantTask401Response": {
         "type": "object",
         "properties": {
@@ -29739,6 +30182,25 @@
           "$ref": "#/components/schemas/ErrorDetailsContextAdditionalProperties"
         },
         "description": "Values from your request that explain the refusal. Each entry is an object rather than a bare value, so read \u0060context.\u003Ckey\u003E.value\u0060. Absent when the error needs no context."
+      },
+      "PollAnAssistantTask200ResponseMessagesItem": {
+        "required": [
+          "seq_num",
+          "role",
+          "text"
+        ],
+        "type": "object",
+        "properties": {
+          "seq_num": {
+            "type": "integer"
+          },
+          "role": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
       },
       "RunAnAssistantTask200ResponseMessagesItem": {
         "required": [
@@ -53459,7 +53921,7 @@
           }
         }
       },
-      "RunAnAssistantTask200ResponseStatus": {
+      "PollAnAssistantTask200ResponseStatus": {
         "enum": [
           "running",
           "awaiting_input",
@@ -53469,7 +53931,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "RunAnAssistantTask200ResponseStatus",
+          "name": "PollAnAssistantTask200ResponseStatus",
           "modelAsString": false,
           "values": [
             {
@@ -53505,6 +53967,38 @@
             {
               "value": "elicitation_required",
               "name": "ElicitationRequired"
+            }
+          ]
+        }
+      },
+      "RunAnAssistantTask200ResponseStatus": {
+        "enum": [
+          "running",
+          "awaiting_input",
+          "complete",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "RunAnAssistantTask200ResponseStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "running",
+              "name": "Running"
+            },
+            {
+              "value": "awaiting_input",
+              "name": "AwaitingInput"
+            },
+            {
+              "value": "complete",
+              "name": "Complete"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
             }
           ]
         }

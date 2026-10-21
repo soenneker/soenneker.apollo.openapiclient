@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Apollo.OpenApiClient.Agents.Poll_task;
 using Soenneker.Apollo.OpenApiClient.Agents.TaskNamespace;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.Apollo.OpenApiClient.Agents
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgentsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The poll_task property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Agents.Poll_task.Poll_taskRequestBuilder Poll_task
+        {
+            get => new global::Soenneker.Apollo.OpenApiClient.Agents.Poll_task.Poll_taskRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The task property</summary>
         public global::Soenneker.Apollo.OpenApiClient.Agents.TaskNamespace.TaskRequestBuilder Task
         {

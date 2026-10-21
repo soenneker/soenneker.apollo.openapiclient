@@ -22,8 +22,6 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string Instruction { get; set; }
 #endif
-        /// <summary>Optional exclusive message cursor for polling. Only messages with a greater sequence number are returned. Omit for the first poll and when reading the full result or question. This is not a page number and is not used to continue a task.</summary>
-        public int? SinceSeqNum { get; set; }
         /// <summary>ID returned by creation. Omit to create a new task; supply it to poll or continue the same conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +56,6 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "instruction", n => { Instruction = n.GetStringValue(); } },
-                { "since_seq_num", n => { SinceSeqNum = n.GetIntValue(); } },
                 { "task_id", n => { TaskId = n.GetStringValue(); } },
             };
         }
@@ -70,7 +67,6 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("instruction", Instruction);
-            writer.WriteIntValue("since_seq_num", SinceSeqNum);
             writer.WriteStringValue("task_id", TaskId);
             writer.WriteAdditionalData(AdditionalData);
         }
