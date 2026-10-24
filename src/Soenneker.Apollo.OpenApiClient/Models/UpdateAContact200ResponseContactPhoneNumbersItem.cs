@@ -17,26 +17,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The dialer_flags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDialerFlags? DialerFlags { get; set; }
+        public UntypedNode? DialerFlags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDialerFlags DialerFlags { get; set; }
+        public UntypedNode DialerFlags { get; set; }
 #endif
         /// <summary>The dnc_other_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncOtherInfo? DncOtherInfo { get; set; }
+        public UntypedNode? DncOtherInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncOtherInfo DncOtherInfo { get; set; }
+        public UntypedNode DncOtherInfo { get; set; }
 #endif
         /// <summary>The dnc_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncStatus? DncStatus { get; set; }
+        public UntypedNode? DncStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncStatus DncStatus { get; set; }
+        public UntypedNode DncStatus { get; set; }
 #endif
         /// <summary>The position property</summary>
         public int? Position { get; set; }
@@ -98,9 +98,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dialer_flags", n => { DialerFlags = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDialerFlags>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDialerFlags.CreateFromDiscriminatorValue); } },
-                { "dnc_other_info", n => { DncOtherInfo = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncOtherInfo>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncOtherInfo.CreateFromDiscriminatorValue); } },
-                { "dnc_status", n => { DncStatus = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncStatus>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncStatus.CreateFromDiscriminatorValue); } },
+                { "dialer_flags", n => { DialerFlags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "dnc_other_info", n => { DncOtherInfo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "dnc_status", n => { DncStatus = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "position", n => { Position = n.GetIntValue(); } },
                 { "raw_number", n => { RawNumber = n.GetStringValue(); } },
                 { "sanitized_number", n => { SanitizedNumber = n.GetStringValue(); } },
@@ -115,9 +115,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDialerFlags>("dialer_flags", DialerFlags);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncOtherInfo>("dnc_other_info", DncOtherInfo);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200ResponseContactPhoneNumbersItemDncStatus>("dnc_status", DncStatus);
+            writer.WriteObjectValue<UntypedNode>("dialer_flags", DialerFlags);
+            writer.WriteObjectValue<UntypedNode>("dnc_other_info", DncOtherInfo);
+            writer.WriteObjectValue<UntypedNode>("dnc_status", DncStatus);
             writer.WriteIntValue("position", Position);
             writer.WriteStringValue("raw_number", RawNumber);
             writer.WriteStringValue("sanitized_number", SanitizedNumber);

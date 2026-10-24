@@ -37,10 +37,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseNumFetchResult? NumFetchResult { get; set; }
+        public UntypedNode? NumFetchResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseNumFetchResult NumFetchResult { get; set; }
+        public UntypedNode NumFetchResult { get; set; }
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "contacts", n => { Contacts = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItem>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "disable_eu_prospecting", n => { DisableEuProspecting = n.GetBoolValue(); } },
                 { "has_join", n => { HasJoin = n.GetBoolValue(); } },
-                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseNumFetchResult>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseNumFetchResult.CreateFromDiscriminatorValue); } },
+                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponsePagination>(global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponsePagination.CreateFromDiscriminatorValue); } },
                 { "partial_results_limit", n => { PartialResultsLimit = n.GetIntValue(); } },
                 { "partial_results_only", n => { PartialResultsOnly = n.GetBoolValue(); } },
@@ -104,7 +104,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItem>("contacts", Contacts);
             writer.WriteBoolValue("disable_eu_prospecting", DisableEuProspecting);
             writer.WriteBoolValue("has_join", HasJoin);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseNumFetchResult>("num_fetch_result", NumFetchResult);
+            writer.WriteObjectValue<UntypedNode>("num_fetch_result", NumFetchResult);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponsePagination>("pagination", Pagination);
             writer.WriteIntValue("partial_results_limit", PartialResultsLimit);
             writer.WriteBoolValue("partial_results_only", PartialResultsOnly);

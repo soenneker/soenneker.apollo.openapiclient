@@ -39,7 +39,6 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Approve
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Approve.ApproveSequence200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence429Response">When receiving a 429 status code</exception>
@@ -55,7 +54,6 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Approve
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Approve.ApproveSequence200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence429Response.CreateFromDiscriminatorValue },

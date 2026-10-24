@@ -49,10 +49,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItemUserId? UserId { get; set; }
+        public UntypedNode? UserId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItemUserId UserId { get; set; }
+        public UntypedNode UserId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItem"/> and sets the default values.
@@ -83,7 +83,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "raw_name", n => { RawName = n.GetStringValue(); } },
                 { "recipient_type_cd", n => { RecipientTypeCd = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItemUserId>(global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItemUserId.CreateFromDiscriminatorValue); } },
+                { "user_id", n => { UserId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("raw_name", RawName);
             writer.WriteStringValue("recipient_type_cd", RecipientTypeCd);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SendEmailNow200ResponseEmailerMessageRecipientsItemUserId>("user_id", UserId);
+            writer.WriteObjectValue<UntypedNode>("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

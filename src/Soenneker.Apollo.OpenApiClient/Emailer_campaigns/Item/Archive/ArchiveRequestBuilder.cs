@@ -39,7 +39,6 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Archive
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ArchiveSequence200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Archive.ArchiveSequence200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ArchiveSequence403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ArchiveSequence429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,7 +53,6 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Archive
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Archive.ArchiveSequence200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ArchiveSequence403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ArchiveSequence429Response.CreateFromDiscriminatorValue },
             };

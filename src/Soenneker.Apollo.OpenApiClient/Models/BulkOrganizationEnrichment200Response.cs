@@ -17,18 +17,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The error_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorCode? ErrorCode { get; set; }
+        public UntypedNode? ErrorCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorCode ErrorCode { get; set; }
+        public UntypedNode ErrorCode { get; set; }
 #endif
         /// <summary>The error_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorMessage? ErrorMessage { get; set; }
+        public UntypedNode? ErrorMessage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorMessage ErrorMessage { get; set; }
+        public UntypedNode ErrorMessage { get; set; }
 #endif
         /// <summary>The missing_records property</summary>
         public int? MissingRecords { get; set; }
@@ -89,8 +89,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error_code", n => { ErrorCode = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorCode>(global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorCode.CreateFromDiscriminatorValue); } },
-                { "error_message", n => { ErrorMessage = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorMessage>(global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorMessage.CreateFromDiscriminatorValue); } },
+                { "error_code", n => { ErrorCode = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "error_message", n => { ErrorMessage = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "missing_records", n => { MissingRecords = n.GetIntValue(); } },
                 { "organizations", n => { Organizations = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem>(global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
@@ -108,8 +108,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorCode>("error_code", ErrorCode);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseErrorMessage>("error_message", ErrorMessage);
+            writer.WriteObjectValue<UntypedNode>("error_code", ErrorCode);
+            writer.WriteObjectValue<UntypedNode>("error_message", ErrorMessage);
             writer.WriteIntValue("missing_records", MissingRecords);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem>("organizations", Organizations);
             writer.WriteStringValue("status", Status);

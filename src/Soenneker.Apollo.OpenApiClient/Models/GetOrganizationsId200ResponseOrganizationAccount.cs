@@ -15,10 +15,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_playbook_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountAccountPlaybookStatusesItem>? AccountPlaybookStatuses { get; set; }
+        public UntypedNode? AccountPlaybookStatuses { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountAccountPlaybookStatusesItem> AccountPlaybookStatuses { get; set; }
+        public UntypedNode AccountPlaybookStatuses { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -91,10 +91,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The label_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountLabelIdsItem>? LabelIds { get; set; }
+        public UntypedNode? LabelIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountLabelIdsItem> LabelIds { get; set; }
+        public UntypedNode LabelIds { get; set; }
 #endif
         /// <summary>The modality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -243,7 +243,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountAccountPlaybookStatusesItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountAccountPlaybookStatusesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "crm_record_url", n => { CrmRecordUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "custom_field_errors", n => { CustomFieldErrors = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountCustomFieldErrors>(global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountCustomFieldErrors.CreateFromDiscriminatorValue); } },
@@ -253,7 +253,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "has_intent_signal_account", n => { HasIntentSignalAccount = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "intent_signal_account", n => { IntentSignalAccount = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccount>(global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccount.CreateFromDiscriminatorValue); } },
-                { "label_ids", n => { LabelIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountLabelIdsItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountLabelIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "label_ids", n => { LabelIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "modality", n => { Modality = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_headcount_six_month_growth", n => { OrganizationHeadcountSixMonthGrowth = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -279,7 +279,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountAccountPlaybookStatusesItem>("account_playbook_statuses", AccountPlaybookStatuses);
+            writer.WriteObjectValue<UntypedNode>("account_playbook_statuses", AccountPlaybookStatuses);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteObjectValue<UntypedNode>("crm_record_url", CrmRecordUrl);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountCustomFieldErrors>("custom_field_errors", CustomFieldErrors);
@@ -289,7 +289,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("has_intent_signal_account", HasIntentSignalAccount);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccount>("intent_signal_account", IntentSignalAccount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountLabelIdsItem>("label_ids", LabelIds);
+            writer.WriteObjectValue<UntypedNode>("label_ids", LabelIds);
             writer.WriteStringValue("modality", Modality);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<UntypedNode>("organization_headcount_six_month_growth", OrganizationHeadcountSixMonthGrowth);

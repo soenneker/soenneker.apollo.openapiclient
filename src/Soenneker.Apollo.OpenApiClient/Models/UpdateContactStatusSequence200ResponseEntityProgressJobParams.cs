@@ -15,10 +15,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The access_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsAccessToken? AccessToken { get; set; }
+        public UntypedNode? AccessToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsAccessToken AccessToken { get; set; }
+        public UntypedNode AccessToken { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -49,10 +49,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The stop_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsStopReason? StopReason { get; set; }
+        public UntypedNode? StopReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsStopReason StopReason { get; set; }
+        public UntypedNode StopReason { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParams"/> and sets the default values.
@@ -79,11 +79,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_token", n => { AccessToken = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsAccessToken>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsAccessToken.CreateFromDiscriminatorValue); } },
+                { "access_token", n => { AccessToken = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "api_key", n => { ApiKey = n.GetStringValue(); } },
                 { "mode", n => { Mode = n.GetStringValue(); } },
                 { "sequence_ids", n => { SequenceIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "stop_reason", n => { StopReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsStopReason>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsStopReason.CreateFromDiscriminatorValue); } },
+                { "stop_reason", n => { StopReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsAccessToken>("access_token", AccessToken);
+            writer.WriteObjectValue<UntypedNode>("access_token", AccessToken);
             writer.WriteStringValue("api_key", ApiKey);
             writer.WriteStringValue("mode", Mode);
             writer.WriteCollectionOfPrimitiveValues<string>("sequence_ids", SequenceIds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJobParamsStopReason>("stop_reason", StopReason);
+            writer.WriteObjectValue<UntypedNode>("stop_reason", StopReason);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

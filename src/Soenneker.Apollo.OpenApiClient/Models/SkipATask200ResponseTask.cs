@@ -27,10 +27,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The note property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SkipATask200ResponseTaskNote? Note { get; set; }
+        public UntypedNode? Note { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SkipATask200ResponseTaskNote Note { get; set; }
+        public UntypedNode Note { get; set; }
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             {
                 { "completed", n => { Completed = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "note", n => { Note = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SkipATask200ResponseTaskNote>(global::Soenneker.Apollo.OpenApiClient.Models.SkipATask200ResponseTaskNote.CreateFromDiscriminatorValue); } },
+                { "note", n => { Note = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("completed", Completed);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SkipATask200ResponseTaskNote>("note", Note);
+            writer.WriteObjectValue<UntypedNode>("note", Note);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

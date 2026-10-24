@@ -40,7 +40,6 @@ namespace Soenneker.Apollo.OpenApiClient.People.Match
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.People.Match.PeopleEnrichment200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +54,6 @@ namespace Soenneker.Apollo.OpenApiClient.People.Match
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment400Response.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Apollo.OpenApiClient.People.Match.PeopleEnrichment200Response401Error.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment429Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

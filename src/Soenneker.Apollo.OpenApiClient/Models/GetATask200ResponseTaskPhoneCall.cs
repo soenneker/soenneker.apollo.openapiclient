@@ -36,18 +36,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The phone_call_outcome_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallOutcomeId? PhoneCallOutcomeId { get; set; }
+        public UntypedNode? PhoneCallOutcomeId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallOutcomeId PhoneCallOutcomeId { get; set; }
+        public UntypedNode PhoneCallOutcomeId { get; set; }
 #endif
         /// <summary>The phone_call_purpose_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallPurposeId? PhoneCallPurposeId { get; set; }
+        public UntypedNode? PhoneCallPurposeId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallPurposeId PhoneCallPurposeId { get; set; }
+        public UntypedNode PhoneCallPurposeId { get; set; }
 #endif
         /// <summary>The number that was called. May be partially masked depending on your team&apos;s phone number redaction settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,8 +85,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "answered", n => { Answered = n.GetBoolValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "phone_call_outcome_id", n => { PhoneCallOutcomeId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallOutcomeId>(global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallOutcomeId.CreateFromDiscriminatorValue); } },
-                { "phone_call_purpose_id", n => { PhoneCallPurposeId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallPurposeId>(global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallPurposeId.CreateFromDiscriminatorValue); } },
+                { "phone_call_outcome_id", n => { PhoneCallOutcomeId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "phone_call_purpose_id", n => { PhoneCallPurposeId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "to_number", n => { ToNumber = n.GetStringValue(); } },
             };
         }
@@ -100,8 +100,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("answered", Answered);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallOutcomeId>("phone_call_outcome_id", PhoneCallOutcomeId);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskPhoneCallPhoneCallPurposeId>("phone_call_purpose_id", PhoneCallPurposeId);
+            writer.WriteObjectValue<UntypedNode>("phone_call_outcome_id", PhoneCallOutcomeId);
+            writer.WriteObjectValue<UntypedNode>("phone_call_purpose_id", PhoneCallPurposeId);
             writer.WriteStringValue("to_number", ToNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

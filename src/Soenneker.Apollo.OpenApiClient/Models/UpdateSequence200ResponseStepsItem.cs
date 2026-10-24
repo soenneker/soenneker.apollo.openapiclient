@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The auto_skip_in_x_days property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequence200ResponseStepsItemAutoSkipInXDays? AutoSkipInXDays { get; set; }
+        public UntypedNode? AutoSkipInXDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequence200ResponseStepsItemAutoSkipInXDays AutoSkipInXDays { get; set; }
+        public UntypedNode AutoSkipInXDays { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_skip_in_x_days", n => { AutoSkipInXDays = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequence200ResponseStepsItemAutoSkipInXDays>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequence200ResponseStepsItemAutoSkipInXDays.CreateFromDiscriminatorValue); } },
+                { "auto_skip_in_x_days", n => { AutoSkipInXDays = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetIntValue(); } },
                 { "step_type", n => { StepType = n.GetStringValue(); } },
@@ -90,7 +90,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequence200ResponseStepsItemAutoSkipInXDays>("auto_skip_in_x_days", AutoSkipInXDays);
+            writer.WriteObjectValue<UntypedNode>("auto_skip_in_x_days", AutoSkipInXDays);
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("position", Position);
             writer.WriteStringValue("step_type", StepType);

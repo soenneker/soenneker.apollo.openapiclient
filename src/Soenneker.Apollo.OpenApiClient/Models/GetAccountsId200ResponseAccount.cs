@@ -15,18 +15,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_playbook_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountPlaybookStatusesItem>? AccountPlaybookStatuses { get; set; }
+        public UntypedNode? AccountPlaybookStatuses { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountPlaybookStatusesItem> AccountPlaybookStatuses { get; set; }
+        public UntypedNode AccountPlaybookStatuses { get; set; }
 #endif
         /// <summary>The account_queues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountQueuesItem>? AccountQueues { get; set; }
+        public UntypedNode? AccountQueues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountQueuesItem> AccountQueues { get; set; }
+        public UntypedNode AccountQueues { get; set; }
 #endif
         /// <summary>The account_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -501,10 +501,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The secondary_industries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSecondaryIndustriesItem>? SecondaryIndustries { get; set; }
+        public UntypedNode? SecondaryIndustries { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSecondaryIndustriesItem> SecondaryIndustries { get; set; }
+        public UntypedNode SecondaryIndustries { get; set; }
 #endif
         /// <summary>The short_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -553,10 +553,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The suborganizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSuborganizationsItem>? Suborganizations { get; set; }
+        public UntypedNode? Suborganizations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSuborganizationsItem> Suborganizations { get; set; }
+        public UntypedNode Suborganizations { get; set; }
 #endif
         /// <summary>The suggest_location_enrichment property</summary>
         public bool? SuggestLocationEnrichment { get; set; }
@@ -635,8 +635,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountPlaybookStatusesItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountPlaybookStatusesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "account_queues", n => { AccountQueues = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountQueuesItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountQueuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "account_queues", n => { AccountQueues = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "account_stage_id", n => { AccountStageId = n.GetStringValue(); } },
                 { "alexa_ranking", n => { AlexaRanking = n.GetLongValue(); } },
                 { "annual_revenue", n => { AnnualRevenue = n.GetLongValue(); } },
@@ -703,7 +703,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "salesforce_id", n => { SalesforceId = n.GetStringValue(); } },
                 { "salesforce_record_url", n => { SalesforceRecordUrl = n.GetStringValue(); } },
                 { "sanitized_phone", n => { SanitizedPhone = n.GetStringValue(); } },
-                { "secondary_industries", n => { SecondaryIndustries = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSecondaryIndustriesItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSecondaryIndustriesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "secondary_industries", n => { SecondaryIndustries = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "short_description", n => { ShortDescription = n.GetStringValue(); } },
                 { "show_intent", n => { ShowIntent = n.GetBoolValue(); } },
                 { "snippets_loaded", n => { SnippetsLoaded = n.GetBoolValue(); } },
@@ -711,7 +711,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "source_display_name", n => { SourceDisplayName = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "street_address", n => { StreetAddress = n.GetStringValue(); } },
-                { "suborganizations", n => { Suborganizations = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSuborganizationsItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSuborganizationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "suborganizations", n => { Suborganizations = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "suggest_location_enrichment", n => { SuggestLocationEnrichment = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "technology_names", n => { TechnologyNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -729,8 +729,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountPlaybookStatusesItem>("account_playbook_statuses", AccountPlaybookStatuses);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountAccountQueuesItem>("account_queues", AccountQueues);
+            writer.WriteObjectValue<UntypedNode>("account_playbook_statuses", AccountPlaybookStatuses);
+            writer.WriteObjectValue<UntypedNode>("account_queues", AccountQueues);
             writer.WriteStringValue("account_stage_id", AccountStageId);
             writer.WriteLongValue("alexa_ranking", AlexaRanking);
             writer.WriteLongValue("annual_revenue", AnnualRevenue);
@@ -797,7 +797,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("salesforce_id", SalesforceId);
             writer.WriteStringValue("salesforce_record_url", SalesforceRecordUrl);
             writer.WriteStringValue("sanitized_phone", SanitizedPhone);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSecondaryIndustriesItem>("secondary_industries", SecondaryIndustries);
+            writer.WriteObjectValue<UntypedNode>("secondary_industries", SecondaryIndustries);
             writer.WriteStringValue("short_description", ShortDescription);
             writer.WriteBoolValue("show_intent", ShowIntent);
             writer.WriteBoolValue("snippets_loaded", SnippetsLoaded);
@@ -805,7 +805,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("source_display_name", SourceDisplayName);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("street_address", StreetAddress);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccountSuborganizationsItem>("suborganizations", Suborganizations);
+            writer.WriteObjectValue<UntypedNode>("suborganizations", Suborganizations);
             writer.WriteBoolValue("suggest_location_enrichment", SuggestLocationEnrichment);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteCollectionOfPrimitiveValues<string>("technology_names", TechnologyNames);

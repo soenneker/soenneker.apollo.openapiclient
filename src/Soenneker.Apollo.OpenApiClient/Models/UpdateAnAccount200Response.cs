@@ -25,10 +25,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response_labels>? Labels { get; set; }
+        public UntypedNode? Labels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response_labels> Labels { get; set; }
+        public UntypedNode Labels { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200ResponseAccount>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200ResponseAccount.CreateFromDiscriminatorValue); } },
-                { "labels", n => { Labels = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response_labels>(global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response_labels.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "labels", n => { Labels = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200ResponseAccount>("account", Account);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccount200Response_labels>("labels", Labels);
+            writer.WriteObjectValue<UntypedNode>("labels", Labels);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

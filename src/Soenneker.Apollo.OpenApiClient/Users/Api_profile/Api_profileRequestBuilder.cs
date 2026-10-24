@@ -39,7 +39,6 @@ namespace Soenneker.Apollo.OpenApiClient.Users.Api_profile
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetCurrentUserProfile200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Users.Api_profile.GetCurrentUserProfile200Response401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Apollo.OpenApiClient.Models.GetCurrentUserProfile200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Users.Api_profile.Api_profileRequestBuilder.Api_profileRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -50,11 +49,7 @@ namespace Soenneker.Apollo.OpenApiClient.Users.Api_profile
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Users.Api_profile.GetCurrentUserProfile200Response401Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetCurrentUserProfile200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetCurrentUserProfile200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetCurrentUserProfile200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetCurrentUserProfile200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/users/api_profile` or `Master API key`**OAuth scopes:** `read_user_profile`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).**Authentication note:** Default scope — granted automatically on every OAuth token.&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409130537101-Add-Manage-and-Deactivate-Users&quot; target=&quot;_blank&quot;&gt;Users&lt;/a&gt; are the people who use your Apollo workspace.&lt;br&gt;&lt;br&gt;Use the get current user profile endpoint to retrieve the authenticated profile of the person who owns the API key being used.&lt;br&gt;&lt;br&gt;By default, the endpoint returns the user&apos;s identity fields. Set the `include_credit_usage` query parameter to `true` to also return the user&apos;s and team&apos;s credit usage and remaining credit balances.&lt;br&gt;&lt;br&gt;If you call this endpoint without valid access credentials, you receive a `401` response.

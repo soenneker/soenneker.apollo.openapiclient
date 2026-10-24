@@ -57,10 +57,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The news_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganizationFundingEventsItemNewsUrl? NewsUrl { get; set; }
+        public UntypedNode? NewsUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganizationFundingEventsItemNewsUrl NewsUrl { get; set; }
+        public UntypedNode NewsUrl { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "date", n => { Date = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "investors", n => { Investors = n.GetStringValue(); } },
-                { "news_url", n => { NewsUrl = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganizationFundingEventsItemNewsUrl>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganizationFundingEventsItemNewsUrl.CreateFromDiscriminatorValue); } },
+                { "news_url", n => { NewsUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("date", Date);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("investors", Investors);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonOrganizationFundingEventsItemNewsUrl>("news_url", NewsUrl);
+            writer.WriteObjectValue<UntypedNode>("news_url", NewsUrl);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

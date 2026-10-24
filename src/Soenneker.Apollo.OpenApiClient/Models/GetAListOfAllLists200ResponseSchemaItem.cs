@@ -19,10 +19,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The concurrency_locks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemConcurrencyLocks? ConcurrencyLocks { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItemConcurrencyLocks? ConcurrencyLocks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemConcurrencyLocks ConcurrencyLocks { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItemConcurrencyLocks ConcurrencyLocks { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The rule_config_template_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemRuleConfigTemplateId? RuleConfigTemplateId { get; set; }
+        public UntypedNode? RuleConfigTemplateId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemRuleConfigTemplateId RuleConfigTemplateId { get; set; }
+        public UntypedNode RuleConfigTemplateId { get; set; }
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,7 +142,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cached_count", n => { CachedCount = n.GetIntValue(); } },
-                { "concurrency_locks", n => { ConcurrencyLocks = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemConcurrencyLocks>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemConcurrencyLocks.CreateFromDiscriminatorValue); } },
+                { "concurrency_locks", n => { ConcurrencyLocks = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItemConcurrencyLocks>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItemConcurrencyLocks.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "id", n => { GetAListOfAllLists200ResponseSchemaItemId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
@@ -151,7 +151,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "need_cached_count_update", n => { NeedCachedCountUpdate = n.GetBoolValue(); } },
                 { "needs_count_update_at", n => { NeedsCountUpdateAt = n.GetStringValue(); } },
-                { "rule_config_template_id", n => { RuleConfigTemplateId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemRuleConfigTemplateId>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemRuleConfigTemplateId.CreateFromDiscriminatorValue); } },
+                { "rule_config_template_id", n => { RuleConfigTemplateId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -165,7 +165,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("cached_count", CachedCount);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemConcurrencyLocks>("concurrency_locks", ConcurrencyLocks);
+            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseSchemaItemConcurrencyLocks>("concurrency_locks", ConcurrencyLocks);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("id", GetAListOfAllLists200ResponseSchemaItemId);
             writer.WriteStringValue("_id", Id);
@@ -174,7 +174,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("need_cached_count_update", NeedCachedCountUpdate);
             writer.WriteStringValue("needs_count_update_at", NeedsCountUpdateAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllLists200ResponseItemRuleConfigTemplateId>("rule_config_template_id", RuleConfigTemplateId);
+            writer.WriteObjectValue<UntypedNode>("rule_config_template_id", RuleConfigTemplateId);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteStringValue("user_id", UserId);

@@ -41,18 +41,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The inactive_account_stage_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_account_stage_ids>? InactiveAccountStageIds { get; set; }
+        public UntypedNode? InactiveAccountStageIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_account_stage_ids> InactiveAccountStageIds { get; set; }
+        public UntypedNode InactiveAccountStageIds { get; set; }
 #endif
         /// <summary>The inactive_contact_stage_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_contact_stage_ids>? InactiveContactStageIds { get; set; }
+        public UntypedNode? InactiveContactStageIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_contact_stage_ids> InactiveContactStageIds { get; set; }
+        public UntypedNode InactiveContactStageIds { get; set; }
 #endif
         /// <summary>The insight_deal_size_signals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,18 +83,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The job_posting_locations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_locations>? JobPostingLocations { get; set; }
+        public UntypedNode? JobPostingLocations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_locations> JobPostingLocations { get; set; }
+        public UntypedNode JobPostingLocations { get; set; }
 #endif
         /// <summary>The job_posting_titles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_titles>? JobPostingTitles { get; set; }
+        public UntypedNode? JobPostingTitles { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_titles> JobPostingTitles { get; set; }
+        public UntypedNode JobPostingTitles { get; set; }
 #endif
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,10 +125,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The success_case_account_stage_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_success_case_account_stage_ids>? SuccessCaseAccountStageIds { get; set; }
+        public UntypedNode? SuccessCaseAccountStageIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_success_case_account_stage_ids> SuccessCaseAccountStageIds { get; set; }
+        public UntypedNode SuccessCaseAccountStageIds { get; set; }
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,18 +141,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The technology_uids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_technology_uids>? TechnologyUids { get; set; }
+        public UntypedNode? TechnologyUids { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_technology_uids> TechnologyUids { get; set; }
+        public UntypedNode TechnologyUids { get; set; }
 #endif
         /// <summary>The territory_company_size_ranges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_territory_company_size_ranges>? TerritoryCompanySizeRanges { get; set; }
+        public UntypedNode? TerritoryCompanySizeRanges { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_territory_company_size_ranges> TerritoryCompanySizeRanges { get; set; }
+        public UntypedNode TerritoryCompanySizeRanges { get; set; }
 #endif
         /// <summary>The territory_location_override property</summary>
         public bool? TerritoryLocationOverride { get; set; }
@@ -215,14 +215,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "deal_size_metric", n => { DealSizeMetric = n.GetStringValue(); } },
                 { "id", n => { GetAListOfUsers200ResponseUsersItemAssistantSettingId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
-                { "inactive_account_stage_ids", n => { InactiveAccountStageIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_account_stage_ids>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_account_stage_ids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "inactive_contact_stage_ids", n => { InactiveContactStageIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_contact_stage_ids>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_contact_stage_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inactive_account_stage_ids", n => { InactiveAccountStageIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "inactive_contact_stage_ids", n => { InactiveContactStageIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "insight_deal_size_signals", n => { InsightDealSizeSignals = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightDealSizeSignals>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightDealSizeSignals.CreateFromDiscriminatorValue); } },
                 { "insight_sale_cycle_signals", n => { InsightSaleCycleSignals = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightSaleCycleSignals>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightSaleCycleSignals.CreateFromDiscriminatorValue); } },
                 { "insight_win_rate_signals", n => { InsightWinRateSignals = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightWinRateSignals>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightWinRateSignals.CreateFromDiscriminatorValue); } },
                 { "is_persona_recommendation_requested", n => { IsPersonaRecommendationRequested = n.GetBoolValue(); } },
-                { "job_posting_locations", n => { JobPostingLocations = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_locations>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_locations.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "job_posting_titles", n => { JobPostingTitles = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_titles>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_titles.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "job_posting_locations", n => { JobPostingLocations = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "job_posting_titles", n => { JobPostingTitles = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "latest_funding_days", n => { LatestFundingDays = n.GetIntValue(); } },
                 { "max_num_active_accounts", n => { MaxNumActiveAccounts = n.GetIntValue(); } },
@@ -230,10 +230,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "num_inactive_days_to_re_engage", n => { NumInactiveDaysToReEngage = n.GetIntValue(); } },
                 { "persona_ids", n => { PersonaIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "should_show_persona_banner", n => { ShouldShowPersonaBanner = n.GetBoolValue(); } },
-                { "success_case_account_stage_ids", n => { SuccessCaseAccountStageIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_success_case_account_stage_ids>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_success_case_account_stage_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "success_case_account_stage_ids", n => { SuccessCaseAccountStageIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "technology_uids", n => { TechnologyUids = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_technology_uids>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_technology_uids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "territory_company_size_ranges", n => { TerritoryCompanySizeRanges = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_territory_company_size_ranges>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_territory_company_size_ranges.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "technology_uids", n => { TechnologyUids = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "territory_company_size_ranges", n => { TerritoryCompanySizeRanges = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "territory_location_override", n => { TerritoryLocationOverride = n.GetBoolValue(); } },
                 { "territory_locations", n => { TerritoryLocations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "territory_person_locations", n => { TerritoryPersonLocations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -250,14 +250,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("deal_size_metric", DealSizeMetric);
             writer.WriteStringValue("id", GetAListOfUsers200ResponseUsersItemAssistantSettingId);
             writer.WriteStringValue("_id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_account_stage_ids>("inactive_account_stage_ids", InactiveAccountStageIds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_inactive_contact_stage_ids>("inactive_contact_stage_ids", InactiveContactStageIds);
+            writer.WriteObjectValue<UntypedNode>("inactive_account_stage_ids", InactiveAccountStageIds);
+            writer.WriteObjectValue<UntypedNode>("inactive_contact_stage_ids", InactiveContactStageIds);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightDealSizeSignals>("insight_deal_size_signals", InsightDealSizeSignals);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightSaleCycleSignals>("insight_sale_cycle_signals", InsightSaleCycleSignals);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSettingInsightWinRateSignals>("insight_win_rate_signals", InsightWinRateSignals);
             writer.WriteBoolValue("is_persona_recommendation_requested", IsPersonaRecommendationRequested);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_locations>("job_posting_locations", JobPostingLocations);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_job_posting_titles>("job_posting_titles", JobPostingTitles);
+            writer.WriteObjectValue<UntypedNode>("job_posting_locations", JobPostingLocations);
+            writer.WriteObjectValue<UntypedNode>("job_posting_titles", JobPostingTitles);
             writer.WriteStringValue("key", Key);
             writer.WriteIntValue("latest_funding_days", LatestFundingDays);
             writer.WriteIntValue("max_num_active_accounts", MaxNumActiveAccounts);
@@ -265,10 +265,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("num_inactive_days_to_re_engage", NumInactiveDaysToReEngage);
             writer.WriteCollectionOfPrimitiveValues<string>("persona_ids", PersonaIds);
             writer.WriteBoolValue("should_show_persona_banner", ShouldShowPersonaBanner);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_success_case_account_stage_ids>("success_case_account_stage_ids", SuccessCaseAccountStageIds);
+            writer.WriteObjectValue<UntypedNode>("success_case_account_stage_ids", SuccessCaseAccountStageIds);
             writer.WriteStringValue("team_id", TeamId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_technology_uids>("technology_uids", TechnologyUids);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfUsers200ResponseUsersItemAssistantSetting_territory_company_size_ranges>("territory_company_size_ranges", TerritoryCompanySizeRanges);
+            writer.WriteObjectValue<UntypedNode>("technology_uids", TechnologyUids);
+            writer.WriteObjectValue<UntypedNode>("territory_company_size_ranges", TerritoryCompanySizeRanges);
             writer.WriteBoolValue("territory_location_override", TerritoryLocationOverride);
             writer.WriteCollectionOfPrimitiveValues<string>("territory_locations", TerritoryLocations);
             writer.WriteCollectionOfPrimitiveValues<string>("territory_person_locations", TerritoryPersonLocations);

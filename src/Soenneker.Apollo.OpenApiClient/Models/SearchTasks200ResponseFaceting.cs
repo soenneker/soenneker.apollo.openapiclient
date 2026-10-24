@@ -15,236 +15,236 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The added_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_added_technology_uids_facets>? AddedTechnologyUidsFacets { get; set; }
+        public UntypedNode? AddedTechnologyUidsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_added_technology_uids_facets> AddedTechnologyUidsFacets { get; set; }
+        public UntypedNode AddedTechnologyUidsFacets { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The contact_stage_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_contact_stage_facets>? ContactStageFacets { get; set; }
+        public UntypedNode? ContactStageFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_contact_stage_facets> ContactStageFacets { get; set; }
+        public UntypedNode ContactStageFacets { get; set; }
 #endif
         /// <summary>The currently_not_using_any_of_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_not_using_any_of_technology_uids_facets>? CurrentlyNotUsingAnyOfTechnologyUidsFacets { get; set; }
+        public UntypedNode? CurrentlyNotUsingAnyOfTechnologyUidsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_not_using_any_of_technology_uids_facets> CurrentlyNotUsingAnyOfTechnologyUidsFacets { get; set; }
+        public UntypedNode CurrentlyNotUsingAnyOfTechnologyUidsFacets { get; set; }
 #endif
         /// <summary>The currently_using_all_of_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_all_of_technology_uids_facets>? CurrentlyUsingAllOfTechnologyUidsFacets { get; set; }
+        public UntypedNode? CurrentlyUsingAllOfTechnologyUidsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_all_of_technology_uids_facets> CurrentlyUsingAllOfTechnologyUidsFacets { get; set; }
+        public UntypedNode CurrentlyUsingAllOfTechnologyUidsFacets { get; set; }
 #endif
         /// <summary>The currently_using_any_of_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_any_of_technology_uids_facets>? CurrentlyUsingAnyOfTechnologyUidsFacets { get; set; }
+        public UntypedNode? CurrentlyUsingAnyOfTechnologyUidsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_any_of_technology_uids_facets> CurrentlyUsingAnyOfTechnologyUidsFacets { get; set; }
+        public UntypedNode CurrentlyUsingAnyOfTechnologyUidsFacets { get; set; }
 #endif
         /// <summary>The dropped_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_dropped_technology_uids_facets>? DroppedTechnologyUidsFacets { get; set; }
+        public UntypedNode? DroppedTechnologyUidsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_dropped_technology_uids_facets> DroppedTechnologyUidsFacets { get; set; }
+        public UntypedNode DroppedTechnologyUidsFacets { get; set; }
 #endif
         /// <summary>The forecast_category_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_forecast_category_facets>? ForecastCategoryFacets { get; set; }
+        public UntypedNode? ForecastCategoryFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_forecast_category_facets> ForecastCategoryFacets { get; set; }
+        public UntypedNode ForecastCategoryFacets { get; set; }
 #endif
         /// <summary>The intent_topic_count_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_intent_topic_count_facets>? IntentTopicCountFacets { get; set; }
+        public UntypedNode? IntentTopicCountFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_intent_topic_count_facets> IntentTopicCountFacets { get; set; }
+        public UntypedNode IntentTopicCountFacets { get; set; }
 #endif
         /// <summary>The latest_funding_stage_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_latest_funding_stage_facets>? LatestFundingStageFacets { get; set; }
+        public UntypedNode? LatestFundingStageFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_latest_funding_stage_facets> LatestFundingStageFacets { get; set; }
+        public UntypedNode LatestFundingStageFacets { get; set; }
 #endif
         /// <summary>The linkedin_industry_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_industry_facets>? LinkedinIndustryFacets { get; set; }
+        public UntypedNode? LinkedinIndustryFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_industry_facets> LinkedinIndustryFacets { get; set; }
+        public UntypedNode LinkedinIndustryFacets { get; set; }
 #endif
         /// <summary>The linkedin_task property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_task>? LinkedinTask { get; set; }
+        public UntypedNode? LinkedinTask { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_task> LinkedinTask { get; set; }
+        public UntypedNode LinkedinTask { get; set; }
 #endif
         /// <summary>The normalized_person_title_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_normalized_person_title_facets>? NormalizedPersonTitleFacets { get; set; }
+        public UntypedNode? NormalizedPersonTitleFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_normalized_person_title_facets> NormalizedPersonTitleFacets { get; set; }
+        public UntypedNode NormalizedPersonTitleFacets { get; set; }
 #endif
         /// <summary>The num_employees_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_num_employees_facets>? NumEmployeesFacets { get; set; }
+        public UntypedNode? NumEmployeesFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_num_employees_facets> NumEmployeesFacets { get; set; }
+        public UntypedNode NumEmployeesFacets { get; set; }
 #endif
         /// <summary>The organization_hq_city_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_city_facets>? OrganizationHqCityFacets { get; set; }
+        public UntypedNode? OrganizationHqCityFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_city_facets> OrganizationHqCityFacets { get; set; }
+        public UntypedNode OrganizationHqCityFacets { get; set; }
 #endif
         /// <summary>The organization_hq_country_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_country_facets>? OrganizationHqCountryFacets { get; set; }
+        public UntypedNode? OrganizationHqCountryFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_country_facets> OrganizationHqCountryFacets { get; set; }
+        public UntypedNode OrganizationHqCountryFacets { get; set; }
 #endif
         /// <summary>The organization_hq_state_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_state_facets>? OrganizationHqStateFacets { get; set; }
+        public UntypedNode? OrganizationHqStateFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_state_facets> OrganizationHqStateFacets { get; set; }
+        public UntypedNode OrganizationHqStateFacets { get; set; }
 #endif
         /// <summary>The organization_ids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_facets>? OrganizationIdsFacets { get; set; }
+        public UntypedNode? OrganizationIdsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_facets> OrganizationIdsFacets { get; set; }
+        public UntypedNode OrganizationIdsFacets { get; set; }
 #endif
         /// <summary>The organization_ids_in_query_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_in_query_facets>? OrganizationIdsInQueryFacets { get; set; }
+        public UntypedNode? OrganizationIdsInQueryFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_in_query_facets> OrganizationIdsInQueryFacets { get; set; }
+        public UntypedNode OrganizationIdsInQueryFacets { get; set; }
 #endif
         /// <summary>The organization_intent_scoring_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_intent_scoring_facets>? OrganizationIntentScoringFacets { get; set; }
+        public UntypedNode? OrganizationIntentScoringFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_intent_scoring_facets> OrganizationIntentScoringFacets { get; set; }
+        public UntypedNode OrganizationIntentScoringFacets { get; set; }
 #endif
         /// <summary>The organization_keywords_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_keywords_facets>? OrganizationKeywordsFacets { get; set; }
+        public UntypedNode? OrganizationKeywordsFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_keywords_facets> OrganizationKeywordsFacets { get; set; }
+        public UntypedNode OrganizationKeywordsFacets { get; set; }
 #endif
         /// <summary>The organization_trading_status_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_trading_status_facets>? OrganizationTradingStatusFacets { get; set; }
+        public UntypedNode? OrganizationTradingStatusFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_trading_status_facets> OrganizationTradingStatusFacets { get; set; }
+        public UntypedNode OrganizationTradingStatusFacets { get; set; }
 #endif
         /// <summary>The person_city_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_city_facets>? PersonCityFacets { get; set; }
+        public UntypedNode? PersonCityFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_city_facets> PersonCityFacets { get; set; }
+        public UntypedNode PersonCityFacets { get; set; }
 #endif
         /// <summary>The person_country_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_country_facets>? PersonCountryFacets { get; set; }
+        public UntypedNode? PersonCountryFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_country_facets> PersonCountryFacets { get; set; }
+        public UntypedNode PersonCountryFacets { get; set; }
 #endif
         /// <summary>The person_function_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_function_facets>? PersonFunctionFacets { get; set; }
+        public UntypedNode? PersonFunctionFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_function_facets> PersonFunctionFacets { get; set; }
+        public UntypedNode PersonFunctionFacets { get; set; }
 #endif
         /// <summary>The person_persona_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_persona_facets>? PersonPersonaFacets { get; set; }
+        public UntypedNode? PersonPersonaFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_persona_facets> PersonPersonaFacets { get; set; }
+        public UntypedNode PersonPersonaFacets { get; set; }
 #endif
         /// <summary>The person_seniority_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_seniority_facets>? PersonSeniorityFacets { get; set; }
+        public UntypedNode? PersonSeniorityFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_seniority_facets> PersonSeniorityFacets { get; set; }
+        public UntypedNode PersonSeniorityFacets { get; set; }
 #endif
         /// <summary>The person_state_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_state_facets>? PersonStateFacets { get; set; }
+        public UntypedNode? PersonStateFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_state_facets> PersonStateFacets { get; set; }
+        public UntypedNode PersonStateFacets { get; set; }
 #endif
         /// <summary>The playbook_step_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_playbook_step_facets>? PlaybookStepFacets { get; set; }
+        public UntypedNode? PlaybookStepFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_playbook_step_facets> PlaybookStepFacets { get; set; }
+        public UntypedNode PlaybookStepFacets { get; set; }
 #endif
         /// <summary>The revenues_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_revenues_facets>? RevenuesFacets { get; set; }
+        public UntypedNode? RevenuesFacets { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_revenues_facets> RevenuesFacets { get; set; }
+        public UntypedNode RevenuesFacets { get; set; }
 #endif
         /// <summary>The task_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -287,35 +287,35 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "added_technology_uids_facets", n => { AddedTechnologyUidsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_added_technology_uids_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_added_technology_uids_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "contact_stage_facets", n => { ContactStageFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_contact_stage_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_contact_stage_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "currently_not_using_any_of_technology_uids_facets", n => { CurrentlyNotUsingAnyOfTechnologyUidsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_not_using_any_of_technology_uids_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_not_using_any_of_technology_uids_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "currently_using_all_of_technology_uids_facets", n => { CurrentlyUsingAllOfTechnologyUidsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_all_of_technology_uids_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_all_of_technology_uids_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "currently_using_any_of_technology_uids_facets", n => { CurrentlyUsingAnyOfTechnologyUidsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_any_of_technology_uids_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_any_of_technology_uids_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dropped_technology_uids_facets", n => { DroppedTechnologyUidsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_dropped_technology_uids_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_dropped_technology_uids_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "forecast_category_facets", n => { ForecastCategoryFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_forecast_category_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_forecast_category_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "intent_topic_count_facets", n => { IntentTopicCountFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_intent_topic_count_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_intent_topic_count_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "latest_funding_stage_facets", n => { LatestFundingStageFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_latest_funding_stage_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_latest_funding_stage_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "linkedin_industry_facets", n => { LinkedinIndustryFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_industry_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_industry_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "linkedin_task", n => { LinkedinTask = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_task>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_task.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "normalized_person_title_facets", n => { NormalizedPersonTitleFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_normalized_person_title_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_normalized_person_title_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "num_employees_facets", n => { NumEmployeesFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_num_employees_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_num_employees_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_hq_city_facets", n => { OrganizationHqCityFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_city_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_city_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_hq_country_facets", n => { OrganizationHqCountryFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_country_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_country_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_hq_state_facets", n => { OrganizationHqStateFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_state_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_state_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_ids_facets", n => { OrganizationIdsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_ids_in_query_facets", n => { OrganizationIdsInQueryFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_in_query_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_in_query_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_intent_scoring_facets", n => { OrganizationIntentScoringFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_intent_scoring_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_intent_scoring_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_keywords_facets", n => { OrganizationKeywordsFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_keywords_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_keywords_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organization_trading_status_facets", n => { OrganizationTradingStatusFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_trading_status_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_trading_status_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_city_facets", n => { PersonCityFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_city_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_city_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_country_facets", n => { PersonCountryFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_country_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_country_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_function_facets", n => { PersonFunctionFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_function_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_function_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_persona_facets", n => { PersonPersonaFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_persona_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_persona_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_seniority_facets", n => { PersonSeniorityFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_seniority_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_seniority_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_state_facets", n => { PersonStateFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_state_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_state_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "playbook_step_facets", n => { PlaybookStepFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_playbook_step_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_playbook_step_facets.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "revenues_facets", n => { RevenuesFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_revenues_facets>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_revenues_facets.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "added_technology_uids_facets", n => { AddedTechnologyUidsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "contact_stage_facets", n => { ContactStageFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "currently_not_using_any_of_technology_uids_facets", n => { CurrentlyNotUsingAnyOfTechnologyUidsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "currently_using_all_of_technology_uids_facets", n => { CurrentlyUsingAllOfTechnologyUidsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "currently_using_any_of_technology_uids_facets", n => { CurrentlyUsingAnyOfTechnologyUidsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "dropped_technology_uids_facets", n => { DroppedTechnologyUidsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "forecast_category_facets", n => { ForecastCategoryFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "intent_topic_count_facets", n => { IntentTopicCountFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "latest_funding_stage_facets", n => { LatestFundingStageFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "linkedin_industry_facets", n => { LinkedinIndustryFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "linkedin_task", n => { LinkedinTask = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "normalized_person_title_facets", n => { NormalizedPersonTitleFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "num_employees_facets", n => { NumEmployeesFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_hq_city_facets", n => { OrganizationHqCityFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_hq_country_facets", n => { OrganizationHqCountryFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_hq_state_facets", n => { OrganizationHqStateFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_ids_facets", n => { OrganizationIdsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_ids_in_query_facets", n => { OrganizationIdsInQueryFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_intent_scoring_facets", n => { OrganizationIntentScoringFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_keywords_facets", n => { OrganizationKeywordsFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "organization_trading_status_facets", n => { OrganizationTradingStatusFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_city_facets", n => { PersonCityFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_country_facets", n => { PersonCountryFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_function_facets", n => { PersonFunctionFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_persona_facets", n => { PersonPersonaFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_seniority_facets", n => { PersonSeniorityFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "person_state_facets", n => { PersonStateFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "playbook_step_facets", n => { PlaybookStepFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "revenues_facets", n => { RevenuesFacets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "task_types", n => { TaskTypes = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_facets", n => { TotalFacets = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem>(global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -327,35 +327,35 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_added_technology_uids_facets>("added_technology_uids_facets", AddedTechnologyUidsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_contact_stage_facets>("contact_stage_facets", ContactStageFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_not_using_any_of_technology_uids_facets>("currently_not_using_any_of_technology_uids_facets", CurrentlyNotUsingAnyOfTechnologyUidsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_all_of_technology_uids_facets>("currently_using_all_of_technology_uids_facets", CurrentlyUsingAllOfTechnologyUidsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_currently_using_any_of_technology_uids_facets>("currently_using_any_of_technology_uids_facets", CurrentlyUsingAnyOfTechnologyUidsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_dropped_technology_uids_facets>("dropped_technology_uids_facets", DroppedTechnologyUidsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_forecast_category_facets>("forecast_category_facets", ForecastCategoryFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_intent_topic_count_facets>("intent_topic_count_facets", IntentTopicCountFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_latest_funding_stage_facets>("latest_funding_stage_facets", LatestFundingStageFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_industry_facets>("linkedin_industry_facets", LinkedinIndustryFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_linkedin_task>("linkedin_task", LinkedinTask);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_normalized_person_title_facets>("normalized_person_title_facets", NormalizedPersonTitleFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_num_employees_facets>("num_employees_facets", NumEmployeesFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_city_facets>("organization_hq_city_facets", OrganizationHqCityFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_country_facets>("organization_hq_country_facets", OrganizationHqCountryFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_hq_state_facets>("organization_hq_state_facets", OrganizationHqStateFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_facets>("organization_ids_facets", OrganizationIdsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_ids_in_query_facets>("organization_ids_in_query_facets", OrganizationIdsInQueryFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_intent_scoring_facets>("organization_intent_scoring_facets", OrganizationIntentScoringFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_keywords_facets>("organization_keywords_facets", OrganizationKeywordsFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_organization_trading_status_facets>("organization_trading_status_facets", OrganizationTradingStatusFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_city_facets>("person_city_facets", PersonCityFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_country_facets>("person_country_facets", PersonCountryFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_function_facets>("person_function_facets", PersonFunctionFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_persona_facets>("person_persona_facets", PersonPersonaFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_seniority_facets>("person_seniority_facets", PersonSeniorityFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_person_state_facets>("person_state_facets", PersonStateFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_playbook_step_facets>("playbook_step_facets", PlaybookStepFacets);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting_revenues_facets>("revenues_facets", RevenuesFacets);
+            writer.WriteObjectValue<UntypedNode>("added_technology_uids_facets", AddedTechnologyUidsFacets);
+            writer.WriteObjectValue<UntypedNode>("contact_stage_facets", ContactStageFacets);
+            writer.WriteObjectValue<UntypedNode>("currently_not_using_any_of_technology_uids_facets", CurrentlyNotUsingAnyOfTechnologyUidsFacets);
+            writer.WriteObjectValue<UntypedNode>("currently_using_all_of_technology_uids_facets", CurrentlyUsingAllOfTechnologyUidsFacets);
+            writer.WriteObjectValue<UntypedNode>("currently_using_any_of_technology_uids_facets", CurrentlyUsingAnyOfTechnologyUidsFacets);
+            writer.WriteObjectValue<UntypedNode>("dropped_technology_uids_facets", DroppedTechnologyUidsFacets);
+            writer.WriteObjectValue<UntypedNode>("forecast_category_facets", ForecastCategoryFacets);
+            writer.WriteObjectValue<UntypedNode>("intent_topic_count_facets", IntentTopicCountFacets);
+            writer.WriteObjectValue<UntypedNode>("latest_funding_stage_facets", LatestFundingStageFacets);
+            writer.WriteObjectValue<UntypedNode>("linkedin_industry_facets", LinkedinIndustryFacets);
+            writer.WriteObjectValue<UntypedNode>("linkedin_task", LinkedinTask);
+            writer.WriteObjectValue<UntypedNode>("normalized_person_title_facets", NormalizedPersonTitleFacets);
+            writer.WriteObjectValue<UntypedNode>("num_employees_facets", NumEmployeesFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_hq_city_facets", OrganizationHqCityFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_hq_country_facets", OrganizationHqCountryFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_hq_state_facets", OrganizationHqStateFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_ids_facets", OrganizationIdsFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_ids_in_query_facets", OrganizationIdsInQueryFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_intent_scoring_facets", OrganizationIntentScoringFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_keywords_facets", OrganizationKeywordsFacets);
+            writer.WriteObjectValue<UntypedNode>("organization_trading_status_facets", OrganizationTradingStatusFacets);
+            writer.WriteObjectValue<UntypedNode>("person_city_facets", PersonCityFacets);
+            writer.WriteObjectValue<UntypedNode>("person_country_facets", PersonCountryFacets);
+            writer.WriteObjectValue<UntypedNode>("person_function_facets", PersonFunctionFacets);
+            writer.WriteObjectValue<UntypedNode>("person_persona_facets", PersonPersonaFacets);
+            writer.WriteObjectValue<UntypedNode>("person_seniority_facets", PersonSeniorityFacets);
+            writer.WriteObjectValue<UntypedNode>("person_state_facets", PersonStateFacets);
+            writer.WriteObjectValue<UntypedNode>("playbook_step_facets", PlaybookStepFacets);
+            writer.WriteObjectValue<UntypedNode>("revenues_facets", RevenuesFacets);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem>("task_types", TaskTypes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem>("total_facets", TotalFacets);
             writer.WriteAdditionalData(AdditionalData);

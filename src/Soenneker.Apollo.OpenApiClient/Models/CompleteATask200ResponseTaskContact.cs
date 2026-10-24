@@ -26,18 +26,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>All known email addresses for this contact, with per-address verification status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_contact_emails>? ContactEmails { get; set; }
+        public UntypedNode? ContactEmails { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_contact_emails> ContactEmails { get; set; }
+        public UntypedNode ContactEmails { get; set; }
 #endif
         /// <summary>The contact_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactContactStageId? ContactStageId { get; set; }
+        public UntypedNode? ContactStageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactContactStageId ContactStageId { get; set; }
+        public UntypedNode ContactStageId { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,10 +74,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The label_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_label_ids>? LabelIds { get; set; }
+        public UntypedNode? LabelIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_label_ids> LabelIds { get; set; }
+        public UntypedNode LabelIds { get; set; }
 #endif
         /// <summary>The last_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,10 +122,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The phone_numbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_phone_numbers>? PhoneNumbers { get; set; }
+        public UntypedNode? PhoneNumbers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_phone_numbers> PhoneNumbers { get; set; }
+        public UntypedNode PhoneNumbers { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,19 +177,19 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
-                { "contact_emails", n => { ContactEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_contact_emails>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_contact_emails.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "contact_stage_id", n => { ContactStageId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactContactStageId>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactContactStageId.CreateFromDiscriminatorValue); } },
+                { "contact_emails", n => { ContactEmails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "contact_stage_id", n => { ContactStageId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "label_ids", n => { LabelIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_label_ids>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_label_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "label_ids", n => { LabelIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_name", n => { OrganizationName = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetStringValue(); } },
-                { "phone_numbers", n => { PhoneNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_phone_numbers>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_phone_numbers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "phone_numbers", n => { PhoneNumbers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "typed_custom_fields", n => { TypedCustomFields = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactTypedCustomFields>(global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactTypedCustomFields.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
@@ -203,19 +203,19 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_contact_emails>("contact_emails", ContactEmails);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactContactStageId>("contact_stage_id", ContactStageId);
+            writer.WriteObjectValue<UntypedNode>("contact_emails", ContactEmails);
+            writer.WriteObjectValue<UntypedNode>("contact_stage_id", ContactStageId);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_label_ids>("label_ids", LabelIds);
+            writer.WriteObjectValue<UntypedNode>("label_ids", LabelIds);
             writer.WriteStringValue("last_name", LastName);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organization_name", OrganizationName);
             writer.WriteStringValue("owner_id", OwnerId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContact_phone_numbers>("phone_numbers", PhoneNumbers);
+            writer.WriteObjectValue<UntypedNode>("phone_numbers", PhoneNumbers);
             writer.WriteStringValue("title", Title);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskContactTypedCustomFields>("typed_custom_fields", TypedCustomFields);
             writer.WriteStringValue("updated_at", UpdatedAt);

@@ -57,10 +57,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The contact_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactRolesItem>? ContactRoles { get; set; }
+        public UntypedNode? ContactRoles { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactRolesItem> ContactRoles { get; set; }
+        public UntypedNode ContactRoles { get; set; }
 #endif
         /// <summary>The contact_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -556,7 +556,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "call_opted_out", n => { CallOptedOut = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "contact_emails", n => { ContactEmails = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItem>(global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "contact_roles", n => { ContactRoles = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactRolesItem>(global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactRolesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "contact_roles", n => { ContactRoles = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "contact_stage_id", n => { ContactStageId = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
@@ -635,7 +635,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("call_opted_out", CallOptedOut);
             writer.WriteStringValue("city", City);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItem>("contact_emails", ContactEmails);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactRolesItem>("contact_roles", ContactRoles);
+            writer.WriteObjectValue<UntypedNode>("contact_roles", ContactRoles);
             writer.WriteStringValue("contact_stage_id", ContactStageId);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("created_at", CreatedAt);

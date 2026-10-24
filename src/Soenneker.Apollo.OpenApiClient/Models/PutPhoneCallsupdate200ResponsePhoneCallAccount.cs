@@ -15,10 +15,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The account_playbook_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallAccountAccountPlaybookStatusesItem>? AccountPlaybookStatuses { get; set; }
+        public UntypedNode? AccountPlaybookStatuses { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallAccountAccountPlaybookStatusesItem> AccountPlaybookStatuses { get; set; }
+        public UntypedNode AccountPlaybookStatuses { get; set; }
 #endif
         /// <summary>The account_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -353,7 +353,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallAccountAccountPlaybookStatusesItem>(global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallAccountAccountPlaybookStatusesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "account_playbook_statuses", n => { AccountPlaybookStatuses = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "account_stage_id", n => { AccountStageId = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
@@ -402,7 +402,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallAccountAccountPlaybookStatusesItem>("account_playbook_statuses", AccountPlaybookStatuses);
+            writer.WriteObjectValue<UntypedNode>("account_playbook_statuses", AccountPlaybookStatuses);
             writer.WriteStringValue("account_stage_id", AccountStageId);
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("country", Country);

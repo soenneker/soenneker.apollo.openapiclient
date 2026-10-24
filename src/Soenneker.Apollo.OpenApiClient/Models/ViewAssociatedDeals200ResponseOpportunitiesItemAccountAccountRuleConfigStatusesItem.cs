@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemCreatedAt? CreatedAt { get; set; }
+        public UntypedNode? CreatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemCreatedAt CreatedAt { get; set; }
+        public UntypedNode CreatedAt { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemUpdatedAt? UpdatedAt { get; set; }
+        public UntypedNode? UpdatedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemUpdatedAt UpdatedAt { get; set; }
+        public UntypedNode UpdatedAt { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,13 +103,13 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created_at", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemCreatedAt>(global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemCreatedAt.CreateFromDiscriminatorValue); } },
+                { "created_at", n => { CreatedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "rule_action_config_id", n => { RuleActionConfigId = n.GetStringValue(); } },
                 { "rule_config_id", n => { RuleConfigId = n.GetStringValue(); } },
                 { "status_cd", n => { StatusCd = n.GetStringValue(); } },
-                { "updated_at", n => { UpdatedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemUpdatedAt>(global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemUpdatedAt.CreateFromDiscriminatorValue); } },
+                { "updated_at", n => { UpdatedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemId = n.GetStringValue(); } },
             };
         }
@@ -120,13 +120,13 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemCreatedAt>("created_at", CreatedAt);
+            writer.WriteObjectValue<UntypedNode>("created_at", CreatedAt);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("rule_action_config_id", RuleActionConfigId);
             writer.WriteStringValue("rule_config_id", RuleConfigId);
             writer.WriteStringValue("status_cd", StatusCd);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemUpdatedAt>("updated_at", UpdatedAt);
+            writer.WriteObjectValue<UntypedNode>("updated_at", UpdatedAt);
             writer.WriteStringValue("id", ViewAssociatedDeals200ResponseOpportunitiesItemAccountAccountRuleConfigStatusesItemId);
             writer.WriteAdditionalData(AdditionalData);
         }

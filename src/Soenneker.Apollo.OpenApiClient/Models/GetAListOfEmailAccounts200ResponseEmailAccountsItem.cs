@@ -75,18 +75,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The inactive_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemInactiveReason? InactiveReason { get; set; }
+        public UntypedNode? InactiveReason { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemInactiveReason InactiveReason { get; set; }
+        public UntypedNode InactiveReason { get; set; }
 #endif
         /// <summary>The is_opted_in_mailwarming property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemIsOptedInMailwarming? IsOptedInMailwarming { get; set; }
+        public UntypedNode? IsOptedInMailwarming { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemIsOptedInMailwarming IsOptedInMailwarming { get; set; }
+        public UntypedNode IsOptedInMailwarming { get; set; }
 #endif
         /// <summary>The last_synced_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,18 +101,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The mailgun_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailgunDomains? MailgunDomains { get; set; }
+        public UntypedNode? MailgunDomains { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailgunDomains MailgunDomains { get; set; }
+        public UntypedNode MailgunDomains { get; set; }
 #endif
         /// <summary>The mailwarming_eta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingEta? MailwarmingEta { get; set; }
+        public UntypedNode? MailwarmingEta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingEta MailwarmingEta { get; set; }
+        public UntypedNode MailwarmingEta { get; set; }
 #endif
         /// <summary>The mailwarming_max property</summary>
         public int? MailwarmingMax { get; set; }
@@ -139,10 +139,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The mailwarming_subject_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingSubjectToken? MailwarmingSubjectToken { get; set; }
+        public UntypedNode? MailwarmingSubjectToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingSubjectToken MailwarmingSubjectToken { get; set; }
+        public UntypedNode MailwarmingSubjectToken { get; set; }
 #endif
         /// <summary>The mailwarming_to_send_daily property</summary>
         public int? MailwarmingToSendDaily { get; set; }
@@ -155,18 +155,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The nylas_api_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasApiVersion? NylasApiVersion { get; set; }
+        public UntypedNode? NylasApiVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasApiVersion NylasApiVersion { get; set; }
+        public UntypedNode NylasApiVersion { get; set; }
 #endif
         /// <summary>The nylas_provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasProvider? NylasProvider { get; set; }
+        public UntypedNode? NylasProvider { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasProvider NylasProvider { get; set; }
+        public UntypedNode NylasProvider { get; set; }
 #endif
         /// <summary>The provider_display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -179,28 +179,28 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The revoked_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemRevokedAt? RevokedAt { get; set; }
+        public UntypedNode? RevokedAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemRevokedAt RevokedAt { get; set; }
+        public UntypedNode RevokedAt { get; set; }
 #endif
         /// <summary>The seconds_delay_between_emails property</summary>
         public int? SecondsDelayBetweenEmails { get; set; }
         /// <summary>The sendgrid_api_key_v3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiKeyV3? SendgridApiKeyV3 { get; set; }
+        public UntypedNode? SendgridApiKeyV3 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiKeyV3 SendgridApiKeyV3 { get; set; }
+        public UntypedNode SendgridApiKeyV3 { get; set; }
 #endif
         /// <summary>The sendgrid_api_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiUser? SendgridApiUser { get; set; }
+        public UntypedNode? SendgridApiUser { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiUser SendgridApiUser { get; set; }
+        public UntypedNode SendgridApiUser { get; set; }
 #endif
         /// <summary>The signature_edit_disabled property</summary>
         public bool? SignatureEditDisabled { get; set; }
@@ -215,10 +215,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The true_warmup_approximate_end_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupApproximateEndDate? TrueWarmupApproximateEndDate { get; set; }
+        public UntypedNode? TrueWarmupApproximateEndDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupApproximateEndDate TrueWarmupApproximateEndDate { get; set; }
+        public UntypedNode TrueWarmupApproximateEndDate { get; set; }
 #endif
         /// <summary>The true_warmup_daily_limit property</summary>
         public int? TrueWarmupDailyLimit { get; set; }
@@ -229,20 +229,20 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The true_warmup_last_throttled_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupLastThrottledAt? TrueWarmupLastThrottledAt { get; set; }
+        public UntypedNode? TrueWarmupLastThrottledAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupLastThrottledAt TrueWarmupLastThrottledAt { get; set; }
+        public UntypedNode TrueWarmupLastThrottledAt { get; set; }
 #endif
         /// <summary>The true_warmup_progress property</summary>
         public int? TrueWarmupProgress { get; set; }
         /// <summary>The true_warmup_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupStatus? TrueWarmupStatus { get; set; }
+        public UntypedNode? TrueWarmupStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupStatus TrueWarmupStatus { get; set; }
+        public UntypedNode TrueWarmupStatus { get; set; }
 #endif
         /// <summary>The true_warmup_thresholds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -323,38 +323,38 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "email_sending_policy_cd", n => { EmailSendingPolicyCd = n.GetStringValue(); } },
                 { "fields_fully_loaded", n => { FieldsFullyLoaded = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "inactive_reason", n => { InactiveReason = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemInactiveReason>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemInactiveReason.CreateFromDiscriminatorValue); } },
-                { "is_opted_in_mailwarming", n => { IsOptedInMailwarming = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemIsOptedInMailwarming>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemIsOptedInMailwarming.CreateFromDiscriminatorValue); } },
+                { "inactive_reason", n => { InactiveReason = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "is_opted_in_mailwarming", n => { IsOptedInMailwarming = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "last_synced_at", n => { LastSyncedAt = n.GetStringValue(); } },
                 { "limits_editable", n => { LimitsEditable = n.GetBoolValue(); } },
-                { "mailgun_domains", n => { MailgunDomains = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailgunDomains>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailgunDomains.CreateFromDiscriminatorValue); } },
-                { "mailwarming_eta", n => { MailwarmingEta = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingEta>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingEta.CreateFromDiscriminatorValue); } },
+                { "mailgun_domains", n => { MailgunDomains = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "mailwarming_eta", n => { MailwarmingEta = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "mailwarming_max", n => { MailwarmingMax = n.GetIntValue(); } },
                 { "mailwarming_on_weekdays_only", n => { MailwarmingOnWeekdaysOnly = n.GetBoolValue(); } },
                 { "mailwarming_score", n => { MailwarmingScore = n.GetIntValue(); } },
                 { "mailwarming_score_banner", n => { MailwarmingScoreBanner = n.GetStringValue(); } },
                 { "mailwarming_status", n => { MailwarmingStatus = n.GetStringValue(); } },
-                { "mailwarming_subject_token", n => { MailwarmingSubjectToken = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingSubjectToken>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingSubjectToken.CreateFromDiscriminatorValue); } },
+                { "mailwarming_subject_token", n => { MailwarmingSubjectToken = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "mailwarming_to_send_daily", n => { MailwarmingToSendDaily = n.GetIntValue(); } },
                 { "mailwarming_to_send_incrementor", n => { MailwarmingToSendIncrementor = n.GetIntValue(); } },
                 { "max_outbound_emails_per_hour", n => { MaxOutboundEmailsPerHour = n.GetIntValue(); } },
                 { "nudge_user_to_send_mails", n => { NudgeUserToSendMails = n.GetBoolValue(); } },
-                { "nylas_api_version", n => { NylasApiVersion = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasApiVersion>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasApiVersion.CreateFromDiscriminatorValue); } },
-                { "nylas_provider", n => { NylasProvider = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasProvider>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasProvider.CreateFromDiscriminatorValue); } },
+                { "nylas_api_version", n => { NylasApiVersion = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "nylas_provider", n => { NylasProvider = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "provider_display_name", n => { ProviderDisplayName = n.GetStringValue(); } },
-                { "revoked_at", n => { RevokedAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemRevokedAt>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemRevokedAt.CreateFromDiscriminatorValue); } },
+                { "revoked_at", n => { RevokedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "seconds_delay_between_emails", n => { SecondsDelayBetweenEmails = n.GetIntValue(); } },
-                { "sendgrid_api_key_v3", n => { SendgridApiKeyV3 = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiKeyV3>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiKeyV3.CreateFromDiscriminatorValue); } },
-                { "sendgrid_api_user", n => { SendgridApiUser = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiUser>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiUser.CreateFromDiscriminatorValue); } },
+                { "sendgrid_api_key_v3", n => { SendgridApiKeyV3 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sendgrid_api_user", n => { SendgridApiUser = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "signature_edit_disabled", n => { SignatureEditDisabled = n.GetBoolValue(); } },
                 { "signature_html", n => { SignatureHtml = n.GetStringValue(); } },
-                { "true_warmup_approximate_end_date", n => { TrueWarmupApproximateEndDate = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupApproximateEndDate>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupApproximateEndDate.CreateFromDiscriminatorValue); } },
+                { "true_warmup_approximate_end_date", n => { TrueWarmupApproximateEndDate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "true_warmup_daily_limit", n => { TrueWarmupDailyLimit = n.GetIntValue(); } },
                 { "true_warmup_enable_thresholds", n => { TrueWarmupEnableThresholds = n.GetBoolValue(); } },
                 { "true_warmup_enabled", n => { TrueWarmupEnabled = n.GetBoolValue(); } },
-                { "true_warmup_last_throttled_at", n => { TrueWarmupLastThrottledAt = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupLastThrottledAt>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupLastThrottledAt.CreateFromDiscriminatorValue); } },
+                { "true_warmup_last_throttled_at", n => { TrueWarmupLastThrottledAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "true_warmup_progress", n => { TrueWarmupProgress = n.GetIntValue(); } },
-                { "true_warmup_status", n => { TrueWarmupStatus = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupStatus>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupStatus.CreateFromDiscriminatorValue); } },
+                { "true_warmup_status", n => { TrueWarmupStatus = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "true_warmup_thresholds", n => { TrueWarmupThresholds = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -378,38 +378,38 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("email_sending_policy_cd", EmailSendingPolicyCd);
             writer.WriteBoolValue("fields_fully_loaded", FieldsFullyLoaded);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemInactiveReason>("inactive_reason", InactiveReason);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemIsOptedInMailwarming>("is_opted_in_mailwarming", IsOptedInMailwarming);
+            writer.WriteObjectValue<UntypedNode>("inactive_reason", InactiveReason);
+            writer.WriteObjectValue<UntypedNode>("is_opted_in_mailwarming", IsOptedInMailwarming);
             writer.WriteStringValue("last_synced_at", LastSyncedAt);
             writer.WriteBoolValue("limits_editable", LimitsEditable);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailgunDomains>("mailgun_domains", MailgunDomains);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingEta>("mailwarming_eta", MailwarmingEta);
+            writer.WriteObjectValue<UntypedNode>("mailgun_domains", MailgunDomains);
+            writer.WriteObjectValue<UntypedNode>("mailwarming_eta", MailwarmingEta);
             writer.WriteIntValue("mailwarming_max", MailwarmingMax);
             writer.WriteBoolValue("mailwarming_on_weekdays_only", MailwarmingOnWeekdaysOnly);
             writer.WriteIntValue("mailwarming_score", MailwarmingScore);
             writer.WriteStringValue("mailwarming_score_banner", MailwarmingScoreBanner);
             writer.WriteStringValue("mailwarming_status", MailwarmingStatus);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemMailwarmingSubjectToken>("mailwarming_subject_token", MailwarmingSubjectToken);
+            writer.WriteObjectValue<UntypedNode>("mailwarming_subject_token", MailwarmingSubjectToken);
             writer.WriteIntValue("mailwarming_to_send_daily", MailwarmingToSendDaily);
             writer.WriteIntValue("mailwarming_to_send_incrementor", MailwarmingToSendIncrementor);
             writer.WriteIntValue("max_outbound_emails_per_hour", MaxOutboundEmailsPerHour);
             writer.WriteBoolValue("nudge_user_to_send_mails", NudgeUserToSendMails);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasApiVersion>("nylas_api_version", NylasApiVersion);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemNylasProvider>("nylas_provider", NylasProvider);
+            writer.WriteObjectValue<UntypedNode>("nylas_api_version", NylasApiVersion);
+            writer.WriteObjectValue<UntypedNode>("nylas_provider", NylasProvider);
             writer.WriteStringValue("provider_display_name", ProviderDisplayName);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemRevokedAt>("revoked_at", RevokedAt);
+            writer.WriteObjectValue<UntypedNode>("revoked_at", RevokedAt);
             writer.WriteIntValue("seconds_delay_between_emails", SecondsDelayBetweenEmails);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiKeyV3>("sendgrid_api_key_v3", SendgridApiKeyV3);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemSendgridApiUser>("sendgrid_api_user", SendgridApiUser);
+            writer.WriteObjectValue<UntypedNode>("sendgrid_api_key_v3", SendgridApiKeyV3);
+            writer.WriteObjectValue<UntypedNode>("sendgrid_api_user", SendgridApiUser);
             writer.WriteBoolValue("signature_edit_disabled", SignatureEditDisabled);
             writer.WriteStringValue("signature_html", SignatureHtml);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupApproximateEndDate>("true_warmup_approximate_end_date", TrueWarmupApproximateEndDate);
+            writer.WriteObjectValue<UntypedNode>("true_warmup_approximate_end_date", TrueWarmupApproximateEndDate);
             writer.WriteIntValue("true_warmup_daily_limit", TrueWarmupDailyLimit);
             writer.WriteBoolValue("true_warmup_enabled", TrueWarmupEnabled);
             writer.WriteBoolValue("true_warmup_enable_thresholds", TrueWarmupEnableThresholds);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupLastThrottledAt>("true_warmup_last_throttled_at", TrueWarmupLastThrottledAt);
+            writer.WriteObjectValue<UntypedNode>("true_warmup_last_throttled_at", TrueWarmupLastThrottledAt);
             writer.WriteIntValue("true_warmup_progress", TrueWarmupProgress);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupStatus>("true_warmup_status", TrueWarmupStatus);
+            writer.WriteObjectValue<UntypedNode>("true_warmup_status", TrueWarmupStatus);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds>("true_warmup_thresholds", TrueWarmupThresholds);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_id", UserId);

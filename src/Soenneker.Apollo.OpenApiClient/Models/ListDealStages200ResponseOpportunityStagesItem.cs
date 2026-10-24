@@ -45,18 +45,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The is_editable property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsEditable? IsEditable { get; set; }
+        public UntypedNode? IsEditable { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsEditable IsEditable { get; set; }
+        public UntypedNode IsEditable { get; set; }
 #endif
         /// <summary>The is_meeting_set property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsMeetingSet? IsMeetingSet { get; set; }
+        public UntypedNode? IsMeetingSet { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsMeetingSet IsMeetingSet { get; set; }
+        public UntypedNode IsMeetingSet { get; set; }
 #endif
         /// <summary>The is_won property</summary>
         public bool? IsWon { get; set; }
@@ -136,8 +136,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "forecast_category_cd", n => { ForecastCategoryCd = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_closed", n => { IsClosed = n.GetBoolValue(); } },
-                { "is_editable", n => { IsEditable = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsEditable>(global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsEditable.CreateFromDiscriminatorValue); } },
-                { "is_meeting_set", n => { IsMeetingSet = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsMeetingSet>(global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsMeetingSet.CreateFromDiscriminatorValue); } },
+                { "is_editable", n => { IsEditable = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "is_meeting_set", n => { IsMeetingSet = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "is_won", n => { IsWon = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "opportunity_pipeline_id", n => { OpportunityPipelineId = n.GetStringValue(); } },
@@ -159,8 +159,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("forecast_category_cd", ForecastCategoryCd);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_closed", IsClosed);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsEditable>("is_editable", IsEditable);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItemIsMeetingSet>("is_meeting_set", IsMeetingSet);
+            writer.WriteObjectValue<UntypedNode>("is_editable", IsEditable);
+            writer.WriteObjectValue<UntypedNode>("is_meeting_set", IsMeetingSet);
             writer.WriteBoolValue("is_won", IsWon);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("opportunity_pipeline_id", OpportunityPipelineId);

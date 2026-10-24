@@ -95,10 +95,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The vendor_validation_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItemVendorValidationStatusesItem>? VendorValidationStatuses { get; set; }
+        public UntypedNode? VendorValidationStatuses { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItemVendorValidationStatusesItem> VendorValidationStatuses { get; set; }
+        public UntypedNode VendorValidationStatuses { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItem"/> and sets the default values.
@@ -137,7 +137,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "position", n => { Position = n.GetLongValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "third_party_vendor_name", n => { ThirdPartyVendorName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "vendor_validation_statuses", n => { VendorValidationStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItemVendorValidationStatusesItem>(global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItemVendorValidationStatusesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "vendor_validation_statuses", n => { VendorValidationStatuses = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -159,7 +159,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteLongValue("position", Position);
             writer.WriteStringValue("source", Source);
             writer.WriteObjectValue<UntypedNode>("third_party_vendor_name", ThirdPartyVendorName);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200ResponsePhoneCallContactContactEmailsItemVendorValidationStatusesItem>("vendor_validation_statuses", VendorValidationStatuses);
+            writer.WriteObjectValue<UntypedNode>("vendor_validation_statuses", VendorValidationStatuses);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

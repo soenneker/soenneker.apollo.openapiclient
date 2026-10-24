@@ -16,18 +16,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Play/account-queue memberships for this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_account_queues>? AccountQueues { get; set; }
+        public UntypedNode? AccountQueues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_account_queues> AccountQueues { get; set; }
+        public UntypedNode AccountQueues { get; set; }
 #endif
         /// <summary>The account_stage_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccountAccountStageId? AccountStageId { get; set; }
+        public UntypedNode? AccountStageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccountAccountStageId AccountStageId { get; set; }
+        public UntypedNode AccountStageId { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -68,10 +68,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The label_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_label_ids>? LabelIds { get; set; }
+        public UntypedNode? LabelIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_label_ids> LabelIds { get; set; }
+        public UntypedNode LabelIds { get; set; }
 #endif
         /// <summary>The linkedin_uid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,14 +170,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_queues", n => { AccountQueues = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_account_queues>(global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_account_queues.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "account_stage_id", n => { AccountStageId = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccountAccountStageId>(global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccountAccountStageId.CreateFromDiscriminatorValue); } },
+                { "account_queues", n => { AccountQueues = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "account_stage_id", n => { AccountStageId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "estimated_num_employees", n => { EstimatedNumEmployees = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "industry", n => { Industry = n.GetStringValue(); } },
-                { "label_ids", n => { LabelIds = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_label_ids>(global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_label_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "label_ids", n => { LabelIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "linkedin_uid", n => { LinkedinUid = n.GetStringValue(); } },
                 { "linkedin_url", n => { LinkedinUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -196,14 +196,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_account_queues>("account_queues", AccountQueues);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccountAccountStageId>("account_stage_id", AccountStageId);
+            writer.WriteObjectValue<UntypedNode>("account_queues", AccountQueues);
+            writer.WriteObjectValue<UntypedNode>("account_stage_id", AccountStageId);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("domain", Domain);
             writer.WriteIntValue("estimated_num_employees", EstimatedNumEmployees);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("industry", Industry);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetATask200ResponseTaskAccount_label_ids>("label_ids", LabelIds);
+            writer.WriteObjectValue<UntypedNode>("label_ids", LabelIds);
             writer.WriteStringValue("linkedin_uid", LinkedinUid);
             writer.WriteStringValue("linkedin_url", LinkedinUrl);
             writer.WriteStringValue("name", Name);

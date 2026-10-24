@@ -39,7 +39,6 @@ namespace Soenneker.Apollo.OpenApiClient.Typed_custom_fields
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Typed_custom_fields.GetAListOfAllCustomFields200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields429Response">When receiving a 429 status code</exception>
         [Obsolete("")]
@@ -55,7 +54,6 @@ namespace Soenneker.Apollo.OpenApiClient.Typed_custom_fields
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Typed_custom_fields.GetAListOfAllCustomFields200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields429Response.CreateFromDiscriminatorValue },
             };

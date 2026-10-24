@@ -53,7 +53,6 @@ namespace Soenneker.Apollo.OpenApiClient.Sequences
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Sequences.CreateSequence200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence422Response">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +68,6 @@ namespace Soenneker.Apollo.OpenApiClient.Sequences
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Sequences.CreateSequence200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.CreateSequence422Response.CreateFromDiscriminatorValue },
             };

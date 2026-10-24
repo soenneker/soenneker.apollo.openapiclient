@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings
 {
     /// <summary>
-    /// Builds and executes requests for operations under \organizations\{-id}\job_postings
+    /// Builds and executes requests for operations under \organizations\{organizationId}\job_postings
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Job_postingsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Job_postingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{%2Did}/job_postings{?page*,per_page*}", pathParameters)
+        public Job_postingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{organizationId}/job_postings{?page*,per_page*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Job_postingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{%2Did}/job_postings{?page*,per_page*}", rawUrl)
+        public Job_postingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations/{organizationId}/job_postings{?page*,per_page*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,7 +39,6 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings.OrganizationJobsPostings200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,7 +53,6 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings.OrganizationJobsPostings200Response401Error.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings429Response.CreateFromDiscriminatorValue },
             };

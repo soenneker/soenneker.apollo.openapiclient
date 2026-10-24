@@ -89,10 +89,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Array of associated CRM note records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200ResponseNotesItem_crm_notes>? CrmNotes { get; set; }
+        public UntypedNode? CrmNotes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200ResponseNotesItem_crm_notes> CrmNotes { get; set; }
+        public UntypedNode CrmNotes { get; set; }
 #endif
         /// <summary>The unique identifier of the note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,7 +174,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "conversation_id", n => { ConversationId = n.GetStringValue(); } },
                 { "conversation_ids", n => { ConversationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "crm_notes", n => { CrmNotes = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200ResponseNotesItem_crm_notes>(global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200ResponseNotesItem_crm_notes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "crm_notes", n => { CrmNotes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_org_chart_note", n => { IsOrgChartNote = n.GetBoolValue(); } },
                 { "opportunity_id", n => { OpportunityId = n.GetStringValue(); } },
@@ -201,7 +201,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("conversation_id", ConversationId);
             writer.WriteCollectionOfPrimitiveValues<string>("conversation_ids", ConversationIds);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200ResponseNotesItem_crm_notes>("crm_notes", CrmNotes);
+            writer.WriteObjectValue<UntypedNode>("crm_notes", CrmNotes);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_org_chart_note", IsOrgChartNote);
             writer.WriteStringValue("opportunity_id", OpportunityId);

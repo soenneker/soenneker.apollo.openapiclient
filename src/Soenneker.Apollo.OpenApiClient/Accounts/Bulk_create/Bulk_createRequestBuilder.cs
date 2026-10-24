@@ -40,7 +40,6 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Bulk_create
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Accounts.Bulk_create.BulkCreateAccounts200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts429Response">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts500Response">When receiving a 500 status code</exception>
@@ -57,7 +56,6 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Bulk_create
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Accounts.Bulk_create.BulkCreateAccounts200Response401Error.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts500Response.CreateFromDiscriminatorValue },

@@ -39,7 +39,6 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Organizations.Enrich.OrganizationEnrichment200Response401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment429Response">When receiving a 429 status code</exception>
@@ -55,7 +54,6 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Enrich
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Apollo.OpenApiClient.Organizations.Enrich.OrganizationEnrichment200Response401Error.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationEnrichment429Response.CreateFromDiscriminatorValue },

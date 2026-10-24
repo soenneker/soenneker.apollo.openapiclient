@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The breadcrumbs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_breadcrumbs>? Breadcrumbs { get; set; }
+        public UntypedNode? Breadcrumbs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_breadcrumbs> Breadcrumbs { get; set; }
+        public UntypedNode Breadcrumbs { get; set; }
 #endif
         /// <summary>The disable_eu_prospecting property</summary>
         public bool? DisableEuProspecting { get; set; }
@@ -29,10 +29,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseNumFetchResult? NumFetchResult { get; set; }
+        public UntypedNode? NumFetchResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseNumFetchResult NumFetchResult { get; set; }
+        public UntypedNode NumFetchResult { get; set; }
 #endif
         /// <summary>The opportunities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The salesforce_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_salesforce_users>? SalesforceUsers { get; set; }
+        public UntypedNode? SalesforceUsers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_salesforce_users> SalesforceUsers { get; set; }
+        public UntypedNode SalesforceUsers { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response"/> and sets the default values.
@@ -91,15 +91,15 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "breadcrumbs", n => { Breadcrumbs = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_breadcrumbs>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_breadcrumbs.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "breadcrumbs", n => { Breadcrumbs = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "disable_eu_prospecting", n => { DisableEuProspecting = n.GetBoolValue(); } },
                 { "has_join", n => { HasJoin = n.GetBoolValue(); } },
-                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseNumFetchResult>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseNumFetchResult.CreateFromDiscriminatorValue); } },
+                { "num_fetch_result", n => { NumFetchResult = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "opportunities", n => { Opportunities = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination.CreateFromDiscriminatorValue); } },
                 { "partial_results_limit", n => { PartialResultsLimit = n.GetIntValue(); } },
                 { "partial_results_only", n => { PartialResultsOnly = n.GetBoolValue(); } },
-                { "salesforce_users", n => { SalesforceUsers = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_salesforce_users>(global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_salesforce_users.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "salesforce_users", n => { SalesforceUsers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -109,15 +109,15 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_breadcrumbs>("breadcrumbs", Breadcrumbs);
+            writer.WriteObjectValue<UntypedNode>("breadcrumbs", Breadcrumbs);
             writer.WriteBoolValue("disable_eu_prospecting", DisableEuProspecting);
             writer.WriteBoolValue("has_join", HasJoin);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseNumFetchResult>("num_fetch_result", NumFetchResult);
+            writer.WriteObjectValue<UntypedNode>("num_fetch_result", NumFetchResult);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem>("opportunities", Opportunities);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination>("pagination", Pagination);
             writer.WriteIntValue("partial_results_limit", PartialResultsLimit);
             writer.WriteBoolValue("partial_results_only", PartialResultsOnly);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response_salesforce_users>("salesforce_users", SalesforceUsers);
+            writer.WriteObjectValue<UntypedNode>("salesforce_users", SalesforceUsers);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

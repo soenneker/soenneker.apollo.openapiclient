@@ -17,10 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The city property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemCity? City { get; set; }
+        public UntypedNode? City { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemCity City { get; set; }
+        public UntypedNode City { get; set; }
 #endif
         /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemState? State { get; set; }
+        public UntypedNode? State { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemState State { get; set; }
+        public UntypedNode State { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,12 +103,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "city", n => { City = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemCity>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemCity.CreateFromDiscriminatorValue); } },
+                { "city", n => { City = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last_seen_at", n => { LastSeenAt = n.GetStringValue(); } },
                 { "posted_at", n => { PostedAt = n.GetStringValue(); } },
-                { "state", n => { State = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemState>(global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemState.CreateFromDiscriminatorValue); } },
+                { "state", n => { State = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -120,12 +120,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemCity>("city", City);
+            writer.WriteObjectValue<UntypedNode>("city", City);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last_seen_at", LastSeenAt);
             writer.WriteStringValue("posted_at", PostedAt);
-            writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItemState>("state", State);
+            writer.WriteObjectValue<UntypedNode>("state", State);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

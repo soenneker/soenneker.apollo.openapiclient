@@ -25,18 +25,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The hubspot_owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseHubspotOwnersItem>? HubspotOwners { get; set; }
+        public UntypedNode? HubspotOwners { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseHubspotOwnersItem> HubspotOwners { get; set; }
+        public UntypedNode HubspotOwners { get; set; }
 #endif
         /// <summary>The salesforce_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseSalesforceUsersItem>? SalesforceUsers { get; set; }
+        public UntypedNode? SalesforceUsers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseSalesforceUsersItem> SalesforceUsers { get; set; }
+        public UntypedNode SalesforceUsers { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200Response"/> and sets the default values.
@@ -64,8 +64,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount.CreateFromDiscriminatorValue); } },
-                { "hubspot_owners", n => { HubspotOwners = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseHubspotOwnersItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseHubspotOwnersItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "salesforce_users", n => { SalesforceUsers = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseSalesforceUsersItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseSalesforceUsersItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "hubspot_owners", n => { HubspotOwners = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "salesforce_users", n => { SalesforceUsers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,8 +76,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount>("account", Account);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseHubspotOwnersItem>("hubspot_owners", HubspotOwners);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseSalesforceUsersItem>("salesforce_users", SalesforceUsers);
+            writer.WriteObjectValue<UntypedNode>("hubspot_owners", HubspotOwners);
+            writer.WriteObjectValue<UntypedNode>("salesforce_users", SalesforceUsers);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
