@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>The current webhook status.</summary>
+    /// <summary>The current webhook status. Returns &lt;code&gt;skipped&lt;/code&gt; when the enrichment request was made with &lt;code&gt;poll_only&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. Apollo doesn&apos;t attempt a webhook delivery, so the result is available only through this endpoint.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PollWebhookResult200ResponseWebhookStatus
     {
@@ -18,6 +18,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         [EnumMember(Value = "failed")]
         #pragma warning disable CS1591
         Failed,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "skipped")]
+        #pragma warning disable CS1591
+        Skipped,
         #pragma warning restore CS1591
     }
 }

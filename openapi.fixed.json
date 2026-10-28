@@ -19725,7 +19725,7 @@
           "Miscellaneous"
         ],
         "summary": "Poll webhook result",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/webhook_result/show\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060webhook_result_read\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nUse the poll webhook result endpoint to retrieve webhook results from Apollo. This endpoint enables you to poll for the webhook payload if you didn\u0027t receive the original webhook callback.\u003Cbr\u003E\u003Cbr\u003ETo use this endpoint, you need the \u003Ccode\u003Erequest_id\u003C/code\u003E from the \u003Ca href=\u0022https://docs.apollo.io/reference/people-enrichment\u0022\u003Epeople enrichment\u003C/a\u003E or \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment\u003C/a\u003E endpoint. Pass this value as \u003Ccode\u003Erequest_id\u003C/code\u003E in this endpoint.\u003Cbr\u003E\u003Cbr\u003EThis endpoint returns webhook results for your team from up to thirty days after the webhook was triggered.\u003Cbr\u003E\u003Cbr\u003EWhile an enrichment is still processing, this endpoint returns a \u003Ccode\u003E404\u003C/code\u003E with \u003Ccode\u003Eerror_code: result_pending\u003C/code\u003E and a \u003Ccode\u003Eretry_after_seconds\u003C/code\u003E value\u2014wait that many seconds and poll again. Once the result is ready, it returns a \u003Ccode\u003E200\u003C/code\u003E.\u003Cbr\u003E\u003Cbr\u003EThree responses are terminal, so stop polling if you receive any of them: \u003Ccode\u003Erequest_id_unknown\u003C/code\u003E (\u003Ccode\u003E404\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not recognized, usually because it was mistyped or never issued), \u003Ccode\u003Erequest_id_expired\u003C/code\u003E (\u003Ccode\u003E410\u003C/code\u003E\u2014the result has aged out past the 30-day window, so start a fresh enrichment request), and \u003Ccode\u003Einvalid_request_id\u003C/code\u003E (\u003Ccode\u003E400\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not a valid signed 64-bit integer).",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/webhook_result/show\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060webhook_result_read\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nUse the poll webhook result endpoint to retrieve webhook results from Apollo. This endpoint enables you to poll for the webhook payload if you didn\u0027t receive the original webhook callback.\u003Cbr\u003E\u003Cbr\u003ETo use this endpoint, you need the \u003Ccode\u003Erequest_id\u003C/code\u003E from the \u003Ca href=\u0022https://docs.apollo.io/reference/people-enrichment\u0022\u003Epeople enrichment\u003C/a\u003E or \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment\u003C/a\u003E endpoint. Pass this value as \u003Ccode\u003Erequest_id\u003C/code\u003E in this endpoint.\u003Cbr\u003E\u003Cbr\u003EThis endpoint returns webhook results for your team from up to thirty days after the webhook was triggered.\u003Cbr\u003E\u003Cbr\u003EWhile an enrichment is still processing, this endpoint returns a \u003Ccode\u003E404\u003C/code\u003E with \u003Ccode\u003Eerror_code: result_pending\u003C/code\u003E and a \u003Ccode\u003Eretry_after_seconds\u003C/code\u003E value\u2014wait that many seconds and poll again. Once the result is ready, it returns a \u003Ccode\u003E200\u003C/code\u003E.\u003Cbr\u003E\u003Cbr\u003EThree responses are terminal, so stop polling if you receive any of them: \u003Ccode\u003Erequest_id_unknown\u003C/code\u003E (\u003Ccode\u003E404\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not recognized, usually because it was mistyped or never issued), \u003Ccode\u003Erequest_id_expired\u003C/code\u003E (\u003Ccode\u003E410\u003C/code\u003E\u2014the result has aged out past the 30-day window, so start a fresh enrichment request), and \u003Ccode\u003Einvalid_request_id\u003C/code\u003E (\u003Ccode\u003E400\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not a valid signed 64-bit integer).\u003Cbr\u003E\u003Cbr\u003EFor requests made with \u003Ccode\u003Epoll_only\u003C/code\u003E set to \u003Ccode\u003Etrue\u003C/code\u003E, \u003Ccode\u003Ewebhook_status\u003C/code\u003E is \u003Ccode\u003Eskipped\u003C/code\u003E, because Apollo doesn\u0027t send a webhook.",
         "operationId": "PollWebhookResult",
         "parameters": [
           {
@@ -26620,7 +26620,7 @@
               "null",
               "string"
             ],
-            "description": "ISO 8601 UTC timestamp of the last webhook \u003Ccode\u003EPOST\u003C/code\u003E attempt. Returns \u003Ccode\u003Enull\u003C/code\u003E until Apollo makes the first dispatch attempt.",
+            "description": "ISO 8601 UTC timestamp of the last webhook \u003Ccode\u003EPOST\u003C/code\u003E attempt. Returns \u003Ccode\u003Enull\u003C/code\u003E until Apollo makes the first dispatch attempt. Stays \u003Ccode\u003Enull\u003C/code\u003E when \u003Ccode\u003Ewebhook_status\u003C/code\u003E is \u003Ccode\u003Eskipped\u003C/code\u003E.",
             "example": "2026-05-26T10:42:11Z"
           },
           "failure_reason": {
@@ -49930,10 +49930,11 @@
         "enum": [
           "in_progress",
           "success",
-          "failed"
+          "failed",
+          "skipped"
         ],
         "type": "string",
-        "description": "The current webhook status.",
+        "description": "The current webhook status. Returns \u003Ccode\u003Eskipped\u003C/code\u003E when the enrichment request was made with \u003Ccode\u003Epoll_only\u003C/code\u003E set to \u003Ccode\u003Etrue\u003C/code\u003E. Apollo doesn\u0027t attempt a webhook delivery, so the result is available only through this endpoint.",
         "example": "success",
         "x-ms-enum": {
           "name": "PollWebhookResult200ResponseWebhookStatus",
@@ -49950,6 +49951,10 @@
             {
               "value": "failed",
               "name": "Failed"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
             }
           ]
         }

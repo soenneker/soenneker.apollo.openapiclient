@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string FailureReason { get; set; }
 #endif
-        /// <summary>ISO 8601 UTC timestamp of the last webhook &lt;code&gt;POST&lt;/code&gt; attempt. Returns &lt;code&gt;null&lt;/code&gt; until Apollo makes the first dispatch attempt.</summary>
+        /// <summary>ISO 8601 UTC timestamp of the last webhook &lt;code&gt;POST&lt;/code&gt; attempt. Returns &lt;code&gt;null&lt;/code&gt; until Apollo makes the first dispatch attempt. Stays &lt;code&gt;null&lt;/code&gt; when &lt;code&gt;webhook_status&lt;/code&gt; is &lt;code&gt;skipped&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastDispatchedAt { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult WebhookResult { get; set; }
 #endif
-        /// <summary>The current webhook status.</summary>
+        /// <summary>The current webhook status. Returns &lt;code&gt;skipped&lt;/code&gt; when the enrichment request was made with &lt;code&gt;poll_only&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. Apollo doesn&apos;t attempt a webhook delivery, so the result is available only through this endpoint.</summary>
         public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookStatus? WebhookStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200Response"/> and sets the default values.
