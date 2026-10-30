@@ -55,6 +55,8 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             {
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

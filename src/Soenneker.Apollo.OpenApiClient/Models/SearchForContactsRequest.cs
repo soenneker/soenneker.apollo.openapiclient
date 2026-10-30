@@ -11,46 +11,71 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchForContactsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contact_label_ids") is { } nullNodeContactLabelIds && nullNodeContactLabelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactLabelIds = null;
+            if (parseNode.GetChildNode("contact_stage_ids") is { } nullNodeContactStageIds && nullNodeContactStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageIds = null;
+            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
+            if (parseNode.GetChildNode("q_keywords") is { } nullNodeQKeywords && nullNodeQKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QKeywords = null;
+            if (parseNode.GetChildNode("sort_ascending") is { } nullNodeSortAscending && nullNodeSortAscending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortAscending = null;
+            if (parseNode.GetChildNode("sort_by_field") is { } nullNodeSortByField && nullNodeSortByField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortByField = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Apollo IDs for the labels that you want to include in your search results. If you add multiple labels, Apollo will include all contacts connected to any of the labels, along with the other parameters, in the search results. Example: `[&apos;6095a710bd01d100a506d4ae&apos;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactLabelIds { get; set; }
+        public List<string>? ContactLabelIds { get => _explicitNullValueContactLabelIds; set { _explicitNullValueContactLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_label_ids"); else _explicitNullProperties?.Remove("contact_label_ids"); } }
+        private List<string>? _explicitNullValueContactLabelIds = default!;
 #nullable restore
 #else
-        public List<string> ContactLabelIds { get; set; }
+        public List<string> ContactLabelIds { get => _explicitNullValueContactLabelIds; set { _explicitNullValueContactLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_label_ids"); else _explicitNullProperties?.Remove("contact_label_ids"); } }
+        private List<string> _explicitNullValueContactLabelIds = default!;
 #endif
         /// <summary>The Apollo IDs for the contact stages that you want to include in your search results. If you add multiple contact stages, Apollo will include all contacts that match any of the stages, along with the other parameters, in the search results. Call the [list contact stages endpoint](https://docs.apollo.io/reference/list-contact-stages) to retrieve a list of all the contact stage IDs available in your Apollo account. Example: `6095a710bd01d100a506d4ae`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactStageIds { get; set; }
+        public List<string>? ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
+        private List<string>? _explicitNullValueContactStageIds = default!;
 #nullable restore
 #else
-        public List<string> ContactStageIds { get; set; }
+        public List<string> ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
+        private List<string> _explicitNullValueContactStageIds = default!;
 #endif
         /// <summary>The page number of the Apollo data that you want to retrieve. Use this parameter in combination with the `per_page` parameter to make search results navigable and improve the performance of the endpoint. Example: `4`</summary>
-        public int? Page { get; set; }
+        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private int? _explicitNullValuePage = default!;
         /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. Use the `page` parameter to search the different pages of data. Example: `10`</summary>
-        public int? PerPage { get; set; }
+        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
+        private int? _explicitNullValuePerPage = default!;
         /// <summary>Add a keyword search string to narrow the contacts in your team&apos;s Apollo account. Keywords should be related to the same search concept and can include names, job titles, employers or company names, or email addresses. Examples: `matthew helm`; `CEO`; `Sumware Software`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QKeywords { get; set; }
+        public string? QKeywords { get => _explicitNullValueQKeywords; set { _explicitNullValueQKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_keywords"); else _explicitNullProperties?.Remove("q_keywords"); } }
+        private string? _explicitNullValueQKeywords = default!;
 #nullable restore
 #else
-        public string QKeywords { get; set; }
+        public string QKeywords { get => _explicitNullValueQKeywords; set { _explicitNullValueQKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_keywords"); else _explicitNullProperties?.Remove("q_keywords"); } }
+        private string _explicitNullValueQKeywords = default!;
 #endif
         /// <summary>Set to `true` to sort the matching contacts in ascending order. This parameter must be used with `sort_by_field`. Otherwise, the sorting logic is not applied. Example: `true`</summary>
-        public bool? SortAscending { get; set; }
+        public bool? SortAscending { get => _explicitNullValueSortAscending; set { _explicitNullValueSortAscending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_ascending"); else _explicitNullProperties?.Remove("sort_ascending"); } }
+        private bool? _explicitNullValueSortAscending = default!;
         /// <summary>Sort the matching contacts by 1 of the following options: - `contact_last_activity_date`: The most recent activity date recorded first.- `contact_email_last_opened_at`: The most recent email opened date first.- `contact_email_last_clicked_at`: The most recent email clicked first.- `contact_created_at`: The most recently created first.- `contact_updated_at`: The most recently updated first.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SortByField { get; set; }
+        public string? SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
+        private string? _explicitNullValueSortByField = default!;
 #nullable restore
 #else
-        public string SortByField { get; set; }
+        public string SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
+        private string _explicitNullValueSortByField = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchForContactsRequest"/> and sets the default values.
@@ -68,7 +93,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchForContactsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchForContactsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchForContactsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,6 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("q_keywords", QKeywords);
             writer.WriteBoolValue("sort_ascending", SortAscending);
             writer.WriteStringValue("sort_by_field", SortByField);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

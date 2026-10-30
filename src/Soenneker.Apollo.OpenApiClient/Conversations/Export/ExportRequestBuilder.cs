@@ -70,6 +70,8 @@ namespace Soenneker.Apollo.OpenApiClient.Conversations.Export
             {
                 { "404", global::Soenneker.Apollo.OpenApiClient.Models.ExportConversations404Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.ExportConversations422Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ExportConversations200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ExportConversations200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

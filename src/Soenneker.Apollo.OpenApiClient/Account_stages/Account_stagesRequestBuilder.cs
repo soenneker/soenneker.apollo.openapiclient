@@ -55,6 +55,8 @@ namespace Soenneker.Apollo.OpenApiClient.Account_stages
             {
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

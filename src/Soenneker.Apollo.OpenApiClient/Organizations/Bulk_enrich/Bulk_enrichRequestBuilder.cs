@@ -61,6 +61,8 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Bulk_enrich
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

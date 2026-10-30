@@ -12,24 +12,37 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("tone_sample") is { } nullNodeToneSample && nullNodeToneSample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToneSample = null;
+            if (parseNode.GetChildNode("tone_type") is { } nullNodeToneType && nullNodeToneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToneType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The tone_sample property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToneSample { get; set; }
+        public string? ToneSample { get => _explicitNullValueToneSample; set { _explicitNullValueToneSample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_sample"); else _explicitNullProperties?.Remove("tone_sample"); } }
+        private string? _explicitNullValueToneSample = default!;
 #nullable restore
 #else
-        public string ToneSample { get; set; }
+        public string ToneSample { get => _explicitNullValueToneSample; set { _explicitNullValueToneSample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_sample"); else _explicitNullProperties?.Remove("tone_sample"); } }
+        private string _explicitNullValueToneSample = default!;
 #endif
         /// <summary>The tone_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToneType { get; set; }
+        public string? ToneType { get => _explicitNullValueToneType; set { _explicitNullValueToneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_type"); else _explicitNullProperties?.Remove("tone_type"); } }
+        private string? _explicitNullValueToneType = default!;
 #nullable restore
 #else
-        public string ToneType { get; set; }
+        public string ToneType { get => _explicitNullValueToneType; set { _explicitNullValueToneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_type"); else _explicitNullProperties?.Remove("tone_type"); } }
+        private string _explicitNullValueToneType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("tone_sample", ToneSample);
             writer.WriteStringValue("tone_type", ToneType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

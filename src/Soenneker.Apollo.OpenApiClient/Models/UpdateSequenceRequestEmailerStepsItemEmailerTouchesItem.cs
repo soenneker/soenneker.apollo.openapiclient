@@ -11,51 +11,75 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateSequenceRequestEmailerStepsItemEmailerTouchesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attachment_ids") is { } nullNodeAttachmentIds && nullNodeAttachmentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachmentIds = null;
+            if (parseNode.GetChildNode("emailer_template") is { } nullNodeEmailerTemplate && nullNodeEmailerTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerTemplate = null;
+            if (parseNode.GetChildNode("generation_options") is { } nullNodeGenerationOptions && nullNodeGenerationOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerationOptions = null;
+            if (parseNode.GetChildNode("generation_tone") is { } nullNodeGenerationTone && nullNodeGenerationTone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerationTone = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>IDs of attachments to include with this touch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AttachmentIds { get; set; }
+        public List<string>? AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
+        private List<string>? _explicitNullValueAttachmentIds = default!;
 #nullable restore
 #else
-        public List<string> AttachmentIds { get; set; }
+        public List<string> AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
+        private List<string> _explicitNullValueAttachmentIds = default!;
 #endif
         /// <summary>The email template content for this touch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate? EmailerTemplate { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate? EmailerTemplate { get => _explicitNullValueEmailerTemplate; set { _explicitNullValueEmailerTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template"); else _explicitNullProperties?.Remove("emailer_template"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate? _explicitNullValueEmailerTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate EmailerTemplate { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate EmailerTemplate { get => _explicitNullValueEmailerTemplate; set { _explicitNullValueEmailerTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template"); else _explicitNullProperties?.Remove("emailer_template"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate _explicitNullValueEmailerTemplate = default!;
 #endif
         /// <summary>AI generation options used to compose the touch content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationOptionsItem>? GenerationOptions { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationOptionsItem>? GenerationOptions { get => _explicitNullValueGenerationOptions; set { _explicitNullValueGenerationOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generation_options"); else _explicitNullProperties?.Remove("generation_options"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationOptionsItem>? _explicitNullValueGenerationOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationOptionsItem> GenerationOptions { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationOptionsItem> GenerationOptions { get => _explicitNullValueGenerationOptions; set { _explicitNullValueGenerationOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generation_options"); else _explicitNullProperties?.Remove("generation_options"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationOptionsItem> _explicitNullValueGenerationOptions = default!;
 #endif
         /// <summary>The tone to apply when generating the touch content with AI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone? GenerationTone { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone? GenerationTone { get => _explicitNullValueGenerationTone; set { _explicitNullValueGenerationTone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generation_tone"); else _explicitNullProperties?.Remove("generation_tone"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone? _explicitNullValueGenerationTone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone GenerationTone { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone GenerationTone { get => _explicitNullValueGenerationTone; set { _explicitNullValueGenerationTone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generation_tone"); else _explicitNullProperties?.Remove("generation_tone"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone _explicitNullValueGenerationTone = default!;
 #endif
         /// <summary>The Apollo ID of an existing touch to update. Omit to create a new touch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The review status of the touch. Set to `approved` to enable the touch (the template must have a non-empty body).</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemStatus? Status { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItem"/> and sets the default values.
         /// </summary>
@@ -71,7 +95,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemGenerationTone>("generation_tone", GenerationTone);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestEmailerStepsItemEmailerTouchesItemStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

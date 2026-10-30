@@ -11,24 +11,37 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetOrganizationsId200ResponseOrganizationEmployeeMetricsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("departments") is { } nullNodeDepartments && nullNodeDepartments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Departments = null;
+            if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The departments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem>? Departments { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem>? Departments { get => _explicitNullValueDepartments; set { _explicitNullValueDepartments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departments"); else _explicitNullProperties?.Remove("departments"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem>? _explicitNullValueDepartments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem> Departments { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem> Departments { get => _explicitNullValueDepartments; set { _explicitNullValueDepartments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departments"); else _explicitNullProperties?.Remove("departments"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem> _explicitNullValueDepartments = default!;
 #endif
         /// <summary>The start_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDate { get; set; }
+        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private string? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public string StartDate { get; set; }
+        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private string _explicitNullValueStartDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItem"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationEmployeeMetricsItemDepartmentsItem>("departments", Departments);
             writer.WriteStringValue("start_date", StartDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

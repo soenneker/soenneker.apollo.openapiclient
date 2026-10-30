@@ -11,18 +11,30 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SyncReportRequestSortsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("asc") is { } nullNodeAsc && nullNodeAsc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Asc = null;
+            if (parseNode.GetChildNode("metric") is { } nullNodeMetric && nullNodeMetric.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metric = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sort ascending (&lt;code&gt;true&lt;/code&gt;) or descending (&lt;code&gt;false&lt;/code&gt;).</summary>
-        public bool? Asc { get; set; }
+        public bool? Asc { get => _explicitNullValueAsc; set { _explicitNullValueAsc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asc"); else _explicitNullProperties?.Remove("asc"); } }
+        private bool? _explicitNullValueAsc = default!;
         /// <summary>Sort by a metric column. Provide the same structure as a metric entry in the &lt;code&gt;metrics&lt;/code&gt; array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric? Metric { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric? Metric { get => _explicitNullValueMetric; set { _explicitNullValueMetric = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric"); else _explicitNullProperties?.Remove("metric"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric? _explicitNullValueMetric = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric Metric { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric Metric { get => _explicitNullValueMetric; set { _explicitNullValueMetric = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric"); else _explicitNullProperties?.Remove("metric"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric _explicitNullValueMetric = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("asc", Asc);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric>("metric", Metric);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

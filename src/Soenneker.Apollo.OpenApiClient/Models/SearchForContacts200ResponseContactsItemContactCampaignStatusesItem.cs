@@ -12,120 +12,179 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchForContacts200ResponseContactsItemContactCampaignStatusesItem : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("added_at") is { } nullNodeAddedAt && nullNodeAddedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedAt = null;
+            if (parseNode.GetChildNode("added_by_user_id") is { } nullNodeAddedByUserId && nullNodeAddedByUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedByUserId = null;
+            if (parseNode.GetChildNode("auto_unpause_at") is { } nullNodeAutoUnpauseAt && nullNodeAutoUnpauseAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoUnpauseAt = null;
+            if (parseNode.GetChildNode("bcc_emails") is { } nullNodeBccEmails && nullNodeBccEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BccEmails = null;
+            if (parseNode.GetChildNode("cc_emails") is { } nullNodeCcEmails && nullNodeCcEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcEmails = null;
+            if (parseNode.GetChildNode("current_step_id") is { } nullNodeCurrentStepId && nullNodeCurrentStepId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStepId = null;
+            if (parseNode.GetChildNode("current_step_position") is { } nullNodeCurrentStepPosition && nullNodeCurrentStepPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStepPosition = null;
+            if (parseNode.GetChildNode("emailer_campaign_id") is { } nullNodeEmailerCampaignId && nullNodeEmailerCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerCampaignId = null;
+            if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
+            if (parseNode.GetChildNode("finished_at") is { } nullNodeFinishedAt && nullNodeFinishedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinishedAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inactive_reason") is { } nullNodeInactiveReason && nullNodeInactiveReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InactiveReason = null;
+            if (parseNode.GetChildNode("in_response_to_emailer_message_id") is { } nullNodeInResponseToEmailerMessageId && nullNodeInResponseToEmailerMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InResponseToEmailerMessageId = null;
+            if (parseNode.GetChildNode("manually_set_unpause") is { } nullNodeManuallySetUnpause && nullNodeManuallySetUnpause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManuallySetUnpause = null;
+            if (parseNode.GetChildNode("paused_at") is { } nullNodePausedAt && nullNodePausedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PausedAt = null;
+            if (parseNode.GetChildNode("send_email_from_email_account_id") is { } nullNodeSendEmailFromEmailAccountId && nullNodeSendEmailFromEmailAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmailFromEmailAccountId = null;
+            if (parseNode.GetChildNode("send_email_from_email_address") is { } nullNodeSendEmailFromEmailAddress && nullNodeSendEmailFromEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmailFromEmailAddress = null;
+            if (parseNode.GetChildNode("send_email_from_user_id") is { } nullNodeSendEmailFromUserId && nullNodeSendEmailFromUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmailFromUserId = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("to_emails") is { } nullNodeToEmails && nullNodeToEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToEmails = null;
+        }
+
         /// <summary>Timestamp when the contact was added to this sequence</summary>
-        public DateTimeOffset? AddedAt { get; set; }
+        public DateTimeOffset? AddedAt { get => _explicitNullValueAddedAt; set { _explicitNullValueAddedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_at"); else _explicitNullProperties?.Remove("added_at"); } }
+        private DateTimeOffset? _explicitNullValueAddedAt = default!;
         /// <summary>ID of the user who added this contact to the sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddedByUserId { get; set; }
+        public string? AddedByUserId { get => _explicitNullValueAddedByUserId; set { _explicitNullValueAddedByUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_by_user_id"); else _explicitNullProperties?.Remove("added_by_user_id"); } }
+        private string? _explicitNullValueAddedByUserId = default!;
 #nullable restore
 #else
-        public string AddedByUserId { get; set; }
+        public string AddedByUserId { get => _explicitNullValueAddedByUserId; set { _explicitNullValueAddedByUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_by_user_id"); else _explicitNullProperties?.Remove("added_by_user_id"); } }
+        private string _explicitNullValueAddedByUserId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Scheduled timestamp for automatically unpausing the contact</summary>
-        public DateTimeOffset? AutoUnpauseAt { get; set; }
+        public DateTimeOffset? AutoUnpauseAt { get => _explicitNullValueAutoUnpauseAt; set { _explicitNullValueAutoUnpauseAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_unpause_at"); else _explicitNullProperties?.Remove("auto_unpause_at"); } }
+        private DateTimeOffset? _explicitNullValueAutoUnpauseAt = default!;
         /// <summary>Email addresses to BCC when sending emails to this contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BccEmails { get; set; }
+        public List<string>? BccEmails { get => _explicitNullValueBccEmails; set { _explicitNullValueBccEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bcc_emails"); else _explicitNullProperties?.Remove("bcc_emails"); } }
+        private List<string>? _explicitNullValueBccEmails = default!;
 #nullable restore
 #else
-        public List<string> BccEmails { get; set; }
+        public List<string> BccEmails { get => _explicitNullValueBccEmails; set { _explicitNullValueBccEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bcc_emails"); else _explicitNullProperties?.Remove("bcc_emails"); } }
+        private List<string> _explicitNullValueBccEmails = default!;
 #endif
         /// <summary>Email addresses to CC when sending emails to this contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CcEmails { get; set; }
+        public List<string>? CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_emails"); else _explicitNullProperties?.Remove("cc_emails"); } }
+        private List<string>? _explicitNullValueCcEmails = default!;
 #nullable restore
 #else
-        public List<string> CcEmails { get; set; }
+        public List<string> CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_emails"); else _explicitNullProperties?.Remove("cc_emails"); } }
+        private List<string> _explicitNullValueCcEmails = default!;
 #endif
         /// <summary>ID of the current step in the sequence that the contact is on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrentStepId { get; set; }
+        public string? CurrentStepId { get => _explicitNullValueCurrentStepId; set { _explicitNullValueCurrentStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_step_id"); else _explicitNullProperties?.Remove("current_step_id"); } }
+        private string? _explicitNullValueCurrentStepId = default!;
 #nullable restore
 #else
-        public string CurrentStepId { get; set; }
+        public string CurrentStepId { get => _explicitNullValueCurrentStepId; set { _explicitNullValueCurrentStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_step_id"); else _explicitNullProperties?.Remove("current_step_id"); } }
+        private string _explicitNullValueCurrentStepId = default!;
 #endif
         /// <summary>Position number of the current step in the sequence (1-based indexing)</summary>
-        public int? CurrentStepPosition { get; set; }
+        public int? CurrentStepPosition { get => _explicitNullValueCurrentStepPosition; set { _explicitNullValueCurrentStepPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_step_position"); else _explicitNullProperties?.Remove("current_step_position"); } }
+        private int? _explicitNullValueCurrentStepPosition = default!;
         /// <summary>ID of the email sequence (emailer campaign) this status belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailerCampaignId { get; set; }
+        public string? EmailerCampaignId { get => _explicitNullValueEmailerCampaignId; set { _explicitNullValueEmailerCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign_id"); else _explicitNullProperties?.Remove("emailer_campaign_id"); } }
+        private string? _explicitNullValueEmailerCampaignId = default!;
 #nullable restore
 #else
-        public string EmailerCampaignId { get; set; }
+        public string EmailerCampaignId { get => _explicitNullValueEmailerCampaignId; set { _explicitNullValueEmailerCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign_id"); else _explicitNullProperties?.Remove("emailer_campaign_id"); } }
+        private string _explicitNullValueEmailerCampaignId = default!;
 #endif
         /// <summary>Specific reason for failure if status is &apos;failed&apos;</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemFailureReason? FailureReason { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemFailureReason? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemFailureReason? _explicitNullValueFailureReason = default!;
         /// <summary>Timestamp when the contact finished/completed the sequence</summary>
-        public DateTimeOffset? FinishedAt { get; set; }
+        public DateTimeOffset? FinishedAt { get => _explicitNullValueFinishedAt; set { _explicitNullValueFinishedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finished_at"); else _explicitNullProperties?.Remove("finished_at"); } }
+        private DateTimeOffset? _explicitNullValueFinishedAt = default!;
         /// <summary>Unique identifier for this contact campaign status record</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Reason why the contact is inactive in this sequence, if applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InactiveReason { get; set; }
+        public string? InactiveReason { get => _explicitNullValueInactiveReason; set { _explicitNullValueInactiveReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_reason"); else _explicitNullProperties?.Remove("inactive_reason"); } }
+        private string? _explicitNullValueInactiveReason = default!;
 #nullable restore
 #else
-        public string InactiveReason { get; set; }
+        public string InactiveReason { get => _explicitNullValueInactiveReason; set { _explicitNullValueInactiveReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_reason"); else _explicitNullProperties?.Remove("inactive_reason"); } }
+        private string _explicitNullValueInactiveReason = default!;
 #endif
         /// <summary>ID of the emailer message this campaign status is in response to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InResponseToEmailerMessageId { get; set; }
+        public string? InResponseToEmailerMessageId { get => _explicitNullValueInResponseToEmailerMessageId; set { _explicitNullValueInResponseToEmailerMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_response_to_emailer_message_id"); else _explicitNullProperties?.Remove("in_response_to_emailer_message_id"); } }
+        private string? _explicitNullValueInResponseToEmailerMessageId = default!;
 #nullable restore
 #else
-        public string InResponseToEmailerMessageId { get; set; }
+        public string InResponseToEmailerMessageId { get => _explicitNullValueInResponseToEmailerMessageId; set { _explicitNullValueInResponseToEmailerMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_response_to_emailer_message_id"); else _explicitNullProperties?.Remove("in_response_to_emailer_message_id"); } }
+        private string _explicitNullValueInResponseToEmailerMessageId = default!;
 #endif
         /// <summary>Whether the unpause was manually set by a user</summary>
-        public bool? ManuallySetUnpause { get; set; }
+        public bool? ManuallySetUnpause { get => _explicitNullValueManuallySetUnpause; set { _explicitNullValueManuallySetUnpause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manually_set_unpause"); else _explicitNullProperties?.Remove("manually_set_unpause"); } }
+        private bool? _explicitNullValueManuallySetUnpause = default!;
         /// <summary>Timestamp when the contact was paused in the sequence</summary>
-        public DateTimeOffset? PausedAt { get; set; }
+        public DateTimeOffset? PausedAt { get => _explicitNullValuePausedAt; set { _explicitNullValuePausedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused_at"); else _explicitNullProperties?.Remove("paused_at"); } }
+        private DateTimeOffset? _explicitNullValuePausedAt = default!;
         /// <summary>ID of the email account used to send emails to this contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SendEmailFromEmailAccountId { get; set; }
+        public string? SendEmailFromEmailAccountId { get => _explicitNullValueSendEmailFromEmailAccountId; set { _explicitNullValueSendEmailFromEmailAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email_from_email_account_id"); else _explicitNullProperties?.Remove("send_email_from_email_account_id"); } }
+        private string? _explicitNullValueSendEmailFromEmailAccountId = default!;
 #nullable restore
 #else
-        public string SendEmailFromEmailAccountId { get; set; }
+        public string SendEmailFromEmailAccountId { get => _explicitNullValueSendEmailFromEmailAccountId; set { _explicitNullValueSendEmailFromEmailAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email_from_email_account_id"); else _explicitNullProperties?.Remove("send_email_from_email_account_id"); } }
+        private string _explicitNullValueSendEmailFromEmailAccountId = default!;
 #endif
         /// <summary>Specific email address used to send emails to this contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SendEmailFromEmailAddress { get; set; }
+        public string? SendEmailFromEmailAddress { get => _explicitNullValueSendEmailFromEmailAddress; set { _explicitNullValueSendEmailFromEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email_from_email_address"); else _explicitNullProperties?.Remove("send_email_from_email_address"); } }
+        private string? _explicitNullValueSendEmailFromEmailAddress = default!;
 #nullable restore
 #else
-        public string SendEmailFromEmailAddress { get; set; }
+        public string SendEmailFromEmailAddress { get => _explicitNullValueSendEmailFromEmailAddress; set { _explicitNullValueSendEmailFromEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email_from_email_address"); else _explicitNullProperties?.Remove("send_email_from_email_address"); } }
+        private string _explicitNullValueSendEmailFromEmailAddress = default!;
 #endif
         /// <summary>ID of the user who is sending emails for this contact in the sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SendEmailFromUserId { get; set; }
+        public string? SendEmailFromUserId { get => _explicitNullValueSendEmailFromUserId; set { _explicitNullValueSendEmailFromUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email_from_user_id"); else _explicitNullProperties?.Remove("send_email_from_user_id"); } }
+        private string? _explicitNullValueSendEmailFromUserId = default!;
 #nullable restore
 #else
-        public string SendEmailFromUserId { get; set; }
+        public string SendEmailFromUserId { get => _explicitNullValueSendEmailFromUserId; set { _explicitNullValueSendEmailFromUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email_from_user_id"); else _explicitNullProperties?.Remove("send_email_from_user_id"); } }
+        private string _explicitNullValueSendEmailFromUserId = default!;
 #endif
         /// <summary>Current status of the contact in this email sequence</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemStatus? Status { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemStatus? _explicitNullValueStatus = default!;
         /// <summary>Additional email addresses to include in TO field when sending emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ToEmails { get; set; }
+        public List<string>? ToEmails { get => _explicitNullValueToEmails; set { _explicitNullValueToEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_emails"); else _explicitNullProperties?.Remove("to_emails"); } }
+        private List<string>? _explicitNullValueToEmails = default!;
 #nullable restore
 #else
-        public List<string> ToEmails { get; set; }
+        public List<string> ToEmails { get => _explicitNullValueToEmails; set { _explicitNullValueToEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_emails"); else _explicitNullProperties?.Remove("to_emails"); } }
+        private List<string> _explicitNullValueToEmails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItem"/> and sets the default values.
@@ -142,7 +201,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -201,6 +260,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("send_email_from_user_id", SendEmailFromUserId);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200ResponseContactsItemContactCampaignStatusesItemStatus>("status", Status);
             writer.WriteCollectionOfPrimitiveValues<string>("to_emails", ToEmails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

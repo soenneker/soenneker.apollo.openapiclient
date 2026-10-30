@@ -55,6 +55,8 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Update_owners
             {
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactOwnership422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactOwnership429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactOwnership200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactOwnership200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

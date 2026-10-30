@@ -7838,6 +7838,335 @@
         }
       }
     },
+    "/contacts/{contactId}/find_potential_duplicate": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "summary": "Find a potential duplicate contact",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/contacts/find_potential_duplicate\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060contacts_deduplicate\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/5995459280525-View-and-Edit-Contacts\u0022 target=\u0022_blank\u0022\u003EContacts\u003C/a\u003E are people saved in Apollo.\u003Cbr\u003E\u003Cbr\u003EUse the find a potential duplicate contact endpoint to check whether a contact in your team\u0027s Apollo workspace has a likely duplicate. Pass one contact ID in the path. To find contact IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/search-for-contacts\u0022\u003Esearch for contacts\u003C/a\u003E endpoint.\u003Cbr\u003E\u003Cbr\u003EThis endpoint only reads data. It doesn\u0027t change, merge, or delete either contact.\n\n### What the response contains\n\n* **A match:** \u0060contacts\u0060 holds exactly two objects. The first is the contact you sent, reduced to its \u0060id\u0060 and the \u0060duplicate_contact_id\u0060. The second is the suggested duplicate\u0027s contact record. It has the contact fields of \u003Ca href=\u0022https://docs.apollo.io/reference/view-a-contact\u0022\u003Eview a contact\u003C/a\u003E, but not the nested \u0060account\u0060 or \u0060employment_history\u0060. To get those, call view a contact with \u0060duplicate_contact_id\u0060.\n* **No match:** the body is an empty object, \u0060{}\u0060.\n* **An unusable ID:** \u0060404\u0060 when the ID doesn\u0027t belong to a contact in your workspace or the contact has been deleted, and \u0060422\u0060 when the ID isn\u0027t a valid Apollo ID.\n\n### How Apollo picks the match\n\nApollo compares the contact you send with the other contacts in your workspace. It checks these signals in order and returns the first contact that matches:\n\n1. **Apollo person:** both contacts are linked to the same person in Apollo\u0027s database.\n2. **Email:** the email of the contact you sent is the other contact\u0027s verified primary email or one of its additional emails. If the contact you sent is linked to an Apollo person, contacts linked to a different person are skipped.\n3. **Salesforce ID:** the same Salesforce contact ID or lead ID, including IDs the other contact kept from an earlier merge.\n4. **LinkedIn profile:** the same LinkedIn profile.\n5. **Name and company:** the same first and last name at the same company. Apollo matches the company on Apollo organization, then company name, then company domain. Free email domains such as gmail.com don\u0027t count as a company domain.\n\nApollo never returns deleted contacts, or contacts that exist only from an email import.\n\n### One match per request\n\nEach request checks one contact and returns at most one duplicate, so checking 500 contacts takes 500 requests. When a contact has several copies, every call returns the same match until that copy is merged or deleted. To find every copy:\n\n1. Call this endpoint for the contact.\n2. If the two contacts are different people, don\u0027t merge. This endpoint keeps returning that contact, so move on to the next contact.\n3. In Apollo, \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/4413326420621-Merge-Duplicate-Records-to-Consolidate-Your-Data\u0022 target=\u0022_blank\u0022\u003Emerge the returned duplicate\u003C/a\u003E into the contact you keep.\n4. Call this endpoint again for the surviving contact.\n5. Repeat until the response is \u0060{}\u0060.\n\n\u003Cb\u003EReview the pair before you merge.\u003C/b\u003E A match is a suggestion, not a verdict: a name-and-company match can be a different person with the same name. Merging permanently deletes the duplicate and can\u0027t be undone, so compare both contacts first.",
+        "operationId": "FindPotentialDuplicateContact",
+        "parameters": [
+          {
+            "name": "contactId",
+            "in": "path",
+            "description": "The Apollo ID for the contact that you want to check for a duplicate. \u003Cbr\u003E\u003Cbr\u003ETo find contact IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/search-for-contacts\u0022\u003Esearch for contacts endpoint\u003C/a\u003E and identify the \u0060id\u0060 value for the contact. \u003Cbr\u003E\u003Cbr\u003EExample: \u006066e34b81740c50074e3d1bd4\u0060",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPotentialDuplicateContact200Response"
+                },
+                "examples": {
+                  "Duplicate found": {
+                    "value": {
+                      "contacts": [
+                        {
+                          "id": "66e34b81740c50074e3d1bd4",
+                          "duplicate_contact_id": "66e34b81740c50074e3d1bd5"
+                        },
+                        {
+                          "contact_roles": [],
+                          "id": "66e34b81740c50074e3d1bd5",
+                          "first_name": "Jane",
+                          "last_name": "Doe",
+                          "name": "Jane Doe",
+                          "linkedin_url": "https://www.linkedin.com/in/jane-doe",
+                          "title": "VP Sales",
+                          "contact_stage_id": "6095a710bd01d100a506d4ae",
+                          "owner_id": "60affe7d6e270a00f5db6fe4",
+                          "creator_id": "60affe7d6e270a00f5db6fe4",
+                          "person_id": null,
+                          "email_needs_tickling": null,
+                          "organization_name": "Acme",
+                          "source": "api",
+                          "original_source": "api",
+                          "organization_id": "5e66b6381e05b4008c8331b8",
+                          "headline": null,
+                          "photo_url": null,
+                          "present_raw_address": "St. Petersburg, Russia",
+                          "linkedin_uid": null,
+                          "extrapolated_email_confidence": null,
+                          "salesforce_id": null,
+                          "salesforce_lead_id": null,
+                          "salesforce_contact_id": null,
+                          "salesforce_account_id": null,
+                          "crm_owner_id": null,
+                          "created_at": "2024-09-12T20:13:53.207Z",
+                          "emailer_campaign_ids": [],
+                          "direct_dial_status": null,
+                          "direct_dial_enrichment_failed_at": null,
+                          "email_status": "verified",
+                          "email_source": null,
+                          "account_id": "63f53afe4ceeca00016bdd2f",
+                          "last_activity_date": null,
+                          "hubspot_vid": null,
+                          "hubspot_company_id": null,
+                          "crm_id": null,
+                          "sanitized_phone": "\u002B15555550117",
+                          "merged_crm_ids": null,
+                          "updated_at": "2024-09-12T20:14:53.134Z",
+                          "queued_for_crm_push": false,
+                          "suggested_from_rule_engine_config_id": null,
+                          "email_unsubscribed": null,
+                          "label_ids": [
+                            "66e361494acd1307386d4073"
+                          ],
+                          "typed_custom_fields": {
+                            "5b75f1c11dc2727d43ae3bb9": "test",
+                            "5c4296857f799409361890ea": "test2"
+                          },
+                          "has_pending_email_arcgate_request": false,
+                          "has_email_arcgate_request": false,
+                          "existence_level": "full",
+                          "email": "jane.doe@example.com",
+                          "email_from_customer": true,
+                          "custom_field_errors": {},
+                          "crm_record_url": null,
+                          "email_status_unavailable_reason": null,
+                          "email_true_status": "User Managed",
+                          "updated_email_true_status": true,
+                          "contact_rule_config_statuses": [],
+                          "source_display_name": "Created from API",
+                          "twitter_url": null,
+                          "contact_emails": [],
+                          "next_contact_id": null,
+                          "time_zone": "Asia/Krasnoyarsk",
+                          "city": "Saint Petersburg",
+                          "state": "Saint Petersburg",
+                          "country": "Russia",
+                          "show_intent": false,
+                          "phone_numbers": [
+                            {
+                              "raw_number": "555-555-0117",
+                              "sanitized_number": "\u002B15555550117",
+                              "type": "work_direct",
+                              "position": 0,
+                              "status": "no_status",
+                              "dnc_status": null,
+                              "dnc_other_info": null,
+                              "dialer_flags": null
+                            }
+                          ],
+                          "account_phone_note": null,
+                          "free_domain": false,
+                          "is_likely_to_engage": false,
+                          "email_domain_catchall": false
+                        }
+                      ]
+                    }
+                  },
+                  "No duplicate": {
+                    "value": {}
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPotentialDuplicateContact401Response"
+                },
+                "examples": {
+                  "Invalid API key": {
+                    "value": {
+                      "error": "Invalid API key. See https://docs.apollo.io/reference/authentication for how to authenticate.",
+                      "error_details": {
+                        "code": "AUTH.AUTHENTICATION.API_KEY_INVALID",
+                        "message": "This API key is not valid.",
+                        "suggestions": [
+                          {
+                            "label": "Send a valid API key in the X-Api-Key header",
+                            "header": "X-Api-Key"
+                          },
+                          {
+                            "label": "Check how to create and send an Apollo API key",
+                            "url": "https://docs.apollo.io/reference/authentication"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  },
+                  "No credentials": {
+                    "value": {
+                      "error": "Invalid access credentials.",
+                      "error_details": {
+                        "code": "AUTH.AUTHENTICATION.CREDENTIALS_MISSING",
+                        "message": "This request carried no credential Apollo could authenticate.",
+                        "suggestions": [
+                          {
+                            "label": "Send your API key in the X-Api-Key header",
+                            "header": "X-Api-Key"
+                          },
+                          {
+                            "label": "Check how to authenticate against the Apollo API",
+                            "url": "https://docs.apollo.io/reference/authentication"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPotentialDuplicateContact403Response"
+                },
+                "examples": {
+                  "API key without this endpoint": {
+                    "value": {
+                      "error": "This API key is not authorized to access api/v1/contacts/find_potential_duplicate. Request an API key from your administrator that includes this endpoint in its configured scope.",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_ACCESS_DENIED",
+                        "message": "Your team is not permitted to call this endpoint.",
+                        "suggestions": [
+                          {
+                            "label": "Contact support@apollo.io if you need access to this endpoint",
+                            "url": "https://knowledge.apollo.io"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/contacts/find_potential_duplicate",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Access token without the contacts_deduplicate scope": {
+                    "value": {
+                      "error": "api/v1/contacts/find_potential_duplicate is not accessible with this access token",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_SCOPE_NOT_GRANTED",
+                        "message": "This access token does not carry the scope this endpoint needs.",
+                        "suggestions": [
+                          {
+                            "label": "Re-authorize requesting the scope this endpoint needs"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/contacts/find_potential_duplicate",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "404",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPotentialDuplicateContact404Response"
+                },
+                "examples": {
+                  "Contact not found": {
+                    "value": {
+                      "error": "No contact with this ID exists in your workspace.",
+                      "error_details": {
+                        "code": "CRM.NOT_FOUND.CONTACT_NOT_FOUND",
+                        "message": "No contact with this ID exists in your workspace.",
+                        "suggestions": [
+                          {
+                            "label": "Find the contact ID with the search for contacts endpoint",
+                            "url": "https://docs.apollo.io/reference/search-for-contacts"
+                          }
+                        ],
+                        "context": {
+                          "contact_id": {
+                            "value": "66e34b81740c50074e3d1bd9",
+                            "description": "The contact ID from the request path"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "422",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPotentialDuplicateContact422Response"
+                },
+                "examples": {
+                  "Malformed contact ID": {
+                    "value": {
+                      "error": "Parameters misconfigured. not-an-id is not a valid ID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPotentialDuplicateContact429Response"
+                },
+                "examples": {
+                  "Too many requests": {
+                    "value": {
+                      "message": "The maximum number of api calls allowed for api/v1/contacts/find_potential_duplicate is 600 times per hour. Please upgrade your plan from https://app.apollo.io/#/settings/plans/upgrade.",
+                      "error_details": {
+                        "code": "USAGE.RATE_LIMIT.API_RATE_LIMIT_EXCEEDED",
+                        "message": "You have made more API requests than your plan allows in this time window.",
+                        "suggestions": [
+                          {
+                            "label": "Wait until the rate limit resets, then retry the API request."
+                          },
+                          {
+                            "label": "Check the Apollo Docs to understand API rate limits and how to use response headers to prevent rate-limit errors.",
+                            "url": "https://docs.apollo.io/reference/rate-limits"
+                          }
+                        ],
+                        "context": {
+                          "window": {
+                            "value": "hour",
+                            "description": "The rate limit window that was exhausted, such as \u0022minute\u0022 or \u0022hour\u0022"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/contacts/{contactId}/opportunities": {
       "post": {
         "tags": [
@@ -9246,7 +9575,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListAllDeals403Response"
+                  "$ref": "#/components/schemas/ListAllDeals403ResponseError"
                 },
                 "examples": {
                   "Need master API key": {
@@ -9796,7 +10125,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchForSequences403Response"
+                  "$ref": "#/components/schemas/SearchForSequences403ResponseError"
                 },
                 "examples": {
                   "Need master API key": {
@@ -13545,7 +13874,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchTasks403Response"
+                  "$ref": "#/components/schemas/SearchTasks403ResponseError"
                 },
                 "examples": {
                   "Need master API key": {
@@ -14270,7 +14599,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetAListOfUsers403Response"
+                  "$ref": "#/components/schemas/GetAListOfUsers403ResponseError"
                 },
                 "examples": {
                   "Need master API key": {
@@ -24740,6 +25069,31 @@
       "ViewAContact401Response": {
         "type": "string"
       },
+      "FindPotentialDuplicateContact200Response": {
+        "type": "object",
+        "properties": {
+          "contacts": {
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FindPotentialDuplicateContact200ResponseContactsItem"
+            },
+            "description": "Present only when Apollo found a match: the contact you sent, reduced to its \u0060id\u0060 and the \u0060duplicate_contact_id\u0060, followed by the suggested duplicate\u0027s contact record. It has the contact fields of view a contact, but not the nested \u0060account\u0060 or \u0060employment_history\u0060. To get those, call view a contact with \u0060duplicate_contact_id\u0060. Never more than one duplicate per request; the same match is returned until it is merged or deleted. It is a suggestion, not a verdict, so review it before merging."
+          }
+        },
+        "description": "An empty object when Apollo finds no match. Otherwise \u0060contacts\u0060 holds exactly two entries."
+      },
+      "FindPotentialDuplicateContact422Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Parameters misconfigured. not-an-id is not a valid ID"
+          }
+        },
+        "description": "Returned when the path ID is not a valid Apollo ID."
+      },
       "ViewAssociatedDealsRequest": {
         "type": "object"
       },
@@ -28119,6 +28473,69 @@
           }
         }
       },
+      "FindPotentialDuplicateContact401Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "FindPotentialDuplicateContact403Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          },
+          "error_code": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "FindPotentialDuplicateContact404Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "example": "No contact with this ID exists in your workspace.",
+            "deprecated": true
+          }
+        },
+        "description": "Returned when the ID doesn\u0027t belong to a contact in your workspace, or the contact has been deleted."
+      },
+      "FindPotentialDuplicateContact429Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "message": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
       "ViewAssociatedDealsRequestRequestBody": {
         "type": "object"
       },
@@ -30139,6 +30556,16 @@
           }
         }
       },
+      "FindPotentialDuplicateContact200ResponseContactsItem": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/FindPotentialDuplicateContact200ResponseContactsItemTheContactYouSent"
+          },
+          {
+            "$ref": "#/components/schemas/FindPotentialDuplicateContact200ResponseContactsItemTheSuggestedDuplicate"
+          }
+        ]
+      },
       "BulkUpdateContacts200ResponseOneOf1": {
         "type": "object",
         "properties": {
@@ -30452,6 +30879,95 @@
           },
           "[\u0022api/v1/people\u0022, \u0022match\u0022]": {
             "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatch"
+          }
+        }
+      },
+      "FindPotentialDuplicateContact200ResponseContactsItemTheContactYouSent": {
+        "title": "The contact you sent",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The contact ID you passed in the path.",
+            "example": "66e34b81740c50074e3d1bd4"
+          },
+          "duplicate_contact_id": {
+            "type": "string",
+            "description": "The ID of the suggested duplicate, which is the next entry in the array.",
+            "example": "66e34b81740c50074e3d1bd5"
+          }
+        }
+      },
+      "FindPotentialDuplicateContact200ResponseContactsItemTheSuggestedDuplicate": {
+        "title": "The suggested duplicate",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "66e34b81740c50074e3d1bd4"
+          },
+          "first_name": {
+            "type": "string",
+            "example": "John"
+          },
+          "last_name": {
+            "type": "string",
+            "example": "Doe"
+          },
+          "name": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "email": {
+            "type": "string",
+            "example": "john.doe@example.com"
+          },
+          "title": {
+            "type": "string",
+            "example": "VP of Sales"
+          },
+          "organization_name": {
+            "type": "string",
+            "example": "Acme Corp"
+          },
+          "account_id": {
+            "type": "string",
+            "example": "63f53afe4ceeca00016bdd2f"
+          },
+          "owner_id": {
+            "type": "string",
+            "example": "66302798d03b9601c7934ebf"
+          },
+          "contact_stage_id": {
+            "type": "string",
+            "example": "6095a710bd01d100a506d4ae"
+          },
+          "linkedin_url": {
+            "type": "string",
+            "example": "https://linkedin.com/in/john-doe-3f9a7c21"
+          },
+          "phone_numbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FindPotentialDuplicateContact200ResponseContactsItemTheSuggestedDuplicatePhoneNumbersItem"
+            }
+          },
+          "typed_custom_fields": {
+            "$ref": "#/components/schemas/FindPotentialDuplicateContact200ResponseContactsItemTheSuggestedDuplicateTypedCustomFields"
+          },
+          "label_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "created_at": {
+            "type": "string",
+            "example": "2023-01-01T00:00:00.000Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "example": "2023-01-02T00:00:00.000Z"
           }
         }
       },
@@ -40152,6 +40668,26 @@
           "minute": {
             "$ref": "#/components/schemas/PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute"
           }
+        }
+      },
+      "FindPotentialDuplicateContact200ResponseContactsItemTheSuggestedDuplicatePhoneNumbersItem": {
+        "type": "object",
+        "properties": {
+          "raw_number": {
+            "type": "string"
+          },
+          "sanitized_number": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "FindPotentialDuplicateContact200ResponseContactsItemTheSuggestedDuplicateTypedCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
         }
       },
       "PeopleEnrichment200ResponsePersonEmploymentHistoryItem": {
@@ -51097,6 +51633,86 @@
               "name": "Desc"
             }
           ]
+        }
+      },
+      "ListAllDeals403ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "This API key is not authorized to access deals/api/v1/opportunities/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+          },
+          "error_code": {
+            "type": "string",
+            "example": "API_INACCESSIBLE"
+          },
+          "message": {
+            "type": "string",
+            "example": "This endpoint is only available to Apollo users on paid plans."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListAllDeals403Response"
+        }
+      },
+      "SearchForSequences403ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "This API key is not authorized to access api/v1/emailer_campaigns/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+          },
+          "error_code": {
+            "type": "string",
+            "example": "API_INACCESSIBLE"
+          },
+          "message": {
+            "type": "string",
+            "example": "This endpoint is only available to Apollo users on paid plans."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/SearchForSequences403Response"
+        }
+      },
+      "SearchTasks403ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "This API key is not authorized to access api/v1/tasks/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+          },
+          "error_code": {
+            "type": "string",
+            "example": "API_INACCESSIBLE"
+          },
+          "message": {
+            "type": "string",
+            "example": "This endpoint is only available to Apollo users on paid plans."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/SearchTasks403Response"
+        }
+      },
+      "GetAListOfUsers403ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "This API key is not authorized to access api/v1/users/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+          },
+          "error_code": {
+            "type": "string",
+            "example": "API_INACCESSIBLE"
+          },
+          "message": {
+            "type": "string",
+            "example": "This endpoint is only available to Apollo users on paid plans."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetAListOfUsers403Response"
         }
       }
     },

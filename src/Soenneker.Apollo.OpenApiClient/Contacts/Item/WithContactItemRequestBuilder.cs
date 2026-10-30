@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Apollo.OpenApiClient.Contacts.Item.Find_potential_duplicate;
 using Soenneker.Apollo.OpenApiClient.Contacts.Item.Opportunities;
 using Soenneker.Apollo.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -18,6 +19,11 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithContactItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The find_potential_duplicate property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Contacts.Item.Find_potential_duplicate.Find_potential_duplicateRequestBuilder Find_potential_duplicate
+        {
+            get => new global::Soenneker.Apollo.OpenApiClient.Contacts.Item.Find_potential_duplicate.Find_potential_duplicateRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The opportunities property</summary>
         public global::Soenneker.Apollo.OpenApiClient.Contacts.Item.Opportunities.OpportunitiesRequestBuilder Opportunities
         {
@@ -63,6 +69,8 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Item
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ViewAContact403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.ViewAContact422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ViewAContact429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ViewAContact200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ViewAContact200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -88,6 +96,8 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.UpdateAContact200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -59,6 +59,8 @@ namespace Soenneker.Apollo.OpenApiClient.Labels.Remove_entity_ids_from_label_nam
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAList403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAList422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAList429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAList200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAList200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

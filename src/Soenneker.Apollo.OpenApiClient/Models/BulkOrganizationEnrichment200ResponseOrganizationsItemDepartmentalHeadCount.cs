@@ -11,47 +11,92 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkOrganizationEnrichment200ResponseOrganizationsItemDepartmentalHeadCount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accounting") is { } nullNodeAccounting && nullNodeAccounting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounting = null;
+            if (parseNode.GetChildNode("administrative") is { } nullNodeAdministrative && nullNodeAdministrative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Administrative = null;
+            if (parseNode.GetChildNode("arts_and_design") is { } nullNodeArtsAndDesign && nullNodeArtsAndDesign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtsAndDesign = null;
+            if (parseNode.GetChildNode("business_development") is { } nullNodeBusinessDevelopment && nullNodeBusinessDevelopment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDevelopment = null;
+            if (parseNode.GetChildNode("consulting") is { } nullNodeConsulting && nullNodeConsulting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consulting = null;
+            if (parseNode.GetChildNode("data_science") is { } nullNodeDataScience && nullNodeDataScience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataScience = null;
+            if (parseNode.GetChildNode("education") is { } nullNodeEducation && nullNodeEducation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Education = null;
+            if (parseNode.GetChildNode("engineering") is { } nullNodeEngineering && nullNodeEngineering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Engineering = null;
+            if (parseNode.GetChildNode("entrepreneurship") is { } nullNodeEntrepreneurship && nullNodeEntrepreneurship.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entrepreneurship = null;
+            if (parseNode.GetChildNode("finance") is { } nullNodeFinance && nullNodeFinance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Finance = null;
+            if (parseNode.GetChildNode("human_resources") is { } nullNodeHumanResources && nullNodeHumanResources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanResources = null;
+            if (parseNode.GetChildNode("information_technology") is { } nullNodeInformationTechnology && nullNodeInformationTechnology.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InformationTechnology = null;
+            if (parseNode.GetChildNode("legal") is { } nullNodeLegal && nullNodeLegal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Legal = null;
+            if (parseNode.GetChildNode("marketing") is { } nullNodeMarketing && nullNodeMarketing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Marketing = null;
+            if (parseNode.GetChildNode("media_and_commmunication") is { } nullNodeMediaAndCommmunication && nullNodeMediaAndCommmunication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaAndCommmunication = null;
+            if (parseNode.GetChildNode("operations") is { } nullNodeOperations && nullNodeOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operations = null;
+            if (parseNode.GetChildNode("product_management") is { } nullNodeProductManagement && nullNodeProductManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductManagement = null;
+            if (parseNode.GetChildNode("sales") is { } nullNodeSales && nullNodeSales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sales = null;
+            if (parseNode.GetChildNode("support") is { } nullNodeSupport && nullNodeSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Support = null;
+        }
+
         /// <summary>The accounting property</summary>
-        public int? Accounting { get; set; }
+        public int? Accounting { get => _explicitNullValueAccounting; set { _explicitNullValueAccounting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounting"); else _explicitNullProperties?.Remove("accounting"); } }
+        private int? _explicitNullValueAccounting = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The administrative property</summary>
-        public int? Administrative { get; set; }
+        public int? Administrative { get => _explicitNullValueAdministrative; set { _explicitNullValueAdministrative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("administrative"); else _explicitNullProperties?.Remove("administrative"); } }
+        private int? _explicitNullValueAdministrative = default!;
         /// <summary>The arts_and_design property</summary>
-        public int? ArtsAndDesign { get; set; }
+        public int? ArtsAndDesign { get => _explicitNullValueArtsAndDesign; set { _explicitNullValueArtsAndDesign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arts_and_design"); else _explicitNullProperties?.Remove("arts_and_design"); } }
+        private int? _explicitNullValueArtsAndDesign = default!;
         /// <summary>The business_development property</summary>
-        public int? BusinessDevelopment { get; set; }
+        public int? BusinessDevelopment { get => _explicitNullValueBusinessDevelopment; set { _explicitNullValueBusinessDevelopment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_development"); else _explicitNullProperties?.Remove("business_development"); } }
+        private int? _explicitNullValueBusinessDevelopment = default!;
         /// <summary>The consulting property</summary>
-        public int? Consulting { get; set; }
+        public int? Consulting { get => _explicitNullValueConsulting; set { _explicitNullValueConsulting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consulting"); else _explicitNullProperties?.Remove("consulting"); } }
+        private int? _explicitNullValueConsulting = default!;
         /// <summary>The data_science property</summary>
-        public int? DataScience { get; set; }
+        public int? DataScience { get => _explicitNullValueDataScience; set { _explicitNullValueDataScience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_science"); else _explicitNullProperties?.Remove("data_science"); } }
+        private int? _explicitNullValueDataScience = default!;
         /// <summary>The education property</summary>
-        public int? Education { get; set; }
+        public int? Education { get => _explicitNullValueEducation; set { _explicitNullValueEducation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("education"); else _explicitNullProperties?.Remove("education"); } }
+        private int? _explicitNullValueEducation = default!;
         /// <summary>The engineering property</summary>
-        public int? Engineering { get; set; }
+        public int? Engineering { get => _explicitNullValueEngineering; set { _explicitNullValueEngineering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engineering"); else _explicitNullProperties?.Remove("engineering"); } }
+        private int? _explicitNullValueEngineering = default!;
         /// <summary>The entrepreneurship property</summary>
-        public int? Entrepreneurship { get; set; }
+        public int? Entrepreneurship { get => _explicitNullValueEntrepreneurship; set { _explicitNullValueEntrepreneurship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entrepreneurship"); else _explicitNullProperties?.Remove("entrepreneurship"); } }
+        private int? _explicitNullValueEntrepreneurship = default!;
         /// <summary>The finance property</summary>
-        public int? Finance { get; set; }
+        public int? Finance { get => _explicitNullValueFinance; set { _explicitNullValueFinance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finance"); else _explicitNullProperties?.Remove("finance"); } }
+        private int? _explicitNullValueFinance = default!;
         /// <summary>The human_resources property</summary>
-        public int? HumanResources { get; set; }
+        public int? HumanResources { get => _explicitNullValueHumanResources; set { _explicitNullValueHumanResources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_resources"); else _explicitNullProperties?.Remove("human_resources"); } }
+        private int? _explicitNullValueHumanResources = default!;
         /// <summary>The information_technology property</summary>
-        public int? InformationTechnology { get; set; }
+        public int? InformationTechnology { get => _explicitNullValueInformationTechnology; set { _explicitNullValueInformationTechnology = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("information_technology"); else _explicitNullProperties?.Remove("information_technology"); } }
+        private int? _explicitNullValueInformationTechnology = default!;
         /// <summary>The legal property</summary>
-        public int? Legal { get; set; }
+        public int? Legal { get => _explicitNullValueLegal; set { _explicitNullValueLegal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal"); else _explicitNullProperties?.Remove("legal"); } }
+        private int? _explicitNullValueLegal = default!;
         /// <summary>The marketing property</summary>
-        public int? Marketing { get; set; }
+        public int? Marketing { get => _explicitNullValueMarketing; set { _explicitNullValueMarketing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing"); else _explicitNullProperties?.Remove("marketing"); } }
+        private int? _explicitNullValueMarketing = default!;
         /// <summary>The media_and_commmunication property</summary>
-        public int? MediaAndCommmunication { get; set; }
+        public int? MediaAndCommmunication { get => _explicitNullValueMediaAndCommmunication; set { _explicitNullValueMediaAndCommmunication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_and_commmunication"); else _explicitNullProperties?.Remove("media_and_commmunication"); } }
+        private int? _explicitNullValueMediaAndCommmunication = default!;
         /// <summary>The operations property</summary>
-        public int? Operations { get; set; }
+        public int? Operations { get => _explicitNullValueOperations; set { _explicitNullValueOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operations"); else _explicitNullProperties?.Remove("operations"); } }
+        private int? _explicitNullValueOperations = default!;
         /// <summary>The product_management property</summary>
-        public int? ProductManagement { get; set; }
+        public int? ProductManagement { get => _explicitNullValueProductManagement; set { _explicitNullValueProductManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_management"); else _explicitNullProperties?.Remove("product_management"); } }
+        private int? _explicitNullValueProductManagement = default!;
         /// <summary>The sales property</summary>
-        public int? Sales { get; set; }
+        public int? Sales { get => _explicitNullValueSales; set { _explicitNullValueSales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sales"); else _explicitNullProperties?.Remove("sales"); } }
+        private int? _explicitNullValueSales = default!;
         /// <summary>The support property</summary>
-        public int? Support { get; set; }
+        public int? Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
+        private int? _explicitNullValueSupport = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItemDepartmentalHeadCount"/> and sets the default values.
         /// </summary>
@@ -86,7 +131,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItemDepartmentalHeadCount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItemDepartmentalHeadCount();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItemDepartmentalHeadCount(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,6 +188,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("product_management", ProductManagement);
             writer.WriteIntValue("sales", Sales);
             writer.WriteIntValue("support", Support);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

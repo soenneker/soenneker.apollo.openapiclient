@@ -11,42 +11,63 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AddContactsToSequence200ResponseEmailerCampaignContactStatuses : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("bounced") is { } nullNodeBounced && nullNodeBounced.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bounced = null;
+            if (parseNode.GetChildNode("failed") is { } nullNodeFailed && nullNodeFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failed = null;
+            if (parseNode.GetChildNode("finished") is { } nullNodeFinished && nullNodeFinished.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Finished = null;
+            if (parseNode.GetChildNode("paused") is { } nullNodePaused && nullNodePaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paused = null;
+        }
+
         /// <summary>The active property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesActive? Active { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesActive? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesActive? _explicitNullValueActive = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesActive Active { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesActive Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesActive _explicitNullValueActive = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bounced property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesBounced? Bounced { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesBounced? Bounced { get => _explicitNullValueBounced; set { _explicitNullValueBounced = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bounced"); else _explicitNullProperties?.Remove("bounced"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesBounced? _explicitNullValueBounced = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesBounced Bounced { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesBounced Bounced { get => _explicitNullValueBounced; set { _explicitNullValueBounced = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bounced"); else _explicitNullProperties?.Remove("bounced"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesBounced _explicitNullValueBounced = default!;
 #endif
         /// <summary>The failed property</summary>
-        public int? Failed { get; set; }
+        public int? Failed { get => _explicitNullValueFailed; set { _explicitNullValueFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed"); else _explicitNullProperties?.Remove("failed"); } }
+        private int? _explicitNullValueFailed = default!;
         /// <summary>The finished property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished? Finished { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished? Finished { get => _explicitNullValueFinished; set { _explicitNullValueFinished = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finished"); else _explicitNullProperties?.Remove("finished"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished? _explicitNullValueFinished = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished Finished { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished Finished { get => _explicitNullValueFinished; set { _explicitNullValueFinished = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finished"); else _explicitNullProperties?.Remove("finished"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished _explicitNullValueFinished = default!;
 #endif
         /// <summary>The paused property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused? Paused { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused? Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused? _explicitNullValuePaused = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused Paused { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused _explicitNullValuePaused = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatuses"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatuses CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatuses();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatuses(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("failed", Failed);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesFinished>("finished", Finished);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerCampaignContactStatusesPaused>("paused", Paused);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

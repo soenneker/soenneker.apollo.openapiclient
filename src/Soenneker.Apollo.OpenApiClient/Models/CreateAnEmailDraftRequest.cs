@@ -11,74 +11,107 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateAnEmailDraftRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attachment_ids") is { } nullNodeAttachmentIds && nullNodeAttachmentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachmentIds = null;
+            if (parseNode.GetChildNode("body_html") is { } nullNodeBodyHtml && nullNodeBodyHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyHtml = null;
+            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("emailer_template_id") is { } nullNodeEmailerTemplateId && nullNodeEmailerTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerTemplateId = null;
+            if (parseNode.GetChildNode("enable_tracking") is { } nullNodeEnableTracking && nullNodeEnableTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTracking = null;
+            if (parseNode.GetChildNode("in_response_to_emailer_message_id") is { } nullNodeInResponseToEmailerMessageId && nullNodeInResponseToEmailerMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InResponseToEmailerMessageId = null;
+            if (parseNode.GetChildNode("outreach_task_id") is { } nullNodeOutreachTaskId && nullNodeOutreachTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutreachTaskId = null;
+            if (parseNode.GetChildNode("recipients") is { } nullNodeRecipients && nullNodeRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipients = null;
+            if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Apollo IDs of the attachments to include with the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AttachmentIds { get; set; }
+        public List<string>? AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
+        private List<string>? _explicitNullValueAttachmentIds = default!;
 #nullable restore
 #else
-        public List<string> AttachmentIds { get; set; }
+        public List<string> AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
+        private List<string> _explicitNullValueAttachmentIds = default!;
 #endif
         /// <summary>The body of the email as HTML. The content is sanitized by Apollo before it is saved. &lt;br&gt;&lt;br&gt;Example: `&lt;p&gt;Hi there, I wanted to reach out about...&lt;/p&gt;`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BodyHtml { get; set; }
+        public string? BodyHtml { get => _explicitNullValueBodyHtml; set { _explicitNullValueBodyHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body_html"); else _explicitNullProperties?.Remove("body_html"); } }
+        private string? _explicitNullValueBodyHtml = default!;
 #nullable restore
 #else
-        public string BodyHtml { get; set; }
+        public string BodyHtml { get => _explicitNullValueBodyHtml; set { _explicitNullValueBodyHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body_html"); else _explicitNullProperties?.Remove("body_html"); } }
+        private string _explicitNullValueBodyHtml = default!;
 #endif
         /// <summary>The Apollo ID for the contact that will receive the email. &lt;br&gt;&lt;br&gt;This is required unless you provide `in_response_to_emailer_message_id`, in which case the contact is inferred from the parent message. &lt;br&gt;&lt;br&gt;To find contact IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-contacts&quot; target=&quot;_blank&quot;&gt;search for contacts endpoint&lt;/a&gt; and identify the `id` value for the contact. &lt;br&gt;&lt;br&gt;Example: `66e34b81740c50074e3d1bd4`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>The Apollo ID of an email template to associate with the draft. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d725`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailerTemplateId { get; set; }
+        public string? EmailerTemplateId { get => _explicitNullValueEmailerTemplateId; set { _explicitNullValueEmailerTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template_id"); else _explicitNullProperties?.Remove("emailer_template_id"); } }
+        private string? _explicitNullValueEmailerTemplateId = default!;
 #nullable restore
 #else
-        public string EmailerTemplateId { get; set; }
+        public string EmailerTemplateId { get => _explicitNullValueEmailerTemplateId; set { _explicitNullValueEmailerTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template_id"); else _explicitNullProperties?.Remove("emailer_template_id"); } }
+        private string _explicitNullValueEmailerTemplateId = default!;
 #endif
         /// <summary>Set to `true` to enable open and click tracking for the email. This is only applied if your team is permitted to track emails. &lt;br&gt;&lt;br&gt;Example: `true`</summary>
-        public bool? EnableTracking { get; set; }
+        public bool? EnableTracking { get => _explicitNullValueEnableTracking; set { _explicitNullValueEnableTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_tracking"); else _explicitNullProperties?.Remove("enable_tracking"); } }
+        private bool? _explicitNullValueEnableTracking = default!;
         /// <summary>The Apollo ID of an existing email message that this draft is replying to. When provided, Apollo infers the contact and builds the recipients from the parent message, so you do not need to provide `contact_id`. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d724`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InResponseToEmailerMessageId { get; set; }
+        public string? InResponseToEmailerMessageId { get => _explicitNullValueInResponseToEmailerMessageId; set { _explicitNullValueInResponseToEmailerMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_response_to_emailer_message_id"); else _explicitNullProperties?.Remove("in_response_to_emailer_message_id"); } }
+        private string? _explicitNullValueInResponseToEmailerMessageId = default!;
 #nullable restore
 #else
-        public string InResponseToEmailerMessageId { get; set; }
+        public string InResponseToEmailerMessageId { get => _explicitNullValueInResponseToEmailerMessageId; set { _explicitNullValueInResponseToEmailerMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_response_to_emailer_message_id"); else _explicitNullProperties?.Remove("in_response_to_emailer_message_id"); } }
+        private string _explicitNullValueInResponseToEmailerMessageId = default!;
 #endif
         /// <summary>The Apollo ID of an outreach task to associate with the draft. If a drafted email already exists for this task, Apollo links to that draft instead of creating a new one. &lt;br&gt;&lt;br&gt;Example: `66e8cc45028aed019c25d726`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutreachTaskId { get; set; }
+        public string? OutreachTaskId { get => _explicitNullValueOutreachTaskId; set { _explicitNullValueOutreachTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outreach_task_id"); else _explicitNullProperties?.Remove("outreach_task_id"); } }
+        private string? _explicitNullValueOutreachTaskId = default!;
 #nullable restore
 #else
-        public string OutreachTaskId { get; set; }
+        public string OutreachTaskId { get => _explicitNullValueOutreachTaskId; set { _explicitNullValueOutreachTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outreach_task_id"); else _explicitNullProperties?.Remove("outreach_task_id"); } }
+        private string _explicitNullValueOutreachTaskId = default!;
 #endif
         /// <summary>The list of recipients for the email. Use this to set the `to`, `cc`, and `bcc` recipients. If you do not provide a `to` recipient, Apollo keeps the existing `to` recipients (if any). &lt;br&gt;&lt;br&gt;All recipient emails must be valid, otherwise the request fails and the email is not saved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem>? Recipients { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem>? Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem>? _explicitNullValueRecipients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem> Recipients { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem> Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem> _explicitNullValueRecipients = default!;
 #endif
         /// <summary>The subject line of the email. &lt;br&gt;&lt;br&gt;Example: `Quick question about your team&apos;s workflow`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequest"/> and sets the default values.
@@ -95,7 +128,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +165,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("outreach_task_id", OutreachTaskId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraftRequestRecipientsItem>("recipients", Recipients);
             writer.WriteStringValue("subject", Subject);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

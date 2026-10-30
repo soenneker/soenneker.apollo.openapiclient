@@ -11,116 +11,166 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_mapped_crm_field") is { } nullNodeAdditionalMappedCrmField && nullNodeAdditionalMappedCrmField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalMappedCrmField = null;
+            if (parseNode.GetChildNode("finder_view_ids") is { } nullNodeFinderViewIds && nullNodeFinderViewIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinderViewIds = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_local") is { } nullNodeIsLocal && nullNodeIsLocal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocal = null;
+            if (parseNode.GetChildNode("is_readonly_mapped_crm_field") is { } nullNodeIsReadonlyMappedCrmField && nullNodeIsReadonlyMappedCrmField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReadonlyMappedCrmField = null;
+            if (parseNode.GetChildNode("mapped_crm_field") is { } nullNodeMappedCrmField && nullNodeMappedCrmField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappedCrmField = null;
+            if (parseNode.GetChildNode("mirrored") is { } nullNodeMirrored && nullNodeMirrored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mirrored = null;
+            if (parseNode.GetChildNode("modality") is { } nullNodeModality && nullNodeModality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modality = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("picklist_options") is { } nullNodePicklistOptions && nullNodePicklistOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistOptions = null;
+            if (parseNode.GetChildNode("picklist_options_last_synced_at") is { } nullNodePicklistOptionsLastSyncedAt && nullNodePicklistOptionsLastSyncedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistOptionsLastSyncedAt = null;
+            if (parseNode.GetChildNode("picklist_value_set_id") is { } nullNodePicklistValueSetId && nullNodePicklistValueSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValueSetId = null;
+            if (parseNode.GetChildNode("system_name") is { } nullNodeSystemName && nullNodeSystemName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemName = null;
+            if (parseNode.GetChildNode("text_field_max_length") is { } nullNodeTextFieldMaxLength && nullNodeTextFieldMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFieldMaxLength = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional_mapped_crm_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AdditionalMappedCrmField { get; set; }
+        public UntypedNode? AdditionalMappedCrmField { get => _explicitNullValueAdditionalMappedCrmField; set { _explicitNullValueAdditionalMappedCrmField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_mapped_crm_field"); else _explicitNullProperties?.Remove("additional_mapped_crm_field"); } }
+        private UntypedNode? _explicitNullValueAdditionalMappedCrmField = default!;
 #nullable restore
 #else
-        public UntypedNode AdditionalMappedCrmField { get; set; }
+        public UntypedNode AdditionalMappedCrmField { get => _explicitNullValueAdditionalMappedCrmField; set { _explicitNullValueAdditionalMappedCrmField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_mapped_crm_field"); else _explicitNullProperties?.Remove("additional_mapped_crm_field"); } }
+        private UntypedNode _explicitNullValueAdditionalMappedCrmField = default!;
 #endif
         /// <summary>The finder_view_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FinderViewIds { get; set; }
+        public UntypedNode? FinderViewIds { get => _explicitNullValueFinderViewIds; set { _explicitNullValueFinderViewIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finder_view_ids"); else _explicitNullProperties?.Remove("finder_view_ids"); } }
+        private UntypedNode? _explicitNullValueFinderViewIds = default!;
 #nullable restore
 #else
-        public UntypedNode FinderViewIds { get; set; }
+        public UntypedNode FinderViewIds { get => _explicitNullValueFinderViewIds; set { _explicitNullValueFinderViewIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finder_view_ids"); else _explicitNullProperties?.Remove("finder_view_ids"); } }
+        private UntypedNode _explicitNullValueFinderViewIds = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_local property</summary>
-        public bool? IsLocal { get; set; }
+        public bool? IsLocal { get => _explicitNullValueIsLocal; set { _explicitNullValueIsLocal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_local"); else _explicitNullProperties?.Remove("is_local"); } }
+        private bool? _explicitNullValueIsLocal = default!;
         /// <summary>The is_readonly_mapped_crm_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? IsReadonlyMappedCrmField { get; set; }
+        public UntypedNode? IsReadonlyMappedCrmField { get => _explicitNullValueIsReadonlyMappedCrmField; set { _explicitNullValueIsReadonlyMappedCrmField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_readonly_mapped_crm_field"); else _explicitNullProperties?.Remove("is_readonly_mapped_crm_field"); } }
+        private UntypedNode? _explicitNullValueIsReadonlyMappedCrmField = default!;
 #nullable restore
 #else
-        public UntypedNode IsReadonlyMappedCrmField { get; set; }
+        public UntypedNode IsReadonlyMappedCrmField { get => _explicitNullValueIsReadonlyMappedCrmField; set { _explicitNullValueIsReadonlyMappedCrmField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_readonly_mapped_crm_field"); else _explicitNullProperties?.Remove("is_readonly_mapped_crm_field"); } }
+        private UntypedNode _explicitNullValueIsReadonlyMappedCrmField = default!;
 #endif
         /// <summary>The mapped_crm_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? MappedCrmField { get; set; }
+        public UntypedNode? MappedCrmField { get => _explicitNullValueMappedCrmField; set { _explicitNullValueMappedCrmField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mapped_crm_field"); else _explicitNullProperties?.Remove("mapped_crm_field"); } }
+        private UntypedNode? _explicitNullValueMappedCrmField = default!;
 #nullable restore
 #else
-        public UntypedNode MappedCrmField { get; set; }
+        public UntypedNode MappedCrmField { get => _explicitNullValueMappedCrmField; set { _explicitNullValueMappedCrmField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mapped_crm_field"); else _explicitNullProperties?.Remove("mapped_crm_field"); } }
+        private UntypedNode _explicitNullValueMappedCrmField = default!;
 #endif
         /// <summary>The mirrored property</summary>
-        public bool? Mirrored { get; set; }
+        public bool? Mirrored { get => _explicitNullValueMirrored; set { _explicitNullValueMirrored = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirrored"); else _explicitNullProperties?.Remove("mirrored"); } }
+        private bool? _explicitNullValueMirrored = default!;
         /// <summary>The modality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Modality { get; set; }
+        public string? Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
+        private string? _explicitNullValueModality = default!;
 #nullable restore
 #else
-        public string Modality { get; set; }
+        public string Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
+        private string _explicitNullValueModality = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The picklist_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PicklistOptions { get; set; }
+        public UntypedNode? PicklistOptions { get => _explicitNullValuePicklistOptions; set { _explicitNullValuePicklistOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_options"); else _explicitNullProperties?.Remove("picklist_options"); } }
+        private UntypedNode? _explicitNullValuePicklistOptions = default!;
 #nullable restore
 #else
-        public UntypedNode PicklistOptions { get; set; }
+        public UntypedNode PicklistOptions { get => _explicitNullValuePicklistOptions; set { _explicitNullValuePicklistOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_options"); else _explicitNullProperties?.Remove("picklist_options"); } }
+        private UntypedNode _explicitNullValuePicklistOptions = default!;
 #endif
         /// <summary>The picklist_options_last_synced_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PicklistOptionsLastSyncedAt { get; set; }
+        public string? PicklistOptionsLastSyncedAt { get => _explicitNullValuePicklistOptionsLastSyncedAt; set { _explicitNullValuePicklistOptionsLastSyncedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_options_last_synced_at"); else _explicitNullProperties?.Remove("picklist_options_last_synced_at"); } }
+        private string? _explicitNullValuePicklistOptionsLastSyncedAt = default!;
 #nullable restore
 #else
-        public string PicklistOptionsLastSyncedAt { get; set; }
+        public string PicklistOptionsLastSyncedAt { get => _explicitNullValuePicklistOptionsLastSyncedAt; set { _explicitNullValuePicklistOptionsLastSyncedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_options_last_synced_at"); else _explicitNullProperties?.Remove("picklist_options_last_synced_at"); } }
+        private string _explicitNullValuePicklistOptionsLastSyncedAt = default!;
 #endif
         /// <summary>The picklist_value_set_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PicklistValueSetId { get; set; }
+        public UntypedNode? PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
+        private UntypedNode? _explicitNullValuePicklistValueSetId = default!;
 #nullable restore
 #else
-        public UntypedNode PicklistValueSetId { get; set; }
+        public UntypedNode PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
+        private UntypedNode _explicitNullValuePicklistValueSetId = default!;
 #endif
         /// <summary>The system_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SystemName { get; set; }
+        public UntypedNode? SystemName { get => _explicitNullValueSystemName; set { _explicitNullValueSystemName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_name"); else _explicitNullProperties?.Remove("system_name"); } }
+        private UntypedNode? _explicitNullValueSystemName = default!;
 #nullable restore
 #else
-        public UntypedNode SystemName { get; set; }
+        public UntypedNode SystemName { get => _explicitNullValueSystemName; set { _explicitNullValueSystemName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_name"); else _explicitNullProperties?.Remove("system_name"); } }
+        private UntypedNode _explicitNullValueSystemName = default!;
 #endif
         /// <summary>The text_field_max_length property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TextFieldMaxLength { get; set; }
+        public UntypedNode? TextFieldMaxLength { get => _explicitNullValueTextFieldMaxLength; set { _explicitNullValueTextFieldMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_field_max_length"); else _explicitNullProperties?.Remove("text_field_max_length"); } }
+        private UntypedNode? _explicitNullValueTextFieldMaxLength = default!;
 #nullable restore
 #else
-        public UntypedNode TextFieldMaxLength { get; set; }
+        public UntypedNode TextFieldMaxLength { get => _explicitNullValueTextFieldMaxLength; set { _explicitNullValueTextFieldMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_field_max_length"); else _explicitNullProperties?.Remove("text_field_max_length"); } }
+        private UntypedNode _explicitNullValueTextFieldMaxLength = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem"/> and sets the default values.
@@ -139,7 +189,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200ResponseTypedCustomFieldsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -188,6 +238,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("system_name", SystemName);
             writer.WriteObjectValue<UntypedNode>("text_field_max_length", TextFieldMaxLength);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

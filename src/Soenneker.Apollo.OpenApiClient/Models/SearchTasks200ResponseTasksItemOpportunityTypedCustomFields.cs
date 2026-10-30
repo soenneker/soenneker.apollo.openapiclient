@@ -11,32 +11,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchTasks200ResponseTasksItemOpportunityTypedCustomFields : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("66e4ba346fe95a073461e00e") is { } nullNodeSixSixe4ba346fe95a073461e00e && nullNodeSixSixe4ba346fe95a073461e00e.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixSixe4ba346fe95a073461e00e = null;
+            if (parseNode.GetChildNode("6095a711bd01d100a506d4da") is { } nullNodeSixZeroNineFivea711bd01d100a506d4da && nullNodeSixZeroNineFivea711bd01d100a506d4da.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroNineFivea711bd01d100a506d4da = null;
+            if (parseNode.GetChildNode("6095a711bd01d100a506d4dc") is { } nullNodeSixZeroNineFivea711bd01d100a506d4dc && nullNodeSixZeroNineFivea711bd01d100a506d4dc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroNineFivea711bd01d100a506d4dc = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The SixSixe4ba346fe95a073461e00e property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SixSixe4ba346fe95a073461e00e { get; set; }
+        public List<string>? SixSixe4ba346fe95a073461e00e { get => _explicitNullValueSixSixe4ba346fe95a073461e00e; set { _explicitNullValueSixSixe4ba346fe95a073461e00e = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("66e4ba346fe95a073461e00e"); else _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); } }
+        private List<string>? _explicitNullValueSixSixe4ba346fe95a073461e00e = default!;
 #nullable restore
 #else
-        public List<string> SixSixe4ba346fe95a073461e00e { get; set; }
+        public List<string> SixSixe4ba346fe95a073461e00e { get => _explicitNullValueSixSixe4ba346fe95a073461e00e; set { _explicitNullValueSixSixe4ba346fe95a073461e00e = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("66e4ba346fe95a073461e00e"); else _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); } }
+        private List<string> _explicitNullValueSixSixe4ba346fe95a073461e00e = default!;
 #endif
         /// <summary>The SixZeroNineFivea711bd01d100a506d4da property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SixZeroNineFivea711bd01d100a506d4da { get; set; }
+        public List<string>? SixZeroNineFivea711bd01d100a506d4da { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4da; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4da"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); } }
+        private List<string>? _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = default!;
 #nullable restore
 #else
-        public List<string> SixZeroNineFivea711bd01d100a506d4da { get; set; }
+        public List<string> SixZeroNineFivea711bd01d100a506d4da { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4da; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4da"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); } }
+        private List<string> _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = default!;
 #endif
         /// <summary>The SixZeroNineFivea711bd01d100a506d4dc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SixZeroNineFivea711bd01d100a506d4dc { get; set; }
+        public List<string>? SixZeroNineFivea711bd01d100a506d4dc { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4dc"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); } }
+        private List<string>? _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = default!;
 #nullable restore
 #else
-        public List<string> SixZeroNineFivea711bd01d100a506d4dc { get; set; }
+        public List<string> SixZeroNineFivea711bd01d100a506d4dc { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4dc"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); } }
+        private List<string> _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityTypedCustomFields"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityTypedCustomFields CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityTypedCustomFields();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityTypedCustomFields(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("66e4ba346fe95a073461e00e", SixSixe4ba346fe95a073461e00e);
             writer.WriteCollectionOfPrimitiveValues<string>("6095a711bd01d100a506d4da", SixZeroNineFivea711bd01d100a506d4da);
             writer.WriteCollectionOfPrimitiveValues<string>("6095a711bd01d100a506d4dc", SixZeroNineFivea711bd01d100a506d4dc);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,64 +11,92 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateAnAccountRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_stage_id") is { } nullNodeAccountStageId && nullNodeAccountStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStageId = null;
+            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("owner_id") is { } nullNodeOwnerId && nullNodeOwnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerId = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("raw_address") is { } nullNodeRawAddress && nullNodeRawAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawAddress = null;
+            if (parseNode.GetChildNode("typed_custom_fields") is { } nullNodeTypedCustomFields && nullNodeTypedCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypedCustomFields = null;
+        }
+
         /// <summary>The Apollo ID for the account stage to which you want to assign the account. Enter a different ID to update the account stage. &lt;br&gt;&lt;br&gt;Call the &lt;a href=&quot;https://docs.apollo.io/reference/list-account-stages&quot; target=&quot;_blank&quot;&gt;list account stages endpoint&lt;/a&gt; to retrieve a list of all the account stage IDs available in your Apollo account. &lt;br&gt;&lt;br&gt;If you do not specify the account stage, Apollo automatically assigns the account to a stage as determined by your team&apos;s Apollo account. To change the order of account stages, launch the Apollo product and go to &lt;b&gt;Settings&lt;/b&gt; &gt; &lt;b&gt;Objects&lt;/b&gt; &gt; &lt;a href=&quot;https://app.apollo.io/#/settings/accounts/stages&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Accounts&lt;/b&gt;&lt;/a&gt;. Then, access the &lt;b&gt;Triggers&lt;/b&gt; tab and change the stage for when an account is created. &lt;br&gt;&lt;br&gt;Example: `61b8e913e0f4d2012e3af74e`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountStageId { get; set; }
+        public string? AccountStageId { get => _explicitNullValueAccountStageId; set { _explicitNullValueAccountStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stage_id"); else _explicitNullProperties?.Remove("account_stage_id"); } }
+        private string? _explicitNullValueAccountStageId = default!;
 #nullable restore
 #else
-        public string AccountStageId { get; set; }
+        public string AccountStageId { get => _explicitNullValueAccountStageId; set { _explicitNullValueAccountStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stage_id"); else _explicitNullProperties?.Remove("account_stage_id"); } }
+        private string _explicitNullValueAccountStageId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Update the domain name for the account. Do not include `www.` or similar. &lt;br&gt;&lt;br&gt;Example: `apollo.io` or `microsoft.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get; set; }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get; set; }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>Update the account&apos;s name. This should be a human-readable name. &lt;br&gt;&lt;br&gt;Example: `The Fast Irish Copywriters`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ID for the account owner within your team&apos;s Apollo account. Enter a different ID to update the owner of the account. &lt;br&gt;&lt;br&gt;Use the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot; target=&quot;_blank&quot;&gt;get a list of users endpoint&lt;/a&gt; to retrieve IDs for all of the users within your Apollo account. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerId { get; set; }
+        public string? OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private string? _explicitNullValueOwnerId = default!;
 #nullable restore
 #else
-        public string OwnerId { get; set; }
+        public string OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private string _explicitNullValueOwnerId = default!;
 #endif
         /// <summary>Update the primary phone number for the account. &lt;br&gt;&lt;br&gt;This can be the phone number for the corporate headquarters, a branch location, or a direct dial to the primary point of contact for the account. &lt;br&gt;&lt;br&gt;Apollo sanitizes phone numbers, so you can enter them in any format. The sanitized number can be viewed in the endpoint response. &lt;br&gt;&lt;br&gt;Examples: `555-555-0133`; `+44 7700 900852`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>Update the corporate location for the account. This can include a city, US state, and country. &lt;br&gt;&lt;br&gt;Apollo matches the location you provide to the most applicable pre-defined location. &lt;br&gt;&lt;br&gt;Examples: `Belfield, Dublin 4, Ireland`; `Dallas, United States`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RawAddress { get; set; }
+        public string? RawAddress { get => _explicitNullValueRawAddress; set { _explicitNullValueRawAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_address"); else _explicitNullProperties?.Remove("raw_address"); } }
+        private string? _explicitNullValueRawAddress = default!;
 #nullable restore
 #else
-        public string RawAddress { get; set; }
+        public string RawAddress { get => _explicitNullValueRawAddress; set { _explicitNullValueRawAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_address"); else _explicitNullProperties?.Remove("raw_address"); } }
+        private string _explicitNullValueRawAddress = default!;
 #endif
         /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412498754445-Create-Custom-Account-Fields&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;get a list of all custom fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;get a list of all custom fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields? TypedCustomFields { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields? TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields? _explicitNullValueTypedCustomFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields TypedCustomFields { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields _explicitNullValueTypedCustomFields = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequest"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("raw_address", RawAddress);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateAnAccountRequestTypedCustomFields>("typed_custom_fields", TypedCustomFields);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

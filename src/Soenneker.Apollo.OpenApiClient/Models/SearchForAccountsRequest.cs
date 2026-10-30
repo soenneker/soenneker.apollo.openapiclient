@@ -11,41 +11,65 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchForAccountsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_label_ids") is { } nullNodeAccountLabelIds && nullNodeAccountLabelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountLabelIds = null;
+            if (parseNode.GetChildNode("account_stage_ids") is { } nullNodeAccountStageIds && nullNodeAccountStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStageIds = null;
+            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
+            if (parseNode.GetChildNode("q_organization_name") is { } nullNodeQOrganizationName && nullNodeQOrganizationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QOrganizationName = null;
+            if (parseNode.GetChildNode("sort_ascending") is { } nullNodeSortAscending && nullNodeSortAscending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortAscending = null;
+            if (parseNode.GetChildNode("sort_by_field") is { } nullNodeSortByField && nullNodeSortByField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortByField = null;
+        }
+
         /// <summary>The Apollo IDs for the labels that you want to include in your search results. If you add multiple labels, Apollo will include all accounts connected to any of the labels, along with the other parameters, in the search results. Example: `[&apos;6095a710bd01d100a506d4ae&apos;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AccountLabelIds { get; set; }
+        public List<string>? AccountLabelIds { get => _explicitNullValueAccountLabelIds; set { _explicitNullValueAccountLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_label_ids"); else _explicitNullProperties?.Remove("account_label_ids"); } }
+        private List<string>? _explicitNullValueAccountLabelIds = default!;
 #nullable restore
 #else
-        public List<string> AccountLabelIds { get; set; }
+        public List<string> AccountLabelIds { get => _explicitNullValueAccountLabelIds; set { _explicitNullValueAccountLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_label_ids"); else _explicitNullProperties?.Remove("account_label_ids"); } }
+        private List<string> _explicitNullValueAccountLabelIds = default!;
 #endif
         /// <summary>The Apollo IDs for the account stages that you want to include in your search results. If you add multiple account stages, Apollo will include all accounts that match any of the stages, along with the other parameters, in the search results. Call the [list account stages endpoint](https://docs.apollo.io/reference/list-account-stages) to retrieve a list of all the account stage IDs available in your Apollo account. Example: `61b8e913e0f4d2012e3af74e`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AccountStageIds { get; set; }
+        public List<string>? AccountStageIds { get => _explicitNullValueAccountStageIds; set { _explicitNullValueAccountStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stage_ids"); else _explicitNullProperties?.Remove("account_stage_ids"); } }
+        private List<string>? _explicitNullValueAccountStageIds = default!;
 #nullable restore
 #else
-        public List<string> AccountStageIds { get; set; }
+        public List<string> AccountStageIds { get => _explicitNullValueAccountStageIds; set { _explicitNullValueAccountStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stage_ids"); else _explicitNullProperties?.Remove("account_stage_ids"); } }
+        private List<string> _explicitNullValueAccountStageIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The page number of the Apollo data that you want to retrieve. Use this parameter in combination with the `per_page` parameter to make search results navigable and improve the performance of the endpoint. Example: `4`</summary>
-        public int? Page { get; set; }
+        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private int? _explicitNullValuePage = default!;
         /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. Use the `page` parameter to navigate through the different pages of data. Example: `10`</summary>
-        public int? PerPage { get; set; }
+        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
+        private int? _explicitNullValuePerPage = default!;
         /// <summary>Add keywords to narrow the search of the accounts in your team&apos;s Apollo account. Keywords should directly match at least part of an account&apos;s name. For example, searching the keyword `marketing` might return the result `NY Marketing Unlimited`, but not `NY Market Analysts`. This parameter only searches account names, not other account fields. Examples: `apollo`; `microsoft`; `marketing`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QOrganizationName { get; set; }
+        public string? QOrganizationName { get => _explicitNullValueQOrganizationName; set { _explicitNullValueQOrganizationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_organization_name"); else _explicitNullProperties?.Remove("q_organization_name"); } }
+        private string? _explicitNullValueQOrganizationName = default!;
 #nullable restore
 #else
-        public string QOrganizationName { get; set; }
+        public string QOrganizationName { get => _explicitNullValueQOrganizationName; set { _explicitNullValueQOrganizationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_organization_name"); else _explicitNullProperties?.Remove("q_organization_name"); } }
+        private string _explicitNullValueQOrganizationName = default!;
 #endif
         /// <summary>Set to `true` to sort the matching accounts in ascending order. This parameter must be used with `sort_by_field`. Otherwise, the sorting logic is not applied. Example: `true`</summary>
-        public bool? SortAscending { get; set; }
+        public bool? SortAscending { get => _explicitNullValueSortAscending; set { _explicitNullValueSortAscending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_ascending"); else _explicitNullProperties?.Remove("sort_ascending"); } }
+        private bool? _explicitNullValueSortAscending = default!;
         /// <summary>Sort the matching accounts by 1 of the following options:- `account_last_activity_date`: The most recent activity date recorded first.- `account_created_at`: The most recently created first.- `account_updated_at`: The most recently updated first.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequestSortByField? SortByField { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequestSortByField? SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequestSortByField? _explicitNullValueSortByField = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequest"/> and sets the default values.
         /// </summary>
@@ -62,7 +86,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -95,6 +119,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("q_organization_name", QOrganizationName);
             writer.WriteBoolValue("sort_ascending", SortAscending);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForAccountsRequestSortByField>("sort_by_field", SortByField);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

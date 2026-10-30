@@ -11,262 +11,388 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetAListOfEmailAccounts200ResponseEmailAccountsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("active_campaigns_count") is { } nullNodeActiveCampaignsCount && nullNodeActiveCampaignsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveCampaignsCount = null;
+            if (parseNode.GetChildNode("aliases") is { } nullNodeAliases && nullNodeAliases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aliases = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("default") is { } nullNodeDefault && nullNodeDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Default = null;
+            if (parseNode.GetChildNode("deliverability_score") is { } nullNodeDeliverabilityScore && nullNodeDeliverabilityScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliverabilityScore = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("email_daily_threshold") is { } nullNodeEmailDailyThreshold && nullNodeEmailDailyThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDailyThreshold = null;
+            if (parseNode.GetChildNode("email_sending_policy_cd") is { } nullNodeEmailSendingPolicyCd && nullNodeEmailSendingPolicyCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSendingPolicyCd = null;
+            if (parseNode.GetChildNode("fields_fully_loaded") is { } nullNodeFieldsFullyLoaded && nullNodeFieldsFullyLoaded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldsFullyLoaded = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inactive_reason") is { } nullNodeInactiveReason && nullNodeInactiveReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InactiveReason = null;
+            if (parseNode.GetChildNode("is_opted_in_mailwarming") is { } nullNodeIsOptedInMailwarming && nullNodeIsOptedInMailwarming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptedInMailwarming = null;
+            if (parseNode.GetChildNode("last_synced_at") is { } nullNodeLastSyncedAt && nullNodeLastSyncedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSyncedAt = null;
+            if (parseNode.GetChildNode("limits_editable") is { } nullNodeLimitsEditable && nullNodeLimitsEditable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitsEditable = null;
+            if (parseNode.GetChildNode("mailgun_domains") is { } nullNodeMailgunDomains && nullNodeMailgunDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailgunDomains = null;
+            if (parseNode.GetChildNode("mailwarming_eta") is { } nullNodeMailwarmingEta && nullNodeMailwarmingEta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingEta = null;
+            if (parseNode.GetChildNode("mailwarming_max") is { } nullNodeMailwarmingMax && nullNodeMailwarmingMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingMax = null;
+            if (parseNode.GetChildNode("mailwarming_on_weekdays_only") is { } nullNodeMailwarmingOnWeekdaysOnly && nullNodeMailwarmingOnWeekdaysOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingOnWeekdaysOnly = null;
+            if (parseNode.GetChildNode("mailwarming_score") is { } nullNodeMailwarmingScore && nullNodeMailwarmingScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingScore = null;
+            if (parseNode.GetChildNode("mailwarming_score_banner") is { } nullNodeMailwarmingScoreBanner && nullNodeMailwarmingScoreBanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingScoreBanner = null;
+            if (parseNode.GetChildNode("mailwarming_status") is { } nullNodeMailwarmingStatus && nullNodeMailwarmingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingStatus = null;
+            if (parseNode.GetChildNode("mailwarming_subject_token") is { } nullNodeMailwarmingSubjectToken && nullNodeMailwarmingSubjectToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingSubjectToken = null;
+            if (parseNode.GetChildNode("mailwarming_to_send_daily") is { } nullNodeMailwarmingToSendDaily && nullNodeMailwarmingToSendDaily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingToSendDaily = null;
+            if (parseNode.GetChildNode("mailwarming_to_send_incrementor") is { } nullNodeMailwarmingToSendIncrementor && nullNodeMailwarmingToSendIncrementor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailwarmingToSendIncrementor = null;
+            if (parseNode.GetChildNode("max_outbound_emails_per_hour") is { } nullNodeMaxOutboundEmailsPerHour && nullNodeMaxOutboundEmailsPerHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxOutboundEmailsPerHour = null;
+            if (parseNode.GetChildNode("nudge_user_to_send_mails") is { } nullNodeNudgeUserToSendMails && nullNodeNudgeUserToSendMails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NudgeUserToSendMails = null;
+            if (parseNode.GetChildNode("nylas_api_version") is { } nullNodeNylasApiVersion && nullNodeNylasApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NylasApiVersion = null;
+            if (parseNode.GetChildNode("nylas_provider") is { } nullNodeNylasProvider && nullNodeNylasProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NylasProvider = null;
+            if (parseNode.GetChildNode("provider_display_name") is { } nullNodeProviderDisplayName && nullNodeProviderDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderDisplayName = null;
+            if (parseNode.GetChildNode("revoked_at") is { } nullNodeRevokedAt && nullNodeRevokedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevokedAt = null;
+            if (parseNode.GetChildNode("seconds_delay_between_emails") is { } nullNodeSecondsDelayBetweenEmails && nullNodeSecondsDelayBetweenEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondsDelayBetweenEmails = null;
+            if (parseNode.GetChildNode("sendgrid_api_key_v3") is { } nullNodeSendgridApiKeyV3 && nullNodeSendgridApiKeyV3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendgridApiKeyV3 = null;
+            if (parseNode.GetChildNode("sendgrid_api_user") is { } nullNodeSendgridApiUser && nullNodeSendgridApiUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendgridApiUser = null;
+            if (parseNode.GetChildNode("signature_edit_disabled") is { } nullNodeSignatureEditDisabled && nullNodeSignatureEditDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureEditDisabled = null;
+            if (parseNode.GetChildNode("signature_html") is { } nullNodeSignatureHtml && nullNodeSignatureHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureHtml = null;
+            if (parseNode.GetChildNode("true_warmup_approximate_end_date") is { } nullNodeTrueWarmupApproximateEndDate && nullNodeTrueWarmupApproximateEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupApproximateEndDate = null;
+            if (parseNode.GetChildNode("true_warmup_daily_limit") is { } nullNodeTrueWarmupDailyLimit && nullNodeTrueWarmupDailyLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupDailyLimit = null;
+            if (parseNode.GetChildNode("true_warmup_enabled") is { } nullNodeTrueWarmupEnabled && nullNodeTrueWarmupEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupEnabled = null;
+            if (parseNode.GetChildNode("true_warmup_enable_thresholds") is { } nullNodeTrueWarmupEnableThresholds && nullNodeTrueWarmupEnableThresholds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupEnableThresholds = null;
+            if (parseNode.GetChildNode("true_warmup_last_throttled_at") is { } nullNodeTrueWarmupLastThrottledAt && nullNodeTrueWarmupLastThrottledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupLastThrottledAt = null;
+            if (parseNode.GetChildNode("true_warmup_progress") is { } nullNodeTrueWarmupProgress && nullNodeTrueWarmupProgress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupProgress = null;
+            if (parseNode.GetChildNode("true_warmup_status") is { } nullNodeTrueWarmupStatus && nullNodeTrueWarmupStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupStatus = null;
+            if (parseNode.GetChildNode("true_warmup_thresholds") is { } nullNodeTrueWarmupThresholds && nullNodeTrueWarmupThresholds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrueWarmupThresholds = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>The active property</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>The active_campaigns_count property</summary>
-        public int? ActiveCampaignsCount { get; set; }
+        public int? ActiveCampaignsCount { get => _explicitNullValueActiveCampaignsCount; set { _explicitNullValueActiveCampaignsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_campaigns_count"); else _explicitNullProperties?.Remove("active_campaigns_count"); } }
+        private int? _explicitNullValueActiveCampaignsCount = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The aliases property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Aliases { get; set; }
+        public List<string>? Aliases { get => _explicitNullValueAliases; set { _explicitNullValueAliases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aliases"); else _explicitNullProperties?.Remove("aliases"); } }
+        private List<string>? _explicitNullValueAliases = default!;
 #nullable restore
 #else
-        public List<string> Aliases { get; set; }
+        public List<string> Aliases { get => _explicitNullValueAliases; set { _explicitNullValueAliases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aliases"); else _explicitNullProperties?.Remove("aliases"); } }
+        private List<string> _explicitNullValueAliases = default!;
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The default property</summary>
-        public bool? Default { get; set; }
+        public bool? Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
+        private bool? _explicitNullValueDefault = default!;
         /// <summary>The deliverability_score property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScore? DeliverabilityScore { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScore? DeliverabilityScore { get => _explicitNullValueDeliverabilityScore; set { _explicitNullValueDeliverabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliverability_score"); else _explicitNullProperties?.Remove("deliverability_score"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScore? _explicitNullValueDeliverabilityScore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScore DeliverabilityScore { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScore DeliverabilityScore { get => _explicitNullValueDeliverabilityScore; set { _explicitNullValueDeliverabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliverability_score"); else _explicitNullProperties?.Remove("deliverability_score"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemDeliverabilityScore _explicitNullValueDeliverabilityScore = default!;
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The email_daily_threshold property</summary>
-        public int? EmailDailyThreshold { get; set; }
+        public int? EmailDailyThreshold { get => _explicitNullValueEmailDailyThreshold; set { _explicitNullValueEmailDailyThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_daily_threshold"); else _explicitNullProperties?.Remove("email_daily_threshold"); } }
+        private int? _explicitNullValueEmailDailyThreshold = default!;
         /// <summary>The email_sending_policy_cd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSendingPolicyCd { get; set; }
+        public string? EmailSendingPolicyCd { get => _explicitNullValueEmailSendingPolicyCd; set { _explicitNullValueEmailSendingPolicyCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sending_policy_cd"); else _explicitNullProperties?.Remove("email_sending_policy_cd"); } }
+        private string? _explicitNullValueEmailSendingPolicyCd = default!;
 #nullable restore
 #else
-        public string EmailSendingPolicyCd { get; set; }
+        public string EmailSendingPolicyCd { get => _explicitNullValueEmailSendingPolicyCd; set { _explicitNullValueEmailSendingPolicyCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sending_policy_cd"); else _explicitNullProperties?.Remove("email_sending_policy_cd"); } }
+        private string _explicitNullValueEmailSendingPolicyCd = default!;
 #endif
         /// <summary>The fields_fully_loaded property</summary>
-        public bool? FieldsFullyLoaded { get; set; }
+        public bool? FieldsFullyLoaded { get => _explicitNullValueFieldsFullyLoaded; set { _explicitNullValueFieldsFullyLoaded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields_fully_loaded"); else _explicitNullProperties?.Remove("fields_fully_loaded"); } }
+        private bool? _explicitNullValueFieldsFullyLoaded = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inactive_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? InactiveReason { get; set; }
+        public UntypedNode? InactiveReason { get => _explicitNullValueInactiveReason; set { _explicitNullValueInactiveReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_reason"); else _explicitNullProperties?.Remove("inactive_reason"); } }
+        private UntypedNode? _explicitNullValueInactiveReason = default!;
 #nullable restore
 #else
-        public UntypedNode InactiveReason { get; set; }
+        public UntypedNode InactiveReason { get => _explicitNullValueInactiveReason; set { _explicitNullValueInactiveReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_reason"); else _explicitNullProperties?.Remove("inactive_reason"); } }
+        private UntypedNode _explicitNullValueInactiveReason = default!;
 #endif
         /// <summary>The is_opted_in_mailwarming property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? IsOptedInMailwarming { get; set; }
+        public UntypedNode? IsOptedInMailwarming { get => _explicitNullValueIsOptedInMailwarming; set { _explicitNullValueIsOptedInMailwarming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_opted_in_mailwarming"); else _explicitNullProperties?.Remove("is_opted_in_mailwarming"); } }
+        private UntypedNode? _explicitNullValueIsOptedInMailwarming = default!;
 #nullable restore
 #else
-        public UntypedNode IsOptedInMailwarming { get; set; }
+        public UntypedNode IsOptedInMailwarming { get => _explicitNullValueIsOptedInMailwarming; set { _explicitNullValueIsOptedInMailwarming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_opted_in_mailwarming"); else _explicitNullProperties?.Remove("is_opted_in_mailwarming"); } }
+        private UntypedNode _explicitNullValueIsOptedInMailwarming = default!;
 #endif
         /// <summary>The last_synced_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastSyncedAt { get; set; }
+        public string? LastSyncedAt { get => _explicitNullValueLastSyncedAt; set { _explicitNullValueLastSyncedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_synced_at"); else _explicitNullProperties?.Remove("last_synced_at"); } }
+        private string? _explicitNullValueLastSyncedAt = default!;
 #nullable restore
 #else
-        public string LastSyncedAt { get; set; }
+        public string LastSyncedAt { get => _explicitNullValueLastSyncedAt; set { _explicitNullValueLastSyncedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_synced_at"); else _explicitNullProperties?.Remove("last_synced_at"); } }
+        private string _explicitNullValueLastSyncedAt = default!;
 #endif
         /// <summary>The limits_editable property</summary>
-        public bool? LimitsEditable { get; set; }
+        public bool? LimitsEditable { get => _explicitNullValueLimitsEditable; set { _explicitNullValueLimitsEditable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits_editable"); else _explicitNullProperties?.Remove("limits_editable"); } }
+        private bool? _explicitNullValueLimitsEditable = default!;
         /// <summary>The mailgun_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? MailgunDomains { get; set; }
+        public UntypedNode? MailgunDomains { get => _explicitNullValueMailgunDomains; set { _explicitNullValueMailgunDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailgun_domains"); else _explicitNullProperties?.Remove("mailgun_domains"); } }
+        private UntypedNode? _explicitNullValueMailgunDomains = default!;
 #nullable restore
 #else
-        public UntypedNode MailgunDomains { get; set; }
+        public UntypedNode MailgunDomains { get => _explicitNullValueMailgunDomains; set { _explicitNullValueMailgunDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailgun_domains"); else _explicitNullProperties?.Remove("mailgun_domains"); } }
+        private UntypedNode _explicitNullValueMailgunDomains = default!;
 #endif
         /// <summary>The mailwarming_eta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? MailwarmingEta { get; set; }
+        public UntypedNode? MailwarmingEta { get => _explicitNullValueMailwarmingEta; set { _explicitNullValueMailwarmingEta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_eta"); else _explicitNullProperties?.Remove("mailwarming_eta"); } }
+        private UntypedNode? _explicitNullValueMailwarmingEta = default!;
 #nullable restore
 #else
-        public UntypedNode MailwarmingEta { get; set; }
+        public UntypedNode MailwarmingEta { get => _explicitNullValueMailwarmingEta; set { _explicitNullValueMailwarmingEta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_eta"); else _explicitNullProperties?.Remove("mailwarming_eta"); } }
+        private UntypedNode _explicitNullValueMailwarmingEta = default!;
 #endif
         /// <summary>The mailwarming_max property</summary>
-        public int? MailwarmingMax { get; set; }
+        public int? MailwarmingMax { get => _explicitNullValueMailwarmingMax; set { _explicitNullValueMailwarmingMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_max"); else _explicitNullProperties?.Remove("mailwarming_max"); } }
+        private int? _explicitNullValueMailwarmingMax = default!;
         /// <summary>The mailwarming_on_weekdays_only property</summary>
-        public bool? MailwarmingOnWeekdaysOnly { get; set; }
+        public bool? MailwarmingOnWeekdaysOnly { get => _explicitNullValueMailwarmingOnWeekdaysOnly; set { _explicitNullValueMailwarmingOnWeekdaysOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_on_weekdays_only"); else _explicitNullProperties?.Remove("mailwarming_on_weekdays_only"); } }
+        private bool? _explicitNullValueMailwarmingOnWeekdaysOnly = default!;
         /// <summary>The mailwarming_score property</summary>
-        public int? MailwarmingScore { get; set; }
+        public int? MailwarmingScore { get => _explicitNullValueMailwarmingScore; set { _explicitNullValueMailwarmingScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_score"); else _explicitNullProperties?.Remove("mailwarming_score"); } }
+        private int? _explicitNullValueMailwarmingScore = default!;
         /// <summary>The mailwarming_score_banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MailwarmingScoreBanner { get; set; }
+        public string? MailwarmingScoreBanner { get => _explicitNullValueMailwarmingScoreBanner; set { _explicitNullValueMailwarmingScoreBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_score_banner"); else _explicitNullProperties?.Remove("mailwarming_score_banner"); } }
+        private string? _explicitNullValueMailwarmingScoreBanner = default!;
 #nullable restore
 #else
-        public string MailwarmingScoreBanner { get; set; }
+        public string MailwarmingScoreBanner { get => _explicitNullValueMailwarmingScoreBanner; set { _explicitNullValueMailwarmingScoreBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_score_banner"); else _explicitNullProperties?.Remove("mailwarming_score_banner"); } }
+        private string _explicitNullValueMailwarmingScoreBanner = default!;
 #endif
         /// <summary>The mailwarming_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MailwarmingStatus { get; set; }
+        public string? MailwarmingStatus { get => _explicitNullValueMailwarmingStatus; set { _explicitNullValueMailwarmingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_status"); else _explicitNullProperties?.Remove("mailwarming_status"); } }
+        private string? _explicitNullValueMailwarmingStatus = default!;
 #nullable restore
 #else
-        public string MailwarmingStatus { get; set; }
+        public string MailwarmingStatus { get => _explicitNullValueMailwarmingStatus; set { _explicitNullValueMailwarmingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_status"); else _explicitNullProperties?.Remove("mailwarming_status"); } }
+        private string _explicitNullValueMailwarmingStatus = default!;
 #endif
         /// <summary>The mailwarming_subject_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? MailwarmingSubjectToken { get; set; }
+        public UntypedNode? MailwarmingSubjectToken { get => _explicitNullValueMailwarmingSubjectToken; set { _explicitNullValueMailwarmingSubjectToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_subject_token"); else _explicitNullProperties?.Remove("mailwarming_subject_token"); } }
+        private UntypedNode? _explicitNullValueMailwarmingSubjectToken = default!;
 #nullable restore
 #else
-        public UntypedNode MailwarmingSubjectToken { get; set; }
+        public UntypedNode MailwarmingSubjectToken { get => _explicitNullValueMailwarmingSubjectToken; set { _explicitNullValueMailwarmingSubjectToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_subject_token"); else _explicitNullProperties?.Remove("mailwarming_subject_token"); } }
+        private UntypedNode _explicitNullValueMailwarmingSubjectToken = default!;
 #endif
         /// <summary>The mailwarming_to_send_daily property</summary>
-        public int? MailwarmingToSendDaily { get; set; }
+        public int? MailwarmingToSendDaily { get => _explicitNullValueMailwarmingToSendDaily; set { _explicitNullValueMailwarmingToSendDaily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_to_send_daily"); else _explicitNullProperties?.Remove("mailwarming_to_send_daily"); } }
+        private int? _explicitNullValueMailwarmingToSendDaily = default!;
         /// <summary>The mailwarming_to_send_incrementor property</summary>
-        public int? MailwarmingToSendIncrementor { get; set; }
+        public int? MailwarmingToSendIncrementor { get => _explicitNullValueMailwarmingToSendIncrementor; set { _explicitNullValueMailwarmingToSendIncrementor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mailwarming_to_send_incrementor"); else _explicitNullProperties?.Remove("mailwarming_to_send_incrementor"); } }
+        private int? _explicitNullValueMailwarmingToSendIncrementor = default!;
         /// <summary>The max_outbound_emails_per_hour property</summary>
-        public int? MaxOutboundEmailsPerHour { get; set; }
+        public int? MaxOutboundEmailsPerHour { get => _explicitNullValueMaxOutboundEmailsPerHour; set { _explicitNullValueMaxOutboundEmailsPerHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_outbound_emails_per_hour"); else _explicitNullProperties?.Remove("max_outbound_emails_per_hour"); } }
+        private int? _explicitNullValueMaxOutboundEmailsPerHour = default!;
         /// <summary>The nudge_user_to_send_mails property</summary>
-        public bool? NudgeUserToSendMails { get; set; }
+        public bool? NudgeUserToSendMails { get => _explicitNullValueNudgeUserToSendMails; set { _explicitNullValueNudgeUserToSendMails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nudge_user_to_send_mails"); else _explicitNullProperties?.Remove("nudge_user_to_send_mails"); } }
+        private bool? _explicitNullValueNudgeUserToSendMails = default!;
         /// <summary>The nylas_api_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NylasApiVersion { get; set; }
+        public UntypedNode? NylasApiVersion { get => _explicitNullValueNylasApiVersion; set { _explicitNullValueNylasApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nylas_api_version"); else _explicitNullProperties?.Remove("nylas_api_version"); } }
+        private UntypedNode? _explicitNullValueNylasApiVersion = default!;
 #nullable restore
 #else
-        public UntypedNode NylasApiVersion { get; set; }
+        public UntypedNode NylasApiVersion { get => _explicitNullValueNylasApiVersion; set { _explicitNullValueNylasApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nylas_api_version"); else _explicitNullProperties?.Remove("nylas_api_version"); } }
+        private UntypedNode _explicitNullValueNylasApiVersion = default!;
 #endif
         /// <summary>The nylas_provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NylasProvider { get; set; }
+        public UntypedNode? NylasProvider { get => _explicitNullValueNylasProvider; set { _explicitNullValueNylasProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nylas_provider"); else _explicitNullProperties?.Remove("nylas_provider"); } }
+        private UntypedNode? _explicitNullValueNylasProvider = default!;
 #nullable restore
 #else
-        public UntypedNode NylasProvider { get; set; }
+        public UntypedNode NylasProvider { get => _explicitNullValueNylasProvider; set { _explicitNullValueNylasProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nylas_provider"); else _explicitNullProperties?.Remove("nylas_provider"); } }
+        private UntypedNode _explicitNullValueNylasProvider = default!;
 #endif
         /// <summary>The provider_display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderDisplayName { get; set; }
+        public string? ProviderDisplayName { get => _explicitNullValueProviderDisplayName; set { _explicitNullValueProviderDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_display_name"); else _explicitNullProperties?.Remove("provider_display_name"); } }
+        private string? _explicitNullValueProviderDisplayName = default!;
 #nullable restore
 #else
-        public string ProviderDisplayName { get; set; }
+        public string ProviderDisplayName { get => _explicitNullValueProviderDisplayName; set { _explicitNullValueProviderDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_display_name"); else _explicitNullProperties?.Remove("provider_display_name"); } }
+        private string _explicitNullValueProviderDisplayName = default!;
 #endif
         /// <summary>The revoked_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RevokedAt { get; set; }
+        public UntypedNode? RevokedAt { get => _explicitNullValueRevokedAt; set { _explicitNullValueRevokedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revoked_at"); else _explicitNullProperties?.Remove("revoked_at"); } }
+        private UntypedNode? _explicitNullValueRevokedAt = default!;
 #nullable restore
 #else
-        public UntypedNode RevokedAt { get; set; }
+        public UntypedNode RevokedAt { get => _explicitNullValueRevokedAt; set { _explicitNullValueRevokedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revoked_at"); else _explicitNullProperties?.Remove("revoked_at"); } }
+        private UntypedNode _explicitNullValueRevokedAt = default!;
 #endif
         /// <summary>The seconds_delay_between_emails property</summary>
-        public int? SecondsDelayBetweenEmails { get; set; }
+        public int? SecondsDelayBetweenEmails { get => _explicitNullValueSecondsDelayBetweenEmails; set { _explicitNullValueSecondsDelayBetweenEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seconds_delay_between_emails"); else _explicitNullProperties?.Remove("seconds_delay_between_emails"); } }
+        private int? _explicitNullValueSecondsDelayBetweenEmails = default!;
         /// <summary>The sendgrid_api_key_v3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SendgridApiKeyV3 { get; set; }
+        public UntypedNode? SendgridApiKeyV3 { get => _explicitNullValueSendgridApiKeyV3; set { _explicitNullValueSendgridApiKeyV3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendgrid_api_key_v3"); else _explicitNullProperties?.Remove("sendgrid_api_key_v3"); } }
+        private UntypedNode? _explicitNullValueSendgridApiKeyV3 = default!;
 #nullable restore
 #else
-        public UntypedNode SendgridApiKeyV3 { get; set; }
+        public UntypedNode SendgridApiKeyV3 { get => _explicitNullValueSendgridApiKeyV3; set { _explicitNullValueSendgridApiKeyV3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendgrid_api_key_v3"); else _explicitNullProperties?.Remove("sendgrid_api_key_v3"); } }
+        private UntypedNode _explicitNullValueSendgridApiKeyV3 = default!;
 #endif
         /// <summary>The sendgrid_api_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SendgridApiUser { get; set; }
+        public UntypedNode? SendgridApiUser { get => _explicitNullValueSendgridApiUser; set { _explicitNullValueSendgridApiUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendgrid_api_user"); else _explicitNullProperties?.Remove("sendgrid_api_user"); } }
+        private UntypedNode? _explicitNullValueSendgridApiUser = default!;
 #nullable restore
 #else
-        public UntypedNode SendgridApiUser { get; set; }
+        public UntypedNode SendgridApiUser { get => _explicitNullValueSendgridApiUser; set { _explicitNullValueSendgridApiUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendgrid_api_user"); else _explicitNullProperties?.Remove("sendgrid_api_user"); } }
+        private UntypedNode _explicitNullValueSendgridApiUser = default!;
 #endif
         /// <summary>The signature_edit_disabled property</summary>
-        public bool? SignatureEditDisabled { get; set; }
+        public bool? SignatureEditDisabled { get => _explicitNullValueSignatureEditDisabled; set { _explicitNullValueSignatureEditDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_edit_disabled"); else _explicitNullProperties?.Remove("signature_edit_disabled"); } }
+        private bool? _explicitNullValueSignatureEditDisabled = default!;
         /// <summary>The signature_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureHtml { get; set; }
+        public string? SignatureHtml { get => _explicitNullValueSignatureHtml; set { _explicitNullValueSignatureHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_html"); else _explicitNullProperties?.Remove("signature_html"); } }
+        private string? _explicitNullValueSignatureHtml = default!;
 #nullable restore
 #else
-        public string SignatureHtml { get; set; }
+        public string SignatureHtml { get => _explicitNullValueSignatureHtml; set { _explicitNullValueSignatureHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_html"); else _explicitNullProperties?.Remove("signature_html"); } }
+        private string _explicitNullValueSignatureHtml = default!;
 #endif
         /// <summary>The true_warmup_approximate_end_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TrueWarmupApproximateEndDate { get; set; }
+        public UntypedNode? TrueWarmupApproximateEndDate { get => _explicitNullValueTrueWarmupApproximateEndDate; set { _explicitNullValueTrueWarmupApproximateEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_approximate_end_date"); else _explicitNullProperties?.Remove("true_warmup_approximate_end_date"); } }
+        private UntypedNode? _explicitNullValueTrueWarmupApproximateEndDate = default!;
 #nullable restore
 #else
-        public UntypedNode TrueWarmupApproximateEndDate { get; set; }
+        public UntypedNode TrueWarmupApproximateEndDate { get => _explicitNullValueTrueWarmupApproximateEndDate; set { _explicitNullValueTrueWarmupApproximateEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_approximate_end_date"); else _explicitNullProperties?.Remove("true_warmup_approximate_end_date"); } }
+        private UntypedNode _explicitNullValueTrueWarmupApproximateEndDate = default!;
 #endif
         /// <summary>The true_warmup_daily_limit property</summary>
-        public int? TrueWarmupDailyLimit { get; set; }
+        public int? TrueWarmupDailyLimit { get => _explicitNullValueTrueWarmupDailyLimit; set { _explicitNullValueTrueWarmupDailyLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_daily_limit"); else _explicitNullProperties?.Remove("true_warmup_daily_limit"); } }
+        private int? _explicitNullValueTrueWarmupDailyLimit = default!;
         /// <summary>The true_warmup_enabled property</summary>
-        public bool? TrueWarmupEnabled { get; set; }
+        public bool? TrueWarmupEnabled { get => _explicitNullValueTrueWarmupEnabled; set { _explicitNullValueTrueWarmupEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_enabled"); else _explicitNullProperties?.Remove("true_warmup_enabled"); } }
+        private bool? _explicitNullValueTrueWarmupEnabled = default!;
         /// <summary>The true_warmup_enable_thresholds property</summary>
-        public bool? TrueWarmupEnableThresholds { get; set; }
+        public bool? TrueWarmupEnableThresholds { get => _explicitNullValueTrueWarmupEnableThresholds; set { _explicitNullValueTrueWarmupEnableThresholds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_enable_thresholds"); else _explicitNullProperties?.Remove("true_warmup_enable_thresholds"); } }
+        private bool? _explicitNullValueTrueWarmupEnableThresholds = default!;
         /// <summary>The true_warmup_last_throttled_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TrueWarmupLastThrottledAt { get; set; }
+        public UntypedNode? TrueWarmupLastThrottledAt { get => _explicitNullValueTrueWarmupLastThrottledAt; set { _explicitNullValueTrueWarmupLastThrottledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_last_throttled_at"); else _explicitNullProperties?.Remove("true_warmup_last_throttled_at"); } }
+        private UntypedNode? _explicitNullValueTrueWarmupLastThrottledAt = default!;
 #nullable restore
 #else
-        public UntypedNode TrueWarmupLastThrottledAt { get; set; }
+        public UntypedNode TrueWarmupLastThrottledAt { get => _explicitNullValueTrueWarmupLastThrottledAt; set { _explicitNullValueTrueWarmupLastThrottledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_last_throttled_at"); else _explicitNullProperties?.Remove("true_warmup_last_throttled_at"); } }
+        private UntypedNode _explicitNullValueTrueWarmupLastThrottledAt = default!;
 #endif
         /// <summary>The true_warmup_progress property</summary>
-        public int? TrueWarmupProgress { get; set; }
+        public int? TrueWarmupProgress { get => _explicitNullValueTrueWarmupProgress; set { _explicitNullValueTrueWarmupProgress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_progress"); else _explicitNullProperties?.Remove("true_warmup_progress"); } }
+        private int? _explicitNullValueTrueWarmupProgress = default!;
         /// <summary>The true_warmup_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TrueWarmupStatus { get; set; }
+        public UntypedNode? TrueWarmupStatus { get => _explicitNullValueTrueWarmupStatus; set { _explicitNullValueTrueWarmupStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_status"); else _explicitNullProperties?.Remove("true_warmup_status"); } }
+        private UntypedNode? _explicitNullValueTrueWarmupStatus = default!;
 #nullable restore
 #else
-        public UntypedNode TrueWarmupStatus { get; set; }
+        public UntypedNode TrueWarmupStatus { get => _explicitNullValueTrueWarmupStatus; set { _explicitNullValueTrueWarmupStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_status"); else _explicitNullProperties?.Remove("true_warmup_status"); } }
+        private UntypedNode _explicitNullValueTrueWarmupStatus = default!;
 #endif
         /// <summary>The true_warmup_thresholds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds? TrueWarmupThresholds { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds? TrueWarmupThresholds { get => _explicitNullValueTrueWarmupThresholds; set { _explicitNullValueTrueWarmupThresholds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_thresholds"); else _explicitNullProperties?.Remove("true_warmup_thresholds"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds? _explicitNullValueTrueWarmupThresholds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds TrueWarmupThresholds { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds TrueWarmupThresholds { get => _explicitNullValueTrueWarmupThresholds; set { _explicitNullValueTrueWarmupThresholds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("true_warmup_thresholds"); else _explicitNullProperties?.Remove("true_warmup_thresholds"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds _explicitNullValueTrueWarmupThresholds = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem"/> and sets the default values.
@@ -302,7 +428,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -413,6 +539,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds>("true_warmup_thresholds", TrueWarmupThresholds);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

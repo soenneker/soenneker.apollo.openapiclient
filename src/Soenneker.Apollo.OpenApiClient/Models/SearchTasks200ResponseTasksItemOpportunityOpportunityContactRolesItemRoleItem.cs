@@ -11,34 +11,52 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("crm_id") is { } nullNodeCrmId && nullNodeCrmId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrmId = null;
+            if (parseNode.GetChildNode("crm_role_id") is { } nullNodeCrmRoleId && nullNodeCrmRoleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrmRoleId = null;
+            if (parseNode.GetChildNode("is_primary") is { } nullNodeIsPrimary && nullNodeIsPrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrimary = null;
+            if (parseNode.GetChildNode("opportunity_contact_role_type_id") is { } nullNodeOpportunityContactRoleTypeId && nullNodeOpportunityContactRoleTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityContactRoleTypeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The crm_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CrmId { get; set; }
+        public UntypedNode? CrmId { get => _explicitNullValueCrmId; set { _explicitNullValueCrmId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crm_id"); else _explicitNullProperties?.Remove("crm_id"); } }
+        private UntypedNode? _explicitNullValueCrmId = default!;
 #nullable restore
 #else
-        public UntypedNode CrmId { get; set; }
+        public UntypedNode CrmId { get => _explicitNullValueCrmId; set { _explicitNullValueCrmId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crm_id"); else _explicitNullProperties?.Remove("crm_id"); } }
+        private UntypedNode _explicitNullValueCrmId = default!;
 #endif
         /// <summary>The crm_role_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CrmRoleId { get; set; }
+        public UntypedNode? CrmRoleId { get => _explicitNullValueCrmRoleId; set { _explicitNullValueCrmRoleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crm_role_id"); else _explicitNullProperties?.Remove("crm_role_id"); } }
+        private UntypedNode? _explicitNullValueCrmRoleId = default!;
 #nullable restore
 #else
-        public UntypedNode CrmRoleId { get; set; }
+        public UntypedNode CrmRoleId { get => _explicitNullValueCrmRoleId; set { _explicitNullValueCrmRoleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crm_role_id"); else _explicitNullProperties?.Remove("crm_role_id"); } }
+        private UntypedNode _explicitNullValueCrmRoleId = default!;
 #endif
         /// <summary>The is_primary property</summary>
-        public bool? IsPrimary { get; set; }
+        public bool? IsPrimary { get => _explicitNullValueIsPrimary; set { _explicitNullValueIsPrimary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_primary"); else _explicitNullProperties?.Remove("is_primary"); } }
+        private bool? _explicitNullValueIsPrimary = default!;
         /// <summary>The opportunity_contact_role_type_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpportunityContactRoleTypeId { get; set; }
+        public string? OpportunityContactRoleTypeId { get => _explicitNullValueOpportunityContactRoleTypeId; set { _explicitNullValueOpportunityContactRoleTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_contact_role_type_id"); else _explicitNullProperties?.Remove("opportunity_contact_role_type_id"); } }
+        private string? _explicitNullValueOpportunityContactRoleTypeId = default!;
 #nullable restore
 #else
-        public string OpportunityContactRoleTypeId { get; set; }
+        public string OpportunityContactRoleTypeId { get => _explicitNullValueOpportunityContactRoleTypeId; set { _explicitNullValueOpportunityContactRoleTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_contact_role_type_id"); else _explicitNullProperties?.Remove("opportunity_contact_role_type_id"); } }
+        private string _explicitNullValueOpportunityContactRoleTypeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItem"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemOpportunityOpportunityContactRolesItemRoleItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("crm_role_id", CrmRoleId);
             writer.WriteBoolValue("is_primary", IsPrimary);
             writer.WriteStringValue("opportunity_contact_role_type_id", OpportunityContactRoleTypeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -59,6 +59,8 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Email_send_status
                 { "404", global::Soenneker.Apollo.OpenApiClient.Models.CheckEmailSendStatus404Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.CheckEmailSendStatus422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.CheckEmailSendStatus429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.CheckEmailSendStatus200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.CheckEmailSendStatus200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

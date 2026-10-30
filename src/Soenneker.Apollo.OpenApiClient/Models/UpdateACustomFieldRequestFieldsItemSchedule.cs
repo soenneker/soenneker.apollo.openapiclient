@@ -13,42 +13,68 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateACustomFieldRequestFieldsItemSchedule : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("end_date") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("max_executions") is { } nullNodeMaxExecutions && nullNodeMaxExecutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxExecutions = null;
+            if (parseNode.GetChildNode("reset_execution_count") is { } nullNodeResetExecutionCount && nullNodeResetExecutionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetExecutionCount = null;
+            if (parseNode.GetChildNode("run_limit") is { } nullNodeRunLimit && nullNodeRunLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunLimit = null;
+            if (parseNode.GetChildNode("schedule_config") is { } nullNodeScheduleConfig && nullNodeScheduleConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleConfig = null;
+            if (parseNode.GetChildNode("schedule_timezone") is { } nullNodeScheduleTimezone && nullNodeScheduleTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleTimezone = null;
+            if (parseNode.GetChildNode("schedule_type") is { } nullNodeScheduleType && nullNodeScheduleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the schedule is active.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The date when the schedule stops running. &lt;br&gt;&lt;br&gt;Example: `2026-12-31`</summary>
-        public Date? EndDate { get; set; }
+        public Date? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        private Date? _explicitNullValueEndDate = default!;
         /// <summary>The maximum number of times the schedule runs before it stops.</summary>
-        public double? MaxExecutions { get; set; }
+        public double? MaxExecutions { get => _explicitNullValueMaxExecutions; set { _explicitNullValueMaxExecutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_executions"); else _explicitNullProperties?.Remove("max_executions"); } }
+        private double? _explicitNullValueMaxExecutions = default!;
         /// <summary>Set to `true` to reset the number of executions Apollo has counted against `max_executions`.</summary>
-        public bool? ResetExecutionCount { get; set; }
+        public bool? ResetExecutionCount { get => _explicitNullValueResetExecutionCount; set { _explicitNullValueResetExecutionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_execution_count"); else _explicitNullProperties?.Remove("reset_execution_count"); } }
+        private bool? _explicitNullValueResetExecutionCount = default!;
         /// <summary>The maximum number of records Apollo processes in a single scheduled run.</summary>
-        public double? RunLimit { get; set; }
+        public double? RunLimit { get => _explicitNullValueRunLimit; set { _explicitNullValueRunLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_limit"); else _explicitNullProperties?.Remove("run_limit"); } }
+        private double? _explicitNullValueRunLimit = default!;
         /// <summary>The specific time the schedule runs. Which parameters apply depends on `schedule_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig? ScheduleConfig { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig? ScheduleConfig { get => _explicitNullValueScheduleConfig; set { _explicitNullValueScheduleConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_config"); else _explicitNullProperties?.Remove("schedule_config"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig? _explicitNullValueScheduleConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig ScheduleConfig { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig ScheduleConfig { get => _explicitNullValueScheduleConfig; set { _explicitNullValueScheduleConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_config"); else _explicitNullProperties?.Remove("schedule_config"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig _explicitNullValueScheduleConfig = default!;
 #endif
         /// <summary>The timezone that Apollo evaluates the schedule in. &lt;br&gt;&lt;br&gt;Example: `America/Los_Angeles`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleTimezone { get; set; }
+        public string? ScheduleTimezone { get => _explicitNullValueScheduleTimezone; set { _explicitNullValueScheduleTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_timezone"); else _explicitNullProperties?.Remove("schedule_timezone"); } }
+        private string? _explicitNullValueScheduleTimezone = default!;
 #nullable restore
 #else
-        public string ScheduleTimezone { get; set; }
+        public string ScheduleTimezone { get => _explicitNullValueScheduleTimezone; set { _explicitNullValueScheduleTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_timezone"); else _explicitNullProperties?.Remove("schedule_timezone"); } }
+        private string _explicitNullValueScheduleTimezone = default!;
 #endif
         /// <summary>How often the schedule runs, such as daily, weekly, or monthly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleType { get; set; }
+        public string? ScheduleType { get => _explicitNullValueScheduleType; set { _explicitNullValueScheduleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_type"); else _explicitNullProperties?.Remove("schedule_type"); } }
+        private string? _explicitNullValueScheduleType = default!;
 #nullable restore
 #else
-        public string ScheduleType { get; set; }
+        public string ScheduleType { get => _explicitNullValueScheduleType; set { _explicitNullValueScheduleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_type"); else _explicitNullProperties?.Remove("schedule_type"); } }
+        private string _explicitNullValueScheduleType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemSchedule"/> and sets the default values.
@@ -65,7 +91,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemSchedule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemSchedule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemSchedule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemScheduleScheduleConfig>("schedule_config", ScheduleConfig);
             writer.WriteStringValue("schedule_timezone", ScheduleTimezone);
             writer.WriteStringValue("schedule_type", ScheduleType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

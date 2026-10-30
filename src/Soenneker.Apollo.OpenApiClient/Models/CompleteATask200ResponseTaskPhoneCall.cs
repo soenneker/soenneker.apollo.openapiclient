@@ -12,50 +12,74 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CompleteATask200ResponseTaskPhoneCall : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("answered") is { } nullNodeAnswered && nullNodeAnswered.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Answered = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("phone_call_outcome_id") is { } nullNodePhoneCallOutcomeId && nullNodePhoneCallOutcomeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallOutcomeId = null;
+            if (parseNode.GetChildNode("phone_call_purpose_id") is { } nullNodePhoneCallPurposeId && nullNodePhoneCallPurposeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallPurposeId = null;
+            if (parseNode.GetChildNode("to_number") is { } nullNodeToNumber && nullNodeToNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The answered property</summary>
-        public bool? Answered { get; set; }
+        public bool? Answered { get => _explicitNullValueAnswered; set { _explicitNullValueAnswered = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answered"); else _explicitNullProperties?.Remove("answered"); } }
+        private bool? _explicitNullValueAnswered = default!;
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The phone_call_outcome_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PhoneCallOutcomeId { get; set; }
+        public UntypedNode? PhoneCallOutcomeId { get => _explicitNullValuePhoneCallOutcomeId; set { _explicitNullValuePhoneCallOutcomeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_outcome_id"); else _explicitNullProperties?.Remove("phone_call_outcome_id"); } }
+        private UntypedNode? _explicitNullValuePhoneCallOutcomeId = default!;
 #nullable restore
 #else
-        public UntypedNode PhoneCallOutcomeId { get; set; }
+        public UntypedNode PhoneCallOutcomeId { get => _explicitNullValuePhoneCallOutcomeId; set { _explicitNullValuePhoneCallOutcomeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_outcome_id"); else _explicitNullProperties?.Remove("phone_call_outcome_id"); } }
+        private UntypedNode _explicitNullValuePhoneCallOutcomeId = default!;
 #endif
         /// <summary>The phone_call_purpose_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PhoneCallPurposeId { get; set; }
+        public UntypedNode? PhoneCallPurposeId { get => _explicitNullValuePhoneCallPurposeId; set { _explicitNullValuePhoneCallPurposeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_purpose_id"); else _explicitNullProperties?.Remove("phone_call_purpose_id"); } }
+        private UntypedNode? _explicitNullValuePhoneCallPurposeId = default!;
 #nullable restore
 #else
-        public UntypedNode PhoneCallPurposeId { get; set; }
+        public UntypedNode PhoneCallPurposeId { get => _explicitNullValuePhoneCallPurposeId; set { _explicitNullValuePhoneCallPurposeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_purpose_id"); else _explicitNullProperties?.Remove("phone_call_purpose_id"); } }
+        private UntypedNode _explicitNullValuePhoneCallPurposeId = default!;
 #endif
         /// <summary>The number that was called. May be partially masked depending on your team&apos;s phone number redaction settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToNumber { get; set; }
+        public string? ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_number"); else _explicitNullProperties?.Remove("to_number"); } }
+        private string? _explicitNullValueToNumber = default!;
 #nullable restore
 #else
-        public string ToNumber { get; set; }
+        public string ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_number"); else _explicitNullProperties?.Remove("to_number"); } }
+        private string _explicitNullValueToNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskPhoneCall"/> and sets the default values.
@@ -72,7 +96,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskPhoneCall CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskPhoneCall();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.CompleteATask200ResponseTaskPhoneCall(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +127,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("phone_call_outcome_id", PhoneCallOutcomeId);
             writer.WriteObjectValue<UntypedNode>("phone_call_purpose_id", PhoneCallPurposeId);
             writer.WriteStringValue("to_number", ToNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -55,6 +55,8 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
             {
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.OrganizationSearch200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -39,6 +39,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +53,10 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "403", global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals403ResponseError.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

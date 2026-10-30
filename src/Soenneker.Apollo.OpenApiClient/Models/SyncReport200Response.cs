@@ -11,32 +11,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SyncReport200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("goals") is { } nullNodeGoals && nullNodeGoals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Goals = null;
+            if (parseNode.GetChildNode("incompatible_filters") is { } nullNodeIncompatibleFilters && nullNodeIncompatibleFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncompatibleFilters = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Goal attainment data. This field is unrelated to data querying — you can ignore it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem>? Goals { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem>? Goals { get => _explicitNullValueGoals; set { _explicitNullValueGoals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goals"); else _explicitNullProperties?.Remove("goals"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem>? _explicitNullValueGoals = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem> Goals { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem> Goals { get => _explicitNullValueGoals; set { _explicitNullValueGoals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goals"); else _explicitNullProperties?.Remove("goals"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem> _explicitNullValueGoals = default!;
 #endif
         /// <summary>A map of filter keys that were incompatible with one or more requested metrics and were silently ignored. Keys are filter names; values are arrays of affected metric names. Inspect this field when results appear incomplete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters? IncompatibleFilters { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters? IncompatibleFilters { get => _explicitNullValueIncompatibleFilters; set { _explicitNullValueIncompatibleFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incompatible_filters"); else _explicitNullProperties?.Remove("incompatible_filters"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters? _explicitNullValueIncompatibleFilters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters IncompatibleFilters { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters IncompatibleFilters { get => _explicitNullValueIncompatibleFilters; set { _explicitNullValueIncompatibleFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incompatible_filters"); else _explicitNullProperties?.Remove("incompatible_filters"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters _explicitNullValueIncompatibleFilters = default!;
 #endif
         /// <summary>The query result. Contains four sub-keys depending on query mode and flags. See response examples for each shape.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse? Response { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse Response { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200Response"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseGoalsItem>("goals", Goals);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseIncompatibleFilters>("incompatible_filters", IncompatibleFilters);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse>("response", Response);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

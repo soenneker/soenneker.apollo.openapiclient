@@ -11,32 +11,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PhonecallsCreate200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
+            if (parseNode.GetChildNode("phone_call") is { } nullNodePhoneCall && nullNodePhoneCall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCall = null;
+            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact? Contact { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact? _explicitNullValueContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact Contact { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact _explicitNullValueContact = default!;
 #endif
         /// <summary>The phone_call property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall? PhoneCall { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall? PhoneCall { get => _explicitNullValuePhoneCall; set { _explicitNullValuePhoneCall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call"); else _explicitNullProperties?.Remove("phone_call"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall? _explicitNullValuePhoneCall = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall PhoneCall { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall PhoneCall { get => _explicitNullValuePhoneCall; set { _explicitNullValuePhoneCall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call"); else _explicitNullProperties?.Remove("phone_call"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall _explicitNullValuePhoneCall = default!;
 #endif
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam? Team { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam Team { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam _explicitNullValueTeam = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContact>("contact", Contact);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCall>("phone_call", PhoneCall);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseTeam>("team", Team);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

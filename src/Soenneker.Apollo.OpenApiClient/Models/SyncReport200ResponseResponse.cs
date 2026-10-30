@@ -12,32 +12,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SyncReport200ResponseResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("group_by_total_response") is { } nullNodeGroupByTotalResponse && nullNodeGroupByTotalResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupByTotalResponse = null;
+            if (parseNode.GetChildNode("pivot_group_by_total_response") is { } nullNodePivotGroupByTotalResponse && nullNodePivotGroupByTotalResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PivotGroupByTotalResponse = null;
+            if (parseNode.GetChildNode("table_response") is { } nullNodeTableResponse && nullNodeTableResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableResponse = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Aggregated totals per &lt;code&gt;group_by&lt;/code&gt; dimension value, without pivot breakdown. Same bucketed structure as &lt;code&gt;table_response&lt;/code&gt;. Populated when &lt;code&gt;group_by_totals_selected&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;; otherwise &lt;code&gt;{}&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse? GroupByTotalResponse { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse? GroupByTotalResponse { get => _explicitNullValueGroupByTotalResponse; set { _explicitNullValueGroupByTotalResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_total_response"); else _explicitNullProperties?.Remove("group_by_total_response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse? _explicitNullValueGroupByTotalResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse GroupByTotalResponse { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse GroupByTotalResponse { get => _explicitNullValueGroupByTotalResponse; set { _explicitNullValueGroupByTotalResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_total_response"); else _explicitNullProperties?.Remove("group_by_total_response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse _explicitNullValueGroupByTotalResponse = default!;
 #endif
         /// <summary>Aggregated totals per &lt;code&gt;pivot_group_by&lt;/code&gt; dimension value, without group_by breakdown. Populated when &lt;code&gt;pivot_group_by_totals_selected&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;; otherwise &lt;code&gt;{}&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse? PivotGroupByTotalResponse { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse? PivotGroupByTotalResponse { get => _explicitNullValuePivotGroupByTotalResponse; set { _explicitNullValuePivotGroupByTotalResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pivot_group_by_total_response"); else _explicitNullProperties?.Remove("pivot_group_by_total_response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse? _explicitNullValuePivotGroupByTotalResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse PivotGroupByTotalResponse { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse PivotGroupByTotalResponse { get => _explicitNullValuePivotGroupByTotalResponse; set { _explicitNullValuePivotGroupByTotalResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pivot_group_by_total_response"); else _explicitNullProperties?.Remove("pivot_group_by_total_response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse _explicitNullValuePivotGroupByTotalResponse = default!;
 #endif
         /// <summary>Main aggregated data. Shape varies by query mode: a flat key/value object when &lt;code&gt;group_by&lt;/code&gt; is empty (metric name → value); a bucketed object &lt;code&gt;{ &quot;dimension&quot;: { &quot;buckets&quot;: [...] } }&lt;/code&gt; for grouped queries; a nested bucketed object for pivot queries where the outer key is the &lt;code&gt;pivot_group_by&lt;/code&gt; dimension and each outer bucket contains a nested &lt;code&gt;group_by&lt;/code&gt; dimension with its own &lt;code&gt;buckets&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse? TableResponse { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse? TableResponse { get => _explicitNullValueTableResponse; set { _explicitNullValueTableResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_response"); else _explicitNullProperties?.Remove("table_response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse? _explicitNullValueTableResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse TableResponse { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse TableResponse { get => _explicitNullValueTableResponse; set { _explicitNullValueTableResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_response"); else _explicitNullProperties?.Remove("table_response"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse _explicitNullValueTableResponse = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseGroupByTotalResponse>("group_by_total_response", GroupByTotalResponse);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponsePivotGroupByTotalResponse>("pivot_group_by_total_response", PivotGroupByTotalResponse);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200ResponseResponseTableResponse>("table_response", TableResponse);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

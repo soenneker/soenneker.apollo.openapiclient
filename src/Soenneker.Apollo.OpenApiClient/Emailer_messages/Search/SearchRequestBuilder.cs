@@ -55,6 +55,8 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Search
             {
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.EmailerMessagesSearch422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.EmailerMessagesSearch429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

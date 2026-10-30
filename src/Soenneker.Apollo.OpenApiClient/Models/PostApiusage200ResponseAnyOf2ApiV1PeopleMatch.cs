@@ -11,32 +11,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiusage200ResponseAnyOf2ApiV1PeopleMatch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
+            if (parseNode.GetChildNode("hour") is { } nullNodeHour && nullNodeHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hour = null;
+            if (parseNode.GetChildNode("minute") is { } nullNodeMinute && nullNodeMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minute = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The day property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay? Day { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("day"); else _explicitNullProperties?.Remove("day"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay? _explicitNullValueDay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay Day { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("day"); else _explicitNullProperties?.Remove("day"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay _explicitNullValueDay = default!;
 #endif
         /// <summary>The hour property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour? Hour { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour? Hour { get => _explicitNullValueHour; set { _explicitNullValueHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hour"); else _explicitNullProperties?.Remove("hour"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour? _explicitNullValueHour = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour Hour { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour Hour { get => _explicitNullValueHour; set { _explicitNullValueHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hour"); else _explicitNullProperties?.Remove("hour"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour _explicitNullValueHour = default!;
 #endif
         /// <summary>The minute property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute? Minute { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute? Minute { get => _explicitNullValueMinute; set { _explicitNullValueMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minute"); else _explicitNullProperties?.Remove("minute"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute? _explicitNullValueMinute = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute Minute { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute Minute { get => _explicitNullValueMinute; set { _explicitNullValueMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minute"); else _explicitNullProperties?.Remove("minute"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute _explicitNullValueMinute = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchDay>("day", Day);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchHour>("hour", Hour);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatchMinute>("minute", Minute);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

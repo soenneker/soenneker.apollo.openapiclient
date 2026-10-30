@@ -167,6 +167,7 @@ namespace Soenneker.Apollo.OpenApiClient
             get => new global::Soenneker.Apollo.OpenApiClient.Tasks.TasksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The typed_custom_fields property</summary>
+        [Obsolete("")]
         public global::Soenneker.Apollo.OpenApiClient.Typed_custom_fields.Typed_custom_fieldsRequestBuilder Typed_custom_fields
         {
             get => new global::Soenneker.Apollo.OpenApiClient.Typed_custom_fields.Typed_custom_fieldsRequestBuilder(PathParameters, RequestAdapter);

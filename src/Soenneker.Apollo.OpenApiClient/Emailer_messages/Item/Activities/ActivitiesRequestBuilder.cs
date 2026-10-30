@@ -48,7 +48,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages.Item.Activities
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `Not supported`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4409237165837-Sequences-Overview&quot; target=&quot;_blank&quot;&gt;Sequences&lt;/a&gt; are outreach campaigns that sales teams use to reach out to contacts over a planned period of time.&lt;br&gt;&lt;br&gt;Use the check email stats endpoint to review the complete details for an email sent as part of an Apollo sequence. This includes the contents of the emails, stats related to the email such as opens and clicks, and details about the contact that received the email.

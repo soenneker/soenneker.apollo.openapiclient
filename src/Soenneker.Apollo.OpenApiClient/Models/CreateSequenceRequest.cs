@@ -11,113 +11,174 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateSequenceRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("create_task_if_email_open") is { } nullNodeCreateTaskIfEmailOpen && nullNodeCreateTaskIfEmailOpen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTaskIfEmailOpen = null;
+            if (parseNode.GetChildNode("days_to_wait_before_mark_as_response") is { } nullNodeDaysToWaitBeforeMarkAsResponse && nullNodeDaysToWaitBeforeMarkAsResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysToWaitBeforeMarkAsResponse = null;
+            if (parseNode.GetChildNode("emailer_schedule_id") is { } nullNodeEmailerScheduleId && nullNodeEmailerScheduleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerScheduleId = null;
+            if (parseNode.GetChildNode("emailer_steps") is { } nullNodeEmailerSteps && nullNodeEmailerSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerSteps = null;
+            if (parseNode.GetChildNode("email_open_trigger_task_threshold") is { } nullNodeEmailOpenTriggerTaskThreshold && nullNodeEmailOpenTriggerTaskThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailOpenTriggerTaskThreshold = null;
+            if (parseNode.GetChildNode("excluded_account_stage_ids") is { } nullNodeExcludedAccountStageIds && nullNodeExcludedAccountStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedAccountStageIds = null;
+            if (parseNode.GetChildNode("excluded_contact_stage_ids") is { } nullNodeExcludedContactStageIds && nullNodeExcludedContactStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedContactStageIds = null;
+            if (parseNode.GetChildNode("folder_id") is { } nullNodeFolderId && nullNodeFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderId = null;
+            if (parseNode.GetChildNode("ignore_apollo_global_email_bounce_list") is { } nullNodeIgnoreApolloGlobalEmailBounceList && nullNodeIgnoreApolloGlobalEmailBounceList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreApolloGlobalEmailBounceList = null;
+            if (parseNode.GetChildNode("label_names") is { } nullNodeLabelNames && nullNodeLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelNames = null;
+            if (parseNode.GetChildNode("mark_finished_if_click") is { } nullNodeMarkFinishedIfClick && nullNodeMarkFinishedIfClick.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkFinishedIfClick = null;
+            if (parseNode.GetChildNode("mark_finished_if_interested") is { } nullNodeMarkFinishedIfInterested && nullNodeMarkFinishedIfInterested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkFinishedIfInterested = null;
+            if (parseNode.GetChildNode("mark_finished_if_reply") is { } nullNodeMarkFinishedIfReply && nullNodeMarkFinishedIfReply.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkFinishedIfReply = null;
+            if (parseNode.GetChildNode("mark_paused_if_ooo") is { } nullNodeMarkPausedIfOoo && nullNodeMarkPausedIfOoo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkPausedIfOoo = null;
+            if (parseNode.GetChildNode("max_emails_per_day") is { } nullNodeMaxEmailsPerDay && nullNodeMaxEmailsPerDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxEmailsPerDay = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("same_account_reply_delay_days") is { } nullNodeSameAccountReplyDelayDays && nullNodeSameAccountReplyDelayDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SameAccountReplyDelayDays = null;
+            if (parseNode.GetChildNode("sequence_by_exact_daytime") is { } nullNodeSequenceByExactDaytime && nullNodeSequenceByExactDaytime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceByExactDaytime = null;
+            if (parseNode.GetChildNode("sequence_ruleset_id") is { } nullNodeSequenceRulesetId && nullNodeSequenceRulesetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceRulesetId = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Set to `true` to activate the sequence immediately after creation so contacts added to it start receiving steps. If omitted or `false`, the sequence is created in an inactive state.</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set to `true` to automatically create a task when a contact opens an email a certain number of times. Use `email_open_trigger_task_threshold` to set the number of opens.</summary>
-        public bool? CreateTaskIfEmailOpen { get; set; }
+        public bool? CreateTaskIfEmailOpen { get => _explicitNullValueCreateTaskIfEmailOpen; set { _explicitNullValueCreateTaskIfEmailOpen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_task_if_email_open"); else _explicitNullProperties?.Remove("create_task_if_email_open"); } }
+        private bool? _explicitNullValueCreateTaskIfEmailOpen = default!;
         /// <summary>The number of days to wait before an incoming email is no longer treated as a response to the sequence.</summary>
-        public int? DaysToWaitBeforeMarkAsResponse { get; set; }
+        public int? DaysToWaitBeforeMarkAsResponse { get => _explicitNullValueDaysToWaitBeforeMarkAsResponse; set { _explicitNullValueDaysToWaitBeforeMarkAsResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_to_wait_before_mark_as_response"); else _explicitNullProperties?.Remove("days_to_wait_before_mark_as_response"); } }
+        private int? _explicitNullValueDaysToWaitBeforeMarkAsResponse = default!;
         /// <summary>The Apollo ID for the schedule that controls the days and times emails are sent. The schedule must belong to your team and must not be empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailerScheduleId { get; set; }
+        public string? EmailerScheduleId { get => _explicitNullValueEmailerScheduleId; set { _explicitNullValueEmailerScheduleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_schedule_id"); else _explicitNullProperties?.Remove("emailer_schedule_id"); } }
+        private string? _explicitNullValueEmailerScheduleId = default!;
 #nullable restore
 #else
-        public string EmailerScheduleId { get; set; }
+        public string EmailerScheduleId { get => _explicitNullValueEmailerScheduleId; set { _explicitNullValueEmailerScheduleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_schedule_id"); else _explicitNullProperties?.Remove("emailer_schedule_id"); } }
+        private string _explicitNullValueEmailerScheduleId = default!;
 #endif
         /// <summary>The steps to create in the sequence. Steps run in the order they appear in this array; the first item becomes the first step. There is no separate ordering field on input.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem>? EmailerSteps { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem>? EmailerSteps { get => _explicitNullValueEmailerSteps; set { _explicitNullValueEmailerSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_steps"); else _explicitNullProperties?.Remove("emailer_steps"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem>? _explicitNullValueEmailerSteps = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem> EmailerSteps { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem> EmailerSteps { get => _explicitNullValueEmailerSteps; set { _explicitNullValueEmailerSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_steps"); else _explicitNullProperties?.Remove("emailer_steps"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem> _explicitNullValueEmailerSteps = default!;
 #endif
         /// <summary>The number of email opens that triggers task creation when `create_task_if_email_open` is `true`.</summary>
-        public int? EmailOpenTriggerTaskThreshold { get; set; }
+        public int? EmailOpenTriggerTaskThreshold { get => _explicitNullValueEmailOpenTriggerTaskThreshold; set { _explicitNullValueEmailOpenTriggerTaskThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_open_trigger_task_threshold"); else _explicitNullProperties?.Remove("email_open_trigger_task_threshold"); } }
+        private int? _explicitNullValueEmailOpenTriggerTaskThreshold = default!;
         /// <summary>The Apollo IDs for account stages to exclude from the sequence. All IDs must belong to your team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExcludedAccountStageIds { get; set; }
+        public List<string>? ExcludedAccountStageIds { get => _explicitNullValueExcludedAccountStageIds; set { _explicitNullValueExcludedAccountStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_account_stage_ids"); else _explicitNullProperties?.Remove("excluded_account_stage_ids"); } }
+        private List<string>? _explicitNullValueExcludedAccountStageIds = default!;
 #nullable restore
 #else
-        public List<string> ExcludedAccountStageIds { get; set; }
+        public List<string> ExcludedAccountStageIds { get => _explicitNullValueExcludedAccountStageIds; set { _explicitNullValueExcludedAccountStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_account_stage_ids"); else _explicitNullProperties?.Remove("excluded_account_stage_ids"); } }
+        private List<string> _explicitNullValueExcludedAccountStageIds = default!;
 #endif
         /// <summary>The Apollo IDs for contact stages to exclude from the sequence. All IDs must belong to your team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExcludedContactStageIds { get; set; }
+        public List<string>? ExcludedContactStageIds { get => _explicitNullValueExcludedContactStageIds; set { _explicitNullValueExcludedContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_contact_stage_ids"); else _explicitNullProperties?.Remove("excluded_contact_stage_ids"); } }
+        private List<string>? _explicitNullValueExcludedContactStageIds = default!;
 #nullable restore
 #else
-        public List<string> ExcludedContactStageIds { get; set; }
+        public List<string> ExcludedContactStageIds { get => _explicitNullValueExcludedContactStageIds; set { _explicitNullValueExcludedContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_contact_stage_ids"); else _explicitNullProperties?.Remove("excluded_contact_stage_ids"); } }
+        private List<string> _explicitNullValueExcludedContactStageIds = default!;
 #endif
         /// <summary>The Apollo ID for the folder in which to place the sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderId { get; set; }
+        public string? FolderId { get => _explicitNullValueFolderId; set { _explicitNullValueFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_id"); else _explicitNullProperties?.Remove("folder_id"); } }
+        private string? _explicitNullValueFolderId = default!;
 #nullable restore
 #else
-        public string FolderId { get; set; }
+        public string FolderId { get => _explicitNullValueFolderId; set { _explicitNullValueFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_id"); else _explicitNullProperties?.Remove("folder_id"); } }
+        private string _explicitNullValueFolderId = default!;
 #endif
         /// <summary>Set to `true` to send emails to contacts even if their email address is on Apollo&apos;s global bounce list.</summary>
-        public bool? IgnoreApolloGlobalEmailBounceList { get; set; }
+        public bool? IgnoreApolloGlobalEmailBounceList { get => _explicitNullValueIgnoreApolloGlobalEmailBounceList; set { _explicitNullValueIgnoreApolloGlobalEmailBounceList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignore_apollo_global_email_bounce_list"); else _explicitNullProperties?.Remove("ignore_apollo_global_email_bounce_list"); } }
+        private bool? _explicitNullValueIgnoreApolloGlobalEmailBounceList = default!;
         /// <summary>Add the names of lists (labels) to apply to the sequence. Labels that do not exist yet are created. &lt;br&gt;&lt;br&gt;Example: `[&quot;Outbound&quot;, &quot;Q3&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LabelNames { get; set; }
+        public List<string>? LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
+        private List<string>? _explicitNullValueLabelNames = default!;
 #nullable restore
 #else
-        public List<string> LabelNames { get; set; }
+        public List<string> LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
+        private List<string> _explicitNullValueLabelNames = default!;
 #endif
         /// <summary>Set to `true` to mark contacts as finished in the sequence when they click a link in an email.</summary>
-        public bool? MarkFinishedIfClick { get; set; }
+        public bool? MarkFinishedIfClick { get => _explicitNullValueMarkFinishedIfClick; set { _explicitNullValueMarkFinishedIfClick = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mark_finished_if_click"); else _explicitNullProperties?.Remove("mark_finished_if_click"); } }
+        private bool? _explicitNullValueMarkFinishedIfClick = default!;
         /// <summary>Set to `true` to mark contacts as finished in the sequence when they are marked as interested.</summary>
-        public bool? MarkFinishedIfInterested { get; set; }
+        public bool? MarkFinishedIfInterested { get => _explicitNullValueMarkFinishedIfInterested; set { _explicitNullValueMarkFinishedIfInterested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mark_finished_if_interested"); else _explicitNullProperties?.Remove("mark_finished_if_interested"); } }
+        private bool? _explicitNullValueMarkFinishedIfInterested = default!;
         /// <summary>Set to `true` to mark contacts as finished in the sequence when they reply to an email.</summary>
-        public bool? MarkFinishedIfReply { get; set; }
+        public bool? MarkFinishedIfReply { get => _explicitNullValueMarkFinishedIfReply; set { _explicitNullValueMarkFinishedIfReply = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mark_finished_if_reply"); else _explicitNullProperties?.Remove("mark_finished_if_reply"); } }
+        private bool? _explicitNullValueMarkFinishedIfReply = default!;
         /// <summary>Set to `true` to pause contacts in the sequence when an out-of-office auto-reply is detected.</summary>
-        public bool? MarkPausedIfOoo { get; set; }
+        public bool? MarkPausedIfOoo { get => _explicitNullValueMarkPausedIfOoo; set { _explicitNullValueMarkPausedIfOoo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mark_paused_if_ooo"); else _explicitNullProperties?.Remove("mark_paused_if_ooo"); } }
+        private bool? _explicitNullValueMarkPausedIfOoo = default!;
         /// <summary>The maximum number of emails the sequence sends per day. Must not be negative.</summary>
-        public int? MaxEmailsPerDay { get; set; }
+        public int? MaxEmailsPerDay { get => _explicitNullValueMaxEmailsPerDay; set { _explicitNullValueMaxEmailsPerDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_emails_per_day"); else _explicitNullProperties?.Remove("max_emails_per_day"); } }
+        private int? _explicitNullValueMaxEmailsPerDay = default!;
         /// <summary>A human-readable name for the sequence. &lt;br&gt;&lt;br&gt;Example: `Q3 Outbound Outreach`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>**Deprecated.** This parameter is still accepted, but it no longer controls who can access the sequence and it is no longer returned in any sequence response. &lt;br&gt;&lt;br&gt;New sequences are created with restricted visibility, so only the owner can access the sequence until it is shared. To share it, call the &lt;a href=&quot;https://docs.apollo.io/reference/update-sequence&quot;&gt;update a sequence endpoint&lt;/a&gt; with the `sharing_permission` object.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Permissions { get; set; }
+        public string? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private string? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public string Permissions { get; set; }
+        public string Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private string _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The number of days to pause other contacts at the same account after a reply is received. The maximum value is `1000`.</summary>
-        public int? SameAccountReplyDelayDays { get; set; }
+        public int? SameAccountReplyDelayDays { get => _explicitNullValueSameAccountReplyDelayDays; set { _explicitNullValueSameAccountReplyDelayDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("same_account_reply_delay_days"); else _explicitNullProperties?.Remove("same_account_reply_delay_days"); } }
+        private int? _explicitNullValueSameAccountReplyDelayDays = default!;
         /// <summary>Set to `true` to schedule every step at an exact date and time (`exact_datetime` becomes required on each step) instead of using relative wait intervals (`wait_time`/`wait_mode`).</summary>
-        public bool? SequenceByExactDaytime { get; set; }
+        public bool? SequenceByExactDaytime { get => _explicitNullValueSequenceByExactDaytime; set { _explicitNullValueSequenceByExactDaytime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_by_exact_daytime"); else _explicitNullProperties?.Remove("sequence_by_exact_daytime"); } }
+        private bool? _explicitNullValueSequenceByExactDaytime = default!;
         /// <summary>The Apollo ID for an existing sequence ruleset to apply shared sequence settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceRulesetId { get; set; }
+        public string? SequenceRulesetId { get => _explicitNullValueSequenceRulesetId; set { _explicitNullValueSequenceRulesetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_ruleset_id"); else _explicitNullProperties?.Remove("sequence_ruleset_id"); } }
+        private string? _explicitNullValueSequenceRulesetId = default!;
 #nullable restore
 #else
-        public string SequenceRulesetId { get; set; }
+        public string SequenceRulesetId { get => _explicitNullValueSequenceRulesetId; set { _explicitNullValueSequenceRulesetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_ruleset_id"); else _explicitNullProperties?.Remove("sequence_ruleset_id"); } }
+        private string _explicitNullValueSequenceRulesetId = default!;
 #endif
         /// <summary>Ignored by this endpoint. The new sequence is always owned by the user your request acts as, returned as `object_owner_id` (alias `user_id`) — see &lt;a href=&quot;https://docs.apollo.io/reference/authentication&quot;&gt;Authentication&lt;/a&gt; for which user that is. &lt;br&gt;&lt;br&gt;To assign a different owner, create the sequence and then call the &lt;a href=&quot;https://docs.apollo.io/reference/update-sequence&quot;&gt;update a sequence endpoint&lt;/a&gt; with the `user_id` you want.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequest"/> and sets the default values.
@@ -134,7 +195,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -197,6 +258,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("sequence_by_exact_daytime", SequenceByExactDaytime);
             writer.WriteStringValue("sequence_ruleset_id", SequenceRulesetId);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

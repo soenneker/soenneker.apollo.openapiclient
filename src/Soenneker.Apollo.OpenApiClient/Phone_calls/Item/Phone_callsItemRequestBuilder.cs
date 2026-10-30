@@ -49,7 +49,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
         {
 #endif
             var requestInfo = ToPutRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PutPhoneCallsupdate200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `Master API key`**OAuth scopes:** `phone_call_update`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).Use the update call records endpoint to update your team&apos;s call records in Apollo.

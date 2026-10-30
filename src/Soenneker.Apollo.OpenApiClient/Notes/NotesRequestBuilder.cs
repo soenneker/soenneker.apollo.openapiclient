@@ -53,6 +53,8 @@ namespace Soenneker.Apollo.OpenApiClient.Notes
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes400Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfNotes200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

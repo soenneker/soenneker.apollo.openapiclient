@@ -11,42 +11,63 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchConversations200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("breadcrumbs") is { } nullNodeBreadcrumbs && nullNodeBreadcrumbs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breadcrumbs = null;
+            if (parseNode.GetChildNode("conversations") is { } nullNodeConversations && nullNodeConversations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conversations = null;
+            if (parseNode.GetChildNode("num_fetch_result") is { } nullNodeNumFetchResult && nullNodeNumFetchResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumFetchResult = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("playlist_clip_ids") is { } nullNodePlaylistClipIds && nullNodePlaylistClipIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaylistClipIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Breadcrumbs data associated with the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs? Breadcrumbs { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs? Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs? _explicitNullValueBreadcrumbs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs Breadcrumbs { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs _explicitNullValueBreadcrumbs = default!;
 #endif
         /// <summary>List of conversation summaries matching the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem>? Conversations { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem>? Conversations { get => _explicitNullValueConversations; set { _explicitNullValueConversations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversations"); else _explicitNullProperties?.Remove("conversations"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem>? _explicitNullValueConversations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem> Conversations { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem> Conversations { get => _explicitNullValueConversations; set { _explicitNullValueConversations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversations"); else _explicitNullProperties?.Remove("conversations"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem> _explicitNullValueConversations = default!;
 #endif
         /// <summary>Number of results returned.</summary>
-        public int? NumFetchResult { get; set; }
+        public int? NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        private int? _explicitNullValueNumFetchResult = default!;
         /// <summary>Pagination metadata for the result set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>IDs of playlist clips associated with the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PlaylistClipIds { get; set; }
+        public List<string>? PlaylistClipIds { get => _explicitNullValuePlaylistClipIds; set { _explicitNullValuePlaylistClipIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlist_clip_ids"); else _explicitNullProperties?.Remove("playlist_clip_ids"); } }
+        private List<string>? _explicitNullValuePlaylistClipIds = default!;
 #nullable restore
 #else
-        public List<string> PlaylistClipIds { get; set; }
+        public List<string> PlaylistClipIds { get => _explicitNullValuePlaylistClipIds; set { _explicitNullValuePlaylistClipIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlist_clip_ids"); else _explicitNullProperties?.Remove("playlist_clip_ids"); } }
+        private List<string> _explicitNullValuePlaylistClipIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200Response"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("num_fetch_result", NumFetchResult);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponsePagination>("pagination", Pagination);
             writer.WriteCollectionOfPrimitiveValues<string>("playlist_clip_ids", PlaylistClipIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

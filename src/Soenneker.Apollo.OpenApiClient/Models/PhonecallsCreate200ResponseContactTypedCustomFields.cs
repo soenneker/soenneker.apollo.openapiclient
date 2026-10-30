@@ -11,16 +11,26 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PhonecallsCreate200ResponseContactTypedCustomFields : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("677c0c4f451bfb02cf105e01") is { } nullNodeSixSevenSevenc0c4f451bfb02cf105e01 && nullNodeSixSevenSevenc0c4f451bfb02cf105e01.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixSevenSevenc0c4f451bfb02cf105e01 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The SixSevenSevenc0c4f451bfb02cf105e01 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SixSevenSevenc0c4f451bfb02cf105e01 { get; set; }
+        public string? SixSevenSevenc0c4f451bfb02cf105e01 { get => _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01; set { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("677c0c4f451bfb02cf105e01"); else _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); } }
+        private string? _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = default!;
 #nullable restore
 #else
-        public string SixSevenSevenc0c4f451bfb02cf105e01 { get; set; }
+        public string SixSevenSevenc0c4f451bfb02cf105e01 { get => _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01; set { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("677c0c4f451bfb02cf105e01"); else _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); } }
+        private string _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContactTypedCustomFields"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContactTypedCustomFields CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContactTypedCustomFields();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponseContactTypedCustomFields(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("677c0c4f451bfb02cf105e01", SixSevenSevenc0c4f451bfb02cf105e01);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

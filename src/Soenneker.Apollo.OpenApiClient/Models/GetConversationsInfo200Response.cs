@@ -11,158 +11,230 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetConversationsInfo200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_ids") is { } nullNodeAccountIds && nullNodeAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountIds = null;
+            if (parseNode.GetChildNode("audio_recording") is { } nullNodeAudioRecording && nullNodeAudioRecording.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioRecording = null;
+            if (parseNode.GetChildNode("bot_call_ended_reason") is { } nullNodeBotCallEndedReason && nullNodeBotCallEndedReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotCallEndedReason = null;
+            if (parseNode.GetChildNode("comment_count") is { } nullNodeCommentCount && nullNodeCommentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentCount = null;
+            if (parseNode.GetChildNode("conversation_type") is { } nullNodeConversationType && nullNodeConversationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationType = null;
+            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("failure_code") is { } nullNodeFailureCode && nullNodeFailureCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureCode = null;
+            if (parseNode.GetChildNode("host") is { } nullNodeHost && nullNodeHost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Host = null;
+            if (parseNode.GetChildNode("host_id") is { } nullNodeHostId && nullNodeHostId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_clip") is { } nullNodeIsClip && nullNodeIsClip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsClip = null;
+            if (parseNode.GetChildNode("is_private") is { } nullNodeIsPrivate && nullNodeIsPrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrivate = null;
+            if (parseNode.GetChildNode("is_shared_conversation") is { } nullNodeIsSharedConversation && nullNodeIsSharedConversation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSharedConversation = null;
+            if (parseNode.GetChildNode("label_id_names") is { } nullNodeLabelIdNames && nullNodeLabelIdNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelIdNames = null;
+            if (parseNode.GetChildNode("opportunities") is { } nullNodeOpportunities && nullNodeOpportunities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunities = null;
+            if (parseNode.GetChildNode("opportunity_ids") is { } nullNodeOpportunityIds && nullNodeOpportunityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityIds = null;
+            if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
+            if (parseNode.GetChildNode("playlist_clip_ids") is { } nullNodePlaylistClipIds && nullNodePlaylistClipIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaylistClipIds = null;
+            if (parseNode.GetChildNode("pushed_to_crm") is { } nullNodePushedToCrm && nullNodePushedToCrm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushedToCrm = null;
+            if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("topic") is { } nullNodeTopic && nullNodeTopic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topic = null;
+            if (parseNode.GetChildNode("transcript") is { } nullNodeTranscript && nullNodeTranscript.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcript = null;
+            if (parseNode.GetChildNode("video_recording") is { } nullNodeVideoRecording && nullNodeVideoRecording.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoRecording = null;
+        }
+
         /// <summary>IDs of accounts associated with the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AccountIds { get; set; }
+        public List<string>? AccountIds { get => _explicitNullValueAccountIds; set { _explicitNullValueAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_ids"); else _explicitNullProperties?.Remove("account_ids"); } }
+        private List<string>? _explicitNullValueAccountIds = default!;
 #nullable restore
 #else
-        public List<string> AccountIds { get; set; }
+        public List<string> AccountIds { get => _explicitNullValueAccountIds; set { _explicitNullValueAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_ids"); else _explicitNullProperties?.Remove("account_ids"); } }
+        private List<string> _explicitNullValueAccountIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Audio recording details for the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording? AudioRecording { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording? AudioRecording { get => _explicitNullValueAudioRecording; set { _explicitNullValueAudioRecording = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_recording"); else _explicitNullProperties?.Remove("audio_recording"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording? _explicitNullValueAudioRecording = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording AudioRecording { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording AudioRecording { get => _explicitNullValueAudioRecording; set { _explicitNullValueAudioRecording = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_recording"); else _explicitNullProperties?.Remove("audio_recording"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording _explicitNullValueAudioRecording = default!;
 #endif
         /// <summary>Reason the bot call ended. Returns &lt;code&gt;null&lt;/code&gt; if not applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotCallEndedReason { get; set; }
+        public string? BotCallEndedReason { get => _explicitNullValueBotCallEndedReason; set { _explicitNullValueBotCallEndedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_call_ended_reason"); else _explicitNullProperties?.Remove("bot_call_ended_reason"); } }
+        private string? _explicitNullValueBotCallEndedReason = default!;
 #nullable restore
 #else
-        public string BotCallEndedReason { get; set; }
+        public string BotCallEndedReason { get => _explicitNullValueBotCallEndedReason; set { _explicitNullValueBotCallEndedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_call_ended_reason"); else _explicitNullProperties?.Remove("bot_call_ended_reason"); } }
+        private string _explicitNullValueBotCallEndedReason = default!;
 #endif
         /// <summary>Number of comments on the conversation.</summary>
-        public int? CommentCount { get; set; }
+        public int? CommentCount { get => _explicitNullValueCommentCount; set { _explicitNullValueCommentCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_count"); else _explicitNullProperties?.Remove("comment_count"); } }
+        private int? _explicitNullValueCommentCount = default!;
         /// <summary>Type of conversation.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseConversationType? ConversationType { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseConversationType? ConversationType { get => _explicitNullValueConversationType; set { _explicitNullValueConversationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_type"); else _explicitNullProperties?.Remove("conversation_type"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseConversationType? _explicitNullValueConversationType = default!;
         /// <summary>Duration of the conversation in seconds.</summary>
-        public int? Duration { get; set; }
+        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        private int? _explicitNullValueDuration = default!;
         /// <summary>Error code if the conversation processing failed. Returns &lt;code&gt;null&lt;/code&gt; if no failure occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureCode { get; set; }
+        public string? FailureCode { get => _explicitNullValueFailureCode; set { _explicitNullValueFailureCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_code"); else _explicitNullProperties?.Remove("failure_code"); } }
+        private string? _explicitNullValueFailureCode = default!;
 #nullable restore
 #else
-        public string FailureCode { get; set; }
+        public string FailureCode { get => _explicitNullValueFailureCode; set { _explicitNullValueFailureCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_code"); else _explicitNullProperties?.Remove("failure_code"); } }
+        private string _explicitNullValueFailureCode = default!;
 #endif
         /// <summary>Name of the conversation host.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Host { get; set; }
+        public string? Host { get => _explicitNullValueHost; set { _explicitNullValueHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host"); else _explicitNullProperties?.Remove("host"); } }
+        private string? _explicitNullValueHost = default!;
 #nullable restore
 #else
-        public string Host { get; set; }
+        public string Host { get => _explicitNullValueHost; set { _explicitNullValueHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host"); else _explicitNullProperties?.Remove("host"); } }
+        private string _explicitNullValueHost = default!;
 #endif
         /// <summary>User ID of the conversation host.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostId { get; set; }
+        public string? HostId { get => _explicitNullValueHostId; set { _explicitNullValueHostId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_id"); else _explicitNullProperties?.Remove("host_id"); } }
+        private string? _explicitNullValueHostId = default!;
 #nullable restore
 #else
-        public string HostId { get; set; }
+        public string HostId { get => _explicitNullValueHostId; set { _explicitNullValueHostId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_id"); else _explicitNullProperties?.Remove("host_id"); } }
+        private string _explicitNullValueHostId = default!;
 #endif
         /// <summary>Unique conversation ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the conversation is a clip.</summary>
-        public bool? IsClip { get; set; }
+        public bool? IsClip { get => _explicitNullValueIsClip; set { _explicitNullValueIsClip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_clip"); else _explicitNullProperties?.Remove("is_clip"); } }
+        private bool? _explicitNullValueIsClip = default!;
         /// <summary>Privacy setting of the conversation.</summary>
-        public bool? IsPrivate { get; set; }
+        public bool? IsPrivate { get => _explicitNullValueIsPrivate; set { _explicitNullValueIsPrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_private"); else _explicitNullProperties?.Remove("is_private"); } }
+        private bool? _explicitNullValueIsPrivate = default!;
         /// <summary>Whether the conversation has been shared.</summary>
-        public bool? IsSharedConversation { get; set; }
+        public bool? IsSharedConversation { get => _explicitNullValueIsSharedConversation; set { _explicitNullValueIsSharedConversation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_shared_conversation"); else _explicitNullProperties?.Remove("is_shared_conversation"); } }
+        private bool? _explicitNullValueIsSharedConversation = default!;
         /// <summary>Map of label IDs to label names associated with the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LabelIdNames { get; set; }
+        public List<string>? LabelIdNames { get => _explicitNullValueLabelIdNames; set { _explicitNullValueLabelIdNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_id_names"); else _explicitNullProperties?.Remove("label_id_names"); } }
+        private List<string>? _explicitNullValueLabelIdNames = default!;
 #nullable restore
 #else
-        public List<string> LabelIdNames { get; set; }
+        public List<string> LabelIdNames { get => _explicitNullValueLabelIdNames; set { _explicitNullValueLabelIdNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_id_names"); else _explicitNullProperties?.Remove("label_id_names"); } }
+        private List<string> _explicitNullValueLabelIdNames = default!;
 #endif
         /// <summary>Opportunities associated with the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseOpportunitiesItem>? Opportunities { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseOpportunitiesItem>? Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseOpportunitiesItem>? _explicitNullValueOpportunities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseOpportunitiesItem> Opportunities { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseOpportunitiesItem> Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseOpportunitiesItem> _explicitNullValueOpportunities = default!;
 #endif
         /// <summary>IDs of opportunities associated with the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OpportunityIds { get; set; }
+        public List<string>? OpportunityIds { get => _explicitNullValueOpportunityIds; set { _explicitNullValueOpportunityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_ids"); else _explicitNullProperties?.Remove("opportunity_ids"); } }
+        private List<string>? _explicitNullValueOpportunityIds = default!;
 #nullable restore
 #else
-        public List<string> OpportunityIds { get; set; }
+        public List<string> OpportunityIds { get => _explicitNullValueOpportunityIds; set { _explicitNullValueOpportunityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_ids"); else _explicitNullProperties?.Remove("opportunity_ids"); } }
+        private List<string> _explicitNullValueOpportunityIds = default!;
 #endif
         /// <summary>Participants in the conversation, grouped by internal and external.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseParticipants? Participants { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseParticipants? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseParticipants? _explicitNullValueParticipants = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseParticipants Participants { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseParticipants Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseParticipants _explicitNullValueParticipants = default!;
 #endif
         /// <summary>IDs of the playlist clips associated with the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PlaylistClipIds { get; set; }
+        public List<string>? PlaylistClipIds { get => _explicitNullValuePlaylistClipIds; set { _explicitNullValuePlaylistClipIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlist_clip_ids"); else _explicitNullProperties?.Remove("playlist_clip_ids"); } }
+        private List<string>? _explicitNullValuePlaylistClipIds = default!;
 #nullable restore
 #else
-        public List<string> PlaylistClipIds { get; set; }
+        public List<string> PlaylistClipIds { get => _explicitNullValuePlaylistClipIds; set { _explicitNullValuePlaylistClipIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlist_clip_ids"); else _explicitNullProperties?.Remove("playlist_clip_ids"); } }
+        private List<string> _explicitNullValuePlaylistClipIds = default!;
 #endif
         /// <summary>Whether the conversation has been pushed to a CRM.</summary>
-        public bool? PushedToCrm { get; set; }
+        public bool? PushedToCrm { get => _explicitNullValuePushedToCrm; set { _explicitNullValuePushedToCrm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pushed_to_crm"); else _explicitNullProperties?.Remove("pushed_to_crm"); } }
+        private bool? _explicitNullValuePushedToCrm = default!;
         /// <summary>Conversation start time (ISO 8601). Apollo uses Greenwich Mean Time (GMT) for all date and time values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartTime { get; set; }
+        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        private string? _explicitNullValueStartTime = default!;
 #nullable restore
 #else
-        public string StartTime { get; set; }
+        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        private string _explicitNullValueStartTime = default!;
 #endif
         /// <summary>Current processing state of the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>Conversation topic or title.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Topic { get; set; }
+        public string? Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        private string? _explicitNullValueTopic = default!;
 #nullable restore
 #else
-        public string Topic { get; set; }
+        public string Topic { get => _explicitNullValueTopic; set { _explicitNullValueTopic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic"); else _explicitNullProperties?.Remove("topic"); } }
+        private string _explicitNullValueTopic = default!;
 #endif
         /// <summary>Transcript of the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem>? Transcript { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem>? Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem>? _explicitNullValueTranscript = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem> Transcript { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem> Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem> _explicitNullValueTranscript = default!;
 #endif
         /// <summary>Video recording details for the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording? VideoRecording { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording? VideoRecording { get => _explicitNullValueVideoRecording; set { _explicitNullValueVideoRecording = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_recording"); else _explicitNullProperties?.Remove("video_recording"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording? _explicitNullValueVideoRecording = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording VideoRecording { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording VideoRecording { get => _explicitNullValueVideoRecording; set { _explicitNullValueVideoRecording = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_recording"); else _explicitNullProperties?.Remove("video_recording"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording _explicitNullValueVideoRecording = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200Response"/> and sets the default values.
@@ -179,7 +251,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -246,6 +318,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("topic", Topic);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseTranscriptItem>("transcript", Transcript);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseVideoRecording>("video_recording", VideoRecording);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

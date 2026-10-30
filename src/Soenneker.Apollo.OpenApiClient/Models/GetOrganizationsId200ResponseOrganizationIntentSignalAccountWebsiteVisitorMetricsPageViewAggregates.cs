@@ -11,21 +11,40 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetOrganizationsId200ResponseOrganizationIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fifteen_day_count") is { } nullNodeFifteenDayCount && nullNodeFifteenDayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FifteenDayCount = null;
+            if (parseNode.GetChildNode("ninety_day_count") is { } nullNodeNinetyDayCount && nullNodeNinetyDayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NinetyDayCount = null;
+            if (parseNode.GetChildNode("one_day_count") is { } nullNodeOneDayCount && nullNodeOneDayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneDayCount = null;
+            if (parseNode.GetChildNode("seven_day_count") is { } nullNodeSevenDayCount && nullNodeSevenDayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SevenDayCount = null;
+            if (parseNode.GetChildNode("sixty_day_count") is { } nullNodeSixtyDayCount && nullNodeSixtyDayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixtyDayCount = null;
+            if (parseNode.GetChildNode("thirty_day_count") is { } nullNodeThirtyDayCount && nullNodeThirtyDayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirtyDayCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fifteen_day_count property</summary>
-        public long? FifteenDayCount { get; set; }
+        public long? FifteenDayCount { get => _explicitNullValueFifteenDayCount; set { _explicitNullValueFifteenDayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fifteen_day_count"); else _explicitNullProperties?.Remove("fifteen_day_count"); } }
+        private long? _explicitNullValueFifteenDayCount = default!;
         /// <summary>The ninety_day_count property</summary>
-        public long? NinetyDayCount { get; set; }
+        public long? NinetyDayCount { get => _explicitNullValueNinetyDayCount; set { _explicitNullValueNinetyDayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ninety_day_count"); else _explicitNullProperties?.Remove("ninety_day_count"); } }
+        private long? _explicitNullValueNinetyDayCount = default!;
         /// <summary>The one_day_count property</summary>
-        public long? OneDayCount { get; set; }
+        public long? OneDayCount { get => _explicitNullValueOneDayCount; set { _explicitNullValueOneDayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_day_count"); else _explicitNullProperties?.Remove("one_day_count"); } }
+        private long? _explicitNullValueOneDayCount = default!;
         /// <summary>The seven_day_count property</summary>
-        public long? SevenDayCount { get; set; }
+        public long? SevenDayCount { get => _explicitNullValueSevenDayCount; set { _explicitNullValueSevenDayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seven_day_count"); else _explicitNullProperties?.Remove("seven_day_count"); } }
+        private long? _explicitNullValueSevenDayCount = default!;
         /// <summary>The sixty_day_count property</summary>
-        public long? SixtyDayCount { get; set; }
+        public long? SixtyDayCount { get => _explicitNullValueSixtyDayCount; set { _explicitNullValueSixtyDayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sixty_day_count"); else _explicitNullProperties?.Remove("sixty_day_count"); } }
+        private long? _explicitNullValueSixtyDayCount = default!;
         /// <summary>The thirty_day_count property</summary>
-        public long? ThirtyDayCount { get; set; }
+        public long? ThirtyDayCount { get => _explicitNullValueThirtyDayCount; set { _explicitNullValueThirtyDayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirty_day_count"); else _explicitNullProperties?.Remove("thirty_day_count"); } }
+        private long? _explicitNullValueThirtyDayCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates"/> and sets the default values.
         /// </summary>
@@ -41,7 +60,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +91,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteLongValue("seven_day_count", SevenDayCount);
             writer.WriteLongValue("sixty_day_count", SixtyDayCount);
             writer.WriteLongValue("thirty_day_count", ThirtyDayCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

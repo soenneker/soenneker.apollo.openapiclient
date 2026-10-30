@@ -12,32 +12,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SyncReportRequestSortsItemMetric : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("smart_datetime_reference") is { } nullNodeSmartDatetimeReference && nullNodeSmartDatetimeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartDatetimeReference = null;
+            if (parseNode.GetChildNode("smart_user_id_reference") is { } nullNodeSmartUserIdReference && nullNodeSmartUserIdReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartUserIdReference = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The smart_datetime_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmartDatetimeReference { get; set; }
+        public string? SmartDatetimeReference { get => _explicitNullValueSmartDatetimeReference; set { _explicitNullValueSmartDatetimeReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_reference"); else _explicitNullProperties?.Remove("smart_datetime_reference"); } }
+        private string? _explicitNullValueSmartDatetimeReference = default!;
 #nullable restore
 #else
-        public string SmartDatetimeReference { get; set; }
+        public string SmartDatetimeReference { get => _explicitNullValueSmartDatetimeReference; set { _explicitNullValueSmartDatetimeReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_reference"); else _explicitNullProperties?.Remove("smart_datetime_reference"); } }
+        private string _explicitNullValueSmartDatetimeReference = default!;
 #endif
         /// <summary>The smart_user_id_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmartUserIdReference { get; set; }
+        public string? SmartUserIdReference { get => _explicitNullValueSmartUserIdReference; set { _explicitNullValueSmartUserIdReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id_reference"); else _explicitNullProperties?.Remove("smart_user_id_reference"); } }
+        private string? _explicitNullValueSmartUserIdReference = default!;
 #nullable restore
 #else
-        public string SmartUserIdReference { get; set; }
+        public string SmartUserIdReference { get => _explicitNullValueSmartUserIdReference; set { _explicitNullValueSmartUserIdReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id_reference"); else _explicitNullProperties?.Remove("smart_user_id_reference"); } }
+        private string _explicitNullValueSmartUserIdReference = default!;
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItemMetric(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("smart_datetime_reference", SmartDatetimeReference);
             writer.WriteStringValue("smart_user_id_reference", SmartUserIdReference);
             writer.WriteStringValue("value", Value);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

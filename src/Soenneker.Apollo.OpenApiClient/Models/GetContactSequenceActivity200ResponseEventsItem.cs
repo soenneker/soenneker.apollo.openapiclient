@@ -11,53 +11,79 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetContactSequenceActivity200ResponseEventsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emailer_message_id") is { } nullNodeEmailerMessageId && nullNodeEmailerMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerMessageId = null;
+            if (parseNode.GetChildNode("occurred_at") is { } nullNodeOccurredAt && nullNodeOccurredAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OccurredAt = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("sequence_id") is { } nullNodeSequenceId && nullNodeSequenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceId = null;
+            if (parseNode.GetChildNode("sequence_name") is { } nullNodeSequenceName && nullNodeSequenceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SequenceName = null;
+            if (parseNode.GetChildNode("step_position") is { } nullNodeStepPosition && nullNodeStepPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StepPosition = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Apollo ID of the email that the contact replied to. Only returned for `replied` events. Pass this to the &lt;a href=&quot;https://docs.apollo.io/reference/get-email-content&quot;&gt;get email content endpoint&lt;/a&gt; to read the original email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailerMessageId { get; set; }
+        public string? EmailerMessageId { get => _explicitNullValueEmailerMessageId; set { _explicitNullValueEmailerMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_message_id"); else _explicitNullProperties?.Remove("emailer_message_id"); } }
+        private string? _explicitNullValueEmailerMessageId = default!;
 #nullable restore
 #else
-        public string EmailerMessageId { get; set; }
+        public string EmailerMessageId { get => _explicitNullValueEmailerMessageId; set { _explicitNullValueEmailerMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_message_id"); else _explicitNullProperties?.Remove("emailer_message_id"); } }
+        private string _explicitNullValueEmailerMessageId = default!;
 #endif
         /// <summary>The ISO 8601 timestamp for when the event happened. Events with no recorded timestamp aren&apos;t returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OccurredAt { get; set; }
+        public string? OccurredAt { get => _explicitNullValueOccurredAt; set { _explicitNullValueOccurredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("occurred_at"); else _explicitNullProperties?.Remove("occurred_at"); } }
+        private string? _explicitNullValueOccurredAt = default!;
 #nullable restore
 #else
-        public string OccurredAt { get; set; }
+        public string OccurredAt { get => _explicitNullValueOccurredAt; set { _explicitNullValueOccurredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("occurred_at"); else _explicitNullProperties?.Remove("occurred_at"); } }
+        private string _explicitNullValueOccurredAt = default!;
 #endif
         /// <summary>Why the enrollment was paused. Only returned for `paused` events, and only when Apollo recorded a reason.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>The Apollo ID of the sequence the event belongs to. Omitted if the event isn&apos;t linked to a sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceId { get; set; }
+        public string? SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_id"); else _explicitNullProperties?.Remove("sequence_id"); } }
+        private string? _explicitNullValueSequenceId = default!;
 #nullable restore
 #else
-        public string SequenceId { get; set; }
+        public string SequenceId { get => _explicitNullValueSequenceId; set { _explicitNullValueSequenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_id"); else _explicitNullProperties?.Remove("sequence_id"); } }
+        private string _explicitNullValueSequenceId = default!;
 #endif
         /// <summary>The name of the sequence the event belongs to. This key is omitted, never `null`, if the event isn&apos;t linked to a sequence or the sequence no longer exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SequenceName { get; set; }
+        public string? SequenceName { get => _explicitNullValueSequenceName; set { _explicitNullValueSequenceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_name"); else _explicitNullProperties?.Remove("sequence_name"); } }
+        private string? _explicitNullValueSequenceName = default!;
 #nullable restore
 #else
-        public string SequenceName { get; set; }
+        public string SequenceName { get => _explicitNullValueSequenceName; set { _explicitNullValueSequenceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequence_name"); else _explicitNullProperties?.Remove("sequence_name"); } }
+        private string _explicitNullValueSequenceName = default!;
 #endif
         /// <summary>The position of the sequence step the event relates to. Only returned for enrollment-lifecycle events that are linked to a specific step. This key is omitted, never `null`, when it doesn&apos;t apply.</summary>
-        public int? StepPosition { get; set; }
+        public int? StepPosition { get => _explicitNullValueStepPosition; set { _explicitNullValueStepPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("step_position"); else _explicitNullProperties?.Remove("step_position"); } }
+        private int? _explicitNullValueStepPosition = default!;
         /// <summary>What happened. &lt;ul&gt; &lt;li&gt; `enrolled`: the contact was added to the sequence. &lt;/li&gt; &lt;li&gt; `paused`: the contact&apos;s enrollment was paused. &lt;/li&gt; &lt;li&gt; `resumed`: the contact&apos;s enrollment was resumed after being paused. &lt;/li&gt; &lt;li&gt; `failed`: the contact&apos;s enrollment failed. &lt;/li&gt; &lt;li&gt; `completed`: the contact finished the sequence. &lt;/li&gt; &lt;li&gt; `removed`: the contact was removed from the sequence. &lt;/li&gt; &lt;li&gt; `replied`: the contact replied to an email from the sequence. &lt;/li&gt; &lt;/ul&gt;</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItemType? Type { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItemType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItem"/> and sets the default values.
         /// </summary>
@@ -73,7 +99,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("sequence_name", SequenceName);
             writer.WriteIntValue("step_position", StepPosition);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.GetContactSequenceActivity200ResponseEventsItemType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

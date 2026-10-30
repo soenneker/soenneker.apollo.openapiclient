@@ -11,66 +11,101 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkPeopleEnrichment200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("credits_consumed") is { } nullNodeCreditsConsumed && nullNodeCreditsConsumed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditsConsumed = null;
+            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("matches") is { } nullNodeMatches && nullNodeMatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Matches = null;
+            if (parseNode.GetChildNode("missing_records") is { } nullNodeMissingRecords && nullNodeMissingRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingRecords = null;
+            if (parseNode.GetChildNode("phone_enrichment") is { } nullNodePhoneEnrichment && nullNodePhoneEnrichment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneEnrichment = null;
+            if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("total_requested_enrichments") is { } nullNodeTotalRequestedEnrichments && nullNodeTotalRequestedEnrichments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestedEnrichments = null;
+            if (parseNode.GetChildNode("unique_enriched_records") is { } nullNodeUniqueEnrichedRecords && nullNodeUniqueEnrichedRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueEnrichedRecords = null;
+            if (parseNode.GetChildNode("waterfall") is { } nullNodeWaterfall && nullNodeWaterfall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Waterfall = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total credits this request consumed. &lt;br&gt;&lt;br&gt;This can be a fraction rather than a whole number, depending on your plan&apos;s credit pricing, so parse it as a decimal rather than an integer. &lt;br&gt;&lt;br&gt;**Not returned** when `run_waterfall_email` or `run_waterfall_phone` is `true`; those requests return the `waterfall` object instead. Waterfall credit usage is reported separately, since enrichment completes asynchronously.</summary>
-        public double? CreditsConsumed { get; set; }
+        public double? CreditsConsumed { get => _explicitNullValueCreditsConsumed; set { _explicitNullValueCreditsConsumed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_consumed"); else _explicitNullProperties?.Remove("credits_consumed"); } }
+        private double? _explicitNullValueCreditsConsumed = default!;
         /// <summary>Always `null` on a `200` response. Populated only on error responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorCode { get; set; }
+        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        private string? _explicitNullValueErrorCode = default!;
 #nullable restore
 #else
-        public string ErrorCode { get; set; }
+        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        private string _explicitNullValueErrorCode = default!;
 #endif
         /// <summary>Always `null` on a `200` response. Populated only on error responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get; set; }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get; set; }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The matches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem>? Matches { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem>? Matches { get => _explicitNullValueMatches; set { _explicitNullValueMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matches"); else _explicitNullProperties?.Remove("matches"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem>? _explicitNullValueMatches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem> Matches { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem> Matches { get => _explicitNullValueMatches; set { _explicitNullValueMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matches"); else _explicitNullProperties?.Remove("matches"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseMatchesItem> _explicitNullValueMatches = default!;
 #endif
         /// <summary>The number of entries in `details[]` that Apollo couldn&apos;t match to a person in its database. &lt;br&gt;&lt;br&gt;**Not returned** when `run_waterfall_email` or `run_waterfall_phone` is `true`; those requests return the `waterfall` object instead.</summary>
-        public int? MissingRecords { get; set; }
+        public int? MissingRecords { get => _explicitNullValueMissingRecords; set { _explicitNullValueMissingRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_records"); else _explicitNullProperties?.Remove("missing_records"); } }
+        private int? _explicitNullValueMissingRecords = default!;
         /// <summary>Returned when you set `reveal_phone_number` to `true`, at least one person in `details[]` was matched, and you aren&apos;t using `run_waterfall_phone`. Phone numbers are enriched asynchronously and delivered to your `webhook_url`, so this object reports the status of that background work rather than the numbers themselves. &lt;br&gt;&lt;br&gt;If you requested `run_waterfall_phone` instead, phone status is reported through the `waterfall` object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment? PhoneEnrichment { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment? PhoneEnrichment { get => _explicitNullValuePhoneEnrichment; set { _explicitNullValuePhoneEnrichment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_enrichment"); else _explicitNullProperties?.Remove("phone_enrichment"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment? _explicitNullValuePhoneEnrichment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment PhoneEnrichment { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment PhoneEnrichment { get => _explicitNullValuePhoneEnrichment; set { _explicitNullValuePhoneEnrichment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_enrichment"); else _explicitNullProperties?.Remove("phone_enrichment"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichment _explicitNullValuePhoneEnrichment = default!;
 #endif
         /// <summary>The request ID for the enrichment request. Save this ID to map this request with the corresponding webhook result. &lt;br&gt;&lt;br&gt;This is a signed 64-bit integer and is often negative, so store it in a type that accommodates the full signed range.</summary>
-        public long? RequestId { get; set; }
+        public long? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        private long? _explicitNullValueRequestId = default!;
         /// <summary>`success` for any `200` response. Error responses return `failed` instead. &lt;br&gt;&lt;br&gt;This reflects the enrichment call itself, not whether any person was matched — a request that matches nobody still returns `success`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>The number of objects you sent in the `details[]` array. Always returned.</summary>
-        public int? TotalRequestedEnrichments { get; set; }
+        public int? TotalRequestedEnrichments { get => _explicitNullValueTotalRequestedEnrichments; set { _explicitNullValueTotalRequestedEnrichments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_requested_enrichments"); else _explicitNullProperties?.Remove("total_requested_enrichments"); } }
+        private int? _explicitNullValueTotalRequestedEnrichments = default!;
         /// <summary>The number of distinct people that consumed credits on this request. &lt;br&gt;&lt;br&gt;This is a billing count, not a match count. A person who was matched but returned no credit-consuming data isn&apos;t included, so this can be lower than the number of entries in `matches` — or `0` while `matches` is non-empty. Duplicate entries in `details[]` that resolve to the same person are counted once. &lt;br&gt;&lt;br&gt;**Not returned** when `run_waterfall_email` or `run_waterfall_phone` is `true`; those requests return the `waterfall` object instead.</summary>
-        public int? UniqueEnrichedRecords { get; set; }
+        public int? UniqueEnrichedRecords { get => _explicitNullValueUniqueEnrichedRecords; set { _explicitNullValueUniqueEnrichedRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_enriched_records"); else _explicitNullProperties?.Remove("unique_enriched_records"); } }
+        private int? _explicitNullValueUniqueEnrichedRecords = default!;
         /// <summary>Returned **only** when you set `run_waterfall_email` or `run_waterfall_phone` to `true`. It reports whether Apollo accepted the waterfall request, whose results arrive asynchronously at your `webhook_url`. &lt;br&gt;&lt;br&gt;When this object is present, `unique_enriched_records`, `missing_records`, and `credits_consumed` are omitted from the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall? Waterfall { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall? Waterfall { get => _explicitNullValueWaterfall; set { _explicitNullValueWaterfall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waterfall"); else _explicitNullProperties?.Remove("waterfall"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall? _explicitNullValueWaterfall = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall Waterfall { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall Waterfall { get => _explicitNullValueWaterfall; set { _explicitNullValueWaterfall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waterfall"); else _explicitNullProperties?.Remove("waterfall"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall _explicitNullValueWaterfall = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200Response"/> and sets the default values.
@@ -91,7 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +167,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("total_requested_enrichments", TotalRequestedEnrichments);
             writer.WriteIntValue("unique_enriched_records", UniqueEnrichedRecords);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponseWaterfall>("waterfall", Waterfall);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

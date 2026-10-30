@@ -12,72 +12,103 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SyncReportRequestFilters : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_stage_ids") is { } nullNodeAccountStageIds && nullNodeAccountStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStageIds = null;
+            if (parseNode.GetChildNode("contact_stage_ids") is { } nullNodeContactStageIds && nullNodeContactStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageIds = null;
+            if (parseNode.GetChildNode("email_account_ids") is { } nullNodeEmailAccountIds && nullNodeEmailAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAccountIds = null;
+            if (parseNode.GetChildNode("emailer_campaign_ids") is { } nullNodeEmailerCampaignIds && nullNodeEmailerCampaignIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerCampaignIds = null;
+            if (parseNode.GetChildNode("opportunity_stage_ids") is { } nullNodeOpportunityStageIds && nullNodeOpportunityStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityStageIds = null;
+            if (parseNode.GetChildNode("smart_datetime_range") is { } nullNodeSmartDatetimeRange && nullNodeSmartDatetimeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartDatetimeRange = null;
+            if (parseNode.GetChildNode("smart_subteam_id") is { } nullNodeSmartSubteamId && nullNodeSmartSubteamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartSubteamId = null;
+            if (parseNode.GetChildNode("smart_user_id") is { } nullNodeSmartUserId && nullNodeSmartUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartUserId = null;
+        }
+
         /// <summary>Filter to specific account stage IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AccountStageIds { get; set; }
+        public List<string>? AccountStageIds { get => _explicitNullValueAccountStageIds; set { _explicitNullValueAccountStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stage_ids"); else _explicitNullProperties?.Remove("account_stage_ids"); } }
+        private List<string>? _explicitNullValueAccountStageIds = default!;
 #nullable restore
 #else
-        public List<string> AccountStageIds { get; set; }
+        public List<string> AccountStageIds { get => _explicitNullValueAccountStageIds; set { _explicitNullValueAccountStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stage_ids"); else _explicitNullProperties?.Remove("account_stage_ids"); } }
+        private List<string> _explicitNullValueAccountStageIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter to specific contact stage IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactStageIds { get; set; }
+        public List<string>? ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
+        private List<string>? _explicitNullValueContactStageIds = default!;
 #nullable restore
 #else
-        public List<string> ContactStageIds { get; set; }
+        public List<string> ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
+        private List<string> _explicitNullValueContactStageIds = default!;
 #endif
         /// <summary>Filter to specific sender mailbox IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailAccountIds { get; set; }
+        public List<string>? EmailAccountIds { get => _explicitNullValueEmailAccountIds; set { _explicitNullValueEmailAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_account_ids"); else _explicitNullProperties?.Remove("email_account_ids"); } }
+        private List<string>? _explicitNullValueEmailAccountIds = default!;
 #nullable restore
 #else
-        public List<string> EmailAccountIds { get; set; }
+        public List<string> EmailAccountIds { get => _explicitNullValueEmailAccountIds; set { _explicitNullValueEmailAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_account_ids"); else _explicitNullProperties?.Remove("email_account_ids"); } }
+        private List<string> _explicitNullValueEmailAccountIds = default!;
 #endif
         /// <summary>Filter to specific sequence IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailerCampaignIds { get; set; }
+        public List<string>? EmailerCampaignIds { get => _explicitNullValueEmailerCampaignIds; set { _explicitNullValueEmailerCampaignIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign_ids"); else _explicitNullProperties?.Remove("emailer_campaign_ids"); } }
+        private List<string>? _explicitNullValueEmailerCampaignIds = default!;
 #nullable restore
 #else
-        public List<string> EmailerCampaignIds { get; set; }
+        public List<string> EmailerCampaignIds { get => _explicitNullValueEmailerCampaignIds; set { _explicitNullValueEmailerCampaignIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign_ids"); else _explicitNullProperties?.Remove("emailer_campaign_ids"); } }
+        private List<string> _explicitNullValueEmailerCampaignIds = default!;
 #endif
         /// <summary>Filter to specific opportunity stage IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OpportunityStageIds { get; set; }
+        public List<string>? OpportunityStageIds { get => _explicitNullValueOpportunityStageIds; set { _explicitNullValueOpportunityStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_stage_ids"); else _explicitNullProperties?.Remove("opportunity_stage_ids"); } }
+        private List<string>? _explicitNullValueOpportunityStageIds = default!;
 #nullable restore
 #else
-        public List<string> OpportunityStageIds { get; set; }
+        public List<string> OpportunityStageIds { get => _explicitNullValueOpportunityStageIds; set { _explicitNullValueOpportunityStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_stage_ids"); else _explicitNullProperties?.Remove("opportunity_stage_ids"); } }
+        private List<string> _explicitNullValueOpportunityStageIds = default!;
 #endif
         /// <summary>Required when &lt;code&gt;date_ranges[].modality&lt;/code&gt; is &lt;code&gt;custom_range&lt;/code&gt;. Specifies the exact date window as ISO 8601 date strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange? SmartDatetimeRange { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange? SmartDatetimeRange { get => _explicitNullValueSmartDatetimeRange; set { _explicitNullValueSmartDatetimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_range"); else _explicitNullProperties?.Remove("smart_datetime_range"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange? _explicitNullValueSmartDatetimeRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange SmartDatetimeRange { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange SmartDatetimeRange { get => _explicitNullValueSmartDatetimeRange; set { _explicitNullValueSmartDatetimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_range"); else _explicitNullProperties?.Remove("smart_datetime_range"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange _explicitNullValueSmartDatetimeRange = default!;
 #endif
         /// <summary>Filter to specific sub-team IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SmartSubteamId { get; set; }
+        public List<string>? SmartSubteamId { get => _explicitNullValueSmartSubteamId; set { _explicitNullValueSmartSubteamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_subteam_id"); else _explicitNullProperties?.Remove("smart_subteam_id"); } }
+        private List<string>? _explicitNullValueSmartSubteamId = default!;
 #nullable restore
 #else
-        public List<string> SmartSubteamId { get; set; }
+        public List<string> SmartSubteamId { get => _explicitNullValueSmartSubteamId; set { _explicitNullValueSmartSubteamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_subteam_id"); else _explicitNullProperties?.Remove("smart_subteam_id"); } }
+        private List<string> _explicitNullValueSmartSubteamId = default!;
 #endif
         /// <summary>Filter to specific team member IDs. Use &lt;code&gt;&quot;current&quot;&lt;/code&gt; for the authenticated user. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;[&quot;current&quot;]&lt;/code&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SmartUserId { get; set; }
+        public List<string>? SmartUserId { get => _explicitNullValueSmartUserId; set { _explicitNullValueSmartUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id"); else _explicitNullProperties?.Remove("smart_user_id"); } }
+        private List<string>? _explicitNullValueSmartUserId = default!;
 #nullable restore
 #else
-        public List<string> SmartUserId { get; set; }
+        public List<string> SmartUserId { get => _explicitNullValueSmartUserId; set { _explicitNullValueSmartUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id"); else _explicitNullProperties?.Remove("smart_user_id"); } }
+        private List<string> _explicitNullValueSmartUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFiltersSmartDatetimeRange>("smart_datetime_range", SmartDatetimeRange);
             writer.WriteCollectionOfPrimitiveValues<string>("smart_subteam_id", SmartSubteamId);
             writer.WriteCollectionOfPrimitiveValues<string>("smart_user_id", SmartUserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

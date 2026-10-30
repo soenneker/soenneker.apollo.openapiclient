@@ -11,70 +11,104 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SyncReportRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date_ranges") is { } nullNodeDateRanges && nullNodeDateRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateRanges = null;
+            if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("group_by") is { } nullNodeGroupBy && nullNodeGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupBy = null;
+            if (parseNode.GetChildNode("group_by_totals_selected") is { } nullNodeGroupByTotalsSelected && nullNodeGroupByTotalsSelected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupByTotalsSelected = null;
+            if (parseNode.GetChildNode("metrics") is { } nullNodeMetrics && nullNodeMetrics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metrics = null;
+            if (parseNode.GetChildNode("min_ratio_denominator") is { } nullNodeMinRatioDenominator && nullNodeMinRatioDenominator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRatioDenominator = null;
+            if (parseNode.GetChildNode("pivot_group_by") is { } nullNodePivotGroupBy && nullNodePivotGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PivotGroupBy = null;
+            if (parseNode.GetChildNode("pivot_group_by_totals_selected") is { } nullNodePivotGroupByTotalsSelected && nullNodePivotGroupByTotalsSelected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PivotGroupByTotalsSelected = null;
+            if (parseNode.GetChildNode("skip_group_by_values") is { } nullNodeSkipGroupByValues && nullNodeSkipGroupByValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipGroupByValues = null;
+            if (parseNode.GetChildNode("sorts") is { } nullNodeSorts && nullNodeSorts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sorts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time window for the query. Provide one object with a &lt;code&gt;modality&lt;/code&gt; preset. For a custom date range, set &lt;code&gt;modality&lt;/code&gt; to &lt;code&gt;custom_range&lt;/code&gt; and add a &lt;code&gt;smart_datetime_range&lt;/code&gt; key in &lt;code&gt;filters&lt;/code&gt; with &lt;code&gt;{&quot;min&quot;: &quot;YYYY-MM-DD&quot;, &quot;max&quot;: &quot;YYYY-MM-DD&quot;}&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem>? DateRanges { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem>? DateRanges { get => _explicitNullValueDateRanges; set { _explicitNullValueDateRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_ranges"); else _explicitNullProperties?.Remove("date_ranges"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem>? _explicitNullValueDateRanges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem> DateRanges { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem> DateRanges { get => _explicitNullValueDateRanges; set { _explicitNullValueDateRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_ranges"); else _explicitNullProperties?.Remove("date_ranges"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestDateRangesItem> _explicitNullValueDateRanges = default!;
 #endif
         /// <summary>Key/value filter map to narrow the result set. Pass an empty object &lt;code&gt;{}&lt;/code&gt; for no filters. Common filter keys are documented in the &lt;code&gt;properties&lt;/code&gt; below; additional dimension-based filters may also be passed using the same key names as &lt;code&gt;group_by[].name&lt;/code&gt; values. Refer to the &lt;a href=&quot;https://docs.apollo.io/reference/sync-report-metrics&quot; target=&quot;_blank&quot;&gt;Metrics and Dimensions Reference&lt;/a&gt; for a complete list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters? Filters { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters Filters { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestFilters _explicitNullValueFilters = default!;
 #endif
         /// <summary>The dimension to group results by (row dimension). Pass one object to break results down by that dimension. Pass an empty array &lt;code&gt;[]&lt;/code&gt; for flat totals with no grouping. &lt;br&gt;&lt;br&gt;Only one entry is supported. Refer to the &lt;a href=&quot;https://docs.apollo.io/reference/sync-report-metrics&quot; target=&quot;_blank&quot;&gt;Metrics and Dimensions Reference&lt;/a&gt; for valid dimension names.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestGroupByItem>? GroupBy { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestGroupByItem>? GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestGroupByItem>? _explicitNullValueGroupBy = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestGroupByItem> GroupBy { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestGroupByItem> GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestGroupByItem> _explicitNullValueGroupBy = default!;
 #endif
         /// <summary>When &lt;code&gt;true&lt;/code&gt;, the response includes an aggregated totals row in addition to the per-dimension-value rows.</summary>
-        public bool? GroupByTotalsSelected { get; set; }
+        public bool? GroupByTotalsSelected { get => _explicitNullValueGroupByTotalsSelected; set { _explicitNullValueGroupByTotalsSelected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_totals_selected"); else _explicitNullProperties?.Remove("group_by_totals_selected"); } }
+        private bool? _explicitNullValueGroupByTotalsSelected = default!;
         /// <summary>The metrics to query. Each object specifies which metric to measure and which date and user columns the engine should use for that metric. The &lt;code&gt;smart_datetime_reference&lt;/code&gt; and &lt;code&gt;smart_user_id_reference&lt;/code&gt; values are metric-specific — using the wrong values will return no data. Refer to the &lt;a href=&quot;https://docs.apollo.io/reference/sync-report-metrics&quot; target=&quot;_blank&quot;&gt;Metrics and Dimensions Reference&lt;/a&gt; for valid metric names and the correct reference fields for each. &lt;br&gt;&lt;br&gt;Pass an empty array &lt;code&gt;[]&lt;/code&gt; to return a response with no metric columns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestMetricsItem>? Metrics { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestMetricsItem>? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestMetricsItem>? _explicitNullValueMetrics = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestMetricsItem> Metrics { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestMetricsItem> Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestMetricsItem> _explicitNullValueMetrics = default!;
 #endif
         /// <summary>Minimum denominator threshold for ratio metrics. Rows where the denominator falls below this value are excluded from ratio calculations.</summary>
-        public int? MinRatioDenominator { get; set; }
+        public int? MinRatioDenominator { get => _explicitNullValueMinRatioDenominator; set { _explicitNullValueMinRatioDenominator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_ratio_denominator"); else _explicitNullProperties?.Remove("min_ratio_denominator"); } }
+        private int? _explicitNullValueMinRatioDenominator = default!;
         /// <summary>The dimension to pivot on (column dimension). Used together with &lt;code&gt;group_by&lt;/code&gt; to produce a two-dimensional cross-tab table: &lt;code&gt;group_by&lt;/code&gt; defines the row dimension and &lt;code&gt;pivot_group_by&lt;/code&gt; defines the column dimension. Pass an empty array &lt;code&gt;[]&lt;/code&gt; for non-pivot queries. &lt;br&gt;&lt;br&gt;Only one entry is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem>? PivotGroupBy { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem>? PivotGroupBy { get => _explicitNullValuePivotGroupBy; set { _explicitNullValuePivotGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pivot_group_by"); else _explicitNullProperties?.Remove("pivot_group_by"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem>? _explicitNullValuePivotGroupBy = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem> PivotGroupBy { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem> PivotGroupBy { get => _explicitNullValuePivotGroupBy; set { _explicitNullValuePivotGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pivot_group_by"); else _explicitNullProperties?.Remove("pivot_group_by"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestPivotGroupByItem> _explicitNullValuePivotGroupBy = default!;
 #endif
         /// <summary>When &lt;code&gt;true&lt;/code&gt;, the pivot response includes an aggregated totals column in addition to the per-pivot-value columns.</summary>
-        public bool? PivotGroupByTotalsSelected { get; set; }
+        public bool? PivotGroupByTotalsSelected { get => _explicitNullValuePivotGroupByTotalsSelected; set { _explicitNullValuePivotGroupByTotalsSelected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pivot_group_by_totals_selected"); else _explicitNullProperties?.Remove("pivot_group_by_totals_selected"); } }
+        private bool? _explicitNullValuePivotGroupByTotalsSelected = default!;
         /// <summary>Exclude specific dimension values from the result rows. Values must match the raw &lt;code&gt;key&lt;/code&gt; field returned in bucket responses for the active &lt;code&gt;group_by&lt;/code&gt; dimension (e.g. a contact stage ID string, a user ID string, or a date string for datetime dimensions). Maximum 500 entries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SkipGroupByValues { get; set; }
+        public List<string>? SkipGroupByValues { get => _explicitNullValueSkipGroupByValues; set { _explicitNullValueSkipGroupByValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_group_by_values"); else _explicitNullProperties?.Remove("skip_group_by_values"); } }
+        private List<string>? _explicitNullValueSkipGroupByValues = default!;
 #nullable restore
 #else
-        public List<string> SkipGroupByValues { get; set; }
+        public List<string> SkipGroupByValues { get => _explicitNullValueSkipGroupByValues; set { _explicitNullValueSkipGroupByValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_group_by_values"); else _explicitNullProperties?.Remove("skip_group_by_values"); } }
+        private List<string> _explicitNullValueSkipGroupByValues = default!;
 #endif
         /// <summary>Sort order for the result rows. Only the first entry is applied. Pass an empty array &lt;code&gt;[]&lt;/code&gt; to use the default order. &lt;br&gt;&lt;br&gt;Sorting is supported by metric value — provide the &lt;code&gt;metric&lt;/code&gt; field with the same structure as an entry in the &lt;code&gt;metrics&lt;/code&gt; array. The &lt;code&gt;asc&lt;/code&gt; field controls direction (&lt;code&gt;true&lt;/code&gt; = ascending, &lt;code&gt;false&lt;/code&gt; = descending). &lt;br&gt;&lt;br&gt;Sorting by dimension value (e.g. alphabetically by user name) is not supported via the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem>? Sorts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem>? Sorts { get => _explicitNullValueSorts; set { _explicitNullValueSorts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sorts"); else _explicitNullProperties?.Remove("sorts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem>? _explicitNullValueSorts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem> Sorts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem> Sorts { get => _explicitNullValueSorts; set { _explicitNullValueSorts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sorts"); else _explicitNullProperties?.Remove("sorts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem> _explicitNullValueSorts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequest"/> and sets the default values.
@@ -92,7 +126,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -131,6 +165,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("pivot_group_by_totals_selected", PivotGroupByTotalsSelected);
             writer.WriteCollectionOfPrimitiveValues<string>("skip_group_by_values", SkipGroupByValues);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SyncReportRequestSortsItem>("sorts", Sorts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

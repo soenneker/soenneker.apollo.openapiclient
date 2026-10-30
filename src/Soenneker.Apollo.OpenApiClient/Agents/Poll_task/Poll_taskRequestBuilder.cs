@@ -63,6 +63,8 @@ namespace Soenneker.Apollo.OpenApiClient.Agents.Poll_task
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.PollAnAssistantTask422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.PollAnAssistantTask429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Apollo.OpenApiClient.Models.PollAnAssistantTask500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PollAnAssistantTask200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PollAnAssistantTask200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

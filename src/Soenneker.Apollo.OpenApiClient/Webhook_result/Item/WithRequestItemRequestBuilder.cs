@@ -57,6 +57,8 @@ namespace Soenneker.Apollo.OpenApiClient.Webhook_result.Item
                 { "400", global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult400Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404Response.CreateFromDiscriminatorValue },
                 { "410", global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult410Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

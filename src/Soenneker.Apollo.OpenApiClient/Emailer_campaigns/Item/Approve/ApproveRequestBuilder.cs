@@ -57,6 +57,8 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Approve
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -11,40 +11,59 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchForSequences200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("breadcrumbs") is { } nullNodeBreadcrumbs && nullNodeBreadcrumbs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breadcrumbs = null;
+            if (parseNode.GetChildNode("emailer_campaigns") is { } nullNodeEmailerCampaigns && nullNodeEmailerCampaigns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerCampaigns = null;
+            if (parseNode.GetChildNode("num_fetch_result") is { } nullNodeNumFetchResult && nullNodeNumFetchResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumFetchResult = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The breadcrumbs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseBreadcrumbsItem>? Breadcrumbs { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseBreadcrumbsItem>? Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseBreadcrumbsItem>? _explicitNullValueBreadcrumbs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseBreadcrumbsItem> Breadcrumbs { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseBreadcrumbsItem> Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseBreadcrumbsItem> _explicitNullValueBreadcrumbs = default!;
 #endif
         /// <summary>The emailer_campaigns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem>? EmailerCampaigns { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem>? EmailerCampaigns { get => _explicitNullValueEmailerCampaigns; set { _explicitNullValueEmailerCampaigns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaigns"); else _explicitNullProperties?.Remove("emailer_campaigns"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem>? _explicitNullValueEmailerCampaigns = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem> EmailerCampaigns { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem> EmailerCampaigns { get => _explicitNullValueEmailerCampaigns; set { _explicitNullValueEmailerCampaigns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaigns"); else _explicitNullProperties?.Remove("emailer_campaigns"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem> _explicitNullValueEmailerCampaigns = default!;
 #endif
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NumFetchResult { get; set; }
+        public UntypedNode? NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        private UntypedNode? _explicitNullValueNumFetchResult = default!;
 #nullable restore
 #else
-        public UntypedNode NumFetchResult { get; set; }
+        public UntypedNode NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        private UntypedNode _explicitNullValueNumFetchResult = default!;
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200Response"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponseEmailerCampaignsItem>("emailer_campaigns", EmailerCampaigns);
             writer.WriteObjectValue<UntypedNode>("num_fetch_result", NumFetchResult);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchForSequences200ResponsePagination>("pagination", Pagination);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

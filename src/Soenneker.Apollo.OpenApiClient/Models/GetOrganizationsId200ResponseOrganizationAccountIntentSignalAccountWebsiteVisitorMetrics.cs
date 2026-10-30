@@ -11,49 +11,76 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("domain_aggregates") is { } nullNodeDomainAggregates && nullNodeDomainAggregates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainAggregates = null;
+            if (parseNode.GetChildNode("first_intent_signal_received_at") is { } nullNodeFirstIntentSignalReceivedAt && nullNodeFirstIntentSignalReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstIntentSignalReceivedAt = null;
+            if (parseNode.GetChildNode("last_intent_signal_received_at") is { } nullNodeLastIntentSignalReceivedAt && nullNodeLastIntentSignalReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIntentSignalReceivedAt = null;
+            if (parseNode.GetChildNode("overall_intent") is { } nullNodeOverallIntent && nullNodeOverallIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverallIntent = null;
+            if (parseNode.GetChildNode("pages") is { } nullNodePages && nullNodePages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pages = null;
+            if (parseNode.GetChildNode("page_view_aggregates") is { } nullNodePageViewAggregates && nullNodePageViewAggregates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageViewAggregates = null;
+            if (parseNode.GetChildNode("total_visits") is { } nullNodeTotalVisits && nullNodeTotalVisits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalVisits = null;
+            if (parseNode.GetChildNode("unique_visitors") is { } nullNodeUniqueVisitors && nullNodeUniqueVisitors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueVisitors = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The domain_aggregates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem>? DomainAggregates { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem>? DomainAggregates { get => _explicitNullValueDomainAggregates; set { _explicitNullValueDomainAggregates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_aggregates"); else _explicitNullProperties?.Remove("domain_aggregates"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem>? _explicitNullValueDomainAggregates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem> DomainAggregates { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem> DomainAggregates { get => _explicitNullValueDomainAggregates; set { _explicitNullValueDomainAggregates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_aggregates"); else _explicitNullProperties?.Remove("domain_aggregates"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem> _explicitNullValueDomainAggregates = default!;
 #endif
         /// <summary>The first_intent_signal_received_at property</summary>
-        public long? FirstIntentSignalReceivedAt { get; set; }
+        public long? FirstIntentSignalReceivedAt { get => _explicitNullValueFirstIntentSignalReceivedAt; set { _explicitNullValueFirstIntentSignalReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_intent_signal_received_at"); else _explicitNullProperties?.Remove("first_intent_signal_received_at"); } }
+        private long? _explicitNullValueFirstIntentSignalReceivedAt = default!;
         /// <summary>The last_intent_signal_received_at property</summary>
-        public long? LastIntentSignalReceivedAt { get; set; }
+        public long? LastIntentSignalReceivedAt { get => _explicitNullValueLastIntentSignalReceivedAt; set { _explicitNullValueLastIntentSignalReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_intent_signal_received_at"); else _explicitNullProperties?.Remove("last_intent_signal_received_at"); } }
+        private long? _explicitNullValueLastIntentSignalReceivedAt = default!;
         /// <summary>The overall_intent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverallIntent { get; set; }
+        public string? OverallIntent { get => _explicitNullValueOverallIntent; set { _explicitNullValueOverallIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overall_intent"); else _explicitNullProperties?.Remove("overall_intent"); } }
+        private string? _explicitNullValueOverallIntent = default!;
 #nullable restore
 #else
-        public string OverallIntent { get; set; }
+        public string OverallIntent { get => _explicitNullValueOverallIntent; set { _explicitNullValueOverallIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overall_intent"); else _explicitNullProperties?.Remove("overall_intent"); } }
+        private string _explicitNullValueOverallIntent = default!;
 #endif
         /// <summary>The pages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Pages { get; set; }
+        public List<string>? Pages { get => _explicitNullValuePages; set { _explicitNullValuePages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages"); else _explicitNullProperties?.Remove("pages"); } }
+        private List<string>? _explicitNullValuePages = default!;
 #nullable restore
 #else
-        public List<string> Pages { get; set; }
+        public List<string> Pages { get => _explicitNullValuePages; set { _explicitNullValuePages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages"); else _explicitNullProperties?.Remove("pages"); } }
+        private List<string> _explicitNullValuePages = default!;
 #endif
         /// <summary>The page_view_aggregates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates? PageViewAggregates { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates? PageViewAggregates { get => _explicitNullValuePageViewAggregates; set { _explicitNullValuePageViewAggregates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_view_aggregates"); else _explicitNullProperties?.Remove("page_view_aggregates"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates? _explicitNullValuePageViewAggregates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates PageViewAggregates { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates PageViewAggregates { get => _explicitNullValuePageViewAggregates; set { _explicitNullValuePageViewAggregates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_view_aggregates"); else _explicitNullProperties?.Remove("page_view_aggregates"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates _explicitNullValuePageViewAggregates = default!;
 #endif
         /// <summary>The total_visits property</summary>
-        public long? TotalVisits { get; set; }
+        public long? TotalVisits { get => _explicitNullValueTotalVisits; set { _explicitNullValueTotalVisits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_visits"); else _explicitNullProperties?.Remove("total_visits"); } }
+        private long? _explicitNullValueTotalVisits = default!;
         /// <summary>The unique_visitors property</summary>
-        public long? UniqueVisitors { get; set; }
+        public long? UniqueVisitors { get => _explicitNullValueUniqueVisitors; set { _explicitNullValueUniqueVisitors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_visitors"); else _explicitNullProperties?.Remove("unique_visitors"); } }
+        private long? _explicitNullValueUniqueVisitors = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetrics"/> and sets the default values.
         /// </summary>
@@ -69,7 +96,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetrics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetrics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetrics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsPageViewAggregates>("page_view_aggregates", PageViewAggregates);
             writer.WriteLongValue("total_visits", TotalVisits);
             writer.WriteLongValue("unique_visitors", UniqueVisitors);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,35 +11,53 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkCreateContactsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("append_label_names") is { } nullNodeAppendLabelNames && nullNodeAppendLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendLabelNames = null;
+            if (parseNode.GetChildNode("contacts") is { } nullNodeContacts && nullNodeContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contacts = null;
+            if (parseNode.GetChildNode("owner_id") is { } nullNodeOwnerId && nullNodeOwnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerId = null;
+            if (parseNode.GetChildNode("run_dedupe") is { } nullNodeRunDedupe && nullNodeRunDedupe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunDedupe = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of label names to add to ALL contacts in this request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AppendLabelNames { get; set; }
+        public List<string>? AppendLabelNames { get => _explicitNullValueAppendLabelNames; set { _explicitNullValueAppendLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_label_names"); else _explicitNullProperties?.Remove("append_label_names"); } }
+        private List<string>? _explicitNullValueAppendLabelNames = default!;
 #nullable restore
 #else
-        public List<string> AppendLabelNames { get; set; }
+        public List<string> AppendLabelNames { get => _explicitNullValueAppendLabelNames; set { _explicitNullValueAppendLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_label_names"); else _explicitNullProperties?.Remove("append_label_names"); } }
+        private List<string> _explicitNullValueAppendLabelNames = default!;
 #endif
         /// <summary>Array of contact objects to create (maximum 100 contacts per request)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem>? Contacts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem>? Contacts { get => _explicitNullValueContacts; set { _explicitNullValueContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contacts"); else _explicitNullProperties?.Remove("contacts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem>? _explicitNullValueContacts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem> Contacts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem> Contacts { get => _explicitNullValueContacts; set { _explicitNullValueContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contacts"); else _explicitNullProperties?.Remove("contacts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem> _explicitNullValueContacts = default!;
 #endif
         /// <summary>Owner user ID applied to all contacts in this batch. Defaults to current user if omitted. Returns 422 if the ID does not belong to the current team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerId { get; set; }
+        public string? OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private string? _explicitNullValueOwnerId = default!;
 #nullable restore
 #else
-        public string OwnerId { get; set; }
+        public string OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private string _explicitNullValueOwnerId = default!;
 #endif
         /// <summary>Enable full deduplication across all sources. When false (default), creates duplicates for non-email_import sources and merges with email_import placeholders only. When true, returns existing contacts in `existing_contacts` without modifying them (except email_import placeholders, which are still merged). &lt;br&gt;&lt;br&gt;Matching is checked in order: `id`, CRM identifiers, `person_id`, `email` (against the contact&apos;s primary and additional emails), then name plus company (matched on email domain, `organization_id`, or `organization_name`). &lt;br&gt;&lt;br&gt;Unlike &lt;a href=&quot;https://docs.apollo.io/reference/create-a-contact&quot;&gt;create a contact&lt;/a&gt;, this endpoint never overwrites a matched contact&apos;s fields.</summary>
-        public bool? RunDedupe { get; set; }
+        public bool? RunDedupe { get => _explicitNullValueRunDedupe; set { _explicitNullValueRunDedupe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_dedupe"); else _explicitNullProperties?.Remove("run_dedupe"); } }
+        private bool? _explicitNullValueRunDedupe = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequest"/> and sets the default values.
         /// </summary>
@@ -56,7 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContactsRequestContactsItem>("contacts", Contacts);
             writer.WriteStringValue("owner_id", OwnerId);
             writer.WriteBoolValue("run_dedupe", RunDedupe);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -57,6 +57,8 @@ namespace Soenneker.Apollo.OpenApiClient.Contacts.Search
             {
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.SearchForContacts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

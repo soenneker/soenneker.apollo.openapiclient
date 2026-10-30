@@ -11,17 +11,32 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bounce_rate") is { } nullNodeBounceRate && nullNodeBounceRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BounceRate = null;
+            if (parseNode.GetChildNode("open_rate") is { } nullNodeOpenRate && nullNodeOpenRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenRate = null;
+            if (parseNode.GetChildNode("reply_rate") is { } nullNodeReplyRate && nullNodeReplyRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplyRate = null;
+            if (parseNode.GetChildNode("spam_block_rate") is { } nullNodeSpamBlockRate && nullNodeSpamBlockRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpamBlockRate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bounce_rate property</summary>
-        public int? BounceRate { get; set; }
+        public int? BounceRate { get => _explicitNullValueBounceRate; set { _explicitNullValueBounceRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bounce_rate"); else _explicitNullProperties?.Remove("bounce_rate"); } }
+        private int? _explicitNullValueBounceRate = default!;
         /// <summary>The open_rate property</summary>
-        public int? OpenRate { get; set; }
+        public int? OpenRate { get => _explicitNullValueOpenRate; set { _explicitNullValueOpenRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_rate"); else _explicitNullProperties?.Remove("open_rate"); } }
+        private int? _explicitNullValueOpenRate = default!;
         /// <summary>The reply_rate property</summary>
-        public int? ReplyRate { get; set; }
+        public int? ReplyRate { get => _explicitNullValueReplyRate; set { _explicitNullValueReplyRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_rate"); else _explicitNullProperties?.Remove("reply_rate"); } }
+        private int? _explicitNullValueReplyRate = default!;
         /// <summary>The spam_block_rate property</summary>
-        public int? SpamBlockRate { get; set; }
+        public int? SpamBlockRate { get => _explicitNullValueSpamBlockRate; set { _explicitNullValueSpamBlockRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_block_rate"); else _explicitNullProperties?.Remove("spam_block_rate"); } }
+        private int? _explicitNullValueSpamBlockRate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds"/> and sets the default values.
         /// </summary>
@@ -41,7 +56,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItemTrueWarmupThresholds(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +83,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("open_rate", OpenRate);
             writer.WriteIntValue("reply_rate", ReplyRate);
             writer.WriteIntValue("spam_block_rate", SpamBlockRate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -59,6 +59,8 @@ namespace Soenneker.Apollo.OpenApiClient.Reports.Sync_report
                 { "400", global::Soenneker.Apollo.OpenApiClient.Models.SyncReport400Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.SyncReport422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.SyncReport429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.SyncReport200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

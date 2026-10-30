@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "FE7AB30E0897B41282260C93194A6243D56C505ACDF0B7AA59E405BD5C21037B0763D3E653A03B9784C1722D5CFBC8CF812CDFDA43F254153EB0C6C0C4AE21A1",
+  "descriptionHash": "D154CDB12FB91EA4D09BEBD3608195F73FEEB634FF80B8D08F6988B416D2B902EB8642327318E3CC64EC691B85AD1DEF2C8C79B699636821E5F3EDA51801A82B",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "ApolloOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Apollo.OpenApiClient",

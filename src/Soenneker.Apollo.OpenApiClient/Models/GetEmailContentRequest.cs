@@ -11,18 +11,30 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetEmailContentRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("body_format") is { } nullNodeBodyFormat && nullNodeBodyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyFormat = null;
+            if (parseNode.GetChildNode("ids") is { } nullNodeIds && nullNodeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ids = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The format used to return the body of each email. &lt;ul&gt; &lt;li&gt; `plain` (default): the body is returned as plain text, with the HTML tags removed. &lt;/li&gt; &lt;li&gt; `html`: the body is returned as the original HTML. &lt;/li&gt; &lt;/ul&gt;This value is case-sensitive. Any other value, including `HTML`, is treated as `plain`. &lt;br&gt;&lt;br&gt;Example: `html`</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat? BodyFormat { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat? BodyFormat { get => _explicitNullValueBodyFormat; set { _explicitNullValueBodyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body_format"); else _explicitNullProperties?.Remove("body_format"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat? _explicitNullValueBodyFormat = default!;
         /// <summary>The Apollo IDs of the sent emails whose content you want to retrieve. &lt;br&gt;&lt;br&gt;Include a maximum of 10 IDs per request. If you provide more than 10, Apollo uses the first 10 IDs and ignores the rest without returning an error. &lt;br&gt;&lt;br&gt;To find email message IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-outreach-emails&quot;&gt;search for outreach emails endpoint&lt;/a&gt; and identify the `id` value for each email. &lt;br&gt;&lt;br&gt;Example: `[&quot;66e8cc45028aed019c25d724&quot;, &quot;66e8cc45028aed019c25d725&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Ids { get; set; }
+        public List<string>? Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
+        private List<string>? _explicitNullValueIds = default!;
 #nullable restore
 #else
-        public List<string> Ids { get; set; }
+        public List<string> Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
+        private List<string> _explicitNullValueIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequest"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat>("body_format", BodyFormat);
             writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -56,6 +56,8 @@ namespace Soenneker.Apollo.OpenApiClient.Typed_custom_fields
             {
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfAllCustomFields200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

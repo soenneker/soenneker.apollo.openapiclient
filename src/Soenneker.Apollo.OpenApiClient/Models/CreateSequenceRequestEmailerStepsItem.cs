@@ -11,63 +11,94 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateSequenceRequestEmailerStepsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_skip_in_x_days") is { } nullNodeAutoSkipInXDays && nullNodeAutoSkipInXDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoSkipInXDays = null;
+            if (parseNode.GetChildNode("emailer_touches") is { } nullNodeEmailerTouches && nullNodeEmailerTouches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerTouches = null;
+            if (parseNode.GetChildNode("exact_datetime") is { } nullNodeExactDatetime && nullNodeExactDatetime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExactDatetime = null;
+            if (parseNode.GetChildNode("max_emails_per_day") is { } nullNodeMaxEmailsPerDay && nullNodeMaxEmailsPerDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxEmailsPerDay = null;
+            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("wait_mode") is { } nullNodeWaitMode && nullNodeWaitMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitMode = null;
+            if (parseNode.GetChildNode("wait_time") is { } nullNodeWaitTime && nullNodeWaitTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Automatically skip the task for this step if it is not completed within the given number of days.</summary>
-        public int? AutoSkipInXDays { get; set; }
+        public int? AutoSkipInXDays { get => _explicitNullValueAutoSkipInXDays; set { _explicitNullValueAutoSkipInXDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_skip_in_x_days"); else _explicitNullProperties?.Remove("auto_skip_in_x_days"); } }
+        private int? _explicitNullValueAutoSkipInXDays = default!;
         /// <summary>The email variants for the step. Applies to `auto_email`, `manual_email`, `linkedin_step_message`, `linkedin_step_connect`, and `call` steps. Adding more than 1 touch to a step creates an A/B test, which requires a plan with A/B testing access.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItem>? EmailerTouches { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItem>? EmailerTouches { get => _explicitNullValueEmailerTouches; set { _explicitNullValueEmailerTouches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_touches"); else _explicitNullProperties?.Remove("emailer_touches"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItem>? _explicitNullValueEmailerTouches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItem> EmailerTouches { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItem> EmailerTouches { get => _explicitNullValueEmailerTouches; set { _explicitNullValueEmailerTouches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_touches"); else _explicitNullProperties?.Remove("emailer_touches"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItem> _explicitNullValueEmailerTouches = default!;
 #endif
         /// <summary>The exact date and time at which the step runs, in ISO 8601 format. Required for each step when `sequence_by_exact_daytime` is `true`; must be in the future and later than the datetimes of all previous steps.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExactDatetime { get; set; }
+        public string? ExactDatetime { get => _explicitNullValueExactDatetime; set { _explicitNullValueExactDatetime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exact_datetime"); else _explicitNullProperties?.Remove("exact_datetime"); } }
+        private string? _explicitNullValueExactDatetime = default!;
 #nullable restore
 #else
-        public string ExactDatetime { get; set; }
+        public string ExactDatetime { get => _explicitNullValueExactDatetime; set { _explicitNullValueExactDatetime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exact_datetime"); else _explicitNullProperties?.Remove("exact_datetime"); } }
+        private string _explicitNullValueExactDatetime = default!;
 #endif
         /// <summary>The maximum number of emails to send per day for this step.</summary>
-        public int? MaxEmailsPerDay { get; set; }
+        public int? MaxEmailsPerDay { get => _explicitNullValueMaxEmailsPerDay; set { _explicitNullValueMaxEmailsPerDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_emails_per_day"); else _explicitNullProperties?.Remove("max_emails_per_day"); } }
+        private int? _explicitNullValueMaxEmailsPerDay = default!;
         /// <summary>A note describing the step (for example, call talking points or action item instructions).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Note { get; set; }
+        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        private string? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public string Note { get; set; }
+        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        private string _explicitNullValueNote = default!;
 #endif
         /// <summary>The priority of the task created for the step. Choose 1 of the following options: `high`, `medium`, `low`. Not applicable to `auto_email` steps.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Priority { get; set; }
+        public string? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private string? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public string Priority { get; set; }
+        public string Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private string _explicitNullValuePriority = default!;
 #endif
         /// <summary>The type of step. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`auto_email`: An email that Apollo sends automatically.&lt;/li&gt;&lt;li&gt;`manual_email`: An email task that a user sends manually.&lt;/li&gt;&lt;li&gt;`call`: A phone call task.&lt;/li&gt;&lt;li&gt;`action_item`: A general to-do task.&lt;/li&gt;&lt;li&gt;`linkedin_step_connect`: A LinkedIn connection request task.&lt;/li&gt;&lt;li&gt;`linkedin_step_message`: A LinkedIn message task.&lt;/li&gt;&lt;li&gt;`linkedin_step_view_profile`: A LinkedIn profile view task.&lt;/li&gt;&lt;li&gt;`linkedin_step_interact_post`: A LinkedIn post interaction task.&lt;/li&gt;&lt;/ul&gt;Step types other than `auto_email` require a plan with access to basic task functions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>The unit for `wait_time`. Choose 1 of the following options: `minute`, `hour`, `day`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WaitMode { get; set; }
+        public string? WaitMode { get => _explicitNullValueWaitMode; set { _explicitNullValueWaitMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_mode"); else _explicitNullProperties?.Remove("wait_mode"); } }
+        private string? _explicitNullValueWaitMode = default!;
 #nullable restore
 #else
-        public string WaitMode { get; set; }
+        public string WaitMode { get => _explicitNullValueWaitMode; set { _explicitNullValueWaitMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_mode"); else _explicitNullProperties?.Remove("wait_mode"); } }
+        private string _explicitNullValueWaitMode = default!;
 #endif
         /// <summary>How long to wait after the previous step before this step runs. Required (along with `wait_mode`) unless the sequence uses `sequence_by_exact_daytime`. &lt;br&gt;&lt;br&gt;Example: `2`</summary>
-        public int? WaitTime { get; set; }
+        public int? WaitTime { get => _explicitNullValueWaitTime; set { _explicitNullValueWaitTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_time"); else _explicitNullProperties?.Remove("wait_time"); } }
+        private int? _explicitNullValueWaitTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem"/> and sets the default values.
         /// </summary>
@@ -83,7 +114,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +151,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("wait_mode", WaitMode);
             writer.WriteIntValue("wait_time", WaitTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

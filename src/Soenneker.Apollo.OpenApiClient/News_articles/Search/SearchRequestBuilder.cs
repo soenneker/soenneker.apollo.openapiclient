@@ -53,6 +53,8 @@ namespace Soenneker.Apollo.OpenApiClient.News_articles.Search
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch422Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

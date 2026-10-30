@@ -11,19 +11,31 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PeopleApiSearch200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("people") is { } nullNodePeople && nullNodePeople.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) People = null;
+            if (parseNode.GetChildNode("total_entries") is { } nullNodeTotalEntries && nullNodeTotalEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalEntries = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of people that match your search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem>? People { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem>? People { get => _explicitNullValuePeople; set { _explicitNullValuePeople = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("people"); else _explicitNullProperties?.Remove("people"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem>? _explicitNullValuePeople = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem> People { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem> People { get => _explicitNullValuePeople; set { _explicitNullValuePeople = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("people"); else _explicitNullProperties?.Remove("people"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem> _explicitNullValuePeople = default!;
 #endif
         /// <summary>The total number of people that match your search criteria.</summary>
-        public int? TotalEntries { get; set; }
+        public int? TotalEntries { get => _explicitNullValueTotalEntries; set { _explicitNullValueTotalEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_entries"); else _explicitNullProperties?.Remove("total_entries"); } }
+        private int? _explicitNullValueTotalEntries = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200Response"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem>("people", People);
             writer.WriteIntValue("total_entries", TotalEntries);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

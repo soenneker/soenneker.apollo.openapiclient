@@ -11,56 +11,86 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListAllDeals200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("breadcrumbs") is { } nullNodeBreadcrumbs && nullNodeBreadcrumbs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breadcrumbs = null;
+            if (parseNode.GetChildNode("disable_eu_prospecting") is { } nullNodeDisableEuProspecting && nullNodeDisableEuProspecting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableEuProspecting = null;
+            if (parseNode.GetChildNode("has_join") is { } nullNodeHasJoin && nullNodeHasJoin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasJoin = null;
+            if (parseNode.GetChildNode("num_fetch_result") is { } nullNodeNumFetchResult && nullNodeNumFetchResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumFetchResult = null;
+            if (parseNode.GetChildNode("opportunities") is { } nullNodeOpportunities && nullNodeOpportunities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunities = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("partial_results_limit") is { } nullNodePartialResultsLimit && nullNodePartialResultsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartialResultsLimit = null;
+            if (parseNode.GetChildNode("partial_results_only") is { } nullNodePartialResultsOnly && nullNodePartialResultsOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartialResultsOnly = null;
+            if (parseNode.GetChildNode("salesforce_users") is { } nullNodeSalesforceUsers && nullNodeSalesforceUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesforceUsers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The breadcrumbs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Breadcrumbs { get; set; }
+        public UntypedNode? Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        private UntypedNode? _explicitNullValueBreadcrumbs = default!;
 #nullable restore
 #else
-        public UntypedNode Breadcrumbs { get; set; }
+        public UntypedNode Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        private UntypedNode _explicitNullValueBreadcrumbs = default!;
 #endif
         /// <summary>The disable_eu_prospecting property</summary>
-        public bool? DisableEuProspecting { get; set; }
+        public bool? DisableEuProspecting { get => _explicitNullValueDisableEuProspecting; set { _explicitNullValueDisableEuProspecting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_eu_prospecting"); else _explicitNullProperties?.Remove("disable_eu_prospecting"); } }
+        private bool? _explicitNullValueDisableEuProspecting = default!;
         /// <summary>The has_join property</summary>
-        public bool? HasJoin { get; set; }
+        public bool? HasJoin { get => _explicitNullValueHasJoin; set { _explicitNullValueHasJoin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_join"); else _explicitNullProperties?.Remove("has_join"); } }
+        private bool? _explicitNullValueHasJoin = default!;
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NumFetchResult { get; set; }
+        public UntypedNode? NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        private UntypedNode? _explicitNullValueNumFetchResult = default!;
 #nullable restore
 #else
-        public UntypedNode NumFetchResult { get; set; }
+        public UntypedNode NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        private UntypedNode _explicitNullValueNumFetchResult = default!;
 #endif
         /// <summary>The opportunities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem>? Opportunities { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem>? Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem>? _explicitNullValueOpportunities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem> Opportunities { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem> Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponseOpportunitiesItem> _explicitNullValueOpportunities = default!;
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>The partial_results_limit property</summary>
-        public int? PartialResultsLimit { get; set; }
+        public int? PartialResultsLimit { get => _explicitNullValuePartialResultsLimit; set { _explicitNullValuePartialResultsLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partial_results_limit"); else _explicitNullProperties?.Remove("partial_results_limit"); } }
+        private int? _explicitNullValuePartialResultsLimit = default!;
         /// <summary>The partial_results_only property</summary>
-        public bool? PartialResultsOnly { get; set; }
+        public bool? PartialResultsOnly { get => _explicitNullValuePartialResultsOnly; set { _explicitNullValuePartialResultsOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partial_results_only"); else _explicitNullProperties?.Remove("partial_results_only"); } }
+        private bool? _explicitNullValuePartialResultsOnly = default!;
         /// <summary>The salesforce_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SalesforceUsers { get; set; }
+        public UntypedNode? SalesforceUsers { get => _explicitNullValueSalesforceUsers; set { _explicitNullValueSalesforceUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_users"); else _explicitNullProperties?.Remove("salesforce_users"); } }
+        private UntypedNode? _explicitNullValueSalesforceUsers = default!;
 #nullable restore
 #else
-        public UntypedNode SalesforceUsers { get; set; }
+        public UntypedNode SalesforceUsers { get => _explicitNullValueSalesforceUsers; set { _explicitNullValueSalesforceUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_users"); else _explicitNullProperties?.Remove("salesforce_users"); } }
+        private UntypedNode _explicitNullValueSalesforceUsers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response"/> and sets the default values.
@@ -81,7 +111,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +148,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("partial_results_limit", PartialResultsLimit);
             writer.WriteBoolValue("partial_results_only", PartialResultsOnly);
             writer.WriteObjectValue<UntypedNode>("salesforce_users", SalesforceUsers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

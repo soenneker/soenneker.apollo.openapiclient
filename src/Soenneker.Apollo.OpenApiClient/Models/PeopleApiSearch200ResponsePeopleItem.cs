@@ -11,66 +11,101 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PeopleApiSearch200ResponsePeopleItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("first_name") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("has_city") is { } nullNodeHasCity && nullNodeHasCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCity = null;
+            if (parseNode.GetChildNode("has_country") is { } nullNodeHasCountry && nullNodeHasCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCountry = null;
+            if (parseNode.GetChildNode("has_direct_phone") is { } nullNodeHasDirectPhone && nullNodeHasDirectPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasDirectPhone = null;
+            if (parseNode.GetChildNode("has_email") is { } nullNodeHasEmail && nullNodeHasEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasEmail = null;
+            if (parseNode.GetChildNode("has_state") is { } nullNodeHasState && nullNodeHasState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasState = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("last_name_obfuscated") is { } nullNodeLastNameObfuscated && nullNodeLastNameObfuscated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastNameObfuscated = null;
+            if (parseNode.GetChildNode("last_refreshed_at") is { } nullNodeLastRefreshedAt && nullNodeLastRefreshedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastRefreshedAt = null;
+            if (parseNode.GetChildNode("organization") is { } nullNodeOrganization && nullNodeOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organization = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The first name of the person.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>Indicates whether Apollo has city location data for this person.</summary>
-        public bool? HasCity { get; set; }
+        public bool? HasCity { get => _explicitNullValueHasCity; set { _explicitNullValueHasCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_city"); else _explicitNullProperties?.Remove("has_city"); } }
+        private bool? _explicitNullValueHasCity = default!;
         /// <summary>Indicates whether Apollo has country location data for this person.</summary>
-        public bool? HasCountry { get; set; }
+        public bool? HasCountry { get => _explicitNullValueHasCountry; set { _explicitNullValueHasCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_country"); else _explicitNullProperties?.Remove("has_country"); } }
+        private bool? _explicitNullValueHasCountry = default!;
         /// <summary>Indicates whether Apollo has direct phone number data for this person. Returns `Yes` if available, or `Maybe: please request direct dial via people/bulk_match` if uncertain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HasDirectPhone { get; set; }
+        public string? HasDirectPhone { get => _explicitNullValueHasDirectPhone; set { _explicitNullValueHasDirectPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_direct_phone"); else _explicitNullProperties?.Remove("has_direct_phone"); } }
+        private string? _explicitNullValueHasDirectPhone = default!;
 #nullable restore
 #else
-        public string HasDirectPhone { get; set; }
+        public string HasDirectPhone { get => _explicitNullValueHasDirectPhone; set { _explicitNullValueHasDirectPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_direct_phone"); else _explicitNullProperties?.Remove("has_direct_phone"); } }
+        private string _explicitNullValueHasDirectPhone = default!;
 #endif
         /// <summary>Indicates whether Apollo has a verified email address for this person.</summary>
-        public bool? HasEmail { get; set; }
+        public bool? HasEmail { get => _explicitNullValueHasEmail; set { _explicitNullValueHasEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_email"); else _explicitNullProperties?.Remove("has_email"); } }
+        private bool? _explicitNullValueHasEmail = default!;
         /// <summary>Indicates whether Apollo has state location data for this person.</summary>
-        public bool? HasState { get; set; }
+        public bool? HasState { get => _explicitNullValueHasState; set { _explicitNullValueHasState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_state"); else _explicitNullProperties?.Remove("has_state"); } }
+        private bool? _explicitNullValueHasState = default!;
         /// <summary>The Apollo ID for the person.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The last name of the person with the middle characters obfuscated for privacy. The format shows the first 2 characters, followed by asterisks, and then the last character.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastNameObfuscated { get; set; }
+        public string? LastNameObfuscated { get => _explicitNullValueLastNameObfuscated; set { _explicitNullValueLastNameObfuscated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_obfuscated"); else _explicitNullProperties?.Remove("last_name_obfuscated"); } }
+        private string? _explicitNullValueLastNameObfuscated = default!;
 #nullable restore
 #else
-        public string LastNameObfuscated { get; set; }
+        public string LastNameObfuscated { get => _explicitNullValueLastNameObfuscated; set { _explicitNullValueLastNameObfuscated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_obfuscated"); else _explicitNullProperties?.Remove("last_name_obfuscated"); } }
+        private string _explicitNullValueLastNameObfuscated = default!;
 #endif
         /// <summary>The date and time when the person&apos;s data was last refreshed in Apollo&apos;s database.</summary>
-        public DateTimeOffset? LastRefreshedAt { get; set; }
+        public DateTimeOffset? LastRefreshedAt { get => _explicitNullValueLastRefreshedAt; set { _explicitNullValueLastRefreshedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_refreshed_at"); else _explicitNullProperties?.Remove("last_refreshed_at"); } }
+        private DateTimeOffset? _explicitNullValueLastRefreshedAt = default!;
         /// <summary>Information about the person&apos;s current employer organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization? Organization { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization? Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization? _explicitNullValueOrganization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization Organization { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization _explicitNullValueOrganization = default!;
 #endif
         /// <summary>The job title of the person. This field may be null if the person&apos;s title is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem"/> and sets the default values.
@@ -87,7 +122,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +163,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("last_refreshed_at", LastRefreshedAt);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleApiSearch200ResponsePeopleItemOrganization>("organization", Organization);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

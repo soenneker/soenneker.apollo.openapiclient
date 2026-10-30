@@ -11,53 +11,84 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkOrganizationEnrichment200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("missing_records") is { } nullNodeMissingRecords && nullNodeMissingRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingRecords = null;
+            if (parseNode.GetChildNode("organizations") is { } nullNodeOrganizations && nullNodeOrganizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organizations = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("total_requested_domains") is { } nullNodeTotalRequestedDomains && nullNodeTotalRequestedDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestedDomains = null;
+            if (parseNode.GetChildNode("total_requested_records") is { } nullNodeTotalRequestedRecords && nullNodeTotalRequestedRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestedRecords = null;
+            if (parseNode.GetChildNode("unique_domains") is { } nullNodeUniqueDomains && nullNodeUniqueDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueDomains = null;
+            if (parseNode.GetChildNode("unique_enriched_records") is { } nullNodeUniqueEnrichedRecords && nullNodeUniqueEnrichedRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueEnrichedRecords = null;
+            if (parseNode.GetChildNode("unique_records") is { } nullNodeUniqueRecords && nullNodeUniqueRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueRecords = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ErrorCode { get; set; }
+        public UntypedNode? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        private UntypedNode? _explicitNullValueErrorCode = default!;
 #nullable restore
 #else
-        public UntypedNode ErrorCode { get; set; }
+        public UntypedNode ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        private UntypedNode _explicitNullValueErrorCode = default!;
 #endif
         /// <summary>The error_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ErrorMessage { get; set; }
+        public UntypedNode? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        private UntypedNode? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public UntypedNode ErrorMessage { get; set; }
+        public UntypedNode ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        private UntypedNode _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The missing_records property</summary>
-        public int? MissingRecords { get; set; }
+        public int? MissingRecords { get => _explicitNullValueMissingRecords; set { _explicitNullValueMissingRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_records"); else _explicitNullProperties?.Remove("missing_records"); } }
+        private int? _explicitNullValueMissingRecords = default!;
         /// <summary>The organizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem>? Organizations { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem>? Organizations { get => _explicitNullValueOrganizations; set { _explicitNullValueOrganizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organizations"); else _explicitNullProperties?.Remove("organizations"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem>? _explicitNullValueOrganizations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem> Organizations { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem> Organizations { get => _explicitNullValueOrganizations; set { _explicitNullValueOrganizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organizations"); else _explicitNullProperties?.Remove("organizations"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200ResponseOrganizationsItem> _explicitNullValueOrganizations = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>The total number of domains submitted via the `domains[]` query parameter, including duplicates. Returned only for `domains[]` requests; `null` when you enrich using the `details` payload.</summary>
-        public int? TotalRequestedDomains { get; set; }
+        public int? TotalRequestedDomains { get => _explicitNullValueTotalRequestedDomains; set { _explicitNullValueTotalRequestedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_requested_domains"); else _explicitNullProperties?.Remove("total_requested_domains"); } }
+        private int? _explicitNullValueTotalRequestedDomains = default!;
         /// <summary>The total number of companies submitted in the `details` payload, including duplicates. Returned only when you enrich using the `details` request body; `null` for `domains[]` requests.</summary>
-        public int? TotalRequestedRecords { get; set; }
+        public int? TotalRequestedRecords { get => _explicitNullValueTotalRequestedRecords; set { _explicitNullValueTotalRequestedRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_requested_records"); else _explicitNullProperties?.Remove("total_requested_records"); } }
+        private int? _explicitNullValueTotalRequestedRecords = default!;
         /// <summary>The number of unique domains submitted via the `domains[]` query parameter. Returned only for `domains[]` requests; `null` when you enrich using the `details` payload.</summary>
-        public int? UniqueDomains { get; set; }
+        public int? UniqueDomains { get => _explicitNullValueUniqueDomains; set { _explicitNullValueUniqueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_domains"); else _explicitNullProperties?.Remove("unique_domains"); } }
+        private int? _explicitNullValueUniqueDomains = default!;
         /// <summary>The unique_enriched_records property</summary>
-        public int? UniqueEnrichedRecords { get; set; }
+        public int? UniqueEnrichedRecords { get => _explicitNullValueUniqueEnrichedRecords; set { _explicitNullValueUniqueEnrichedRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_enriched_records"); else _explicitNullProperties?.Remove("unique_enriched_records"); } }
+        private int? _explicitNullValueUniqueEnrichedRecords = default!;
         /// <summary>The number of unique companies submitted in the `details` payload after de-duplication. Returned only when you enrich using the `details` request body; `null` for `domains[]` requests.</summary>
-        public int? UniqueRecords { get; set; }
+        public int? UniqueRecords { get => _explicitNullValueUniqueRecords; set { _explicitNullValueUniqueRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_records"); else _explicitNullProperties?.Remove("unique_records"); } }
+        private int? _explicitNullValueUniqueRecords = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200Response"/> and sets the default values.
         /// </summary>
@@ -79,7 +110,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.BulkOrganizationEnrichment200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +149,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteIntValue("unique_domains", UniqueDomains);
             writer.WriteIntValue("unique_enriched_records", UniqueEnrichedRecords);
             writer.WriteIntValue("unique_records", UniqueRecords);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

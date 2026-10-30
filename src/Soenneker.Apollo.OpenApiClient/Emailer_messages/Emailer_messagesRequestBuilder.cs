@@ -88,6 +88,8 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_messages
             {
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.CreateAnEmailDraft200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

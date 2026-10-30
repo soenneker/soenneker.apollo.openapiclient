@@ -11,138 +11,195 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateAContactRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("contact_stage_id") is { } nullNodeContactStageId && nullNodeContactStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageId = null;
+            if (parseNode.GetChildNode("corporate_phone") is { } nullNodeCorporatePhone && nullNodeCorporatePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorporatePhone = null;
+            if (parseNode.GetChildNode("direct_phone") is { } nullNodeDirectPhone && nullNodeDirectPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectPhone = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("first_name") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("home_phone") is { } nullNodeHomePhone && nullNodeHomePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomePhone = null;
+            if (parseNode.GetChildNode("label_names") is { } nullNodeLabelNames && nullNodeLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelNames = null;
+            if (parseNode.GetChildNode("last_name") is { } nullNodeLastName && nullNodeLastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastName = null;
+            if (parseNode.GetChildNode("mobile_phone") is { } nullNodeMobilePhone && nullNodeMobilePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePhone = null;
+            if (parseNode.GetChildNode("organization_name") is { } nullNodeOrganizationName && nullNodeOrganizationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationName = null;
+            if (parseNode.GetChildNode("other_phone") is { } nullNodeOtherPhone && nullNodeOtherPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherPhone = null;
+            if (parseNode.GetChildNode("present_raw_address") is { } nullNodePresentRawAddress && nullNodePresentRawAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresentRawAddress = null;
+            if (parseNode.GetChildNode("run_dedupe") is { } nullNodeRunDedupe && nullNodeRunDedupe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunDedupe = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("typed_custom_fields") is { } nullNodeTypedCustomFields && nullNodeTypedCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypedCustomFields = null;
+            if (parseNode.GetChildNode("website_url") is { } nullNodeWebsiteUrl && nullNodeWebsiteUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebsiteUrl = null;
+        }
+
         /// <summary>The Apollo ID for the account. Example: `63f53afe4ceeca00016bdd2f`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get; set; }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get; set; }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Apollo ID for the contact stage. Example: `6095a710bd01d100a506d4ae`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactStageId { get; set; }
+        public string? ContactStageId { get => _explicitNullValueContactStageId; set { _explicitNullValueContactStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_id"); else _explicitNullProperties?.Remove("contact_stage_id"); } }
+        private string? _explicitNullValueContactStageId = default!;
 #nullable restore
 #else
-        public string ContactStageId { get; set; }
+        public string ContactStageId { get => _explicitNullValueContactStageId; set { _explicitNullValueContactStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_id"); else _explicitNullProperties?.Remove("contact_stage_id"); } }
+        private string _explicitNullValueContactStageId = default!;
 #endif
         /// <summary>The work/office phone number. Example: `+44 7700 900852`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CorporatePhone { get; set; }
+        public string? CorporatePhone { get => _explicitNullValueCorporatePhone; set { _explicitNullValueCorporatePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("corporate_phone"); else _explicitNullProperties?.Remove("corporate_phone"); } }
+        private string? _explicitNullValueCorporatePhone = default!;
 #nullable restore
 #else
-        public string CorporatePhone { get; set; }
+        public string CorporatePhone { get => _explicitNullValueCorporatePhone; set { _explicitNullValueCorporatePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("corporate_phone"); else _explicitNullProperties?.Remove("corporate_phone"); } }
+        private string _explicitNullValueCorporatePhone = default!;
 #endif
         /// <summary>The primary phone number. Example: `555-555-0133`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DirectPhone { get; set; }
+        public string? DirectPhone { get => _explicitNullValueDirectPhone; set { _explicitNullValueDirectPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direct_phone"); else _explicitNullProperties?.Remove("direct_phone"); } }
+        private string? _explicitNullValueDirectPhone = default!;
 #nullable restore
 #else
-        public string DirectPhone { get; set; }
+        public string DirectPhone { get => _explicitNullValueDirectPhone; set { _explicitNullValueDirectPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direct_phone"); else _explicitNullProperties?.Remove("direct_phone"); } }
+        private string _explicitNullValueDirectPhone = default!;
 #endif
         /// <summary>The email address of the contact. Example: `example@email.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The first name of the contact you want to create. Example: `Tim`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>The home phone number. Example: `555-555-0133`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HomePhone { get; set; }
+        public string? HomePhone { get => _explicitNullValueHomePhone; set { _explicitNullValueHomePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_phone"); else _explicitNullProperties?.Remove("home_phone"); } }
+        private string? _explicitNullValueHomePhone = default!;
 #nullable restore
 #else
-        public string HomePhone { get; set; }
+        public string HomePhone { get => _explicitNullValueHomePhone; set { _explicitNullValueHomePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_phone"); else _explicitNullProperties?.Remove("home_phone"); } }
+        private string _explicitNullValueHomePhone = default!;
 #endif
         /// <summary>Lists to which the contact belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LabelNames { get; set; }
+        public List<string>? LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
+        private List<string>? _explicitNullValueLabelNames = default!;
 #nullable restore
 #else
-        public List<string> LabelNames { get; set; }
+        public List<string> LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
+        private List<string> _explicitNullValueLabelNames = default!;
 #endif
         /// <summary>The last name of the contact you want to create. Example: `Zheng`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public string? LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string? _explicitNullValueLastName = default!;
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public string LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string _explicitNullValueLastName = default!;
 #endif
         /// <summary>The mobile phone number. Example: `555-555-0133`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MobilePhone { get; set; }
+        public string? MobilePhone { get => _explicitNullValueMobilePhone; set { _explicitNullValueMobilePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_phone"); else _explicitNullProperties?.Remove("mobile_phone"); } }
+        private string? _explicitNullValueMobilePhone = default!;
 #nullable restore
 #else
-        public string MobilePhone { get; set; }
+        public string MobilePhone { get => _explicitNullValueMobilePhone; set { _explicitNullValueMobilePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_phone"); else _explicitNullProperties?.Remove("mobile_phone"); } }
+        private string _explicitNullValueMobilePhone = default!;
 #endif
         /// <summary>The name of the contact&apos;s employer (company). Example: `apollo`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationName { get; set; }
+        public string? OrganizationName { get => _explicitNullValueOrganizationName; set { _explicitNullValueOrganizationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_name"); else _explicitNullProperties?.Remove("organization_name"); } }
+        private string? _explicitNullValueOrganizationName = default!;
 #nullable restore
 #else
-        public string OrganizationName { get; set; }
+        public string OrganizationName { get => _explicitNullValueOrganizationName; set { _explicitNullValueOrganizationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_name"); else _explicitNullProperties?.Remove("organization_name"); } }
+        private string _explicitNullValueOrganizationName = default!;
 #endif
         /// <summary>Alternative phone number. Example: `555-555-0133`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OtherPhone { get; set; }
+        public string? OtherPhone { get => _explicitNullValueOtherPhone; set { _explicitNullValueOtherPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_phone"); else _explicitNullProperties?.Remove("other_phone"); } }
+        private string? _explicitNullValueOtherPhone = default!;
 #nullable restore
 #else
-        public string OtherPhone { get; set; }
+        public string OtherPhone { get => _explicitNullValueOtherPhone; set { _explicitNullValueOtherPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_phone"); else _explicitNullProperties?.Remove("other_phone"); } }
+        private string _explicitNullValueOtherPhone = default!;
 #endif
         /// <summary>The personal location for the contact. Example: `Atlanta, United States`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PresentRawAddress { get; set; }
+        public string? PresentRawAddress { get => _explicitNullValuePresentRawAddress; set { _explicitNullValuePresentRawAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("present_raw_address"); else _explicitNullProperties?.Remove("present_raw_address"); } }
+        private string? _explicitNullValuePresentRawAddress = default!;
 #nullable restore
 #else
-        public string PresentRawAddress { get; set; }
+        public string PresentRawAddress { get => _explicitNullValuePresentRawAddress; set { _explicitNullValuePresentRawAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("present_raw_address"); else _explicitNullProperties?.Remove("present_raw_address"); } }
+        private string _explicitNullValuePresentRawAddress = default!;
 #endif
         /// <summary>Set to `true` to match against your existing contacts instead of always creating a new one. The default value is `false`. &lt;br&gt;&lt;br&gt;When a match is found, Apollo **updates that existing contact in place** with the values you sent and returns it — the `id` in the response belongs to the pre-existing contact, not a new record. Fields you send overwrite the stored values, fields you omit are left untouched, and sending an empty value clears the field. &lt;br&gt;&lt;br&gt;Matching is checked in order: `id`, CRM identifiers, `person_id`, `email` (against the contact&apos;s primary and additional emails), then name plus company. Because of the last rule, a contact can be matched and updated even when the email differs. &lt;br&gt;&lt;br&gt;When deduplication is enabled, performance may be slightly impacted due to the additional matching checks. See the endpoint description for full details.</summary>
-        public bool? RunDedupe { get; set; }
+        public bool? RunDedupe { get => _explicitNullValueRunDedupe; set { _explicitNullValueRunDedupe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_dedupe"); else _explicitNullProperties?.Remove("run_dedupe"); } }
+        private bool? _explicitNullValueRunDedupe = default!;
         /// <summary>The current job title that the contact holds. Example: `senior research analyst`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Add information to &lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412498825869-Create-Custom-Contact-Fields&quot; target=&quot;_blank&quot;&gt;custom fields&lt;/a&gt; in Apollo. &lt;br&gt;&lt;br&gt;&lt;b&gt;Your custom fields are unique to your team&apos;s Apollo account. This means that the examples in this documentation may not work for your testing purposes.&lt;/b&gt; &lt;br&gt;&lt;br&gt;To utilize this parameter successfully, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;get a list of all custom fields&lt;/a&gt; endpoint and identify the `id` value for the custom field, as well as the appropriate data type. For example, if a custom field accepts picklist entries, you need to pass the accompanying `id` value for the picklist entry that you want to use as the input value. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example&lt;/b&gt;: When the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-all-custom-fields&quot;&gt;get a list of all custom fields&lt;/a&gt; endpoint returns an `id` of field:  * `&quot;60c39ed82bd02f01154c470a&quot;` (datetime)   then the value passed should be:  `{&quot;60c39ed82bd02f01154c470a&quot;: &quot;2025-08-07&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields? TypedCustomFields { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields? TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields? _explicitNullValueTypedCustomFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields TypedCustomFields { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields _explicitNullValueTypedCustomFields = default!;
 #endif
         /// <summary>The corporate website URL. Example: `https://www.apollo.io/`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebsiteUrl { get; set; }
+        public string? WebsiteUrl { get => _explicitNullValueWebsiteUrl; set { _explicitNullValueWebsiteUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website_url"); else _explicitNullProperties?.Remove("website_url"); } }
+        private string? _explicitNullValueWebsiteUrl = default!;
 #nullable restore
 #else
-        public string WebsiteUrl { get; set; }
+        public string WebsiteUrl { get => _explicitNullValueWebsiteUrl; set { _explicitNullValueWebsiteUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website_url"); else _explicitNullProperties?.Remove("website_url"); } }
+        private string _explicitNullValueWebsiteUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequest"/> and sets the default values.
@@ -160,7 +217,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -213,6 +270,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteStringValue("title", Title);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAContactRequestTypedCustomFields>("typed_custom_fields", TypedCustomFields);
             writer.WriteStringValue("website_url", WebsiteUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

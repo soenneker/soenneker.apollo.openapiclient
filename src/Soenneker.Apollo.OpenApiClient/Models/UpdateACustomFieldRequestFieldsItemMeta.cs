@@ -12,26 +12,41 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateACustomFieldRequestFieldsItemMeta : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("max_length") is { } nullNodeMaxLength && nullNodeMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLength = null;
+            if (parseNode.GetChildNode("picklist_values") is { } nullNodePicklistValues && nullNodePicklistValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValues = null;
+            if (parseNode.GetChildNode("picklist_value_set_id") is { } nullNodePicklistValueSetId && nullNodePicklistValueSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValueSetId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maximum number of characters the field accepts. Only applies to `string` and `textarea` fields. &lt;br&gt;&lt;br&gt;Example: `240`</summary>
-        public double? MaxLength { get; set; }
+        public double? MaxLength { get => _explicitNullValueMaxLength; set { _explicitNullValueMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_length"); else _explicitNullProperties?.Remove("max_length"); } }
+        private double? _explicitNullValueMaxLength = default!;
         /// <summary>The complete set of options for a `picklist` or `multipicklist` field. &lt;br&gt;&lt;br&gt;&lt;b&gt;Required for every update to a picklist field, including a change that only renames the field.&lt;/b&gt; If you omit it, the request fails with `Picklist fields must have at least one option`. &lt;br&gt;&lt;br&gt;This parameter replaces the field&apos;s options, so send every option you want to keep. Any option you leave out is removed from the field. &lt;br&gt;&lt;br&gt;To rename or remap an existing option, include that option&apos;s existing `id`. An option sent without its `id` is deleted and recreated, which orphans the values already stored on your records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>? PicklistValues { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>? PicklistValues { get => _explicitNullValuePicklistValues; set { _explicitNullValuePicklistValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_values"); else _explicitNullProperties?.Remove("picklist_values"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>? _explicitNullValuePicklistValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem> PicklistValues { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem> PicklistValues { get => _explicitNullValuePicklistValues; set { _explicitNullValuePicklistValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_values"); else _explicitNullProperties?.Remove("picklist_values"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem> _explicitNullValuePicklistValues = default!;
 #endif
         /// <summary>The ID of an existing picklist value set to attach to this field. Only applies to `picklist` and `multipicklist` fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PicklistValueSetId { get; set; }
+        public string? PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
+        private string? _explicitNullValuePicklistValueSetId = default!;
 #nullable restore
 #else
-        public string PicklistValueSetId { get; set; }
+        public string PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
+        private string _explicitNullValuePicklistValueSetId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMeta"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMeta CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMeta();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMeta(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteDoubleValue("max_length", MaxLength);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>("picklist_values", PicklistValues);
             writer.WriteStringValue("picklist_value_set_id", PicklistValueSetId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,24 +11,37 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkCreateAccounts200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created_accounts") is { } nullNodeCreatedAccounts && nullNodeCreatedAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAccounts = null;
+            if (parseNode.GetChildNode("existing_accounts") is { } nullNodeExistingAccounts && nullNodeExistingAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingAccounts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of newly created accounts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem>? CreatedAccounts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem>? CreatedAccounts { get => _explicitNullValueCreatedAccounts; set { _explicitNullValueCreatedAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_accounts"); else _explicitNullProperties?.Remove("created_accounts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem>? _explicitNullValueCreatedAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem> CreatedAccounts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem> CreatedAccounts { get => _explicitNullValueCreatedAccounts; set { _explicitNullValueCreatedAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_accounts"); else _explicitNullProperties?.Remove("created_accounts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem> _explicitNullValueCreatedAccounts = default!;
 #endif
         /// <summary>Array of existing accounts that matched deduplication criteria (returned without modification)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem>? ExistingAccounts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem>? ExistingAccounts { get => _explicitNullValueExistingAccounts; set { _explicitNullValueExistingAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_accounts"); else _explicitNullProperties?.Remove("existing_accounts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem>? _explicitNullValueExistingAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem> ExistingAccounts { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem> ExistingAccounts { get => _explicitNullValueExistingAccounts; set { _explicitNullValueExistingAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_accounts"); else _explicitNullProperties?.Remove("existing_accounts"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem> _explicitNullValueExistingAccounts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200Response"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseCreatedAccountsItem>("created_accounts", CreatedAccounts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccounts200ResponseExistingAccountsItem>("existing_accounts", ExistingAccounts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

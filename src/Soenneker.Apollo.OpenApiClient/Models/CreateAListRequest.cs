@@ -11,20 +11,34 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateAListRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("book_of_business") is { } nullNodeBookOfBusiness && nullNodeBookOfBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookOfBusiness = null;
+            if (parseNode.GetChildNode("modality") is { } nullNodeModality && nullNodeModality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modality = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set to `true` to mark an account list as a Book of Business (BoB) list. Only applies when `modality` is `accounts`. Defaults to `false`.</summary>
-        public bool? BookOfBusiness { get; set; }
+        public bool? BookOfBusiness { get => _explicitNullValueBookOfBusiness; set { _explicitNullValueBookOfBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("book_of_business"); else _explicitNullProperties?.Remove("book_of_business"); } }
+        private bool? _explicitNullValueBookOfBusiness = default!;
         /// <summary>The type of records the list holds. &lt;ul&gt;&lt;li&gt;`contacts`: a list of contacts (people).&lt;/li&gt;&lt;li&gt;`accounts`: a list of accounts (companies).&lt;/li&gt;&lt;/ul&gt;</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequestModality? Modality { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequestModality? Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequestModality? _explicitNullValueModality = default!;
         /// <summary>The name for the new list. Must be unique for the given `modality` within your team.&lt;br&gt;&lt;br&gt;Example: `Conference 2024 - Maui`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequest"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteBoolValue("book_of_business", BookOfBusiness);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.CreateAListRequestModality>("modality", Modality);
             writer.WriteStringValue("name", Name);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,37 +12,57 @@ namespace Soenneker.Apollo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateSequenceRequestSharingPermission : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_type") is { } nullNodeAccessType && nullNodeAccessType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessType = null;
+            if (parseNode.GetChildNode("added_sharing_accesses") is { } nullNodeAddedSharingAccesses && nullNodeAddedSharingAccesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedSharingAccesses = null;
+            if (parseNode.GetChildNode("deleted_sharing_accesses") is { } nullNodeDeletedSharingAccesses && nullNodeDeletedSharingAccesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletedSharingAccesses = null;
+            if (parseNode.GetChildNode("updated_sharing_accesses") is { } nullNodeUpdatedSharingAccesses && nullNodeUpdatedSharingAccesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedSharingAccesses = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+        }
+
         /// <summary>The level of access your team receives when `visibility` is `everyone`. Ignored when `visibility` is `restricted`. &lt;br&gt;&lt;br&gt;Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`can_view`: Team members can view the sequence.&lt;/li&gt;&lt;li&gt;`can_edit`: Team members can view and edit the sequence.&lt;/li&gt;&lt;li&gt;`full_access`: Team members can view, edit, and share the sequence.&lt;/li&gt;&lt;/ul&gt;</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAccessType? AccessType { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAccessType? AccessType { get => _explicitNullValueAccessType; set { _explicitNullValueAccessType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_type"); else _explicitNullProperties?.Remove("access_type"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAccessType? _explicitNullValueAccessType = default!;
         /// <summary>Share the sequence with specific users or teams, in addition to whatever `visibility` grants. &lt;br&gt;&lt;br&gt;Note that the response returns the current shares as a single `sharing_accesses` array; to change them, use these `added_`, `updated_`, and `deleted_` arrays instead. &lt;br&gt;&lt;br&gt;If an entry sets `user_or_team_type` to `team`, its `access_type` also overrides the `access_type` you pass at the top level of `sharing_permission`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAddedSharingAccessesItem>? AddedSharingAccesses { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAddedSharingAccessesItem>? AddedSharingAccesses { get => _explicitNullValueAddedSharingAccesses; set { _explicitNullValueAddedSharingAccesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_sharing_accesses"); else _explicitNullProperties?.Remove("added_sharing_accesses"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAddedSharingAccessesItem>? _explicitNullValueAddedSharingAccesses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAddedSharingAccessesItem> AddedSharingAccesses { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAddedSharingAccessesItem> AddedSharingAccesses { get => _explicitNullValueAddedSharingAccesses; set { _explicitNullValueAddedSharingAccesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_sharing_accesses"); else _explicitNullProperties?.Remove("added_sharing_accesses"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionAddedSharingAccessesItem> _explicitNullValueAddedSharingAccesses = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Stop sharing the sequence with specific users or teams. Entries are matched on `user_or_team_id`; an entry for the sequence owner is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem>? DeletedSharingAccesses { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem>? DeletedSharingAccesses { get => _explicitNullValueDeletedSharingAccesses; set { _explicitNullValueDeletedSharingAccesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleted_sharing_accesses"); else _explicitNullProperties?.Remove("deleted_sharing_accesses"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem>? _explicitNullValueDeletedSharingAccesses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem> DeletedSharingAccesses { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem> DeletedSharingAccesses { get => _explicitNullValueDeletedSharingAccesses; set { _explicitNullValueDeletedSharingAccesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleted_sharing_accesses"); else _explicitNullProperties?.Remove("deleted_sharing_accesses"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem> _explicitNullValueDeletedSharingAccesses = default!;
 #endif
         /// <summary>Change the access level of users or teams the sequence is already shared with. Entries are matched on `user_or_team_id`; an entry for the sequence owner is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem>? UpdatedSharingAccesses { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem>? UpdatedSharingAccesses { get => _explicitNullValueUpdatedSharingAccesses; set { _explicitNullValueUpdatedSharingAccesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_sharing_accesses"); else _explicitNullProperties?.Remove("updated_sharing_accesses"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem>? _explicitNullValueUpdatedSharingAccesses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem> UpdatedSharingAccesses { get; set; }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem> UpdatedSharingAccesses { get => _explicitNullValueUpdatedSharingAccesses; set { _explicitNullValueUpdatedSharingAccesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_sharing_accesses"); else _explicitNullProperties?.Remove("updated_sharing_accesses"); } }
+        private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem> _explicitNullValueUpdatedSharingAccesses = default!;
 #endif
         /// <summary>Set to `everyone` to share the sequence with your whole team, or `restricted` to limit it to the owner and the users or teams listed in `sharing_accesses`. &lt;br&gt;&lt;br&gt;Changing `visibility` resets `access_type` to `can_view` when the new value is `everyone`, and to `null` when it is `restricted`.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionVisibility? Visibility { get; set; }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionVisibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionVisibility? _explicitNullValueVisibility = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermission"/> and sets the default values.
         /// </summary>
@@ -58,7 +78,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public static global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermission CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermission();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermission(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionDeletedSharingAccessesItem>("deleted_sharing_accesses", DeletedSharingAccesses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionUpdatedSharingAccessesItem>("updated_sharing_accesses", UpdatedSharingAccesses);
             writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.UpdateSequenceRequestSharingPermissionVisibility>("visibility", Visibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

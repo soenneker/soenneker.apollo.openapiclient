@@ -55,6 +55,8 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item.Job_postings
             {
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

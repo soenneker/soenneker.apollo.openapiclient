@@ -57,6 +57,8 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Item
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ViewDeal200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -86,6 +88,8 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Item
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.UpdateDeal403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.UpdateDeal422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.UpdateDeal429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.UpdateDeal200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.UpdateDeal200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
