@@ -17,15 +17,24 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
-            if (parseNode.GetChildNode("first_visit") is { } nullNodeFirstVisit && nullNodeFirstVisit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstVisit = null;
-            if (parseNode.GetChildNode("intent") is { } nullNodeIntent && nullNodeIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intent = null;
-            if (parseNode.GetChildNode("intent_score") is { } nullNodeIntentScore && nullNodeIntentScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntentScore = null;
-            if (parseNode.GetChildNode("last_visit") is { } nullNodeLastVisit && nullNodeLastVisit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVisit = null;
-            if (parseNode.GetChildNode("top_5_paths") is { } nullNodeTop5Paths && nullNodeTop5Paths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Top5Paths = null;
-            if (parseNode.GetChildNode("total_visits") is { } nullNodeTotalVisits && nullNodeTotalVisits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalVisits = null;
-            if (parseNode.GetChildNode("unique_visitors") is { } nullNodeUniqueVisitors && nullNodeUniqueVisitors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueVisitors = null;
-            if (parseNode.GetChildNode("weekly_aggregates") is { } nullNodeWeeklyAggregates && nullNodeWeeklyAggregates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeeklyAggregates = null;
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("first_visit") is null) { _explicitNullValueFirstVisit = default!; _explicitNullProperties?.Remove("first_visit"); }
+            else if (parseNode.GetChildNode("first_visit") is { } nullNodeFirstVisit && nullNodeFirstVisit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstVisit = null;
+            if (parseNode.GetChildNode("intent") is null) { _explicitNullValueIntent = default!; _explicitNullProperties?.Remove("intent"); }
+            else if (parseNode.GetChildNode("intent") is { } nullNodeIntent && nullNodeIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intent = null;
+            if (parseNode.GetChildNode("intent_score") is null) { _explicitNullValueIntentScore = default!; _explicitNullProperties?.Remove("intent_score"); }
+            else if (parseNode.GetChildNode("intent_score") is { } nullNodeIntentScore && nullNodeIntentScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntentScore = null;
+            if (parseNode.GetChildNode("last_visit") is null) { _explicitNullValueLastVisit = default!; _explicitNullProperties?.Remove("last_visit"); }
+            else if (parseNode.GetChildNode("last_visit") is { } nullNodeLastVisit && nullNodeLastVisit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVisit = null;
+            if (parseNode.GetChildNode("top_5_paths") is null) { _explicitNullValueTop5Paths = default!; _explicitNullProperties?.Remove("top_5_paths"); }
+            else if (parseNode.GetChildNode("top_5_paths") is { } nullNodeTop5Paths && nullNodeTop5Paths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Top5Paths = null;
+            if (parseNode.GetChildNode("total_visits") is null) { _explicitNullValueTotalVisits = default!; _explicitNullProperties?.Remove("total_visits"); }
+            else if (parseNode.GetChildNode("total_visits") is { } nullNodeTotalVisits && nullNodeTotalVisits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalVisits = null;
+            if (parseNode.GetChildNode("unique_visitors") is null) { _explicitNullValueUniqueVisitors = default!; _explicitNullProperties?.Remove("unique_visitors"); }
+            else if (parseNode.GetChildNode("unique_visitors") is { } nullNodeUniqueVisitors && nullNodeUniqueVisitors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueVisitors = null;
+            if (parseNode.GetChildNode("weekly_aggregates") is null) { _explicitNullValueWeeklyAggregates = default!; _explicitNullProperties?.Remove("weekly_aggregates"); }
+            else if (parseNode.GetChildNode("weekly_aggregates") is { } nullNodeWeeklyAggregates && nullNodeWeeklyAggregates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeeklyAggregates = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,56 +42,56 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The first_visit property</summary>
-        public long? FirstVisit { get => _explicitNullValueFirstVisit; set { _explicitNullValueFirstVisit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_visit"); else _explicitNullProperties?.Remove("first_visit"); } }
+        public long? FirstVisit { get => _explicitNullValueFirstVisit; set { _explicitNullValueFirstVisit = value; AdditionalData?.Remove("first_visit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_visit"); else _explicitNullProperties?.Remove("first_visit"); } }
         private long? _explicitNullValueFirstVisit = default!;
         /// <summary>The intent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
+        public string? Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; AdditionalData?.Remove("intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
         private string? _explicitNullValueIntent = default!;
 #nullable restore
 #else
-        public string Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
+        public string Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; AdditionalData?.Remove("intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
         private string _explicitNullValueIntent = default!;
 #endif
         /// <summary>The intent_score property</summary>
-        public long? IntentScore { get => _explicitNullValueIntentScore; set { _explicitNullValueIntentScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent_score"); else _explicitNullProperties?.Remove("intent_score"); } }
+        public long? IntentScore { get => _explicitNullValueIntentScore; set { _explicitNullValueIntentScore = value; AdditionalData?.Remove("intent_score"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent_score"); else _explicitNullProperties?.Remove("intent_score"); } }
         private long? _explicitNullValueIntentScore = default!;
         /// <summary>The last_visit property</summary>
-        public long? LastVisit { get => _explicitNullValueLastVisit; set { _explicitNullValueLastVisit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_visit"); else _explicitNullProperties?.Remove("last_visit"); } }
+        public long? LastVisit { get => _explicitNullValueLastVisit; set { _explicitNullValueLastVisit = value; AdditionalData?.Remove("last_visit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_visit"); else _explicitNullProperties?.Remove("last_visit"); } }
         private long? _explicitNullValueLastVisit = default!;
         /// <summary>The top_5_paths property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemTop5PathsItem>? Top5Paths { get => _explicitNullValueTop5Paths; set { _explicitNullValueTop5Paths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_5_paths"); else _explicitNullProperties?.Remove("top_5_paths"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemTop5PathsItem>? Top5Paths { get => _explicitNullValueTop5Paths; set { _explicitNullValueTop5Paths = value; AdditionalData?.Remove("top_5_paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_5_paths"); else _explicitNullProperties?.Remove("top_5_paths"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemTop5PathsItem>? _explicitNullValueTop5Paths = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemTop5PathsItem> Top5Paths { get => _explicitNullValueTop5Paths; set { _explicitNullValueTop5Paths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_5_paths"); else _explicitNullProperties?.Remove("top_5_paths"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemTop5PathsItem> Top5Paths { get => _explicitNullValueTop5Paths; set { _explicitNullValueTop5Paths = value; AdditionalData?.Remove("top_5_paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_5_paths"); else _explicitNullProperties?.Remove("top_5_paths"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemTop5PathsItem> _explicitNullValueTop5Paths = default!;
 #endif
         /// <summary>The total_visits property</summary>
-        public long? TotalVisits { get => _explicitNullValueTotalVisits; set { _explicitNullValueTotalVisits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_visits"); else _explicitNullProperties?.Remove("total_visits"); } }
+        public long? TotalVisits { get => _explicitNullValueTotalVisits; set { _explicitNullValueTotalVisits = value; AdditionalData?.Remove("total_visits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_visits"); else _explicitNullProperties?.Remove("total_visits"); } }
         private long? _explicitNullValueTotalVisits = default!;
         /// <summary>The unique_visitors property</summary>
-        public long? UniqueVisitors { get => _explicitNullValueUniqueVisitors; set { _explicitNullValueUniqueVisitors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_visitors"); else _explicitNullProperties?.Remove("unique_visitors"); } }
+        public long? UniqueVisitors { get => _explicitNullValueUniqueVisitors; set { _explicitNullValueUniqueVisitors = value; AdditionalData?.Remove("unique_visitors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_visitors"); else _explicitNullProperties?.Remove("unique_visitors"); } }
         private long? _explicitNullValueUniqueVisitors = default!;
         /// <summary>The weekly_aggregates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemWeeklyAggregatesItem>? WeeklyAggregates { get => _explicitNullValueWeeklyAggregates; set { _explicitNullValueWeeklyAggregates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_aggregates"); else _explicitNullProperties?.Remove("weekly_aggregates"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemWeeklyAggregatesItem>? WeeklyAggregates { get => _explicitNullValueWeeklyAggregates; set { _explicitNullValueWeeklyAggregates = value; AdditionalData?.Remove("weekly_aggregates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_aggregates"); else _explicitNullProperties?.Remove("weekly_aggregates"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemWeeklyAggregatesItem>? _explicitNullValueWeeklyAggregates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemWeeklyAggregatesItem> WeeklyAggregates { get => _explicitNullValueWeeklyAggregates; set { _explicitNullValueWeeklyAggregates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_aggregates"); else _explicitNullProperties?.Remove("weekly_aggregates"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemWeeklyAggregatesItem> WeeklyAggregates { get => _explicitNullValueWeeklyAggregates; set { _explicitNullValueWeeklyAggregates = value; AdditionalData?.Remove("weekly_aggregates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_aggregates"); else _explicitNullProperties?.Remove("weekly_aggregates"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountDomainAggregatesItemWeeklyAggregatesItem> _explicitNullValueWeeklyAggregates = default!;
 #endif
         /// <summary>

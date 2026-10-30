@@ -17,17 +17,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_stages") is { } nullNodeAccountStages && nullNodeAccountStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStages = null;
+            if (parseNode.GetChildNode("account_stages") is null) { _explicitNullValueAccountStages = default!; _explicitNullProperties?.Remove("account_stages"); }
+            else if (parseNode.GetChildNode("account_stages") is { } nullNodeAccountStages && nullNodeAccountStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStages = null;
         }
 
         /// <summary>The account_stages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItem>? AccountStages { get => _explicitNullValueAccountStages; set { _explicitNullValueAccountStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stages"); else _explicitNullProperties?.Remove("account_stages"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItem>? AccountStages { get => _explicitNullValueAccountStages; set { _explicitNullValueAccountStages = value; AdditionalData?.Remove("account_stages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stages"); else _explicitNullProperties?.Remove("account_stages"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItem>? _explicitNullValueAccountStages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItem> AccountStages { get => _explicitNullValueAccountStages; set { _explicitNullValueAccountStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stages"); else _explicitNullProperties?.Remove("account_stages"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItem> AccountStages { get => _explicitNullValueAccountStages; set { _explicitNullValueAccountStages = value; AdditionalData?.Remove("account_stages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_stages"); else _explicitNullProperties?.Remove("account_stages"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ListAccountStages200ResponseAccountStagesItem> _explicitNullValueAccountStages = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

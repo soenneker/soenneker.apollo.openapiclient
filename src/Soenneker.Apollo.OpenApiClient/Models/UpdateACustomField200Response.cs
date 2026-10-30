@@ -17,11 +17,16 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("field_groups") is { } nullNodeFieldGroups && nullNodeFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldGroups = null;
-            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
-            if (parseNode.GetChildNode("finder_views") is { } nullNodeFinderViews && nullNodeFinderViews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinderViews = null;
-            if (parseNode.GetChildNode("picklist_value_sets") is { } nullNodePicklistValueSets && nullNodePicklistValueSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValueSets = null;
-            if (parseNode.GetChildNode("typed_custom_fields") is { } nullNodeTypedCustomFields && nullNodeTypedCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypedCustomFields = null;
+            if (parseNode.GetChildNode("field_groups") is null) { _explicitNullValueFieldGroups = default!; _explicitNullProperties?.Remove("field_groups"); }
+            else if (parseNode.GetChildNode("field_groups") is { } nullNodeFieldGroups && nullNodeFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldGroups = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("finder_views") is null) { _explicitNullValueFinderViews = default!; _explicitNullProperties?.Remove("finder_views"); }
+            else if (parseNode.GetChildNode("finder_views") is { } nullNodeFinderViews && nullNodeFinderViews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinderViews = null;
+            if (parseNode.GetChildNode("picklist_value_sets") is null) { _explicitNullValuePicklistValueSets = default!; _explicitNullProperties?.Remove("picklist_value_sets"); }
+            else if (parseNode.GetChildNode("picklist_value_sets") is { } nullNodePicklistValueSets && nullNodePicklistValueSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValueSets = null;
+            if (parseNode.GetChildNode("typed_custom_fields") is null) { _explicitNullValueTypedCustomFields = default!; _explicitNullProperties?.Remove("typed_custom_fields"); }
+            else if (parseNode.GetChildNode("typed_custom_fields") is { } nullNodeTypedCustomFields && nullNodeTypedCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypedCustomFields = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The field groups associated with the fields you updated. Only present when the fields belong to at least 1 field group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldGroupsItem>? FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_groups"); else _explicitNullProperties?.Remove("field_groups"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldGroupsItem>? FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; AdditionalData?.Remove("field_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_groups"); else _explicitNullProperties?.Remove("field_groups"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldGroupsItem>? _explicitNullValueFieldGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldGroupsItem> FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_groups"); else _explicitNullProperties?.Remove("field_groups"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldGroupsItem> FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; AdditionalData?.Remove("field_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_groups"); else _explicitNullProperties?.Remove("field_groups"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldGroupsItem> _explicitNullValueFieldGroups = default!;
 #endif
         /// <summary>The fields as they exist after the update. If updating a field caused Apollo to remove a child field, that child appears here as an object with `id` and `deleted` set to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldsItem>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldsItem>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldsItem>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldsItem> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldsItem> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFieldsItem> _explicitNullValueFields = default!;
 #endif
         /// <summary>The saved views that the updated fields are local to. Only present when at least 1 updated field is local to a view.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFinderViewsItem>? FinderViews { get => _explicitNullValueFinderViews; set { _explicitNullValueFinderViews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finder_views"); else _explicitNullProperties?.Remove("finder_views"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFinderViewsItem>? FinderViews { get => _explicitNullValueFinderViews; set { _explicitNullValueFinderViews = value; AdditionalData?.Remove("finder_views"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finder_views"); else _explicitNullProperties?.Remove("finder_views"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFinderViewsItem>? _explicitNullValueFinderViews = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFinderViewsItem> FinderViews { get => _explicitNullValueFinderViews; set { _explicitNullValueFinderViews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finder_views"); else _explicitNullProperties?.Remove("finder_views"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFinderViewsItem> FinderViews { get => _explicitNullValueFinderViews; set { _explicitNullValueFinderViews = value; AdditionalData?.Remove("finder_views"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finder_views"); else _explicitNullProperties?.Remove("finder_views"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseFinderViewsItem> _explicitNullValueFinderViews = default!;
 #endif
         /// <summary>The picklist value sets for the fields you updated. Only present when the update touched a `picklist` or `multipicklist` field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponsePicklistValueSetsItem>? PicklistValueSets { get => _explicitNullValuePicklistValueSets; set { _explicitNullValuePicklistValueSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_sets"); else _explicitNullProperties?.Remove("picklist_value_sets"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponsePicklistValueSetsItem>? PicklistValueSets { get => _explicitNullValuePicklistValueSets; set { _explicitNullValuePicklistValueSets = value; AdditionalData?.Remove("picklist_value_sets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_sets"); else _explicitNullProperties?.Remove("picklist_value_sets"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponsePicklistValueSetsItem>? _explicitNullValuePicklistValueSets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponsePicklistValueSetsItem> PicklistValueSets { get => _explicitNullValuePicklistValueSets; set { _explicitNullValuePicklistValueSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_sets"); else _explicitNullProperties?.Remove("picklist_value_sets"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponsePicklistValueSetsItem> PicklistValueSets { get => _explicitNullValuePicklistValueSets; set { _explicitNullValuePicklistValueSets = value; AdditionalData?.Remove("picklist_value_sets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_sets"); else _explicitNullProperties?.Remove("picklist_value_sets"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponsePicklistValueSetsItem> _explicitNullValuePicklistValueSets = default!;
 #endif
         /// <summary>The underlying custom field records for the fields you updated. Only present when the update touched at least 1 custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseTypedCustomFieldsItem>? TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseTypedCustomFieldsItem>? TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; AdditionalData?.Remove("typed_custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseTypedCustomFieldsItem>? _explicitNullValueTypedCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseTypedCustomFieldsItem> TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseTypedCustomFieldsItem> TypedCustomFields { get => _explicitNullValueTypedCustomFields; set { _explicitNullValueTypedCustomFields = value; AdditionalData?.Remove("typed_custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typed_custom_fields"); else _explicitNullProperties?.Remove("typed_custom_fields"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomField200ResponseTypedCustomFieldsItem> _explicitNullValueTypedCustomFields = default!;
 #endif
         /// <summary>

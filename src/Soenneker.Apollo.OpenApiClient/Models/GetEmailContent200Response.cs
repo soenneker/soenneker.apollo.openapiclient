@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emailer_messages") is { } nullNodeEmailerMessages && nullNodeEmailerMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerMessages = null;
+            if (parseNode.GetChildNode("emailer_messages") is null) { _explicitNullValueEmailerMessages = default!; _explicitNullProperties?.Remove("emailer_messages"); }
+            else if (parseNode.GetChildNode("emailer_messages") is { } nullNodeEmailerMessages && nullNodeEmailerMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerMessages = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The sent emails that matched the IDs in your request, returned in the same order as the `ids` array. IDs that don&apos;t match one of your team&apos;s sent emails are omitted, so this array can be shorter than the `ids` array, or empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContent200ResponseEmailerMessagesItem>? EmailerMessages { get => _explicitNullValueEmailerMessages; set { _explicitNullValueEmailerMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_messages"); else _explicitNullProperties?.Remove("emailer_messages"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContent200ResponseEmailerMessagesItem>? EmailerMessages { get => _explicitNullValueEmailerMessages; set { _explicitNullValueEmailerMessages = value; AdditionalData?.Remove("emailer_messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_messages"); else _explicitNullProperties?.Remove("emailer_messages"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContent200ResponseEmailerMessagesItem>? _explicitNullValueEmailerMessages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContent200ResponseEmailerMessagesItem> EmailerMessages { get => _explicitNullValueEmailerMessages; set { _explicitNullValueEmailerMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_messages"); else _explicitNullProperties?.Remove("emailer_messages"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContent200ResponseEmailerMessagesItem> EmailerMessages { get => _explicitNullValueEmailerMessages; set { _explicitNullValueEmailerMessages = value; AdditionalData?.Remove("emailer_messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_messages"); else _explicitNullProperties?.Remove("emailer_messages"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContent200ResponseEmailerMessagesItem> _explicitNullValueEmailerMessages = default!;
 #endif
         /// <summary>

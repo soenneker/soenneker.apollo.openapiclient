@@ -17,9 +17,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("raw_number") is { } nullNodeRawNumber && nullNodeRawNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawNumber = null;
-            if (parseNode.GetChildNode("sanitized_number") is { } nullNodeSanitizedNumber && nullNodeSanitizedNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SanitizedNumber = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("raw_number") is null) { _explicitNullValueRawNumber = default!; _explicitNullProperties?.Remove("raw_number"); }
+            else if (parseNode.GetChildNode("raw_number") is { } nullNodeRawNumber && nullNodeRawNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawNumber = null;
+            if (parseNode.GetChildNode("sanitized_number") is null) { _explicitNullValueSanitizedNumber = default!; _explicitNullProperties?.Remove("sanitized_number"); }
+            else if (parseNode.GetChildNode("sanitized_number") is { } nullNodeSanitizedNumber && nullNodeSanitizedNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SanitizedNumber = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The raw_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RawNumber { get => _explicitNullValueRawNumber; set { _explicitNullValueRawNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_number"); else _explicitNullProperties?.Remove("raw_number"); } }
+        public string? RawNumber { get => _explicitNullValueRawNumber; set { _explicitNullValueRawNumber = value; AdditionalData?.Remove("raw_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_number"); else _explicitNullProperties?.Remove("raw_number"); } }
         private string? _explicitNullValueRawNumber = default!;
 #nullable restore
 #else
-        public string RawNumber { get => _explicitNullValueRawNumber; set { _explicitNullValueRawNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_number"); else _explicitNullProperties?.Remove("raw_number"); } }
+        public string RawNumber { get => _explicitNullValueRawNumber; set { _explicitNullValueRawNumber = value; AdditionalData?.Remove("raw_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_number"); else _explicitNullProperties?.Remove("raw_number"); } }
         private string _explicitNullValueRawNumber = default!;
 #endif
         /// <summary>The sanitized_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SanitizedNumber { get => _explicitNullValueSanitizedNumber; set { _explicitNullValueSanitizedNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sanitized_number"); else _explicitNullProperties?.Remove("sanitized_number"); } }
+        public string? SanitizedNumber { get => _explicitNullValueSanitizedNumber; set { _explicitNullValueSanitizedNumber = value; AdditionalData?.Remove("sanitized_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sanitized_number"); else _explicitNullProperties?.Remove("sanitized_number"); } }
         private string? _explicitNullValueSanitizedNumber = default!;
 #nullable restore
 #else
-        public string SanitizedNumber { get => _explicitNullValueSanitizedNumber; set { _explicitNullValueSanitizedNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sanitized_number"); else _explicitNullProperties?.Remove("sanitized_number"); } }
+        public string SanitizedNumber { get => _explicitNullValueSanitizedNumber; set { _explicitNullValueSanitizedNumber = value; AdditionalData?.Remove("sanitized_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sanitized_number"); else _explicitNullProperties?.Remove("sanitized_number"); } }
         private string _explicitNullValueSanitizedNumber = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>

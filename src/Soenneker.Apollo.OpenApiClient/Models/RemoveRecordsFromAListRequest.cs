@@ -17,39 +17,43 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
-            if (parseNode.GetChildNode("entity_ids") is { } nullNodeEntityIds && nullNodeEntityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityIds = null;
-            if (parseNode.GetChildNode("label_names") is { } nullNodeLabelNames && nullNodeLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelNames = null;
-            if (parseNode.GetChildNode("modality") is { } nullNodeModality && nullNodeModality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modality = null;
+            if (parseNode.GetChildNode("async") is null) { _explicitNullValueAsync = default!; _explicitNullProperties?.Remove("async"); }
+            else if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
+            if (parseNode.GetChildNode("entity_ids") is null) { _explicitNullValueEntityIds = default!; _explicitNullProperties?.Remove("entity_ids"); }
+            else if (parseNode.GetChildNode("entity_ids") is { } nullNodeEntityIds && nullNodeEntityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityIds = null;
+            if (parseNode.GetChildNode("label_names") is null) { _explicitNullValueLabelNames = default!; _explicitNullProperties?.Remove("label_names"); }
+            else if (parseNode.GetChildNode("label_names") is { } nullNodeLabelNames && nullNodeLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelNames = null;
+            if (parseNode.GetChildNode("modality") is null) { _explicitNullValueModality = default!; _explicitNullProperties?.Remove("modality"); }
+            else if (parseNode.GetChildNode("modality") is { } nullNodeModality && nullNodeModality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modality = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls whether the request is processed synchronously or in the background. &lt;ul&gt;&lt;li&gt;`false` (default): Apollo processes the request during the API call and returns the updated lists. A synchronous request must finish within the API&apos;s 5-minute (300-second) request timeout, so a large `entity_ids` batch can time out.&lt;/li&gt;&lt;li&gt;`true`: Apollo processes the work in the background and immediately returns an `entity_progress_job` object — instead of the updated lists — that you can poll for progress. Use this for batches large enough to risk the 5-minute timeout.&lt;/li&gt;&lt;/ul&gt;</summary>
-        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
+        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; AdditionalData?.Remove("async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
         private bool? _explicitNullValueAsync = default!;
         /// <summary>The Apollo IDs of the contacts or accounts to remove from the lists. IDs that aren&apos;t valid are ignored.&lt;br&gt;&lt;br&gt;Example: `[&quot;66e34b81740c50074e3d1bd4&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
+        public List<string>? EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; AdditionalData?.Remove("entity_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
         private List<string>? _explicitNullValueEntityIds = default!;
 #nullable restore
 #else
-        public List<string> EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
+        public List<string> EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; AdditionalData?.Remove("entity_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
         private List<string> _explicitNullValueEntityIds = default!;
 #endif
         /// <summary>The names of the lists to remove the records from.&lt;br&gt;&lt;br&gt;Example: `[&quot;Conference 2024 - Maui&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
+        public List<string>? LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; AdditionalData?.Remove("label_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
         private List<string>? _explicitNullValueLabelNames = default!;
 #nullable restore
 #else
-        public List<string> LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
+        public List<string> LabelNames { get => _explicitNullValueLabelNames; set { _explicitNullValueLabelNames = value; AdditionalData?.Remove("label_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_names"); else _explicitNullProperties?.Remove("label_names"); } }
         private List<string> _explicitNullValueLabelNames = default!;
 #endif
         /// <summary>The type of records referenced by `entity_ids`. Must be `contacts` or `accounts`.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAListRequestModality? Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAListRequestModality? Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; AdditionalData?.Remove("modality"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAListRequestModality? _explicitNullValueModality = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAListRequest"/> and sets the default values.
@@ -79,7 +83,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "async", n => { Async = n.GetBoolValue(); } },
                 { "entity_ids", n => { EntityIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "label_names", n => { LabelNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "modality", n => { Modality = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAListRequestModality>(); } },
+                { "modality", n => { var parsed = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.RemoveRecordsFromAListRequestModality>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueModality = default; _explicitNullProperties?.Remove("modality"); AdditionalData["modality"] = unknown; } else { Modality = parsed; AdditionalData.Remove("modality"); } } },
             };
         }
         /// <summary>

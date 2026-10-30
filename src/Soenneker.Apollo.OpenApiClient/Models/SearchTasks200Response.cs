@@ -17,12 +17,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("breadcrumbs") is { } nullNodeBreadcrumbs && nullNodeBreadcrumbs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breadcrumbs = null;
-            if (parseNode.GetChildNode("faceting") is { } nullNodeFaceting && nullNodeFaceting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faceting = null;
-            if (parseNode.GetChildNode("num_fetch_result") is { } nullNodeNumFetchResult && nullNodeNumFetchResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumFetchResult = null;
-            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
-            if (parseNode.GetChildNode("pipeline_total") is { } nullNodePipelineTotal && nullNodePipelineTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineTotal = null;
-            if (parseNode.GetChildNode("tasks") is { } nullNodeTasks && nullNodeTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tasks = null;
+            if (parseNode.GetChildNode("breadcrumbs") is null) { _explicitNullValueBreadcrumbs = default!; _explicitNullProperties?.Remove("breadcrumbs"); }
+            else if (parseNode.GetChildNode("breadcrumbs") is { } nullNodeBreadcrumbs && nullNodeBreadcrumbs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breadcrumbs = null;
+            if (parseNode.GetChildNode("faceting") is null) { _explicitNullValueFaceting = default!; _explicitNullProperties?.Remove("faceting"); }
+            else if (parseNode.GetChildNode("faceting") is { } nullNodeFaceting && nullNodeFaceting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faceting = null;
+            if (parseNode.GetChildNode("num_fetch_result") is null) { _explicitNullValueNumFetchResult = default!; _explicitNullProperties?.Remove("num_fetch_result"); }
+            else if (parseNode.GetChildNode("num_fetch_result") is { } nullNodeNumFetchResult && nullNodeNumFetchResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumFetchResult = null;
+            if (parseNode.GetChildNode("pagination") is null) { _explicitNullValuePagination = default!; _explicitNullProperties?.Remove("pagination"); }
+            else if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("pipeline_total") is null) { _explicitNullValuePipelineTotal = default!; _explicitNullProperties?.Remove("pipeline_total"); }
+            else if (parseNode.GetChildNode("pipeline_total") is { } nullNodePipelineTotal && nullNodePipelineTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineTotal = null;
+            if (parseNode.GetChildNode("tasks") is null) { _explicitNullValueTasks = default!; _explicitNullProperties?.Remove("tasks"); }
+            else if (parseNode.GetChildNode("tasks") is { } nullNodeTasks && nullNodeTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tasks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The breadcrumbs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        public UntypedNode? Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; AdditionalData?.Remove("breadcrumbs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
         private UntypedNode? _explicitNullValueBreadcrumbs = default!;
 #nullable restore
 #else
-        public UntypedNode Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
+        public UntypedNode Breadcrumbs { get => _explicitNullValueBreadcrumbs; set { _explicitNullValueBreadcrumbs = value; AdditionalData?.Remove("breadcrumbs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breadcrumbs"); else _explicitNullProperties?.Remove("breadcrumbs"); } }
         private UntypedNode _explicitNullValueBreadcrumbs = default!;
 #endif
         /// <summary>The faceting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting? Faceting { get => _explicitNullValueFaceting; set { _explicitNullValueFaceting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faceting"); else _explicitNullProperties?.Remove("faceting"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting? Faceting { get => _explicitNullValueFaceting; set { _explicitNullValueFaceting = value; AdditionalData?.Remove("faceting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faceting"); else _explicitNullProperties?.Remove("faceting"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting? _explicitNullValueFaceting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting Faceting { get => _explicitNullValueFaceting; set { _explicitNullValueFaceting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faceting"); else _explicitNullProperties?.Remove("faceting"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting Faceting { get => _explicitNullValueFaceting; set { _explicitNullValueFaceting = value; AdditionalData?.Remove("faceting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faceting"); else _explicitNullProperties?.Remove("faceting"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFaceting _explicitNullValueFaceting = default!;
 #endif
         /// <summary>The num_fetch_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        public UntypedNode? NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; AdditionalData?.Remove("num_fetch_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
         private UntypedNode? _explicitNullValueNumFetchResult = default!;
 #nullable restore
 #else
-        public UntypedNode NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
+        public UntypedNode NumFetchResult { get => _explicitNullValueNumFetchResult; set { _explicitNullValueNumFetchResult = value; AdditionalData?.Remove("num_fetch_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_fetch_result"); else _explicitNullProperties?.Remove("num_fetch_result"); } }
         private UntypedNode _explicitNullValueNumFetchResult = default!;
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>The pipeline_total property</summary>
-        public int? PipelineTotal { get => _explicitNullValuePipelineTotal; set { _explicitNullValuePipelineTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_total"); else _explicitNullProperties?.Remove("pipeline_total"); } }
+        public int? PipelineTotal { get => _explicitNullValuePipelineTotal; set { _explicitNullValuePipelineTotal = value; AdditionalData?.Remove("pipeline_total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_total"); else _explicitNullProperties?.Remove("pipeline_total"); } }
         private int? _explicitNullValuePipelineTotal = default!;
         /// <summary>The tasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem>? Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem>? Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; AdditionalData?.Remove("tasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem>? _explicitNullValueTasks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem> Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem> Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; AdditionalData?.Remove("tasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItem> _explicitNullValueTasks = default!;
 #endif
         /// <summary>

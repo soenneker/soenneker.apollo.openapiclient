@@ -17,23 +17,25 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("body_format") is { } nullNodeBodyFormat && nullNodeBodyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyFormat = null;
-            if (parseNode.GetChildNode("ids") is { } nullNodeIds && nullNodeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ids = null;
+            if (parseNode.GetChildNode("body_format") is null) { _explicitNullValueBodyFormat = default!; _explicitNullProperties?.Remove("body_format"); }
+            else if (parseNode.GetChildNode("body_format") is { } nullNodeBodyFormat && nullNodeBodyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyFormat = null;
+            if (parseNode.GetChildNode("ids") is null) { _explicitNullValueIds = default!; _explicitNullProperties?.Remove("ids"); }
+            else if (parseNode.GetChildNode("ids") is { } nullNodeIds && nullNodeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ids = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The format used to return the body of each email. &lt;ul&gt; &lt;li&gt; `plain` (default): the body is returned as plain text, with the HTML tags removed. &lt;/li&gt; &lt;li&gt; `html`: the body is returned as the original HTML. &lt;/li&gt; &lt;/ul&gt;This value is case-sensitive. Any other value, including `HTML`, is treated as `plain`. &lt;br&gt;&lt;br&gt;Example: `html`</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat? BodyFormat { get => _explicitNullValueBodyFormat; set { _explicitNullValueBodyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body_format"); else _explicitNullProperties?.Remove("body_format"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat? BodyFormat { get => _explicitNullValueBodyFormat; set { _explicitNullValueBodyFormat = value; AdditionalData?.Remove("body_format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body_format"); else _explicitNullProperties?.Remove("body_format"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat? _explicitNullValueBodyFormat = default!;
         /// <summary>The Apollo IDs of the sent emails whose content you want to retrieve. &lt;br&gt;&lt;br&gt;Include a maximum of 10 IDs per request. If you provide more than 10, Apollo uses the first 10 IDs and ignores the rest without returning an error. &lt;br&gt;&lt;br&gt;To find email message IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-outreach-emails&quot;&gt;search for outreach emails endpoint&lt;/a&gt; and identify the `id` value for each email. &lt;br&gt;&lt;br&gt;Example: `[&quot;66e8cc45028aed019c25d724&quot;, &quot;66e8cc45028aed019c25d725&quot;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
+        public List<string>? Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; AdditionalData?.Remove("ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
         private List<string>? _explicitNullValueIds = default!;
 #nullable restore
 #else
-        public List<string> Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
+        public List<string> Ids { get => _explicitNullValueIds; set { _explicitNullValueIds = value; AdditionalData?.Remove("ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ids"); else _explicitNullProperties?.Remove("ids"); } }
         private List<string> _explicitNullValueIds = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "body_format", n => { BodyFormat = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat>(); } },
+                { "body_format", n => { var parsed = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.GetEmailContentRequestBodyFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBodyFormat = default; _explicitNullProperties?.Remove("body_format"); AdditionalData["body_format"] = unknown; } else { BodyFormat = parsed; AdditionalData.Remove("body_format"); } } },
                 { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }

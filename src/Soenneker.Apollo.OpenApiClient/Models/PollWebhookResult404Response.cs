@@ -18,19 +18,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
-            if (parseNode.GetChildNode("retry_after_seconds") is { } nullNodeRetryAfterSeconds && nullNodeRetryAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryAfterSeconds = null;
+            if (parseNode.GetChildNode("error_code") is null) { _explicitNullValueErrorCode = default!; _explicitNullProperties?.Remove("error_code"); }
+            else if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("retry_after_seconds") is null) { _explicitNullValueRetryAfterSeconds = default!; _explicitNullProperties?.Remove("retry_after_seconds"); }
+            else if (parseNode.GetChildNode("retry_after_seconds") is { } nullNodeRetryAfterSeconds && nullNodeRetryAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryAfterSeconds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Machine-readable error code. &lt;code&gt;result_pending&lt;/code&gt; means the enrichment is still processing — wait &lt;code&gt;retry_after_seconds&lt;/code&gt; and poll again. &lt;code&gt;request_id_unknown&lt;/code&gt; means the &lt;code&gt;request_id&lt;/code&gt; is not recognized, usually because it was mistyped or never issued — do not retry.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404ResponseErrorCode? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404ResponseErrorCode? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("error_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404ResponseErrorCode? _explicitNullValueErrorCode = default!;
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>Present only when &lt;code&gt;error_code&lt;/code&gt; is &lt;code&gt;result_pending&lt;/code&gt;. The number of seconds to wait before polling again. This value does not guarantee that phone or email enrichment results will be available after that time.</summary>
-        public int? RetryAfterSeconds { get => _explicitNullValueRetryAfterSeconds; set { _explicitNullValueRetryAfterSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retry_after_seconds"); else _explicitNullProperties?.Remove("retry_after_seconds"); } }
+        public int? RetryAfterSeconds { get => _explicitNullValueRetryAfterSeconds; set { _explicitNullValueRetryAfterSeconds = value; AdditionalData?.Remove("retry_after_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retry_after_seconds"); else _explicitNullProperties?.Remove("retry_after_seconds"); } }
         private int? _explicitNullValueRetryAfterSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404Response"/> and sets the default values.
@@ -57,7 +59,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error_code", n => { ErrorCode = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404ResponseErrorCode>(); } },
+                { "error_code", n => { var parsed = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult404ResponseErrorCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueErrorCode = default; _explicitNullProperties?.Remove("error_code"); AdditionalData["error_code"] = unknown; } else { ErrorCode = parsed; AdditionalData.Remove("error_code"); } } },
                 { "retry_after_seconds", n => { RetryAfterSeconds = n.GetIntValue(); } },
             };
         }

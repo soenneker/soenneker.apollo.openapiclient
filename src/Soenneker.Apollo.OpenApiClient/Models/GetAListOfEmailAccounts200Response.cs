@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_accounts") is { } nullNodeEmailAccounts && nullNodeEmailAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAccounts = null;
+            if (parseNode.GetChildNode("email_accounts") is null) { _explicitNullValueEmailAccounts = default!; _explicitNullProperties?.Remove("email_accounts"); }
+            else if (parseNode.GetChildNode("email_accounts") is { } nullNodeEmailAccounts && nullNodeEmailAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAccounts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email_accounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem>? EmailAccounts { get => _explicitNullValueEmailAccounts; set { _explicitNullValueEmailAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_accounts"); else _explicitNullProperties?.Remove("email_accounts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem>? EmailAccounts { get => _explicitNullValueEmailAccounts; set { _explicitNullValueEmailAccounts = value; AdditionalData?.Remove("email_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_accounts"); else _explicitNullProperties?.Remove("email_accounts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem>? _explicitNullValueEmailAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem> EmailAccounts { get => _explicitNullValueEmailAccounts; set { _explicitNullValueEmailAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_accounts"); else _explicitNullProperties?.Remove("email_accounts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem> EmailAccounts { get => _explicitNullValueEmailAccounts; set { _explicitNullValueEmailAccounts = value; AdditionalData?.Remove("email_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_accounts"); else _explicitNullProperties?.Remove("email_accounts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.GetAListOfEmailAccounts200ResponseEmailAccountsItem> _explicitNullValueEmailAccounts = default!;
 #endif
         /// <summary>

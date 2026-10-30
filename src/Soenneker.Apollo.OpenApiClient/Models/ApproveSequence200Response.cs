@@ -17,8 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emailer_campaign") is { } nullNodeEmailerCampaign && nullNodeEmailerCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerCampaign = null;
-            if (parseNode.GetChildNode("emailer_steps") is { } nullNodeEmailerSteps && nullNodeEmailerSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerSteps = null;
+            if (parseNode.GetChildNode("emailer_campaign") is null) { _explicitNullValueEmailerCampaign = default!; _explicitNullProperties?.Remove("emailer_campaign"); }
+            else if (parseNode.GetChildNode("emailer_campaign") is { } nullNodeEmailerCampaign && nullNodeEmailerCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerCampaign = null;
+            if (parseNode.GetChildNode("emailer_steps") is null) { _explicitNullValueEmailerSteps = default!; _explicitNullProperties?.Remove("emailer_steps"); }
+            else if (parseNode.GetChildNode("emailer_steps") is { } nullNodeEmailerSteps && nullNodeEmailerSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerSteps = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The emailer_campaign property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerCampaign? EmailerCampaign { get => _explicitNullValueEmailerCampaign; set { _explicitNullValueEmailerCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign"); else _explicitNullProperties?.Remove("emailer_campaign"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerCampaign? EmailerCampaign { get => _explicitNullValueEmailerCampaign; set { _explicitNullValueEmailerCampaign = value; AdditionalData?.Remove("emailer_campaign"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign"); else _explicitNullProperties?.Remove("emailer_campaign"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerCampaign? _explicitNullValueEmailerCampaign = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerCampaign EmailerCampaign { get => _explicitNullValueEmailerCampaign; set { _explicitNullValueEmailerCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign"); else _explicitNullProperties?.Remove("emailer_campaign"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerCampaign EmailerCampaign { get => _explicitNullValueEmailerCampaign; set { _explicitNullValueEmailerCampaign = value; AdditionalData?.Remove("emailer_campaign"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_campaign"); else _explicitNullProperties?.Remove("emailer_campaign"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerCampaign _explicitNullValueEmailerCampaign = default!;
 #endif
         /// <summary>The emailer_steps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerStepsItem>? EmailerSteps { get => _explicitNullValueEmailerSteps; set { _explicitNullValueEmailerSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_steps"); else _explicitNullProperties?.Remove("emailer_steps"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerStepsItem>? EmailerSteps { get => _explicitNullValueEmailerSteps; set { _explicitNullValueEmailerSteps = value; AdditionalData?.Remove("emailer_steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_steps"); else _explicitNullProperties?.Remove("emailer_steps"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerStepsItem>? _explicitNullValueEmailerSteps = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerStepsItem> EmailerSteps { get => _explicitNullValueEmailerSteps; set { _explicitNullValueEmailerSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_steps"); else _explicitNullProperties?.Remove("emailer_steps"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerStepsItem> EmailerSteps { get => _explicitNullValueEmailerSteps; set { _explicitNullValueEmailerSteps = value; AdditionalData?.Remove("emailer_steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_steps"); else _explicitNullProperties?.Remove("emailer_steps"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ApproveSequence200ResponseEmailerStepsItem> _explicitNullValueEmailerSteps = default!;
 #endif
         /// <summary>

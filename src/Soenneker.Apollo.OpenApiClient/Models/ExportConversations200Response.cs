@@ -17,8 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("export_id") is { } nullNodeExportId && nullNodeExportId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportId = null;
-            if (parseNode.GetChildNode("export_url") is { } nullNodeExportUrl && nullNodeExportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportUrl = null;
+            if (parseNode.GetChildNode("export_id") is null) { _explicitNullValueExportId = default!; _explicitNullProperties?.Remove("export_id"); }
+            else if (parseNode.GetChildNode("export_id") is { } nullNodeExportId && nullNodeExportId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportId = null;
+            if (parseNode.GetChildNode("export_url") is null) { _explicitNullValueExportUrl = default!; _explicitNullProperties?.Remove("export_url"); }
+            else if (parseNode.GetChildNode("export_url") is { } nullNodeExportUrl && nullNodeExportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The export_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportId { get => _explicitNullValueExportId; set { _explicitNullValueExportId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_id"); else _explicitNullProperties?.Remove("export_id"); } }
+        public string? ExportId { get => _explicitNullValueExportId; set { _explicitNullValueExportId = value; AdditionalData?.Remove("export_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_id"); else _explicitNullProperties?.Remove("export_id"); } }
         private string? _explicitNullValueExportId = default!;
 #nullable restore
 #else
-        public string ExportId { get => _explicitNullValueExportId; set { _explicitNullValueExportId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_id"); else _explicitNullProperties?.Remove("export_id"); } }
+        public string ExportId { get => _explicitNullValueExportId; set { _explicitNullValueExportId = value; AdditionalData?.Remove("export_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_id"); else _explicitNullProperties?.Remove("export_id"); } }
         private string _explicitNullValueExportId = default!;
 #endif
         /// <summary>The export_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportUrl { get => _explicitNullValueExportUrl; set { _explicitNullValueExportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_url"); else _explicitNullProperties?.Remove("export_url"); } }
+        public string? ExportUrl { get => _explicitNullValueExportUrl; set { _explicitNullValueExportUrl = value; AdditionalData?.Remove("export_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_url"); else _explicitNullProperties?.Remove("export_url"); } }
         private string? _explicitNullValueExportUrl = default!;
 #nullable restore
 #else
-        public string ExportUrl { get => _explicitNullValueExportUrl; set { _explicitNullValueExportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_url"); else _explicitNullProperties?.Remove("export_url"); } }
+        public string ExportUrl { get => _explicitNullValueExportUrl; set { _explicitNullValueExportUrl = value; AdditionalData?.Remove("export_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_url"); else _explicitNullProperties?.Remove("export_url"); } }
         private string _explicitNullValueExportUrl = default!;
 #endif
         /// <summary>

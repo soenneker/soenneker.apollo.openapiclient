@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("entity_progress_job") is { } nullNodeEntityProgressJob && nullNodeEntityProgressJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityProgressJob = null;
+            if (parseNode.GetChildNode("entity_progress_job") is null) { _explicitNullValueEntityProgressJob = default!; _explicitNullProperties?.Remove("entity_progress_job"); }
+            else if (parseNode.GetChildNode("entity_progress_job") is { } nullNodeEntityProgressJob && nullNodeEntityProgressJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityProgressJob = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The entity_progress_job property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJob? EntityProgressJob { get => _explicitNullValueEntityProgressJob; set { _explicitNullValueEntityProgressJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_progress_job"); else _explicitNullProperties?.Remove("entity_progress_job"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJob? EntityProgressJob { get => _explicitNullValueEntityProgressJob; set { _explicitNullValueEntityProgressJob = value; AdditionalData?.Remove("entity_progress_job"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_progress_job"); else _explicitNullProperties?.Remove("entity_progress_job"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJob? _explicitNullValueEntityProgressJob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJob EntityProgressJob { get => _explicitNullValueEntityProgressJob; set { _explicitNullValueEntityProgressJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_progress_job"); else _explicitNullProperties?.Remove("entity_progress_job"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJob EntityProgressJob { get => _explicitNullValueEntityProgressJob; set { _explicitNullValueEntityProgressJob = value; AdditionalData?.Remove("entity_progress_job"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_progress_job"); else _explicitNullProperties?.Remove("entity_progress_job"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.UpdateContactStatusSequence200ResponseEntityProgressJob _explicitNullValueEntityProgressJob = default!;
 #endif
         /// <summary>

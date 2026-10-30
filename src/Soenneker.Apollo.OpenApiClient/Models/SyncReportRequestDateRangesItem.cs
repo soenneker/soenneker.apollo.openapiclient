@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("modality") is { } nullNodeModality && nullNodeModality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modality = null;
+            if (parseNode.GetChildNode("modality") is null) { _explicitNullValueModality = default!; _explicitNullProperties?.Remove("modality"); }
+            else if (parseNode.GetChildNode("modality") is { } nullNodeModality && nullNodeModality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modality = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Date range preset. Valid values: &lt;code&gt;today&lt;/code&gt;, &lt;code&gt;yesterday&lt;/code&gt;, &lt;code&gt;current_week&lt;/code&gt;, &lt;code&gt;current_month&lt;/code&gt;, &lt;code&gt;current_quarter&lt;/code&gt;, &lt;code&gt;current_year&lt;/code&gt;, &lt;code&gt;last_7_days&lt;/code&gt;, &lt;code&gt;last_2_weeks&lt;/code&gt;, &lt;code&gt;last_30_days&lt;/code&gt;, &lt;code&gt;last_3_months&lt;/code&gt;, &lt;code&gt;last_6_months&lt;/code&gt;, &lt;code&gt;last_12_months&lt;/code&gt;, &lt;code&gt;last_4_quarters&lt;/code&gt;, &lt;code&gt;last_2_years&lt;/code&gt;, &lt;code&gt;previous_week&lt;/code&gt;, &lt;code&gt;previous_month&lt;/code&gt;, &lt;code&gt;previous_quarter&lt;/code&gt;, &lt;code&gt;previous_year&lt;/code&gt;, &lt;code&gt;all_time&lt;/code&gt;, &lt;code&gt;custom_range&lt;/code&gt; (requires &lt;code&gt;smart_datetime_range&lt;/code&gt; in &lt;code&gt;filters&lt;/code&gt;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
+        public string? Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; AdditionalData?.Remove("modality"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
         private string? _explicitNullValueModality = default!;
 #nullable restore
 #else
-        public string Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
+        public string Modality { get => _explicitNullValueModality; set { _explicitNullValueModality = value; AdditionalData?.Remove("modality"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modality"); else _explicitNullProperties?.Remove("modality"); } }
         private string _explicitNullValueModality = default!;
 #endif
         /// <summary>

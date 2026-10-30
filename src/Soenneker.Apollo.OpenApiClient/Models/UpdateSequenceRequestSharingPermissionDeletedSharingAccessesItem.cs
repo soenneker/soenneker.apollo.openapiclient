@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("user_or_team_id") is { } nullNodeUserOrTeamId && nullNodeUserOrTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserOrTeamId = null;
+            if (parseNode.GetChildNode("user_or_team_id") is null) { _explicitNullValueUserOrTeamId = default!; _explicitNullProperties?.Remove("user_or_team_id"); }
+            else if (parseNode.GetChildNode("user_or_team_id") is { } nullNodeUserOrTeamId && nullNodeUserOrTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserOrTeamId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The Apollo ID for the user or team to remove access from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserOrTeamId { get => _explicitNullValueUserOrTeamId; set { _explicitNullValueUserOrTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_or_team_id"); else _explicitNullProperties?.Remove("user_or_team_id"); } }
+        public string? UserOrTeamId { get => _explicitNullValueUserOrTeamId; set { _explicitNullValueUserOrTeamId = value; AdditionalData?.Remove("user_or_team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_or_team_id"); else _explicitNullProperties?.Remove("user_or_team_id"); } }
         private string? _explicitNullValueUserOrTeamId = default!;
 #nullable restore
 #else
-        public string UserOrTeamId { get => _explicitNullValueUserOrTeamId; set { _explicitNullValueUserOrTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_or_team_id"); else _explicitNullProperties?.Remove("user_or_team_id"); } }
+        public string UserOrTeamId { get => _explicitNullValueUserOrTeamId; set { _explicitNullValueUserOrTeamId = value; AdditionalData?.Remove("user_or_team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_or_team_id"); else _explicitNullProperties?.Remove("user_or_team_id"); } }
         private string _explicitNullValueUserOrTeamId = default!;
 #endif
         /// <summary>

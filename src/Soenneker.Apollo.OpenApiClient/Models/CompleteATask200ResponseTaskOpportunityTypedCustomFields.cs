@@ -17,9 +17,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("66e4ba346fe95a073461e00e") is { } nullNodeSixSixe4ba346fe95a073461e00e && nullNodeSixSixe4ba346fe95a073461e00e.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixSixe4ba346fe95a073461e00e = null;
-            if (parseNode.GetChildNode("6095a711bd01d100a506d4da") is { } nullNodeSixZeroNineFivea711bd01d100a506d4da && nullNodeSixZeroNineFivea711bd01d100a506d4da.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroNineFivea711bd01d100a506d4da = null;
-            if (parseNode.GetChildNode("6095a711bd01d100a506d4dc") is { } nullNodeSixZeroNineFivea711bd01d100a506d4dc && nullNodeSixZeroNineFivea711bd01d100a506d4dc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroNineFivea711bd01d100a506d4dc = null;
+            if (parseNode.GetChildNode("66e4ba346fe95a073461e00e") is null) { _explicitNullValueSixSixe4ba346fe95a073461e00e = default!; _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); }
+            else if (parseNode.GetChildNode("66e4ba346fe95a073461e00e") is { } nullNodeSixSixe4ba346fe95a073461e00e && nullNodeSixSixe4ba346fe95a073461e00e.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixSixe4ba346fe95a073461e00e = null;
+            if (parseNode.GetChildNode("6095a711bd01d100a506d4da") is null) { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = default!; _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); }
+            else if (parseNode.GetChildNode("6095a711bd01d100a506d4da") is { } nullNodeSixZeroNineFivea711bd01d100a506d4da && nullNodeSixZeroNineFivea711bd01d100a506d4da.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroNineFivea711bd01d100a506d4da = null;
+            if (parseNode.GetChildNode("6095a711bd01d100a506d4dc") is null) { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = default!; _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); }
+            else if (parseNode.GetChildNode("6095a711bd01d100a506d4dc") is { } nullNodeSixZeroNineFivea711bd01d100a506d4dc && nullNodeSixZeroNineFivea711bd01d100a506d4dc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroNineFivea711bd01d100a506d4dc = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The SixSixe4ba346fe95a073461e00e property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SixSixe4ba346fe95a073461e00e { get => _explicitNullValueSixSixe4ba346fe95a073461e00e; set { _explicitNullValueSixSixe4ba346fe95a073461e00e = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("66e4ba346fe95a073461e00e"); else _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); } }
+        public List<string>? SixSixe4ba346fe95a073461e00e { get => _explicitNullValueSixSixe4ba346fe95a073461e00e; set { _explicitNullValueSixSixe4ba346fe95a073461e00e = value; AdditionalData?.Remove("66e4ba346fe95a073461e00e"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("66e4ba346fe95a073461e00e"); else _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); } }
         private List<string>? _explicitNullValueSixSixe4ba346fe95a073461e00e = default!;
 #nullable restore
 #else
-        public List<string> SixSixe4ba346fe95a073461e00e { get => _explicitNullValueSixSixe4ba346fe95a073461e00e; set { _explicitNullValueSixSixe4ba346fe95a073461e00e = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("66e4ba346fe95a073461e00e"); else _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); } }
+        public List<string> SixSixe4ba346fe95a073461e00e { get => _explicitNullValueSixSixe4ba346fe95a073461e00e; set { _explicitNullValueSixSixe4ba346fe95a073461e00e = value; AdditionalData?.Remove("66e4ba346fe95a073461e00e"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("66e4ba346fe95a073461e00e"); else _explicitNullProperties?.Remove("66e4ba346fe95a073461e00e"); } }
         private List<string> _explicitNullValueSixSixe4ba346fe95a073461e00e = default!;
 #endif
         /// <summary>The SixZeroNineFivea711bd01d100a506d4da property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SixZeroNineFivea711bd01d100a506d4da { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4da; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4da"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); } }
+        public List<string>? SixZeroNineFivea711bd01d100a506d4da { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4da; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = value; AdditionalData?.Remove("6095a711bd01d100a506d4da"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4da"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); } }
         private List<string>? _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = default!;
 #nullable restore
 #else
-        public List<string> SixZeroNineFivea711bd01d100a506d4da { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4da; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4da"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); } }
+        public List<string> SixZeroNineFivea711bd01d100a506d4da { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4da; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = value; AdditionalData?.Remove("6095a711bd01d100a506d4da"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4da"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4da"); } }
         private List<string> _explicitNullValueSixZeroNineFivea711bd01d100a506d4da = default!;
 #endif
         /// <summary>The SixZeroNineFivea711bd01d100a506d4dc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SixZeroNineFivea711bd01d100a506d4dc { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4dc"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); } }
+        public List<string>? SixZeroNineFivea711bd01d100a506d4dc { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = value; AdditionalData?.Remove("6095a711bd01d100a506d4dc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4dc"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); } }
         private List<string>? _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = default!;
 #nullable restore
 #else
-        public List<string> SixZeroNineFivea711bd01d100a506d4dc { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4dc"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); } }
+        public List<string> SixZeroNineFivea711bd01d100a506d4dc { get => _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc; set { _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = value; AdditionalData?.Remove("6095a711bd01d100a506d4dc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("6095a711bd01d100a506d4dc"); else _explicitNullProperties?.Remove("6095a711bd01d100a506d4dc"); } }
         private List<string> _explicitNullValueSixZeroNineFivea711bd01d100a506d4dc = default!;
 #endif
         /// <summary>

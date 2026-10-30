@@ -17,8 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("credit_usage_stats") is { } nullNodeCreditUsageStats && nullNodeCreditUsageStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditUsageStats = null;
-            if (parseNode.GetChildNode("current_credit_cycle") is { } nullNodeCurrentCreditCycle && nullNodeCurrentCreditCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentCreditCycle = null;
+            if (parseNode.GetChildNode("credit_usage_stats") is null) { _explicitNullValueCreditUsageStats = default!; _explicitNullProperties?.Remove("credit_usage_stats"); }
+            else if (parseNode.GetChildNode("credit_usage_stats") is { } nullNodeCreditUsageStats && nullNodeCreditUsageStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditUsageStats = null;
+            if (parseNode.GetChildNode("current_credit_cycle") is null) { _explicitNullValueCurrentCreditCycle = default!; _explicitNullProperties?.Remove("current_credit_cycle"); }
+            else if (parseNode.GetChildNode("current_credit_cycle") is { } nullNodeCurrentCreditCycle && nullNodeCurrentCreditCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentCreditCycle = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Credit usage for the current billing cycle, keyed by credit type. Every credit type is always returned; a type your Apollo plan doesn&apos;t include returns a `limit` of `0`. See the Credit types table above for what each key funds. Values are credits, except `dialer`, which is reported in minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCreditUsageStats? CreditUsageStats { get => _explicitNullValueCreditUsageStats; set { _explicitNullValueCreditUsageStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_usage_stats"); else _explicitNullProperties?.Remove("credit_usage_stats"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCreditUsageStats? CreditUsageStats { get => _explicitNullValueCreditUsageStats; set { _explicitNullValueCreditUsageStats = value; AdditionalData?.Remove("credit_usage_stats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_usage_stats"); else _explicitNullProperties?.Remove("credit_usage_stats"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCreditUsageStats? _explicitNullValueCreditUsageStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCreditUsageStats CreditUsageStats { get => _explicitNullValueCreditUsageStats; set { _explicitNullValueCreditUsageStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_usage_stats"); else _explicitNullProperties?.Remove("credit_usage_stats"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCreditUsageStats CreditUsageStats { get => _explicitNullValueCreditUsageStats; set { _explicitNullValueCreditUsageStats = value; AdditionalData?.Remove("credit_usage_stats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_usage_stats"); else _explicitNullProperties?.Remove("credit_usage_stats"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCreditUsageStats _explicitNullValueCreditUsageStats = default!;
 #endif
         /// <summary>Start and end of the billing cycle the stats cover. Both values are `null` when the team has no active billing cycle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCurrentCreditCycle? CurrentCreditCycle { get => _explicitNullValueCurrentCreditCycle; set { _explicitNullValueCurrentCreditCycle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_credit_cycle"); else _explicitNullProperties?.Remove("current_credit_cycle"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCurrentCreditCycle? CurrentCreditCycle { get => _explicitNullValueCurrentCreditCycle; set { _explicitNullValueCurrentCreditCycle = value; AdditionalData?.Remove("current_credit_cycle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_credit_cycle"); else _explicitNullProperties?.Remove("current_credit_cycle"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCurrentCreditCycle? _explicitNullValueCurrentCreditCycle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCurrentCreditCycle CurrentCreditCycle { get => _explicitNullValueCurrentCreditCycle; set { _explicitNullValueCurrentCreditCycle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_credit_cycle"); else _explicitNullProperties?.Remove("current_credit_cycle"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCurrentCreditCycle CurrentCreditCycle { get => _explicitNullValueCurrentCreditCycle; set { _explicitNullValueCurrentCreditCycle = value; AdditionalData?.Remove("current_credit_cycle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_credit_cycle"); else _explicitNullProperties?.Remove("current_credit_cycle"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.ViewCreditUsageStats200ResponseCurrentCreditCycle _explicitNullValueCurrentCreditCycle = default!;
 #endif
         /// <summary>

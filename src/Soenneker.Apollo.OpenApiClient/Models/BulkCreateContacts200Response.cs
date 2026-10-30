@@ -17,8 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("created_contacts") is { } nullNodeCreatedContacts && nullNodeCreatedContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedContacts = null;
-            if (parseNode.GetChildNode("existing_contacts") is { } nullNodeExistingContacts && nullNodeExistingContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingContacts = null;
+            if (parseNode.GetChildNode("created_contacts") is null) { _explicitNullValueCreatedContacts = default!; _explicitNullProperties?.Remove("created_contacts"); }
+            else if (parseNode.GetChildNode("created_contacts") is { } nullNodeCreatedContacts && nullNodeCreatedContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedContacts = null;
+            if (parseNode.GetChildNode("existing_contacts") is null) { _explicitNullValueExistingContacts = default!; _explicitNullProperties?.Remove("existing_contacts"); }
+            else if (parseNode.GetChildNode("existing_contacts") is { } nullNodeExistingContacts && nullNodeExistingContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingContacts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Array of newly created contacts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseCreatedContactsItem>? CreatedContacts { get => _explicitNullValueCreatedContacts; set { _explicitNullValueCreatedContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_contacts"); else _explicitNullProperties?.Remove("created_contacts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseCreatedContactsItem>? CreatedContacts { get => _explicitNullValueCreatedContacts; set { _explicitNullValueCreatedContacts = value; AdditionalData?.Remove("created_contacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_contacts"); else _explicitNullProperties?.Remove("created_contacts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseCreatedContactsItem>? _explicitNullValueCreatedContacts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseCreatedContactsItem> CreatedContacts { get => _explicitNullValueCreatedContacts; set { _explicitNullValueCreatedContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_contacts"); else _explicitNullProperties?.Remove("created_contacts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseCreatedContactsItem> CreatedContacts { get => _explicitNullValueCreatedContacts; set { _explicitNullValueCreatedContacts = value; AdditionalData?.Remove("created_contacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_contacts"); else _explicitNullProperties?.Remove("created_contacts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseCreatedContactsItem> _explicitNullValueCreatedContacts = default!;
 #endif
         /// <summary>Array of existing contacts that matched deduplication criteria (returned without modification, except for email_import placeholders which may be merged)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseExistingContactsItem>? ExistingContacts { get => _explicitNullValueExistingContacts; set { _explicitNullValueExistingContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_contacts"); else _explicitNullProperties?.Remove("existing_contacts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseExistingContactsItem>? ExistingContacts { get => _explicitNullValueExistingContacts; set { _explicitNullValueExistingContacts = value; AdditionalData?.Remove("existing_contacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_contacts"); else _explicitNullProperties?.Remove("existing_contacts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseExistingContactsItem>? _explicitNullValueExistingContacts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseExistingContactsItem> ExistingContacts { get => _explicitNullValueExistingContacts; set { _explicitNullValueExistingContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_contacts"); else _explicitNullProperties?.Remove("existing_contacts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseExistingContactsItem> ExistingContacts { get => _explicitNullValueExistingContacts; set { _explicitNullValueExistingContacts = value; AdditionalData?.Remove("existing_contacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_contacts"); else _explicitNullProperties?.Remove("existing_contacts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateContacts200ResponseExistingContactsItem> _explicitNullValueExistingContacts = default!;
 #endif
         /// <summary>

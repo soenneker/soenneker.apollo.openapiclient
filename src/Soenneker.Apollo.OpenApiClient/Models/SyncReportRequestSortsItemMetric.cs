@@ -18,9 +18,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("smart_datetime_reference") is { } nullNodeSmartDatetimeReference && nullNodeSmartDatetimeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartDatetimeReference = null;
-            if (parseNode.GetChildNode("smart_user_id_reference") is { } nullNodeSmartUserIdReference && nullNodeSmartUserIdReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartUserIdReference = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("smart_datetime_reference") is null) { _explicitNullValueSmartDatetimeReference = default!; _explicitNullProperties?.Remove("smart_datetime_reference"); }
+            else if (parseNode.GetChildNode("smart_datetime_reference") is { } nullNodeSmartDatetimeReference && nullNodeSmartDatetimeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartDatetimeReference = null;
+            if (parseNode.GetChildNode("smart_user_id_reference") is null) { _explicitNullValueSmartUserIdReference = default!; _explicitNullProperties?.Remove("smart_user_id_reference"); }
+            else if (parseNode.GetChildNode("smart_user_id_reference") is { } nullNodeSmartUserIdReference && nullNodeSmartUserIdReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartUserIdReference = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The smart_datetime_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmartDatetimeReference { get => _explicitNullValueSmartDatetimeReference; set { _explicitNullValueSmartDatetimeReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_reference"); else _explicitNullProperties?.Remove("smart_datetime_reference"); } }
+        public string? SmartDatetimeReference { get => _explicitNullValueSmartDatetimeReference; set { _explicitNullValueSmartDatetimeReference = value; AdditionalData?.Remove("smart_datetime_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_reference"); else _explicitNullProperties?.Remove("smart_datetime_reference"); } }
         private string? _explicitNullValueSmartDatetimeReference = default!;
 #nullable restore
 #else
-        public string SmartDatetimeReference { get => _explicitNullValueSmartDatetimeReference; set { _explicitNullValueSmartDatetimeReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_reference"); else _explicitNullProperties?.Remove("smart_datetime_reference"); } }
+        public string SmartDatetimeReference { get => _explicitNullValueSmartDatetimeReference; set { _explicitNullValueSmartDatetimeReference = value; AdditionalData?.Remove("smart_datetime_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_datetime_reference"); else _explicitNullProperties?.Remove("smart_datetime_reference"); } }
         private string _explicitNullValueSmartDatetimeReference = default!;
 #endif
         /// <summary>The smart_user_id_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmartUserIdReference { get => _explicitNullValueSmartUserIdReference; set { _explicitNullValueSmartUserIdReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id_reference"); else _explicitNullProperties?.Remove("smart_user_id_reference"); } }
+        public string? SmartUserIdReference { get => _explicitNullValueSmartUserIdReference; set { _explicitNullValueSmartUserIdReference = value; AdditionalData?.Remove("smart_user_id_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id_reference"); else _explicitNullProperties?.Remove("smart_user_id_reference"); } }
         private string? _explicitNullValueSmartUserIdReference = default!;
 #nullable restore
 #else
-        public string SmartUserIdReference { get => _explicitNullValueSmartUserIdReference; set { _explicitNullValueSmartUserIdReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id_reference"); else _explicitNullProperties?.Remove("smart_user_id_reference"); } }
+        public string SmartUserIdReference { get => _explicitNullValueSmartUserIdReference; set { _explicitNullValueSmartUserIdReference = value; AdditionalData?.Remove("smart_user_id_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_user_id_reference"); else _explicitNullProperties?.Remove("smart_user_id_reference"); } }
         private string _explicitNullValueSmartUserIdReference = default!;
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
         /// <summary>

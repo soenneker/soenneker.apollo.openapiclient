@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("opportunity_stages") is { } nullNodeOpportunityStages && nullNodeOpportunityStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityStages = null;
+            if (parseNode.GetChildNode("opportunity_stages") is null) { _explicitNullValueOpportunityStages = default!; _explicitNullProperties?.Remove("opportunity_stages"); }
+            else if (parseNode.GetChildNode("opportunity_stages") is { } nullNodeOpportunityStages && nullNodeOpportunityStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityStages = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The opportunity_stages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItem>? OpportunityStages { get => _explicitNullValueOpportunityStages; set { _explicitNullValueOpportunityStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_stages"); else _explicitNullProperties?.Remove("opportunity_stages"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItem>? OpportunityStages { get => _explicitNullValueOpportunityStages; set { _explicitNullValueOpportunityStages = value; AdditionalData?.Remove("opportunity_stages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_stages"); else _explicitNullProperties?.Remove("opportunity_stages"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItem>? _explicitNullValueOpportunityStages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItem> OpportunityStages { get => _explicitNullValueOpportunityStages; set { _explicitNullValueOpportunityStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_stages"); else _explicitNullProperties?.Remove("opportunity_stages"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItem> OpportunityStages { get => _explicitNullValueOpportunityStages; set { _explicitNullValueOpportunityStages = value; AdditionalData?.Remove("opportunity_stages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_stages"); else _explicitNullProperties?.Remove("opportunity_stages"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ListDealStages200ResponseOpportunityStagesItem> _explicitNullValueOpportunityStages = default!;
 #endif
         /// <summary>

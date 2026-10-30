@@ -17,12 +17,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
-            if (parseNode.GetChildNode("last_dispatched_at") is { } nullNodeLastDispatchedAt && nullNodeLastDispatchedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastDispatchedAt = null;
-            if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
-            if (parseNode.GetChildNode("request_type") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
-            if (parseNode.GetChildNode("webhook_result") is { } nullNodeWebhookResult && nullNodeWebhookResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookResult = null;
-            if (parseNode.GetChildNode("webhook_status") is { } nullNodeWebhookStatus && nullNodeWebhookStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookStatus = null;
+            if (parseNode.GetChildNode("failure_reason") is null) { _explicitNullValueFailureReason = default!; _explicitNullProperties?.Remove("failure_reason"); }
+            else if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
+            if (parseNode.GetChildNode("last_dispatched_at") is null) { _explicitNullValueLastDispatchedAt = default!; _explicitNullProperties?.Remove("last_dispatched_at"); }
+            else if (parseNode.GetChildNode("last_dispatched_at") is { } nullNodeLastDispatchedAt && nullNodeLastDispatchedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastDispatchedAt = null;
+            if (parseNode.GetChildNode("request_id") is null) { _explicitNullValueRequestId = default!; _explicitNullProperties?.Remove("request_id"); }
+            else if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("request_type") is null) { _explicitNullValueRequestType = default!; _explicitNullProperties?.Remove("request_type"); }
+            else if (parseNode.GetChildNode("request_type") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
+            if (parseNode.GetChildNode("webhook_result") is null) { _explicitNullValueWebhookResult = default!; _explicitNullProperties?.Remove("webhook_result"); }
+            else if (parseNode.GetChildNode("webhook_result") is { } nullNodeWebhookResult && nullNodeWebhookResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookResult = null;
+            if (parseNode.GetChildNode("webhook_status") is null) { _explicitNullValueWebhookStatus = default!; _explicitNullProperties?.Remove("webhook_status"); }
+            else if (parseNode.GetChildNode("webhook_status") is { } nullNodeWebhookStatus && nullNodeWebhookStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,48 +36,48 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The error message from the last failed dispatch. This field is populated when &lt;code&gt;webhook_status&lt;/code&gt; is &lt;code&gt;failed&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        public string? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; AdditionalData?.Remove("failure_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
         private string? _explicitNullValueFailureReason = default!;
 #nullable restore
 #else
-        public string FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        public string FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; AdditionalData?.Remove("failure_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
         private string _explicitNullValueFailureReason = default!;
 #endif
         /// <summary>ISO 8601 UTC timestamp of the last webhook &lt;code&gt;POST&lt;/code&gt; attempt. Returns &lt;code&gt;null&lt;/code&gt; until Apollo makes the first dispatch attempt. Stays &lt;code&gt;null&lt;/code&gt; when &lt;code&gt;webhook_status&lt;/code&gt; is &lt;code&gt;skipped&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastDispatchedAt { get => _explicitNullValueLastDispatchedAt; set { _explicitNullValueLastDispatchedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_dispatched_at"); else _explicitNullProperties?.Remove("last_dispatched_at"); } }
+        public string? LastDispatchedAt { get => _explicitNullValueLastDispatchedAt; set { _explicitNullValueLastDispatchedAt = value; AdditionalData?.Remove("last_dispatched_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_dispatched_at"); else _explicitNullProperties?.Remove("last_dispatched_at"); } }
         private string? _explicitNullValueLastDispatchedAt = default!;
 #nullable restore
 #else
-        public string LastDispatchedAt { get => _explicitNullValueLastDispatchedAt; set { _explicitNullValueLastDispatchedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_dispatched_at"); else _explicitNullProperties?.Remove("last_dispatched_at"); } }
+        public string LastDispatchedAt { get => _explicitNullValueLastDispatchedAt; set { _explicitNullValueLastDispatchedAt = value; AdditionalData?.Remove("last_dispatched_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_dispatched_at"); else _explicitNullProperties?.Remove("last_dispatched_at"); } }
         private string _explicitNullValueLastDispatchedAt = default!;
 #endif
         /// <summary>Echoes the &lt;code&gt;request_id&lt;/code&gt; from the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The enrichment request type.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseRequestType? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseRequestType? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; AdditionalData?.Remove("request_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseRequestType? _explicitNullValueRequestType = default!;
         /// <summary>The original webhook payload that Apollo delivered, or would have delivered, to the customer webhook URL. The shape varies by &lt;code&gt;request_type&lt;/code&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult? WebhookResult { get => _explicitNullValueWebhookResult; set { _explicitNullValueWebhookResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_result"); else _explicitNullProperties?.Remove("webhook_result"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult? WebhookResult { get => _explicitNullValueWebhookResult; set { _explicitNullValueWebhookResult = value; AdditionalData?.Remove("webhook_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_result"); else _explicitNullProperties?.Remove("webhook_result"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult? _explicitNullValueWebhookResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult WebhookResult { get => _explicitNullValueWebhookResult; set { _explicitNullValueWebhookResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_result"); else _explicitNullProperties?.Remove("webhook_result"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult WebhookResult { get => _explicitNullValueWebhookResult; set { _explicitNullValueWebhookResult = value; AdditionalData?.Remove("webhook_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_result"); else _explicitNullProperties?.Remove("webhook_result"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult _explicitNullValueWebhookResult = default!;
 #endif
         /// <summary>The current webhook status. Returns &lt;code&gt;skipped&lt;/code&gt; when the enrichment request was made with &lt;code&gt;poll_only&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. Apollo doesn&apos;t attempt a webhook delivery, so the result is available only through this endpoint.</summary>
-        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookStatus? WebhookStatus { get => _explicitNullValueWebhookStatus; set { _explicitNullValueWebhookStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_status"); else _explicitNullProperties?.Remove("webhook_status"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookStatus? WebhookStatus { get => _explicitNullValueWebhookStatus; set { _explicitNullValueWebhookStatus = value; AdditionalData?.Remove("webhook_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook_status"); else _explicitNullProperties?.Remove("webhook_status"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookStatus? _explicitNullValueWebhookStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200Response"/> and sets the default values.
@@ -101,9 +107,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "last_dispatched_at", n => { LastDispatchedAt = n.GetStringValue(); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
-                { "request_type", n => { RequestType = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseRequestType>(); } },
+                { "request_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseRequestType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequestType = default; _explicitNullProperties?.Remove("request_type"); AdditionalData["request_type"] = unknown; } else { RequestType = parsed; AdditionalData.Remove("request_type"); } } },
                 { "webhook_result", n => { WebhookResult = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult>(global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookResult.CreateFromDiscriminatorValue); } },
-                { "webhook_status", n => { WebhookStatus = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookStatus>(); } },
+                { "webhook_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.PollWebhookResult200ResponseWebhookStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWebhookStatus = default; _explicitNullProperties?.Remove("webhook_status"); AdditionalData["webhook_status"] = unknown; } else { WebhookStatus = parsed; AdditionalData.Remove("webhook_status"); } } },
             };
         }
         /// <summary>

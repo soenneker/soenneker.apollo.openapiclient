@@ -18,34 +18,37 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("max_length") is { } nullNodeMaxLength && nullNodeMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLength = null;
-            if (parseNode.GetChildNode("picklist_values") is { } nullNodePicklistValues && nullNodePicklistValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValues = null;
-            if (parseNode.GetChildNode("picklist_value_set_id") is { } nullNodePicklistValueSetId && nullNodePicklistValueSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValueSetId = null;
+            if (parseNode.GetChildNode("max_length") is null) { _explicitNullValueMaxLength = default!; _explicitNullProperties?.Remove("max_length"); }
+            else if (parseNode.GetChildNode("max_length") is { } nullNodeMaxLength && nullNodeMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLength = null;
+            if (parseNode.GetChildNode("picklist_values") is null) { _explicitNullValuePicklistValues = default!; _explicitNullProperties?.Remove("picklist_values"); }
+            else if (parseNode.GetChildNode("picklist_values") is { } nullNodePicklistValues && nullNodePicklistValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValues = null;
+            if (parseNode.GetChildNode("picklist_value_set_id") is null) { _explicitNullValuePicklistValueSetId = default!; _explicitNullProperties?.Remove("picklist_value_set_id"); }
+            else if (parseNode.GetChildNode("picklist_value_set_id") is { } nullNodePicklistValueSetId && nullNodePicklistValueSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistValueSetId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maximum number of characters the field accepts. Only applies to `string` and `textarea` fields. &lt;br&gt;&lt;br&gt;Example: `240`</summary>
-        public double? MaxLength { get => _explicitNullValueMaxLength; set { _explicitNullValueMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_length"); else _explicitNullProperties?.Remove("max_length"); } }
+        public double? MaxLength { get => _explicitNullValueMaxLength; set { _explicitNullValueMaxLength = value; AdditionalData?.Remove("max_length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_length"); else _explicitNullProperties?.Remove("max_length"); } }
         private double? _explicitNullValueMaxLength = default!;
         /// <summary>The complete set of options for a `picklist` or `multipicklist` field. &lt;br&gt;&lt;br&gt;&lt;b&gt;Required for every update to a picklist field, including a change that only renames the field.&lt;/b&gt; If you omit it, the request fails with `Picklist fields must have at least one option`. &lt;br&gt;&lt;br&gt;This parameter replaces the field&apos;s options, so send every option you want to keep. Any option you leave out is removed from the field. &lt;br&gt;&lt;br&gt;To rename or remap an existing option, include that option&apos;s existing `id`. An option sent without its `id` is deleted and recreated, which orphans the values already stored on your records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>? PicklistValues { get => _explicitNullValuePicklistValues; set { _explicitNullValuePicklistValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_values"); else _explicitNullProperties?.Remove("picklist_values"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>? PicklistValues { get => _explicitNullValuePicklistValues; set { _explicitNullValuePicklistValues = value; AdditionalData?.Remove("picklist_values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_values"); else _explicitNullProperties?.Remove("picklist_values"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem>? _explicitNullValuePicklistValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem> PicklistValues { get => _explicitNullValuePicklistValues; set { _explicitNullValuePicklistValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_values"); else _explicitNullProperties?.Remove("picklist_values"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem> PicklistValues { get => _explicitNullValuePicklistValues; set { _explicitNullValuePicklistValues = value; AdditionalData?.Remove("picklist_values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_values"); else _explicitNullProperties?.Remove("picklist_values"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.UpdateACustomFieldRequestFieldsItemMetaPicklistValuesItem> _explicitNullValuePicklistValues = default!;
 #endif
         /// <summary>The ID of an existing picklist value set to attach to this field. Only applies to `picklist` and `multipicklist` fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
+        public string? PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; AdditionalData?.Remove("picklist_value_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
         private string? _explicitNullValuePicklistValueSetId = default!;
 #nullable restore
 #else
-        public string PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
+        public string PicklistValueSetId { get => _explicitNullValuePicklistValueSetId; set { _explicitNullValuePicklistValueSetId = value; AdditionalData?.Remove("picklist_value_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklist_value_set_id"); else _explicitNullProperties?.Remove("picklist_value_set_id"); } }
         private string _explicitNullValuePicklistValueSetId = default!;
 #endif
         /// <summary>

@@ -17,11 +17,16 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attachment_ids") is { } nullNodeAttachmentIds && nullNodeAttachmentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachmentIds = null;
-            if (parseNode.GetChildNode("emailer_template") is { } nullNodeEmailerTemplate && nullNodeEmailerTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerTemplate = null;
-            if (parseNode.GetChildNode("include_signature") is { } nullNodeIncludeSignature && nullNodeIncludeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeSignature = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("attachment_ids") is null) { _explicitNullValueAttachmentIds = default!; _explicitNullProperties?.Remove("attachment_ids"); }
+            else if (parseNode.GetChildNode("attachment_ids") is { } nullNodeAttachmentIds && nullNodeAttachmentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachmentIds = null;
+            if (parseNode.GetChildNode("emailer_template") is null) { _explicitNullValueEmailerTemplate = default!; _explicitNullProperties?.Remove("emailer_template"); }
+            else if (parseNode.GetChildNode("emailer_template") is { } nullNodeEmailerTemplate && nullNodeEmailerTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerTemplate = null;
+            if (parseNode.GetChildNode("include_signature") is null) { _explicitNullValueIncludeSignature = default!; _explicitNullProperties?.Remove("include_signature"); }
+            else if (parseNode.GetChildNode("include_signature") is { } nullNodeIncludeSignature && nullNodeIncludeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeSignature = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The Apollo IDs for attachments to include with the email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
+        public List<string>? AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; AdditionalData?.Remove("attachment_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
         private List<string>? _explicitNullValueAttachmentIds = default!;
 #nullable restore
 #else
-        public List<string> AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
+        public List<string> AttachmentIds { get => _explicitNullValueAttachmentIds; set { _explicitNullValueAttachmentIds = value; AdditionalData?.Remove("attachment_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachment_ids"); else _explicitNullProperties?.Remove("attachment_ids"); } }
         private List<string> _explicitNullValueAttachmentIds = default!;
 #endif
         /// <summary>The email content for the touch. Provide `id` to update an existing template that your team owns, or omit `id` to create a new template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate? EmailerTemplate { get => _explicitNullValueEmailerTemplate; set { _explicitNullValueEmailerTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template"); else _explicitNullProperties?.Remove("emailer_template"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate? EmailerTemplate { get => _explicitNullValueEmailerTemplate; set { _explicitNullValueEmailerTemplate = value; AdditionalData?.Remove("emailer_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template"); else _explicitNullProperties?.Remove("emailer_template"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate? _explicitNullValueEmailerTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate EmailerTemplate { get => _explicitNullValueEmailerTemplate; set { _explicitNullValueEmailerTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template"); else _explicitNullProperties?.Remove("emailer_template"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate EmailerTemplate { get => _explicitNullValueEmailerTemplate; set { _explicitNullValueEmailerTemplate = value; AdditionalData?.Remove("emailer_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_template"); else _explicitNullProperties?.Remove("emailer_template"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.CreateSequenceRequestEmailerStepsItemEmailerTouchesItemEmailerTemplate _explicitNullValueEmailerTemplate = default!;
 #endif
         /// <summary>Set to `true` to append the sending user&apos;s email signature to the email.</summary>
-        public bool? IncludeSignature { get => _explicitNullValueIncludeSignature; set { _explicitNullValueIncludeSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_signature"); else _explicitNullProperties?.Remove("include_signature"); } }
+        public bool? IncludeSignature { get => _explicitNullValueIncludeSignature; set { _explicitNullValueIncludeSignature = value; AdditionalData?.Remove("include_signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_signature"); else _explicitNullProperties?.Remove("include_signature"); } }
         private bool? _explicitNullValueIncludeSignature = default!;
         /// <summary>The review status of the touch. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`approved`: The touch is approved and will be sent. Requires a template with a non-empty body.&lt;/li&gt;&lt;li&gt;`to_be_reviewed`: The touch requires review before it sends. (default)&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>How the email threads with earlier steps. Choose 1 of the following options: &lt;ul&gt;&lt;li&gt;`new_thread`: Start a new email thread.&lt;/li&gt;&lt;li&gt;`reply_to_thread`: Reply to the thread started by a previous step. A `reply_to_thread` touch must come after a step that starts a new thread.&lt;/li&gt;&lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>

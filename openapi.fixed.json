@@ -2649,7 +2649,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BulkPeopleEnrichment400Response"
+                  "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponseError"
                 },
                 "examples": {
                   "Add people to enrich": {
@@ -2695,7 +2695,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BulkPeopleEnrichment422Response"
+                  "$ref": "#/components/schemas/BulkPeopleEnrichment422ResponseError"
                 },
                 "examples": {
                   "Result": {
@@ -5793,7 +5793,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateAnAccount422Response"
+                  "$ref": "#/components/schemas/UpdateAnAccount422ResponseError"
                 },
                 "examples": {
                   "Check account ID": {
@@ -6532,7 +6532,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchForAccounts422Response"
+                  "$ref": "#/components/schemas/SearchForAccounts422ResponseError"
                 },
                 "examples": {
                   "Choose valid sort_by_field option": {
@@ -6964,7 +6964,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateAccountOwnership422Response"
+                  "$ref": "#/components/schemas/UpdateAccountOwnership422ResponseError"
                 },
                 "examples": {
                   "Add account IDs": {
@@ -7359,7 +7359,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateAContact422Response"
+                  "$ref": "#/components/schemas/CreateAContact422ResponseError"
                 },
                 "examples": {
                   "Check the account ID": {
@@ -7555,7 +7555,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateAContact422Response"
+                  "$ref": "#/components/schemas/UpdateAContact422ResponseError"
                 },
                 "examples": {
                   "Check the account ID": {
@@ -9472,7 +9472,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateDeal422Response"
+                  "$ref": "#/components/schemas/CreateDeal422ResponseError"
                 },
                 "examples": {
                   "Enter a deal name": {
@@ -9691,7 +9691,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ViewDeal422Response"
+                  "$ref": "#/components/schemas/ViewDeal422ResponseError"
                 },
                 "examples": {
                   "Add a deal ID": {
@@ -10581,7 +10581,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddContactsToSequence422Response"
+                  "$ref": "#/components/schemas/AddContactsToSequence422ResponseError"
                 },
                 "examples": {
                   "Add contact IDs": {
@@ -13892,7 +13892,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchTasks422Response"
+                  "$ref": "#/components/schemas/SearchTasks422ResponseError"
                 },
                 "examples": {
                   "Address the required parameters": {
@@ -51635,6 +51635,134 @@
           ]
         }
       },
+      "BulkPeopleEnrichment400ResponseError": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "failed"
+          },
+          "error_code": {
+            "type": "string",
+            "example": "INVALID_REQUEST"
+          },
+          "error_message": {
+            "type": "string",
+            "example": "invalid request, missing details"
+          },
+          "error": {
+            "type": "string",
+            "example": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only)."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment400Response"
+        }
+      },
+      "BulkPeopleEnrichment422ResponseError": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "failed"
+          },
+          "error_code": {
+            "type": "string",
+            "example": "UNKNOWN_ERROR"
+          },
+          "error_message": {
+            "type": "string",
+            "example": "undefined method \u0060length\u0027 for an instance of ActionController::Parameters"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment422Response"
+        }
+      },
+      "UpdateAnAccount422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Parameters misconfigured. account_id is not a valid ID"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UpdateAnAccount422Response"
+        }
+      },
+      "SearchForAccounts422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Invalid sort criteria"
+          },
+          "skip_alert_dialog": {
+            "type": "boolean",
+            "default": true,
+            "example": true
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/SearchForAccounts422Response"
+        }
+      },
+      "UpdateAccountOwnership422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Required parameter \u0027account_ids\u0027 missing"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UpdateAccountOwnership422Response"
+        }
+      },
+      "CreateAContact422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Parameters misconfigured. 63f53afe4ceeca00016bdd2fsfsdf is not a valid ID"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateAContact422Response"
+        }
+      },
+      "UpdateAContact422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Parameters misconfigured. 5234234 is not a valid ID"
+          },
+          "deleted_contact_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "66e34b81740c50074e3d1bd4"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UpdateAContact422Response"
+        }
+      },
+      "CreateDeal422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Name is required"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateDeal422Response"
+        }
+      },
       "ListAllDeals403ResponseError": {
         "type": "object",
         "properties": {
@@ -51653,6 +51781,18 @@
         },
         "x-client-original-error-schema": {
           "$ref": "#/components/schemas/ListAllDeals403Response"
+        }
+      },
+      "ViewDeal422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Parameters misconfigured. opportunity_id is not a valid ID"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ViewDeal422Response"
         }
       },
       "SearchForSequences403ResponseError": {
@@ -51675,6 +51815,18 @@
           "$ref": "#/components/schemas/SearchForSequences403Response"
         }
       },
+      "AddContactsToSequence422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Please specify either contact_ids or label_names."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/AddContactsToSequence422Response"
+        }
+      },
       "SearchTasks403ResponseError": {
         "type": "object",
         "properties": {
@@ -51693,6 +51845,18 @@
         },
         "x-client-original-error-schema": {
           "$ref": "#/components/schemas/SearchTasks403Response"
+        }
+      },
+      "SearchTasks422ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Something\u0027s wrong with your API request. undefined method \u0060[]\u0027 for nil"
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/SearchTasks422Response"
         }
       },
       "GetAListOfUsers403ResponseError": {

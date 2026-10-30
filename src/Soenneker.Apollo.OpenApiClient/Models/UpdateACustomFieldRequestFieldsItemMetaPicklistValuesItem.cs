@@ -17,10 +17,14 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("mapped_crm_id") is { } nullNodeMappedCrmId && nullNodeMappedCrmId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappedCrmId = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("reassign_from") is { } nullNodeReassignFrom && nullNodeReassignFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignFrom = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("mapped_crm_id") is null) { _explicitNullValueMappedCrmId = default!; _explicitNullProperties?.Remove("mapped_crm_id"); }
+            else if (parseNode.GetChildNode("mapped_crm_id") is { } nullNodeMappedCrmId && nullNodeMappedCrmId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappedCrmId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("reassign_from") is null) { _explicitNullValueReassignFrom = default!; _explicitNullProperties?.Remove("reassign_from"); }
+            else if (parseNode.GetChildNode("reassign_from") is { } nullNodeReassignFrom && nullNodeReassignFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignFrom = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The ID of an existing option, from the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-fields&quot;&gt;get a list of fields&lt;/a&gt; endpoint. Include it to keep the option and rename it, so that values already stored on your records are preserved. Omit it to add a new option. &lt;br&gt;&lt;br&gt;Example: `694095a80f1b6000110fc561`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The ID of the matching picklist value in your CRM.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MappedCrmId { get => _explicitNullValueMappedCrmId; set { _explicitNullValueMappedCrmId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mapped_crm_id"); else _explicitNullProperties?.Remove("mapped_crm_id"); } }
+        public string? MappedCrmId { get => _explicitNullValueMappedCrmId; set { _explicitNullValueMappedCrmId = value; AdditionalData?.Remove("mapped_crm_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mapped_crm_id"); else _explicitNullProperties?.Remove("mapped_crm_id"); } }
         private string? _explicitNullValueMappedCrmId = default!;
 #nullable restore
 #else
-        public string MappedCrmId { get => _explicitNullValueMappedCrmId; set { _explicitNullValueMappedCrmId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mapped_crm_id"); else _explicitNullProperties?.Remove("mapped_crm_id"); } }
+        public string MappedCrmId { get => _explicitNullValueMappedCrmId; set { _explicitNullValueMappedCrmId = value; AdditionalData?.Remove("mapped_crm_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mapped_crm_id"); else _explicitNullProperties?.Remove("mapped_crm_id"); } }
         private string _explicitNullValueMappedCrmId = default!;
 #endif
         /// <summary>The option as it appears in Apollo. &lt;br&gt;&lt;br&gt;Example: `Tier 1`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The IDs of options that Apollo reassigns to this option. Use this to merge options without losing the data on your records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReassignFrom { get => _explicitNullValueReassignFrom; set { _explicitNullValueReassignFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_from"); else _explicitNullProperties?.Remove("reassign_from"); } }
+        public List<string>? ReassignFrom { get => _explicitNullValueReassignFrom; set { _explicitNullValueReassignFrom = value; AdditionalData?.Remove("reassign_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_from"); else _explicitNullProperties?.Remove("reassign_from"); } }
         private List<string>? _explicitNullValueReassignFrom = default!;
 #nullable restore
 #else
-        public List<string> ReassignFrom { get => _explicitNullValueReassignFrom; set { _explicitNullValueReassignFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_from"); else _explicitNullProperties?.Remove("reassign_from"); } }
+        public List<string> ReassignFrom { get => _explicitNullValueReassignFrom; set { _explicitNullValueReassignFrom = value; AdditionalData?.Remove("reassign_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_from"); else _explicitNullProperties?.Remove("reassign_from"); } }
         private List<string> _explicitNullValueReassignFrom = default!;
 #endif
         /// <summary>

@@ -17,13 +17,20 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contact_label_ids") is { } nullNodeContactLabelIds && nullNodeContactLabelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactLabelIds = null;
-            if (parseNode.GetChildNode("contact_stage_ids") is { } nullNodeContactStageIds && nullNodeContactStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageIds = null;
-            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
-            if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
-            if (parseNode.GetChildNode("q_keywords") is { } nullNodeQKeywords && nullNodeQKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QKeywords = null;
-            if (parseNode.GetChildNode("sort_ascending") is { } nullNodeSortAscending && nullNodeSortAscending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortAscending = null;
-            if (parseNode.GetChildNode("sort_by_field") is { } nullNodeSortByField && nullNodeSortByField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortByField = null;
+            if (parseNode.GetChildNode("contact_label_ids") is null) { _explicitNullValueContactLabelIds = default!; _explicitNullProperties?.Remove("contact_label_ids"); }
+            else if (parseNode.GetChildNode("contact_label_ids") is { } nullNodeContactLabelIds && nullNodeContactLabelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactLabelIds = null;
+            if (parseNode.GetChildNode("contact_stage_ids") is null) { _explicitNullValueContactStageIds = default!; _explicitNullProperties?.Remove("contact_stage_ids"); }
+            else if (parseNode.GetChildNode("contact_stage_ids") is { } nullNodeContactStageIds && nullNodeContactStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageIds = null;
+            if (parseNode.GetChildNode("page") is null) { _explicitNullValuePage = default!; _explicitNullProperties?.Remove("page"); }
+            else if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("per_page") is null) { _explicitNullValuePerPage = default!; _explicitNullProperties?.Remove("per_page"); }
+            else if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
+            if (parseNode.GetChildNode("q_keywords") is null) { _explicitNullValueQKeywords = default!; _explicitNullProperties?.Remove("q_keywords"); }
+            else if (parseNode.GetChildNode("q_keywords") is { } nullNodeQKeywords && nullNodeQKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QKeywords = null;
+            if (parseNode.GetChildNode("sort_ascending") is null) { _explicitNullValueSortAscending = default!; _explicitNullProperties?.Remove("sort_ascending"); }
+            else if (parseNode.GetChildNode("sort_ascending") is { } nullNodeSortAscending && nullNodeSortAscending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortAscending = null;
+            if (parseNode.GetChildNode("sort_by_field") is null) { _explicitNullValueSortByField = default!; _explicitNullProperties?.Remove("sort_by_field"); }
+            else if (parseNode.GetChildNode("sort_by_field") is { } nullNodeSortByField && nullNodeSortByField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortByField = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,50 +38,50 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The Apollo IDs for the labels that you want to include in your search results. If you add multiple labels, Apollo will include all contacts connected to any of the labels, along with the other parameters, in the search results. Example: `[&apos;6095a710bd01d100a506d4ae&apos;]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactLabelIds { get => _explicitNullValueContactLabelIds; set { _explicitNullValueContactLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_label_ids"); else _explicitNullProperties?.Remove("contact_label_ids"); } }
+        public List<string>? ContactLabelIds { get => _explicitNullValueContactLabelIds; set { _explicitNullValueContactLabelIds = value; AdditionalData?.Remove("contact_label_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_label_ids"); else _explicitNullProperties?.Remove("contact_label_ids"); } }
         private List<string>? _explicitNullValueContactLabelIds = default!;
 #nullable restore
 #else
-        public List<string> ContactLabelIds { get => _explicitNullValueContactLabelIds; set { _explicitNullValueContactLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_label_ids"); else _explicitNullProperties?.Remove("contact_label_ids"); } }
+        public List<string> ContactLabelIds { get => _explicitNullValueContactLabelIds; set { _explicitNullValueContactLabelIds = value; AdditionalData?.Remove("contact_label_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_label_ids"); else _explicitNullProperties?.Remove("contact_label_ids"); } }
         private List<string> _explicitNullValueContactLabelIds = default!;
 #endif
         /// <summary>The Apollo IDs for the contact stages that you want to include in your search results. If you add multiple contact stages, Apollo will include all contacts that match any of the stages, along with the other parameters, in the search results. Call the [list contact stages endpoint](https://docs.apollo.io/reference/list-contact-stages) to retrieve a list of all the contact stage IDs available in your Apollo account. Example: `6095a710bd01d100a506d4ae`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
+        public List<string>? ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; AdditionalData?.Remove("contact_stage_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
         private List<string>? _explicitNullValueContactStageIds = default!;
 #nullable restore
 #else
-        public List<string> ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
+        public List<string> ContactStageIds { get => _explicitNullValueContactStageIds; set { _explicitNullValueContactStageIds = value; AdditionalData?.Remove("contact_stage_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_ids"); else _explicitNullProperties?.Remove("contact_stage_ids"); } }
         private List<string> _explicitNullValueContactStageIds = default!;
 #endif
         /// <summary>The page number of the Apollo data that you want to retrieve. Use this parameter in combination with the `per_page` parameter to make search results navigable and improve the performance of the endpoint. Example: `4`</summary>
-        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; AdditionalData?.Remove("page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
         private int? _explicitNullValuePage = default!;
         /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. Use the `page` parameter to search the different pages of data. Example: `10`</summary>
-        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
+        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; AdditionalData?.Remove("per_page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
         private int? _explicitNullValuePerPage = default!;
         /// <summary>Add a keyword search string to narrow the contacts in your team&apos;s Apollo account. Keywords should be related to the same search concept and can include names, job titles, employers or company names, or email addresses. Examples: `matthew helm`; `CEO`; `Sumware Software`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QKeywords { get => _explicitNullValueQKeywords; set { _explicitNullValueQKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_keywords"); else _explicitNullProperties?.Remove("q_keywords"); } }
+        public string? QKeywords { get => _explicitNullValueQKeywords; set { _explicitNullValueQKeywords = value; AdditionalData?.Remove("q_keywords"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_keywords"); else _explicitNullProperties?.Remove("q_keywords"); } }
         private string? _explicitNullValueQKeywords = default!;
 #nullable restore
 #else
-        public string QKeywords { get => _explicitNullValueQKeywords; set { _explicitNullValueQKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_keywords"); else _explicitNullProperties?.Remove("q_keywords"); } }
+        public string QKeywords { get => _explicitNullValueQKeywords; set { _explicitNullValueQKeywords = value; AdditionalData?.Remove("q_keywords"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q_keywords"); else _explicitNullProperties?.Remove("q_keywords"); } }
         private string _explicitNullValueQKeywords = default!;
 #endif
         /// <summary>Set to `true` to sort the matching contacts in ascending order. This parameter must be used with `sort_by_field`. Otherwise, the sorting logic is not applied. Example: `true`</summary>
-        public bool? SortAscending { get => _explicitNullValueSortAscending; set { _explicitNullValueSortAscending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_ascending"); else _explicitNullProperties?.Remove("sort_ascending"); } }
+        public bool? SortAscending { get => _explicitNullValueSortAscending; set { _explicitNullValueSortAscending = value; AdditionalData?.Remove("sort_ascending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_ascending"); else _explicitNullProperties?.Remove("sort_ascending"); } }
         private bool? _explicitNullValueSortAscending = default!;
         /// <summary>Sort the matching contacts by 1 of the following options: - `contact_last_activity_date`: The most recent activity date recorded first.- `contact_email_last_opened_at`: The most recent email opened date first.- `contact_email_last_clicked_at`: The most recent email clicked first.- `contact_created_at`: The most recently created first.- `contact_updated_at`: The most recently updated first.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
+        public string? SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; AdditionalData?.Remove("sort_by_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
         private string? _explicitNullValueSortByField = default!;
 #nullable restore
 #else
-        public string SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
+        public string SortByField { get => _explicitNullValueSortByField; set { _explicitNullValueSortByField = value; AdditionalData?.Remove("sort_by_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_by_field"); else _explicitNullProperties?.Remove("sort_by_field"); } }
         private string _explicitNullValueSortByField = default!;
 #endif
         /// <summary>

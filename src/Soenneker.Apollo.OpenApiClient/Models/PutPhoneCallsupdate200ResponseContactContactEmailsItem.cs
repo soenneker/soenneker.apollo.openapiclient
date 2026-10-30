@@ -17,19 +17,32 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("email_md5") is { } nullNodeEmailMd5 && nullNodeEmailMd5.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMd5 = null;
-            if (parseNode.GetChildNode("email_needs_tickling") is { } nullNodeEmailNeedsTickling && nullNodeEmailNeedsTickling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailNeedsTickling = null;
-            if (parseNode.GetChildNode("email_sha256") is { } nullNodeEmailSha256 && nullNodeEmailSha256.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSha256 = null;
-            if (parseNode.GetChildNode("email_status") is { } nullNodeEmailStatus && nullNodeEmailStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailStatus = null;
-            if (parseNode.GetChildNode("email_status_unavailable_reason") is { } nullNodeEmailStatusUnavailableReason && nullNodeEmailStatusUnavailableReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailStatusUnavailableReason = null;
-            if (parseNode.GetChildNode("email_true_status") is { } nullNodeEmailTrueStatus && nullNodeEmailTrueStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailTrueStatus = null;
-            if (parseNode.GetChildNode("extrapolated_email_confidence") is { } nullNodeExtrapolatedEmailConfidence && nullNodeExtrapolatedEmailConfidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtrapolatedEmailConfidence = null;
-            if (parseNode.GetChildNode("free_domain") is { } nullNodeFreeDomain && nullNodeFreeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeDomain = null;
-            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
-            if (parseNode.GetChildNode("third_party_vendor_name") is { } nullNodeThirdPartyVendorName && nullNodeThirdPartyVendorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyVendorName = null;
-            if (parseNode.GetChildNode("vendor_validation_statuses") is { } nullNodeVendorValidationStatuses && nullNodeVendorValidationStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorValidationStatuses = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("email_md5") is null) { _explicitNullValueEmailMd5 = default!; _explicitNullProperties?.Remove("email_md5"); }
+            else if (parseNode.GetChildNode("email_md5") is { } nullNodeEmailMd5 && nullNodeEmailMd5.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMd5 = null;
+            if (parseNode.GetChildNode("email_needs_tickling") is null) { _explicitNullValueEmailNeedsTickling = default!; _explicitNullProperties?.Remove("email_needs_tickling"); }
+            else if (parseNode.GetChildNode("email_needs_tickling") is { } nullNodeEmailNeedsTickling && nullNodeEmailNeedsTickling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailNeedsTickling = null;
+            if (parseNode.GetChildNode("email_sha256") is null) { _explicitNullValueEmailSha256 = default!; _explicitNullProperties?.Remove("email_sha256"); }
+            else if (parseNode.GetChildNode("email_sha256") is { } nullNodeEmailSha256 && nullNodeEmailSha256.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSha256 = null;
+            if (parseNode.GetChildNode("email_status") is null) { _explicitNullValueEmailStatus = default!; _explicitNullProperties?.Remove("email_status"); }
+            else if (parseNode.GetChildNode("email_status") is { } nullNodeEmailStatus && nullNodeEmailStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailStatus = null;
+            if (parseNode.GetChildNode("email_status_unavailable_reason") is null) { _explicitNullValueEmailStatusUnavailableReason = default!; _explicitNullProperties?.Remove("email_status_unavailable_reason"); }
+            else if (parseNode.GetChildNode("email_status_unavailable_reason") is { } nullNodeEmailStatusUnavailableReason && nullNodeEmailStatusUnavailableReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailStatusUnavailableReason = null;
+            if (parseNode.GetChildNode("email_true_status") is null) { _explicitNullValueEmailTrueStatus = default!; _explicitNullProperties?.Remove("email_true_status"); }
+            else if (parseNode.GetChildNode("email_true_status") is { } nullNodeEmailTrueStatus && nullNodeEmailTrueStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailTrueStatus = null;
+            if (parseNode.GetChildNode("extrapolated_email_confidence") is null) { _explicitNullValueExtrapolatedEmailConfidence = default!; _explicitNullProperties?.Remove("extrapolated_email_confidence"); }
+            else if (parseNode.GetChildNode("extrapolated_email_confidence") is { } nullNodeExtrapolatedEmailConfidence && nullNodeExtrapolatedEmailConfidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtrapolatedEmailConfidence = null;
+            if (parseNode.GetChildNode("free_domain") is null) { _explicitNullValueFreeDomain = default!; _explicitNullProperties?.Remove("free_domain"); }
+            else if (parseNode.GetChildNode("free_domain") is { } nullNodeFreeDomain && nullNodeFreeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeDomain = null;
+            if (parseNode.GetChildNode("position") is null) { _explicitNullValuePosition = default!; _explicitNullProperties?.Remove("position"); }
+            else if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("third_party_vendor_name") is null) { _explicitNullValueThirdPartyVendorName = default!; _explicitNullProperties?.Remove("third_party_vendor_name"); }
+            else if (parseNode.GetChildNode("third_party_vendor_name") is { } nullNodeThirdPartyVendorName && nullNodeThirdPartyVendorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyVendorName = null;
+            if (parseNode.GetChildNode("vendor_validation_statuses") is null) { _explicitNullValueVendorValidationStatuses = default!; _explicitNullProperties?.Remove("vendor_validation_statuses"); }
+            else if (parseNode.GetChildNode("vendor_validation_statuses") is { } nullNodeVendorValidationStatuses && nullNodeVendorValidationStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorValidationStatuses = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,110 +50,110 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The email_md5 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMd5 { get => _explicitNullValueEmailMd5; set { _explicitNullValueEmailMd5 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_md5"); else _explicitNullProperties?.Remove("email_md5"); } }
+        public string? EmailMd5 { get => _explicitNullValueEmailMd5; set { _explicitNullValueEmailMd5 = value; AdditionalData?.Remove("email_md5"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_md5"); else _explicitNullProperties?.Remove("email_md5"); } }
         private string? _explicitNullValueEmailMd5 = default!;
 #nullable restore
 #else
-        public string EmailMd5 { get => _explicitNullValueEmailMd5; set { _explicitNullValueEmailMd5 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_md5"); else _explicitNullProperties?.Remove("email_md5"); } }
+        public string EmailMd5 { get => _explicitNullValueEmailMd5; set { _explicitNullValueEmailMd5 = value; AdditionalData?.Remove("email_md5"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_md5"); else _explicitNullProperties?.Remove("email_md5"); } }
         private string _explicitNullValueEmailMd5 = default!;
 #endif
         /// <summary>The email_needs_tickling property</summary>
-        public bool? EmailNeedsTickling { get => _explicitNullValueEmailNeedsTickling; set { _explicitNullValueEmailNeedsTickling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_needs_tickling"); else _explicitNullProperties?.Remove("email_needs_tickling"); } }
+        public bool? EmailNeedsTickling { get => _explicitNullValueEmailNeedsTickling; set { _explicitNullValueEmailNeedsTickling = value; AdditionalData?.Remove("email_needs_tickling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_needs_tickling"); else _explicitNullProperties?.Remove("email_needs_tickling"); } }
         private bool? _explicitNullValueEmailNeedsTickling = default!;
         /// <summary>The email_sha256 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSha256 { get => _explicitNullValueEmailSha256; set { _explicitNullValueEmailSha256 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sha256"); else _explicitNullProperties?.Remove("email_sha256"); } }
+        public string? EmailSha256 { get => _explicitNullValueEmailSha256; set { _explicitNullValueEmailSha256 = value; AdditionalData?.Remove("email_sha256"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sha256"); else _explicitNullProperties?.Remove("email_sha256"); } }
         private string? _explicitNullValueEmailSha256 = default!;
 #nullable restore
 #else
-        public string EmailSha256 { get => _explicitNullValueEmailSha256; set { _explicitNullValueEmailSha256 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sha256"); else _explicitNullProperties?.Remove("email_sha256"); } }
+        public string EmailSha256 { get => _explicitNullValueEmailSha256; set { _explicitNullValueEmailSha256 = value; AdditionalData?.Remove("email_sha256"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sha256"); else _explicitNullProperties?.Remove("email_sha256"); } }
         private string _explicitNullValueEmailSha256 = default!;
 #endif
         /// <summary>The email_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailStatus { get => _explicitNullValueEmailStatus; set { _explicitNullValueEmailStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status"); else _explicitNullProperties?.Remove("email_status"); } }
+        public string? EmailStatus { get => _explicitNullValueEmailStatus; set { _explicitNullValueEmailStatus = value; AdditionalData?.Remove("email_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status"); else _explicitNullProperties?.Remove("email_status"); } }
         private string? _explicitNullValueEmailStatus = default!;
 #nullable restore
 #else
-        public string EmailStatus { get => _explicitNullValueEmailStatus; set { _explicitNullValueEmailStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status"); else _explicitNullProperties?.Remove("email_status"); } }
+        public string EmailStatus { get => _explicitNullValueEmailStatus; set { _explicitNullValueEmailStatus = value; AdditionalData?.Remove("email_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status"); else _explicitNullProperties?.Remove("email_status"); } }
         private string _explicitNullValueEmailStatus = default!;
 #endif
         /// <summary>The email_status_unavailable_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? EmailStatusUnavailableReason { get => _explicitNullValueEmailStatusUnavailableReason; set { _explicitNullValueEmailStatusUnavailableReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status_unavailable_reason"); else _explicitNullProperties?.Remove("email_status_unavailable_reason"); } }
+        public UntypedNode? EmailStatusUnavailableReason { get => _explicitNullValueEmailStatusUnavailableReason; set { _explicitNullValueEmailStatusUnavailableReason = value; AdditionalData?.Remove("email_status_unavailable_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status_unavailable_reason"); else _explicitNullProperties?.Remove("email_status_unavailable_reason"); } }
         private UntypedNode? _explicitNullValueEmailStatusUnavailableReason = default!;
 #nullable restore
 #else
-        public UntypedNode EmailStatusUnavailableReason { get => _explicitNullValueEmailStatusUnavailableReason; set { _explicitNullValueEmailStatusUnavailableReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status_unavailable_reason"); else _explicitNullProperties?.Remove("email_status_unavailable_reason"); } }
+        public UntypedNode EmailStatusUnavailableReason { get => _explicitNullValueEmailStatusUnavailableReason; set { _explicitNullValueEmailStatusUnavailableReason = value; AdditionalData?.Remove("email_status_unavailable_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_status_unavailable_reason"); else _explicitNullProperties?.Remove("email_status_unavailable_reason"); } }
         private UntypedNode _explicitNullValueEmailStatusUnavailableReason = default!;
 #endif
         /// <summary>The email_true_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailTrueStatus { get => _explicitNullValueEmailTrueStatus; set { _explicitNullValueEmailTrueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_true_status"); else _explicitNullProperties?.Remove("email_true_status"); } }
+        public string? EmailTrueStatus { get => _explicitNullValueEmailTrueStatus; set { _explicitNullValueEmailTrueStatus = value; AdditionalData?.Remove("email_true_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_true_status"); else _explicitNullProperties?.Remove("email_true_status"); } }
         private string? _explicitNullValueEmailTrueStatus = default!;
 #nullable restore
 #else
-        public string EmailTrueStatus { get => _explicitNullValueEmailTrueStatus; set { _explicitNullValueEmailTrueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_true_status"); else _explicitNullProperties?.Remove("email_true_status"); } }
+        public string EmailTrueStatus { get => _explicitNullValueEmailTrueStatus; set { _explicitNullValueEmailTrueStatus = value; AdditionalData?.Remove("email_true_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_true_status"); else _explicitNullProperties?.Remove("email_true_status"); } }
         private string _explicitNullValueEmailTrueStatus = default!;
 #endif
         /// <summary>The extrapolated_email_confidence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ExtrapolatedEmailConfidence { get => _explicitNullValueExtrapolatedEmailConfidence; set { _explicitNullValueExtrapolatedEmailConfidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extrapolated_email_confidence"); else _explicitNullProperties?.Remove("extrapolated_email_confidence"); } }
+        public UntypedNode? ExtrapolatedEmailConfidence { get => _explicitNullValueExtrapolatedEmailConfidence; set { _explicitNullValueExtrapolatedEmailConfidence = value; AdditionalData?.Remove("extrapolated_email_confidence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extrapolated_email_confidence"); else _explicitNullProperties?.Remove("extrapolated_email_confidence"); } }
         private UntypedNode? _explicitNullValueExtrapolatedEmailConfidence = default!;
 #nullable restore
 #else
-        public UntypedNode ExtrapolatedEmailConfidence { get => _explicitNullValueExtrapolatedEmailConfidence; set { _explicitNullValueExtrapolatedEmailConfidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extrapolated_email_confidence"); else _explicitNullProperties?.Remove("extrapolated_email_confidence"); } }
+        public UntypedNode ExtrapolatedEmailConfidence { get => _explicitNullValueExtrapolatedEmailConfidence; set { _explicitNullValueExtrapolatedEmailConfidence = value; AdditionalData?.Remove("extrapolated_email_confidence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extrapolated_email_confidence"); else _explicitNullProperties?.Remove("extrapolated_email_confidence"); } }
         private UntypedNode _explicitNullValueExtrapolatedEmailConfidence = default!;
 #endif
         /// <summary>The free_domain property</summary>
-        public bool? FreeDomain { get => _explicitNullValueFreeDomain; set { _explicitNullValueFreeDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_domain"); else _explicitNullProperties?.Remove("free_domain"); } }
+        public bool? FreeDomain { get => _explicitNullValueFreeDomain; set { _explicitNullValueFreeDomain = value; AdditionalData?.Remove("free_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_domain"); else _explicitNullProperties?.Remove("free_domain"); } }
         private bool? _explicitNullValueFreeDomain = default!;
         /// <summary>The position property</summary>
-        public long? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        public long? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
         private long? _explicitNullValuePosition = default!;
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The third_party_vendor_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ThirdPartyVendorName { get => _explicitNullValueThirdPartyVendorName; set { _explicitNullValueThirdPartyVendorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_vendor_name"); else _explicitNullProperties?.Remove("third_party_vendor_name"); } }
+        public UntypedNode? ThirdPartyVendorName { get => _explicitNullValueThirdPartyVendorName; set { _explicitNullValueThirdPartyVendorName = value; AdditionalData?.Remove("third_party_vendor_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_vendor_name"); else _explicitNullProperties?.Remove("third_party_vendor_name"); } }
         private UntypedNode? _explicitNullValueThirdPartyVendorName = default!;
 #nullable restore
 #else
-        public UntypedNode ThirdPartyVendorName { get => _explicitNullValueThirdPartyVendorName; set { _explicitNullValueThirdPartyVendorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_vendor_name"); else _explicitNullProperties?.Remove("third_party_vendor_name"); } }
+        public UntypedNode ThirdPartyVendorName { get => _explicitNullValueThirdPartyVendorName; set { _explicitNullValueThirdPartyVendorName = value; AdditionalData?.Remove("third_party_vendor_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_vendor_name"); else _explicitNullProperties?.Remove("third_party_vendor_name"); } }
         private UntypedNode _explicitNullValueThirdPartyVendorName = default!;
 #endif
         /// <summary>The vendor_validation_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? VendorValidationStatuses { get => _explicitNullValueVendorValidationStatuses; set { _explicitNullValueVendorValidationStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_validation_statuses"); else _explicitNullProperties?.Remove("vendor_validation_statuses"); } }
+        public UntypedNode? VendorValidationStatuses { get => _explicitNullValueVendorValidationStatuses; set { _explicitNullValueVendorValidationStatuses = value; AdditionalData?.Remove("vendor_validation_statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_validation_statuses"); else _explicitNullProperties?.Remove("vendor_validation_statuses"); } }
         private UntypedNode? _explicitNullValueVendorValidationStatuses = default!;
 #nullable restore
 #else
-        public UntypedNode VendorValidationStatuses { get => _explicitNullValueVendorValidationStatuses; set { _explicitNullValueVendorValidationStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_validation_statuses"); else _explicitNullProperties?.Remove("vendor_validation_statuses"); } }
+        public UntypedNode VendorValidationStatuses { get => _explicitNullValueVendorValidationStatuses; set { _explicitNullValueVendorValidationStatuses = value; AdditionalData?.Remove("vendor_validation_statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_validation_statuses"); else _explicitNullProperties?.Remove("vendor_validation_statuses"); } }
         private UntypedNode _explicitNullValueVendorValidationStatuses = default!;
 #endif
         /// <summary>

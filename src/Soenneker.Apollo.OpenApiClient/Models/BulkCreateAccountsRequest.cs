@@ -17,19 +17,22 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
-            if (parseNode.GetChildNode("append_label_names") is { } nullNodeAppendLabelNames && nullNodeAppendLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendLabelNames = null;
-            if (parseNode.GetChildNode("run_dedupe") is { } nullNodeRunDedupe && nullNodeRunDedupe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunDedupe = null;
+            if (parseNode.GetChildNode("accounts") is null) { _explicitNullValueAccounts = default!; _explicitNullProperties?.Remove("accounts"); }
+            else if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
+            if (parseNode.GetChildNode("append_label_names") is null) { _explicitNullValueAppendLabelNames = default!; _explicitNullProperties?.Remove("append_label_names"); }
+            else if (parseNode.GetChildNode("append_label_names") is { } nullNodeAppendLabelNames && nullNodeAppendLabelNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendLabelNames = null;
+            if (parseNode.GetChildNode("run_dedupe") is null) { _explicitNullValueRunDedupe = default!; _explicitNullProperties?.Remove("run_dedupe"); }
+            else if (parseNode.GetChildNode("run_dedupe") is { } nullNodeRunDedupe && nullNodeRunDedupe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunDedupe = null;
         }
 
         /// <summary>Array of account attribute objects (maximum 100 accounts per request)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequestAccountsItem>? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequestAccountsItem>? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; AdditionalData?.Remove("accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequestAccountsItem>? _explicitNullValueAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequestAccountsItem> Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequestAccountsItem> Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; AdditionalData?.Remove("accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequestAccountsItem> _explicitNullValueAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,15 +40,15 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Array of label names to add to ALL accounts in this request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AppendLabelNames { get => _explicitNullValueAppendLabelNames; set { _explicitNullValueAppendLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_label_names"); else _explicitNullProperties?.Remove("append_label_names"); } }
+        public List<string>? AppendLabelNames { get => _explicitNullValueAppendLabelNames; set { _explicitNullValueAppendLabelNames = value; AdditionalData?.Remove("append_label_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_label_names"); else _explicitNullProperties?.Remove("append_label_names"); } }
         private List<string>? _explicitNullValueAppendLabelNames = default!;
 #nullable restore
 #else
-        public List<string> AppendLabelNames { get => _explicitNullValueAppendLabelNames; set { _explicitNullValueAppendLabelNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_label_names"); else _explicitNullProperties?.Remove("append_label_names"); } }
+        public List<string> AppendLabelNames { get => _explicitNullValueAppendLabelNames; set { _explicitNullValueAppendLabelNames = value; AdditionalData?.Remove("append_label_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_label_names"); else _explicitNullProperties?.Remove("append_label_names"); } }
         private List<string> _explicitNullValueAppendLabelNames = default!;
 #endif
         /// <summary>Enable aggressive deduplication by domain, organization_id, and name. When false (default), only matches by CRM IDs. When true, also matches by domain, organization_id, and name. Existing accounts are returned without modification in both modes</summary>
-        public bool? RunDedupe { get => _explicitNullValueRunDedupe; set { _explicitNullValueRunDedupe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_dedupe"); else _explicitNullProperties?.Remove("run_dedupe"); } }
+        public bool? RunDedupe { get => _explicitNullValueRunDedupe; set { _explicitNullValueRunDedupe = value; AdditionalData?.Remove("run_dedupe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_dedupe"); else _explicitNullProperties?.Remove("run_dedupe"); } }
         private bool? _explicitNullValueRunDedupe = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.BulkCreateAccountsRequest"/> and sets the default values.

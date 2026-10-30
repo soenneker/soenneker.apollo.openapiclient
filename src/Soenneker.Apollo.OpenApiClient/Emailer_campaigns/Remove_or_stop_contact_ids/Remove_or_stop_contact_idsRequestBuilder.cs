@@ -74,7 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contac
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Remove_or_stop_contact_ids.Remove_or_stop_contact_idsRequestBuilder.Remove_or_stop_contact_idsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.apollo.io/api/v1", "/emailer_campaigns/remove_or_stop_contact_ids", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

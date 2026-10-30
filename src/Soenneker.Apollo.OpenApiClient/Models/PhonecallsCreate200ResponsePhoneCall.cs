@@ -17,62 +17,98 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
-            if (parseNode.GetChildNode("agent_call_sid") is { } nullNodeAgentCallSid && nullNodeAgentCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentCallSid = null;
-            if (parseNode.GetChildNode("call_identifier") is { } nullNodeCallIdentifier && nullNodeCallIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallIdentifier = null;
-            if (parseNode.GetChildNode("conference_id") is { } nullNodeConferenceId && nullNodeConferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceId = null;
-            if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
-            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
-            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
-            if (parseNode.GetChildNode("end_time") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
-            if (parseNode.GetChildNode("from_number") is { } nullNodeFromNumber && nullNodeFromNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromNumber = null;
-            if (parseNode.GetChildNode("hubspot_id") is { } nullNodeHubspotId && nullNodeHubspotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("inbound") is { } nullNodeInbound && nullNodeInbound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inbound = null;
-            if (parseNode.GetChildNode("logged") is { } nullNodeLogged && nullNodeLogged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logged = null;
-            if (parseNode.GetChildNode("need_recording_upload") is { } nullNodeNeedRecordingUpload && nullNodeNeedRecordingUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NeedRecordingUpload = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
-            if (parseNode.GetChildNode("note_text") is { } nullNodeNoteText && nullNodeNoteText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteText = null;
-            if (parseNode.GetChildNode("opportunity_id") is { } nullNodeOpportunityId && nullNodeOpportunityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityId = null;
-            if (parseNode.GetChildNode("outreach_task_id") is { } nullNodeOutreachTaskId && nullNodeOutreachTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutreachTaskId = null;
-            if (parseNode.GetChildNode("parallel_dial_item_id") is { } nullNodeParallelDialItemId && nullNodeParallelDialItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParallelDialItemId = null;
-            if (parseNode.GetChildNode("phone_call_outcome_id") is { } nullNodePhoneCallOutcomeId && nullNodePhoneCallOutcomeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallOutcomeId = null;
-            if (parseNode.GetChildNode("phone_call_purpose_id") is { } nullNodePhoneCallPurposeId && nullNodePhoneCallPurposeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallPurposeId = null;
-            if (parseNode.GetChildNode("recording_url") is { } nullNodeRecordingUrl && nullNodeRecordingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingUrl = null;
-            if (parseNode.GetChildNode("salesforce_id") is { } nullNodeSalesforceId && nullNodeSalesforceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesforceId = null;
-            if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("to_number") is { } nullNodeToNumber && nullNodeToNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToNumber = null;
-            if (parseNode.GetChildNode("transcribed") is { } nullNodeTranscribed && nullNodeTranscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcribed = null;
-            if (parseNode.GetChildNode("transcribing") is { } nullNodeTranscribing && nullNodeTranscribing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcribing = null;
-            if (parseNode.GetChildNode("transcription_progress") is { } nullNodeTranscriptionProgress && nullNodeTranscriptionProgress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionProgress = null;
-            if (parseNode.GetChildNode("transcription_too_long") is { } nullNodeTranscriptionTooLong && nullNodeTranscriptionTooLong.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionTooLong = null;
-            if (parseNode.GetChildNode("twilio_call_sid") is { } nullNodeTwilioCallSid && nullNodeTwilioCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCallSid = null;
-            if (parseNode.GetChildNode("twilio_recording_sid") is { } nullNodeTwilioRecordingSid && nullNodeTwilioRecordingSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioRecordingSid = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
-            if (parseNode.GetChildNode("voicemail_dropped") is { } nullNodeVoicemailDropped && nullNodeVoicemailDropped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoicemailDropped = null;
-            if (parseNode.GetChildNode("voice_setting_id") is { } nullNodeVoiceSettingId && nullNodeVoiceSettingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceSettingId = null;
+            if (parseNode.GetChildNode("account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("account"); }
+            else if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("account_id") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("account_id"); }
+            else if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("agent_call_sid") is null) { _explicitNullValueAgentCallSid = default!; _explicitNullProperties?.Remove("agent_call_sid"); }
+            else if (parseNode.GetChildNode("agent_call_sid") is { } nullNodeAgentCallSid && nullNodeAgentCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentCallSid = null;
+            if (parseNode.GetChildNode("call_identifier") is null) { _explicitNullValueCallIdentifier = default!; _explicitNullProperties?.Remove("call_identifier"); }
+            else if (parseNode.GetChildNode("call_identifier") is { } nullNodeCallIdentifier && nullNodeCallIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallIdentifier = null;
+            if (parseNode.GetChildNode("conference_id") is null) { _explicitNullValueConferenceId = default!; _explicitNullProperties?.Remove("conference_id"); }
+            else if (parseNode.GetChildNode("conference_id") is { } nullNodeConferenceId && nullNodeConferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceId = null;
+            if (parseNode.GetChildNode("contact") is null) { _explicitNullValueContact = default!; _explicitNullProperties?.Remove("contact"); }
+            else if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
+            if (parseNode.GetChildNode("contact_id") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contact_id"); }
+            else if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("duration") is null) { _explicitNullValueDuration = default!; _explicitNullProperties?.Remove("duration"); }
+            else if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("end_time") is null) { _explicitNullValueEndTime = default!; _explicitNullProperties?.Remove("end_time"); }
+            else if (parseNode.GetChildNode("end_time") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("from_number") is null) { _explicitNullValueFromNumber = default!; _explicitNullProperties?.Remove("from_number"); }
+            else if (parseNode.GetChildNode("from_number") is { } nullNodeFromNumber && nullNodeFromNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromNumber = null;
+            if (parseNode.GetChildNode("hubspot_id") is null) { _explicitNullValueHubspotId = default!; _explicitNullProperties?.Remove("hubspot_id"); }
+            else if (parseNode.GetChildNode("hubspot_id") is { } nullNodeHubspotId && nullNodeHubspotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inbound") is null) { _explicitNullValueInbound = default!; _explicitNullProperties?.Remove("inbound"); }
+            else if (parseNode.GetChildNode("inbound") is { } nullNodeInbound && nullNodeInbound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inbound = null;
+            if (parseNode.GetChildNode("logged") is null) { _explicitNullValueLogged = default!; _explicitNullProperties?.Remove("logged"); }
+            else if (parseNode.GetChildNode("logged") is { } nullNodeLogged && nullNodeLogged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logged = null;
+            if (parseNode.GetChildNode("need_recording_upload") is null) { _explicitNullValueNeedRecordingUpload = default!; _explicitNullProperties?.Remove("need_recording_upload"); }
+            else if (parseNode.GetChildNode("need_recording_upload") is { } nullNodeNeedRecordingUpload && nullNodeNeedRecordingUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NeedRecordingUpload = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("note_text") is null) { _explicitNullValueNoteText = default!; _explicitNullProperties?.Remove("note_text"); }
+            else if (parseNode.GetChildNode("note_text") is { } nullNodeNoteText && nullNodeNoteText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteText = null;
+            if (parseNode.GetChildNode("opportunity_id") is null) { _explicitNullValueOpportunityId = default!; _explicitNullProperties?.Remove("opportunity_id"); }
+            else if (parseNode.GetChildNode("opportunity_id") is { } nullNodeOpportunityId && nullNodeOpportunityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityId = null;
+            if (parseNode.GetChildNode("outreach_task_id") is null) { _explicitNullValueOutreachTaskId = default!; _explicitNullProperties?.Remove("outreach_task_id"); }
+            else if (parseNode.GetChildNode("outreach_task_id") is { } nullNodeOutreachTaskId && nullNodeOutreachTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutreachTaskId = null;
+            if (parseNode.GetChildNode("parallel_dial_item_id") is null) { _explicitNullValueParallelDialItemId = default!; _explicitNullProperties?.Remove("parallel_dial_item_id"); }
+            else if (parseNode.GetChildNode("parallel_dial_item_id") is { } nullNodeParallelDialItemId && nullNodeParallelDialItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParallelDialItemId = null;
+            if (parseNode.GetChildNode("phone_call_outcome_id") is null) { _explicitNullValuePhoneCallOutcomeId = default!; _explicitNullProperties?.Remove("phone_call_outcome_id"); }
+            else if (parseNode.GetChildNode("phone_call_outcome_id") is { } nullNodePhoneCallOutcomeId && nullNodePhoneCallOutcomeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallOutcomeId = null;
+            if (parseNode.GetChildNode("phone_call_purpose_id") is null) { _explicitNullValuePhoneCallPurposeId = default!; _explicitNullProperties?.Remove("phone_call_purpose_id"); }
+            else if (parseNode.GetChildNode("phone_call_purpose_id") is { } nullNodePhoneCallPurposeId && nullNodePhoneCallPurposeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallPurposeId = null;
+            if (parseNode.GetChildNode("recording_url") is null) { _explicitNullValueRecordingUrl = default!; _explicitNullProperties?.Remove("recording_url"); }
+            else if (parseNode.GetChildNode("recording_url") is { } nullNodeRecordingUrl && nullNodeRecordingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingUrl = null;
+            if (parseNode.GetChildNode("salesforce_id") is null) { _explicitNullValueSalesforceId = default!; _explicitNullProperties?.Remove("salesforce_id"); }
+            else if (parseNode.GetChildNode("salesforce_id") is { } nullNodeSalesforceId && nullNodeSalesforceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesforceId = null;
+            if (parseNode.GetChildNode("start_time") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("start_time"); }
+            else if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("to_number") is null) { _explicitNullValueToNumber = default!; _explicitNullProperties?.Remove("to_number"); }
+            else if (parseNode.GetChildNode("to_number") is { } nullNodeToNumber && nullNodeToNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToNumber = null;
+            if (parseNode.GetChildNode("transcribed") is null) { _explicitNullValueTranscribed = default!; _explicitNullProperties?.Remove("transcribed"); }
+            else if (parseNode.GetChildNode("transcribed") is { } nullNodeTranscribed && nullNodeTranscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcribed = null;
+            if (parseNode.GetChildNode("transcribing") is null) { _explicitNullValueTranscribing = default!; _explicitNullProperties?.Remove("transcribing"); }
+            else if (parseNode.GetChildNode("transcribing") is { } nullNodeTranscribing && nullNodeTranscribing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcribing = null;
+            if (parseNode.GetChildNode("transcription_progress") is null) { _explicitNullValueTranscriptionProgress = default!; _explicitNullProperties?.Remove("transcription_progress"); }
+            else if (parseNode.GetChildNode("transcription_progress") is { } nullNodeTranscriptionProgress && nullNodeTranscriptionProgress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionProgress = null;
+            if (parseNode.GetChildNode("transcription_too_long") is null) { _explicitNullValueTranscriptionTooLong = default!; _explicitNullProperties?.Remove("transcription_too_long"); }
+            else if (parseNode.GetChildNode("transcription_too_long") is { } nullNodeTranscriptionTooLong && nullNodeTranscriptionTooLong.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionTooLong = null;
+            if (parseNode.GetChildNode("twilio_call_sid") is null) { _explicitNullValueTwilioCallSid = default!; _explicitNullProperties?.Remove("twilio_call_sid"); }
+            else if (parseNode.GetChildNode("twilio_call_sid") is { } nullNodeTwilioCallSid && nullNodeTwilioCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCallSid = null;
+            if (parseNode.GetChildNode("twilio_recording_sid") is null) { _explicitNullValueTwilioRecordingSid = default!; _explicitNullProperties?.Remove("twilio_recording_sid"); }
+            else if (parseNode.GetChildNode("twilio_recording_sid") is { } nullNodeTwilioRecordingSid && nullNodeTwilioRecordingSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioRecordingSid = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("voicemail_dropped") is null) { _explicitNullValueVoicemailDropped = default!; _explicitNullProperties?.Remove("voicemail_dropped"); }
+            else if (parseNode.GetChildNode("voicemail_dropped") is { } nullNodeVoicemailDropped && nullNodeVoicemailDropped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoicemailDropped = null;
+            if (parseNode.GetChildNode("voice_setting_id") is null) { _explicitNullValueVoiceSettingId = default!; _explicitNullProperties?.Remove("voice_setting_id"); }
+            else if (parseNode.GetChildNode("voice_setting_id") is { } nullNodeVoiceSettingId && nullNodeVoiceSettingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceSettingId = null;
         }
 
         /// <summary>The account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallAccount? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallAccount _explicitNullValueAccount = default!;
 #endif
         /// <summary>The account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -80,285 +116,285 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The agent_call_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AgentCallSid { get => _explicitNullValueAgentCallSid; set { _explicitNullValueAgentCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_call_sid"); else _explicitNullProperties?.Remove("agent_call_sid"); } }
+        public UntypedNode? AgentCallSid { get => _explicitNullValueAgentCallSid; set { _explicitNullValueAgentCallSid = value; AdditionalData?.Remove("agent_call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_call_sid"); else _explicitNullProperties?.Remove("agent_call_sid"); } }
         private UntypedNode? _explicitNullValueAgentCallSid = default!;
 #nullable restore
 #else
-        public UntypedNode AgentCallSid { get => _explicitNullValueAgentCallSid; set { _explicitNullValueAgentCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_call_sid"); else _explicitNullProperties?.Remove("agent_call_sid"); } }
+        public UntypedNode AgentCallSid { get => _explicitNullValueAgentCallSid; set { _explicitNullValueAgentCallSid = value; AdditionalData?.Remove("agent_call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_call_sid"); else _explicitNullProperties?.Remove("agent_call_sid"); } }
         private UntypedNode _explicitNullValueAgentCallSid = default!;
 #endif
         /// <summary>The call_identifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CallIdentifier { get => _explicitNullValueCallIdentifier; set { _explicitNullValueCallIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_identifier"); else _explicitNullProperties?.Remove("call_identifier"); } }
+        public UntypedNode? CallIdentifier { get => _explicitNullValueCallIdentifier; set { _explicitNullValueCallIdentifier = value; AdditionalData?.Remove("call_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_identifier"); else _explicitNullProperties?.Remove("call_identifier"); } }
         private UntypedNode? _explicitNullValueCallIdentifier = default!;
 #nullable restore
 #else
-        public UntypedNode CallIdentifier { get => _explicitNullValueCallIdentifier; set { _explicitNullValueCallIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_identifier"); else _explicitNullProperties?.Remove("call_identifier"); } }
+        public UntypedNode CallIdentifier { get => _explicitNullValueCallIdentifier; set { _explicitNullValueCallIdentifier = value; AdditionalData?.Remove("call_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_identifier"); else _explicitNullProperties?.Remove("call_identifier"); } }
         private UntypedNode _explicitNullValueCallIdentifier = default!;
 #endif
         /// <summary>The conference_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ConferenceId { get => _explicitNullValueConferenceId; set { _explicitNullValueConferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_id"); else _explicitNullProperties?.Remove("conference_id"); } }
+        public UntypedNode? ConferenceId { get => _explicitNullValueConferenceId; set { _explicitNullValueConferenceId = value; AdditionalData?.Remove("conference_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_id"); else _explicitNullProperties?.Remove("conference_id"); } }
         private UntypedNode? _explicitNullValueConferenceId = default!;
 #nullable restore
 #else
-        public UntypedNode ConferenceId { get => _explicitNullValueConferenceId; set { _explicitNullValueConferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_id"); else _explicitNullProperties?.Remove("conference_id"); } }
+        public UntypedNode ConferenceId { get => _explicitNullValueConferenceId; set { _explicitNullValueConferenceId = value; AdditionalData?.Remove("conference_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_id"); else _explicitNullProperties?.Remove("conference_id"); } }
         private UntypedNode _explicitNullValueConferenceId = default!;
 #endif
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallContact? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallContact? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; AdditionalData?.Remove("contact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallContact? _explicitNullValueContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallContact Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallContact Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; AdditionalData?.Remove("contact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PhonecallsCreate200ResponsePhoneCallContact _explicitNullValueContact = default!;
 #endif
         /// <summary>The contact_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>The duration property</summary>
-        public long? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        public long? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
         private long? _explicitNullValueDuration = default!;
         /// <summary>The end_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
+        public string? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
         private string? _explicitNullValueEndTime = default!;
 #nullable restore
 #else
-        public string EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
+        public string EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
         private string _explicitNullValueEndTime = default!;
 #endif
         /// <summary>The from_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FromNumber { get => _explicitNullValueFromNumber; set { _explicitNullValueFromNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_number"); else _explicitNullProperties?.Remove("from_number"); } }
+        public UntypedNode? FromNumber { get => _explicitNullValueFromNumber; set { _explicitNullValueFromNumber = value; AdditionalData?.Remove("from_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_number"); else _explicitNullProperties?.Remove("from_number"); } }
         private UntypedNode? _explicitNullValueFromNumber = default!;
 #nullable restore
 #else
-        public UntypedNode FromNumber { get => _explicitNullValueFromNumber; set { _explicitNullValueFromNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_number"); else _explicitNullProperties?.Remove("from_number"); } }
+        public UntypedNode FromNumber { get => _explicitNullValueFromNumber; set { _explicitNullValueFromNumber = value; AdditionalData?.Remove("from_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_number"); else _explicitNullProperties?.Remove("from_number"); } }
         private UntypedNode _explicitNullValueFromNumber = default!;
 #endif
         /// <summary>The hubspot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? HubspotId { get => _explicitNullValueHubspotId; set { _explicitNullValueHubspotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_id"); else _explicitNullProperties?.Remove("hubspot_id"); } }
+        public UntypedNode? HubspotId { get => _explicitNullValueHubspotId; set { _explicitNullValueHubspotId = value; AdditionalData?.Remove("hubspot_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_id"); else _explicitNullProperties?.Remove("hubspot_id"); } }
         private UntypedNode? _explicitNullValueHubspotId = default!;
 #nullable restore
 #else
-        public UntypedNode HubspotId { get => _explicitNullValueHubspotId; set { _explicitNullValueHubspotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_id"); else _explicitNullProperties?.Remove("hubspot_id"); } }
+        public UntypedNode HubspotId { get => _explicitNullValueHubspotId; set { _explicitNullValueHubspotId = value; AdditionalData?.Remove("hubspot_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_id"); else _explicitNullProperties?.Remove("hubspot_id"); } }
         private UntypedNode _explicitNullValueHubspotId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inbound property</summary>
-        public bool? Inbound { get => _explicitNullValueInbound; set { _explicitNullValueInbound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound"); else _explicitNullProperties?.Remove("inbound"); } }
+        public bool? Inbound { get => _explicitNullValueInbound; set { _explicitNullValueInbound = value; AdditionalData?.Remove("inbound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound"); else _explicitNullProperties?.Remove("inbound"); } }
         private bool? _explicitNullValueInbound = default!;
         /// <summary>The logged property</summary>
-        public bool? Logged { get => _explicitNullValueLogged; set { _explicitNullValueLogged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logged"); else _explicitNullProperties?.Remove("logged"); } }
+        public bool? Logged { get => _explicitNullValueLogged; set { _explicitNullValueLogged = value; AdditionalData?.Remove("logged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logged"); else _explicitNullProperties?.Remove("logged"); } }
         private bool? _explicitNullValueLogged = default!;
         /// <summary>The need_recording_upload property</summary>
-        public bool? NeedRecordingUpload { get => _explicitNullValueNeedRecordingUpload; set { _explicitNullValueNeedRecordingUpload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("need_recording_upload"); else _explicitNullProperties?.Remove("need_recording_upload"); } }
+        public bool? NeedRecordingUpload { get => _explicitNullValueNeedRecordingUpload; set { _explicitNullValueNeedRecordingUpload = value; AdditionalData?.Remove("need_recording_upload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("need_recording_upload"); else _explicitNullProperties?.Remove("need_recording_upload"); } }
         private bool? _explicitNullValueNeedRecordingUpload = default!;
         /// <summary>The note property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public UntypedNode? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private UntypedNode? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public UntypedNode Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public UntypedNode Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private UntypedNode _explicitNullValueNote = default!;
 #endif
         /// <summary>The note_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NoteText { get => _explicitNullValueNoteText; set { _explicitNullValueNoteText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_text"); else _explicitNullProperties?.Remove("note_text"); } }
+        public string? NoteText { get => _explicitNullValueNoteText; set { _explicitNullValueNoteText = value; AdditionalData?.Remove("note_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_text"); else _explicitNullProperties?.Remove("note_text"); } }
         private string? _explicitNullValueNoteText = default!;
 #nullable restore
 #else
-        public string NoteText { get => _explicitNullValueNoteText; set { _explicitNullValueNoteText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_text"); else _explicitNullProperties?.Remove("note_text"); } }
+        public string NoteText { get => _explicitNullValueNoteText; set { _explicitNullValueNoteText = value; AdditionalData?.Remove("note_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_text"); else _explicitNullProperties?.Remove("note_text"); } }
         private string _explicitNullValueNoteText = default!;
 #endif
         /// <summary>The opportunity_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OpportunityId { get => _explicitNullValueOpportunityId; set { _explicitNullValueOpportunityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_id"); else _explicitNullProperties?.Remove("opportunity_id"); } }
+        public UntypedNode? OpportunityId { get => _explicitNullValueOpportunityId; set { _explicitNullValueOpportunityId = value; AdditionalData?.Remove("opportunity_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_id"); else _explicitNullProperties?.Remove("opportunity_id"); } }
         private UntypedNode? _explicitNullValueOpportunityId = default!;
 #nullable restore
 #else
-        public UntypedNode OpportunityId { get => _explicitNullValueOpportunityId; set { _explicitNullValueOpportunityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_id"); else _explicitNullProperties?.Remove("opportunity_id"); } }
+        public UntypedNode OpportunityId { get => _explicitNullValueOpportunityId; set { _explicitNullValueOpportunityId = value; AdditionalData?.Remove("opportunity_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_id"); else _explicitNullProperties?.Remove("opportunity_id"); } }
         private UntypedNode _explicitNullValueOpportunityId = default!;
 #endif
         /// <summary>The outreach_task_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OutreachTaskId { get => _explicitNullValueOutreachTaskId; set { _explicitNullValueOutreachTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outreach_task_id"); else _explicitNullProperties?.Remove("outreach_task_id"); } }
+        public UntypedNode? OutreachTaskId { get => _explicitNullValueOutreachTaskId; set { _explicitNullValueOutreachTaskId = value; AdditionalData?.Remove("outreach_task_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outreach_task_id"); else _explicitNullProperties?.Remove("outreach_task_id"); } }
         private UntypedNode? _explicitNullValueOutreachTaskId = default!;
 #nullable restore
 #else
-        public UntypedNode OutreachTaskId { get => _explicitNullValueOutreachTaskId; set { _explicitNullValueOutreachTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outreach_task_id"); else _explicitNullProperties?.Remove("outreach_task_id"); } }
+        public UntypedNode OutreachTaskId { get => _explicitNullValueOutreachTaskId; set { _explicitNullValueOutreachTaskId = value; AdditionalData?.Remove("outreach_task_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outreach_task_id"); else _explicitNullProperties?.Remove("outreach_task_id"); } }
         private UntypedNode _explicitNullValueOutreachTaskId = default!;
 #endif
         /// <summary>The parallel_dial_item_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ParallelDialItemId { get => _explicitNullValueParallelDialItemId; set { _explicitNullValueParallelDialItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parallel_dial_item_id"); else _explicitNullProperties?.Remove("parallel_dial_item_id"); } }
+        public UntypedNode? ParallelDialItemId { get => _explicitNullValueParallelDialItemId; set { _explicitNullValueParallelDialItemId = value; AdditionalData?.Remove("parallel_dial_item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parallel_dial_item_id"); else _explicitNullProperties?.Remove("parallel_dial_item_id"); } }
         private UntypedNode? _explicitNullValueParallelDialItemId = default!;
 #nullable restore
 #else
-        public UntypedNode ParallelDialItemId { get => _explicitNullValueParallelDialItemId; set { _explicitNullValueParallelDialItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parallel_dial_item_id"); else _explicitNullProperties?.Remove("parallel_dial_item_id"); } }
+        public UntypedNode ParallelDialItemId { get => _explicitNullValueParallelDialItemId; set { _explicitNullValueParallelDialItemId = value; AdditionalData?.Remove("parallel_dial_item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parallel_dial_item_id"); else _explicitNullProperties?.Remove("parallel_dial_item_id"); } }
         private UntypedNode _explicitNullValueParallelDialItemId = default!;
 #endif
         /// <summary>The phone_call_outcome_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneCallOutcomeId { get => _explicitNullValuePhoneCallOutcomeId; set { _explicitNullValuePhoneCallOutcomeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_outcome_id"); else _explicitNullProperties?.Remove("phone_call_outcome_id"); } }
+        public string? PhoneCallOutcomeId { get => _explicitNullValuePhoneCallOutcomeId; set { _explicitNullValuePhoneCallOutcomeId = value; AdditionalData?.Remove("phone_call_outcome_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_outcome_id"); else _explicitNullProperties?.Remove("phone_call_outcome_id"); } }
         private string? _explicitNullValuePhoneCallOutcomeId = default!;
 #nullable restore
 #else
-        public string PhoneCallOutcomeId { get => _explicitNullValuePhoneCallOutcomeId; set { _explicitNullValuePhoneCallOutcomeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_outcome_id"); else _explicitNullProperties?.Remove("phone_call_outcome_id"); } }
+        public string PhoneCallOutcomeId { get => _explicitNullValuePhoneCallOutcomeId; set { _explicitNullValuePhoneCallOutcomeId = value; AdditionalData?.Remove("phone_call_outcome_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_outcome_id"); else _explicitNullProperties?.Remove("phone_call_outcome_id"); } }
         private string _explicitNullValuePhoneCallOutcomeId = default!;
 #endif
         /// <summary>The phone_call_purpose_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneCallPurposeId { get => _explicitNullValuePhoneCallPurposeId; set { _explicitNullValuePhoneCallPurposeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_purpose_id"); else _explicitNullProperties?.Remove("phone_call_purpose_id"); } }
+        public string? PhoneCallPurposeId { get => _explicitNullValuePhoneCallPurposeId; set { _explicitNullValuePhoneCallPurposeId = value; AdditionalData?.Remove("phone_call_purpose_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_purpose_id"); else _explicitNullProperties?.Remove("phone_call_purpose_id"); } }
         private string? _explicitNullValuePhoneCallPurposeId = default!;
 #nullable restore
 #else
-        public string PhoneCallPurposeId { get => _explicitNullValuePhoneCallPurposeId; set { _explicitNullValuePhoneCallPurposeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_purpose_id"); else _explicitNullProperties?.Remove("phone_call_purpose_id"); } }
+        public string PhoneCallPurposeId { get => _explicitNullValuePhoneCallPurposeId; set { _explicitNullValuePhoneCallPurposeId = value; AdditionalData?.Remove("phone_call_purpose_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_call_purpose_id"); else _explicitNullProperties?.Remove("phone_call_purpose_id"); } }
         private string _explicitNullValuePhoneCallPurposeId = default!;
 #endif
         /// <summary>The recording_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recording_url"); else _explicitNullProperties?.Remove("recording_url"); } }
+        public UntypedNode? RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; AdditionalData?.Remove("recording_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recording_url"); else _explicitNullProperties?.Remove("recording_url"); } }
         private UntypedNode? _explicitNullValueRecordingUrl = default!;
 #nullable restore
 #else
-        public UntypedNode RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recording_url"); else _explicitNullProperties?.Remove("recording_url"); } }
+        public UntypedNode RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; AdditionalData?.Remove("recording_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recording_url"); else _explicitNullProperties?.Remove("recording_url"); } }
         private UntypedNode _explicitNullValueRecordingUrl = default!;
 #endif
         /// <summary>The salesforce_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SalesforceId { get => _explicitNullValueSalesforceId; set { _explicitNullValueSalesforceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_id"); else _explicitNullProperties?.Remove("salesforce_id"); } }
+        public UntypedNode? SalesforceId { get => _explicitNullValueSalesforceId; set { _explicitNullValueSalesforceId = value; AdditionalData?.Remove("salesforce_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_id"); else _explicitNullProperties?.Remove("salesforce_id"); } }
         private UntypedNode? _explicitNullValueSalesforceId = default!;
 #nullable restore
 #else
-        public UntypedNode SalesforceId { get => _explicitNullValueSalesforceId; set { _explicitNullValueSalesforceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_id"); else _explicitNullProperties?.Remove("salesforce_id"); } }
+        public UntypedNode SalesforceId { get => _explicitNullValueSalesforceId; set { _explicitNullValueSalesforceId = value; AdditionalData?.Remove("salesforce_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_id"); else _explicitNullProperties?.Remove("salesforce_id"); } }
         private UntypedNode _explicitNullValueSalesforceId = default!;
 #endif
         /// <summary>The start_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
         private string? _explicitNullValueStartTime = default!;
 #nullable restore
 #else
-        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
         private string _explicitNullValueStartTime = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>The to_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_number"); else _explicitNullProperties?.Remove("to_number"); } }
+        public UntypedNode? ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; AdditionalData?.Remove("to_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_number"); else _explicitNullProperties?.Remove("to_number"); } }
         private UntypedNode? _explicitNullValueToNumber = default!;
 #nullable restore
 #else
-        public UntypedNode ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_number"); else _explicitNullProperties?.Remove("to_number"); } }
+        public UntypedNode ToNumber { get => _explicitNullValueToNumber; set { _explicitNullValueToNumber = value; AdditionalData?.Remove("to_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_number"); else _explicitNullProperties?.Remove("to_number"); } }
         private UntypedNode _explicitNullValueToNumber = default!;
 #endif
         /// <summary>The transcribed property</summary>
-        public bool? Transcribed { get => _explicitNullValueTranscribed; set { _explicitNullValueTranscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcribed"); else _explicitNullProperties?.Remove("transcribed"); } }
+        public bool? Transcribed { get => _explicitNullValueTranscribed; set { _explicitNullValueTranscribed = value; AdditionalData?.Remove("transcribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcribed"); else _explicitNullProperties?.Remove("transcribed"); } }
         private bool? _explicitNullValueTranscribed = default!;
         /// <summary>The transcribing property</summary>
-        public bool? Transcribing { get => _explicitNullValueTranscribing; set { _explicitNullValueTranscribing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcribing"); else _explicitNullProperties?.Remove("transcribing"); } }
+        public bool? Transcribing { get => _explicitNullValueTranscribing; set { _explicitNullValueTranscribing = value; AdditionalData?.Remove("transcribing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcribing"); else _explicitNullProperties?.Remove("transcribing"); } }
         private bool? _explicitNullValueTranscribing = default!;
         /// <summary>The transcription_progress property</summary>
-        public long? TranscriptionProgress { get => _explicitNullValueTranscriptionProgress; set { _explicitNullValueTranscriptionProgress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_progress"); else _explicitNullProperties?.Remove("transcription_progress"); } }
+        public long? TranscriptionProgress { get => _explicitNullValueTranscriptionProgress; set { _explicitNullValueTranscriptionProgress = value; AdditionalData?.Remove("transcription_progress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_progress"); else _explicitNullProperties?.Remove("transcription_progress"); } }
         private long? _explicitNullValueTranscriptionProgress = default!;
         /// <summary>The transcription_too_long property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TranscriptionTooLong { get => _explicitNullValueTranscriptionTooLong; set { _explicitNullValueTranscriptionTooLong = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_too_long"); else _explicitNullProperties?.Remove("transcription_too_long"); } }
+        public UntypedNode? TranscriptionTooLong { get => _explicitNullValueTranscriptionTooLong; set { _explicitNullValueTranscriptionTooLong = value; AdditionalData?.Remove("transcription_too_long"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_too_long"); else _explicitNullProperties?.Remove("transcription_too_long"); } }
         private UntypedNode? _explicitNullValueTranscriptionTooLong = default!;
 #nullable restore
 #else
-        public UntypedNode TranscriptionTooLong { get => _explicitNullValueTranscriptionTooLong; set { _explicitNullValueTranscriptionTooLong = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_too_long"); else _explicitNullProperties?.Remove("transcription_too_long"); } }
+        public UntypedNode TranscriptionTooLong { get => _explicitNullValueTranscriptionTooLong; set { _explicitNullValueTranscriptionTooLong = value; AdditionalData?.Remove("transcription_too_long"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_too_long"); else _explicitNullProperties?.Remove("transcription_too_long"); } }
         private UntypedNode _explicitNullValueTranscriptionTooLong = default!;
 #endif
         /// <summary>The twilio_call_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TwilioCallSid { get => _explicitNullValueTwilioCallSid; set { _explicitNullValueTwilioCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_call_sid"); else _explicitNullProperties?.Remove("twilio_call_sid"); } }
+        public UntypedNode? TwilioCallSid { get => _explicitNullValueTwilioCallSid; set { _explicitNullValueTwilioCallSid = value; AdditionalData?.Remove("twilio_call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_call_sid"); else _explicitNullProperties?.Remove("twilio_call_sid"); } }
         private UntypedNode? _explicitNullValueTwilioCallSid = default!;
 #nullable restore
 #else
-        public UntypedNode TwilioCallSid { get => _explicitNullValueTwilioCallSid; set { _explicitNullValueTwilioCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_call_sid"); else _explicitNullProperties?.Remove("twilio_call_sid"); } }
+        public UntypedNode TwilioCallSid { get => _explicitNullValueTwilioCallSid; set { _explicitNullValueTwilioCallSid = value; AdditionalData?.Remove("twilio_call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_call_sid"); else _explicitNullProperties?.Remove("twilio_call_sid"); } }
         private UntypedNode _explicitNullValueTwilioCallSid = default!;
 #endif
         /// <summary>The twilio_recording_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TwilioRecordingSid { get => _explicitNullValueTwilioRecordingSid; set { _explicitNullValueTwilioRecordingSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_recording_sid"); else _explicitNullProperties?.Remove("twilio_recording_sid"); } }
+        public UntypedNode? TwilioRecordingSid { get => _explicitNullValueTwilioRecordingSid; set { _explicitNullValueTwilioRecordingSid = value; AdditionalData?.Remove("twilio_recording_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_recording_sid"); else _explicitNullProperties?.Remove("twilio_recording_sid"); } }
         private UntypedNode? _explicitNullValueTwilioRecordingSid = default!;
 #nullable restore
 #else
-        public UntypedNode TwilioRecordingSid { get => _explicitNullValueTwilioRecordingSid; set { _explicitNullValueTwilioRecordingSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_recording_sid"); else _explicitNullProperties?.Remove("twilio_recording_sid"); } }
+        public UntypedNode TwilioRecordingSid { get => _explicitNullValueTwilioRecordingSid; set { _explicitNullValueTwilioRecordingSid = value; AdditionalData?.Remove("twilio_recording_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_recording_sid"); else _explicitNullProperties?.Remove("twilio_recording_sid"); } }
         private UntypedNode _explicitNullValueTwilioRecordingSid = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>The voicemail_dropped property</summary>
-        public bool? VoicemailDropped { get => _explicitNullValueVoicemailDropped; set { _explicitNullValueVoicemailDropped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voicemail_dropped"); else _explicitNullProperties?.Remove("voicemail_dropped"); } }
+        public bool? VoicemailDropped { get => _explicitNullValueVoicemailDropped; set { _explicitNullValueVoicemailDropped = value; AdditionalData?.Remove("voicemail_dropped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voicemail_dropped"); else _explicitNullProperties?.Remove("voicemail_dropped"); } }
         private bool? _explicitNullValueVoicemailDropped = default!;
         /// <summary>The voice_setting_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? VoiceSettingId { get => _explicitNullValueVoiceSettingId; set { _explicitNullValueVoiceSettingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_setting_id"); else _explicitNullProperties?.Remove("voice_setting_id"); } }
+        public UntypedNode? VoiceSettingId { get => _explicitNullValueVoiceSettingId; set { _explicitNullValueVoiceSettingId = value; AdditionalData?.Remove("voice_setting_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_setting_id"); else _explicitNullProperties?.Remove("voice_setting_id"); } }
         private UntypedNode? _explicitNullValueVoiceSettingId = default!;
 #nullable restore
 #else
-        public UntypedNode VoiceSettingId { get => _explicitNullValueVoiceSettingId; set { _explicitNullValueVoiceSettingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_setting_id"); else _explicitNullProperties?.Remove("voice_setting_id"); } }
+        public UntypedNode VoiceSettingId { get => _explicitNullValueVoiceSettingId; set { _explicitNullValueVoiceSettingId = value; AdditionalData?.Remove("voice_setting_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_setting_id"); else _explicitNullProperties?.Remove("voice_setting_id"); } }
         private UntypedNode _explicitNullValueVoiceSettingId = default!;
 #endif
         /// <summary>

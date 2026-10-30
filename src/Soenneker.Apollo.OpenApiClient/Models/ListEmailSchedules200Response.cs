@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emailer_schedules") is { } nullNodeEmailerSchedules && nullNodeEmailerSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerSchedules = null;
+            if (parseNode.GetChildNode("emailer_schedules") is null) { _explicitNullValueEmailerSchedules = default!; _explicitNullProperties?.Remove("emailer_schedules"); }
+            else if (parseNode.GetChildNode("emailer_schedules") is { } nullNodeEmailerSchedules && nullNodeEmailerSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerSchedules = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The list of sending schedules that belong to your team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListEmailSchedules200ResponseEmailerSchedulesItem>? EmailerSchedules { get => _explicitNullValueEmailerSchedules; set { _explicitNullValueEmailerSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_schedules"); else _explicitNullProperties?.Remove("emailer_schedules"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListEmailSchedules200ResponseEmailerSchedulesItem>? EmailerSchedules { get => _explicitNullValueEmailerSchedules; set { _explicitNullValueEmailerSchedules = value; AdditionalData?.Remove("emailer_schedules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_schedules"); else _explicitNullProperties?.Remove("emailer_schedules"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ListEmailSchedules200ResponseEmailerSchedulesItem>? _explicitNullValueEmailerSchedules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListEmailSchedules200ResponseEmailerSchedulesItem> EmailerSchedules { get => _explicitNullValueEmailerSchedules; set { _explicitNullValueEmailerSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_schedules"); else _explicitNullProperties?.Remove("emailer_schedules"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.ListEmailSchedules200ResponseEmailerSchedulesItem> EmailerSchedules { get => _explicitNullValueEmailerSchedules; set { _explicitNullValueEmailerSchedules = value; AdditionalData?.Remove("emailer_schedules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailer_schedules"); else _explicitNullProperties?.Remove("emailer_schedules"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.ListEmailSchedules200ResponseEmailerSchedulesItem> _explicitNullValueEmailerSchedules = default!;
 #endif
         /// <summary>

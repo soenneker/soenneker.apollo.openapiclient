@@ -17,19 +17,22 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("hubspot_owners") is { } nullNodeHubspotOwners && nullNodeHubspotOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotOwners = null;
-            if (parseNode.GetChildNode("salesforce_users") is { } nullNodeSalesforceUsers && nullNodeSalesforceUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesforceUsers = null;
+            if (parseNode.GetChildNode("account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("account"); }
+            else if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("hubspot_owners") is null) { _explicitNullValueHubspotOwners = default!; _explicitNullProperties?.Remove("hubspot_owners"); }
+            else if (parseNode.GetChildNode("hubspot_owners") is { } nullNodeHubspotOwners && nullNodeHubspotOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotOwners = null;
+            if (parseNode.GetChildNode("salesforce_users") is null) { _explicitNullValueSalesforceUsers = default!; _explicitNullProperties?.Remove("salesforce_users"); }
+            else if (parseNode.GetChildNode("salesforce_users") is { } nullNodeSalesforceUsers && nullNodeSalesforceUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesforceUsers = null;
         }
 
         /// <summary>The account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.GetAccountsId200ResponseAccount _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,21 +40,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The hubspot_owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? HubspotOwners { get => _explicitNullValueHubspotOwners; set { _explicitNullValueHubspotOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_owners"); else _explicitNullProperties?.Remove("hubspot_owners"); } }
+        public UntypedNode? HubspotOwners { get => _explicitNullValueHubspotOwners; set { _explicitNullValueHubspotOwners = value; AdditionalData?.Remove("hubspot_owners"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_owners"); else _explicitNullProperties?.Remove("hubspot_owners"); } }
         private UntypedNode? _explicitNullValueHubspotOwners = default!;
 #nullable restore
 #else
-        public UntypedNode HubspotOwners { get => _explicitNullValueHubspotOwners; set { _explicitNullValueHubspotOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_owners"); else _explicitNullProperties?.Remove("hubspot_owners"); } }
+        public UntypedNode HubspotOwners { get => _explicitNullValueHubspotOwners; set { _explicitNullValueHubspotOwners = value; AdditionalData?.Remove("hubspot_owners"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_owners"); else _explicitNullProperties?.Remove("hubspot_owners"); } }
         private UntypedNode _explicitNullValueHubspotOwners = default!;
 #endif
         /// <summary>The salesforce_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SalesforceUsers { get => _explicitNullValueSalesforceUsers; set { _explicitNullValueSalesforceUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_users"); else _explicitNullProperties?.Remove("salesforce_users"); } }
+        public UntypedNode? SalesforceUsers { get => _explicitNullValueSalesforceUsers; set { _explicitNullValueSalesforceUsers = value; AdditionalData?.Remove("salesforce_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_users"); else _explicitNullProperties?.Remove("salesforce_users"); } }
         private UntypedNode? _explicitNullValueSalesforceUsers = default!;
 #nullable restore
 #else
-        public UntypedNode SalesforceUsers { get => _explicitNullValueSalesforceUsers; set { _explicitNullValueSalesforceUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_users"); else _explicitNullProperties?.Remove("salesforce_users"); } }
+        public UntypedNode SalesforceUsers { get => _explicitNullValueSalesforceUsers; set { _explicitNullValueSalesforceUsers = value; AdditionalData?.Remove("salesforce_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_users"); else _explicitNullProperties?.Remove("salesforce_users"); } }
         private UntypedNode _explicitNullValueSalesforceUsers = default!;
 #endif
         /// <summary>

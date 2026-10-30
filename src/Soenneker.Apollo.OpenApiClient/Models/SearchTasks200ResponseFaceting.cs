@@ -17,47 +17,78 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("added_technology_uids_facets") is { } nullNodeAddedTechnologyUidsFacets && nullNodeAddedTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedTechnologyUidsFacets = null;
-            if (parseNode.GetChildNode("contact_stage_facets") is { } nullNodeContactStageFacets && nullNodeContactStageFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageFacets = null;
-            if (parseNode.GetChildNode("currently_not_using_any_of_technology_uids_facets") is { } nullNodeCurrentlyNotUsingAnyOfTechnologyUidsFacets && nullNodeCurrentlyNotUsingAnyOfTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyNotUsingAnyOfTechnologyUidsFacets = null;
-            if (parseNode.GetChildNode("currently_using_all_of_technology_uids_facets") is { } nullNodeCurrentlyUsingAllOfTechnologyUidsFacets && nullNodeCurrentlyUsingAllOfTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyUsingAllOfTechnologyUidsFacets = null;
-            if (parseNode.GetChildNode("currently_using_any_of_technology_uids_facets") is { } nullNodeCurrentlyUsingAnyOfTechnologyUidsFacets && nullNodeCurrentlyUsingAnyOfTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyUsingAnyOfTechnologyUidsFacets = null;
-            if (parseNode.GetChildNode("dropped_technology_uids_facets") is { } nullNodeDroppedTechnologyUidsFacets && nullNodeDroppedTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DroppedTechnologyUidsFacets = null;
-            if (parseNode.GetChildNode("forecast_category_facets") is { } nullNodeForecastCategoryFacets && nullNodeForecastCategoryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForecastCategoryFacets = null;
-            if (parseNode.GetChildNode("intent_topic_count_facets") is { } nullNodeIntentTopicCountFacets && nullNodeIntentTopicCountFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntentTopicCountFacets = null;
-            if (parseNode.GetChildNode("latest_funding_stage_facets") is { } nullNodeLatestFundingStageFacets && nullNodeLatestFundingStageFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestFundingStageFacets = null;
-            if (parseNode.GetChildNode("linkedin_industry_facets") is { } nullNodeLinkedinIndustryFacets && nullNodeLinkedinIndustryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedinIndustryFacets = null;
-            if (parseNode.GetChildNode("linkedin_task") is { } nullNodeLinkedinTask && nullNodeLinkedinTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedinTask = null;
-            if (parseNode.GetChildNode("normalized_person_title_facets") is { } nullNodeNormalizedPersonTitleFacets && nullNodeNormalizedPersonTitleFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedPersonTitleFacets = null;
-            if (parseNode.GetChildNode("num_employees_facets") is { } nullNodeNumEmployeesFacets && nullNodeNumEmployeesFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumEmployeesFacets = null;
-            if (parseNode.GetChildNode("organization_hq_city_facets") is { } nullNodeOrganizationHqCityFacets && nullNodeOrganizationHqCityFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHqCityFacets = null;
-            if (parseNode.GetChildNode("organization_hq_country_facets") is { } nullNodeOrganizationHqCountryFacets && nullNodeOrganizationHqCountryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHqCountryFacets = null;
-            if (parseNode.GetChildNode("organization_hq_state_facets") is { } nullNodeOrganizationHqStateFacets && nullNodeOrganizationHqStateFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHqStateFacets = null;
-            if (parseNode.GetChildNode("organization_ids_facets") is { } nullNodeOrganizationIdsFacets && nullNodeOrganizationIdsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationIdsFacets = null;
-            if (parseNode.GetChildNode("organization_ids_in_query_facets") is { } nullNodeOrganizationIdsInQueryFacets && nullNodeOrganizationIdsInQueryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationIdsInQueryFacets = null;
-            if (parseNode.GetChildNode("organization_intent_scoring_facets") is { } nullNodeOrganizationIntentScoringFacets && nullNodeOrganizationIntentScoringFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationIntentScoringFacets = null;
-            if (parseNode.GetChildNode("organization_keywords_facets") is { } nullNodeOrganizationKeywordsFacets && nullNodeOrganizationKeywordsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationKeywordsFacets = null;
-            if (parseNode.GetChildNode("organization_trading_status_facets") is { } nullNodeOrganizationTradingStatusFacets && nullNodeOrganizationTradingStatusFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationTradingStatusFacets = null;
-            if (parseNode.GetChildNode("person_city_facets") is { } nullNodePersonCityFacets && nullNodePersonCityFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonCityFacets = null;
-            if (parseNode.GetChildNode("person_country_facets") is { } nullNodePersonCountryFacets && nullNodePersonCountryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonCountryFacets = null;
-            if (parseNode.GetChildNode("person_function_facets") is { } nullNodePersonFunctionFacets && nullNodePersonFunctionFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonFunctionFacets = null;
-            if (parseNode.GetChildNode("person_persona_facets") is { } nullNodePersonPersonaFacets && nullNodePersonPersonaFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonPersonaFacets = null;
-            if (parseNode.GetChildNode("person_seniority_facets") is { } nullNodePersonSeniorityFacets && nullNodePersonSeniorityFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonSeniorityFacets = null;
-            if (parseNode.GetChildNode("person_state_facets") is { } nullNodePersonStateFacets && nullNodePersonStateFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonStateFacets = null;
-            if (parseNode.GetChildNode("playbook_step_facets") is { } nullNodePlaybookStepFacets && nullNodePlaybookStepFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaybookStepFacets = null;
-            if (parseNode.GetChildNode("revenues_facets") is { } nullNodeRevenuesFacets && nullNodeRevenuesFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevenuesFacets = null;
-            if (parseNode.GetChildNode("task_types") is { } nullNodeTaskTypes && nullNodeTaskTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskTypes = null;
-            if (parseNode.GetChildNode("total_facets") is { } nullNodeTotalFacets && nullNodeTotalFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFacets = null;
+            if (parseNode.GetChildNode("added_technology_uids_facets") is null) { _explicitNullValueAddedTechnologyUidsFacets = default!; _explicitNullProperties?.Remove("added_technology_uids_facets"); }
+            else if (parseNode.GetChildNode("added_technology_uids_facets") is { } nullNodeAddedTechnologyUidsFacets && nullNodeAddedTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedTechnologyUidsFacets = null;
+            if (parseNode.GetChildNode("contact_stage_facets") is null) { _explicitNullValueContactStageFacets = default!; _explicitNullProperties?.Remove("contact_stage_facets"); }
+            else if (parseNode.GetChildNode("contact_stage_facets") is { } nullNodeContactStageFacets && nullNodeContactStageFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactStageFacets = null;
+            if (parseNode.GetChildNode("currently_not_using_any_of_technology_uids_facets") is null) { _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = default!; _explicitNullProperties?.Remove("currently_not_using_any_of_technology_uids_facets"); }
+            else if (parseNode.GetChildNode("currently_not_using_any_of_technology_uids_facets") is { } nullNodeCurrentlyNotUsingAnyOfTechnologyUidsFacets && nullNodeCurrentlyNotUsingAnyOfTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyNotUsingAnyOfTechnologyUidsFacets = null;
+            if (parseNode.GetChildNode("currently_using_all_of_technology_uids_facets") is null) { _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = default!; _explicitNullProperties?.Remove("currently_using_all_of_technology_uids_facets"); }
+            else if (parseNode.GetChildNode("currently_using_all_of_technology_uids_facets") is { } nullNodeCurrentlyUsingAllOfTechnologyUidsFacets && nullNodeCurrentlyUsingAllOfTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyUsingAllOfTechnologyUidsFacets = null;
+            if (parseNode.GetChildNode("currently_using_any_of_technology_uids_facets") is null) { _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = default!; _explicitNullProperties?.Remove("currently_using_any_of_technology_uids_facets"); }
+            else if (parseNode.GetChildNode("currently_using_any_of_technology_uids_facets") is { } nullNodeCurrentlyUsingAnyOfTechnologyUidsFacets && nullNodeCurrentlyUsingAnyOfTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyUsingAnyOfTechnologyUidsFacets = null;
+            if (parseNode.GetChildNode("dropped_technology_uids_facets") is null) { _explicitNullValueDroppedTechnologyUidsFacets = default!; _explicitNullProperties?.Remove("dropped_technology_uids_facets"); }
+            else if (parseNode.GetChildNode("dropped_technology_uids_facets") is { } nullNodeDroppedTechnologyUidsFacets && nullNodeDroppedTechnologyUidsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DroppedTechnologyUidsFacets = null;
+            if (parseNode.GetChildNode("forecast_category_facets") is null) { _explicitNullValueForecastCategoryFacets = default!; _explicitNullProperties?.Remove("forecast_category_facets"); }
+            else if (parseNode.GetChildNode("forecast_category_facets") is { } nullNodeForecastCategoryFacets && nullNodeForecastCategoryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForecastCategoryFacets = null;
+            if (parseNode.GetChildNode("intent_topic_count_facets") is null) { _explicitNullValueIntentTopicCountFacets = default!; _explicitNullProperties?.Remove("intent_topic_count_facets"); }
+            else if (parseNode.GetChildNode("intent_topic_count_facets") is { } nullNodeIntentTopicCountFacets && nullNodeIntentTopicCountFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntentTopicCountFacets = null;
+            if (parseNode.GetChildNode("latest_funding_stage_facets") is null) { _explicitNullValueLatestFundingStageFacets = default!; _explicitNullProperties?.Remove("latest_funding_stage_facets"); }
+            else if (parseNode.GetChildNode("latest_funding_stage_facets") is { } nullNodeLatestFundingStageFacets && nullNodeLatestFundingStageFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestFundingStageFacets = null;
+            if (parseNode.GetChildNode("linkedin_industry_facets") is null) { _explicitNullValueLinkedinIndustryFacets = default!; _explicitNullProperties?.Remove("linkedin_industry_facets"); }
+            else if (parseNode.GetChildNode("linkedin_industry_facets") is { } nullNodeLinkedinIndustryFacets && nullNodeLinkedinIndustryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedinIndustryFacets = null;
+            if (parseNode.GetChildNode("linkedin_task") is null) { _explicitNullValueLinkedinTask = default!; _explicitNullProperties?.Remove("linkedin_task"); }
+            else if (parseNode.GetChildNode("linkedin_task") is { } nullNodeLinkedinTask && nullNodeLinkedinTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedinTask = null;
+            if (parseNode.GetChildNode("normalized_person_title_facets") is null) { _explicitNullValueNormalizedPersonTitleFacets = default!; _explicitNullProperties?.Remove("normalized_person_title_facets"); }
+            else if (parseNode.GetChildNode("normalized_person_title_facets") is { } nullNodeNormalizedPersonTitleFacets && nullNodeNormalizedPersonTitleFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedPersonTitleFacets = null;
+            if (parseNode.GetChildNode("num_employees_facets") is null) { _explicitNullValueNumEmployeesFacets = default!; _explicitNullProperties?.Remove("num_employees_facets"); }
+            else if (parseNode.GetChildNode("num_employees_facets") is { } nullNodeNumEmployeesFacets && nullNodeNumEmployeesFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumEmployeesFacets = null;
+            if (parseNode.GetChildNode("organization_hq_city_facets") is null) { _explicitNullValueOrganizationHqCityFacets = default!; _explicitNullProperties?.Remove("organization_hq_city_facets"); }
+            else if (parseNode.GetChildNode("organization_hq_city_facets") is { } nullNodeOrganizationHqCityFacets && nullNodeOrganizationHqCityFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHqCityFacets = null;
+            if (parseNode.GetChildNode("organization_hq_country_facets") is null) { _explicitNullValueOrganizationHqCountryFacets = default!; _explicitNullProperties?.Remove("organization_hq_country_facets"); }
+            else if (parseNode.GetChildNode("organization_hq_country_facets") is { } nullNodeOrganizationHqCountryFacets && nullNodeOrganizationHqCountryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHqCountryFacets = null;
+            if (parseNode.GetChildNode("organization_hq_state_facets") is null) { _explicitNullValueOrganizationHqStateFacets = default!; _explicitNullProperties?.Remove("organization_hq_state_facets"); }
+            else if (parseNode.GetChildNode("organization_hq_state_facets") is { } nullNodeOrganizationHqStateFacets && nullNodeOrganizationHqStateFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHqStateFacets = null;
+            if (parseNode.GetChildNode("organization_ids_facets") is null) { _explicitNullValueOrganizationIdsFacets = default!; _explicitNullProperties?.Remove("organization_ids_facets"); }
+            else if (parseNode.GetChildNode("organization_ids_facets") is { } nullNodeOrganizationIdsFacets && nullNodeOrganizationIdsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationIdsFacets = null;
+            if (parseNode.GetChildNode("organization_ids_in_query_facets") is null) { _explicitNullValueOrganizationIdsInQueryFacets = default!; _explicitNullProperties?.Remove("organization_ids_in_query_facets"); }
+            else if (parseNode.GetChildNode("organization_ids_in_query_facets") is { } nullNodeOrganizationIdsInQueryFacets && nullNodeOrganizationIdsInQueryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationIdsInQueryFacets = null;
+            if (parseNode.GetChildNode("organization_intent_scoring_facets") is null) { _explicitNullValueOrganizationIntentScoringFacets = default!; _explicitNullProperties?.Remove("organization_intent_scoring_facets"); }
+            else if (parseNode.GetChildNode("organization_intent_scoring_facets") is { } nullNodeOrganizationIntentScoringFacets && nullNodeOrganizationIntentScoringFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationIntentScoringFacets = null;
+            if (parseNode.GetChildNode("organization_keywords_facets") is null) { _explicitNullValueOrganizationKeywordsFacets = default!; _explicitNullProperties?.Remove("organization_keywords_facets"); }
+            else if (parseNode.GetChildNode("organization_keywords_facets") is { } nullNodeOrganizationKeywordsFacets && nullNodeOrganizationKeywordsFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationKeywordsFacets = null;
+            if (parseNode.GetChildNode("organization_trading_status_facets") is null) { _explicitNullValueOrganizationTradingStatusFacets = default!; _explicitNullProperties?.Remove("organization_trading_status_facets"); }
+            else if (parseNode.GetChildNode("organization_trading_status_facets") is { } nullNodeOrganizationTradingStatusFacets && nullNodeOrganizationTradingStatusFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationTradingStatusFacets = null;
+            if (parseNode.GetChildNode("person_city_facets") is null) { _explicitNullValuePersonCityFacets = default!; _explicitNullProperties?.Remove("person_city_facets"); }
+            else if (parseNode.GetChildNode("person_city_facets") is { } nullNodePersonCityFacets && nullNodePersonCityFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonCityFacets = null;
+            if (parseNode.GetChildNode("person_country_facets") is null) { _explicitNullValuePersonCountryFacets = default!; _explicitNullProperties?.Remove("person_country_facets"); }
+            else if (parseNode.GetChildNode("person_country_facets") is { } nullNodePersonCountryFacets && nullNodePersonCountryFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonCountryFacets = null;
+            if (parseNode.GetChildNode("person_function_facets") is null) { _explicitNullValuePersonFunctionFacets = default!; _explicitNullProperties?.Remove("person_function_facets"); }
+            else if (parseNode.GetChildNode("person_function_facets") is { } nullNodePersonFunctionFacets && nullNodePersonFunctionFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonFunctionFacets = null;
+            if (parseNode.GetChildNode("person_persona_facets") is null) { _explicitNullValuePersonPersonaFacets = default!; _explicitNullProperties?.Remove("person_persona_facets"); }
+            else if (parseNode.GetChildNode("person_persona_facets") is { } nullNodePersonPersonaFacets && nullNodePersonPersonaFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonPersonaFacets = null;
+            if (parseNode.GetChildNode("person_seniority_facets") is null) { _explicitNullValuePersonSeniorityFacets = default!; _explicitNullProperties?.Remove("person_seniority_facets"); }
+            else if (parseNode.GetChildNode("person_seniority_facets") is { } nullNodePersonSeniorityFacets && nullNodePersonSeniorityFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonSeniorityFacets = null;
+            if (parseNode.GetChildNode("person_state_facets") is null) { _explicitNullValuePersonStateFacets = default!; _explicitNullProperties?.Remove("person_state_facets"); }
+            else if (parseNode.GetChildNode("person_state_facets") is { } nullNodePersonStateFacets && nullNodePersonStateFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonStateFacets = null;
+            if (parseNode.GetChildNode("playbook_step_facets") is null) { _explicitNullValuePlaybookStepFacets = default!; _explicitNullProperties?.Remove("playbook_step_facets"); }
+            else if (parseNode.GetChildNode("playbook_step_facets") is { } nullNodePlaybookStepFacets && nullNodePlaybookStepFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaybookStepFacets = null;
+            if (parseNode.GetChildNode("revenues_facets") is null) { _explicitNullValueRevenuesFacets = default!; _explicitNullProperties?.Remove("revenues_facets"); }
+            else if (parseNode.GetChildNode("revenues_facets") is { } nullNodeRevenuesFacets && nullNodeRevenuesFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevenuesFacets = null;
+            if (parseNode.GetChildNode("task_types") is null) { _explicitNullValueTaskTypes = default!; _explicitNullProperties?.Remove("task_types"); }
+            else if (parseNode.GetChildNode("task_types") is { } nullNodeTaskTypes && nullNodeTaskTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskTypes = null;
+            if (parseNode.GetChildNode("total_facets") is null) { _explicitNullValueTotalFacets = default!; _explicitNullProperties?.Remove("total_facets"); }
+            else if (parseNode.GetChildNode("total_facets") is { } nullNodeTotalFacets && nullNodeTotalFacets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFacets = null;
         }
 
         /// <summary>The added_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AddedTechnologyUidsFacets { get => _explicitNullValueAddedTechnologyUidsFacets; set { _explicitNullValueAddedTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_technology_uids_facets"); else _explicitNullProperties?.Remove("added_technology_uids_facets"); } }
+        public UntypedNode? AddedTechnologyUidsFacets { get => _explicitNullValueAddedTechnologyUidsFacets; set { _explicitNullValueAddedTechnologyUidsFacets = value; AdditionalData?.Remove("added_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_technology_uids_facets"); else _explicitNullProperties?.Remove("added_technology_uids_facets"); } }
         private UntypedNode? _explicitNullValueAddedTechnologyUidsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode AddedTechnologyUidsFacets { get => _explicitNullValueAddedTechnologyUidsFacets; set { _explicitNullValueAddedTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_technology_uids_facets"); else _explicitNullProperties?.Remove("added_technology_uids_facets"); } }
+        public UntypedNode AddedTechnologyUidsFacets { get => _explicitNullValueAddedTechnologyUidsFacets; set { _explicitNullValueAddedTechnologyUidsFacets = value; AdditionalData?.Remove("added_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_technology_uids_facets"); else _explicitNullProperties?.Remove("added_technology_uids_facets"); } }
         private UntypedNode _explicitNullValueAddedTechnologyUidsFacets = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -65,301 +96,301 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The contact_stage_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ContactStageFacets { get => _explicitNullValueContactStageFacets; set { _explicitNullValueContactStageFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_facets"); else _explicitNullProperties?.Remove("contact_stage_facets"); } }
+        public UntypedNode? ContactStageFacets { get => _explicitNullValueContactStageFacets; set { _explicitNullValueContactStageFacets = value; AdditionalData?.Remove("contact_stage_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_facets"); else _explicitNullProperties?.Remove("contact_stage_facets"); } }
         private UntypedNode? _explicitNullValueContactStageFacets = default!;
 #nullable restore
 #else
-        public UntypedNode ContactStageFacets { get => _explicitNullValueContactStageFacets; set { _explicitNullValueContactStageFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_facets"); else _explicitNullProperties?.Remove("contact_stage_facets"); } }
+        public UntypedNode ContactStageFacets { get => _explicitNullValueContactStageFacets; set { _explicitNullValueContactStageFacets = value; AdditionalData?.Remove("contact_stage_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_stage_facets"); else _explicitNullProperties?.Remove("contact_stage_facets"); } }
         private UntypedNode _explicitNullValueContactStageFacets = default!;
 #endif
         /// <summary>The currently_not_using_any_of_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CurrentlyNotUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_not_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_not_using_any_of_technology_uids_facets"); } }
+        public UntypedNode? CurrentlyNotUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = value; AdditionalData?.Remove("currently_not_using_any_of_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_not_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_not_using_any_of_technology_uids_facets"); } }
         private UntypedNode? _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode CurrentlyNotUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_not_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_not_using_any_of_technology_uids_facets"); } }
+        public UntypedNode CurrentlyNotUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = value; AdditionalData?.Remove("currently_not_using_any_of_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_not_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_not_using_any_of_technology_uids_facets"); } }
         private UntypedNode _explicitNullValueCurrentlyNotUsingAnyOfTechnologyUidsFacets = default!;
 #endif
         /// <summary>The currently_using_all_of_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CurrentlyUsingAllOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_all_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_all_of_technology_uids_facets"); } }
+        public UntypedNode? CurrentlyUsingAllOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = value; AdditionalData?.Remove("currently_using_all_of_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_all_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_all_of_technology_uids_facets"); } }
         private UntypedNode? _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode CurrentlyUsingAllOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_all_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_all_of_technology_uids_facets"); } }
+        public UntypedNode CurrentlyUsingAllOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = value; AdditionalData?.Remove("currently_using_all_of_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_all_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_all_of_technology_uids_facets"); } }
         private UntypedNode _explicitNullValueCurrentlyUsingAllOfTechnologyUidsFacets = default!;
 #endif
         /// <summary>The currently_using_any_of_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CurrentlyUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_any_of_technology_uids_facets"); } }
+        public UntypedNode? CurrentlyUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = value; AdditionalData?.Remove("currently_using_any_of_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_any_of_technology_uids_facets"); } }
         private UntypedNode? _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode CurrentlyUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_any_of_technology_uids_facets"); } }
+        public UntypedNode CurrentlyUsingAnyOfTechnologyUidsFacets { get => _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets; set { _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = value; AdditionalData?.Remove("currently_using_any_of_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_using_any_of_technology_uids_facets"); else _explicitNullProperties?.Remove("currently_using_any_of_technology_uids_facets"); } }
         private UntypedNode _explicitNullValueCurrentlyUsingAnyOfTechnologyUidsFacets = default!;
 #endif
         /// <summary>The dropped_technology_uids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DroppedTechnologyUidsFacets { get => _explicitNullValueDroppedTechnologyUidsFacets; set { _explicitNullValueDroppedTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropped_technology_uids_facets"); else _explicitNullProperties?.Remove("dropped_technology_uids_facets"); } }
+        public UntypedNode? DroppedTechnologyUidsFacets { get => _explicitNullValueDroppedTechnologyUidsFacets; set { _explicitNullValueDroppedTechnologyUidsFacets = value; AdditionalData?.Remove("dropped_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropped_technology_uids_facets"); else _explicitNullProperties?.Remove("dropped_technology_uids_facets"); } }
         private UntypedNode? _explicitNullValueDroppedTechnologyUidsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode DroppedTechnologyUidsFacets { get => _explicitNullValueDroppedTechnologyUidsFacets; set { _explicitNullValueDroppedTechnologyUidsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropped_technology_uids_facets"); else _explicitNullProperties?.Remove("dropped_technology_uids_facets"); } }
+        public UntypedNode DroppedTechnologyUidsFacets { get => _explicitNullValueDroppedTechnologyUidsFacets; set { _explicitNullValueDroppedTechnologyUidsFacets = value; AdditionalData?.Remove("dropped_technology_uids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropped_technology_uids_facets"); else _explicitNullProperties?.Remove("dropped_technology_uids_facets"); } }
         private UntypedNode _explicitNullValueDroppedTechnologyUidsFacets = default!;
 #endif
         /// <summary>The forecast_category_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ForecastCategoryFacets { get => _explicitNullValueForecastCategoryFacets; set { _explicitNullValueForecastCategoryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecast_category_facets"); else _explicitNullProperties?.Remove("forecast_category_facets"); } }
+        public UntypedNode? ForecastCategoryFacets { get => _explicitNullValueForecastCategoryFacets; set { _explicitNullValueForecastCategoryFacets = value; AdditionalData?.Remove("forecast_category_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecast_category_facets"); else _explicitNullProperties?.Remove("forecast_category_facets"); } }
         private UntypedNode? _explicitNullValueForecastCategoryFacets = default!;
 #nullable restore
 #else
-        public UntypedNode ForecastCategoryFacets { get => _explicitNullValueForecastCategoryFacets; set { _explicitNullValueForecastCategoryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecast_category_facets"); else _explicitNullProperties?.Remove("forecast_category_facets"); } }
+        public UntypedNode ForecastCategoryFacets { get => _explicitNullValueForecastCategoryFacets; set { _explicitNullValueForecastCategoryFacets = value; AdditionalData?.Remove("forecast_category_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forecast_category_facets"); else _explicitNullProperties?.Remove("forecast_category_facets"); } }
         private UntypedNode _explicitNullValueForecastCategoryFacets = default!;
 #endif
         /// <summary>The intent_topic_count_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? IntentTopicCountFacets { get => _explicitNullValueIntentTopicCountFacets; set { _explicitNullValueIntentTopicCountFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent_topic_count_facets"); else _explicitNullProperties?.Remove("intent_topic_count_facets"); } }
+        public UntypedNode? IntentTopicCountFacets { get => _explicitNullValueIntentTopicCountFacets; set { _explicitNullValueIntentTopicCountFacets = value; AdditionalData?.Remove("intent_topic_count_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent_topic_count_facets"); else _explicitNullProperties?.Remove("intent_topic_count_facets"); } }
         private UntypedNode? _explicitNullValueIntentTopicCountFacets = default!;
 #nullable restore
 #else
-        public UntypedNode IntentTopicCountFacets { get => _explicitNullValueIntentTopicCountFacets; set { _explicitNullValueIntentTopicCountFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent_topic_count_facets"); else _explicitNullProperties?.Remove("intent_topic_count_facets"); } }
+        public UntypedNode IntentTopicCountFacets { get => _explicitNullValueIntentTopicCountFacets; set { _explicitNullValueIntentTopicCountFacets = value; AdditionalData?.Remove("intent_topic_count_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent_topic_count_facets"); else _explicitNullProperties?.Remove("intent_topic_count_facets"); } }
         private UntypedNode _explicitNullValueIntentTopicCountFacets = default!;
 #endif
         /// <summary>The latest_funding_stage_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? LatestFundingStageFacets { get => _explicitNullValueLatestFundingStageFacets; set { _explicitNullValueLatestFundingStageFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_funding_stage_facets"); else _explicitNullProperties?.Remove("latest_funding_stage_facets"); } }
+        public UntypedNode? LatestFundingStageFacets { get => _explicitNullValueLatestFundingStageFacets; set { _explicitNullValueLatestFundingStageFacets = value; AdditionalData?.Remove("latest_funding_stage_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_funding_stage_facets"); else _explicitNullProperties?.Remove("latest_funding_stage_facets"); } }
         private UntypedNode? _explicitNullValueLatestFundingStageFacets = default!;
 #nullable restore
 #else
-        public UntypedNode LatestFundingStageFacets { get => _explicitNullValueLatestFundingStageFacets; set { _explicitNullValueLatestFundingStageFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_funding_stage_facets"); else _explicitNullProperties?.Remove("latest_funding_stage_facets"); } }
+        public UntypedNode LatestFundingStageFacets { get => _explicitNullValueLatestFundingStageFacets; set { _explicitNullValueLatestFundingStageFacets = value; AdditionalData?.Remove("latest_funding_stage_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_funding_stage_facets"); else _explicitNullProperties?.Remove("latest_funding_stage_facets"); } }
         private UntypedNode _explicitNullValueLatestFundingStageFacets = default!;
 #endif
         /// <summary>The linkedin_industry_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? LinkedinIndustryFacets { get => _explicitNullValueLinkedinIndustryFacets; set { _explicitNullValueLinkedinIndustryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_industry_facets"); else _explicitNullProperties?.Remove("linkedin_industry_facets"); } }
+        public UntypedNode? LinkedinIndustryFacets { get => _explicitNullValueLinkedinIndustryFacets; set { _explicitNullValueLinkedinIndustryFacets = value; AdditionalData?.Remove("linkedin_industry_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_industry_facets"); else _explicitNullProperties?.Remove("linkedin_industry_facets"); } }
         private UntypedNode? _explicitNullValueLinkedinIndustryFacets = default!;
 #nullable restore
 #else
-        public UntypedNode LinkedinIndustryFacets { get => _explicitNullValueLinkedinIndustryFacets; set { _explicitNullValueLinkedinIndustryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_industry_facets"); else _explicitNullProperties?.Remove("linkedin_industry_facets"); } }
+        public UntypedNode LinkedinIndustryFacets { get => _explicitNullValueLinkedinIndustryFacets; set { _explicitNullValueLinkedinIndustryFacets = value; AdditionalData?.Remove("linkedin_industry_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_industry_facets"); else _explicitNullProperties?.Remove("linkedin_industry_facets"); } }
         private UntypedNode _explicitNullValueLinkedinIndustryFacets = default!;
 #endif
         /// <summary>The linkedin_task property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? LinkedinTask { get => _explicitNullValueLinkedinTask; set { _explicitNullValueLinkedinTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_task"); else _explicitNullProperties?.Remove("linkedin_task"); } }
+        public UntypedNode? LinkedinTask { get => _explicitNullValueLinkedinTask; set { _explicitNullValueLinkedinTask = value; AdditionalData?.Remove("linkedin_task"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_task"); else _explicitNullProperties?.Remove("linkedin_task"); } }
         private UntypedNode? _explicitNullValueLinkedinTask = default!;
 #nullable restore
 #else
-        public UntypedNode LinkedinTask { get => _explicitNullValueLinkedinTask; set { _explicitNullValueLinkedinTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_task"); else _explicitNullProperties?.Remove("linkedin_task"); } }
+        public UntypedNode LinkedinTask { get => _explicitNullValueLinkedinTask; set { _explicitNullValueLinkedinTask = value; AdditionalData?.Remove("linkedin_task"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedin_task"); else _explicitNullProperties?.Remove("linkedin_task"); } }
         private UntypedNode _explicitNullValueLinkedinTask = default!;
 #endif
         /// <summary>The normalized_person_title_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NormalizedPersonTitleFacets { get => _explicitNullValueNormalizedPersonTitleFacets; set { _explicitNullValueNormalizedPersonTitleFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_person_title_facets"); else _explicitNullProperties?.Remove("normalized_person_title_facets"); } }
+        public UntypedNode? NormalizedPersonTitleFacets { get => _explicitNullValueNormalizedPersonTitleFacets; set { _explicitNullValueNormalizedPersonTitleFacets = value; AdditionalData?.Remove("normalized_person_title_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_person_title_facets"); else _explicitNullProperties?.Remove("normalized_person_title_facets"); } }
         private UntypedNode? _explicitNullValueNormalizedPersonTitleFacets = default!;
 #nullable restore
 #else
-        public UntypedNode NormalizedPersonTitleFacets { get => _explicitNullValueNormalizedPersonTitleFacets; set { _explicitNullValueNormalizedPersonTitleFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_person_title_facets"); else _explicitNullProperties?.Remove("normalized_person_title_facets"); } }
+        public UntypedNode NormalizedPersonTitleFacets { get => _explicitNullValueNormalizedPersonTitleFacets; set { _explicitNullValueNormalizedPersonTitleFacets = value; AdditionalData?.Remove("normalized_person_title_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_person_title_facets"); else _explicitNullProperties?.Remove("normalized_person_title_facets"); } }
         private UntypedNode _explicitNullValueNormalizedPersonTitleFacets = default!;
 #endif
         /// <summary>The num_employees_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NumEmployeesFacets { get => _explicitNullValueNumEmployeesFacets; set { _explicitNullValueNumEmployeesFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_employees_facets"); else _explicitNullProperties?.Remove("num_employees_facets"); } }
+        public UntypedNode? NumEmployeesFacets { get => _explicitNullValueNumEmployeesFacets; set { _explicitNullValueNumEmployeesFacets = value; AdditionalData?.Remove("num_employees_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_employees_facets"); else _explicitNullProperties?.Remove("num_employees_facets"); } }
         private UntypedNode? _explicitNullValueNumEmployeesFacets = default!;
 #nullable restore
 #else
-        public UntypedNode NumEmployeesFacets { get => _explicitNullValueNumEmployeesFacets; set { _explicitNullValueNumEmployeesFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_employees_facets"); else _explicitNullProperties?.Remove("num_employees_facets"); } }
+        public UntypedNode NumEmployeesFacets { get => _explicitNullValueNumEmployeesFacets; set { _explicitNullValueNumEmployeesFacets = value; AdditionalData?.Remove("num_employees_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_employees_facets"); else _explicitNullProperties?.Remove("num_employees_facets"); } }
         private UntypedNode _explicitNullValueNumEmployeesFacets = default!;
 #endif
         /// <summary>The organization_hq_city_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationHqCityFacets { get => _explicitNullValueOrganizationHqCityFacets; set { _explicitNullValueOrganizationHqCityFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_city_facets"); else _explicitNullProperties?.Remove("organization_hq_city_facets"); } }
+        public UntypedNode? OrganizationHqCityFacets { get => _explicitNullValueOrganizationHqCityFacets; set { _explicitNullValueOrganizationHqCityFacets = value; AdditionalData?.Remove("organization_hq_city_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_city_facets"); else _explicitNullProperties?.Remove("organization_hq_city_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationHqCityFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationHqCityFacets { get => _explicitNullValueOrganizationHqCityFacets; set { _explicitNullValueOrganizationHqCityFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_city_facets"); else _explicitNullProperties?.Remove("organization_hq_city_facets"); } }
+        public UntypedNode OrganizationHqCityFacets { get => _explicitNullValueOrganizationHqCityFacets; set { _explicitNullValueOrganizationHqCityFacets = value; AdditionalData?.Remove("organization_hq_city_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_city_facets"); else _explicitNullProperties?.Remove("organization_hq_city_facets"); } }
         private UntypedNode _explicitNullValueOrganizationHqCityFacets = default!;
 #endif
         /// <summary>The organization_hq_country_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationHqCountryFacets { get => _explicitNullValueOrganizationHqCountryFacets; set { _explicitNullValueOrganizationHqCountryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_country_facets"); else _explicitNullProperties?.Remove("organization_hq_country_facets"); } }
+        public UntypedNode? OrganizationHqCountryFacets { get => _explicitNullValueOrganizationHqCountryFacets; set { _explicitNullValueOrganizationHqCountryFacets = value; AdditionalData?.Remove("organization_hq_country_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_country_facets"); else _explicitNullProperties?.Remove("organization_hq_country_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationHqCountryFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationHqCountryFacets { get => _explicitNullValueOrganizationHqCountryFacets; set { _explicitNullValueOrganizationHqCountryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_country_facets"); else _explicitNullProperties?.Remove("organization_hq_country_facets"); } }
+        public UntypedNode OrganizationHqCountryFacets { get => _explicitNullValueOrganizationHqCountryFacets; set { _explicitNullValueOrganizationHqCountryFacets = value; AdditionalData?.Remove("organization_hq_country_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_country_facets"); else _explicitNullProperties?.Remove("organization_hq_country_facets"); } }
         private UntypedNode _explicitNullValueOrganizationHqCountryFacets = default!;
 #endif
         /// <summary>The organization_hq_state_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationHqStateFacets { get => _explicitNullValueOrganizationHqStateFacets; set { _explicitNullValueOrganizationHqStateFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_state_facets"); else _explicitNullProperties?.Remove("organization_hq_state_facets"); } }
+        public UntypedNode? OrganizationHqStateFacets { get => _explicitNullValueOrganizationHqStateFacets; set { _explicitNullValueOrganizationHqStateFacets = value; AdditionalData?.Remove("organization_hq_state_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_state_facets"); else _explicitNullProperties?.Remove("organization_hq_state_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationHqStateFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationHqStateFacets { get => _explicitNullValueOrganizationHqStateFacets; set { _explicitNullValueOrganizationHqStateFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_state_facets"); else _explicitNullProperties?.Remove("organization_hq_state_facets"); } }
+        public UntypedNode OrganizationHqStateFacets { get => _explicitNullValueOrganizationHqStateFacets; set { _explicitNullValueOrganizationHqStateFacets = value; AdditionalData?.Remove("organization_hq_state_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hq_state_facets"); else _explicitNullProperties?.Remove("organization_hq_state_facets"); } }
         private UntypedNode _explicitNullValueOrganizationHqStateFacets = default!;
 #endif
         /// <summary>The organization_ids_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationIdsFacets { get => _explicitNullValueOrganizationIdsFacets; set { _explicitNullValueOrganizationIdsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_facets"); else _explicitNullProperties?.Remove("organization_ids_facets"); } }
+        public UntypedNode? OrganizationIdsFacets { get => _explicitNullValueOrganizationIdsFacets; set { _explicitNullValueOrganizationIdsFacets = value; AdditionalData?.Remove("organization_ids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_facets"); else _explicitNullProperties?.Remove("organization_ids_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationIdsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationIdsFacets { get => _explicitNullValueOrganizationIdsFacets; set { _explicitNullValueOrganizationIdsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_facets"); else _explicitNullProperties?.Remove("organization_ids_facets"); } }
+        public UntypedNode OrganizationIdsFacets { get => _explicitNullValueOrganizationIdsFacets; set { _explicitNullValueOrganizationIdsFacets = value; AdditionalData?.Remove("organization_ids_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_facets"); else _explicitNullProperties?.Remove("organization_ids_facets"); } }
         private UntypedNode _explicitNullValueOrganizationIdsFacets = default!;
 #endif
         /// <summary>The organization_ids_in_query_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationIdsInQueryFacets { get => _explicitNullValueOrganizationIdsInQueryFacets; set { _explicitNullValueOrganizationIdsInQueryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_in_query_facets"); else _explicitNullProperties?.Remove("organization_ids_in_query_facets"); } }
+        public UntypedNode? OrganizationIdsInQueryFacets { get => _explicitNullValueOrganizationIdsInQueryFacets; set { _explicitNullValueOrganizationIdsInQueryFacets = value; AdditionalData?.Remove("organization_ids_in_query_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_in_query_facets"); else _explicitNullProperties?.Remove("organization_ids_in_query_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationIdsInQueryFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationIdsInQueryFacets { get => _explicitNullValueOrganizationIdsInQueryFacets; set { _explicitNullValueOrganizationIdsInQueryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_in_query_facets"); else _explicitNullProperties?.Remove("organization_ids_in_query_facets"); } }
+        public UntypedNode OrganizationIdsInQueryFacets { get => _explicitNullValueOrganizationIdsInQueryFacets; set { _explicitNullValueOrganizationIdsInQueryFacets = value; AdditionalData?.Remove("organization_ids_in_query_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_ids_in_query_facets"); else _explicitNullProperties?.Remove("organization_ids_in_query_facets"); } }
         private UntypedNode _explicitNullValueOrganizationIdsInQueryFacets = default!;
 #endif
         /// <summary>The organization_intent_scoring_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationIntentScoringFacets { get => _explicitNullValueOrganizationIntentScoringFacets; set { _explicitNullValueOrganizationIntentScoringFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_intent_scoring_facets"); else _explicitNullProperties?.Remove("organization_intent_scoring_facets"); } }
+        public UntypedNode? OrganizationIntentScoringFacets { get => _explicitNullValueOrganizationIntentScoringFacets; set { _explicitNullValueOrganizationIntentScoringFacets = value; AdditionalData?.Remove("organization_intent_scoring_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_intent_scoring_facets"); else _explicitNullProperties?.Remove("organization_intent_scoring_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationIntentScoringFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationIntentScoringFacets { get => _explicitNullValueOrganizationIntentScoringFacets; set { _explicitNullValueOrganizationIntentScoringFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_intent_scoring_facets"); else _explicitNullProperties?.Remove("organization_intent_scoring_facets"); } }
+        public UntypedNode OrganizationIntentScoringFacets { get => _explicitNullValueOrganizationIntentScoringFacets; set { _explicitNullValueOrganizationIntentScoringFacets = value; AdditionalData?.Remove("organization_intent_scoring_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_intent_scoring_facets"); else _explicitNullProperties?.Remove("organization_intent_scoring_facets"); } }
         private UntypedNode _explicitNullValueOrganizationIntentScoringFacets = default!;
 #endif
         /// <summary>The organization_keywords_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationKeywordsFacets { get => _explicitNullValueOrganizationKeywordsFacets; set { _explicitNullValueOrganizationKeywordsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_keywords_facets"); else _explicitNullProperties?.Remove("organization_keywords_facets"); } }
+        public UntypedNode? OrganizationKeywordsFacets { get => _explicitNullValueOrganizationKeywordsFacets; set { _explicitNullValueOrganizationKeywordsFacets = value; AdditionalData?.Remove("organization_keywords_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_keywords_facets"); else _explicitNullProperties?.Remove("organization_keywords_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationKeywordsFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationKeywordsFacets { get => _explicitNullValueOrganizationKeywordsFacets; set { _explicitNullValueOrganizationKeywordsFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_keywords_facets"); else _explicitNullProperties?.Remove("organization_keywords_facets"); } }
+        public UntypedNode OrganizationKeywordsFacets { get => _explicitNullValueOrganizationKeywordsFacets; set { _explicitNullValueOrganizationKeywordsFacets = value; AdditionalData?.Remove("organization_keywords_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_keywords_facets"); else _explicitNullProperties?.Remove("organization_keywords_facets"); } }
         private UntypedNode _explicitNullValueOrganizationKeywordsFacets = default!;
 #endif
         /// <summary>The organization_trading_status_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OrganizationTradingStatusFacets { get => _explicitNullValueOrganizationTradingStatusFacets; set { _explicitNullValueOrganizationTradingStatusFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_trading_status_facets"); else _explicitNullProperties?.Remove("organization_trading_status_facets"); } }
+        public UntypedNode? OrganizationTradingStatusFacets { get => _explicitNullValueOrganizationTradingStatusFacets; set { _explicitNullValueOrganizationTradingStatusFacets = value; AdditionalData?.Remove("organization_trading_status_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_trading_status_facets"); else _explicitNullProperties?.Remove("organization_trading_status_facets"); } }
         private UntypedNode? _explicitNullValueOrganizationTradingStatusFacets = default!;
 #nullable restore
 #else
-        public UntypedNode OrganizationTradingStatusFacets { get => _explicitNullValueOrganizationTradingStatusFacets; set { _explicitNullValueOrganizationTradingStatusFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_trading_status_facets"); else _explicitNullProperties?.Remove("organization_trading_status_facets"); } }
+        public UntypedNode OrganizationTradingStatusFacets { get => _explicitNullValueOrganizationTradingStatusFacets; set { _explicitNullValueOrganizationTradingStatusFacets = value; AdditionalData?.Remove("organization_trading_status_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_trading_status_facets"); else _explicitNullProperties?.Remove("organization_trading_status_facets"); } }
         private UntypedNode _explicitNullValueOrganizationTradingStatusFacets = default!;
 #endif
         /// <summary>The person_city_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PersonCityFacets { get => _explicitNullValuePersonCityFacets; set { _explicitNullValuePersonCityFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_city_facets"); else _explicitNullProperties?.Remove("person_city_facets"); } }
+        public UntypedNode? PersonCityFacets { get => _explicitNullValuePersonCityFacets; set { _explicitNullValuePersonCityFacets = value; AdditionalData?.Remove("person_city_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_city_facets"); else _explicitNullProperties?.Remove("person_city_facets"); } }
         private UntypedNode? _explicitNullValuePersonCityFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PersonCityFacets { get => _explicitNullValuePersonCityFacets; set { _explicitNullValuePersonCityFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_city_facets"); else _explicitNullProperties?.Remove("person_city_facets"); } }
+        public UntypedNode PersonCityFacets { get => _explicitNullValuePersonCityFacets; set { _explicitNullValuePersonCityFacets = value; AdditionalData?.Remove("person_city_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_city_facets"); else _explicitNullProperties?.Remove("person_city_facets"); } }
         private UntypedNode _explicitNullValuePersonCityFacets = default!;
 #endif
         /// <summary>The person_country_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PersonCountryFacets { get => _explicitNullValuePersonCountryFacets; set { _explicitNullValuePersonCountryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_country_facets"); else _explicitNullProperties?.Remove("person_country_facets"); } }
+        public UntypedNode? PersonCountryFacets { get => _explicitNullValuePersonCountryFacets; set { _explicitNullValuePersonCountryFacets = value; AdditionalData?.Remove("person_country_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_country_facets"); else _explicitNullProperties?.Remove("person_country_facets"); } }
         private UntypedNode? _explicitNullValuePersonCountryFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PersonCountryFacets { get => _explicitNullValuePersonCountryFacets; set { _explicitNullValuePersonCountryFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_country_facets"); else _explicitNullProperties?.Remove("person_country_facets"); } }
+        public UntypedNode PersonCountryFacets { get => _explicitNullValuePersonCountryFacets; set { _explicitNullValuePersonCountryFacets = value; AdditionalData?.Remove("person_country_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_country_facets"); else _explicitNullProperties?.Remove("person_country_facets"); } }
         private UntypedNode _explicitNullValuePersonCountryFacets = default!;
 #endif
         /// <summary>The person_function_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PersonFunctionFacets { get => _explicitNullValuePersonFunctionFacets; set { _explicitNullValuePersonFunctionFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_function_facets"); else _explicitNullProperties?.Remove("person_function_facets"); } }
+        public UntypedNode? PersonFunctionFacets { get => _explicitNullValuePersonFunctionFacets; set { _explicitNullValuePersonFunctionFacets = value; AdditionalData?.Remove("person_function_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_function_facets"); else _explicitNullProperties?.Remove("person_function_facets"); } }
         private UntypedNode? _explicitNullValuePersonFunctionFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PersonFunctionFacets { get => _explicitNullValuePersonFunctionFacets; set { _explicitNullValuePersonFunctionFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_function_facets"); else _explicitNullProperties?.Remove("person_function_facets"); } }
+        public UntypedNode PersonFunctionFacets { get => _explicitNullValuePersonFunctionFacets; set { _explicitNullValuePersonFunctionFacets = value; AdditionalData?.Remove("person_function_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_function_facets"); else _explicitNullProperties?.Remove("person_function_facets"); } }
         private UntypedNode _explicitNullValuePersonFunctionFacets = default!;
 #endif
         /// <summary>The person_persona_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PersonPersonaFacets { get => _explicitNullValuePersonPersonaFacets; set { _explicitNullValuePersonPersonaFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_persona_facets"); else _explicitNullProperties?.Remove("person_persona_facets"); } }
+        public UntypedNode? PersonPersonaFacets { get => _explicitNullValuePersonPersonaFacets; set { _explicitNullValuePersonPersonaFacets = value; AdditionalData?.Remove("person_persona_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_persona_facets"); else _explicitNullProperties?.Remove("person_persona_facets"); } }
         private UntypedNode? _explicitNullValuePersonPersonaFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PersonPersonaFacets { get => _explicitNullValuePersonPersonaFacets; set { _explicitNullValuePersonPersonaFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_persona_facets"); else _explicitNullProperties?.Remove("person_persona_facets"); } }
+        public UntypedNode PersonPersonaFacets { get => _explicitNullValuePersonPersonaFacets; set { _explicitNullValuePersonPersonaFacets = value; AdditionalData?.Remove("person_persona_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_persona_facets"); else _explicitNullProperties?.Remove("person_persona_facets"); } }
         private UntypedNode _explicitNullValuePersonPersonaFacets = default!;
 #endif
         /// <summary>The person_seniority_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PersonSeniorityFacets { get => _explicitNullValuePersonSeniorityFacets; set { _explicitNullValuePersonSeniorityFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_seniority_facets"); else _explicitNullProperties?.Remove("person_seniority_facets"); } }
+        public UntypedNode? PersonSeniorityFacets { get => _explicitNullValuePersonSeniorityFacets; set { _explicitNullValuePersonSeniorityFacets = value; AdditionalData?.Remove("person_seniority_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_seniority_facets"); else _explicitNullProperties?.Remove("person_seniority_facets"); } }
         private UntypedNode? _explicitNullValuePersonSeniorityFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PersonSeniorityFacets { get => _explicitNullValuePersonSeniorityFacets; set { _explicitNullValuePersonSeniorityFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_seniority_facets"); else _explicitNullProperties?.Remove("person_seniority_facets"); } }
+        public UntypedNode PersonSeniorityFacets { get => _explicitNullValuePersonSeniorityFacets; set { _explicitNullValuePersonSeniorityFacets = value; AdditionalData?.Remove("person_seniority_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_seniority_facets"); else _explicitNullProperties?.Remove("person_seniority_facets"); } }
         private UntypedNode _explicitNullValuePersonSeniorityFacets = default!;
 #endif
         /// <summary>The person_state_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PersonStateFacets { get => _explicitNullValuePersonStateFacets; set { _explicitNullValuePersonStateFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_state_facets"); else _explicitNullProperties?.Remove("person_state_facets"); } }
+        public UntypedNode? PersonStateFacets { get => _explicitNullValuePersonStateFacets; set { _explicitNullValuePersonStateFacets = value; AdditionalData?.Remove("person_state_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_state_facets"); else _explicitNullProperties?.Remove("person_state_facets"); } }
         private UntypedNode? _explicitNullValuePersonStateFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PersonStateFacets { get => _explicitNullValuePersonStateFacets; set { _explicitNullValuePersonStateFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_state_facets"); else _explicitNullProperties?.Remove("person_state_facets"); } }
+        public UntypedNode PersonStateFacets { get => _explicitNullValuePersonStateFacets; set { _explicitNullValuePersonStateFacets = value; AdditionalData?.Remove("person_state_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_state_facets"); else _explicitNullProperties?.Remove("person_state_facets"); } }
         private UntypedNode _explicitNullValuePersonStateFacets = default!;
 #endif
         /// <summary>The playbook_step_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PlaybookStepFacets { get => _explicitNullValuePlaybookStepFacets; set { _explicitNullValuePlaybookStepFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbook_step_facets"); else _explicitNullProperties?.Remove("playbook_step_facets"); } }
+        public UntypedNode? PlaybookStepFacets { get => _explicitNullValuePlaybookStepFacets; set { _explicitNullValuePlaybookStepFacets = value; AdditionalData?.Remove("playbook_step_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbook_step_facets"); else _explicitNullProperties?.Remove("playbook_step_facets"); } }
         private UntypedNode? _explicitNullValuePlaybookStepFacets = default!;
 #nullable restore
 #else
-        public UntypedNode PlaybookStepFacets { get => _explicitNullValuePlaybookStepFacets; set { _explicitNullValuePlaybookStepFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbook_step_facets"); else _explicitNullProperties?.Remove("playbook_step_facets"); } }
+        public UntypedNode PlaybookStepFacets { get => _explicitNullValuePlaybookStepFacets; set { _explicitNullValuePlaybookStepFacets = value; AdditionalData?.Remove("playbook_step_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbook_step_facets"); else _explicitNullProperties?.Remove("playbook_step_facets"); } }
         private UntypedNode _explicitNullValuePlaybookStepFacets = default!;
 #endif
         /// <summary>The revenues_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RevenuesFacets { get => _explicitNullValueRevenuesFacets; set { _explicitNullValueRevenuesFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revenues_facets"); else _explicitNullProperties?.Remove("revenues_facets"); } }
+        public UntypedNode? RevenuesFacets { get => _explicitNullValueRevenuesFacets; set { _explicitNullValueRevenuesFacets = value; AdditionalData?.Remove("revenues_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revenues_facets"); else _explicitNullProperties?.Remove("revenues_facets"); } }
         private UntypedNode? _explicitNullValueRevenuesFacets = default!;
 #nullable restore
 #else
-        public UntypedNode RevenuesFacets { get => _explicitNullValueRevenuesFacets; set { _explicitNullValueRevenuesFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revenues_facets"); else _explicitNullProperties?.Remove("revenues_facets"); } }
+        public UntypedNode RevenuesFacets { get => _explicitNullValueRevenuesFacets; set { _explicitNullValueRevenuesFacets = value; AdditionalData?.Remove("revenues_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revenues_facets"); else _explicitNullProperties?.Remove("revenues_facets"); } }
         private UntypedNode _explicitNullValueRevenuesFacets = default!;
 #endif
         /// <summary>The task_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem>? TaskTypes { get => _explicitNullValueTaskTypes; set { _explicitNullValueTaskTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_types"); else _explicitNullProperties?.Remove("task_types"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem>? TaskTypes { get => _explicitNullValueTaskTypes; set { _explicitNullValueTaskTypes = value; AdditionalData?.Remove("task_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_types"); else _explicitNullProperties?.Remove("task_types"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem>? _explicitNullValueTaskTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem> TaskTypes { get => _explicitNullValueTaskTypes; set { _explicitNullValueTaskTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_types"); else _explicitNullProperties?.Remove("task_types"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem> TaskTypes { get => _explicitNullValueTaskTypes; set { _explicitNullValueTaskTypes = value; AdditionalData?.Remove("task_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_types"); else _explicitNullProperties?.Remove("task_types"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTaskTypesItem> _explicitNullValueTaskTypes = default!;
 #endif
         /// <summary>The total_facets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem>? TotalFacets { get => _explicitNullValueTotalFacets; set { _explicitNullValueTotalFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_facets"); else _explicitNullProperties?.Remove("total_facets"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem>? TotalFacets { get => _explicitNullValueTotalFacets; set { _explicitNullValueTotalFacets = value; AdditionalData?.Remove("total_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_facets"); else _explicitNullProperties?.Remove("total_facets"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem>? _explicitNullValueTotalFacets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem> TotalFacets { get => _explicitNullValueTotalFacets; set { _explicitNullValueTotalFacets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_facets"); else _explicitNullProperties?.Remove("total_facets"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem> TotalFacets { get => _explicitNullValueTotalFacets; set { _explicitNullValueTotalFacets = value; AdditionalData?.Remove("total_facets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_facets"); else _explicitNullProperties?.Remove("total_facets"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseFacetingTotalFacetsItem> _explicitNullValueTotalFacets = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("information technology & services") is { } nullNodeInformationTechnologyServices && nullNodeInformationTechnologyServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InformationTechnologyServices = null;
+            if (parseNode.GetChildNode("information technology & services") is null) { _explicitNullValueInformationTechnologyServices = default!; _explicitNullProperties?.Remove("information technology & services"); }
+            else if (parseNode.GetChildNode("information technology & services") is { } nullNodeInformationTechnologyServices && nullNodeInformationTechnologyServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InformationTechnologyServices = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The informationTechnologyServices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InformationTechnologyServices { get => _explicitNullValueInformationTechnologyServices; set { _explicitNullValueInformationTechnologyServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("information technology & services"); else _explicitNullProperties?.Remove("information technology & services"); } }
+        public string? InformationTechnologyServices { get => _explicitNullValueInformationTechnologyServices; set { _explicitNullValueInformationTechnologyServices = value; AdditionalData?.Remove("information technology & services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("information technology & services"); else _explicitNullProperties?.Remove("information technology & services"); } }
         private string? _explicitNullValueInformationTechnologyServices = default!;
 #nullable restore
 #else
-        public string InformationTechnologyServices { get => _explicitNullValueInformationTechnologyServices; set { _explicitNullValueInformationTechnologyServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("information technology & services"); else _explicitNullProperties?.Remove("information technology & services"); } }
+        public string InformationTechnologyServices { get => _explicitNullValueInformationTechnologyServices; set { _explicitNullValueInformationTechnologyServices = value; AdditionalData?.Remove("information technology & services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("information technology & services"); else _explicitNullProperties?.Remove("information technology & services"); } }
         private string _explicitNullValueInformationTechnologyServices = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("organization_job_postings") is { } nullNodeOrganizationJobPostings && nullNodeOrganizationJobPostings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationJobPostings = null;
+            if (parseNode.GetChildNode("organization_job_postings") is null) { _explicitNullValueOrganizationJobPostings = default!; _explicitNullProperties?.Remove("organization_job_postings"); }
+            else if (parseNode.GetChildNode("organization_job_postings") is { } nullNodeOrganizationJobPostings && nullNodeOrganizationJobPostings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationJobPostings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The organization_job_postings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItem>? OrganizationJobPostings { get => _explicitNullValueOrganizationJobPostings; set { _explicitNullValueOrganizationJobPostings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_job_postings"); else _explicitNullProperties?.Remove("organization_job_postings"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItem>? OrganizationJobPostings { get => _explicitNullValueOrganizationJobPostings; set { _explicitNullValueOrganizationJobPostings = value; AdditionalData?.Remove("organization_job_postings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_job_postings"); else _explicitNullProperties?.Remove("organization_job_postings"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItem>? _explicitNullValueOrganizationJobPostings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItem> OrganizationJobPostings { get => _explicitNullValueOrganizationJobPostings; set { _explicitNullValueOrganizationJobPostings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_job_postings"); else _explicitNullProperties?.Remove("organization_job_postings"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItem> OrganizationJobPostings { get => _explicitNullValueOrganizationJobPostings; set { _explicitNullValueOrganizationJobPostings = value; AdditionalData?.Remove("organization_job_postings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_job_postings"); else _explicitNullProperties?.Remove("organization_job_postings"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.OrganizationJobsPostings200ResponseOrganizationJobPostingsItem> _explicitNullValueOrganizationJobPostings = default!;
 #endif
         /// <summary>

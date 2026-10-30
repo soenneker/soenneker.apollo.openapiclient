@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("677c0c4f451bfb02cf105e01") is { } nullNodeSixSevenSevenc0c4f451bfb02cf105e01 && nullNodeSixSevenSevenc0c4f451bfb02cf105e01.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixSevenSevenc0c4f451bfb02cf105e01 = null;
+            if (parseNode.GetChildNode("677c0c4f451bfb02cf105e01") is null) { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = default!; _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); }
+            else if (parseNode.GetChildNode("677c0c4f451bfb02cf105e01") is { } nullNodeSixSevenSevenc0c4f451bfb02cf105e01 && nullNodeSixSevenSevenc0c4f451bfb02cf105e01.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixSevenSevenc0c4f451bfb02cf105e01 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The SixSevenSevenc0c4f451bfb02cf105e01 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SixSevenSevenc0c4f451bfb02cf105e01 { get => _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01; set { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("677c0c4f451bfb02cf105e01"); else _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); } }
+        public string? SixSevenSevenc0c4f451bfb02cf105e01 { get => _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01; set { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = value; AdditionalData?.Remove("677c0c4f451bfb02cf105e01"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("677c0c4f451bfb02cf105e01"); else _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); } }
         private string? _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = default!;
 #nullable restore
 #else
-        public string SixSevenSevenc0c4f451bfb02cf105e01 { get => _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01; set { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("677c0c4f451bfb02cf105e01"); else _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); } }
+        public string SixSevenSevenc0c4f451bfb02cf105e01 { get => _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01; set { _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = value; AdditionalData?.Remove("677c0c4f451bfb02cf105e01"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("677c0c4f451bfb02cf105e01"); else _explicitNullProperties?.Remove("677c0c4f451bfb02cf105e01"); } }
         private string _explicitNullValueSixSevenSevenc0c4f451bfb02cf105e01 = default!;
 #endif
         /// <summary>

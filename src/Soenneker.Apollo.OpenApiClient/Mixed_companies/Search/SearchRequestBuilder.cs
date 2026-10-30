@@ -74,7 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.Mixed_companies.Search
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Mixed_companies.Search.SearchRequestBuilder.SearchRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.apollo.io/api/v1", "/mixed_companies/search", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

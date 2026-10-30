@@ -17,7 +17,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("surface") is { } nullNodeSurface && nullNodeSurface.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Surface = null;
+            if (parseNode.GetChildNode("surface") is null) { _explicitNullValueSurface = default!; _explicitNullProperties?.Remove("surface"); }
+            else if (parseNode.GetChildNode("surface") is { } nullNodeSurface && nullNodeSurface.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Surface = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Optional. The surface within Apollo that the send is initiated from. Used for internal attribution and analytics. &lt;br&gt;&lt;br&gt;Example: `emails`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Surface { get => _explicitNullValueSurface; set { _explicitNullValueSurface = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surface"); else _explicitNullProperties?.Remove("surface"); } }
+        public string? Surface { get => _explicitNullValueSurface; set { _explicitNullValueSurface = value; AdditionalData?.Remove("surface"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surface"); else _explicitNullProperties?.Remove("surface"); } }
         private string? _explicitNullValueSurface = default!;
 #nullable restore
 #else
-        public string Surface { get => _explicitNullValueSurface; set { _explicitNullValueSurface = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surface"); else _explicitNullProperties?.Remove("surface"); } }
+        public string Surface { get => _explicitNullValueSurface; set { _explicitNullValueSurface = value; AdditionalData?.Remove("surface"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surface"); else _explicitNullProperties?.Remove("surface"); } }
         private string _explicitNullValueSurface = default!;
 #endif
         /// <summary>

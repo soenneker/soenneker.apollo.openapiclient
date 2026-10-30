@@ -17,8 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("[\"api/v1/accounts\", \"show\"]") is { } nullNodeApiV1AccountsShow && nullNodeApiV1AccountsShow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiV1AccountsShow = null;
-            if (parseNode.GetChildNode("[\"api/v1/people\", \"match\"]") is { } nullNodeApiV1PeopleMatch && nullNodeApiV1PeopleMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiV1PeopleMatch = null;
+            if (parseNode.GetChildNode("[\"api/v1/accounts\", \"show\"]") is null) { _explicitNullValueApiV1AccountsShow = default!; _explicitNullProperties?.Remove("[\"api/v1/accounts\", \"show\"]"); }
+            else if (parseNode.GetChildNode("[\"api/v1/accounts\", \"show\"]") is { } nullNodeApiV1AccountsShow && nullNodeApiV1AccountsShow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiV1AccountsShow = null;
+            if (parseNode.GetChildNode("[\"api/v1/people\", \"match\"]") is null) { _explicitNullValueApiV1PeopleMatch = default!; _explicitNullProperties?.Remove("[\"api/v1/people\", \"match\"]"); }
+            else if (parseNode.GetChildNode("[\"api/v1/people\", \"match\"]") is { } nullNodeApiV1PeopleMatch && nullNodeApiV1PeopleMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiV1PeopleMatch = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The ApiV1AccountsShow property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1AccountsShow? ApiV1AccountsShow { get => _explicitNullValueApiV1AccountsShow; set { _explicitNullValueApiV1AccountsShow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/accounts\", \"show\"]"); else _explicitNullProperties?.Remove("[\"api/v1/accounts\", \"show\"]"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1AccountsShow? ApiV1AccountsShow { get => _explicitNullValueApiV1AccountsShow; set { _explicitNullValueApiV1AccountsShow = value; AdditionalData?.Remove("[\"api/v1/accounts\", \"show\"]"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/accounts\", \"show\"]"); else _explicitNullProperties?.Remove("[\"api/v1/accounts\", \"show\"]"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1AccountsShow? _explicitNullValueApiV1AccountsShow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1AccountsShow ApiV1AccountsShow { get => _explicitNullValueApiV1AccountsShow; set { _explicitNullValueApiV1AccountsShow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/accounts\", \"show\"]"); else _explicitNullProperties?.Remove("[\"api/v1/accounts\", \"show\"]"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1AccountsShow ApiV1AccountsShow { get => _explicitNullValueApiV1AccountsShow; set { _explicitNullValueApiV1AccountsShow = value; AdditionalData?.Remove("[\"api/v1/accounts\", \"show\"]"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/accounts\", \"show\"]"); else _explicitNullProperties?.Remove("[\"api/v1/accounts\", \"show\"]"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1AccountsShow _explicitNullValueApiV1AccountsShow = default!;
 #endif
         /// <summary>The ApiV1PeopleMatch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch? ApiV1PeopleMatch { get => _explicitNullValueApiV1PeopleMatch; set { _explicitNullValueApiV1PeopleMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/people\", \"match\"]"); else _explicitNullProperties?.Remove("[\"api/v1/people\", \"match\"]"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch? ApiV1PeopleMatch { get => _explicitNullValueApiV1PeopleMatch; set { _explicitNullValueApiV1PeopleMatch = value; AdditionalData?.Remove("[\"api/v1/people\", \"match\"]"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/people\", \"match\"]"); else _explicitNullProperties?.Remove("[\"api/v1/people\", \"match\"]"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch? _explicitNullValueApiV1PeopleMatch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch ApiV1PeopleMatch { get => _explicitNullValueApiV1PeopleMatch; set { _explicitNullValueApiV1PeopleMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/people\", \"match\"]"); else _explicitNullProperties?.Remove("[\"api/v1/people\", \"match\"]"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch ApiV1PeopleMatch { get => _explicitNullValueApiV1PeopleMatch; set { _explicitNullValueApiV1PeopleMatch = value; AdditionalData?.Remove("[\"api/v1/people\", \"match\"]"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("[\"api/v1/people\", \"match\"]"); else _explicitNullProperties?.Remove("[\"api/v1/people\", \"match\"]"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PostApiusage200ResponseAnyOf2ApiV1PeopleMatch _explicitNullValueApiV1PeopleMatch = default!;
 #endif
         /// <summary>

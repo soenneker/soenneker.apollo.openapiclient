@@ -18,9 +18,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("state_cd") is { } nullNodeStateCd && nullNodeStateCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateCd = null;
-            if (parseNode.GetChildNode("type_cd") is { } nullNodeTypeCd && nullNodeTypeCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeCd = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("state_cd") is null) { _explicitNullValueStateCd = default!; _explicitNullProperties?.Remove("state_cd"); }
+            else if (parseNode.GetChildNode("state_cd") is { } nullNodeStateCd && nullNodeStateCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateCd = null;
+            if (parseNode.GetChildNode("type_cd") is null) { _explicitNullValueTypeCd = default!; _explicitNullProperties?.Remove("type_cd"); }
+            else if (parseNode.GetChildNode("type_cd") is { } nullNodeTypeCd && nullNodeTypeCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeCd = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>Processing state code of the video recording.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StateCd { get => _explicitNullValueStateCd; set { _explicitNullValueStateCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_cd"); else _explicitNullProperties?.Remove("state_cd"); } }
+        public string? StateCd { get => _explicitNullValueStateCd; set { _explicitNullValueStateCd = value; AdditionalData?.Remove("state_cd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_cd"); else _explicitNullProperties?.Remove("state_cd"); } }
         private string? _explicitNullValueStateCd = default!;
 #nullable restore
 #else
-        public string StateCd { get => _explicitNullValueStateCd; set { _explicitNullValueStateCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_cd"); else _explicitNullProperties?.Remove("state_cd"); } }
+        public string StateCd { get => _explicitNullValueStateCd; set { _explicitNullValueStateCd = value; AdditionalData?.Remove("state_cd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_cd"); else _explicitNullProperties?.Remove("state_cd"); } }
         private string _explicitNullValueStateCd = default!;
 #endif
         /// <summary>Video recording type code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TypeCd { get => _explicitNullValueTypeCd; set { _explicitNullValueTypeCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type_cd"); else _explicitNullProperties?.Remove("type_cd"); } }
+        public string? TypeCd { get => _explicitNullValueTypeCd; set { _explicitNullValueTypeCd = value; AdditionalData?.Remove("type_cd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type_cd"); else _explicitNullProperties?.Remove("type_cd"); } }
         private string? _explicitNullValueTypeCd = default!;
 #nullable restore
 #else
-        public string TypeCd { get => _explicitNullValueTypeCd; set { _explicitNullValueTypeCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type_cd"); else _explicitNullProperties?.Remove("type_cd"); } }
+        public string TypeCd { get => _explicitNullValueTypeCd; set { _explicitNullValueTypeCd = value; AdditionalData?.Remove("type_cd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type_cd"); else _explicitNullProperties?.Remove("type_cd"); } }
         private string _explicitNullValueTypeCd = default!;
 #endif
         /// <summary>URL of the video recording.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

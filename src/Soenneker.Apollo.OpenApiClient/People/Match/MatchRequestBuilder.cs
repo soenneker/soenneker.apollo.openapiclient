@@ -74,7 +74,7 @@ namespace Soenneker.Apollo.OpenApiClient.People.Match
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.People.Match.MatchRequestBuilder.MatchRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.apollo.io/api/v1", "/people/match", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

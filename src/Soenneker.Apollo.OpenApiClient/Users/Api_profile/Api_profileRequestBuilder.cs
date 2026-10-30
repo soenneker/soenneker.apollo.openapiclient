@@ -65,7 +65,7 @@ namespace Soenneker.Apollo.OpenApiClient.Users.Api_profile
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Users.Api_profile.Api_profileRequestBuilder.Api_profileRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.apollo.io/api/v1", "/users/api_profile", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

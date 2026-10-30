@@ -17,8 +17,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("news_articles") is { } nullNodeNewsArticles && nullNodeNewsArticles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewsArticles = null;
-            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("news_articles") is null) { _explicitNullValueNewsArticles = default!; _explicitNullProperties?.Remove("news_articles"); }
+            else if (parseNode.GetChildNode("news_articles") is { } nullNodeNewsArticles && nullNodeNewsArticles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewsArticles = null;
+            if (parseNode.GetChildNode("pagination") is null) { _explicitNullValuePagination = default!; _explicitNullProperties?.Remove("pagination"); }
+            else if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The news_articles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponseNewsArticlesItem>? NewsArticles { get => _explicitNullValueNewsArticles; set { _explicitNullValueNewsArticles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("news_articles"); else _explicitNullProperties?.Remove("news_articles"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponseNewsArticlesItem>? NewsArticles { get => _explicitNullValueNewsArticles; set { _explicitNullValueNewsArticles = value; AdditionalData?.Remove("news_articles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("news_articles"); else _explicitNullProperties?.Remove("news_articles"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponseNewsArticlesItem>? _explicitNullValueNewsArticles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponseNewsArticlesItem> NewsArticles { get => _explicitNullValueNewsArticles; set { _explicitNullValueNewsArticles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("news_articles"); else _explicitNullProperties?.Remove("news_articles"); } }
+        public List<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponseNewsArticlesItem> NewsArticles { get => _explicitNullValueNewsArticles; set { _explicitNullValueNewsArticles = value; AdditionalData?.Remove("news_articles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("news_articles"); else _explicitNullProperties?.Remove("news_articles"); } }
         private List<global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponseNewsArticlesItem> _explicitNullValueNewsArticles = default!;
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.NewsArticlesSearch200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tone_sample") is { } nullNodeToneSample && nullNodeToneSample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToneSample = null;
-            if (parseNode.GetChildNode("tone_type") is { } nullNodeToneType && nullNodeToneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToneType = null;
+            if (parseNode.GetChildNode("tone_sample") is null) { _explicitNullValueToneSample = default!; _explicitNullProperties?.Remove("tone_sample"); }
+            else if (parseNode.GetChildNode("tone_sample") is { } nullNodeToneSample && nullNodeToneSample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToneSample = null;
+            if (parseNode.GetChildNode("tone_type") is null) { _explicitNullValueToneType = default!; _explicitNullProperties?.Remove("tone_type"); }
+            else if (parseNode.GetChildNode("tone_type") is { } nullNodeToneType && nullNodeToneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToneType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The tone_sample property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToneSample { get => _explicitNullValueToneSample; set { _explicitNullValueToneSample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_sample"); else _explicitNullProperties?.Remove("tone_sample"); } }
+        public string? ToneSample { get => _explicitNullValueToneSample; set { _explicitNullValueToneSample = value; AdditionalData?.Remove("tone_sample"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_sample"); else _explicitNullProperties?.Remove("tone_sample"); } }
         private string? _explicitNullValueToneSample = default!;
 #nullable restore
 #else
-        public string ToneSample { get => _explicitNullValueToneSample; set { _explicitNullValueToneSample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_sample"); else _explicitNullProperties?.Remove("tone_sample"); } }
+        public string ToneSample { get => _explicitNullValueToneSample; set { _explicitNullValueToneSample = value; AdditionalData?.Remove("tone_sample"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_sample"); else _explicitNullProperties?.Remove("tone_sample"); } }
         private string _explicitNullValueToneSample = default!;
 #endif
         /// <summary>The tone_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToneType { get => _explicitNullValueToneType; set { _explicitNullValueToneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_type"); else _explicitNullProperties?.Remove("tone_type"); } }
+        public string? ToneType { get => _explicitNullValueToneType; set { _explicitNullValueToneType = value; AdditionalData?.Remove("tone_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_type"); else _explicitNullProperties?.Remove("tone_type"); } }
         private string? _explicitNullValueToneType = default!;
 #nullable restore
 #else
-        public string ToneType { get => _explicitNullValueToneType; set { _explicitNullValueToneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_type"); else _explicitNullProperties?.Remove("tone_type"); } }
+        public string ToneType { get => _explicitNullValueToneType; set { _explicitNullValueToneType = value; AdditionalData?.Remove("tone_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tone_type"); else _explicitNullProperties?.Remove("tone_type"); } }
         private string _explicitNullValueToneType = default!;
 #endif
         /// <summary>

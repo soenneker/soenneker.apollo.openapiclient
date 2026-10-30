@@ -17,9 +17,12 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
-            if (parseNode.GetChildNode("first_intent_signal_received_at") is { } nullNodeFirstIntentSignalReceivedAt && nullNodeFirstIntentSignalReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstIntentSignalReceivedAt = null;
-            if (parseNode.GetChildNode("last_intent_signal_received_at") is { } nullNodeLastIntentSignalReceivedAt && nullNodeLastIntentSignalReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIntentSignalReceivedAt = null;
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("first_intent_signal_received_at") is null) { _explicitNullValueFirstIntentSignalReceivedAt = default!; _explicitNullProperties?.Remove("first_intent_signal_received_at"); }
+            else if (parseNode.GetChildNode("first_intent_signal_received_at") is { } nullNodeFirstIntentSignalReceivedAt && nullNodeFirstIntentSignalReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstIntentSignalReceivedAt = null;
+            if (parseNode.GetChildNode("last_intent_signal_received_at") is null) { _explicitNullValueLastIntentSignalReceivedAt = default!; _explicitNullProperties?.Remove("last_intent_signal_received_at"); }
+            else if (parseNode.GetChildNode("last_intent_signal_received_at") is { } nullNodeLastIntentSignalReceivedAt && nullNodeLastIntentSignalReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIntentSignalReceivedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The first_intent_signal_received_at property</summary>
-        public long? FirstIntentSignalReceivedAt { get => _explicitNullValueFirstIntentSignalReceivedAt; set { _explicitNullValueFirstIntentSignalReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_intent_signal_received_at"); else _explicitNullProperties?.Remove("first_intent_signal_received_at"); } }
+        public long? FirstIntentSignalReceivedAt { get => _explicitNullValueFirstIntentSignalReceivedAt; set { _explicitNullValueFirstIntentSignalReceivedAt = value; AdditionalData?.Remove("first_intent_signal_received_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_intent_signal_received_at"); else _explicitNullProperties?.Remove("first_intent_signal_received_at"); } }
         private long? _explicitNullValueFirstIntentSignalReceivedAt = default!;
         /// <summary>The last_intent_signal_received_at property</summary>
-        public long? LastIntentSignalReceivedAt { get => _explicitNullValueLastIntentSignalReceivedAt; set { _explicitNullValueLastIntentSignalReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_intent_signal_received_at"); else _explicitNullProperties?.Remove("last_intent_signal_received_at"); } }
+        public long? LastIntentSignalReceivedAt { get => _explicitNullValueLastIntentSignalReceivedAt; set { _explicitNullValueLastIntentSignalReceivedAt = value; AdditionalData?.Remove("last_intent_signal_received_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_intent_signal_received_at"); else _explicitNullProperties?.Remove("last_intent_signal_received_at"); } }
         private long? _explicitNullValueLastIntentSignalReceivedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem"/> and sets the default values.
