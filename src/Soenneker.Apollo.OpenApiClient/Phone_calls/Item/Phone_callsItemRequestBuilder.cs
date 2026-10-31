@@ -65,7 +65,7 @@ namespace Soenneker.Apollo.OpenApiClient.Phone_calls.Item
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Apollo.OpenApiClient.Phone_calls.Item.Phone_callsItemRequestBuilder.Phone_callsItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.apollo.io/api/v1", "/phone_calls/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
