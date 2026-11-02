@@ -39,6 +39,7 @@ namespace Soenneker.Apollo.OpenApiClient.Tasks.Search
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks422ResponseError">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks429Response">When receiving a 429 status code</exception>
@@ -54,6 +55,7 @@ namespace Soenneker.Apollo.OpenApiClient.Tasks.Search
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "401", global::Soenneker.Apollo.OpenApiClient.Models.ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks403ResponseError.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks422ResponseError.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks429Response.CreateFromDiscriminatorValue },

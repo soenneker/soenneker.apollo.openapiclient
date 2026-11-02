@@ -39,6 +39,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Update_owners
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership422ResponseError">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership429Response">When receiving a 429 status code</exception>
@@ -54,6 +55,7 @@ namespace Soenneker.Apollo.OpenApiClient.Accounts.Update_owners
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "401", global::Soenneker.Apollo.OpenApiClient.Models.ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership422ResponseError.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.UpdateAccountOwnership429Response.CreateFromDiscriminatorValue },

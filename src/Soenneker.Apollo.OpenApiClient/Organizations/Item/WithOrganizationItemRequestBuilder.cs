@@ -45,6 +45,9 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ResponseError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId422ResponseSchemaError">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,7 +58,15 @@ namespace Soenneker.Apollo.OpenApiClient.Organizations.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Apollo.OpenApiClient.Models.ResponseError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId422ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ## Endpoint essentials**API key access:** `api/v1/organizations/show` or `Master API key`**OAuth scopes:** `organization_read`**Free account access:** Requires an Apollo account registered with a work email address. Additional account eligibility requirements may apply. Paid accounts aren&apos;t affected.**Credit usage:** `1 credit per company` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4412658766477-Search-for-Companies&quot; target=&quot;_blank&quot;&gt;Organizations&lt;/a&gt; are companies you haven&apos;t yet saved as accounts on Apollo.&lt;br&gt;&lt;br&gt;Use the get complete organization info endpoint to retrieve complete details about an organization in Apollo.

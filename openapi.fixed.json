@@ -1284,7 +1284,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -2680,7 +2680,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -3178,7 +3178,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -3935,7 +3935,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -4693,7 +4693,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -5306,7 +5306,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -5500,7 +5500,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -5618,7 +5618,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -5763,7 +5763,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -6341,7 +6341,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -6357,7 +6357,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetAccountsId403ResponseSchema"
+                  "$ref": "#/components/schemas/GetAccountsId403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -6502,7 +6502,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -6700,7 +6700,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Invalid API Key": {
@@ -6803,7 +6803,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -6934,7 +6934,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -7024,7 +7024,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -7344,7 +7344,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -7540,7 +7540,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -7727,7 +7727,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ViewAContact401ResponseSchema"
+                  "$ref": "#/components/schemas/ViewAContact401ResponseSchemaError"
                 },
                 "examples": {
                   "Check API key": {
@@ -8167,6 +8167,693 @@
         }
       }
     },
+    "/duplicate_contacts/merge": {
+      "post": {
+        "tags": [
+          "Contacts"
+        ],
+        "summary": "[BETA] Merge duplicate contacts",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/duplicate_contacts/merge\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060contacts_deduplicate\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/5995459280525-View-and-Edit-Contacts\u0022 target=\u0022_blank\u0022\u003EContacts\u003C/a\u003E are people saved in Apollo.\u003Cbr\u003E\u003Cbr\u003EUse the merge duplicate contacts endpoint to merge up to 100 groups of duplicate contacts in one request. In each group, the master contact is the one you keep. It keeps its own values, fills its empty fields from the duplicates, and gains their emails, phone numbers, lists, sequences, tasks, notes, calls, and activity. Apollo then deletes the duplicates.\u003Cbr\u003E\u003Cbr\u003ETo find likely duplicates, call the \u003Ca href=\u0022https://docs.apollo.io/reference/find-potential-duplicate-contact\u0022\u003Efind a potential duplicate contact\u003C/a\u003E endpoint.\n\n\u003E \uD83D\uDEA7 Merging can\u0027t be undone\n\u003E\n\u003E Merging permanently deletes the duplicate contacts. If your team syncs contacts to Salesforce or HubSpot with deletion sync on, a merge can also delete the duplicate\u0027s CRM record. Review each group before you send it.\n\n### Build the request\n\nSend one object per group in the \u0060contacts\u0060 array:\n\n* \u0060master_contact_id\u0060: the contact to keep.\n* \u0060duplicate_contact_ids\u0060: the duplicate contacts to merge into the master contact, up to 10 per group.\n\nEach contact can appear only once in the request, either as a master contact or as a duplicate. Every ID must be a contact in your team\u0027s Apollo workspace.\n\nApollo checks the whole request before it merges anything. If any check fails, no group is merged. If another merge is still processing one of your contacts, the request returns \u0060409\u0060. Send it again after that merge finishes.\n\n### One group or several\n\n* **1 group:** Apollo merges the contacts before it responds, and the response \u0060message\u0060 is \u0060Successfully Merged\u0060.\n* **2 to 100 groups:** Apollo merges the contacts in the background, and the response \u0060message\u0060 is \u0060Merge Scheduled\u0060. Pass the returned \u0060deduplication_job_id\u0060 to the \u003Ca href=\u0022https://docs.apollo.io/reference/view-a-contact-merge-job\u0022\u003Eview a contact merge job\u003C/a\u003E endpoint to check when the merge finishes.",
+        "operationId": "MergeDuplicateContacts",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MergeDuplicateContactsRequest"
+              },
+              "examples": {
+                "One group": {
+                  "value": {
+                    "contacts": [
+                      {
+                        "master_contact_id": "66e34b81740c50074e3d1bd4",
+                        "duplicate_contact_ids": [
+                          "66e34b81740c50074e3d1bd5",
+                          "66e34b81740c50074e3d1bd6"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "Two groups": {
+                  "value": {
+                    "contacts": [
+                      {
+                        "master_contact_id": "66e34b81740c50074e3d1bd4",
+                        "duplicate_contact_ids": [
+                          "66e34b81740c50074e3d1bd5",
+                          "66e34b81740c50074e3d1bd6"
+                        ]
+                      },
+                      {
+                        "master_contact_id": "66e34b81740c50074e3d1bd7",
+                        "duplicate_contact_ids": [
+                          "66e34b81740c50074e3d1bd8"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts200Response"
+                },
+                "examples": {
+                  "One group merged": {
+                    "value": {
+                      "message": "Successfully Merged",
+                      "deduplication_job_id": "6721f0c9a1b2c3d4e5f60718"
+                    }
+                  },
+                  "Several groups scheduled": {
+                    "value": {
+                      "message": "Merge Scheduled",
+                      "deduplication_job_id": "6721f0c9a1b2c3d4e5f60718"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts400Response"
+                },
+                "examples": {
+                  "Merge failed": {
+                    "value": {
+                      "error": "Something\u0027s wrong with your API request"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts401Response"
+                },
+                "examples": {
+                  "Invalid API key": {
+                    "value": {
+                      "error": "Invalid API key. See https://docs.apollo.io/reference/authentication for how to authenticate.",
+                      "error_details": {
+                        "code": "AUTH.AUTHENTICATION.API_KEY_INVALID",
+                        "message": "This API key is not valid.",
+                        "suggestions": [
+                          {
+                            "label": "Send a valid API key in the X-Api-Key header",
+                            "header": "X-Api-Key"
+                          },
+                          {
+                            "label": "Check how to create and send an Apollo API key",
+                            "url": "https://docs.apollo.io/reference/authentication"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  },
+                  "No credentials": {
+                    "value": {
+                      "error": "Invalid access credentials.",
+                      "error_details": {
+                        "code": "AUTH.AUTHENTICATION.CREDENTIALS_MISSING",
+                        "message": "This request carried no credential Apollo could authenticate.",
+                        "suggestions": [
+                          {
+                            "label": "Send your API key in the X-Api-Key header",
+                            "header": "X-Api-Key"
+                          },
+                          {
+                            "label": "Check how to authenticate against the Apollo API",
+                            "url": "https://docs.apollo.io/reference/authentication"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts403Response"
+                },
+                "examples": {
+                  "API key without this endpoint": {
+                    "value": {
+                      "error": "This API key is not authorized to access api/v1/duplicate_contacts/merge. Request an API key from your administrator that includes this endpoint in its configured scope.",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_ACCESS_DENIED",
+                        "message": "Your team is not permitted to call this endpoint.",
+                        "suggestions": [
+                          {
+                            "label": "Contact support@apollo.io if you need access to this endpoint",
+                            "url": "https://knowledge.apollo.io"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/duplicate_contacts/merge",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Access token without the contacts_deduplicate scope": {
+                    "value": {
+                      "error": "api/v1/duplicate_contacts/merge is not accessible with this access token",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_SCOPE_NOT_GRANTED",
+                        "message": "This access token does not carry the scope this endpoint needs.",
+                        "suggestions": [
+                          {
+                            "label": "Re-authorize requesting the scope this endpoint needs"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/duplicate_contacts/merge",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "409",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts409Response"
+                },
+                "examples": {
+                  "Contact in another merge": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.CONFLICT.CONTACTS_MERGE_IN_PROGRESS",
+                        "message": "Another merge is still processing one or more of these contacts. Try again after it finishes.",
+                        "suggestions": [
+                          {
+                            "label": "Wait for the other merge to finish, then send the request again"
+                          }
+                        ],
+                        "context": {
+                          "merging_contact_ids": {
+                            "value": [
+                              "66e34b81740c50074e3d1bd5"
+                            ],
+                            "description": "The contact IDs from the request that another merge is still processing"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "422",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts422Response"
+                },
+                "examples": {
+                  "Too many groups or duplicates": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.LIMIT.MERGE_LIMIT_EXCEEDED",
+                        "message": "A merge request can include at most 100 groups, and each group at most 10 duplicate contacts.",
+                        "suggestions": [],
+                        "context": {
+                          "group_count": {
+                            "value": 1,
+                            "description": "The number of merge groups in the request"
+                          },
+                          "oversized_group_master_contact_ids": {
+                            "value": [
+                              "66e34b81740c50074e3d1bd4"
+                            ],
+                            "description": "The master contact IDs of groups that list more than 10 duplicate contacts"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Contact not in your workspace": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.NOT_FOUND.CONTACTS_NOT_FOUND",
+                        "message": "One or more of these contact IDs is not a contact in your workspace.",
+                        "suggestions": [
+                          {
+                            "label": "Find the contact IDs with the search for contacts endpoint",
+                            "url": "https://docs.apollo.io/reference/search-for-contacts"
+                          }
+                        ],
+                        "context": {
+                          "contact_ids": {
+                            "value": [
+                              "66e34b81740c50074e3d1bd6"
+                            ],
+                            "description": "The contact IDs from the request that are missing, deleted, or in another workspace"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Master contact listed as a duplicate": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.VALIDATION.MASTER_CONTACT_LISTED_AS_DUPLICATE",
+                        "message": "A master contact cannot also be listed as a duplicate contact in the same request.",
+                        "suggestions": [],
+                        "context": {
+                          "master_contact_ids": {
+                            "value": [
+                              "66e34b81740c50074e3d1bd4"
+                            ],
+                            "description": "The master contact IDs from the request that are also listed as duplicates"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Contact listed more than once": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.VALIDATION.CONTACT_LISTED_MORE_THAN_ONCE",
+                        "message": "Each contact can appear only once in a merge request, as a master contact or as a duplicate contact.",
+                        "suggestions": [],
+                        "context": {
+                          "repeated_contact_ids": {
+                            "value": [
+                              "66e34b81740c50074e3d1bd5"
+                            ],
+                            "description": "The contact IDs that appear more than once in the request"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Group without duplicates": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.VALIDATION.DUPLICATE_CONTACT_IDS_MISSING",
+                        "message": "Each merge group must list at least one duplicate contact.",
+                        "suggestions": [
+                          {
+                            "label": "Remove groups that have no duplicates, or add their duplicate contact IDs",
+                            "parameter": "duplicate_contact_ids"
+                          }
+                        ],
+                        "context": {
+                          "empty_group_master_contact_ids": {
+                            "value": [
+                              "66e34b81740c50074e3d1bd4"
+                            ],
+                            "description": "The master contact IDs of groups that list no duplicate contacts"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "export_csv sent": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.VALIDATION.EXPORT_CSV_NOT_SUPPORTED",
+                        "message": "API callers cannot use export_csv. Omit it or set it to false.",
+                        "suggestions": [
+                          {
+                            "label": "Send the request without export_csv",
+                            "parameter": "export_csv"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  },
+                  "No contacts": {
+                    "value": {
+                      "error": "No contacts to merge"
+                    }
+                  },
+                  "contacts is not an array": {
+                    "value": {
+                      "error": "Invalid contacts type"
+                    }
+                  },
+                  "Malformed contact ID": {
+                    "value": {
+                      "error": "Invalid primary/duplicate contact id passed"
+                    }
+                  },
+                  "Invalid export_csv value": {
+                    "value": {
+                      "error": "Export csv can have values either true or false"
+                    }
+                  },
+                  "OAuth user is not an admin": {
+                    "value": {
+                      "error": "Only an admin user can can perform this action"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeDuplicateContacts429Response"
+                },
+                "examples": {
+                  "Too many requests": {
+                    "value": {
+                      "message": "The maximum number of api calls allowed for api/v1/duplicate_contacts/merge is 600 times per hour. Please upgrade your plan from https://app.apollo.io/#/settings/plans/upgrade.",
+                      "error_details": {
+                        "code": "USAGE.RATE_LIMIT.API_RATE_LIMIT_EXCEEDED",
+                        "message": "You have made more API requests than your plan allows in this time window.",
+                        "suggestions": [
+                          {
+                            "label": "Wait until the rate limit resets, then retry the API request."
+                          },
+                          {
+                            "label": "Check the Apollo Docs to understand API rate limits and how to use response headers to prevent rate-limit errors.",
+                            "url": "https://docs.apollo.io/reference/rate-limits"
+                          }
+                        ],
+                        "context": {
+                          "window": {
+                            "value": "hour",
+                            "description": "The rate limit window that was exhausted, such as \u0022minute\u0022 or \u0022hour\u0022"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/duplicate_contacts/merge_jobs/{id}": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "summary": "[BETA] View a contact merge job",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/duplicate_contacts/merge_job\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060contacts_deduplicate\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/5995459280525-View-and-Edit-Contacts\u0022 target=\u0022_blank\u0022\u003EContacts\u003C/a\u003E are people saved in Apollo.\u003Cbr\u003E\u003Cbr\u003EUse the view a contact merge job endpoint to check the progress of a merge started with the \u003Ca href=\u0022https://docs.apollo.io/reference/merge-duplicate-contacts\u0022\u003Emerge duplicate contacts\u003C/a\u003E endpoint. Pass the \u0060deduplication_job_id\u0060 from the merge response as the \u0060id\u0060 path parameter.\u003Cbr\u003E\u003Cbr\u003EA merge of 2 or more groups runs in the background. Call this endpoint until \u0060status\u0060 is \u0060succeeded\u0060 or \u0060failed\u0060. A merge of 1 group has already finished by the time the merge endpoint responds, so you don\u0027t need to check it.\n\n### Job status\n\n| \u0060status\u0060 | Meaning |\n| --- | --- |\n| \u0060queued\u0060 | The merge is waiting to start. |\n| \u0060running\u0060 | Apollo is merging the contacts. |\n| \u0060retrying\u0060 | The merge hit a temporary error. Apollo retries it automatically, up to 15 times, and then marks it \u0060failed\u0060. \u0060retry_count\u0060 shows the retries so far. |\n| \u0060succeeded\u0060 | The merge finished. The duplicate contacts are deleted. |\n| \u0060failed\u0060 | The merge stopped and won\u0027t be retried. Some groups may already be merged, and their duplicates deleted. The other contacts are released. To retry, send the groups again: a \u0060422\u0060 \u0060CONTACTS_NOT_FOUND\u0060 response lists in \u0060error_details.context.contact_ids\u0060 the contacts already merged and deleted. Remove those and send the request again. |",
+        "operationId": "ViewAContactMergeJob",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The \u0060deduplication_job_id\u0060 returned by the \u003Ca href=\u0022https://docs.apollo.io/reference/merge-duplicate-contacts\u0022\u003Emerge duplicate contacts endpoint\u003C/a\u003E. \u003Cbr\u003E\u003Cbr\u003EExample: \u00606721f0c9a1b2c3d4e5f60718\u0060",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewAContactMergeJob200Response"
+                },
+                "examples": {
+                  "Queued": {
+                    "value": {
+                      "deduplication_job_id": "6721f0c9a1b2c3d4e5f60718",
+                      "status": "queued",
+                      "master_contact_count": 2,
+                      "duplicate_contact_count": 3,
+                      "retry_count": 0,
+                      "created_at": "2026-10-29T09:00:02.000Z",
+                      "started_at": null,
+                      "finished_at": null
+                    }
+                  },
+                  "Retrying": {
+                    "value": {
+                      "deduplication_job_id": "6721f0c9a1b2c3d4e5f60718",
+                      "status": "retrying",
+                      "master_contact_count": 2,
+                      "duplicate_contact_count": 3,
+                      "retry_count": 2,
+                      "created_at": "2026-10-29T09:00:02.000Z",
+                      "started_at": "2026-10-29T09:00:05.000Z",
+                      "finished_at": null
+                    }
+                  },
+                  "Succeeded": {
+                    "value": {
+                      "deduplication_job_id": "6721f0c9a1b2c3d4e5f60718",
+                      "status": "succeeded",
+                      "master_contact_count": 2,
+                      "duplicate_contact_count": 3,
+                      "retry_count": 0,
+                      "created_at": "2026-10-29T09:00:02.000Z",
+                      "started_at": "2026-10-29T09:00:05.000Z",
+                      "finished_at": "2026-10-29T09:00:09.000Z"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewAContactMergeJob401Response"
+                },
+                "examples": {
+                  "Invalid API key": {
+                    "value": {
+                      "error": "Invalid API key. See https://docs.apollo.io/reference/authentication for how to authenticate.",
+                      "error_details": {
+                        "code": "AUTH.AUTHENTICATION.API_KEY_INVALID",
+                        "message": "This API key is not valid.",
+                        "suggestions": [
+                          {
+                            "label": "Send a valid API key in the X-Api-Key header",
+                            "header": "X-Api-Key"
+                          },
+                          {
+                            "label": "Check how to create and send an Apollo API key",
+                            "url": "https://docs.apollo.io/reference/authentication"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  },
+                  "No credentials": {
+                    "value": {
+                      "error": "Invalid access credentials.",
+                      "error_details": {
+                        "code": "AUTH.AUTHENTICATION.CREDENTIALS_MISSING",
+                        "message": "This request carried no credential Apollo could authenticate.",
+                        "suggestions": [
+                          {
+                            "label": "Send your API key in the X-Api-Key header",
+                            "header": "X-Api-Key"
+                          },
+                          {
+                            "label": "Check how to authenticate against the Apollo API",
+                            "url": "https://docs.apollo.io/reference/authentication"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewAContactMergeJob403Response"
+                },
+                "examples": {
+                  "API key without this endpoint": {
+                    "value": {
+                      "error": "This API key is not authorized to access api/v1/duplicate_contacts/merge_job. Request an API key from your administrator that includes this endpoint in its configured scope.",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_ACCESS_DENIED",
+                        "message": "Your team is not permitted to call this endpoint.",
+                        "suggestions": [
+                          {
+                            "label": "Contact support@apollo.io if you need access to this endpoint",
+                            "url": "https://knowledge.apollo.io"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/duplicate_contacts/merge_job",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Access token without the contacts_deduplicate scope": {
+                    "value": {
+                      "error": "api/v1/duplicate_contacts/merge_job is not accessible with this access token",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_SCOPE_NOT_GRANTED",
+                        "message": "This access token does not carry the scope this endpoint needs.",
+                        "suggestions": [
+                          {
+                            "label": "Re-authorize requesting the scope this endpoint needs"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/duplicate_contacts/merge_job",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "404",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewAContactMergeJob404Response"
+                },
+                "examples": {
+                  "Merge job not found": {
+                    "value": {
+                      "error_details": {
+                        "code": "DEDUPLICATION.NOT_FOUND.DEDUPLICATION_JOB_NOT_FOUND",
+                        "message": "No contact merge job with this ID exists in your workspace.",
+                        "suggestions": [
+                          {
+                            "label": "Use the deduplication_job_id returned by the bulk merge endpoint",
+                            "parameter": "id"
+                          }
+                        ],
+                        "context": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "422",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewAContactMergeJob422Response"
+                },
+                "examples": {
+                  "Malformed job ID": {
+                    "value": {
+                      "error": "Parameters misconfigured. not-an-id is not a valid ID"
+                    }
+                  },
+                  "OAuth user is not an admin": {
+                    "value": {
+                      "error": "Only an admin user can can perform this action"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewAContactMergeJob429Response"
+                },
+                "examples": {
+                  "Too many requests": {
+                    "value": {
+                      "message": "The maximum number of api calls allowed for api/v1/duplicate_contacts/merge_job is 600 times per hour. Please upgrade your plan from https://app.apollo.io/#/settings/plans/upgrade.",
+                      "error_details": {
+                        "code": "USAGE.RATE_LIMIT.API_RATE_LIMIT_EXCEEDED",
+                        "message": "You have made more API requests than your plan allows in this time window.",
+                        "suggestions": [
+                          {
+                            "label": "Wait until the rate limit resets, then retry the API request."
+                          },
+                          {
+                            "label": "Check the Apollo Docs to understand API rate limits and how to use response headers to prevent rate-limit errors.",
+                            "url": "https://docs.apollo.io/reference/rate-limits"
+                          }
+                        ],
+                        "context": {
+                          "window": {
+                            "value": "hour",
+                            "description": "The rate limit window that was exhausted, such as \u0022minute\u0022 or \u0022hour\u0022"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/contacts/{contactId}/opportunities": {
       "post": {
         "tags": [
@@ -8326,7 +9013,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -8598,7 +9285,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -8693,7 +9380,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Result": {
@@ -8788,7 +9475,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Result": {
@@ -9043,7 +9730,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Invalid API Key": {
@@ -9151,7 +9838,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Result": {
@@ -9233,7 +9920,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -9305,7 +9992,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -9442,7 +10129,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -9560,7 +10247,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Result": {
@@ -9646,7 +10333,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -9825,7 +10512,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -9912,7 +10599,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -10110,7 +10797,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -10532,7 +11219,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddContactsToSequence401PlainResponseSchema"
+                  "$ref": "#/components/schemas/AddContactsToSequence401PlainResponseSchemaError"
                 },
                 "examples": {
                   "Invalid API Key": {
@@ -10912,7 +11599,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -11332,7 +12019,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -11395,7 +12082,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateSequence429ResponseSchema"
+                  "$ref": "#/components/schemas/CreateSequence429ResponseSchemaError"
                 },
                 "examples": {
                   "Concurrent request for the same team": {
@@ -11511,7 +12198,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -11700,7 +12387,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -11950,7 +12637,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -12141,7 +12828,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -12342,7 +13029,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -12586,7 +13273,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -12714,7 +13401,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -13859,7 +14546,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14031,7 +14718,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14194,7 +14881,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14350,7 +15037,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14477,7 +15164,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14584,7 +15271,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14670,7 +15357,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14712,7 +15399,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14897,7 +15584,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -14988,7 +15675,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Missing or invalid API key": {
@@ -15119,7 +15806,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Missing or invalid API key": {
@@ -15275,7 +15962,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Missing or invalid API key": {
@@ -15413,7 +16100,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Missing or invalid API key": {
@@ -15611,7 +16298,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -15700,7 +16387,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -15877,7 +16564,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -15979,7 +16666,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -19367,7 +20054,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -19383,7 +20070,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetOrganizationsId403ResponseSchema"
+                  "$ref": "#/components/schemas/GetOrganizationsId403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -19400,7 +20087,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetOrganizationsId422ResponseSchema"
+                  "$ref": "#/components/schemas/GetOrganizationsId422ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -19505,7 +20192,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -19521,7 +20208,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPeopleId403ResponseSchema"
+                  "$ref": "#/components/schemas/GetPeopleId403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -19538,7 +20225,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPeopleId422ResponseSchema"
+                  "$ref": "#/components/schemas/GetPeopleId422ResponseSchemaError"
                 },
                 "examples": {
                   "Person Does Not Exist": {
@@ -19712,7 +20399,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -19727,7 +20414,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPhoneCallssearch403ResponseSchema"
+                  "$ref": "#/components/schemas/GetPhoneCallssearch403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -19784,7 +20471,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -19799,7 +20486,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetEmailstats403ResponseSchema"
+                  "$ref": "#/components/schemas/GetEmailstats403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -19816,7 +20503,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetEmailstats422ResponseSchema"
+                  "$ref": "#/components/schemas/GetEmailstats422ResponseSchemaError"
                 },
                 "examples": {
                   "Email Not Available - Check ID": {
@@ -20001,7 +20688,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -20261,7 +20948,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Unauthorized": {
@@ -20344,7 +21031,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -20460,7 +21147,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -21139,7 +21826,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -21155,7 +21842,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PhonecallsCreate403ResponseSchema"
+                  "$ref": "#/components/schemas/PhonecallsCreate403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -21726,7 +22413,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -21742,7 +22429,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutPhoneCallsupdate403ResponseSchema"
+                  "$ref": "#/components/schemas/PutPhoneCallsupdate403ResponseSchemaError"
                 },
                 "examples": {
                   "Need Master API Key": {
@@ -22002,7 +22689,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API Key": {
@@ -22131,7 +22818,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -22245,7 +22932,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -22362,7 +23049,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -22467,7 +23154,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -22698,7 +23385,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -23225,7 +23912,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "description": "Fallback media schema"
+                  "$ref": "#/components/schemas/ResponseError"
                 },
                 "examples": {
                   "Check API key": {
@@ -23997,19 +24684,6 @@
           }
         }
       },
-      "ErrorDetailsContext": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ErrorDetailsContextAdditionalProperties"
-        },
-        "description": "Values from your request that explain the refusal. Each entry is an object rather than a bare value, so read \u0060context.\u003Ckey\u003E.value\u0060. Absent when the error needs no context.",
-        "example": {
-          "window": {
-            "value": "hourly",
-            "description": "The rate-limit window your request exceeded"
-          }
-        }
-      },
       "ErrorDetailsContextAdditionalProperties": {
         "type": "object",
         "properties": {
@@ -24283,29 +24957,6 @@
             }
           }
         }
-      },
-      "BulkPeopleEnrichment400Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponseAddPeopleToEnrich"
-          },
-          {
-            "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponseMoreThan10People"
-          },
-          {
-            "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponsePollOnlyWithWebhookUrl"
-          }
-        ]
-      },
-      "BulkPeopleEnrichment422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/BulkPeopleEnrichment422ResponseOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/BulkPeopleEnrichment422ResponseOneOf2"
-          }
-        ]
       },
       "OrganizationEnrichment200Response": {
         "type": "object",
@@ -24581,19 +25232,6 @@
           }
         }
       },
-      "UpdateAnAccount422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpdateAnAccount422ResponseCheckAccountId"
-          },
-          {
-            "$ref": "#/components/schemas/UpdateAnAccount422ResponseCheckOwnerId"
-          },
-          {
-            "$ref": "#/components/schemas/UpdateAnAccount422ResponseCheckAccountStageId"
-          }
-        ]
-      },
       "GetAccountsId200Response": {
         "type": "object",
         "properties": {
@@ -24609,9 +25247,6 @@
             "items": {}
           }
         }
-      },
-      "GetAccountsId403Response": {
-        "type": "string"
       },
       "GetAccountsId422Response": {
         "type": "object",
@@ -24702,16 +25337,6 @@
           },
           "num_fetch_result": {}
         }
-      },
-      "SearchForAccounts422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SearchForAccounts422ResponseChooseValidSortByFieldOption"
-          },
-          {
-            "$ref": "#/components/schemas/SearchForAccounts422ResponseCheckAccountStageIDs"
-          }
-        ]
       },
       "BulkCreateAccountsRequest": {
         "required": [
@@ -24839,16 +25464,6 @@
           }
         }
       },
-      "UpdateAccountOwnership422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpdateAccountOwnership422ResponseAddAccountIDs"
-          },
-          {
-            "$ref": "#/components/schemas/UpdateAccountOwnership422ResponseAddOwnerId"
-          }
-        ]
-      },
       "ListAccountStages200Response": {
         "type": "object",
         "properties": {
@@ -24950,16 +25565,6 @@
           }
         }
       },
-      "CreateAContact422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CreateAContact422ResponseCheckTheAccountId"
-          },
-          {
-            "$ref": "#/components/schemas/CreateAContact422ResponseCheckTheContactStageId"
-          }
-        ]
-      },
       "UpdateAContactRequest": {
         "type": "object",
         "properties": {
@@ -25045,19 +25650,6 @@
           }
         }
       },
-      "UpdateAContact422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpdateAContact422ResponseCheckTheAccountId"
-          },
-          {
-            "$ref": "#/components/schemas/UpdateAContact422ResponseCheckTheContactStageId"
-          },
-          {
-            "$ref": "#/components/schemas/UpdateAContact422ResponseContactHasBeenDeleted"
-          }
-        ]
-      },
       "ViewAContact200Response": {
         "type": "object",
         "properties": {
@@ -25065,9 +25657,6 @@
             "$ref": "#/components/schemas/ViewAContact200ResponseContact"
           }
         }
-      },
-      "ViewAContact401Response": {
-        "type": "string"
       },
       "FindPotentialDuplicateContact200Response": {
         "type": "object",
@@ -25094,8 +25683,111 @@
         },
         "description": "Returned when the path ID is not a valid Apollo ID."
       },
-      "ViewAssociatedDealsRequest": {
-        "type": "object"
+      "MergeDuplicateContactsRequest": {
+        "required": [
+          "contacts"
+        ],
+        "type": "object",
+        "properties": {
+          "contacts": {
+            "maxItems": 100,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MergeDuplicateContactsRequestContactsItem"
+            },
+            "description": "The groups of duplicate contacts to merge, from 1 to 100 groups. Each contact can appear only once in the request. \u003Cbr\u003E\u003Cbr\u003EA request with 1 group is merged before the response returns. A request with 2 or more groups is merged in the background."
+          },
+          "export_csv": {
+            "type": "boolean",
+            "description": "Not supported for API requests. Omit it or set it to \u0060false\u0060. Sending \u0060true\u0060 returns \u0060422\u0060."
+          }
+        }
+      },
+      "MergeDuplicateContacts200Response": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "$ref": "#/components/schemas/MergeDuplicateContacts200ResponseMessage"
+          },
+          "deduplication_job_id": {
+            "type": "string",
+            "description": "The ID of the merge job. Pass it to the \u003Ca href=\u0022https://docs.apollo.io/reference/view-a-contact-merge-job\u0022\u003Eview a contact merge job endpoint\u003C/a\u003E to check the merge status.",
+            "example": "6721f0c9a1b2c3d4e5f60718"
+          }
+        }
+      },
+      "MergeDuplicateContacts400Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Something\u0027s wrong with your API request"
+          }
+        },
+        "description": "Returned when a 1-group merge fails while Apollo merges it. The contacts are released, so you can send the request again."
+      },
+      "ViewAContactMergeJob200Response": {
+        "type": "object",
+        "properties": {
+          "deduplication_job_id": {
+            "type": "string",
+            "description": "The ID of the merge job.",
+            "example": "6721f0c9a1b2c3d4e5f60718"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ViewAContactMergeJob200ResponseStatus"
+          },
+          "master_contact_count": {
+            "type": "integer",
+            "description": "The number of groups in the merge, one per master contact.",
+            "example": 2
+          },
+          "duplicate_contact_count": {
+            "type": "integer",
+            "description": "The number of duplicate contacts across all groups.",
+            "example": 3
+          },
+          "retry_count": {
+            "type": "integer",
+            "description": "How many times Apollo has retried the merge after a temporary error, up to 15.",
+            "example": 0
+          },
+          "created_at": {
+            "type": "string",
+            "description": "When the merge was requested.",
+            "format": "date-time",
+            "example": "2026-10-29T09:00:02.000Z"
+          },
+          "started_at": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "When Apollo first started the merge. \u0060null\u0060 while the job is \u0060queued\u0060.",
+            "format": "date-time",
+            "example": "2026-10-29T09:00:05.000Z"
+          },
+          "finished_at": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "When the merge succeeded or failed. \u0060null\u0060 until \u0060status\u0060 is \u0060succeeded\u0060 or \u0060failed\u0060.",
+            "format": "date-time",
+            "example": "2026-10-29T09:00:09.000Z"
+          }
+        }
+      },
+      "ViewAContactMergeJob422Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Parameters misconfigured. not-an-id is not a valid ID"
+          }
+        },
+        "description": "Returned when the path ID is not a valid Apollo ID, or when the user who authorized an OAuth access token is not an admin."
       },
       "ViewAssociatedDeals200Response": {
         "type": "object",
@@ -25399,9 +26091,6 @@
           }
         }
       },
-      "ListContactStages200Response": {
-        "type": "string"
-      },
       "ListEmailSchedules200Response": {
         "type": "object",
         "properties": {
@@ -25458,16 +26147,6 @@
           }
         }
       },
-      "CreateDeal422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CreateDeal422ResponseEnterADealName"
-          },
-          {
-            "$ref": "#/components/schemas/CreateDeal422ResponseCheckTheEnteredId"
-          }
-        ]
-      },
       "ListAllDeals200Response": {
         "type": "object",
         "properties": {
@@ -25515,16 +26194,6 @@
           "num_fetch_result": {}
         }
       },
-      "ListAllDeals403Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/ListAllDeals403ResponseNeedMasterApiKey"
-          },
-          {
-            "$ref": "#/components/schemas/ListAllDeals403ResponseCheckApolloPricingPlan"
-          }
-        ]
-      },
       "ViewDeal200Response": {
         "type": "object",
         "properties": {
@@ -25546,16 +26215,6 @@
             "example": "Not Found"
           }
         }
-      },
-      "ViewDeal422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/ViewDeal422ResponseAddADealId"
-          },
-          {
-            "$ref": "#/components/schemas/ViewDeal422ResponseDoNotHaveAccessToDeal"
-          }
-        ]
       },
       "UpdateDealRequest": {
         "type": "object",
@@ -25626,16 +26285,6 @@
           "num_fetch_result": {}
         }
       },
-      "SearchForSequences403Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SearchForSequences403ResponseNeedMasterApiKey"
-          },
-          {
-            "$ref": "#/components/schemas/SearchForSequences403ResponseCheckApolloPricingPlan"
-          }
-        ]
-      },
       "AddContactsToSequence200Response": {
         "required": [
           "contacts",
@@ -25681,25 +26330,6 @@
             "$ref": "#/components/schemas/AddContactsToSequence200ResponseSignalsHash"
           }
         }
-      },
-      "AddContactsToSequence401PlainResponse": {
-        "type": "string"
-      },
-      "AddContactsToSequence422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/AddContactsToSequence422ResponseAddContactIDs"
-          },
-          {
-            "$ref": "#/components/schemas/AddContactsToSequence422ResponseAddIDs"
-          },
-          {
-            "$ref": "#/components/schemas/AddContactsToSequence422ResponseInactiveEmailAccounts"
-          },
-          {
-            "$ref": "#/components/schemas/AddContactsToSequence422ResponseAggregateAccountsNotSupported"
-          }
-        ]
       },
       "UpdateContactStatusSequence200Response": {
         "type": "object",
@@ -25849,9 +26479,6 @@
             }
           }
         }
-      },
-      "CreateSequence429Response": {
-        "type": "string"
       },
       "UpdateSequenceRequest": {
         "type": "object",
@@ -26234,26 +26861,6 @@
           "num_fetch_result": {}
         }
       },
-      "SearchTasks403Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SearchTasks403ResponseNeedMasterApiKey"
-          },
-          {
-            "$ref": "#/components/schemas/SearchTasks403ResponseCheckApolloPricingPlan"
-          }
-        ]
-      },
-      "SearchTasks422Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SearchTasks422ResponseAddressTheRequiredParameters"
-          },
-          {
-            "$ref": "#/components/schemas/SearchTasks422ResponseTooManySearchResultsPerPage"
-          }
-        ]
-      },
       "CreateAnEmailDraftRequest": {
         "required": [
           "contact_id"
@@ -26528,16 +27135,6 @@
           "num_fetch_result": {}
         }
       },
-      "GetAListOfUsers403Response": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/GetAListOfUsers403ResponseNeedMasterApiKey"
-          },
-          {
-            "$ref": "#/components/schemas/GetAListOfUsers403ResponseCheckApolloPricingPlan"
-          }
-        ]
-      },
       "GetCurrentUserProfile200Response": {
         "type": "object",
         "properties": {
@@ -26636,12 +27233,6 @@
               "$ref": "#/components/schemas/GetAListOfEmailAccounts200ResponseEmailAccountsItem"
             }
           }
-        }
-      },
-      "GetAListOfAllLists200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GetAListOfAllLists200ResponseItem"
         }
       },
       "CreateAListRequest": {
@@ -26917,12 +27508,6 @@
           }
         }
       },
-      "GetOrganizationsId403Response": {
-        "type": "string"
-      },
-      "GetOrganizationsId422Response": {
-        "type": "string"
-      },
       "GetPeopleId200Response": {
         "type": "object",
         "properties": {
@@ -26930,30 +27515,6 @@
             "$ref": "#/components/schemas/GetPeopleId200ResponsePerson"
           }
         }
-      },
-      "GetPeopleId403Response": {
-        "type": "string"
-      },
-      "GetPeopleId422Response": {
-        "type": "string"
-      },
-      "GetPhoneCallssearch200Response": {
-        "type": "string"
-      },
-      "GetPhoneCallssearch403Response": {
-        "type": "string"
-      },
-      "GetEmailstats200Response": {
-        "type": "string"
-      },
-      "GetEmailstats403Response": {
-        "type": "string"
-      },
-      "GetEmailstats422Response": {
-        "type": "string"
-      },
-      "EmailerMessagesSearch200Response": {
-        "type": "string"
       },
       "PollWebhookResult200Response": {
         "type": "object",
@@ -27079,9 +27640,6 @@
           }
         }
       },
-      "PhonecallsCreate403Response": {
-        "type": "string"
-      },
       "PutPhoneCallsupdate200Response": {
         "type": "object",
         "properties": {
@@ -27092,9 +27650,6 @@
             "$ref": "#/components/schemas/PutPhoneCallsupdate200ResponseContact"
           }
         }
-      },
-      "PutPhoneCallsupdate403Response": {
-        "type": "string"
       },
       "NewsArticlesSearch200Response": {
         "type": "object",
@@ -27615,10 +28170,6 @@
             "type": "string"
           }
         }
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
       },
       "PollAnAssistantTask401Response": {
         "type": "object",
@@ -28523,6 +29074,134 @@
         "description": "Returned when the ID doesn\u0027t belong to a contact in your workspace, or the contact has been deleted."
       },
       "FindPotentialDuplicateContact429Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "message": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "MergeDuplicateContacts401Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "MergeDuplicateContacts403Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          },
+          "error_code": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "MergeDuplicateContacts409Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        },
+        "description": "Returned when another merge is still processing one or more of the contacts. Nothing is merged."
+      },
+      "MergeDuplicateContacts422Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "example": "No contacts to merge"
+          }
+        },
+        "description": "Returned when the request fails a check. Nothing is merged. Request checks return \u0060error_details\u0060; malformed requests and the admin check return a single \u0060error\u0060 string."
+      },
+      "MergeDuplicateContacts429Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "message": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "ViewAContactMergeJob401Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "ViewAContactMergeJob403Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          },
+          "error": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          },
+          "error_code": {
+            "type": "string",
+            "description": "Legacy error field. Removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload.",
+            "deprecated": true
+          }
+        }
+      },
+      "ViewAContactMergeJob404Response": {
+        "type": "object",
+        "properties": {
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        },
+        "description": "Returned when no merge job with this ID exists in your team\u0027s Apollo workspace."
+      },
+      "ViewAContactMergeJob429Response": {
         "type": "object",
         "properties": {
           "error_details": {
@@ -30344,218 +31023,6 @@
           }
         }
       },
-      "BulkPeopleEnrichment400ResponseAddPeopleToEnrich": {
-        "title": "Add people to enrich",
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "example": "failed"
-          },
-          "error_code": {
-            "type": "string",
-            "example": "INVALID_REQUEST"
-          },
-          "error_message": {
-            "type": "string",
-            "example": "invalid request, missing details"
-          }
-        }
-      },
-      "BulkPeopleEnrichment400ResponseMoreThan10People": {
-        "title": "More than 10 people",
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "example": "failed"
-          },
-          "error_code": {
-            "type": "string",
-            "example": "RECORD_LIMIT_EXCEEDED"
-          },
-          "error_message": {
-            "type": "string",
-            "example": "domain count cannot be more than 10"
-          }
-        }
-      },
-      "BulkPeopleEnrichment400ResponsePollOnlyWithWebhookUrl": {
-        "title": "poll_only with webhook_url",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only)."
-          }
-        }
-      },
-      "BulkPeopleEnrichment422ResponseOneOf1": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "example": "failed"
-          },
-          "error_code": {
-            "type": "string",
-            "example": "UNKNOWN_ERROR"
-          },
-          "error_message": {
-            "type": "string",
-            "example": "undefined method \u0060length\u0027 for an instance of ActionController::Parameters"
-          }
-        }
-      },
-      "BulkPeopleEnrichment422ResponseOneOf2": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "example": "failed"
-          },
-          "error_code": {
-            "type": "string",
-            "example": "UNKNOWN_ERROR"
-          },
-          "error_message": {
-            "type": "string",
-            "example": "no implicit conversion of Symbol into Integer"
-          }
-        }
-      },
-      "UpdateAnAccount422ResponseCheckAccountId": {
-        "title": "Check account ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. account_id is not a valid ID"
-          }
-        }
-      },
-      "UpdateAnAccount422ResponseCheckOwnerId": {
-        "title": "Check owner ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 23423423 is not a valid ID"
-          }
-        }
-      },
-      "UpdateAnAccount422ResponseCheckAccountStageId": {
-        "title": "Check account stage ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 78977 is not a valid ID"
-          }
-        }
-      },
-      "SearchForAccounts422ResponseChooseValidSortByFieldOption": {
-        "title": "Choose valid sort_by_field option",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Invalid sort criteria"
-          },
-          "skip_alert_dialog": {
-            "type": "boolean",
-            "default": true,
-            "example": true
-          }
-        }
-      },
-      "SearchForAccounts422ResponseCheckAccountStageIDs": {
-        "title": "Check account stage IDs",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Your search parameters are entered incorrectly. Did you try to edit the URL directly?"
-          }
-        }
-      },
-      "UpdateAccountOwnership422ResponseAddAccountIDs": {
-        "title": "Add account IDs",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Required parameter \u0027account_ids\u0027 missing"
-          }
-        }
-      },
-      "UpdateAccountOwnership422ResponseAddOwnerId": {
-        "title": "Add owner ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Required parameter \u0027owner_id\u0027 missing"
-          }
-        }
-      },
-      "CreateAContact422ResponseCheckTheAccountId": {
-        "title": "Check the account ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 63f53afe4ceeca00016bdd2fsfsdf is not a valid ID"
-          }
-        }
-      },
-      "CreateAContact422ResponseCheckTheContactStageId": {
-        "title": "Check the contact stage ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 2342432 is not a valid ID"
-          }
-        }
-      },
-      "UpdateAContact422ResponseCheckTheAccountId": {
-        "title": "Check the account ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 5234234 is not a valid ID"
-          }
-        }
-      },
-      "UpdateAContact422ResponseCheckTheContactStageId": {
-        "title": "Check the contact stage ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 2342432 is not a valid ID"
-          }
-        }
-      },
-      "UpdateAContact422ResponseContactHasBeenDeleted": {
-        "title": "Contact has been deleted",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Cannot update contact as it is deleted."
-          },
-          "deleted_contact_ids": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "example": "66e34b81740c50074e3d1bd4"
-            }
-          }
-        }
-      },
       "FindPotentialDuplicateContact200ResponseContactsItem": {
         "anyOf": [
           {
@@ -30582,94 +31049,6 @@
         "properties": {
           "entity_progress_job": {
             "$ref": "#/components/schemas/BulkUpdateContacts200ResponseOneOf2EntityProgressJob"
-          }
-        }
-      },
-      "CreateDeal422ResponseEnterADealName": {
-        "title": "Enter a deal name",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Name is required"
-          }
-        }
-      },
-      "CreateDeal422ResponseCheckTheEnteredId": {
-        "title": "Check the entered ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. 12345 is not a valid ID"
-          }
-        }
-      },
-      "ListAllDeals403ResponseNeedMasterApiKey": {
-        "title": "Need master API key",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "This API key is not authorized to access deals/api/v1/opportunities/search. Request an API key from your administrator that includes this endpoint in its configured scope."
-          },
-          "error_code": {
-            "type": "string",
-            "example": "API_INACCESSIBLE"
-          }
-        }
-      },
-      "ListAllDeals403ResponseCheckApolloPricingPlan": {
-        "title": "Check Apollo pricing plan",
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "example": "This endpoint is only available to Apollo users on paid plans."
-          }
-        }
-      },
-      "ViewDeal422ResponseAddADealId": {
-        "title": "Add a deal ID",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Parameters misconfigured. opportunity_id is not a valid ID"
-          }
-        }
-      },
-      "ViewDeal422ResponseDoNotHaveAccessToDeal": {
-        "title": "Do not have access to deal",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "You are not authorized to view this page."
-          }
-        }
-      },
-      "SearchForSequences403ResponseNeedMasterApiKey": {
-        "title": "Need master API key",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "This API key is not authorized to access api/v1/emailer_campaigns/search. Request an API key from your administrator that includes this endpoint in its configured scope."
-          },
-          "error_code": {
-            "type": "string",
-            "example": "API_INACCESSIBLE"
-          }
-        }
-      },
-      "SearchForSequences403ResponseCheckApolloPricingPlan": {
-        "title": "Check Apollo pricing plan",
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "example": "This endpoint is only available to Apollo users on paid plans."
           }
         }
       },
@@ -30762,114 +31141,6 @@
             "$ref": "#/components/schemas/AddContactsToSequence200ResponseEmailerTouchesItemUniqueScheduledOneOf2"
           }
         ]
-      },
-      "AddContactsToSequence422ResponseAddContactIDs": {
-        "title": "Add contact IDs",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Please specify either contact_ids or label_names."
-          }
-        }
-      },
-      "AddContactsToSequence422ResponseAddIDs": {
-        "title": "Add IDs",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Please specify a emailer_campaign_id and send_email_from_email_account_id."
-          }
-        }
-      },
-      "AddContactsToSequence422ResponseInactiveEmailAccounts": {
-        "title": "Inactive Email Accounts",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "These mailboxes are no longer active. test@example.com"
-          }
-        }
-      },
-      "AddContactsToSequence422ResponseAggregateAccountsNotSupported": {
-        "title": "Aggregate Accounts Not Supported",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Aggregate accounts are not supported for this sequence. These are the aggregate accounts: 6633baaece5fbd01c791d7ca"
-          }
-        }
-      },
-      "SearchTasks403ResponseNeedMasterApiKey": {
-        "title": "Need master API key",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "This API key is not authorized to access api/v1/tasks/search. Request an API key from your administrator that includes this endpoint in its configured scope."
-          },
-          "error_code": {
-            "type": "string",
-            "example": "API_INACCESSIBLE"
-          }
-        }
-      },
-      "SearchTasks403ResponseCheckApolloPricingPlan": {
-        "title": "Check Apollo pricing plan",
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "example": "This endpoint is only available to Apollo users on paid plans."
-          }
-        }
-      },
-      "SearchTasks422ResponseAddressTheRequiredParameters": {
-        "title": "Address the required parameters",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Something\u0027s wrong with your API request. undefined method \u0060[]\u0027 for nil"
-          }
-        }
-      },
-      "SearchTasks422ResponseTooManySearchResultsPerPage": {
-        "title": "Too many search results per page",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "Per page not supported"
-          }
-        }
-      },
-      "GetAListOfUsers403ResponseNeedMasterApiKey": {
-        "title": "Need master API key",
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string",
-            "example": "This API key is not authorized to access api/v1/users/search. Request an API key from your administrator that includes this endpoint in its configured scope."
-          },
-          "error_code": {
-            "type": "string",
-            "example": "API_INACCESSIBLE"
-          }
-        }
-      },
-      "GetAListOfUsers403ResponseCheckApolloPricingPlan": {
-        "title": "Check Apollo pricing plan",
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "example": "This endpoint is only available to Apollo users on paid plans."
-          }
-        }
       },
       "PostApiusage200ResponseAnyOf2": {
         "type": "object",
@@ -33770,6 +34041,28 @@
           "updated_at": {
             "type": "string",
             "example": "2023-01-02T00:00:00.000Z"
+          }
+        }
+      },
+      "MergeDuplicateContactsRequestContactsItem": {
+        "required": [
+          "master_contact_id",
+          "duplicate_contact_ids"
+        ],
+        "type": "object",
+        "properties": {
+          "master_contact_id": {
+            "type": "string",
+            "description": "The Apollo ID for the contact to keep. The duplicates in this group are merged into it. \u003Cbr\u003E\u003Cbr\u003ETo find contact IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/search-for-contacts\u0022\u003Esearch for contacts endpoint\u003C/a\u003E or the \u003Ca href=\u0022https://docs.apollo.io/reference/find-potential-duplicate-contact\u0022\u003Efind a potential duplicate contact endpoint\u003C/a\u003E. \u003Cbr\u003E\u003Cbr\u003EExample: \u006066e34b81740c50074e3d1bd4\u0060"
+          },
+          "duplicate_contact_ids": {
+            "maxItems": 10,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The Apollo IDs for the duplicate contacts to merge into the master contact, up to 10 per group. Apollo deletes these contacts after the merge. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060[\u002266e34b81740c50074e3d1bd5\u0022]\u0060"
           }
         }
       },
@@ -38266,65 +38559,6 @@
             "type": "boolean",
             "default": true,
             "example": true
-          }
-        }
-      },
-      "GetAListOfAllLists200ResponseItem": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string",
-            "example": "66e9e215ece19801b2199981"
-          },
-          "cached_count": {
-            "type": "integer",
-            "default": 0,
-            "example": 1
-          },
-          "concurrency_locks": {
-            "$ref": "#/components/schemas/GetAListOfAllLists200ResponseItemConcurrencyLocks"
-          },
-          "created_at": {
-            "type": "string",
-            "example": "2024-09-17T20:09:57.863Z"
-          },
-          "modality": {
-            "type": "string",
-            "example": "emailer_campaigns"
-          },
-          "name": {
-            "type": "string",
-            "example": "Dublin market"
-          },
-          "need_cached_count_update": {
-            "type": "boolean",
-            "default": true,
-            "example": false
-          },
-          "needs_count_update_at": {
-            "type": "string",
-            "example": "2024-09-17T20:09:57.885\u002B00:00"
-          },
-          "rule_config_template_id": {},
-          "team_id": {
-            "type": "string",
-            "example": "6095a710bd01d100a506d4ac"
-          },
-          "updated_at": {
-            "type": "string",
-            "example": "2024-09-17T20:09:57.910Z"
-          },
-          "user_id": {
-            "type": "string",
-            "example": "66302798d03b9601c7934ebf"
-          },
-          "id": {
-            "type": "string",
-            "example": "66e9e215ece19801b2199981"
-          },
-          "key": {
-            "type": "string",
-            "example": "66e9e215ece19801b2199981"
           }
         }
       },
@@ -45891,9 +46125,6 @@
           }
         }
       },
-      "GetAListOfAllLists200ResponseItemConcurrencyLocks": {
-        "type": "object"
-      },
       "AddRecordsToAList200ResponseEntityProgressJobParams": {
         "type": "object"
       },
@@ -50278,6 +50509,65 @@
           ]
         }
       },
+      "MergeDuplicateContacts200ResponseMessage": {
+        "enum": [
+          "Successfully Merged",
+          "Merge Scheduled"
+        ],
+        "type": "string",
+        "description": "\u0060Successfully Merged\u0060 when the request had 1 group and the merge is done. \u0060Merge Scheduled\u0060 when the request had 2 or more groups and the merge runs in the background.",
+        "x-ms-enum": {
+          "name": "MergeDuplicateContacts200ResponseMessage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Successfully Merged",
+              "name": "SuccessfullyMerged"
+            },
+            {
+              "value": "Merge Scheduled",
+              "name": "MergeScheduled"
+            }
+          ]
+        }
+      },
+      "ViewAContactMergeJob200ResponseStatus": {
+        "enum": [
+          "queued",
+          "running",
+          "retrying",
+          "succeeded",
+          "failed"
+        ],
+        "type": "string",
+        "description": "The merge status. \u0060succeeded\u0060 and \u0060failed\u0060 are final.",
+        "x-ms-enum": {
+          "name": "ViewAContactMergeJob200ResponseStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "queued",
+              "name": "Queued"
+            },
+            {
+              "value": "running",
+              "name": "Running"
+            },
+            {
+              "value": "retrying",
+              "name": "Retrying"
+            },
+            {
+              "value": "succeeded",
+              "name": "Succeeded"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
       "UpdateSequenceRequestCreationType": {
         "enum": [
           "draft",
@@ -51635,6 +51925,21 @@
           ]
         }
       },
+      "ResponseError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "text/plain",
+        "x-client-raw-error-schema": {
+          "description": "Fallback media schema"
+        },
+        "x-client-original-error-schema": {
+          "description": "Fallback media schema"
+        }
+      },
       "BulkPeopleEnrichment400ResponseError": {
         "type": "object",
         "properties": {
@@ -51677,6 +51982,21 @@
         },
         "x-client-original-error-schema": {
           "$ref": "#/components/schemas/BulkPeopleEnrichment422Response"
+        }
+      },
+      "GetAccountsId403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetAccountsId403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetAccountsId403ResponseSchema"
         }
       },
       "UpdateAnAccount422ResponseError": {
@@ -51730,6 +52050,21 @@
         },
         "x-client-original-error-schema": {
           "$ref": "#/components/schemas/CreateAContact422Response"
+        }
+      },
+      "ViewAContact401ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/ViewAContact401ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ViewAContact401ResponseSchema"
         }
       },
       "UpdateAContact422ResponseError": {
@@ -51815,6 +52150,21 @@
           "$ref": "#/components/schemas/SearchForSequences403Response"
         }
       },
+      "AddContactsToSequence401PlainResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "text/plain",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/AddContactsToSequence401PlainResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/AddContactsToSequence401PlainResponseSchema"
+        }
+      },
       "AddContactsToSequence422ResponseError": {
         "type": "object",
         "properties": {
@@ -51825,6 +52175,21 @@
         },
         "x-client-original-error-schema": {
           "$ref": "#/components/schemas/AddContactsToSequence422Response"
+        }
+      },
+      "CreateSequence429ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/CreateSequence429ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateSequence429ResponseSchema"
         }
       },
       "SearchTasks403ResponseError": {
@@ -51877,6 +52242,141 @@
         },
         "x-client-original-error-schema": {
           "$ref": "#/components/schemas/GetAListOfUsers403Response"
+        }
+      },
+      "GetOrganizationsId403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetOrganizationsId403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetOrganizationsId403ResponseSchema"
+        }
+      },
+      "GetOrganizationsId422ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetOrganizationsId422ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetOrganizationsId422ResponseSchema"
+        }
+      },
+      "GetPeopleId403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetPeopleId403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetPeopleId403ResponseSchema"
+        }
+      },
+      "GetPeopleId422ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetPeopleId422ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetPeopleId422ResponseSchema"
+        }
+      },
+      "GetPhoneCallssearch403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetPhoneCallssearch403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetPhoneCallssearch403ResponseSchema"
+        }
+      },
+      "GetEmailstats403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetEmailstats403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetEmailstats403ResponseSchema"
+        }
+      },
+      "GetEmailstats422ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/GetEmailstats422ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetEmailstats422ResponseSchema"
+        }
+      },
+      "PhonecallsCreate403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PhonecallsCreate403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PhonecallsCreate403ResponseSchema"
+        }
+      },
+      "PutPhoneCallsupdate403ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PutPhoneCallsupdate403ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PutPhoneCallsupdate403ResponseSchema"
         }
       }
     },
@@ -51967,5 +52467,719 @@
     "explorer-enabled": true,
     "proxy-enabled": true
   },
-  "x-readme-fauxas": true
+  "x-readme-fauxas": true,
+  "x-client-unused-schemas": {
+    "ErrorDetailsContext": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/ErrorDetailsContextAdditionalProperties"
+      },
+      "description": "Values from your request that explain the refusal. Each entry is an object rather than a bare value, so read \u0060context.\u003Ckey\u003E.value\u0060. Absent when the error needs no context.",
+      "example": {
+        "window": {
+          "value": "hourly",
+          "description": "The rate-limit window your request exceeded"
+        }
+      }
+    },
+    "BulkPeopleEnrichment400Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponseAddPeopleToEnrich"
+        },
+        {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponseMoreThan10People"
+        },
+        {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment400ResponsePollOnlyWithWebhookUrl"
+        }
+      ]
+    },
+    "BulkPeopleEnrichment422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment422ResponseOneOf1"
+        },
+        {
+          "$ref": "#/components/schemas/BulkPeopleEnrichment422ResponseOneOf2"
+        }
+      ]
+    },
+    "UpdateAnAccount422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/UpdateAnAccount422ResponseCheckAccountId"
+        },
+        {
+          "$ref": "#/components/schemas/UpdateAnAccount422ResponseCheckOwnerId"
+        },
+        {
+          "$ref": "#/components/schemas/UpdateAnAccount422ResponseCheckAccountStageId"
+        }
+      ]
+    },
+    "GetAccountsId403Response": {
+      "type": "string"
+    },
+    "SearchForAccounts422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/SearchForAccounts422ResponseChooseValidSortByFieldOption"
+        },
+        {
+          "$ref": "#/components/schemas/SearchForAccounts422ResponseCheckAccountStageIDs"
+        }
+      ]
+    },
+    "UpdateAccountOwnership422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/UpdateAccountOwnership422ResponseAddAccountIDs"
+        },
+        {
+          "$ref": "#/components/schemas/UpdateAccountOwnership422ResponseAddOwnerId"
+        }
+      ]
+    },
+    "CreateAContact422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CreateAContact422ResponseCheckTheAccountId"
+        },
+        {
+          "$ref": "#/components/schemas/CreateAContact422ResponseCheckTheContactStageId"
+        }
+      ]
+    },
+    "UpdateAContact422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/UpdateAContact422ResponseCheckTheAccountId"
+        },
+        {
+          "$ref": "#/components/schemas/UpdateAContact422ResponseCheckTheContactStageId"
+        },
+        {
+          "$ref": "#/components/schemas/UpdateAContact422ResponseContactHasBeenDeleted"
+        }
+      ]
+    },
+    "ViewAContact401Response": {
+      "type": "string"
+    },
+    "ViewAssociatedDealsRequest": {
+      "type": "object"
+    },
+    "ListContactStages200Response": {
+      "type": "string"
+    },
+    "CreateDeal422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CreateDeal422ResponseEnterADealName"
+        },
+        {
+          "$ref": "#/components/schemas/CreateDeal422ResponseCheckTheEnteredId"
+        }
+      ]
+    },
+    "ListAllDeals403Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/ListAllDeals403ResponseNeedMasterApiKey"
+        },
+        {
+          "$ref": "#/components/schemas/ListAllDeals403ResponseCheckApolloPricingPlan"
+        }
+      ]
+    },
+    "ViewDeal422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/ViewDeal422ResponseAddADealId"
+        },
+        {
+          "$ref": "#/components/schemas/ViewDeal422ResponseDoNotHaveAccessToDeal"
+        }
+      ]
+    },
+    "SearchForSequences403Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/SearchForSequences403ResponseNeedMasterApiKey"
+        },
+        {
+          "$ref": "#/components/schemas/SearchForSequences403ResponseCheckApolloPricingPlan"
+        }
+      ]
+    },
+    "AddContactsToSequence401PlainResponse": {
+      "type": "string"
+    },
+    "AddContactsToSequence422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/AddContactsToSequence422ResponseAddContactIDs"
+        },
+        {
+          "$ref": "#/components/schemas/AddContactsToSequence422ResponseAddIDs"
+        },
+        {
+          "$ref": "#/components/schemas/AddContactsToSequence422ResponseInactiveEmailAccounts"
+        },
+        {
+          "$ref": "#/components/schemas/AddContactsToSequence422ResponseAggregateAccountsNotSupported"
+        }
+      ]
+    },
+    "CreateSequence429Response": {
+      "type": "string"
+    },
+    "SearchTasks403Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/SearchTasks403ResponseNeedMasterApiKey"
+        },
+        {
+          "$ref": "#/components/schemas/SearchTasks403ResponseCheckApolloPricingPlan"
+        }
+      ]
+    },
+    "SearchTasks422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/SearchTasks422ResponseAddressTheRequiredParameters"
+        },
+        {
+          "$ref": "#/components/schemas/SearchTasks422ResponseTooManySearchResultsPerPage"
+        }
+      ]
+    },
+    "GetAListOfUsers403Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/GetAListOfUsers403ResponseNeedMasterApiKey"
+        },
+        {
+          "$ref": "#/components/schemas/GetAListOfUsers403ResponseCheckApolloPricingPlan"
+        }
+      ]
+    },
+    "GetAListOfAllLists200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetAListOfAllLists200ResponseItem"
+      }
+    },
+    "GetOrganizationsId403Response": {
+      "type": "string"
+    },
+    "GetOrganizationsId422Response": {
+      "type": "string"
+    },
+    "GetPeopleId403Response": {
+      "type": "string"
+    },
+    "GetPeopleId422Response": {
+      "type": "string"
+    },
+    "GetPhoneCallssearch200Response": {
+      "type": "string"
+    },
+    "GetPhoneCallssearch403Response": {
+      "type": "string"
+    },
+    "GetEmailstats200Response": {
+      "type": "string"
+    },
+    "GetEmailstats403Response": {
+      "type": "string"
+    },
+    "GetEmailstats422Response": {
+      "type": "string"
+    },
+    "EmailerMessagesSearch200Response": {
+      "type": "string"
+    },
+    "PhonecallsCreate403Response": {
+      "type": "string"
+    },
+    "PutPhoneCallsupdate403Response": {
+      "type": "string"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "BulkPeopleEnrichment400ResponseAddPeopleToEnrich": {
+      "title": "Add people to enrich",
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "example": "failed"
+        },
+        "error_code": {
+          "type": "string",
+          "example": "INVALID_REQUEST"
+        },
+        "error_message": {
+          "type": "string",
+          "example": "invalid request, missing details"
+        }
+      }
+    },
+    "BulkPeopleEnrichment400ResponseMoreThan10People": {
+      "title": "More than 10 people",
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "example": "failed"
+        },
+        "error_code": {
+          "type": "string",
+          "example": "RECORD_LIMIT_EXCEEDED"
+        },
+        "error_message": {
+          "type": "string",
+          "example": "domain count cannot be more than 10"
+        }
+      }
+    },
+    "BulkPeopleEnrichment400ResponsePollOnlyWithWebhookUrl": {
+      "title": "poll_only with webhook_url",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Do not pass \u0027webhook_url\u0027 with poll_only=true. Either poll the result (poll_only=true, no webhook) or register a webhook (omit poll_only)."
+        }
+      }
+    },
+    "BulkPeopleEnrichment422ResponseOneOf1": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "example": "failed"
+        },
+        "error_code": {
+          "type": "string",
+          "example": "UNKNOWN_ERROR"
+        },
+        "error_message": {
+          "type": "string",
+          "example": "undefined method \u0060length\u0027 for an instance of ActionController::Parameters"
+        }
+      }
+    },
+    "BulkPeopleEnrichment422ResponseOneOf2": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "example": "failed"
+        },
+        "error_code": {
+          "type": "string",
+          "example": "UNKNOWN_ERROR"
+        },
+        "error_message": {
+          "type": "string",
+          "example": "no implicit conversion of Symbol into Integer"
+        }
+      }
+    },
+    "UpdateAnAccount422ResponseCheckAccountId": {
+      "title": "Check account ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. account_id is not a valid ID"
+        }
+      }
+    },
+    "UpdateAnAccount422ResponseCheckOwnerId": {
+      "title": "Check owner ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 23423423 is not a valid ID"
+        }
+      }
+    },
+    "UpdateAnAccount422ResponseCheckAccountStageId": {
+      "title": "Check account stage ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 78977 is not a valid ID"
+        }
+      }
+    },
+    "SearchForAccounts422ResponseChooseValidSortByFieldOption": {
+      "title": "Choose valid sort_by_field option",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Invalid sort criteria"
+        },
+        "skip_alert_dialog": {
+          "type": "boolean",
+          "default": true,
+          "example": true
+        }
+      }
+    },
+    "SearchForAccounts422ResponseCheckAccountStageIDs": {
+      "title": "Check account stage IDs",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Your search parameters are entered incorrectly. Did you try to edit the URL directly?"
+        }
+      }
+    },
+    "UpdateAccountOwnership422ResponseAddAccountIDs": {
+      "title": "Add account IDs",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Required parameter \u0027account_ids\u0027 missing"
+        }
+      }
+    },
+    "UpdateAccountOwnership422ResponseAddOwnerId": {
+      "title": "Add owner ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Required parameter \u0027owner_id\u0027 missing"
+        }
+      }
+    },
+    "CreateAContact422ResponseCheckTheAccountId": {
+      "title": "Check the account ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 63f53afe4ceeca00016bdd2fsfsdf is not a valid ID"
+        }
+      }
+    },
+    "CreateAContact422ResponseCheckTheContactStageId": {
+      "title": "Check the contact stage ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 2342432 is not a valid ID"
+        }
+      }
+    },
+    "UpdateAContact422ResponseCheckTheAccountId": {
+      "title": "Check the account ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 5234234 is not a valid ID"
+        }
+      }
+    },
+    "UpdateAContact422ResponseCheckTheContactStageId": {
+      "title": "Check the contact stage ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 2342432 is not a valid ID"
+        }
+      }
+    },
+    "UpdateAContact422ResponseContactHasBeenDeleted": {
+      "title": "Contact has been deleted",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Cannot update contact as it is deleted."
+        },
+        "deleted_contact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "66e34b81740c50074e3d1bd4"
+          }
+        }
+      }
+    },
+    "CreateDeal422ResponseEnterADealName": {
+      "title": "Enter a deal name",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Name is required"
+        }
+      }
+    },
+    "CreateDeal422ResponseCheckTheEnteredId": {
+      "title": "Check the entered ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. 12345 is not a valid ID"
+        }
+      }
+    },
+    "ListAllDeals403ResponseNeedMasterApiKey": {
+      "title": "Need master API key",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "This API key is not authorized to access deals/api/v1/opportunities/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+        },
+        "error_code": {
+          "type": "string",
+          "example": "API_INACCESSIBLE"
+        }
+      }
+    },
+    "ListAllDeals403ResponseCheckApolloPricingPlan": {
+      "title": "Check Apollo pricing plan",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "This endpoint is only available to Apollo users on paid plans."
+        }
+      }
+    },
+    "ViewDeal422ResponseAddADealId": {
+      "title": "Add a deal ID",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Parameters misconfigured. opportunity_id is not a valid ID"
+        }
+      }
+    },
+    "ViewDeal422ResponseDoNotHaveAccessToDeal": {
+      "title": "Do not have access to deal",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "You are not authorized to view this page."
+        }
+      }
+    },
+    "SearchForSequences403ResponseNeedMasterApiKey": {
+      "title": "Need master API key",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "This API key is not authorized to access api/v1/emailer_campaigns/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+        },
+        "error_code": {
+          "type": "string",
+          "example": "API_INACCESSIBLE"
+        }
+      }
+    },
+    "SearchForSequences403ResponseCheckApolloPricingPlan": {
+      "title": "Check Apollo pricing plan",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "This endpoint is only available to Apollo users on paid plans."
+        }
+      }
+    },
+    "AddContactsToSequence422ResponseAddContactIDs": {
+      "title": "Add contact IDs",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Please specify either contact_ids or label_names."
+        }
+      }
+    },
+    "AddContactsToSequence422ResponseAddIDs": {
+      "title": "Add IDs",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Please specify a emailer_campaign_id and send_email_from_email_account_id."
+        }
+      }
+    },
+    "AddContactsToSequence422ResponseInactiveEmailAccounts": {
+      "title": "Inactive Email Accounts",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "These mailboxes are no longer active. test@example.com"
+        }
+      }
+    },
+    "AddContactsToSequence422ResponseAggregateAccountsNotSupported": {
+      "title": "Aggregate Accounts Not Supported",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Aggregate accounts are not supported for this sequence. These are the aggregate accounts: 6633baaece5fbd01c791d7ca"
+        }
+      }
+    },
+    "SearchTasks403ResponseNeedMasterApiKey": {
+      "title": "Need master API key",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "This API key is not authorized to access api/v1/tasks/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+        },
+        "error_code": {
+          "type": "string",
+          "example": "API_INACCESSIBLE"
+        }
+      }
+    },
+    "SearchTasks403ResponseCheckApolloPricingPlan": {
+      "title": "Check Apollo pricing plan",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "This endpoint is only available to Apollo users on paid plans."
+        }
+      }
+    },
+    "SearchTasks422ResponseAddressTheRequiredParameters": {
+      "title": "Address the required parameters",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Something\u0027s wrong with your API request. undefined method \u0060[]\u0027 for nil"
+        }
+      }
+    },
+    "SearchTasks422ResponseTooManySearchResultsPerPage": {
+      "title": "Too many search results per page",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "Per page not supported"
+        }
+      }
+    },
+    "GetAListOfUsers403ResponseNeedMasterApiKey": {
+      "title": "Need master API key",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "example": "This API key is not authorized to access api/v1/users/search. Request an API key from your administrator that includes this endpoint in its configured scope."
+        },
+        "error_code": {
+          "type": "string",
+          "example": "API_INACCESSIBLE"
+        }
+      }
+    },
+    "GetAListOfUsers403ResponseCheckApolloPricingPlan": {
+      "title": "Check Apollo pricing plan",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "This endpoint is only available to Apollo users on paid plans."
+        }
+      }
+    },
+    "GetAListOfAllLists200ResponseItem": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string",
+          "example": "66e9e215ece19801b2199981"
+        },
+        "cached_count": {
+          "type": "integer",
+          "default": 0,
+          "example": 1
+        },
+        "concurrency_locks": {
+          "$ref": "#/components/schemas/GetAListOfAllLists200ResponseItemConcurrencyLocks"
+        },
+        "created_at": {
+          "type": "string",
+          "example": "2024-09-17T20:09:57.863Z"
+        },
+        "modality": {
+          "type": "string",
+          "example": "emailer_campaigns"
+        },
+        "name": {
+          "type": "string",
+          "example": "Dublin market"
+        },
+        "need_cached_count_update": {
+          "type": "boolean",
+          "default": true,
+          "example": false
+        },
+        "needs_count_update_at": {
+          "type": "string",
+          "example": "2024-09-17T20:09:57.885\u002B00:00"
+        },
+        "rule_config_template_id": {},
+        "team_id": {
+          "type": "string",
+          "example": "6095a710bd01d100a506d4ac"
+        },
+        "updated_at": {
+          "type": "string",
+          "example": "2024-09-17T20:09:57.910Z"
+        },
+        "user_id": {
+          "type": "string",
+          "example": "66302798d03b9601c7934ebf"
+        },
+        "id": {
+          "type": "string",
+          "example": "66e9e215ece19801b2199981"
+        },
+        "key": {
+          "type": "string",
+          "example": "66e9e215ece19801b2199981"
+        }
+      }
+    },
+    "GetAListOfAllLists200ResponseItemConcurrencyLocks": {
+      "type": "object"
+    }
+  }
 }

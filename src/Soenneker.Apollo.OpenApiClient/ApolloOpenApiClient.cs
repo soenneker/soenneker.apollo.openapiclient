@@ -12,6 +12,7 @@ using Soenneker.Apollo.OpenApiClient.Agents;
 using Soenneker.Apollo.OpenApiClient.Contact_stages;
 using Soenneker.Apollo.OpenApiClient.Contacts;
 using Soenneker.Apollo.OpenApiClient.Conversations;
+using Soenneker.Apollo.OpenApiClient.Duplicate_contacts;
 using Soenneker.Apollo.OpenApiClient.Email_accounts;
 using Soenneker.Apollo.OpenApiClient.Emailer_campaigns;
 using Soenneker.Apollo.OpenApiClient.Emailer_messages;
@@ -75,6 +76,11 @@ namespace Soenneker.Apollo.OpenApiClient
         public global::Soenneker.Apollo.OpenApiClient.Conversations.ConversationsRequestBuilder Conversations
         {
             get => new global::Soenneker.Apollo.OpenApiClient.Conversations.ConversationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The duplicate_contacts property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Duplicate_contacts.Duplicate_contactsRequestBuilder Duplicate_contacts
+        {
+            get => new global::Soenneker.Apollo.OpenApiClient.Duplicate_contacts.Duplicate_contactsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The email_accounts property</summary>
         public global::Soenneker.Apollo.OpenApiClient.Email_accounts.Email_accountsRequestBuilder Email_accounts
@@ -198,7 +204,7 @@ namespace Soenneker.Apollo.OpenApiClient
             ApiClientBuilder.RegisterDefaultSerializer<FormSerializationWriterFactory>();
             ApiClientBuilder.RegisterDefaultSerializer<MultipartSerializationWriterFactory>();
             ApiClientBuilder.RegisterDefaultDeserializer<JsonParseNodeFactory>();
-            ApiClientBuilder.RegisterDefaultDeserializer<TextParseNodeFactory>();
+            global::Soenneker.OpenApi.Generated.OpenApiTextParseNodeFactory.Register();
             ApiClientBuilder.RegisterDefaultDeserializer<FormParseNodeFactory>();
             if (string.IsNullOrEmpty(RequestAdapter.BaseUrl))
             {

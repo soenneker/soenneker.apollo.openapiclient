@@ -39,6 +39,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence401PlainResponseSchemaError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence422ResponseError">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence429Response">When receiving a 429 status code</exception>
@@ -54,6 +55,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "401", global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence401PlainResponseSchemaError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence403Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence422ResponseError.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence429Response.CreateFromDiscriminatorValue },
