@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
-    /// <summary>`pending` means enrichment is running and a webhook will follow. `skipped` means the matched people already had an enrichment in progress from an earlier request, so no webhook will be sent for this request — the results arrive via the earlier request instead.</summary>
+    /// <summary>`pending` means Apollo created a phone enrichment request and the result is delivered asynchronously. `skipped` means Apollo did not create a phone enrichment request, such as when direct-dial access is unavailable or phone enrichment is already in progress. No phone enrichment request or webhook is created. `not_attempted` means Apollo did not create a phone enrichment request because the returned person is not a saved Apollo person record. This can occur with `match_confidence: none` and with some provisional `low` matches. No phone credits are charged and no phone enrichment request or webhook is created.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BulkPeopleEnrichment200ResponsePhoneEnrichmentStatus
     {
@@ -14,6 +14,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         [EnumMember(Value = "skipped")]
         #pragma warning disable CS1591
         Skipped,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "not_attempted")]
+        #pragma warning disable CS1591
+        NotAttempted,
         #pragma warning restore CS1591
     }
 }

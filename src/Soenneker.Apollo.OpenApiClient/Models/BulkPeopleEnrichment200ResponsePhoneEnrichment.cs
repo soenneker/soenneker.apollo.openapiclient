@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>
-    /// Returned when you set `reveal_phone_number` to `true`, at least one person in `details[]` was matched, and you aren&apos;t using `run_waterfall_phone`. Phone numbers are enriched asynchronously and delivered to your `webhook_url`, so this object reports the status of that background work rather than the numbers themselves. &lt;br&gt;&lt;br&gt;If you requested `run_waterfall_phone` instead, phone status is reported through the `waterfall` object.
+    /// Returned when you set `reveal_phone_number` to `true`, at least one person in `details[]` was matched, and you aren&apos;t using `run_waterfall_phone`. Phone numbers are enriched asynchronously and delivered to your `webhook_url` or made available to poll when `poll_only=true`.&lt;br&gt;&lt;br&gt;If you requested `run_waterfall_phone` instead, phone status is reported through the `waterfall` object.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkPeopleEnrichment200ResponsePhoneEnrichment : IAdditionalDataHolder, IParsable
@@ -48,7 +48,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string _explicitNullValueRequestId = default!;
 #endif
-        /// <summary>`pending` means enrichment is running and a webhook will follow. `skipped` means the matched people already had an enrichment in progress from an earlier request, so no webhook will be sent for this request — the results arrive via the earlier request instead.</summary>
+        /// <summary>`pending` means Apollo created a phone enrichment request and the result is delivered asynchronously. `skipped` means Apollo did not create a phone enrichment request, such as when direct-dial access is unavailable or phone enrichment is already in progress. No phone enrichment request or webhook is created. `not_attempted` means Apollo did not create a phone enrichment request because the returned person is not a saved Apollo person record. This can occur with `match_confidence: none` and with some provisional `low` matches. No phone credits are charged and no phone enrichment request or webhook is created.</summary>
         public global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichmentStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.BulkPeopleEnrichment200ResponsePhoneEnrichmentStatus? _explicitNullValueStatus = default!;
         /// <summary>
