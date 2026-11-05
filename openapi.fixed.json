@@ -629,11 +629,6 @@
                 "examples": {
                   "Result": {
                     "value": {
-                      "phone_enrichment": {
-                        "request_id": "64a7ff0cc4dfae00013df1a5",
-                        "status": "pending",
-                        "message": "Phone enrichment is processing asynchronously. Retrieve the result by polling GET /api/v1/webhook_result/{request_id} with the top-level \u0060request_id\u0060 field from this response."
-                      },
                       "person": {
                         "id": "672c91d4a7be42000184f2c9",
                         "first_name": "Jordan",
@@ -1221,6 +1216,11 @@
                           "entrepreneurship"
                         ],
                         "seniority": "founder"
+                      },
+                      "phone_enrichment": {
+                        "request_id": "64a7ff0cc4dfae00013df1a5",
+                        "status": "pending",
+                        "message": "Phone enrichment is processing asynchronously. Retrieve the result by polling GET /api/v1/webhook_result/{request_id} with the top-level \u0060request_id\u0060 field from this response."
                       },
                       "waterfall": {
                         "status": "accepted",
@@ -2613,7 +2613,12 @@
                           "revealed_for_current_team": true
                         }
                       ],
-                      "request_id": 1039995589705121900
+                      "request_id": 1039995589705121900,
+                      "phone_enrichment": {
+                        "request_id": "6aecc5837fdb120010618b99",
+                        "status": "pending",
+                        "message": "Phone enrichment is processing asynchronously. Retrieve the result by polling GET /api/v1/webhook_result/{request_id} with the top-level \u0060request_id\u0060 field from this response. Retry after ~10 seconds."
+                      }
                     }
                   },
                   "Waterfall enrichment result": {
@@ -24861,11 +24866,11 @@
             "format": "int64",
             "example": 1039995589705121900
           },
-          "phone_enrichment": {
-            "$ref": "#/components/schemas/PeopleEnrichment200ResponsePhoneEnrichment"
-          },
           "person": {
             "$ref": "#/components/schemas/PeopleEnrichment200ResponsePerson"
+          },
+          "phone_enrichment": {
+            "$ref": "#/components/schemas/PeopleEnrichment200ResponsePhoneEnrichment"
           }
         }
       },
@@ -31301,25 +31306,6 @@
           }
         }
       },
-      "PeopleEnrichment200ResponsePhoneEnrichment": {
-        "type": "object",
-        "properties": {
-          "request_id": {
-            "type": "string",
-            "description": "Identifier for the phone enrichment job. Returned only when status is \u0060pending\u0060.",
-            "example": "64a7ff0cc4dfae00013df1a5"
-          },
-          "status": {
-            "$ref": "#/components/schemas/PeopleEnrichment200ResponsePhoneEnrichmentStatus"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human-readable explanation of the phone enrichment status.",
-            "example": "Phone enrichment is processing asynchronously. Retrieve the result by polling GET /api/v1/webhook_result/{request_id} with the top-level \u0060request_id\u0060 field from this response."
-          }
-        },
-        "description": "Returned when you set \u0060reveal_phone_number\u0060 to \u0060true\u0060, Apollo matches the submitted person, and you aren\u0027t using \u0060run_waterfall_phone\u0060. Phone numbers are enriched asynchronously and delivered to your \u0060webhook_url\u0060 or made available to poll when \u0060poll_only=true\u0060.\u003Cbr\u003E\u003Cbr\u003EIf you requested \u0060run_waterfall_phone\u0060 instead, phone status is reported through the \u0060waterfall\u0060 object."
-      },
       "PeopleEnrichment200ResponsePerson": {
         "type": "object",
         "properties": {
@@ -31448,6 +31434,25 @@
             "example": "founder"
           }
         }
+      },
+      "PeopleEnrichment200ResponsePhoneEnrichment": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "Identifier for the phone enrichment job. Returned only when status is \u0060pending\u0060.",
+            "example": "64a7ff0cc4dfae00013df1a5"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PeopleEnrichment200ResponsePhoneEnrichmentStatus"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable explanation of the phone enrichment status.",
+            "example": "Phone enrichment is processing asynchronously. Retrieve the result by polling GET /api/v1/webhook_result/{request_id} with the top-level \u0060request_id\u0060 field from this response."
+          }
+        },
+        "description": "Returned when you set \u0060reveal_phone_number\u0060 to \u0060true\u0060, Apollo matches the submitted person, and you aren\u0027t using \u0060run_waterfall_phone\u0060. Phone numbers are enriched asynchronously and delivered to your \u0060webhook_url\u0060 or made available to poll when \u0060poll_only=true\u0060.\u003Cbr\u003E\u003Cbr\u003EIf you requested \u0060run_waterfall_phone\u0060 instead, phone status is reported through the \u0060waterfall\u0060 object."
       },
       "PeopleEnrichment400ResponseErrorDetails": {
         "type": "object",
@@ -51087,34 +51092,6 @@
           ]
         }
       },
-      "PeopleEnrichment200ResponsePhoneEnrichmentStatus": {
-        "enum": [
-          "pending",
-          "skipped",
-          "not_attempted"
-        ],
-        "type": "string",
-        "description": "\u0060pending\u0060 means Apollo created a phone enrichment request and the result is delivered asynchronously. \u0060skipped\u0060 means Apollo did not create a request, such as when direct-dial access is unavailable or phone enrichment is already in progress. \u0060not_attempted\u0060 means Apollo did not create a request because the returned person is not a saved Apollo person record. No phone credits are charged for \u0060not_attempted\u0060.",
-        "example": "pending",
-        "x-ms-enum": {
-          "name": "PeopleEnrichment200ResponsePhoneEnrichmentStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "pending",
-              "name": "Pending"
-            },
-            {
-              "value": "skipped",
-              "name": "Skipped"
-            },
-            {
-              "value": "not_attempted",
-              "name": "NotAttempted"
-            }
-          ]
-        }
-      },
       "PeopleEnrichment200ResponsePersonMatchConfidence": {
         "enum": [
           "high",
@@ -51143,6 +51120,34 @@
             {
               "value": "none",
               "name": "None"
+            }
+          ]
+        }
+      },
+      "PeopleEnrichment200ResponsePhoneEnrichmentStatus": {
+        "enum": [
+          "pending",
+          "skipped",
+          "not_attempted"
+        ],
+        "type": "string",
+        "description": "\u0060pending\u0060 means Apollo created a phone enrichment request and the result is delivered asynchronously. \u0060skipped\u0060 means Apollo did not create a request, such as when direct-dial access is unavailable or phone enrichment is already in progress. \u0060not_attempted\u0060 means Apollo did not create a request because the returned person is not a saved Apollo person record. No phone credits are charged for \u0060not_attempted\u0060.",
+        "example": "pending",
+        "x-ms-enum": {
+          "name": "PeopleEnrichment200ResponsePhoneEnrichmentStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "pending",
+              "name": "Pending"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "not_attempted",
+              "name": "NotAttempted"
             }
           ]
         }
