@@ -20745,13 +20745,281 @@
         }
       }
     },
+    "/enrich": {
+      "post": {
+        "tags": [
+          "Enrichment"
+        ],
+        "summary": "[BETA] Validate email addresses and phone numbers",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/enrich/create\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** Not supported\n\n**Plan access:** Requires a workspace on unified credits. Workspaces on a legacy credit plan receive a \u0060403\u0060.\n\n**Credit usage:** \u00608 or 20 credits per phone number, depending on plan\u0060, \u0060up to 1 credit per email address\u0060\n\nCredits are charged for each row Apollo checks, whatever the verdict: 8 credits per phone number (20 on some earlier unified credit plans) and 1 credit per email address, including a \u0060not_validated\u0060 result. An email check that the validator can\u0027t resolve costs 0 credits. Rows rejected in the \u0060202\u0060 response, rows that fail before the check runs, and checks that the validator fails to run also cost 0 credits.\n\nBefore the checks run, Apollo confirms that you have enough credits for every accepted row. If you don\u0027t, no row is checked, each row returns a \u0060credit_limit_exceeded\u0060 error, and the request consumes 0 credits.\n\nApollo stores each result for 30 days. If you check the same phone number or email address again within 30 days, you receive the stored result and the check is still charged. A value repeated inside one request is checked and charged once per row. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing), or \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/9527776320781-Review-Credit-Usage-in-Apollo\u0022 target=\u0022_blank\u0022\u003Ereview credit usage in Apollo\u003C/a\u003E.\n\nValidation checks whether an email address or phone number you already have is still good, so you can clean a list before you use it. Apollo runs the same validators that \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003Ewaterfall enrichment\u003C/a\u003E uses to verify the emails and phone numbers it finds.\u003Cbr\u003E\u003Cbr\u003EUse this endpoint to validate up to 10 email addresses or up to 10 phone numbers in one request. Set \u0060action\u0060 to \u0060email_verifier\u0060 or \u0060phone_verifier\u0060, set \u0060action_type\u0060 to \u0060tool\u0060, and pass one object per value in the \u0060input_attributes\u0060 array: \u0060{\u0022email\u0022: \u0022...\u0022}\u0060 for email addresses, or \u0060{\u0022phone_number\u0022: \u0022...\u0022}\u0060 for phone numbers. One request validates one kind of value.\u003Cbr\u003E\u003Cbr\u003EThis endpoint checks values you send. It doesn\u0027t find new email addresses or phone numbers, and it doesn\u0027t check Do Not Call registry status. To find contact details for a person, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E.\n\n### Validators\n\nApollo picks the validator for each \u0060action\u0060. Today, this endpoint uses these validators:\n\n| \u0060action\u0060 | Validator |\n|---|---|\n| \u0060email_verifier\u0060 | LeadMagic |\n| \u0060phone_verifier\u0060 | Trestle |\n\nApollo plans to support more validators later. Each result names the validator that answered in its \u0060validator\u0060 field.\n\n### Getting the results\n\nValidation runs in the background. This endpoint returns \u0060202 Accepted\u0060 with a \u0060request_id\u0060 and one entry per submitted row, in the order you sent them. Each entry has a \u0060status\u0060 of \u0060accepted\u0060 or \u0060rejected\u0060. Accepted entries carry a \u0060record_id\u0060, and rejected entries carry \u0060errors\u0060. A rejected row is never checked and costs nothing. The request \u0060status\u0060 is \u0060accepted\u0060 when every row was accepted and \u0060partially_accepted\u0060 when some were rejected. If every row is rejected, the endpoint returns a \u0060422\u0060 with \u0060status: rejected\u0060.\n\nSend exactly one of these delivery options:\n\n- \u0060webhook_url\u0060: Apollo sends the results to this HTTPS URL when the checks finish. The URL must resolve to a public address. If delivery fails, Apollo retries it up to 3 times. A \u00604xx\u0060 response other than \u0060408\u0060 or \u0060429\u0060 isn\u0027t retried.\n- \u0060poll_only: true\u0060: Apollo doesn\u0027t send a webhook. Pass the \u0060request_id\u0060 to the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result endpoint\u003C/a\u003E. While the checks run, it returns a \u0060404\u0060 with \u0060error_code: result_pending\u0060 and \u0060retry_after_seconds\u0060. Wait that many seconds, then poll again.\n\nBoth options deliver the same result object, and the poll webhook result endpoint returns it for 30 days, even if webhook delivery failed.\n\n### Reading the results\n\nMatch each result to the row you sent by its \u0060id\u0060, which is the \u0060record_id\u0060 from the \u0060202\u0060 response. Results can come back in any order, and a row that wasn\u0027t checked doesn\u0027t include the email address or phone number.\n\n| Field | Meaning |\n|---|---|\n| \u0060validation_status\u0060 | \u0060validated\u0060 when the validator confirmed that the email address accepts mail or that the phone number is valid and reachable. \u0060not_validated\u0060 when it didn\u0027t confirm that. |\n| \u0060validator\u0060 | The validator that answered, such as \u0060leadmagic\u0060 or \u0060trestle\u0060. |\n| \u0060email\u0060 or \u0060phone\u0060 | The value that was checked. |\n| \u0060error\u0060 | Present when the row wasn\u0027t checked. \u0060code\u0060 and \u0060message\u0060 explain why, for example \u0060credit_limit_exceeded\u0060 when your credits ran out. |\n| \u0060data_sources\u0060 | The validator step behind the result, including the validator\u0027s raw status and the credits it used. |\n\n\u0060not_validated\u0060 doesn\u0027t mean that the value is bad. It also covers a validator that couldn\u0027t reach a verdict, such as an email domain that accepts mail for any address. Say that the check didn\u0027t confirm the value rather than calling it invalid.\n\nA row with neither \u0060validation_status\u0060 nor \u0060error\u0060 means the validator couldn\u0027t run the check, for example because the email address is malformed. That row costs 0 credits.\n\nPhone numbers aren\u0027t format-checked before they\u0027re sent to the validator, so a malformed phone number is still checked, returns \u0060not_validated\u0060, and is charged. Send phone numbers in E.164 format, such as \u0060\u002B12025550143\u0060.\n\nThe request-level \u0060status\u0060 is \u0060success\u0060 when processing finished. It doesn\u0027t mean every row was validated, so check \u0060total_failures\u0060 and each row\u0027s \u0060validation_status\u0060 or \u0060error\u0060.",
+        "operationId": "ValidateEmailsAndPhoneNumbers",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbersRequest"
+              },
+              "examples": {
+                "Validate email addresses (poll)": {
+                  "value": {
+                    "action": "email_verifier",
+                    "action_type": "tool",
+                    "poll_only": true,
+                    "input_attributes": [
+                      {
+                        "email": "jane.doe@example.com"
+                      },
+                      {
+                        "email": "sam.lee@example.org"
+                      }
+                    ]
+                  }
+                },
+                "Validate phone numbers (webhook)": {
+                  "value": {
+                    "action": "phone_verifier",
+                    "action_type": "tool",
+                    "webhook_url": "https://example.com/apollo/validation",
+                    "input_attributes": [
+                      {
+                        "phone_number": "\u002B12025550143"
+                      },
+                      {
+                        "phone_number": "\u002B12025550178"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "202",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers202Response"
+                },
+                "examples": {
+                  "Partially accepted": {
+                    "value": {
+                      "request_id": "5139398567364803549",
+                      "status": "partially_accepted",
+                      "total_submitted": 2,
+                      "accepted_count": 1,
+                      "rejected_count": 1,
+                      "results": [
+                        {
+                          "status": "accepted",
+                          "record_id": "6a1f0c2e9b3d4a0012c4e8f1",
+                          "errors": null
+                        },
+                        {
+                          "status": "rejected",
+                          "record_id": null,
+                          "errors": [
+                            "input provides no usable identifier; supply at least one of: email"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseError"
+                },
+                "examples": {
+                  "Check API key": {
+                    "value": "Invalid API key. See https://docs.apollo.io/reference/authentication for how to authenticate."
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers403Response"
+                },
+                "examples": {
+                  "API key without access to this endpoint": {
+                    "value": {
+                      "error": "This API key is not authorized to access api/v1/enrich/create. Request an API key from your administrator that includes this endpoint in its configured scope.",
+                      "error_code": "API_INACCESSIBLE",
+                      "error_details": {
+                        "code": "AUTH.AUTHORIZATION.ENDPOINT_ACCESS_DENIED",
+                        "message": "Your team is not permitted to call this endpoint.",
+                        "suggestions": [
+                          {
+                            "label": "Contact support@apollo.io if you need access to this endpoint",
+                            "url": "https://knowledge.apollo.io"
+                          }
+                        ],
+                        "context": {
+                          "endpoint": {
+                            "value": "api/v1/enrich/create",
+                            "description": "The endpoint your request named"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Validation not enabled": {
+                    "value": {
+                      "error": "You do not have access to this verification tool.",
+                      "request_id": "5139398567364803549"
+                    }
+                  },
+                  "Legacy credit plan": {
+                    "value": {
+                      "error": "This tool is available only to teams on unified credits.",
+                      "request_id": "5139398567364803549"
+                    }
+                  },
+                  "Unsupported action": {
+                    "value": {
+                      "error": "Your team does not have access to waterfall enrichment.",
+                      "request_id": "5139398567364803549"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "422",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseError"
+                },
+                "examples": {
+                  "Every row rejected": {
+                    "value": {
+                      "request_id": "5139398567364803549",
+                      "status": "rejected",
+                      "total_submitted": 1,
+                      "accepted_count": 0,
+                      "rejected_count": 1,
+                      "results": [
+                        {
+                          "status": "rejected",
+                          "record_id": null,
+                          "errors": [
+                            "input provides no usable identifier; supply at least one of: email"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "More than 10 rows": {
+                    "value": {
+                      "error": "input_attributes accepts at most 10 records per request",
+                      "request_id": "5139398567364803549"
+                    }
+                  },
+                  "No delivery option": {
+                    "value": {
+                      "error": "webhook_url is required",
+                      "request_id": "5139398567364803549"
+                    }
+                  },
+                  "webhook_url with poll_only": {
+                    "value": {
+                      "error": "Do not pass \u0027webhook_url\u0027 with poll_only=true",
+                      "request_id": "5139398567364803549"
+                    }
+                  },
+                  "webhook_url not HTTPS": {
+                    "value": {
+                      "error": "webhook_url must use HTTPS",
+                      "request_id": "5139398567364803549"
+                    }
+                  },
+                  "webhook_url not public": {
+                    "value": {
+                      "error": "webhook_url must not point to an internal address",
+                      "request_id": "5139398567364803549"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers429ResponseSchemaError"
+                },
+                "examples": {
+                  "Too many requests": {
+                    "value": "{\n  \u0022message\u0022: \u0022The maximum number of api calls allowed for api/v1/enrich/create is 100 times per hour. Please upgrade your plan from https://app.apollo.io/#/settings/plans/upgrade.\u0022,\n  \u0022error_details\u0022: {\n    \u0022code\u0022: \u0022USAGE.RATE_LIMIT.API_RATE_LIMIT_EXCEEDED\u0022,\n    \u0022message\u0022: \u0022You have made more API requests than your plan allows in this time window.\u0022,\n    \u0022suggestions\u0022: [\n      {\n        \u0022label\u0022: \u0022Wait until the rate limit resets, then retry the API request.\u0022\n      },\n      {\n        \u0022label\u0022: \u0022Check the Apollo Docs to understand API rate limits and how to use response headers to prevent rate-limit errors.\u0022,\n        \u0022url\u0022: \u0022https://docs.apollo.io/reference/rate-limits\u0022\n      }\n    ],\n    \u0022context\u0022: {\n      \u0022window\u0022: {\n        \u0022value\u0022: \u0022hour\u0022,\n        \u0022description\u0022: \u0022The rate limit window that was exhausted, such as \\\u0022minute\\\u0022 or \\\u0022hour\\\u0022\u0022\n      }\n    }\n  }\n}"
+                  }
+                },
+                "x-schema-inferred-from-examples": true
+              }
+            }
+          },
+          "200": {
+            "description": "202",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers202Response"
+                },
+                "examples": {
+                  "Partially accepted": {
+                    "value": {
+                      "request_id": "5139398567364803549",
+                      "status": "partially_accepted",
+                      "total_submitted": 2,
+                      "accepted_count": 1,
+                      "rejected_count": 1,
+                      "results": [
+                        {
+                          "status": "accepted",
+                          "record_id": "6a1f0c2e9b3d4a0012c4e8f1",
+                          "errors": null
+                        },
+                        {
+                          "status": "rejected",
+                          "record_id": null,
+                          "errors": [
+                            "input provides no usable identifier; supply at least one of: email"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
+          }
+        }
+      }
+    },
     "/webhook_result/{requestId}": {
       "get": {
         "tags": [
           "Miscellaneous"
         ],
         "summary": "Poll webhook result",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/webhook_result/show\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060webhook_result_read\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nUse the poll webhook result endpoint to retrieve webhook results from Apollo. This endpoint enables you to poll for the webhook payload if you didn\u0027t receive the original webhook callback.\u003Cbr\u003E\u003Cbr\u003ETo use this endpoint, you need the \u003Ccode\u003Erequest_id\u003C/code\u003E from the \u003Ca href=\u0022https://docs.apollo.io/reference/people-enrichment\u0022\u003Epeople enrichment\u003C/a\u003E or \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment\u003C/a\u003E endpoint. Pass this value as \u003Ccode\u003Erequest_id\u003C/code\u003E in this endpoint.\u003Cbr\u003E\u003Cbr\u003EThis endpoint returns webhook results for your team from up to thirty days after the webhook was triggered.\u003Cbr\u003E\u003Cbr\u003EWhile an enrichment is still processing, this endpoint returns a \u003Ccode\u003E404\u003C/code\u003E with \u003Ccode\u003Eerror_code: result_pending\u003C/code\u003E and a \u003Ccode\u003Eretry_after_seconds\u003C/code\u003E value\u2014wait that many seconds and poll again. Once the result is ready, it returns a \u003Ccode\u003E200\u003C/code\u003E.\u003Cbr\u003E\u003Cbr\u003EThree responses are terminal, so stop polling if you receive any of them: \u003Ccode\u003Erequest_id_unknown\u003C/code\u003E (\u003Ccode\u003E404\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not recognized, usually because it was mistyped or never issued), \u003Ccode\u003Erequest_id_expired\u003C/code\u003E (\u003Ccode\u003E410\u003C/code\u003E\u2014the result has aged out past the 30-day window, so start a fresh enrichment request), and \u003Ccode\u003Einvalid_request_id\u003C/code\u003E (\u003Ccode\u003E400\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not a valid signed 64-bit integer).\u003Cbr\u003E\u003Cbr\u003EFor requests made with \u003Ccode\u003Epoll_only\u003C/code\u003E set to \u003Ccode\u003Etrue\u003C/code\u003E, \u003Ccode\u003Ewebhook_status\u003C/code\u003E is \u003Ccode\u003Eskipped\u003C/code\u003E, because Apollo doesn\u0027t send a webhook.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/webhook_result/show\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060webhook_result_read\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\nUse the poll webhook result endpoint to retrieve webhook results from Apollo. This endpoint enables you to poll for the webhook payload if you didn\u0027t receive the original webhook callback.\u003Cbr\u003E\u003Cbr\u003ETo use this endpoint, you need the \u003Ccode\u003Erequest_id\u003C/code\u003E from the \u003Ca href=\u0022https://docs.apollo.io/reference/people-enrichment\u0022\u003Epeople enrichment\u003C/a\u003E, \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment\u003C/a\u003E, or \u003Ca href=\u0022https://docs.apollo.io/reference/validate-emails-and-phone-numbers\u0022\u003Evalidate email addresses and phone numbers\u003C/a\u003E endpoint. Pass this value as \u003Ccode\u003Erequest_id\u003C/code\u003E in this endpoint.\u003Cbr\u003E\u003Cbr\u003EThis endpoint returns webhook results for your team from up to thirty days after the webhook was triggered.\u003Cbr\u003E\u003Cbr\u003EWhile an enrichment is still processing, this endpoint returns a \u003Ccode\u003E404\u003C/code\u003E with \u003Ccode\u003Eerror_code: result_pending\u003C/code\u003E and a \u003Ccode\u003Eretry_after_seconds\u003C/code\u003E value\u2014wait that many seconds and poll again. Once the result is ready, it returns a \u003Ccode\u003E200\u003C/code\u003E.\u003Cbr\u003E\u003Cbr\u003EThree responses are terminal, so stop polling if you receive any of them: \u003Ccode\u003Erequest_id_unknown\u003C/code\u003E (\u003Ccode\u003E404\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not recognized, usually because it was mistyped or never issued), \u003Ccode\u003Erequest_id_expired\u003C/code\u003E (\u003Ccode\u003E410\u003C/code\u003E\u2014the result has aged out past the 30-day window, so start a fresh enrichment request), and \u003Ccode\u003Einvalid_request_id\u003C/code\u003E (\u003Ccode\u003E400\u003C/code\u003E\u2014the \u003Ccode\u003Erequest_id\u003C/code\u003E is not a valid signed 64-bit integer).\u003Cbr\u003E\u003Cbr\u003EFor requests made with \u003Ccode\u003Epoll_only\u003C/code\u003E set to \u003Ccode\u003Etrue\u003C/code\u003E, \u003Ccode\u003Ewebhook_status\u003C/code\u003E is \u003Ccode\u003Eskipped\u003C/code\u003E, because Apollo doesn\u0027t send a webhook.",
         "operationId": "PollWebhookResult",
         "parameters": [
           {
@@ -27529,6 +27797,71 @@
           }
         }
       },
+      "ValidateEmailsAndPhoneNumbersRequest": {
+        "required": [
+          "action",
+          "action_type",
+          "input_attributes"
+        ],
+        "type": "object",
+        "properties": {
+          "action": {
+            "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbersRequestAction"
+          },
+          "action_type": {
+            "$ref": "#/components/schemas/ToolActionType"
+          },
+          "input_attributes": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbersRequestInputAttributesItem"
+            },
+            "description": "The values to validate, one object per value, up to 10 objects. Send \u0060email\u0060 objects with \u0060email_verifier\u0060 and \u0060phone_number\u0060 objects with \u0060phone_verifier\u0060. A row without the field the action needs is rejected."
+          },
+          "webhook_url": {
+            "type": "string",
+            "description": "The HTTPS URL where Apollo sends the results when the checks finish. It must resolve to a public address. Required unless \u0060poll_only\u0060 is \u0060true\u0060. Do not send it together with \u0060poll_only: true\u0060."
+          },
+          "poll_only": {
+            "type": "boolean",
+            "description": "Set to \u0060true\u0060 to retrieve the results with the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result\u003C/a\u003E endpoint instead of a webhook. When \u0060poll_only\u0060 is \u0060true\u0060, omit \u0060webhook_url\u0060.",
+            "default": false
+          }
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers202Response": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "The ID of this request. Pass it to the poll webhook result endpoint.",
+            "example": "5139398567364803549"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers202ResponseStatus"
+          },
+          "total_submitted": {
+            "type": "integer",
+            "description": "The number of rows you sent."
+          },
+          "accepted_count": {
+            "type": "integer",
+            "description": "The number of rows that will be checked."
+          },
+          "rejected_count": {
+            "type": "integer",
+            "description": "The number of rows that were rejected."
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers202ResponseResultsItem"
+            },
+            "description": "One entry per row you sent, in the order you sent them."
+          }
+        }
+      },
       "PollWebhookResult200Response": {
         "type": "object",
         "properties": {
@@ -30754,6 +31087,30 @@
             "deprecated": true
           }
         }
+      },
+      "ValidateEmailsAndPhoneNumbers403Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "A message that explains the error."
+          },
+          "request_id": {
+            "type": "string",
+            "description": "The ID of the request that failed."
+          },
+          "error_code": {
+            "type": "string",
+            "description": "Returned when the API key does not include this endpoint."
+          },
+          "error_details": {
+            "description": "Machine-readable detail for an error that uses the new format, returned alongside the endpoint\u0027s existing error fields. The legacy error fields at the root level (\u0060error\u0060, \u0060error_code\u0060, \u0060message\u0060, etc) are removed on 2027-02-16, after which \u0060error_details\u0060 is the only error payload. Some errors already return \u0060error_details\u0060 on its own.",
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers429ResponseSchema": {
+        "type": "string"
       },
       "PostApiusage422Response": {
         "type": "object",
@@ -39290,6 +39647,44 @@
           }
         }
       },
+      "ValidateEmailsAndPhoneNumbersRequestInputAttributesItem": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "An email address to validate. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060jane.doe@example.com\u0060"
+          },
+          "phone_number": {
+            "type": "string",
+            "description": "A phone number to validate, in E.164 format. Phone numbers are not format-checked, so a malformed number is still checked and charged. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060\u002B12025550143\u0060"
+          }
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers202ResponseResultsItem": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers202ResponseResultsItemStatus"
+          },
+          "record_id": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The ID of the accepted row. The matching result carries this value as its \u0060id\u0060. \u0060null\u0060 for a rejected row."
+          },
+          "errors": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Why the row was rejected. \u0060null\u0060 for an accepted row."
+          }
+        }
+      },
       "PollWebhookResult200ResponseWebhookResult": {
         "type": [
           "null",
@@ -40905,6 +41300,31 @@
             "type": "string",
             "format": "date-time",
             "example": "2024-09-12T10:30:00.000Z"
+          }
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedResultsItem": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedResultsItemStatus"
+          },
+          "record_id": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The ID of the accepted row. The matching result carries this value as its \u0060id\u0060. \u0060null\u0060 for a rejected row."
+          },
+          "errors": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Why the row was rejected. \u0060null\u0060 for an accepted row."
           }
         }
       },
@@ -50784,6 +51204,72 @@
           ]
         }
       },
+      "ValidateEmailsAndPhoneNumbersRequestAction": {
+        "enum": [
+          "email_verifier",
+          "phone_verifier"
+        ],
+        "type": "string",
+        "description": "What to validate. Use \u0060email_verifier\u0060 for email addresses or \u0060phone_verifier\u0060 for phone numbers.",
+        "x-ms-enum": {
+          "name": "ValidateEmailsAndPhoneNumbersRequestAction",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "email_verifier",
+              "name": "EmailVerifier"
+            },
+            {
+              "value": "phone_verifier",
+              "name": "PhoneVerifier"
+            }
+          ]
+        }
+      },
+      "ToolActionType": {
+        "enum": [
+          "tool"
+        ],
+        "type": "string",
+        "description": "Set to \u0060tool\u0060.",
+        "x-ms-enum": {
+          "name": "ToolActionType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "tool",
+              "name": "Tool"
+            }
+          ]
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers202ResponseStatus": {
+        "enum": [
+          "accepted",
+          "partially_accepted",
+          "rejected"
+        ],
+        "type": "string",
+        "description": "\u0060accepted\u0060 when every row was accepted, \u0060partially_accepted\u0060 when some were rejected, and \u0060rejected\u0060 (with a \u0060422\u0060) when every row was rejected.",
+        "x-ms-enum": {
+          "name": "ValidateEmailsAndPhoneNumbers202ResponseStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "accepted",
+              "name": "Accepted"
+            },
+            {
+              "value": "partially_accepted",
+              "name": "PartiallyAccepted"
+            },
+            {
+              "value": "rejected",
+              "name": "Rejected"
+            }
+          ]
+        }
+      },
       "PollWebhookResult200ResponseWebhookStatus": {
         "enum": [
           "in_progress",
@@ -51088,6 +51574,33 @@
             {
               "value": "loading",
               "name": "Loading"
+            }
+          ]
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedStatus": {
+        "enum": [
+          "accepted",
+          "partially_accepted",
+          "rejected"
+        ],
+        "type": "string",
+        "description": "\u0060accepted\u0060 when every row was accepted, \u0060partially_accepted\u0060 when some were rejected, and \u0060rejected\u0060 (with a \u0060422\u0060) when every row was rejected.",
+        "x-ms-enum": {
+          "name": "ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "accepted",
+              "name": "Accepted"
+            },
+            {
+              "value": "partially_accepted",
+              "name": "PartiallyAccepted"
+            },
+            {
+              "value": "rejected",
+              "name": "Rejected"
             }
           ]
         }
@@ -51416,6 +51929,28 @@
           ]
         }
       },
+      "ValidateEmailsAndPhoneNumbers202ResponseResultsItemStatus": {
+        "enum": [
+          "accepted",
+          "rejected"
+        ],
+        "type": "string",
+        "description": "\u0060accepted\u0060 when the row will be checked. \u0060rejected\u0060 when it was refused and will not be checked or charged.",
+        "x-ms-enum": {
+          "name": "ValidateEmailsAndPhoneNumbers202ResponseResultsItemStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "accepted",
+              "name": "Accepted"
+            },
+            {
+              "value": "rejected",
+              "name": "Rejected"
+            }
+          ]
+        }
+      },
       "GetContactSequenceActivity200ResponseEventsItemType": {
         "enum": [
           "enrolled",
@@ -51481,6 +52016,28 @@
             {
               "value": "phone_call",
               "name": "PhoneCall"
+            }
+          ]
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedResultsItemStatus": {
+        "enum": [
+          "accepted",
+          "rejected"
+        ],
+        "type": "string",
+        "description": "\u0060accepted\u0060 when the row will be checked. \u0060rejected\u0060 when it was refused and will not be checked or charged.",
+        "x-ms-enum": {
+          "name": "ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedResultsItemStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "accepted",
+              "name": "Accepted"
+            },
+            {
+              "value": "rejected",
+              "name": "Rejected"
             }
           ]
         }
@@ -52414,6 +52971,60 @@
           "$ref": "#/components/schemas/GetEmailstats422ResponseSchema"
         }
       },
+      "ValidateEmailsAndPhoneNumbers422ResponseError": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "The ID of this request. Pass it to the poll webhook result endpoint.",
+            "example": "5139398567364803549"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedStatus"
+          },
+          "total_submitted": {
+            "type": "integer",
+            "description": "The number of rows you sent."
+          },
+          "accepted_count": {
+            "type": "integer",
+            "description": "The number of rows that will be checked."
+          },
+          "rejected_count": {
+            "type": "integer",
+            "description": "The number of rows that were rejected."
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedResultsItem"
+            },
+            "description": "One entry per row you sent, in the order you sent them."
+          },
+          "error": {
+            "type": "string",
+            "description": "A message that explains the error."
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422Response"
+        }
+      },
+      "ValidateEmailsAndPhoneNumbers429ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers429ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers429ResponseSchema"
+        }
+      },
       "PhonecallsCreate403ResponseSchemaError": {
         "type": "object",
         "properties": {
@@ -52764,6 +53375,19 @@
       "type": "string"
     },
     "EmailerMessagesSearch200Response": {
+      "type": "string"
+    },
+    "ValidateEmailsAndPhoneNumbers422Response": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejected"
+        },
+        {
+          "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseInvalidRequest"
+        }
+      ]
+    },
+    "ValidateEmailsAndPhoneNumbers429Response": {
       "type": "string"
     },
     "PhonecallsCreate403Response": {
@@ -53181,6 +53805,53 @@
         "message": {
           "type": "string",
           "example": "This endpoint is only available to Apollo users on paid plans."
+        }
+      }
+    },
+    "ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejected": {
+      "title": "Every row rejected",
+      "type": "object",
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "description": "The ID of this request. Pass it to the poll webhook result endpoint.",
+          "example": "5139398567364803549"
+        },
+        "status": {
+          "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedStatus"
+        },
+        "total_submitted": {
+          "type": "integer",
+          "description": "The number of rows you sent."
+        },
+        "accepted_count": {
+          "type": "integer",
+          "description": "The number of rows that will be checked."
+        },
+        "rejected_count": {
+          "type": "integer",
+          "description": "The number of rows that were rejected."
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/ValidateEmailsAndPhoneNumbers422ResponseEveryRowRejectedResultsItem"
+          },
+          "description": "One entry per row you sent, in the order you sent them."
+        }
+      }
+    },
+    "ValidateEmailsAndPhoneNumbers422ResponseInvalidRequest": {
+      "title": "Invalid request",
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "description": "A message that explains the error."
+        },
+        "request_id": {
+          "type": "string",
+          "description": "The ID of the request that failed."
         }
       }
     },

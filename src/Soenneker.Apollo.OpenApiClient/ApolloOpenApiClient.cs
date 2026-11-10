@@ -17,6 +17,7 @@ using Soenneker.Apollo.OpenApiClient.Email_accounts;
 using Soenneker.Apollo.OpenApiClient.Emailer_campaigns;
 using Soenneker.Apollo.OpenApiClient.Emailer_messages;
 using Soenneker.Apollo.OpenApiClient.Emailer_schedules;
+using Soenneker.Apollo.OpenApiClient.Enrich;
 using Soenneker.Apollo.OpenApiClient.Fields;
 using Soenneker.Apollo.OpenApiClient.Labels;
 using Soenneker.Apollo.OpenApiClient.Mixed_companies;
@@ -101,6 +102,11 @@ namespace Soenneker.Apollo.OpenApiClient
         public global::Soenneker.Apollo.OpenApiClient.Emailer_schedules.Emailer_schedulesRequestBuilder Emailer_schedules
         {
             get => new global::Soenneker.Apollo.OpenApiClient.Emailer_schedules.Emailer_schedulesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The enrich property</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Enrich.EnrichRequestBuilder Enrich
+        {
+            get => new global::Soenneker.Apollo.OpenApiClient.Enrich.EnrichRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The fields property</summary>
         public global::Soenneker.Apollo.OpenApiClient.Fields.FieldsRequestBuilder Fields
