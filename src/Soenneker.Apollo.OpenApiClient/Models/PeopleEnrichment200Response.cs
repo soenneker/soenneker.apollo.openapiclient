@@ -23,6 +23,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             else if (parseNode.GetChildNode("phone_enrichment") is { } nullNodePhoneEnrichment && nullNodePhoneEnrichment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneEnrichment = null;
             if (parseNode.GetChildNode("request_id") is null) { _explicitNullValueRequestId = default!; _explicitNullProperties?.Remove("request_id"); }
             else if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("request_id_str") is null) { _explicitNullValueRequestIdStr = default!; _explicitNullProperties?.Remove("request_id_str"); }
+            else if (parseNode.GetChildNode("request_id_str") is { } nullNodeRequestIdStr && nullNodeRequestIdStr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIdStr = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -47,9 +49,19 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         public global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePhoneEnrichment PhoneEnrichment { get => _explicitNullValuePhoneEnrichment; set { _explicitNullValuePhoneEnrichment = value; AdditionalData?.Remove("phone_enrichment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_enrichment"); else _explicitNullProperties?.Remove("phone_enrichment"); } }
         private global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePhoneEnrichment _explicitNullValuePhoneEnrichment = default!;
 #endif
-        /// <summary>The request ID for the enrichment request. Save this ID to map this request with the corresponding webhook result.</summary>
+        /// <summary>The signed 64-bit request ID for the enrichment request.</summary>
         public long? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private long? _explicitNullValueRequestId = default!;
+        /// <summary>The exact string representation of the top-level request ID. When `phone_enrichment.status` is `pending`, pass this value unchanged to `GET /api/v1/webhook_result/{request_id}`. Do not pass `phone_enrichment.request_id`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestIdStr { get => _explicitNullValueRequestIdStr; set { _explicitNullValueRequestIdStr = value; AdditionalData?.Remove("request_id_str"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id_str"); else _explicitNullProperties?.Remove("request_id_str"); } }
+        private string? _explicitNullValueRequestIdStr = default!;
+#nullable restore
+#else
+        public string RequestIdStr { get => _explicitNullValueRequestIdStr; set { _explicitNullValueRequestIdStr = value; AdditionalData?.Remove("request_id_str"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id_str"); else _explicitNullProperties?.Remove("request_id_str"); } }
+        private string _explicitNullValueRequestIdStr = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200Response"/> and sets the default values.
         /// </summary>
@@ -78,6 +90,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "person", n => { Person = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson.CreateFromDiscriminatorValue); } },
                 { "phone_enrichment", n => { PhoneEnrichment = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePhoneEnrichment>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePhoneEnrichment.CreateFromDiscriminatorValue); } },
                 { "request_id", n => { RequestId = n.GetLongValue(); } },
+                { "request_id_str", n => { RequestIdStr = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -90,6 +103,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePerson>("person", Person);
             writer.WriteObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePhoneEnrichment>("phone_enrichment", PhoneEnrichment);
             writer.WriteLongValue("request_id", RequestId);
+            writer.WriteStringValue("request_id_str", RequestIdStr);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

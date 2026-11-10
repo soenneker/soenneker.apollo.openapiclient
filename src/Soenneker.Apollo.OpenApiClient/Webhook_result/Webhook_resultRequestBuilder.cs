@@ -16,9 +16,9 @@ namespace Soenneker.Apollo.OpenApiClient.Webhook_result
     public partial class Webhook_resultRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Apollo.OpenApiClient.webhook_result.item collection</summary>
-        /// <param name="position">The &lt;code&gt;request_id&lt;/code&gt; returned when the original enrichment request was submitted. This value is a signed 64-bit integer and can be positive or negative. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;1039995589705121900&lt;/code&gt;</param>
+        /// <param name="position">For people enrichment and bulk people enrichment, pass the top-level &lt;code&gt;request_id_str&lt;/code&gt; only when &lt;code&gt;phone_enrichment.status&lt;/code&gt; is &lt;code&gt;pending&lt;/code&gt;. Do not pass &lt;code&gt;phone_enrichment.request_id&lt;/code&gt;. The value is a signed 64-bit integer represented as a string and can be positive or negative. &lt;br&gt;&lt;br&gt;Example: &lt;code&gt;-9045486258674686251&lt;/code&gt;</param>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Webhook_result.Item.WithRequestItemRequestBuilder"/></returns>
-        public global::Soenneker.Apollo.OpenApiClient.Webhook_result.Item.WithRequestItemRequestBuilder this[int position]
+        public global::Soenneker.Apollo.OpenApiClient.Webhook_result.Item.WithRequestItemRequestBuilder this[string position]
         {
             get
             {
