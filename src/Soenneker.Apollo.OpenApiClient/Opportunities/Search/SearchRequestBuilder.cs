@@ -22,7 +22,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/search{?page*,per_page*,sort_by_field*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/search{?account_ids%5B%5D*,not_opportunity_stage_ids%5B%5D*,opportunity_amount_range%5Bmax%5D*,opportunity_amount_range%5Bmin%5D*,opportunity_close_date_range%5Bmax%5D*,opportunity_close_date_range%5Bmin%5D*,opportunity_created_at_date_range%5Bmax%5D*,opportunity_created_at_date_range%5Bmin%5D*,opportunity_is_closed*,opportunity_owner_ids%5B%5D*,opportunity_pipeline_ids%5B%5D*,opportunity_stage_ids%5B%5D*,opportunity_updated_at%5Bmax%5D*,opportunity_updated_at%5Bmin%5D*,page*,per_page*,q_opportunity_name*,sort_ascending*,sort_by_field*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,17 +30,18 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/search{?page*,per_page*,sort_by_field*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/search{?account_ids%5B%5D*,not_opportunity_stage_ids%5B%5D*,opportunity_amount_range%5Bmax%5D*,opportunity_amount_range%5Bmin%5D*,opportunity_close_date_range%5Bmax%5D*,opportunity_close_date_range%5Bmin%5D*,opportunity_created_at_date_range%5Bmax%5D*,opportunity_created_at_date_range%5Bmin%5D*,opportunity_is_closed*,opportunity_owner_ids%5B%5D*,opportunity_pipeline_ids%5B%5D*,opportunity_stage_ids%5B%5D*,opportunity_updated_at%5Bmax%5D*,opportunity_updated_at%5Bmin%5D*,page*,per_page*,q_opportunity_name*,sort_ascending*,sort_by_field*}", rawUrl)
         {
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve the deals in your team&apos;s Apollo account. To narrow the results, filter by keyword, account, owner, stage, pipeline, open or closed status, amount, or date.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals403ResponseError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +57,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
             {
                 { "401", global::Soenneker.Apollo.OpenApiClient.Models.ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals403ResponseError.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals429Response.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
@@ -63,7 +65,7 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
             return await RequestAdapter.SendAsync<global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response>(requestInfo, global::Soenneker.Apollo.OpenApiClient.Models.ListAllDeals200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve the deals in your team&apos;s Apollo account. To narrow the results, filter by keyword, account, owner, stage, pipeline, open or closed status, amount, or date.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,18 +93,108 @@ namespace Soenneker.Apollo.OpenApiClient.Opportunities.Search
             return new global::Soenneker.Apollo.OpenApiClient.Opportunities.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve every deal that has been created for your team&apos;s Apollo account.
+        /// ## Endpoint essentials**API key access:** `deals/api/v1/opportunities/search` or `Master API key`**OAuth scopes:** `opportunities_list`**Credit usage:** `0 credits` — [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).&lt;a href=&quot;https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview&quot; target=&quot;_blank&quot;&gt;Deals&lt;/a&gt; on Apollo help you track sales opportunities.&lt;br&gt;&lt;br&gt;Use the list all deals endpoint to retrieve the deals in your team&apos;s Apollo account. To narrow the results, filter by keyword, account, owner, stage, pipeline, open or closed status, amount, or date.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
+            /// <summary>The Apollo IDs for the accounts whose deals you want to include in the results. A deal only needs to belong to 1 of the accounts you add. &lt;br&gt;&lt;br&gt;To find account IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/search-for-accounts&quot;&gt;search for accounts endpoint&lt;/a&gt; and identify the `id` value for each account. &lt;br&gt;&lt;br&gt;Example: `63f53afe4ceeca00016bdd2f`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("account_ids%5B%5D")]
+            public string[]? AccountIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("account_ids%5B%5D")]
+            public string[] AccountIds { get; set; }
+#endif
+            /// <summary>Exclude deals in any of these stages, identified by Apollo stage ID. This is the counterpart to `opportunity_stage_ids[]`. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4b2`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not_opportunity_stage_ids%5B%5D")]
+            public string[]? NotOpportunityStageIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not_opportunity_stage_ids%5B%5D")]
+            public string[] NotOpportunityStageIds { get; set; }
+#endif
+            /// <summary>The maximum deal amount. Use this parameter in combination with `opportunity_amount_range[min]` to set an amount range. Apollo compares amounts in your team&apos;s default currency. &lt;br&gt;&lt;br&gt;Do not enter currency symbols or commas in the figure. &lt;br&gt;&lt;br&gt;Example: `50000`</summary>
+            [QueryParameter("opportunity_amount_range%5Bmax%5D")]
+            public double? OpportunityAmountRangemax { get; set; }
+            /// <summary>The minimum deal amount. Use this parameter in combination with `opportunity_amount_range[max]` to set an amount range. Apollo compares amounts in your team&apos;s default currency. &lt;br&gt;&lt;br&gt;Do not enter currency symbols or commas in the figure. &lt;br&gt;&lt;br&gt;Example: `10000`</summary>
+            [QueryParameter("opportunity_amount_range%5Bmin%5D")]
+            public double? OpportunityAmountRangemin { get; set; }
+            /// <summary>The latest estimated close date for deals to include in the results. Use this parameter in combination with `opportunity_close_date_range[min]` to set a date range. Use the `YYYY-MM-DD` format. &lt;br&gt;&lt;br&gt;Example: `2026-03-31`</summary>
+            [QueryParameter("opportunity_close_date_range%5Bmax%5D")]
+            public Date? OpportunityCloseDateRangemax { get; set; }
+            /// <summary>The earliest estimated close date for deals to include in the results. Use this parameter in combination with `opportunity_close_date_range[max]` to set a date range. Use the `YYYY-MM-DD` format. &lt;br&gt;&lt;br&gt;Example: `2026-01-01`</summary>
+            [QueryParameter("opportunity_close_date_range%5Bmin%5D")]
+            public Date? OpportunityCloseDateRangemin { get; set; }
+            /// <summary>The latest date the deals were created. Use this parameter in combination with `opportunity_created_at_date_range[min]` to set a date range. Use the `YYYY-MM-DD` format. &lt;br&gt;&lt;br&gt;Example: `2026-03-31`</summary>
+            [QueryParameter("opportunity_created_at_date_range%5Bmax%5D")]
+            public Date? OpportunityCreatedAtDateRangemax { get; set; }
+            /// <summary>The earliest date the deals were created. Use this parameter in combination with `opportunity_created_at_date_range[max]` to set a date range. Use the `YYYY-MM-DD` format. &lt;br&gt;&lt;br&gt;Example: `2026-01-01`</summary>
+            [QueryParameter("opportunity_created_at_date_range%5Bmin%5D")]
+            public Date? OpportunityCreatedAtDateRangemin { get; set; }
+            /// <summary>Set to `true` to return only closed deals, or `false` to return only open deals. Leave this parameter out to return both. &lt;br&gt;&lt;br&gt;Example: `false`</summary>
+            [QueryParameter("opportunity_is_closed")]
+            public bool? OpportunityIsClosed { get; set; }
+            /// <summary>The Apollo IDs for the users who own the deals you want to include in the results. A deal only needs to be owned by 1 of the users you add. &lt;br&gt;&lt;br&gt;To find user IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/get-a-list-of-users&quot;&gt;get a list of users endpoint&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Example: `66302798d03b9601c7934ebf`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("opportunity_owner_ids%5B%5D")]
+            public string[]? OpportunityOwnerIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("opportunity_owner_ids%5B%5D")]
+            public string[] OpportunityOwnerIds { get; set; }
+#endif
+            /// <summary>The Apollo IDs for the pipelines whose deals you want to include in the results. A deal only needs to be in 1 of the pipelines you add. &lt;br&gt;&lt;br&gt;To find pipeline IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-deal-stages&quot;&gt;list deal stages endpoint&lt;/a&gt; and identify the `opportunity_pipeline_id` value for the stages in each pipeline. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4a9`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("opportunity_pipeline_ids%5B%5D")]
+            public string[]? OpportunityPipelineIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("opportunity_pipeline_ids%5B%5D")]
+            public string[] OpportunityPipelineIds { get; set; }
+#endif
+            /// <summary>The Apollo IDs for the deal stages you want to include in the results. A deal only needs to be in 1 of the stages you add. &lt;br&gt;&lt;br&gt;To find stage IDs, call the &lt;a href=&quot;https://docs.apollo.io/reference/list-deal-stages&quot;&gt;list deal stages endpoint&lt;/a&gt;. &lt;br&gt;&lt;br&gt;Example: `6095a710bd01d100a506d4b1`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("opportunity_stage_ids%5B%5D")]
+            public string[]? OpportunityStageIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("opportunity_stage_ids%5B%5D")]
+            public string[] OpportunityStageIds { get; set; }
+#endif
+            /// <summary>The latest date the deals were last updated. Use this parameter on its own to find deals that have not been updated since a date, or in combination with `opportunity_updated_at[min]` to set a date range. Use the `YYYY-MM-DD` format. &lt;br&gt;&lt;br&gt;Example: `2026-03-31`</summary>
+            [QueryParameter("opportunity_updated_at%5Bmax%5D")]
+            public Date? OpportunityUpdatedAtmax { get; set; }
+            /// <summary>The earliest date the deals were last updated. Use this parameter in combination with `opportunity_updated_at[max]` to set a date range. Use the `YYYY-MM-DD` format. &lt;br&gt;&lt;br&gt;Example: `2026-01-01`</summary>
+            [QueryParameter("opportunity_updated_at%5Bmin%5D")]
+            public Date? OpportunityUpdatedAtmin { get; set; }
             /// <summary>The page number of the Apollo data that you want to retrieve. &lt;br&gt;&lt;br&gt;Use this parameter in combination with the `per_page` parameter to make search results for navigable and improve the performance of the endpoint. &lt;br&gt;&lt;br&gt;Example: `4`</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
+            /// <summary>The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint&apos;s performance. &lt;br&gt;&lt;br&gt;Use the `page` parameter to search the different pages of data. The maximum value is `100`, and the default is `25`. &lt;br&gt;&lt;br&gt;Example: `10`</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Sort the tasks by 1 of the following options:    &lt;ul&gt; &lt;li&gt; `amount`: The largest deal values first. &lt;/li&gt; &lt;li&gt; `is_closed`: Deals that have been closed first. &lt;/li&gt; &lt;li&gt; `is_won`: Deals that have been won first. &lt;/li&gt; &lt;/ul&gt;</summary>
+            /// <summary>Search deals by keyword. Apollo matches the keywords against the deal name and the name of the account the deal belongs to. Every keyword you add must match. &lt;br&gt;&lt;br&gt;Example: `renewal`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("q_opportunity_name")]
+            public string? QOpportunityName { get; set; }
+#nullable restore
+#else
+            [QueryParameter("q_opportunity_name")]
+            public string QOpportunityName { get; set; }
+#endif
+            /// <summary>Set to `true` to sort the results in ascending order, which reverses the order described for each `sort_by_field` option. Defaults to `false`. &lt;br&gt;&lt;br&gt;Example: `true`</summary>
+            [QueryParameter("sort_ascending")]
+            public bool? SortAscending { get; set; }
+            /// <summary>Sort the deals by 1 of the following options. Results are sorted in descending order unless you set `sort_ascending` to `true`. &lt;ul&gt; &lt;li&gt; `opportunity_created_at`: The most recently created deals first. This is the default. &lt;/li&gt; &lt;li&gt; `opportunity_updated_at`: The most recently updated deals first. &lt;/li&gt; &lt;li&gt; `opportunity_close_date`: The latest estimated close dates first. &lt;/li&gt; &lt;li&gt; `amount`: The largest deal values first. &lt;/li&gt; &lt;li&gt; `is_closed`: Deals that have been closed first. &lt;/li&gt; &lt;li&gt; `is_won`: Deals that have been won first. &lt;/li&gt; &lt;/ul&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort_by_field")]

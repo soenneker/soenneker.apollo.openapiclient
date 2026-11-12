@@ -160,7 +160,7 @@ namespace Soenneker.Apollo.OpenApiClient.Emailer_campaigns.Item.Add_contact_ids
             [QueryParameter("send_email_from_email_address")]
             public string SendEmailFromEmailAddress { get; set; }
 #endif
-            /// <summary>Set to `true` if you want to add contacts to the sequence even if they have been added to other sequences. This parameter does not differentiate between active and paused sequences.</summary>
+            /// <summary>Set to `true` if you want to add contacts to the sequence even if they have been added to other sequences. This parameter does not differentiate between active and paused sequences.This parameter does not override your workspace&apos;s enrollment criteria. If an admin turned on the rule to skip contacts that are active in other sequences, Apollo skips these contacts with the reason `enrollment_criteria_active_in_other_sequence`, even when this parameter is `true`.</summary>
             [QueryParameter("sequence_active_in_other_campaigns")]
             public bool? SequenceActiveInOtherCampaigns { get; set; }
             /// <summary>Set to `true` if you want to add contacts to the sequence if they have been marked as `finished` in another sequence.</summary>

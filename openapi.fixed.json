@@ -2741,9 +2741,6 @@
               "language": "shell",
               "name": ""
             }
-          ],
-          "samples-languages": [
-            "shell"
           ]
         }
       }
@@ -10209,15 +10206,164 @@
           "Deals"
         ],
         "summary": "List all deals",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060deals/api/v1/opportunities/search\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060opportunities_list\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview\u0022 target=\u0022_blank\u0022\u003EDeals\u003C/a\u003E on Apollo help you track sales opportunities.\u003Cbr\u003E\u003Cbr\u003EUse the list all deals endpoint to retrieve every deal that has been created for your team\u0027s Apollo account.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060deals/api/v1/opportunities/search\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** \u0060opportunities_list\u0060\n\n**Credit usage:** \u00600 credits\u0060 \u2014 [Learn more about API pricing and credits](https://docs.apollo.io/docs/api-pricing).\n\n\u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/4415062467725-Deals-Overview\u0022 target=\u0022_blank\u0022\u003EDeals\u003C/a\u003E on Apollo help you track sales opportunities.\u003Cbr\u003E\u003Cbr\u003EUse the list all deals endpoint to retrieve the deals in your team\u0027s Apollo account. To narrow the results, filter by keyword, account, owner, stage, pipeline, open or closed status, amount, or date.",
         "operationId": "ListAllDeals",
         "parameters": [
           {
-            "name": "sort_by_field",
+            "name": "q_opportunity_name",
             "in": "query",
-            "description": "Sort the tasks by 1 of the following options:    \u003Cul\u003E \u003Cli\u003E \u0060amount\u0060: The largest deal values first. \u003C/li\u003E \u003Cli\u003E \u0060is_closed\u0060: Deals that have been closed first. \u003C/li\u003E \u003Cli\u003E \u0060is_won\u0060: Deals that have been won first. \u003C/li\u003E \u003C/ul\u003E",
+            "description": "Search deals by keyword. Apollo matches the keywords against the deal name and the name of the account the deal belongs to. Every keyword you add must match. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060renewal\u0060",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "account_ids[]",
+            "in": "query",
+            "description": "The Apollo IDs for the accounts whose deals you want to include in the results. A deal only needs to belong to 1 of the accounts you add. \u003Cbr\u003E\u003Cbr\u003ETo find account IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/search-for-accounts\u0022\u003Esearch for accounts endpoint\u003C/a\u003E and identify the \u0060id\u0060 value for each account. \u003Cbr\u003E\u003Cbr\u003EExample: \u006063f53afe4ceeca00016bdd2f\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "opportunity_owner_ids[]",
+            "in": "query",
+            "description": "The Apollo IDs for the users who own the deals you want to include in the results. A deal only needs to be owned by 1 of the users you add. \u003Cbr\u003E\u003Cbr\u003ETo find user IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/get-a-list-of-users\u0022\u003Eget a list of users endpoint\u003C/a\u003E. \u003Cbr\u003E\u003Cbr\u003EExample: \u006066302798d03b9601c7934ebf\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "opportunity_stage_ids[]",
+            "in": "query",
+            "description": "The Apollo IDs for the deal stages you want to include in the results. A deal only needs to be in 1 of the stages you add. \u003Cbr\u003E\u003Cbr\u003ETo find stage IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/list-deal-stages\u0022\u003Elist deal stages endpoint\u003C/a\u003E. \u003Cbr\u003E\u003Cbr\u003EExample: \u00606095a710bd01d100a506d4b1\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "not_opportunity_stage_ids[]",
+            "in": "query",
+            "description": "Exclude deals in any of these stages, identified by Apollo stage ID. This is the counterpart to \u0060opportunity_stage_ids[]\u0060. \u003Cbr\u003E\u003Cbr\u003EExample: \u00606095a710bd01d100a506d4b2\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "opportunity_pipeline_ids[]",
+            "in": "query",
+            "description": "The Apollo IDs for the pipelines whose deals you want to include in the results. A deal only needs to be in 1 of the pipelines you add. \u003Cbr\u003E\u003Cbr\u003ETo find pipeline IDs, call the \u003Ca href=\u0022https://docs.apollo.io/reference/list-deal-stages\u0022\u003Elist deal stages endpoint\u003C/a\u003E and identify the \u0060opportunity_pipeline_id\u0060 value for the stages in each pipeline. \u003Cbr\u003E\u003Cbr\u003EExample: \u00606095a710bd01d100a506d4a9\u0060",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "opportunity_is_closed",
+            "in": "query",
+            "description": "Set to \u0060true\u0060 to return only closed deals, or \u0060false\u0060 to return only open deals. Leave this parameter out to return both. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060false\u0060",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "opportunity_amount_range[min]",
+            "in": "query",
+            "description": "The minimum deal amount. Use this parameter in combination with \u0060opportunity_amount_range[max]\u0060 to set an amount range. Apollo compares amounts in your team\u0027s default currency. \u003Cbr\u003E\u003Cbr\u003EDo not enter currency symbols or commas in the figure. \u003Cbr\u003E\u003Cbr\u003EExample: \u006010000\u0060",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "opportunity_amount_range[max]",
+            "in": "query",
+            "description": "The maximum deal amount. Use this parameter in combination with \u0060opportunity_amount_range[min]\u0060 to set an amount range. Apollo compares amounts in your team\u0027s default currency. \u003Cbr\u003E\u003Cbr\u003EDo not enter currency symbols or commas in the figure. \u003Cbr\u003E\u003Cbr\u003EExample: \u006050000\u0060",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "opportunity_close_date_range[min]",
+            "in": "query",
+            "description": "The earliest estimated close date for deals to include in the results. Use this parameter in combination with \u0060opportunity_close_date_range[max]\u0060 to set a date range. Use the \u0060YYYY-MM-DD\u0060 format. \u003Cbr\u003E\u003Cbr\u003EExample: \u00602026-01-01\u0060",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "opportunity_close_date_range[max]",
+            "in": "query",
+            "description": "The latest estimated close date for deals to include in the results. Use this parameter in combination with \u0060opportunity_close_date_range[min]\u0060 to set a date range. Use the \u0060YYYY-MM-DD\u0060 format. \u003Cbr\u003E\u003Cbr\u003EExample: \u00602026-03-31\u0060",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "opportunity_created_at_date_range[min]",
+            "in": "query",
+            "description": "The earliest date the deals were created. Use this parameter in combination with \u0060opportunity_created_at_date_range[max]\u0060 to set a date range. Use the \u0060YYYY-MM-DD\u0060 format. \u003Cbr\u003E\u003Cbr\u003EExample: \u00602026-01-01\u0060",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "opportunity_created_at_date_range[max]",
+            "in": "query",
+            "description": "The latest date the deals were created. Use this parameter in combination with \u0060opportunity_created_at_date_range[min]\u0060 to set a date range. Use the \u0060YYYY-MM-DD\u0060 format. \u003Cbr\u003E\u003Cbr\u003EExample: \u00602026-03-31\u0060",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "opportunity_updated_at[min]",
+            "in": "query",
+            "description": "The earliest date the deals were last updated. Use this parameter in combination with \u0060opportunity_updated_at[max]\u0060 to set a date range. Use the \u0060YYYY-MM-DD\u0060 format. \u003Cbr\u003E\u003Cbr\u003EExample: \u00602026-01-01\u0060",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "opportunity_updated_at[max]",
+            "in": "query",
+            "description": "The latest date the deals were last updated. Use this parameter on its own to find deals that have not been updated since a date, or in combination with \u0060opportunity_updated_at[min]\u0060 to set a date range. Use the \u0060YYYY-MM-DD\u0060 format. \u003Cbr\u003E\u003Cbr\u003EExample: \u00602026-03-31\u0060",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "sort_by_field",
+            "in": "query",
+            "description": "Sort the deals by 1 of the following options. Results are sorted in descending order unless you set \u0060sort_ascending\u0060 to \u0060true\u0060. \u003Cul\u003E \u003Cli\u003E \u0060opportunity_created_at\u0060: The most recently created deals first. This is the default. \u003C/li\u003E \u003Cli\u003E \u0060opportunity_updated_at\u0060: The most recently updated deals first. \u003C/li\u003E \u003Cli\u003E \u0060opportunity_close_date\u0060: The latest estimated close dates first. \u003C/li\u003E \u003Cli\u003E \u0060amount\u0060: The largest deal values first. \u003C/li\u003E \u003Cli\u003E \u0060is_closed\u0060: Deals that have been closed first. \u003C/li\u003E \u003Cli\u003E \u0060is_won\u0060: Deals that have been won first. \u003C/li\u003E \u003C/ul\u003E",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort_ascending",
+            "in": "query",
+            "description": "Set to \u0060true\u0060 to sort the results in ascending order, which reverses the order described for each \u0060sort_by_field\u0060 option. Defaults to \u0060false\u0060. \u003Cbr\u003E\u003Cbr\u003EExample: \u0060true\u0060",
+            "schema": {
+              "type": "boolean"
             }
           },
           {
@@ -10232,7 +10378,7 @@
           {
             "name": "per_page",
             "in": "query",
-            "description": "The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint\u0027s performance. \u003Cbr\u003E\u003Cbr\u003EUse the \u0060page\u0060 parameter to search the different pages of data. \u003Cbr\u003E\u003Cbr\u003EExample: \u006010\u0060",
+            "description": "The number of search results that should be returned for each page. Limiting the number of results per page improves the endpoint\u0027s performance. \u003Cbr\u003E\u003Cbr\u003EUse the \u0060page\u0060 parameter to search the different pages of data. The maximum value is \u0060100\u0060, and the default is \u006025\u0060. \u003Cbr\u003E\u003Cbr\u003EExample: \u006010\u0060",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -10283,6 +10429,27 @@
                   },
                   "Check Apollo pricing plan": {
                     "value": "{\n  \u0022message\u0022: \u0022This endpoint is only available to Apollo users on paid plans.\u0022\n}"
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "422",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListAllDeals422Response"
+                },
+                "examples": {
+                  "Too many search results per page": {
+                    "value": "{\n  \u0022error\u0022: \u0022Per page not supported\u0022\n}"
+                  },
+                  "Choose valid sort_by_field option": {
+                    "value": "{\n  \u0022error\u0022: \u0022Invalid sort criteria\u0022,\n  \u0022skip_alert_dialog\u0022: true\n}"
+                  },
+                  "Page limit exceeded": {
+                    "value": "{\n  \u0022error\u0022: \u0022Invalid parameter passed in. Page * per page number is over threshold.\u0022\n}"
                   }
                 }
               }
@@ -10965,7 +11132,7 @@
           {
             "name": "sequence_active_in_other_campaigns",
             "in": "query",
-            "description": "Set to \u0060true\u0060 if you want to add contacts to the sequence even if they have been added to other sequences. This parameter does not differentiate between active and paused sequences.",
+            "description": "Set to \u0060true\u0060 if you want to add contacts to the sequence even if they have been added to other sequences. This parameter does not differentiate between active and paused sequences.\n\nThis parameter does not override your workspace\u0027s enrollment criteria. If an admin turned on the rule to skip contacts that are active in other sequences, Apollo skips these contacts with the reason \u0060enrollment_criteria_active_in_other_sequence\u0060, even when this parameter is \u0060true\u0060.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -26491,6 +26658,15 @@
           "num_fetch_result": {}
         }
       },
+      "ListAllDeals422Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Per page not supported"
+          }
+        }
+      },
       "ViewDeal200Response": {
         "type": "object",
         "properties": {
@@ -26602,6 +26778,9 @@
           },
           "skipped_contact_ids": {
             "$ref": "#/components/schemas/AddContactsToSequence200ResponseSkippedContactIds"
+          },
+          "skipped_contact_details": {
+            "$ref": "#/components/schemas/AddContactsToSequence200ResponseSkippedContactDetails"
           },
           "emailer_campaign": {
             "$ref": "#/components/schemas/AddContactsToSequence200ResponseEmailerCampaign"
@@ -36643,11 +36822,27 @@
               "contacts_in_same_company": "Contact from the same company is part of the current sequence (Including for completeness, but extremely rare - only for old users who had opted in for such feature)",
               "contacts_without_ownership_permission": "User does not have permission to reach out to contact",
               "contacts_in_pending_state": "Contact is already part of account queue (Rare for api only users - only applicable for users who are using account based workflows in apollo)",
-              "contacts_with_unverified_user_managed_email": "Contact has unverified user-managed email"
+              "contacts_with_unverified_user_managed_email": "Contact has unverified user-managed email",
+              "enrollment_criteria_active_in_other_sequence": "Enrollment criteria: contact is active in another sequence. \u0060skipped_contact_details\u0060 names the other sequence.",
+              "enrollment_criteria_email_not_verified": "Enrollment criteria: contact has no email, a bounced email, or an email that is not verified",
+              "enrollment_criteria_user_managed_email": "Enrollment criteria: contact\u0027s primary email is user-managed, and the admin blocks user-managed emails",
+              "enrollment_criteria_no_phone_number": "Enrollment criteria: contact has no valid phone number, and the sequence has call steps",
+              "enrollment_criteria_no_linkedin_url": "Enrollment criteria: contact has no LinkedIn URL, and the sequence has LinkedIn steps",
+              "enrollment_criteria_owner": "Enrollment criteria: contact has no owner, or is not owned by the user who adds it",
+              "enrollment_criteria_stage_excluded": "Enrollment criteria: the contact stage or account stage is in the admin\u0027s list of stages to skip"
             }
           }
         },
-        "description": "Hash mapping contact IDs to reasons why they were skipped during the addition process. Each key is a contact ID and each value is a reason code."
+        "description": "Hash mapping contact IDs to reasons why they were skipped during the addition process. Each key is a contact ID and each value is a reason code. Reasons that start with \u0060enrollment_criteria_\u0060 come from the enrollment criteria an admin set for your workspace or for the sequence. No request parameter overrides them."
+      },
+      "AddContactsToSequence200ResponseSkippedContactDetails": {
+        "type": "object",
+        "properties": {
+          "\u003Ccontact_id\u003E": {
+            "$ref": "#/components/schemas/AddContactsToSequence200ResponseSkippedContactDetailsContactId"
+          }
+        },
+        "description": "Extra details for some skipped contacts. Each key is a contact ID. Present only when an enrollment criteria rule skipped a contact because it is active in another sequence."
       },
       "AddContactsToSequence200ResponseEmailerCampaign": {
         "type": "object",
@@ -44417,6 +44612,19 @@
       },
       "AddContactsToSequence200ResponseContactsItemTypedCustomFields": {
         "type": "object"
+      },
+      "AddContactsToSequence200ResponseSkippedContactDetailsContactId": {
+        "type": "object",
+        "properties": {
+          "conflicting_sequence_id": {
+            "type": "string",
+            "description": "ID of the other sequence the contact is active in"
+          },
+          "conflicting_sequence_name": {
+            "type": "string",
+            "description": "Name of that sequence"
+          }
+        }
       },
       "AddContactsToSequence200ResponseEmailerCampaignContactStatuses": {
         "type": "object",

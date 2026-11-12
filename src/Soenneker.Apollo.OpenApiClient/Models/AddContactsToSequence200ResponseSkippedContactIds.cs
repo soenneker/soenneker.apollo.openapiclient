@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Apollo.OpenApiClient.Models
 {
     /// <summary>
-    /// Hash mapping contact IDs to reasons why they were skipped during the addition process. Each key is a contact ID and each value is a reason code.
+    /// Hash mapping contact IDs to reasons why they were skipped during the addition process. Each key is a contact ID and each value is a reason code. Reasons that start with `enrollment_criteria_` come from the enrollment criteria an admin set for your workspace or for the sequence. No request parameter overrides them.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddContactsToSequence200ResponseSkippedContactIds : IAdditionalDataHolder, IParsable
