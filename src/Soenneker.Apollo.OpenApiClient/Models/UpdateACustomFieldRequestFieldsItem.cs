@@ -133,7 +133,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "autorun_downstream_enrichment", n => { AutorunDownstreamEnrichment = n.GetBoolValue(); } },
                 { "field_group_id", n => { FieldGroupId = n.GetStringValue(); } },

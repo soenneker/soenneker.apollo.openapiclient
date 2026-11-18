@@ -97,7 +97,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "breadcrumbs", n => { Breadcrumbs = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs>(global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseBreadcrumbs.CreateFromDiscriminatorValue); } },
                 { "conversations", n => { Conversations = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem>(global::Soenneker.Apollo.OpenApiClient.Models.SearchConversations200ResponseConversationsItem.CreateFromDiscriminatorValue)?.AsList(); } },

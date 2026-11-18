@@ -372,7 +372,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(30)
             {
                 { "city", n => { City = n.GetStringValue(); } },
                 { "contact", n => { Contact = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContact>(global::Soenneker.Apollo.OpenApiClient.Models.PeopleEnrichment200ResponsePersonContact.CreateFromDiscriminatorValue); } },

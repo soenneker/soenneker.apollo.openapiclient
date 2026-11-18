@@ -153,7 +153,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "counts", n => { Counts = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerStepsItemCounts>(global::Soenneker.Apollo.OpenApiClient.Models.AddContactsToSequence200ResponseEmailerStepsItemCounts.CreateFromDiscriminatorValue); } },
                 { "emailer_campaign_id", n => { EmailerCampaignId = n.GetStringValue(); } },

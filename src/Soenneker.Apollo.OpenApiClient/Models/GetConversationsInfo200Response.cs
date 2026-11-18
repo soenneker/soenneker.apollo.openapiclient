@@ -283,7 +283,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "account_ids", n => { AccountIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "audio_recording", n => { AudioRecording = n.GetObjectValue<global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording>(global::Soenneker.Apollo.OpenApiClient.Models.GetConversationsInfo200ResponseAudioRecording.CreateFromDiscriminatorValue); } },

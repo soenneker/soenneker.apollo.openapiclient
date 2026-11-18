@@ -112,7 +112,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "domain_aggregates", n => { DomainAggregates = n.GetCollectionOfObjectValues<global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem>(global::Soenneker.Apollo.OpenApiClient.Models.GetOrganizationsId200ResponseOrganizationAccountIntentSignalAccountWebsiteVisitorMetricsDomainAggregatesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "first_intent_signal_received_at", n => { FirstIntentSignalReceivedAt = n.GetLongValue(); } },

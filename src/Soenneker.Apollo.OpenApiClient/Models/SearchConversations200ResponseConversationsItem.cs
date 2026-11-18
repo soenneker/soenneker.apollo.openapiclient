@@ -242,7 +242,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(20)
             {
                 { "account_ids", n => { AccountIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "account_names", n => { AccountNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
