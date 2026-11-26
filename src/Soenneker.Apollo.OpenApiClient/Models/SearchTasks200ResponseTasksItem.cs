@@ -19,6 +19,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("account_id") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("account_id"); }
             else if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("adherence_status") is null) { _explicitNullValueAdherenceStatus = default!; _explicitNullProperties?.Remove("adherence_status"); }
+            else if (parseNode.GetChildNode("adherence_status") is { } nullNodeAdherenceStatus && nullNodeAdherenceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdherenceStatus = null;
             if (parseNode.GetChildNode("answered") is null) { _explicitNullValueAnswered = default!; _explicitNullProperties?.Remove("answered"); }
             else if (parseNode.GetChildNode("answered") is { } nullNodeAnswered && nullNodeAnswered.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Answered = null;
             if (parseNode.GetChildNode("completed_at") is null) { _explicitNullValueCompletedAt = default!; _explicitNullProperties?.Remove("completed_at"); }
@@ -33,6 +35,8 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             else if (parseNode.GetChildNode("creator_id") is { } nullNodeCreatorId && nullNodeCreatorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatorId = null;
             if (parseNode.GetChildNode("due_at") is null) { _explicitNullValueDueAt = default!; _explicitNullProperties?.Remove("due_at"); }
             else if (parseNode.GetChildNode("due_at") is { } nullNodeDueAt && nullNodeDueAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueAt = null;
+            if (parseNode.GetChildNode("due_date") is null) { _explicitNullValueDueDate = default!; _explicitNullProperties?.Remove("due_date"); }
+            else if (parseNode.GetChildNode("due_date") is { } nullNodeDueDate && nullNodeDueDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDate = null;
             if (parseNode.GetChildNode("emailer_campaign_id") is null) { _explicitNullValueEmailerCampaignId = default!; _explicitNullProperties?.Remove("emailer_campaign_id"); }
             else if (parseNode.GetChildNode("emailer_campaign_id") is { } nullNodeEmailerCampaignId && nullNodeEmailerCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailerCampaignId = null;
             if (parseNode.GetChildNode("hubspot_id") is null) { _explicitNullValueHubspotId = default!; _explicitNullProperties?.Remove("hubspot_id"); }
@@ -93,6 +97,9 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner&apos;s time zone. Other tasks are due at their exact `due_at`.</summary>
+        public global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAdherenceStatus? AdherenceStatus { get => _explicitNullValueAdherenceStatus; set { _explicitNullValueAdherenceStatus = value; AdditionalData?.Remove("adherence_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adherence_status"); else _explicitNullProperties?.Remove("adherence_status"); } }
+        private global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAdherenceStatus? _explicitNullValueAdherenceStatus = default!;
         /// <summary>The answered property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -162,6 +169,16 @@ namespace Soenneker.Apollo.OpenApiClient.Models
 #else
         public string DueAt { get => _explicitNullValueDueAt; set { _explicitNullValueDueAt = value; AdditionalData?.Remove("due_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_at"); else _explicitNullProperties?.Remove("due_at"); } }
         private string _explicitNullValueDueAt = default!;
+#endif
+        /// <summary>The task&apos;s due day: the date set in your CRM for a synced task, otherwise the date in the task owner&apos;s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; AdditionalData?.Remove("due_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private string? _explicitNullValueDueDate = default!;
+#nullable restore
+#else
+        public string DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; AdditionalData?.Remove("due_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private string _explicitNullValueDueDate = default!;
 #endif
         /// <summary>The emailer_campaign_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -416,9 +433,10 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(31)
+            return new Dictionary<string, Action<IParseNode>>(33)
             {
                 { "account_id", n => { AccountId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "adherence_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAdherenceStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdherenceStatus = default; _explicitNullProperties?.Remove("adherence_status"); AdditionalData["adherence_status"] = unknown; } else { AdherenceStatus = parsed; AdditionalData.Remove("adherence_status"); } } },
                 { "answered", n => { Answered = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "completed_at", n => { CompletedAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "contact_id", n => { ContactId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -426,6 +444,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
                 { "created_from", n => { CreatedFrom = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "creator_id", n => { CreatorId = n.GetStringValue(); } },
                 { "due_at", n => { DueAt = n.GetStringValue(); } },
+                { "due_date", n => { DueDate = n.GetStringValue(); } },
                 { "emailer_campaign_id", n => { EmailerCampaignId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "hubspot_id", n => { HubspotId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -459,6 +478,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<UntypedNode>("account_id", AccountId);
+            writer.WriteEnumValue<global::Soenneker.Apollo.OpenApiClient.Models.SearchTasks200ResponseTasksItemAdherenceStatus>("adherence_status", AdherenceStatus);
             writer.WriteObjectValue<UntypedNode>("answered", Answered);
             writer.WriteObjectValue<UntypedNode>("completed_at", CompletedAt);
             writer.WriteObjectValue<UntypedNode>("contact_id", ContactId);
@@ -466,6 +486,7 @@ namespace Soenneker.Apollo.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("created_from", CreatedFrom);
             writer.WriteStringValue("creator_id", CreatorId);
             writer.WriteStringValue("due_at", DueAt);
+            writer.WriteStringValue("due_date", DueDate);
             writer.WriteObjectValue<UntypedNode>("emailer_campaign_id", EmailerCampaignId);
             writer.WriteObjectValue<UntypedNode>("hubspot_id", HubspotId);
             writer.WriteStringValue("id", Id);

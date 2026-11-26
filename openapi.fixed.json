@@ -12499,6 +12499,8 @@
                         "note": "Discuss product demo results and next steps.",
                         "skipped_at": null,
                         "due_at": "2025-02-15T10:00:00.000\u002B00:00",
+                        "due_date": "2025-02-15",
+                        "adherence_status": "open",
                         "type": "call",
                         "priority": "high",
                         "status": "scheduled",
@@ -12682,6 +12684,8 @@
                           "note": "Discuss product demo results and next steps.",
                           "skipped_at": null,
                           "due_at": "2025-02-15T10:00:00.000\u002B00:00",
+                          "due_date": "2025-02-15",
+                          "adherence_status": "open",
                           "type": "call",
                           "priority": "high",
                           "status": "scheduled",
@@ -12748,6 +12752,8 @@
                           "note": "Discuss product demo results and next steps.",
                           "skipped_at": null,
                           "due_at": "2025-02-15T10:00:00.000\u002B00:00",
+                          "due_date": "2025-02-15",
+                          "adherence_status": "open",
                           "type": "call",
                           "priority": "high",
                           "status": "scheduled",
@@ -12914,6 +12920,8 @@
                         "note": "Discuss product demo results and next steps.",
                         "skipped_at": null,
                         "due_at": "2025-02-15T10:00:00.000\u002B00:00",
+                        "due_date": "2025-02-15",
+                        "adherence_status": "open",
                         "type": "call",
                         "priority": "high",
                         "status": "scheduled",
@@ -13115,6 +13123,8 @@
                         "note": "Discuss product demo results and next steps.",
                         "skipped_at": null,
                         "due_at": "2025-02-15T10:00:00.000\u002B00:00",
+                        "due_date": "2025-02-15",
+                        "adherence_status": "open",
                         "type": "call",
                         "priority": "high",
                         "status": "scheduled",
@@ -13328,6 +13338,8 @@
                         "note": "Discuss product demo results and next steps.",
                         "skipped_at": null,
                         "due_at": "2025-02-15T10:00:00.000\u002B00:00",
+                        "due_date": "2025-02-15",
+                        "adherence_status": "open",
                         "type": "call",
                         "priority": "high",
                         "status": "scheduled",
@@ -13713,6 +13725,8 @@
                           "note": null,
                           "skipped_at": null,
                           "due_at": "2024-09-21T00:00:00.000\u002B00:00",
+                          "due_date": "2024-09-21",
+                          "adherence_status": "open",
                           "type": "action_item",
                           "priority": "medium",
                           "status": "scheduled",
@@ -13898,6 +13912,8 @@
                           "note": "",
                           "skipped_at": null,
                           "due_at": "2024-09-20T13:05:00.000\u002B00:00",
+                          "due_date": "2024-09-20",
+                          "adherence_status": "open",
                           "type": "linkedin_step_connect",
                           "priority": "medium",
                           "status": "scheduled",
@@ -14292,6 +14308,8 @@
                           "note": "",
                           "skipped_at": null,
                           "due_at": "2024-09-20T13:04:00.000\u002B00:00",
+                          "due_date": "2024-09-20",
+                          "adherence_status": "open",
                           "type": "linkedin_step_connect",
                           "priority": "medium",
                           "status": "scheduled",
@@ -20921,7 +20939,7 @@
           "Enrichment"
         ],
         "summary": "Validate Email Addresses and Phone Numbers",
-        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/enrich/create\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** Not supported\n\n**Plan access:** Requires a workspace on unified credits. Workspaces on a legacy credit plan receive a \u0060403\u0060.\n\n**Credit usage:** \u00608 or 20 credits per phone number, depending on plan\u0060, \u0060up to 1 credit per email address\u0060\n\nCredits are charged for each row Apollo checks, whatever the verdict: 8 credits per phone number (20 on some earlier unified credit plans) and 1 credit per email address, including a \u0060not_validated\u0060 result. An email check that the validator can\u0027t resolve costs 0 credits. Rows rejected in the \u0060202\u0060 response, rows that fail before the check runs, and checks that the validator fails to run also cost 0 credits.\n\nBefore the checks run, Apollo confirms that you have enough credits for every accepted row. If you don\u0027t, no row is checked, each row returns a \u0060credit_limit_exceeded\u0060 error, and the request consumes 0 credits.\n\nApollo stores each result for 30 days. If you check the same phone number or email address again within 30 days, you receive the stored result and the check is still charged. A value repeated inside one request is checked and charged once per row. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing), or \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/9527776320781-Review-Credit-Usage-in-Apollo\u0022 target=\u0022_blank\u0022\u003Ereview credit usage in Apollo\u003C/a\u003E.\n\n\u003Cb\u003EIn Beta\u003C/b\u003E: This endpoint is in beta and may change before general availability.\n\nValidation checks whether an email address or phone number you already have is still good, so you can clean a list before you use it. Apollo runs the same validators that \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003Ewaterfall enrichment\u003C/a\u003E uses to verify the emails and phone numbers it finds.\u003Cbr\u003E\u003Cbr\u003EUse this endpoint to validate up to 10 email addresses or up to 10 phone numbers in one request. Set \u0060action\u0060 to \u0060email_verifier\u0060 or \u0060phone_verifier\u0060, set \u0060action_type\u0060 to \u0060tool\u0060, and pass one object per value in the \u0060input_attributes\u0060 array: \u0060{\u0022email\u0022: \u0022...\u0022}\u0060 for email addresses, or \u0060{\u0022phone_number\u0022: \u0022...\u0022}\u0060 for phone numbers. One request validates one kind of value.\u003Cbr\u003E\u003Cbr\u003EThis endpoint checks values you send. It doesn\u0027t find new email addresses or phone numbers, and it doesn\u0027t check Do Not Call registry status. To find contact details for a person, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E.\n\n### Validators\n\nApollo picks the validator for each \u0060action\u0060. Today, this endpoint uses these validators:\n\n| \u0060action\u0060 | Validator |\n|---|---|\n| \u0060email_verifier\u0060 | LeadMagic |\n| \u0060phone_verifier\u0060 | Trestle |\n\nApollo plans to support more validators later. Each result names the validator that answered in its \u0060validator\u0060 field.\n\n### Getting the results\n\nValidation runs in the background. This endpoint returns \u0060202 Accepted\u0060 with a \u0060request_id\u0060 and one entry per submitted row, in the order you sent them. Each entry has a \u0060status\u0060 of \u0060accepted\u0060 or \u0060rejected\u0060. Accepted entries carry a \u0060record_id\u0060, and rejected entries carry \u0060errors\u0060. A rejected row is never checked and costs nothing. The request \u0060status\u0060 is \u0060accepted\u0060 when every row was accepted and \u0060partially_accepted\u0060 when some were rejected. If every row is rejected, the endpoint returns a \u0060422\u0060 with \u0060status: rejected\u0060.\n\nSend exactly one of these delivery options:\n\n- \u0060webhook_url\u0060: Apollo sends the results to this HTTPS URL when the checks finish. The URL must resolve to a public address. If delivery fails, Apollo retries it up to 3 times. A \u00604xx\u0060 response other than \u0060408\u0060 or \u0060429\u0060 isn\u0027t retried.\n- \u0060poll_only: true\u0060: Apollo doesn\u0027t send a webhook. Pass the \u0060request_id\u0060 to the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result endpoint\u003C/a\u003E. While the checks run, it returns a \u0060404\u0060 with \u0060error_code: result_pending\u0060 and \u0060retry_after_seconds\u0060. Wait that many seconds, then poll again.\n\nBoth options deliver the same result object, and the poll webhook result endpoint returns it for 30 days, even if webhook delivery failed.\n\n### Reading the results\n\nMatch each result to the row you sent by its \u0060id\u0060, which is the \u0060record_id\u0060 from the \u0060202\u0060 response. Results can come back in any order, and a row that wasn\u0027t checked doesn\u0027t include the email address or phone number.\n\n| Field | Meaning |\n|---|---|\n| \u0060validation_status\u0060 | \u0060validated\u0060 when the validator confirmed that the email address accepts mail or that the phone number is valid and reachable. \u0060not_validated\u0060 when it didn\u0027t confirm that. |\n| \u0060validator\u0060 | The validator that answered, such as \u0060leadmagic\u0060 or \u0060trestle\u0060. |\n| \u0060email\u0060 or \u0060phone\u0060 | The value that was checked. |\n| \u0060error\u0060 | Present when the row wasn\u0027t checked. \u0060code\u0060 and \u0060message\u0060 explain why, for example \u0060credit_limit_exceeded\u0060 when your credits ran out. |\n| \u0060data_sources\u0060 | The validator step behind the result, including the validator\u0027s raw status and the credits it used. |\n\n\u0060not_validated\u0060 doesn\u0027t mean that the value is bad. It also covers a validator that couldn\u0027t reach a verdict, such as an email domain that accepts mail for any address. Say that the check didn\u0027t confirm the value rather than calling it invalid.\n\nA row with neither \u0060validation_status\u0060 nor \u0060error\u0060 means the validator couldn\u0027t run the check, for example because the email address is malformed. That row costs 0 credits.\n\nPhone numbers aren\u0027t format-checked before they\u0027re sent to the validator, so a malformed phone number is still checked, returns \u0060not_validated\u0060, and is charged. Send phone numbers in E.164 format, such as \u0060\u002B12025550143\u0060.\n\nThe request-level \u0060status\u0060 is \u0060success\u0060 when processing finished. It doesn\u0027t mean every row was validated, so check \u0060total_failures\u0060 and each row\u0027s \u0060validation_status\u0060 or \u0060error\u0060.",
+        "description": "## Endpoint essentials\n\n**API key access:** \u0060api/v1/enrich/create\u0060 or \u0060Master API key\u0060\n\n**OAuth scopes:** Not supported\n\n**Plan access:** Requires a workspace on unified credits. Workspaces on a legacy credit plan receive a \u0060403\u0060.\n\n**Credit usage:** \u00608 or 20 credits per phone number, depending on plan\u0060, \u0060up to 1 credit per email address\u0060\n\nCredits are charged for each row Apollo checks, whatever the verdict: 8 credits per phone number (20 on some earlier unified credit plans) and 1 credit per email address, including a \u0060not_validated\u0060 result. An email check that the validator can\u0027t resolve costs 0 credits. Rows rejected in the \u0060202\u0060 response, rows that fail before the check runs, and checks that the validator fails to run also cost 0 credits.\n\nBefore the checks run, Apollo confirms that you have enough credits for every accepted row. If you don\u0027t, no row is checked, each row returns a \u0060credit_limit_exceeded\u0060 error, and the request consumes 0 credits.\n\nApollo stores each result for 30 days. If you check the same phone number or email address again within 30 days, you receive the stored result and the check is still charged. A value repeated inside one request is checked and charged once per row. Learn more about [API pricing and credits](https://docs.apollo.io/docs/api-pricing), or \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/9527776320781-Review-Credit-Usage-in-Apollo\u0022 target=\u0022_blank\u0022\u003Ereview credit usage in Apollo\u003C/a\u003E.\n\n\u003Cb\u003EIn Beta\u003C/b\u003E: This endpoint is in beta and may change before general availability.\n\nValidation checks whether an email address or phone number you already have is still good, so you can clean a list before you use it. Apollo runs the same validators that \u003Ca href=\u0022https://knowledge.apollo.io/hc/en-us/articles/34071089002509-Waterfall-Enrichment-Overview\u0022 target=\u0022_blank\u0022\u003Ewaterfall enrichment\u003C/a\u003E uses to verify the emails and phone numbers it finds.\u003Cbr\u003E\u003Cbr\u003EUse this endpoint to validate up to 10 email addresses or up to 10 phone numbers in one request. Set \u0060action\u0060 to \u0060email_verifier\u0060 or \u0060phone_verifier\u0060, set \u0060action_type\u0060 to \u0060tool\u0060, and pass one object per value in the \u0060input_attributes\u0060 array: \u0060{\u0022email\u0022: \u0022...\u0022}\u0060 for email addresses, or \u0060{\u0022phone_number\u0022: \u0022...\u0022}\u0060 for phone numbers. One request validates one kind of value.\u003Cbr\u003E\u003Cbr\u003EThis endpoint checks values you send. It doesn\u0027t find new email addresses or phone numbers, and it doesn\u0027t check Do Not Call registry status. To find contact details for a person, use the \u003Ca href=\u0022https://docs.apollo.io/reference/bulk-people-enrichment\u0022\u003Ebulk people enrichment endpoint\u003C/a\u003E.\n\n### Validators\n\nApollo picks the validator for each \u0060action\u0060. Today, this endpoint uses these validators:\n\n| \u0060action\u0060 | Validator |\n|---|---|\n| \u0060email_verifier\u0060 | LeadMagic |\n| \u0060phone_verifier\u0060 | Trestle |\n\nApollo plans to support more validators later. Each result names the validator that answered in its \u0060validator\u0060 field.\n\n### Getting the results\n\nValidation runs in the background. This endpoint returns \u0060202 Accepted\u0060 with a \u0060request_id\u0060 and one entry per submitted row, in the order you sent them. Each entry has a \u0060status\u0060 of \u0060accepted\u0060 or \u0060rejected\u0060. Accepted entries carry a \u0060record_id\u0060, and rejected entries carry \u0060errors\u0060. A rejected row is never checked and costs nothing. The request \u0060status\u0060 is \u0060accepted\u0060 when every row was accepted and \u0060partially_accepted\u0060 when some were rejected. If every row is rejected, the endpoint returns a \u0060422\u0060 with \u0060status: rejected\u0060.\n\nSend exactly one of these delivery options:\n\n- \u0060webhook_url\u0060: Apollo sends the results to this HTTPS URL when the checks finish. The URL must resolve to a public address. If delivery fails, Apollo retries it up to 3 times. A \u00604xx\u0060 response other than \u0060408\u0060 or \u0060429\u0060 isn\u0027t retried.\n- \u0060poll_only: true\u0060: Apollo doesn\u0027t send a webhook. Pass the \u0060request_id\u0060 to the \u003Ca href=\u0022https://docs.apollo.io/reference/poll-webhook-result\u0022\u003Epoll webhook result endpoint\u003C/a\u003E. If you use a scoped API key, it also needs \u0060api/v1/webhook_result/show\u0060, or the poll returns a \u0060403\u0060. While the checks run, it returns a \u0060404\u0060 with \u0060error_code: result_pending\u0060 and \u0060retry_after_seconds\u0060. Wait that many seconds, then poll again.\n\nBoth options deliver the same result object, and the poll webhook result endpoint returns it for 30 days, even if webhook delivery failed.\n\n### Reading the results\n\nMatch each result to the row you sent by its \u0060id\u0060, which is the \u0060record_id\u0060 from the \u0060202\u0060 response. Results can come back in any order, and a row that wasn\u0027t checked doesn\u0027t include the email address or phone number.\n\n| Field | Meaning |\n|---|---|\n| \u0060validation_status\u0060 | \u0060validated\u0060 when the validator confirmed that the email address accepts mail or that the phone number is valid and reachable. \u0060not_validated\u0060 when it didn\u0027t confirm that. |\n| \u0060validator\u0060 | The validator that answered, such as \u0060leadmagic\u0060 or \u0060trestle\u0060. |\n| \u0060email\u0060 or \u0060phone\u0060 | The value that was checked. |\n| \u0060error\u0060 | Present when the row wasn\u0027t checked. \u0060code\u0060 and \u0060message\u0060 explain why, for example \u0060credit_limit_exceeded\u0060 when your credits ran out. |\n| \u0060data_sources\u0060 | The validator step behind the result, including the validator\u0027s raw status and the credits it used. |\n\n\u0060not_validated\u0060 doesn\u0027t mean that the value is bad. It also covers a validator that couldn\u0027t reach a verdict, such as an email domain that accepts mail for any address. Say that the check didn\u0027t confirm the value rather than calling it invalid.\n\nA row with neither \u0060validation_status\u0060 nor \u0060error\u0060 means the validator couldn\u0027t run the check, for example because the email address is malformed. That row costs 0 credits.\n\nPhone numbers aren\u0027t format-checked before they\u0027re sent to the validator, so a malformed phone number is still checked, returns \u0060not_validated\u0060, and is charged. Send phone numbers in E.164 format, such as \u0060\u002B12025550143\u0060.\n\nThe request-level \u0060status\u0060 is \u0060success\u0060 when processing finished. It doesn\u0027t mean every row was validated, so check \u0060total_failures\u0060 and each row\u0027s \u0060validation_status\u0060 or \u0060error\u0060.",
         "operationId": "ValidateEmailsAndPhoneNumbers",
         "requestBody": {
           "content": {
@@ -37422,6 +37440,14 @@
             "type": "string",
             "example": "2024-09-21T00:00:00.000\u002B00:00"
           },
+          "due_date": {
+            "type": "string",
+            "description": "The task\u0027s due day: the date set in your CRM for a synced task, otherwise the date in the task owner\u0027s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.",
+            "example": "2024-09-21"
+          },
+          "adherence_status": {
+            "$ref": "#/components/schemas/CreateATask200ResponseTaskAdherenceStatus"
+          },
           "type": {
             "type": "string",
             "example": "action_item"
@@ -37505,6 +37531,14 @@
             "type": "string",
             "example": "2024-09-21T00:00:00.000\u002B00:00"
           },
+          "due_date": {
+            "type": "string",
+            "description": "The task\u0027s due day: the date set in your CRM for a synced task, otherwise the date in the task owner\u0027s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.",
+            "example": "2024-09-21"
+          },
+          "adherence_status": {
+            "$ref": "#/components/schemas/BulkCreateTasks200ResponseTasksItemAdherenceStatus"
+          },
           "type": {
             "type": "string",
             "example": "action_item"
@@ -37587,6 +37621,14 @@
           "due_at": {
             "type": "string",
             "example": "2024-09-21T00:00:00.000\u002B00:00"
+          },
+          "due_date": {
+            "type": "string",
+            "description": "The task\u0027s due day: the date set in your CRM for a synced task, otherwise the date in the task owner\u0027s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.",
+            "example": "2024-09-21"
+          },
+          "adherence_status": {
+            "$ref": "#/components/schemas/GetATask200ResponseTaskAdherenceStatus"
           },
           "type": {
             "type": "string",
@@ -37706,6 +37748,14 @@
             "type": "string",
             "example": "2024-09-21T00:00:00.000\u002B00:00"
           },
+          "due_date": {
+            "type": "string",
+            "description": "The task\u0027s due day: the date set in your CRM for a synced task, otherwise the date in the task owner\u0027s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.",
+            "example": "2024-09-21"
+          },
+          "adherence_status": {
+            "$ref": "#/components/schemas/UpdateATask200ResponseTaskAdherenceStatus"
+          },
           "type": {
             "type": "string",
             "example": "action_item"
@@ -37823,6 +37873,14 @@
           "due_at": {
             "type": "string",
             "example": "2024-09-21T00:00:00.000\u002B00:00"
+          },
+          "due_date": {
+            "type": "string",
+            "description": "The task\u0027s due day: the date set in your CRM for a synced task, otherwise the date in the task owner\u0027s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.",
+            "example": "2024-09-21"
+          },
+          "adherence_status": {
+            "$ref": "#/components/schemas/CompleteATask200ResponseTaskAdherenceStatus"
           },
           "type": {
             "type": "string",
@@ -38031,6 +38089,14 @@
           "due_at": {
             "type": "string",
             "example": "2024-09-21T00:00:00.000\u002B00:00"
+          },
+          "due_date": {
+            "type": "string",
+            "description": "The task\u0027s due day: the date set in your CRM for a synced task, otherwise the date in the task owner\u0027s time zone. For a sequence step that waits a number of days, or a task synced from your CRM, a weekend due day moves to the following Monday.",
+            "example": "2024-09-21"
+          },
+          "adherence_status": {
+            "$ref": "#/components/schemas/SearchTasks200ResponseTasksItemAdherenceStatus"
           },
           "type": {
             "type": "string",
@@ -52127,6 +52193,294 @@
             {
               "value": "full_access",
               "name": "FullAccess"
+            }
+          ]
+        }
+      },
+      "CreateATask200ResponseTaskAdherenceStatus": {
+        "enum": [
+          "open",
+          "overdue",
+          "on_time",
+          "late",
+          "skipped",
+          "failed",
+          "not_applicable"
+        ],
+        "type": "string",
+        "description": "Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner\u0027s time zone. Other tasks are due at their exact \u0060due_at\u0060.",
+        "example": "open",
+        "x-ms-enum": {
+          "name": "CreateATask200ResponseTaskAdherenceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "open",
+              "name": "Open"
+            },
+            {
+              "value": "overdue",
+              "name": "Overdue"
+            },
+            {
+              "value": "on_time",
+              "name": "OnTime"
+            },
+            {
+              "value": "late",
+              "name": "Late"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "not_applicable",
+              "name": "NotApplicable"
+            }
+          ]
+        }
+      },
+      "BulkCreateTasks200ResponseTasksItemAdherenceStatus": {
+        "enum": [
+          "open",
+          "overdue",
+          "on_time",
+          "late",
+          "skipped",
+          "failed",
+          "not_applicable"
+        ],
+        "type": "string",
+        "description": "Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner\u0027s time zone. Other tasks are due at their exact \u0060due_at\u0060.",
+        "example": "open",
+        "x-ms-enum": {
+          "name": "BulkCreateTasks200ResponseTasksItemAdherenceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "open",
+              "name": "Open"
+            },
+            {
+              "value": "overdue",
+              "name": "Overdue"
+            },
+            {
+              "value": "on_time",
+              "name": "OnTime"
+            },
+            {
+              "value": "late",
+              "name": "Late"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "not_applicable",
+              "name": "NotApplicable"
+            }
+          ]
+        }
+      },
+      "GetATask200ResponseTaskAdherenceStatus": {
+        "enum": [
+          "open",
+          "overdue",
+          "on_time",
+          "late",
+          "skipped",
+          "failed",
+          "not_applicable"
+        ],
+        "type": "string",
+        "description": "Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner\u0027s time zone. Other tasks are due at their exact \u0060due_at\u0060.",
+        "example": "open",
+        "x-ms-enum": {
+          "name": "GetATask200ResponseTaskAdherenceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "open",
+              "name": "Open"
+            },
+            {
+              "value": "overdue",
+              "name": "Overdue"
+            },
+            {
+              "value": "on_time",
+              "name": "OnTime"
+            },
+            {
+              "value": "late",
+              "name": "Late"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "not_applicable",
+              "name": "NotApplicable"
+            }
+          ]
+        }
+      },
+      "UpdateATask200ResponseTaskAdherenceStatus": {
+        "enum": [
+          "open",
+          "overdue",
+          "on_time",
+          "late",
+          "skipped",
+          "failed",
+          "not_applicable"
+        ],
+        "type": "string",
+        "description": "Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner\u0027s time zone. Other tasks are due at their exact \u0060due_at\u0060.",
+        "example": "open",
+        "x-ms-enum": {
+          "name": "UpdateATask200ResponseTaskAdherenceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "open",
+              "name": "Open"
+            },
+            {
+              "value": "overdue",
+              "name": "Overdue"
+            },
+            {
+              "value": "on_time",
+              "name": "OnTime"
+            },
+            {
+              "value": "late",
+              "name": "Late"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "not_applicable",
+              "name": "NotApplicable"
+            }
+          ]
+        }
+      },
+      "CompleteATask200ResponseTaskAdherenceStatus": {
+        "enum": [
+          "open",
+          "overdue",
+          "on_time",
+          "late",
+          "skipped",
+          "failed",
+          "not_applicable"
+        ],
+        "type": "string",
+        "description": "Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner\u0027s time zone. Other tasks are due at their exact \u0060due_at\u0060.",
+        "example": "open",
+        "x-ms-enum": {
+          "name": "CompleteATask200ResponseTaskAdherenceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "open",
+              "name": "Open"
+            },
+            {
+              "value": "overdue",
+              "name": "Overdue"
+            },
+            {
+              "value": "on_time",
+              "name": "OnTime"
+            },
+            {
+              "value": "late",
+              "name": "Late"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "not_applicable",
+              "name": "NotApplicable"
+            }
+          ]
+        }
+      },
+      "SearchTasks200ResponseTasksItemAdherenceStatus": {
+        "enum": [
+          "open",
+          "overdue",
+          "on_time",
+          "late",
+          "skipped",
+          "failed",
+          "not_applicable"
+        ],
+        "type": "string",
+        "description": "Whether the task met its deadline. A sequence step that waits a number of days, or a task synced from your CRM, is due by the end of its due day in the task owner\u0027s time zone. Other tasks are due at their exact \u0060due_at\u0060.",
+        "example": "open",
+        "x-ms-enum": {
+          "name": "SearchTasks200ResponseTasksItemAdherenceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "open",
+              "name": "Open"
+            },
+            {
+              "value": "overdue",
+              "name": "Overdue"
+            },
+            {
+              "value": "on_time",
+              "name": "OnTime"
+            },
+            {
+              "value": "late",
+              "name": "Late"
+            },
+            {
+              "value": "skipped",
+              "name": "Skipped"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "not_applicable",
+              "name": "NotApplicable"
             }
           ]
         }
